@@ -8,8 +8,8 @@ Design: "Dynasty Front Office — System Design" (claude.ai doc). Build status f
 
 | Phase | Status |
 | --- | --- |
-| 1. Foundations (repo, site snapshot, first collector) | In progress |
-| 2. Rules engine and data layer | History tables built; rules engine next |
+| 1. Foundations (repo, site snapshot, first collector) | Collector proven (FantasyCalc, 2026-10-28); site snapshot waits on the Lovable export function |
+| 2. Rules engine and data layer | History tables and rules core built and tested; player ID map and scoring reconciliation next |
 | 3. Projections | Not started |
 | 4. Valuation, including picks | Not started |
 | 5. Simulator and dial | Not started |
