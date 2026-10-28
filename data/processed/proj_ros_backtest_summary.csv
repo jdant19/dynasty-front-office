@@ -1,0 +1,4 @@
+week,players,season_avg_mae,season_avg_rank_corr,fp_rank_mae,fp_rank_rank_corr,weekly_blend_mae,weekly_blend_rank_corr,ros_mix_mae,ros_mix_rank_corr
+6,1428,2.73,0.672,2.32,0.74,2.42,0.739,2.3,0.732
+8,1487,2.56,0.702,2.42,0.733,2.53,0.726,2.26,0.742
+10,1357,2.55,0.708,2.31,0.73,2.4,0.728,2.25,0.746

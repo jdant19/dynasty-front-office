@@ -1,0 +1,2 @@
+group,players,draft_only_mae,draft_only_rank_corr,rank_only_mae,rank_only_rank_corr,model_mae,model_rank_corr
+rookie year 1,229,2.6,0.563,2.53,0.568,2.44,0.572
