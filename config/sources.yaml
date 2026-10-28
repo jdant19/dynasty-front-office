@@ -1,0 +1,84 @@
+# Data sources. Tier sets the starting weight; measured accuracy sets the weight after that.
+# stale_after is the in-season limit; past it a source is labeled stale and down-weighted, never silently used.
+# route: cloud = fetched directly by Claude's cloud runs; collector = GitHub Actions job in this repo;
+#        upload = Jordan provides a file; chrome = Jordan's signed-in Chrome on the Mac (backup only).
+
+sources:
+  league_site:
+    tier: 0
+    provides: [rosters, contracts, cap, dead_cap, pick_ownership, transactions_by_diff]
+    route: collector            # .github/workflows/collect.yml -> site_snapshot (needs Supabase details)
+    stale_after: {default: 24h, game_day: 6h}
+    status: pending_supabase_details
+  yahoo_league:
+    tier: 0
+    provides: [weekly_scores, lineups]
+    route: upload               # matchup-page screenshots; Yahoo API on hold (Yahoo-side permission issue)
+    stale_after: 7d
+  nflverse:
+    tier: 0
+    provides: [weekly_stats, snaps, depth_charts, injuries, schedules, betting_lines, rosters, draft_picks]
+    route: cloud
+    url: https://github.com/nflverse/nflverse-data/releases
+    stale_after: 36h
+    status: tested_2026-10-13
+  ffopportunity:
+    tier: 0
+    provides: [expected_fantasy_points_weekly]
+    route: cloud
+    url: https://github.com/ffverse/ffopportunity/releases
+    stale_after: 36h
+    status: tested_2026-10-21
+  pff:
+    tier: 1
+    provides: [rankings]
+    route: upload               # weekly ranking download dropped in Drive or the front door; chrome as backup
+    stale_after: 7d
+  fantasypros_rankings:
+    tier: 1
+    provides: [weekly_ecr, ros_ecr, dynasty_ecr, rookie_ecr, ecr_history_since_2019]
+    route: cloud                # via DynastyProcess mirror
+    url: https://github.com/dynastyprocess/data
+    stale_after: 7d
+    status: tested_2026-10-21
+  fantasypros_projections:
+    tier: 1
+    provides: [weekly_projections, season_projections]
+    route: collector
+    stale_after: 7d
+    status: to_test_check_terms_of_use
+  sleeper_projections:
+    tier: 1
+    provides: [weekly_projections, season_projections]
+    route: collector
+    stale_after: 7d
+    status: to_test
+  dynastyprocess:
+    tier: 2
+    provides: [values_1qb, pick_values, player_id_map]
+    route: cloud
+    stale_after: 14d
+    status: tested_2026-10-21
+  fantasycalc:
+    tier: 2
+    provides: [dynasty_trade_values]
+    route: collector
+    url: https://api.fantasycalc.com/values/current?isDynasty=true&numQbs=1&numTeams=10&ppr=0.5
+    stale_after: 14d
+    status: collector_written
+  keeptradecut:
+    tier: 2
+    provides: [dynasty_trade_values]
+    route: collector
+    stale_after: 14d
+    status: to_build_check_terms_of_use
+  news:
+    tier: 3
+    provides: [injuries, role_changes, coaching, transactions]
+    route: cloud                # web search and fetch
+    stale_after: 24h
+  jordan:
+    tier: own
+    provides: [player_views, owner_reads, corrections]
+    route: front_door
+    note: every view is logged with an expiry date and scored like any other source

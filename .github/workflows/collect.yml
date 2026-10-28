@@ -1,0 +1,41 @@
+name: collect
+
+# Runs on GitHub's servers, which can reach sites the Claude cloud workspace cannot.
+# Saves snapshots into the repo with as-of stamps. Read-only toward every source.
+on:
+  schedule:
+    - cron: "17 */4 * * *"        # site snapshot every 4 hours
+    - cron: "43 11 * * *"         # market values daily, ~6:43am Central
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: League site snapshot
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
+        run: python collectors/site_snapshot.py
+      - name: Market values
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '43 11 * * *'
+        run: python collectors/fetch_market.py
+      - name: Commit snapshots
+        run: |
+          git config user.name "dfo-collector"
+          git config user.email "dfo-collector@users.noreply.github.com"
+          git add data/snapshots
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "collect: snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

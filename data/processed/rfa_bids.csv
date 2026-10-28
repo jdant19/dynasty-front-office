@@ -1,0 +1,580 @@
+season,player,starting_bid,original_owner,bidder,bid,outcome,final_owner,final_price,source
+2019,Melvin Gordon,9,Jordan,Mike,51,changed_teams,Matt,75,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Melvin Gordon,9,Jordan,Ben,46,changed_teams,Matt,75,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Melvin Gordon,9,Jordan,Matt,75,changed_teams,Matt,75,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Melvin Gordon,9,Jordan,Qasim,20,changed_teams,Matt,75,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Tyler Lockett,5,,Jordan,15,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Tyler Lockett,5,,Mike,30,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Tyler Lockett,5,,Johnny,24,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Tyler Lockett,5,,Qasim,16,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Tyler Lockett,5,,Zach,30,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Patrick Maholmes,2,Russ,Jordan,15,changed_teams,Matt,90,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Patrick Maholmes,2,Russ,Ben,38,changed_teams,Matt,90,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Patrick Maholmes,2,Russ,Matt,90,changed_teams,Matt,90,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Patrick Maholmes,2,Russ,Qasim,22,changed_teams,Matt,90,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Jordan,100,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Mike,51,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Russ,100,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Ben,63,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Matt,90,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Max,36,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Qasim,32,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,David Johnson,7,,Zach,40,matched,,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Tevin Coleman,9,,Ben,9,matched,,9,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Jared Goff,2,,Ben,4,matched,,4,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Jared Goff,2,,Qasim,4,matched,,4,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Marlon Mack,2,,Jordan,30,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Marlon Mack,2,,Matt,15,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Marlon Mack,2,,Max,30,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Marlon Mack,2,,Qasim,23,matched,,30,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Alshon Jeffery,12,,Max,15,matched,,15,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Alshon Jeffery,12,,Qasim,15,matched,,15,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,James White,3,,Jordan,10,matched,,10,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,James White,3,,Matt,7,matched,,10,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,James White,3,,Johnny,10,matched,,10,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Sony Michel,6,,Jordan,10,matched,,10,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Sony Michel,6,,Matt,10,matched,,10,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Sony Michel,6,,Johnny,10,matched,,10,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Todd Gurley,9,Ryan,Jordan,100,changed_teams,Jordan,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Todd Gurley,9,Ryan,Ben,36,changed_teams,Jordan,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Todd Gurley,9,Ryan,Matt,90,changed_teams,Jordan,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Todd Gurley,9,Ryan,Qasim,40,changed_teams,Jordan,100,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Amari Cooper,9,,Jordan,20,matched,,45,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Amari Cooper,9,,Ben,31,matched,,45,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Amari Cooper,9,,Matt,45,matched,,45,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Amari Cooper,9,,Max,23,matched,,45,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Amari Cooper,9,,Qasim,45,matched,,45,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Aaron Jones,2,,Jordan,10,matched,,25,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Aaron Jones,2,,Matt,25,matched,,25,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Aaron Jones,2,,Max,18,matched,,25,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Aaron Jones,2,,Johnny,18,matched,,25,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Aaron Jones,2,,Qasim,25,matched,,25,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Phillip Lindsay,2,,Jordan,10,matched,,18,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Phillip Lindsay,2,,Matt,18,matched,,18,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Phillip Lindsay,2,,Zach,18,matched,,18,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2019,Latrvious Murray,2,,Zach,2,matched,,2,rookie_drafts_tags_rfa.xlsx:2019 RFA Results
+2020,Julio Jones,75,Jordan,Mike,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Russ,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Ben,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Matt,97,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Max,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Johnny,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Ryan,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Qasim,91,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Julio Jones,75,Jordan,Zach,0,matched,Jordan,97,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Jordan,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Mike,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Russ,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Ben,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Matt,74,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Max,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Johnny,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Ryan,0,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Evans,67,Zach,Qasim,82,matched,Zach,82,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Jordan,24,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Mike,0,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Russ,65,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Ben,81,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Max,0,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Johnny,0,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Ryan,0,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Qasim,70,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Derrick Henry,9,Matt,Zach,33,matched,Matt,81,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Jordan,21,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Mike,31,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Ben,47,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Matt,64,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Max,0,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Johnny,0,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Ryan,0,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Qasim,34,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Ekeler,20,Russ,Zach,0,matched,Russ,64,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Jordan,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Mike,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Ben,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Matt,37,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Max,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Johnny,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Ryan,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Qasim,46,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Allen Robinson,24,Russ,Zach,0,matched,Russ,46,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Mike,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Russ,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Ben,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Matt,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Max,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Johnny,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Ryan,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Qasim,58,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Keenan Allen,47,Jordan,Zach,0,changed_teams,Qasim,58,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Mike,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Russ,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Ben,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Matt,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Max,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Johnny,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Ryan,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,TY Hilton,48,Zach,Qasim,0,matched,Zach,48,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Jordan,21,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Mike,0,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Russ,5,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Ben,0,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Matt,0,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Max,0,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Ryan,0,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Qasim,10,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Darren Waller,2,Johnny,Zach,0,matched,Johnny,21,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Jordan,16,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Mike,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Russ,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Ben,6,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Matt,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Max,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Johnny,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Ryan,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Evan Engram,2,Qasim,Zach,0,matched,Qasim,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Jordan,16,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Mike,0,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Russ,5,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Matt,0,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Max,9,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Johnny,0,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Ryan,0,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Qasim,8,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Tyler Higbee,2,Ben,Zach,0,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Jordan,26,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Russ,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Ben,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Matt,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Max,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Johnny,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Ryan,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Qasim,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Marvin Jones,15,Mike,Zach,0,matched,Mike,26,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Jordan,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Mike,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Russ,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Ben,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Matt,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Johnny,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Ryan,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Qasim,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Emanuel Sanders,15,Max,Zach,0,matched,Max,15,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Jordan,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Russ,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Ben,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Matt,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Max,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Johnny,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Ryan,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Qasim,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Mike Gesicki,2,Mike,Zach,0,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Jordan,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Mike,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Russ,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Ben,7,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Max,6,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Johnny,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Ryan,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Qasim,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Austin Hooper,4,Matt,Zach,0,changed_teams,Ben,7,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Jordan,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Mike,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Russ,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Ben,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Matt,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Johnny,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Ryan,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Qasim,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Kirk Cousins,6,Max,Zach,0,matched,Max,6,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Jordan,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Mike,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Russ,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Ben,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Matt,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Max,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Johnny,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Qasim,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Blake Jarwin,2,Ryan,Zach,0,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Antonio Brown,2,Qasim,,,matched,Qasim,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2020,Greg Ward,2,Ryan,,,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2020 - RFA Results
+2021,Tyreke Hill,13,Matt,Jordan,121,matched,Matt,121,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Tyreke Hill,13,Matt,Russ,55,matched,Matt,121,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Tyreke Hill,13,Matt,Ben,73,matched,Matt,121,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Tyreke Hill,13,Matt,Max,30,matched,Matt,121,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Tyreke Hill,13,Matt,Qasim,92,matched,Matt,121,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,DeAndre Hopkins,33,Ben,Jordan,112,matched,Ben,112,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,DeAndre Hopkins,33,Ben,Russ,60,matched,Ben,112,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,DeAndre Hopkins,33,Ben,Max,30,matched,Ben,112,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,DeAndre Hopkins,33,Ben,Johnny,75,matched,Ben,112,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,DeAndre Hopkins,33,Ben,Qasim,92,matched,Ben,112,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Kenny Golladay,5,Ben,Johnny,21,matched,Ben,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Cooper Kupp,7,Zach,Russ,12,matched,Zach,36,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Cooper Kupp,7,Zach,Ben,11,matched,Zach,36,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Cooper Kupp,7,Zach,Matt,19,matched,Zach,36,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Cooper Kupp,7,Zach,Max,29,matched,Zach,36,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Cooper Kupp,7,Zach,Johnny,36,matched,Zach,36,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Odell Beckham Jr,2,Jordan,Russ,20,matched,Jordan,31,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Odell Beckham Jr,2,Jordan,Matt,31,matched,Jordan,31,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Odell Beckham Jr,2,Jordan,Zach,15,matched,Jordan,31,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Dak Prescott,2,Qasim,Jordan,26,matched,Qasim,35,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Dak Prescott,2,Qasim,Ben,17,matched,Qasim,35,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Dak Prescott,2,Qasim,Matt,9,matched,Qasim,35,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Dak Prescott,2,Qasim,Max,10,matched,Qasim,35,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Dak Prescott,2,Qasim,Ryan,35,matched,Qasim,35,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Curtis Samuel,5,Max,Ben,8,matched,Max,8,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Curtis Samuel,5,Max,Johnny,7,matched,Max,8,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Kareem Hunt,9,Zach,Russ,15,matched,Zach,22,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Kareem Hunt,9,Zach,Ben,14,matched,Zach,22,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Kareem Hunt,9,Zach,Matt,22,matched,Zach,22,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Kareem Hunt,9,Zach,Max,16,matched,Zach,22,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Justin Herbert,2,Max,Jordan,21,matched,Max,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Justin Herbert,2,Max,Russ,12,matched,Max,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Justin Herbert,2,Max,Ben,14,matched,Max,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Justin Herbert,2,Max,Matt,8,matched,Max,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Justin Herbert,2,Max,Johnny,11,matched,Max,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Justin Herbert,2,Max,Qasim,7,matched,Max,21,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Corey Davis,4,Russ,Ben,8,matched,Russ,8,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Corey Davis,4,Russ,Max,8,matched,Russ,8,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Corey Davis,4,Russ,Johnny,4,matched,Russ,8,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,James Robinson,2,Qasim,Ben,17,matched,Qasim,33,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,James Robinson,2,Qasim,Matt,11,matched,Qasim,33,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,James Robinson,2,Qasim,Max,33,matched,Qasim,33,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,James Robinson,2,Qasim,Johnny,6,matched,Qasim,33,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,James Robinson,2,Qasim,Zach,10,matched,Qasim,33,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Nyheim Hines,2,Jordan,Ben,5,changed_teams,Ben,5,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2021,Tarik Cohen,7,Russ,Max,8,changed_teams,Max,8,rookie_drafts_tags_rfa.xlsx:2021 - RFA Results
+2022,Austin Ekeler,73,,Jordan,81,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Mike,86,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Russ,0,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Ben,89,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Max,102,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Johnny,0,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Ryan,0,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Qasim,80,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Ekeler,73,,Zach,0,changed_teams,Max,102,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Jordan,51,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Mike,81,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Russ,25,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Ben,47,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Matt,87,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Max,0,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Johnny,72,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Ryan,0,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Nick Chubb,9,,Zach,35,changed_teams,Matt,87,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Jordan,71,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Mike,40,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Russ,0,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Ben,48,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Max,15,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Johnny,0,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Ryan,55,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Qasim,59,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Stefon Diggs,21,,Zach,41,matched,,71,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Jordan,41,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Mike,0,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Russ,15,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Ben,36,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Matt,25,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Max,15,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Johnny,0,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Qasim,31,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Leonard Fournette,14,,Zach,24,matched,,41,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Jordan,53,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Mike,0,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Russ,42,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Ben,39,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Matt,0,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Max,0,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Johnny,0,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Qasim,58,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Mike Evans,33,,Zach,0,matched,,58,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Jordan,0,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Mike,20,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Russ,15,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Ben,0,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Matt,0,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Max,0,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Johnny,0,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Ryan,0,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Cortland Sutton,7,,Qasim,23,matched,,23,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Jordan,16,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Mike,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Russ,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Ben,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Matt,9,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Max,8,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Johnny,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Ryan,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dalton Schultz,2,,Zach,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Mike,26,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Russ,15,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Ben,8,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Matt,12,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Max,0,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Johnny,14,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Ryan,0,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Qasim,7,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Gabriel Davis,2,,Zach,0,matched,,26,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Jordan,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Mike,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Russ,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Ben,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Matt,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Max,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Johnny,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Ryan,0,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Tom Brady,10,,Qasim,14,matched,,14,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Jordan,16,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Mike,11,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Russ,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Matt,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Max,8,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Johnny,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Ryan,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Qasim,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Dallas Goedert,5,,Zach,0,matched,,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Jordan,0,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Mike,0,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Russ,16,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Matt,0,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Max,0,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Johnny,12,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Ryan,0,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Qasim,9,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Allan Lazard,2,,Zach,0,changed_teams,Russ,16,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Mike,9,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Russ,8,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Ben,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Matt,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Max,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Johnny,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Ryan,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Qasim,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Russell Gage,2,,Zach,0,,,,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Jordan,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Mike,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Russ,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Ben,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Matt,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Johnny,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Ryan,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Qasim,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Austin Hooper,2,,Zach,0,matched,,2,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Jordan,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Mike,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Russ,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Ben,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Matt,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Johnny,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Ryan,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Qasim,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2022,Justin Jackson,3,,Zach,0,matched,,3,rookie_drafts_tags_rfa.xlsx:2022 - RFA Results
+2023,Saquan Barkley,77,,Jordan,85,matched,,96,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Saquan Barkley,77,,Russ,15,matched,,96,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Saquan Barkley,77,,Ben,88,matched,,96,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Saquan Barkley,77,,Matt,96,matched,,96,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Saquan Barkley,77,,Zach,44,matched,,96,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Jacobs,9,,Jordan,61,matched,,87,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Jacobs,9,,Ben,87,matched,,87,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Jacobs,9,,Matt,81,matched,,87,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Jacobs,9,,Johnny,69,matched,,87,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Jacobs,9,,Qasim,45,matched,,87,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Jacobs,9,,Zach,40,matched,,87,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,AJ Brown,9,,Jordan,86,matched,,86,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,AJ Brown,9,,Matt,75,matched,,86,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,AJ Brown,9,,Johnny,59,matched,,86,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,AJ Brown,9,,Qasim,70,matched,,86,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,AJ Brown,9,,Zach,40,matched,,86,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Allen,5,,Ben,54,matched,,54,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Josh Allen,5,,Johnny,33,matched,,54,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,TJ Hockenson,7,,Ben,21,matched,,56,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,TJ Hockenson,7,,Johnny,56,matched,,56,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,TJ Hockenson,7,,Qasim,28,matched,,56,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,DK Metcalf,9,,Jordan,31,matched,,70,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,DK Metcalf,9,,Russ,70,matched,,70,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,DK Metcalf,9,,Ben,63,matched,,70,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,DK Metcalf,9,,Johnny,46,matched,,70,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Deebo Samuel,7,,Jordan,31,matched,,72,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Deebo Samuel,7,,Russ,72,matched,,72,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Deebo Samuel,7,,Ben,52,matched,,72,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Deebo Samuel,7,,Matt,67,matched,,72,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Deebo Samuel,7,,Johnny,57,matched,,72,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Deebo Samuel,7,,Ryan,57,matched,,72,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Terry McLaurin,5,,Jordan,31,changed_teams,Johnny,61,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Terry McLaurin,5,,Russ,25,changed_teams,Johnny,61,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Terry McLaurin,5,,Matt,47,changed_teams,Johnny,61,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Terry McLaurin,5,,Johnny,61,changed_teams,Johnny,61,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Terry McLaurin,5,,Ryan,40,changed_teams,Johnny,61,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Calvin Ridley,2,,Russ,15,matched,,45,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Calvin Ridley,2,,Ben,22,matched,,45,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Calvin Ridley,2,,Matt,35,matched,,45,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Calvin Ridley,2,,Johnny,35,matched,,45,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Calvin Ridley,2,,Ryan,45,matched,,45,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Calvin Ridley,2,,Qasim,10,matched,,45,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Marquis Brown,7,,Jordan,16,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Marquis Brown,7,,Russ,10,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Marquis Brown,7,,Ben,14,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Marquis Brown,7,,Matt,14,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Marquis Brown,7,,Qasim,15,changed_teams,Jordan,16,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Rashad Penny,2,,Russ,8,changed_teams,Matt,11,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,Rashad Penny,2,,Matt,11,changed_teams,Matt,11,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,David Njoku,2,,Johnny,4,matched,,6,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,David Njoku,2,,Qasim,6,matched,,6,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2023,49ers Def,2,,,,no_bids,,2,rookie_drafts_tags_rfa.xlsx:2023 - RFA Results
+2024,Jonathan Taylor,9,Jordan,Ben,76,matched,Jordan,93,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jonathan Taylor,9,Jordan,Matt,93,matched,Jordan,93,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jonathan Taylor,9,Jordan,Johnny,73,matched,Jordan,93,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jonathan Taylor,9,Jordan,Qasim,90,matched,Jordan,93,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jonathan Taylor,9,Jordan,Zach,70,matched,Jordan,93,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Isaiah Pacheco,14,Ben,Jordan,41,matched,Ben,52,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Isaiah Pacheco,14,Ben,Matt,45,matched,Ben,52,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Isaiah Pacheco,14,Ben,Qasim,46,matched,Ben,52,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Isaiah Pacheco,14,Ben,Zach,52,matched,Ben,52,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Michael Pittman Jr.,7,Mike,Ben,31,matched,Mike,32,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Michael Pittman Jr.,7,Mike,Matt,32,matched,Mike,32,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Michael Pittman Jr.,7,Mike,Johnny,26,matched,Mike,32,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Michael Pittman Jr.,7,Mike,Qasim,31,matched,Mike,32,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Mike Evans,9,Zach,Ben,34,matched,Zach,44,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Mike Evans,9,Zach,Matt,17,matched,Zach,44,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Mike Evans,9,Zach,Max,13,matched,Zach,44,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Mike Evans,9,Zach,Johnny,44,matched,Zach,44,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Mike Evans,9,Zach,Ryan,25,matched,Zach,44,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Mike Evans,9,Zach,Qasim,35,matched,Zach,44,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Brandon Aiyuk,7,Max,Jordan,26,matched,Max,38,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Brandon Aiyuk,7,Max,Ben,27,matched,Max,38,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Brandon Aiyuk,7,Max,Matt,27,matched,Max,38,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Brandon Aiyuk,7,Max,Johnny,38,matched,Max,38,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Brandon Aiyuk,7,Max,Qasim,45,matched,Max,38,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,DJ Moore,37,Ryan,Johnny,39,matched,Ryan,40,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,DJ Moore,37,Ryan,Qasim,40,matched,Ryan,40,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tee Higgins,7,Matt,Russ,42,changed_teams,Russ,42,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tee Higgins,7,Matt,Ben,25,changed_teams,Russ,42,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tee Higgins,7,Matt,Johnny,31,changed_teams,Russ,42,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tee Higgins,7,Matt,Qasim,34,changed_teams,Russ,42,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Amari Cooper,28,Ben,Matt,31,matched,Ben,37,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Amari Cooper,28,Ben,Johnny,31,matched,Ben,37,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Amari Cooper,28,Ben,Qasim,37,matched,Ben,37,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,D'Andre Swift,9,Mike,Jordan,24,matched,Mike,35,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,D'Andre Swift,9,Mike,Ben,11,matched,Mike,35,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,D'Andre Swift,9,Mike,Matt,13,matched,Mike,35,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,D'Andre Swift,9,Mike,Ryan,35,matched,Mike,35,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,D'Andre Swift,9,Mike,Qasim,25,matched,Mike,35,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,D'Andre Swift,9,Mike,Zach,17,matched,Mike,35,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jaylen Warren,2,Jordan,Ben,9,matched,Jordan,13,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jaylen Warren,2,Jordan,Matt,13,matched,Jordan,13,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Jaylen Warren,2,Jordan,Qasim,8,matched,Jordan,13,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Raheem Mostert,2,Matt,Jordan,13,changed_teams,Jordan,13,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Raheem Mostert,2,Matt,Ben,8,changed_teams,Jordan,13,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Raheem Mostert,2,Matt,Qasim,5,changed_teams,Jordan,13,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tua Tagovailoa,5,Max,Jordan,6,changed_teams,Qasim,8,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tua Tagovailoa,5,Max,Matt,6,changed_teams,Qasim,8,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2024,Tua Tagovailoa,5,Max,Qasim,8,changed_teams,Qasim,8,rookie_drafts_tags_rfa.xlsx:2024 - RFA Results
+2025,Ja'marr Chase,9,Jordan,Ben,114,matched,Jordan,135,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Ja'marr Chase,9,Jordan,Matt,135,matched,Jordan,135,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Ja'marr Chase,9,Jordan,Max,99,matched,Jordan,135,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Ja'marr Chase,9,Jordan,Johnny,94,matched,Jordan,135,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Ja'marr Chase,9,Jordan,Qasim,81,matched,Jordan,135,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Ja'marr Chase,9,Jordan,Zach,67,matched,Jordan,135,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Christian McCaffery,119,Johnny,,,matched,Johnny,119,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Mike,30,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Ben,87,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Matt,73,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Max,62,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Johnny,69,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Ryan,50,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Qasim,60,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Nico Collins,5,Jordan,Zach,40,matched,Jordan,87,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Terry McLaurin,32,Zach,Russ,33,matched,Zach,61,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Terry McLaurin,32,Zach,Ben,43,matched,Zach,61,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Terry McLaurin,32,Zach,Matt,53,matched,Zach,61,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Terry McLaurin,32,Zach,Ryan,61,matched,Zach,61,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Terry McLaurin,32,Zach,Qasim,40,matched,Zach,61,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Alvin Kamara,13,Zach,Mike,30,matched,Zach,31,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Alvin Kamara,13,Zach,Ben,31,matched,Zach,31,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Alvin Kamara,13,Zach,Max,24,matched,Zach,31,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Devonta Smith,9,Ben,Mike,18,changed_teams,Ryan,60,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Devonta Smith,9,Ben,Russ,15,changed_teams,Ryan,60,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Devonta Smith,9,Ben,Matt,23,changed_teams,Ryan,60,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Devonta Smith,9,Ben,Ryan,60,changed_teams,Ryan,60,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Devonta Smith,9,Ben,Qasim,35,changed_teams,Ryan,60,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Chuba Hubbard,5,Max,Russ,10,matched,Max,32,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Chuba Hubbard,5,Max,Ben,32,matched,Max,32,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Chuba Hubbard,5,Max,Qasim,25,matched,Max,32,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Chuba Hubbard,5,Max,Zach,30,matched,Max,32,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Baker Mayfield,2,Qasim,Ben,12,matched,Qasim,12,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jerry Jeudy,2,Johnny,Russ,10,changed_teams,Ben,30,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jerry Jeudy,2,Johnny,Ben,30,changed_teams,Ben,30,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jerry Jeudy,2,Johnny,Qasim,7,changed_teams,Ben,30,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jerry Jeudy,2,Johnny,Zach,25,changed_teams,Ben,30,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jaylen Waddle,9,Ryan,Mike,26,matched,Ryan,28,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jaylen Waddle,9,Ryan,Russ,14,matched,Ryan,28,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jaylen Waddle,9,Ryan,Ben,11,matched,Ryan,28,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jaylen Waddle,9,Ryan,Johnny,28,matched,Ryan,28,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jaylen Waddle,9,Ryan,Qasim,21,matched,Ryan,28,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jakobi Meyers,3,Qasim,Russ,8,matched,Qasim,8,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Justin Herbert,31,Max,,,matched,Max,31,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Jordan Love,2,Matt,Johnny,12,changed_teams,Johnny,12,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Stefon Diggs,2,Matt,Russ,11,changed_teams,Qasim,12,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Stefon Diggs,2,Matt,Qasim,12,changed_teams,Qasim,12,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2025,Michael Penix Jr,2,Ryan,,,matched,Ryan,2,rookie_drafts_tags_rfa.xlsx:2025 - RFA Results
+2026,Drake London,9,Zach,Jordan,31,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Drake London,9,Zach,Mike,47,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Drake London,9,Zach,Russ,30,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Drake London,9,Zach,Ben,88,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Drake London,9,Zach,Matt,68,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Drake London,9,Zach,Johnny,48,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Drake London,9,Zach,Qasim,61,matched,Zach,88,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Breece Hall,9,Ben,Jordan,26,matched,Ben,65,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Breece Hall,9,Ben,Matt,21,matched,Ben,65,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Breece Hall,9,Ben,Max,36,matched,Ben,65,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Breece Hall,9,Ben,Johnny,38,matched,Ben,65,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Breece Hall,9,Ben,Qasim,65,matched,Ben,65,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Breece Hall,9,Ben,Zach,31,matched,Ben,65,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Jordan,31,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Mike,31,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Russ,18,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Ben,50,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Johnny,31,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Ryan,51,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Garrett Wilson,9,Qasim,Zach,33,matched,Qasim,51,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,George Pickens,7,Johnny,Jordan,33,changed_teams,Ryan,71,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,George Pickens,7,Johnny,Russ,50,changed_teams,Ryan,71,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,George Pickens,7,Johnny,Ben,50,changed_teams,Ryan,71,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,George Pickens,7,Johnny,Ryan,71,changed_teams,Ryan,71,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,George Pickens,7,Johnny,Qasim,25,changed_teams,Ryan,71,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,George Pickens,7,Johnny,Zach,35,changed_teams,Ryan,71,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Jordan,26,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Mike,67,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Russ,18,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Matt,47,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Johnny,58,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Ryan,31,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Qasim,47,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Kenneth Walker,9,Ben,Zach,41,matched,Ben,67,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Javonte Williams,17,Matt,Johnny,48,changed_teams,Johnny,48,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Javonte Williams,17,Matt,Ryan,31,changed_teams,Johnny,48,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Javonte Williams,17,Matt,Qasim,38,changed_teams,Johnny,48,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Javonte Williams,17,Matt,Zach,43,changed_teams,Johnny,48,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Davante Adams,29,Zach,Russ,38,matched,Zach,39,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Davante Adams,29,Zach,Johnny,39,matched,Zach,39,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Lamar Jackson,19,Matt,Jordan,22,matched,Matt,28,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Lamar Jackson,19,Matt,Qasim,28,matched,Matt,28,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,David Montgomery,21,Max,Russ,32,changed_teams,Zach,39,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,David Montgomery,21,Max,Qasim,18,changed_teams,Zach,39,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,David Montgomery,21,Max,Zach,39,changed_teams,Zach,39,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Tony Pollard,2,Jordan,Matt,12,changed_teams,Qasim,15,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Tony Pollard,2,Jordan,Max,3,changed_teams,Qasim,15,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Tony Pollard,2,Jordan,Qasim,15,changed_teams,Qasim,15,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Alec Pierce,5,Max,Russ,15,changed_teams,Russ,15,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Harold Fannin,2,Ryan,Jordan,21,changed_teams,Jordan,21,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Harold Fannin,2,Ryan,Matt,19,changed_teams,Jordan,21,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Harold Fannin,2,Ryan,Qasim,6,changed_teams,Jordan,21,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Jaxson Dart,2,Jordan,Matt,11,matched,Jordan,11,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Mike Evans,2,Qasim,Jordan,6,changed_teams,Russ,23,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Mike Evans,2,Qasim,Russ,23,changed_teams,Russ,23,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Dallas Goedert,2,Mike,Matt,5,matched,Mike,5,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Tucker Kraft,3,Johnny,Jordan,11,matched,Johnny,16,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Tucker Kraft,3,Johnny,Matt,16,matched,Johnny,16,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Tucker Kraft,3,Johnny,Qasim,8,matched,Johnny,16,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results
+2026,Elic Ayomanor,2,Mike,,,matched,Mike,2,rookie_drafts_tags_rfa.xlsx:2026 - RFA Results

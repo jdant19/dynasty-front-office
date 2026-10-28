@@ -1,0 +1,145 @@
+# League rules as data. Source: 2025 constitution (data/raw/league/constitution_2025.docx)
+# plus clarifications from Jordan (noted per item). The rules engine in src/dfo/rules reads this
+# file; tests in tests/ check it against the constitution's own examples and past league results.
+# Change a rule here, with a reason, and update its test in the same commit.
+
+league:
+  name: Salary Cap Football
+  teams: 10
+  format: head_to_head
+  money_rounding: nearest_dollar        # every salary, tag, raise and bid is a whole dollar (Jordan)
+
+roster:
+  starters: {QB: 1, RB: 2, WR: 3, TE: 1, FLEX: 1, K: 1, DEF: 1}
+  flex_eligible: [RB, WR, TE]
+  bench: 10
+  ir: 2
+  ir_requires_status: Out               # Jordan
+
+scoring:                                 # Yahoo settings screenshots, data/raw/league/yahoo_settings
+  pass_yds_per_pt: 25
+  pass_td: 4
+  pass_int: -1
+  rush_yds_per_pt: 10
+  rush_td: 6
+  reception: 0.5
+  rec_yds_per_pt: 10
+  rec_td: 6
+  return_td: 6
+  two_pt: 2
+  fumble_lost: -2
+  offensive_fumble_return_td: 6
+  kicker: {fg_0_19: 3, fg_20_29: 3, fg_30_39: 3, fg_40_49: 4, fg_50_plus: 5, pat_made: 1, fg_miss: 0}
+  defense:
+    sack: 1
+    interception: 2
+    fumble_recovery: 2
+    td: 6
+    safety: 2
+    blocked_kick: 2
+    kick_punt_return_td: 6
+    extra_point_returned: 2
+    points_allowed: {"0": 10, "1-6": 7, "7-13": 4, "14-20": 1, "21-27": 0, "28-34": -1, "35+": -4}
+
+season:
+  regular_season_weeks: [1, 18]
+  schedule: double_round_robin           # weeks 10-18 repeat weeks 1-9
+  standings_order: [wins, points_for, head_to_head]
+  trade_deadline: end_of_week_14
+  roster_lock: end_of_week_18            # rosters and caps lock; offseason starts with these rosters
+  offseason_start: monday_after_super_bowl
+  tanking_rule: {trigger: starting_bye_or_injured_player_known_in_advance, first: warning, second: forfeit_3rd_round_pick}
+
+cap:
+  amount: 300                            # every season (Jordan)
+  carryover: false                       # Jordan
+  minimum_salary: 0
+  can_exceed_via: [rfa_match, zero_dollar_in_season_add, legal_trade]   # Jordan
+  at_or_over_cap: only_zero_dollar_adds
+
+in_season:
+  faab: {system: yahoo, budget: remaining_cap, closes: "Tuesday 23:59 PT", tiebreak: rolling_reverse_standings}
+  after_close: zero_dollar_adds_by_waiver_priority
+  contract_years: 1
+  designation_eligible: true             # Jordan: in-season adds can be RFA'd, tagged or extended
+  offseason_conversion: {zero_dollar_contracts_become: 1}   # Jordan
+
+contracts:
+  years: [1, 4]
+  length_chosen: after_acquisition_before_week_1
+  raises: {year2: 1.05, year3: 1.10, year4: 1.15}   # each applied to the prior year's salary
+  min_raise_per_year: 1                  # Jordan: at least +$1 each year
+  rookie:
+    salary_by_round: {1: 5, 2: 3, 3: 1}
+    raise_per_year: 1
+    years: [1, 4]
+
+cuts:
+  current_year_dead_cap: 1.0
+  future_year_dead_cap: {year2: 0.75, year3: 0.50, year4: 0.25}
+  retirement: salary_removed_immediately
+
+designations:                            # per team, per offseason, players on roster at end of season only
+  rfa:
+    per_team: 2
+    start: max(round(1.10 * last_salary), last_salary + 1)   # checked against 2025-26 starting bids
+    bid_window_hours: 48
+    match_window_hours: 24
+    order: generic ESPN fantasy ranking found by search on designation day   # Jordan
+    contract_years_after: [1, 4]
+    match_may_exceed_cap: true
+    bids_limited_to_cap_space: true
+  franchise_tag:
+    per_team: 1
+    cost: round(mean(top 5 salaries at position))
+    years: 1
+    may_not_exceed_cap: true
+  mid_level_extension:
+    per_team: 1
+    salaries: [15, 30, 45]
+    eligible_if: {prior_salary_lt: 10, not_on_rookie_draft_contract: true}
+    may_not_exceed_cap: true
+  chains:                                # Jordan, 2026-10
+    allowed_transitions: [rfa->tag, extension->tag, rfa->extension, extension->rfa]
+    max_consecutive_years: 3
+    no_repeat_type_in_chain: true
+    after_franchise_tag: no designation the following season; eligible again after that
+    travels_with_player_in_trade: true
+
+trades:
+  salary_match:
+    applies_if_any_player_salary_gt: 20
+    tolerance: 0.25                      # combined salaries within 25% of the higher side
+  cap_space:
+    compensation: counts toward salary matching
+    considerations: outside matching; may carry performance conditions
+    received_cap_applies_first_to: [trade_cost, negative_cap_space]
+  picks: {years_ahead: 3, outside_matching: true, conditions_allowed: true}
+  players_optional: true
+
+rookie_draft:
+  rounds: 3
+  order: reverse_regular_season_standings   # Jordan
+  snake: false
+
+offseason_auction:
+  format: live_nomination_auction
+  nomination_order: random
+  bid_seconds: 30
+  contract_years: [1, 4]
+
+playoffs:
+  teams: 4
+  window: nfl_playoffs
+  scoring: total_points_through_super_bowl
+  contracts_ignored: true
+  lineup: starters_only_no_bench
+  keep: any_own_regular_season_players
+  draft: {pool: all_unkept_players_including_free_agents, order: seed, snake: false, regular_season_champion_picks_first: true}
+  injury_replacement: next player on the NFL depth chart not on another playoff roster   # Jordan
+  eliminated_players_stop_scoring: true
+
+payouts:
+  entry_fee: 100
+  regular_season: {1: 400, 2: 200, 3: 100}
+  playoffs: {1: 200, 2: 100}

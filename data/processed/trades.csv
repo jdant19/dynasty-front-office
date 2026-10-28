@@ -1,0 +1,295 @@
+trade_id,season,date,receiver,sender,asset_type,asset,cap_amount,source
+T2014-001,2014-2015,,Jordan,Matt,player,Aaron Rodgers,,old_system_trades_archive.json
+T2014-001,2014-2015,,Jordan,Matt,pick,2014 2nd,,old_system_trades_archive.json
+T2014-001,2014-2015,,Jordan,Matt,cap,,9.0,old_system_trades_archive.json
+T2014-001,2014-2015,,Jordan,Matt,pick,2015 2nd (if Austin is cut),,old_system_trades_archive.json
+T2014-001,2014-2015,,Matt,Jordan,player,Colin Kaepernick,,old_system_trades_archive.json
+T2014-001,2014-2015,,Matt,Jordan,player,Lamar Miller,,old_system_trades_archive.json
+T2014-001,2014-2015,,Matt,Jordan,player,Tavon Austin,,old_system_trades_archive.json
+T2014-001,2014-2015,,Matt,Jordan,pick,2014 2nd,,old_system_trades_archive.json
+T2014-001,2014-2015,,Matt,Jordan,player,$8 (if Austin is cut),,old_system_trades_archive.json
+T2014-002,2014-2015,,Jordan,Ben,player,Matt Ryan,,old_system_trades_archive.json
+T2014-002,2014-2015,,Jordan,Ben,pick,2015 2nd,,old_system_trades_archive.json
+T2014-002,2014-2015,,Ben,Jordan,player,Marquis Lee,,old_system_trades_archive.json
+T2014-002,2014-2015,,Ben,Jordan,player,Bernard Pierce,,old_system_trades_archive.json
+T2014-002,2014-2015,,Ben,Jordan,pick,2015 1st,,old_system_trades_archive.json
+T2014-003,2014-2015,,Ben,Qasim,player,Tom Brady,,old_system_trades_archive.json
+T2014-003,2014-2015,,Ben,Qasim,player,Steve Smith,,old_system_trades_archive.json
+T2014-003,2014-2015,,Qasim,Ben,player,Brandin Cooks,,old_system_trades_archive.json
+T2014-003,2014-2015,,Qasim,Ben,player,Roddy White,,old_system_trades_archive.json
+T2014-003,2014-2015,,Qasim,Ben,player,Wes Welker,,old_system_trades_archive.json
+T2014-003,2014-2015,,Qasim,Ben,player,$4 (If Welker is cut),,old_system_trades_archive.json
+T2014-003,2014-2015,,Qasim,Ben,player,$8 (If Welker retires or isnt on a roster for week 1),,old_system_trades_archive.json
+T2015-004,2015-2016,,Jordan,Ryan,player,Joique Bell,,old_system_trades_archive.json
+T2015-004,2015-2016,,Ryan,Jordan,pick,2015 2nd,,old_system_trades_archive.json
+T2015-005,2015-2016,,Ryan,Matt,pick,2015 1st,,old_system_trades_archive.json
+T2015-005,2015-2016,,Ryan,Matt,player,Colin Kaepernick,,old_system_trades_archive.json
+T2015-005,2015-2016,,Ryan,Matt,player,CJ Spiller,,old_system_trades_archive.json
+T2015-005,2015-2016,,Ryan,Matt,cap,,9.0,old_system_trades_archive.json
+T2015-005,2015-2016,,Matt,Ryan,player,Jimmy Graham,,old_system_trades_archive.json
+T2015-005,2015-2016,,Matt,Ryan,player,Jeremy Maclin,,old_system_trades_archive.json
+T2015-006,2015-2016,,Ryan,Zach,pick,2015 1st,,old_system_trades_archive.json
+T2015-006,2015-2016,,Zach,Ryan,player,CJ Spiller,,old_system_trades_archive.json
+T2015-006,2015-2016,,Zach,Ryan,cap,,14.0,old_system_trades_archive.json
+T2015-007,2015-2016,,Jordan,Qasim,player,Larry Fitzgerald,,old_system_trades_archive.json
+T2015-007,2015-2016,,Jordan,Qasim,pick,2015 2nd,,old_system_trades_archive.json
+T2015-007,2015-2016,,Jordan,Qasim,cap,,3.0,old_system_trades_archive.json
+T2015-007,2015-2016,,Qasim,Jordan,player,Matt Ryan,,old_system_trades_archive.json
+T2015-008,2015-2016,,Jordan,Ryan,player,Doug Martin,,old_system_trades_archive.json
+T2015-008,2015-2016,,Jordan,Ryan,cap,,28.0,old_system_trades_archive.json
+T2015-008,2015-2016,,Ryan,Jordan,pick,2016 1st,,old_system_trades_archive.json
+T2015-008,2015-2016,,Ryan,Jordan,pick,2016 2nd (from Qasim) (if Martin and Williams score 240 + points starting Nov. 7),,old_system_trades_archive.json
+T2015-008,2015-2016,,Ryan,Jordan,pick,2016 2nd (if Martin and William score 130-239 points starting Nov. 7),,old_system_trades_archive.json
+T2015-009,2015-2016,,Johnny,Ben,player,Tom Brady,,old_system_trades_archive.json
+T2015-009,2015-2016,,Johnny,Ben,player,CJ Anderson,,old_system_trades_archive.json
+T2015-009,2015-2016,,Johnny,Ben,player,Rishard Matthews,,old_system_trades_archive.json
+T2015-009,2015-2016,,Johnny,Ben,pick,2016 2nd,,old_system_trades_archive.json
+T2015-009,2015-2016,,Ben,Johnny,player,Randall Cobb,,old_system_trades_archive.json
+T2015-009,2015-2016,,Ben,Johnny,pick,2016 1st,,old_system_trades_archive.json
+T2016-010,2016-2017,,Ryan,Ben,player,Doug Baldwin,,old_system_trades_archive.json
+T2016-010,2016-2017,,Ben,Ryan,player,Corey Coleman,,old_system_trades_archive.json
+T2016-010,2016-2017,,Ben,Ryan,pick,2018 1st,,old_system_trades_archive.json
+T2016-010,2016-2017,,Ben,Ryan,pick,2018 3rd,,old_system_trades_archive.json
+T2016-010,2016-2017,,Ben,Ryan,cap,,20.0,old_system_trades_archive.json
+T2016-011,2016-2017,,Jordan,Ben,player,Randall Cobb,,old_system_trades_archive.json
+T2016-011,2016-2017,,Jordan,Ben,pick,2017 1st,,old_system_trades_archive.json
+T2016-011,2016-2017,,Jordan,Ben,pick,2018 1st,,old_system_trades_archive.json
+T2016-011,2016-2017,,Jordan,Ben,pick,2018 2nd,,old_system_trades_archive.json
+T2016-011,2016-2017,,Ben,Jordan,player,Antonio Brown,,old_system_trades_archive.json
+T2016-011,2016-2017,,Ben,Jordan,player,Jordan Matthews,,old_system_trades_archive.json
+T2016-011,2016-2017,,Ben,Jordan,cap,,25.0,old_system_trades_archive.json
+T2016-012,2016-2017,,Jordan,Qasim,player,Rams Defense,,old_system_trades_archive.json
+T2016-012,2016-2017,,Jordan,Qasim,player,Andy Dalton,,old_system_trades_archive.json
+T2016-012,2016-2017,,Jordan,Qasim,pick,2017 3rd,,old_system_trades_archive.json
+T2016-012,2016-2017,,Qasim,Jordan,player,Doug Martin,,old_system_trades_archive.json
+T2016-012,2016-2017,,Qasim,Jordan,cap,,37.0,old_system_trades_archive.json
+T2016-013,2016-2017,,Ben,Ryan,pick,2016 1st,,old_system_trades_archive.json
+T2016-013,2016-2017,,Ben,Ryan,pick,2016 1st,,old_system_trades_archive.json
+T2016-013,2016-2017,,Ryan,Ben,player,Latvious Murray,,old_system_trades_archive.json
+T2016-013,2016-2017,,Ryan,Ben,cap,,20.0,old_system_trades_archive.json
+T2016-013,2016-2017,,Ryan,Ben,pick,2016 2nd,,old_system_trades_archive.json
+T2016-013,2016-2017,,Ryan,Ben,pick,2017 2nd,,old_system_trades_archive.json
+T2018-014,2018-2019,,Jordan,Mike,pick,2018 2nd,,old_system_trades_archive.json
+T2018-014,2018-2019,,Jordan,Mike,player,Travis Kelce,,old_system_trades_archive.json
+T2018-014,2018-2019,,Mike,Jordan,pick,2018 1st,,old_system_trades_archive.json
+T2018-014,2018-2019,,Mike,Jordan,pick,2018 2nd,,old_system_trades_archive.json
+T2018-015,2018-2019,,Jordan,Ben,player,Odell Beckham Jr,,old_system_trades_archive.json
+T2018-015,2018-2019,,Jordan,Ben,player,Matt Stafford,,old_system_trades_archive.json
+T2018-015,2018-2019,,Jordan,Ben,pick,2019 3rd,,old_system_trades_archive.json
+T2018-015,2018-2019,,Ben,Jordan,player,Dez Bryant,,old_system_trades_archive.json
+T2018-015,2018-2019,,Ben,Jordan,player,Joe Mixon,,old_system_trades_archive.json
+T2018-015,2018-2019,,Ben,Jordan,pick,2018 2nd,,old_system_trades_archive.json
+T2018-015,2018-2019,,Ben,Jordan,player,$25 in 2019-2020,,old_system_trades_archive.json
+T2018-015,2018-2019,,Ben,Jordan,pick,2019 2nd,,old_system_trades_archive.json
+T2018-016,2018-2019,,Jordan,Ryan,player,Melvin Gordon,,old_system_trades_archive.json
+T2018-016,2018-2019,,Jordan,Ryan,player,Doug Baldwin,,old_system_trades_archive.json
+T2018-016,2018-2019,,Jordan,Ryan,pick,2019 2nd,,old_system_trades_archive.json
+T2018-016,2018-2019,,Ryan,Jordan,pick,2019 1st,,old_system_trades_archive.json
+T2018-016,2018-2019,,Ryan,Jordan,player,Emmanuel Sanders,,old_system_trades_archive.json
+T2018-017,2018-2019,,Ben,Jordan,player,John Ross,,old_system_trades_archive.json
+T2018-017,2018-2019,,Ben,Jordan,pick,Ryan's 2019 2nd,,old_system_trades_archive.json
+T2018-017,2018-2019,,Jordan,Ben,player,Cam Newton,,old_system_trades_archive.json
+T2018-017,2018-2019,,Jordan,Ben,pick,2020 3rd Round pick swap,,old_system_trades_archive.json
+T2018-018,2018-2019,,Matt,Ryan,cap,,10.0,old_system_trades_archive.json
+T2018-018,2018-2019,,Ryan,Matt,pick,2019 3rd Round Pick,,old_system_trades_archive.json
+T2019-019,2019-2020,,Qasim,Matt,player,Russell Wilson,,old_system_trades_archive.json
+T2019-019,2019-2020,,Matt,Qasim,pick,2020 2nd,,old_system_trades_archive.json
+T2019-020,2019-2020,,Ryan,Jordan,player,Todd Gurley,,old_system_trades_archive.json
+T2019-020,2019-2020,,Ryan,Jordan,pick,2020 1st,,old_system_trades_archive.json
+T2019-020,2019-2020,,Ryan,Jordan,pick,2021 1st,,old_system_trades_archive.json
+T2019-020,2019-2020,,Ryan,Jordan,pick,2020 2nd,,old_system_trades_archive.json
+T2019-020,2019-2020,,Jordan,Ryan,player,Ezekiel Elliot,,old_system_trades_archive.json
+T2019-020,2019-2020,,Jordan,Ryan,player,Keenan Allen,,old_system_trades_archive.json
+T2019-020,2019-2020,,Jordan,Ryan,pick,2020 3rd,,old_system_trades_archive.json
+T2019-020,2019-2020,,Jordan,Ryan,pick,2021 3rd,,old_system_trades_archive.json
+T2019-021,2019-2020,,Ben,Ryan,player,Michael Thomas,,old_system_trades_archive.json
+T2019-021,2019-2020,,Ben,Ryan,player,DeAndre Hopkins,,old_system_trades_archive.json
+T2019-021,2019-2020,,Ryan,Ben,player,Sammy Watkins,,old_system_trades_archive.json
+T2019-021,2019-2020,,Ryan,Ben,pick,2020 1st,,old_system_trades_archive.json
+T2019-021,2019-2020,,Ryan,Ben,pick,2021 1st,,old_system_trades_archive.json
+T2020-022,2020-2021,,Ben,Matt,player,Jared Goff,,old_system_trades_archive.json
+T2020-022,2020-2021,,Matt,Ben,player,Ty Johnson,,old_system_trades_archive.json
+T2020-022,2020-2021,,Matt,Ben,player,Swap 2021 3rds - if Ben's is better,,old_system_trades_archive.json
+T2020-022,2020-2021,,Matt,Ben,player,If Ben's isnt better swap 2022 3rds,,old_system_trades_archive.json
+T2020-023,2020-2021,,Matt,Ryan,player,Tyreek Hill,,old_system_trades_archive.json
+T2020-023,2020-2021,,Matt,Ryan,player,#10 pick in 2020,,old_system_trades_archive.json
+T2020-023,2020-2021,,Ryan,Matt,player,AJ Brown,,old_system_trades_archive.json
+T2020-023,2020-2021,,Ryan,Matt,player,#9 pick in 2020,,old_system_trades_archive.json
+T2020-023,2020-2021,,Ryan,Matt,pick,Matts 2021 1st,,old_system_trades_archive.json
+T2020-024,2020-2021,,Ben,Jordan,player,Mike Davis,,old_system_trades_archive.json
+T2020-024,2020-2021,,Jordan,Ben,player,Michael Gallup,,old_system_trades_archive.json
+T2020-025,2020-2021,,Ben,Russ,player,Will Fuller,,old_system_trades_archive.json
+T2020-025,2020-2021,,Russ,Ben,player,Melvin Gordon,,old_system_trades_archive.json
+T2020-026,2020-2021,,Jordan,Qasim,pick,Qasim's 2021 2nd,,old_system_trades_archive.json
+T2020-026,2020-2021,,Jordan,Qasim,pick,Qasim's 2022 3rd,,old_system_trades_archive.json
+T2020-026,2020-2021,,Qasim,Jordan,player,Carson Wentz,,old_system_trades_archive.json
+T2020-026,2020-2021,,Qasim,Jordan,player,Worst of Jordan's 2021 3rds,,old_system_trades_archive.json
+T2020-027,2020-2021,,Ben,Jordan,player,Ezekiel Elliot,,old_system_trades_archive.json
+T2020-027,2020-2021,,Ben,Jordan,player,2020 pick #21,,old_system_trades_archive.json
+T2020-027,2020-2021,,Ben,Jordan,cap,,25.0,old_system_trades_archive.json
+T2020-027,2020-2021,,Jordan,Ben,player,Marquis Brown,,old_system_trades_archive.json
+T2020-027,2020-2021,,Jordan,Ben,player,Damien Harris,,old_system_trades_archive.json
+T2020-027,2020-2021,,Jordan,Ben,pick,Ben's 2021 2nd,,old_system_trades_archive.json
+T2020-027,2020-2021,,Jordan,Ben,pick,Ben's 2022 2nd,,old_system_trades_archive.json
+T2020-027,2020-2021,,Jordan,Ben,player,$40 in 2021,,old_system_trades_archive.json
+T2020-027,2020-2021,,Jordan,Ben,player,$10 in 2022,,old_system_trades_archive.json
+T2020-028,2020-2021,,Jordan,Zach,player,David Montgomery,,old_system_trades_archive.json
+T2020-028,2020-2021,,Jordan,Zach,player,TY Hilton,,old_system_trades_archive.json
+T2020-028,2020-2021,,Jordan,Zach,pick,Zach's 2021 1st,,old_system_trades_archive.json
+T2020-028,2020-2021,,Zach,Jordan,player,Julio Jones,,old_system_trades_archive.json
+T2020-028,2020-2021,,Zach,Jordan,player,Leonard Fournette,,old_system_trades_archive.json
+T2020-028,2020-2021,,Zach,Jordan,pick,Ben's 2021 2nd,,old_system_trades_archive.json
+T2020-028,2020-2021,,Zach,Jordan,cap,,65.0,old_system_trades_archive.json
+T2021-029,2021-2022,,Jordan,Max,player,Jonathan Taylor,,old_system_trades_archive.json
+T2021-029,2021-2022,,Jordan,Max,player,Chris Carson,,old_system_trades_archive.json
+T2021-029,2021-2022,,Jordan,Max,player,Damien Williams,,old_system_trades_archive.json
+T2021-029,2021-2022,,Jordan,Max,player,DJ Chark,,old_system_trades_archive.json
+T2021-029,2021-2022,,Jordan,Max,player,2021 pick #16,,old_system_trades_archive.json
+T2021-029,2021-2022,,Max,Jordan,player,2021 pick #2,,old_system_trades_archive.json
+T2021-029,2021-2022,,Max,Jordan,player,2021 pick #13,,old_system_trades_archive.json
+T2021-029,2021-2022,,Max,Jordan,player,Diontae Johnson,,old_system_trades_archive.json
+T2021-029,2021-2022,,Max,Jordan,player,Marquis Brown,,old_system_trades_archive.json
+T2021-029,2021-2022,,Max,Jordan,player,Darrell Henderson,,old_system_trades_archive.json
+T2021-030,2021-2022,,Ben,Max,player,Marlon Mack,,old_system_trades_archive.json
+T2021-030,2021-2022,,Ben,Max,player,2021 pick #13,,old_system_trades_archive.json
+T2021-030,2021-2022,,Ben,Max,pick,2022 1st,,old_system_trades_archive.json
+T2021-030,2021-2022,,Max,Ben,player,Joe Mixon,,old_system_trades_archive.json
+T2021-031,2021-2022,,Ben,Qasim,player,2021 pick #10,,old_system_trades_archive.json
+T2021-031,2021-2022,,Ben,Qasim,player,2021 pick #30,,old_system_trades_archive.json
+T2021-031,2021-2022,,Qasim,Ben,player,DeAndre Hopkins,,old_system_trades_archive.json
+T2021-031,2021-2022,,Qasim,Ben,cap,,20.0,old_system_trades_archive.json
+T2021-032,2021-2022,,Ryan,Qasim,player,Dak Prescott,,old_system_trades_archive.json
+T2021-032,2021-2022,,Ryan,Qasim,pick,2023 3rd,,old_system_trades_archive.json
+T2021-032,2021-2022,,Qasim,Ryan,player,Russell Wilson,,old_system_trades_archive.json
+T2021-032,2021-2022,,Qasim,Ryan,cap,,38.0,old_system_trades_archive.json
+T2021-032,2021-2022,,Qasim,Ryan,pick,2022 2nd,,old_system_trades_archive.json
+T2021-033,2021-2022,,Johnny,Jordan,player,2021 #16,,old_system_trades_archive.json
+T2021-033,2021-2022,,Johnny,Jordan,player,2021 #20,,old_system_trades_archive.json
+T2021-033,2021-2022,,Jordan,Johnny,player,2021 #8,,old_system_trades_archive.json
+T2021-033,2021-2022,,Jordan,Johnny,cap,,5.0,old_system_trades_archive.json
+T2021-034,2021-2022,,Matt,Jordan,player,David Montgomery,,old_system_trades_archive.json
+T2021-034,2021-2022,,Matt,Jordan,pick,2022 1st,,old_system_trades_archive.json
+T2021-034,2021-2022,,Matt,Jordan,player,$25 in 2022,,old_system_trades_archive.json
+T2021-034,2021-2022,,Jordan,Matt,player,Travis Kelce,,old_system_trades_archive.json
+T2021-034,2021-2022,,Jordan,Matt,player,$25 in 2021,,old_system_trades_archive.json
+T2021-035,2021-2022,,Matt,Zach,player,Stefon Diggs,,old_system_trades_archive.json
+T2021-035,2021-2022,,Matt,Zach,pick,2023 2nd,,old_system_trades_archive.json
+T2021-035,2021-2022,,Matt,Zach,cap,,5.0,old_system_trades_archive.json
+T2021-035,2021-2022,,Zach,Matt,player,Julio Jones,,old_system_trades_archive.json
+T2021-035,2021-2022,,Zach,Matt,pick,2022 1st (best of Matt's),,old_system_trades_archive.json
+T2021-035,2021-2022,,Zach,Matt,pick,2023 1st,,old_system_trades_archive.json
+T2021-036,2021-2022,,Qasim,Mike,player,Aaron Rodgers,,old_system_trades_archive.json
+T2021-036,2021-2022,,Qasim,Mike,player,George Kittle,,old_system_trades_archive.json
+T2021-036,2021-2022,,Qasim,Mike,player,Marvin Jones,,old_system_trades_archive.json
+T2021-036,2021-2022,,Qasim,Mike,player,Alexander Mattison,,old_system_trades_archive.json
+T2021-036,2021-2022,,Mike,Qasim,player,Aaron Jones,,old_system_trades_archive.json
+T2021-036,2021-2022,,Mike,Qasim,player,Marquez Calloway,,old_system_trades_archive.json
+T2021-036,2021-2022,,Mike,Qasim,pick,2022 2nd (Qasim's),,old_system_trades_archive.json
+T2021-037,2021-2022,,Jordan,Mike,player,Tyler Lockett,,old_system_trades_archive.json
+T2021-037,2021-2022,,Jordan,Mike,player,Mike Gesicki,,old_system_trades_archive.json
+T2021-037,2021-2022,,Jordan,Mike,pick,2023 2nd,,old_system_trades_archive.json
+T2021-037,2021-2022,,Mike,Jordan,player,Travis Kelce,,old_system_trades_archive.json
+T2021-037,2021-2022,,Mike,Jordan,player,Michael Gallup,,old_system_trades_archive.json
+T2022-038,2022-2023,,Jordan,Mike,player,Davante Adams,,old_system_trades_archive.json
+T2022-038,2022-2023,,Jordan,Mike,player,Amon-Ra St.Brown,,old_system_trades_archive.json
+T2022-038,2022-2023,,Jordan,Mike,pick,2024 1st,,old_system_trades_archive.json
+T2022-038,2022-2023,,Mike,Jordan,player,Derrick Henry,,old_system_trades_archive.json
+T2022-038,2022-2023,,Mike,Jordan,player,Gabriel Davis,,old_system_trades_archive.json
+T2022-038,2022-2023,,Mike,Jordan,pick,2023 2nd (his own back),,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,Dallas Goedert,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,Matt Stafford,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,Trevor Lawerence,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,Derrick Carr,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,Melvin Gordon,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,DeAndre Carter,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,cap,,20.0,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,player,$25 in 2023,,old_system_trades_archive.json
+T2022-039,2022-2023,,Jordan,Ben,pick,1st/2nd. (highest between 7-16),,old_system_trades_archive.json
+T2022-039,2022-2023,,Ben,Jordan,player,Davante Adams,,old_system_trades_archive.json
+T2022-039,2022-2023,,Ben,Jordan,player,Geno Smith,,old_system_trades_archive.json
+T2022-040,2022-2023,,Matt,Russ,player,Justin Fields,,old_system_trades_archive.json
+T2022-040,2022-2023,,Russ,Matt,pick,2023 3rd,,old_system_trades_archive.json
+T2022-040,2022-2023,,Russ,Matt,player,David Bell,,old_system_trades_archive.json
+T2022-041,2022-2023,,Ben,Ryan,player,Terry McLaurin,,old_system_trades_archive.json
+T2022-041,2022-2023,,Ben,Ryan,player,AJ Brown,,old_system_trades_archive.json
+T2022-041,2022-2023,,Ben,Ryan,player,$20 in 2023,,old_system_trades_archive.json
+T2022-041,2022-2023,,Ryan,Ben,pick,2024 1st,,old_system_trades_archive.json
+T2022-041,2022-2023,,Ryan,Ben,pick,2025 1st,,old_system_trades_archive.json
+T2023-042,2023-2024,,Ben,Jordan,player,Calvin Ridley,,old_system_trades_archive.json
+T2023-042,2023-2024,,Ben,Jordan,player,Trevor Lawrence,,old_system_trades_archive.json
+T2023-042,2023-2024,,Ben,Jordan,pick,2023 2nd Round pick (#12),,old_system_trades_archive.json
+T2023-042,2023-2024,,Ben,Jordan,pick,2024 1st (the weaker),,old_system_trades_archive.json
+T2023-042,2023-2024,,Jordan,Ben,player,AJ Brown,,old_system_trades_archive.json
+T2023-042,2023-2024,,Jordan,Ben,player,Antonio Gibson,,old_system_trades_archive.json
+T2023-042,2023-2024,,Jordan,Ben,cap,,5.0,old_system_trades_archive.json
+T2023-043,2023-2024,,Qasim,Jordan,pick,2023 1st (#10),,old_system_trades_archive.json
+T2023-043,2023-2024,,Qasim,Jordan,player,Romeo Doubs,,old_system_trades_archive.json
+T2023-043,2023-2024,,Qasim,Jordan,cap,,3.0,old_system_trades_archive.json
+T2023-043,2023-2024,,Jordan,Qasim,pick,2023 1st (#6),,old_system_trades_archive.json
+T2023-044,2023-2024,,Ben,Jordan,player,Rashod Bateman,,old_system_trades_archive.json
+T2023-044,2023-2024,,Ben,Jordan,pick,2024 2nd,,old_system_trades_archive.json
+T2023-044,2023-2024,,Ben,Jordan,player,$4 in 2024,,old_system_trades_archive.json
+T2023-044,2023-2024,,Jordan,Ben,player,Mike Williams,,old_system_trades_archive.json
+T2023-044,2023-2024,,Jordan,Ben,pick,2024 3rd,,old_system_trades_archive.json
+T2023-045,2023-2024,,Matt,Qasim,player,David Montgomery,,old_system_trades_archive.json
+T2023-045,2023-2024,,Qasim,Matt,pick,2024 1st,,old_system_trades_archive.json
+T2023-045,2023-2024,,Qasim,Matt,player,Michael Mayer,,old_system_trades_archive.json
+T2023-046,2023-2024,,Ryan,Jordan,pick,2024 3rd,,old_system_trades_archive.json
+T2023-046,2023-2024,,Ryan,Jordan,pick,2025 3rd,,old_system_trades_archive.json
+T2023-046,2023-2024,,Jordan,Ryan,cap,,35.0,old_system_trades_archive.json
+T2023-047,2023-2024,,Qasim,Jordan,cap,,35.0,old_system_trades_archive.json
+T2023-047,2023-2024,,Qasim,Jordan,player,Darren Waller,,old_system_trades_archive.json
+T2023-047,2023-2024,,Qasim,Jordan,player,Marquis Brown,,old_system_trades_archive.json
+T2023-047,2023-2024,,Qasim,Jordan,player,Zach Charbonnet,,old_system_trades_archive.json
+T2023-047,2023-2024,,Qasim,Jordan,pick,2024 1st (whichever Ben doesnt get),,old_system_trades_archive.json
+T2023-047,2023-2024,,Jordan,Qasim,player,Saquan Barkley,,old_system_trades_archive.json
+T2023-047,2023-2024,,Jordan,Qasim,pick,2025 3rd,,old_system_trades_archive.json
+T2023-047,2023-2024,,Jordan,Qasim,player,$7 in 2024 cap,,old_system_trades_archive.json
+T2023-048,2023-2024,,Ben,Jordan,player,Dallas Goedert,,old_system_trades_archive.json
+T2023-048,2023-2024,,Ben,Jordan,player,Damien Pierce,,old_system_trades_archive.json
+T2023-048,2023-2024,,Ben,Jordan,pick,2025 2nd,,old_system_trades_archive.json
+T2023-048,2023-2024,,Jordan,Ben,player,Travis Kelce,,old_system_trades_archive.json
+T2024-049,2024-2025,,Ben,Johnny,player,Chris Olave,,old_system_trades_archive.json
+T2024-049,2024-2025,,Johnny,Ben,player,Amari Cooper,,old_system_trades_archive.json
+T2024-049,2024-2025,,Johnny,Ben,pick,2024 1st (#8),,old_system_trades_archive.json
+T2024-050,2024-2025,,Matt,Russ,pick,2024 1st (#10),,old_system_trades_archive.json
+T2024-050,2024-2025,,Russ,Matt,cap,,20.0,old_system_trades_archive.json
+T2024-051,2024-2025,,Jordan,Max,player,Jamarr Chase,,old_system_trades_archive.json
+T2024-051,2024-2025,,Jordan,Max,player,Josh Jacobs,,old_system_trades_archive.json
+T2024-051,2024-2025,,Jordan,Max,player,Bucky Irving,,old_system_trades_archive.json
+T2024-051,2024-2025,,Jordan,Max,pick,2025 2nd,,old_system_trades_archive.json
+T2024-051,2024-2025,,Jordan,Max,player,$10 in 2025,,old_system_trades_archive.json
+T2024-051,2024-2025,,Max,Jordan,player,AJ Brown,,old_system_trades_archive.json
+T2024-051,2024-2025,,Max,Jordan,player,Puka Nacua,,old_system_trades_archive.json
+T2024-051,2024-2025,,Max,Jordan,player,Jermaine Burton,,old_system_trades_archive.json
+T2024-051,2024-2025,,Max,Jordan,pick,2025 1st,,old_system_trades_archive.json
+T2024-051,2024-2025,,Max,Jordan,pick,2026 1st,,old_system_trades_archive.json
+T2024-052,2024-2025,,Ben,Max,player,DeVonta Smith,,old_system_trades_archive.json
+T2024-052,2024-2025,,Ben,Max,player,AJ Brown,,old_system_trades_archive.json
+T2024-052,2024-2025,,Ben,Max,player,$7 in 2025,,old_system_trades_archive.json
+T2024-052,2024-2025,,Max,Ben,player,Chris Olave,,old_system_trades_archive.json
+T2024-052,2024-2025,,Max,Ben,player,Isaiah Pacheco,,old_system_trades_archive.json
+T2024-052,2024-2025,,Max,Ben,player,Calvin Ridley,,old_system_trades_archive.json
+T2024-052,2024-2025,,Max,Ben,player,Alec Pierce,,old_system_trades_archive.json
+T2024-052,2024-2025,,Max,Ben,pick,Weaker of Ben's 2025 2nd Rounders,,old_system_trades_archive.json
+T2026-L01,2026-2027,2026-08-04,,,summary,2026-08-04-top-of-the-food-achane,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L02,2026-2027,2026-08-09,,,summary,2026-08-09-calls-on-teslaa-odunze,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L03,2026-2027,2026-08-09,,,summary,2026-08-09-hello-fascism-aiyuk,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L04,2026-2027,2026-08-07,,,summary,2026-08-07-who-dey-white-house,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L05,2026-2027,2026-08-09,,,summary,2026-08-09-who-dey-white-house-lamb,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L06,2026-2027,2026-08-12,,,summary,2026-08-12-in-the-nix-of-time-bowers,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L07,2026-2027,2026-08-12,,,summary,2026-08-12-calls-on-teslaa-odunze-v2,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L08,2026-2027,2026-08-12,,,summary,2026-08-12-stein-dynasty-hubbard-dump,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L09,2026-2027,2026-08-15,,,summary,2026-08-15-who-dey-white-house,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L10,2026-2027,2026-08-18,,,summary,2026-08-18-who-dey-white-house-walker,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-L11,2026-2027,2026-08-18,,,summary,2026-08-18-who-dey-white-house-lamb,,old_system_ledger/events.jsonl (terms in raw file)
+T2026-J01,2026-2027,2026-10-25,Jordan,Ben,player,CeeDee Lamb,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Jordan,Ben,player,Patrick Mahomes,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Jordan,Ben,player,Wan'Dale Robinson,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,player,Emeka Egbuka,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,player,Justin Herbert,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,player,Brandon Aiyuk,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,player,Cam Skattebo,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,player,Jonah Coleman,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,pick,Jordan's 2027 1st,,inbox/trades_2026.json
+T2026-J01,2026-2027,2026-10-25,Ben,Jordan,cap,$30 cap in 2027-2028,30,inbox/trades_2026.json

@@ -1,0 +1,95 @@
+# Owners are the stable identity; team names are aliases that change by season.
+# Sources: season finishes from the Historic League Rankings sheet; team-name owners confirmed by
+# Jordan on the design doc's Team name map tab (2026-10-27), or self-evident from the name.
+
+owners:
+  Jordan: {active: [2013, null], commissioner: true, current_team: "Ja'Jah Pachulia", me: true}
+  Mike:   {active: [2013, null], current_team: "Mike's Swell Team"}
+  Ben:    {active: [2013, null], current_team: "Who Dey White House"}
+  Russ:   {active: [2013, null], current_team: "STEIN DYNASTY", aliases: [Russell]}
+  Matt:   {active: [2013, null], current_team: "REESE MODE"}
+  Qasim:  {active: [2013, null], current_team: "Dayton Triangles", aliases: [Q]}
+  Zach:   {active: [2013, null], current_team: "In the Nix of Time"}
+  Johnny: {active: [2013, null], current_team: "Hello Fascism"}
+  Ryan:   {active: [2015, null], current_team: "Duck Prescott"}
+  Max:    {active: [2019, null], current_team: "Top of the Food Achane"}
+  Winston: {active: [2013, 2018]}
+  Eric:    {active: [2013, 2013]}
+  Kevin:   {active: [2014, 2014]}
+
+# team name -> owner, with the seasons the name appears in auction results or the league site
+team_names:
+  # 2013
+  - {name: "Ben There Raped That", owner: Eric, seasons: [2013], basis: jordan}
+  - {name: "Check Raise Fold", owner: Johnny, seasons: [2013], basis: jordan}
+  - {name: "Jordan's Team", owner: Jordan, seasons: [2013, 2018], basis: name}
+  - {name: "Lang's Bold Team", owner: Matt, seasons: [2013], basis: jordan}
+  - {name: "Mike's Swell Team", owner: Mike, seasons: [2013, 2026], basis: name}
+  - {name: "Q's Team", owner: Qasim, seasons: [2013, 2016], basis: name}
+  - {name: "Q s Team", owner: Qasim, seasons: [2013], basis: name}
+  - {name: "STEIN-NASTY", owner: Russ, seasons: [2013, 2016], basis: name}
+  - {name: "TDs (say it quickly)", owner: Ben, seasons: [2013], basis: jordan}
+  - {name: "Winston's Team", owner: Winston, seasons: [2013], basis: name}
+  - {name: "Zach's Best Team", owner: Zach, seasons: [2013], basis: name}
+  # 2014
+  - {name: "CLE Homeless Oracle", owner: Winston, seasons: [2014], basis: jordan}
+  - {name: "Hodor's Hodor", owner: Johnny, seasons: [2014], basis: jordan}
+  - {name: "Is Marve Available?", owner: Ben, seasons: [2014], basis: jordan}
+  - {name: "Oakland Raiders", owner: Matt, seasons: [2014, 2015], basis: jordan}
+  - {name: "Stafford Infection", owner: Kevin, seasons: [2014], basis: jordan}
+  - {name: "Team Name", owner: Zach, seasons: [2014, 2018], basis: jordan}
+  # 2015-2016
+  - {name: "Buy PDEX", owner: Johnny, seasons: [2015], basis: jordan}
+  - {name: "Dalton Voodoo Doll", owner: Ben, seasons: [2015, 2016], basis: jordan}
+  - {name: "Gurley Men", owner: Ryan, seasons: [2015, 2018], basis: jordan}
+  - {name: "Hyde Yo Kids", owner: Winston, seasons: [2015, 2016], basis: jordan}
+  - {name: "Las Vegas Raiders", owner: Matt, seasons: [2016], basis: jordan}
+  - {name: "Trump is Cancer", owner: Johnny, seasons: [2016], basis: jordan}
+  # 2017-2018
+  - {name: "Don’t Hyde Yo Kids", owner: Winston, seasons: [2017], basis: jordan}
+  - {name: "Cleveland Clowns", owner: Matt, seasons: [2017, 2018], basis: jordan}
+  - {name: "Dayton Triangles", owner: Qasim, seasons: [2017, 2026], basis: name}
+  - {name: "LETS PLAY FOOTBALL", owner: Russ, seasons: [2017, 2018], basis: jordan}
+  - {name: "New Sheriff in Town", owner: Ben, seasons: [2017], basis: jordan}
+  - {name: "Now Buy $SMIT", owner: Johnny, seasons: [2017], basis: jordan}
+  - {name: "$PDEX was smart", owner: Johnny, seasons: [2018], basis: jordan}
+  - {name: "Fire Marvin 4 Lyfe", owner: Winston, seasons: [2018], basis: jordan}
+  - {name: "TheImmortalMarvLewis", owner: Ben, seasons: [2018], basis: jordan}
+  # 2019-2021
+  - {name: "Back to Sleep", owner: Jordan, seasons: [2019], basis: jordan}
+  - {name: "FREE ANDY DALTON", owner: Russ, seasons: [2019], basis: jordan}
+  - {name: "Flacco=Terrible", owner: Zach, seasons: [2019], basis: jordan}
+  - {name: "Golden Tate Warriors", owner: Matt, seasons: [2019, 2022], basis: jordan}
+  - {name: "Invest in $CUSI", owner: Johnny, seasons: [2019, 2020], basis: jordan}
+  - {name: "Kraft Mack & Brees", owner: Max, seasons: [2019, 2021], basis: jordan}
+  - {name: "Leveon is the illest", owner: Ben, seasons: [2019], basis: jordan}
+  - {name: "Our Gordon Savior", owner: Ryan, seasons: [2019, 2023], basis: jordan}
+  - {name: "Judge Jeudy", owner: Zach, seasons: [2020, 2021], basis: jordan}
+  - {name: "STEIN NASTY", owner: Russ, seasons: [2020, 2023], basis: name}
+  - {name: "The Washington Slurs", owner: Ben, seasons: [2020], basis: jordan}
+  - {name: "Yang 2024", owner: Jordan, seasons: [2020], basis: jordan}
+  - {name: "Future Home of Kenneth Walker", owner: Ben, seasons: [2021], basis: jordan}
+  - {name: "Pig Diarrhea Meds", owner: Johnny, seasons: [2021], basis: jordan}
+  - {name: "The Lasso Special", owner: Jordan, seasons: [2021, 2022], basis: jordan}
+  # 2022-2024
+  - {name: "Dan Campbell is my hero", owner: Ben, seasons: [2022], basis: jordan}
+  - {name: "Herbie Fully Loaded", owner: Max, seasons: [2022, 2023], basis: jordan}   # 2023 by elimination
+  - {name: "People Over Profits", owner: Johnny, seasons: [2022], basis: jordan}
+  - {name: "Russ *Can't Cook", owner: Zach, seasons: [2022, 2023], basis: jordan}
+  - {name: "6’ 3” 215lbs", owner: Johnny, seasons: [2023], basis: jordan}
+  - {name: "Colonel Mostert", owner: Matt, seasons: [2023], basis: jordan}
+  - {name: "Dan Campbell Mahomes Slayer", owner: Ben, seasons: [2023], basis: jordan}
+  - {name: "What can Brown do for you?", owner: Jordan, seasons: [2023, 2025], basis: name}
+  - {name: "Bye bye democracy", owner: Johnny, seasons: [2024], basis: jordan}
+  - {name: "We’re Not Worthy", owner: Ryan, seasons: [2024], basis: jordan}
+  - {name: "The Injured Reserves", owner: Max, seasons: [2024], basis: elimination}   # only owner left in 2024; confirm
+  - {name: "In the Nix of Time", owner: Zach, seasons: [2024, 2026], basis: name}
+  - {name: "REESE MODE", owner: Matt, seasons: [2024, 2026], basis: name}
+  - {name: "STEIN DYNASTY", owner: Russ, seasons: [2024, 2026], basis: name}
+  - {name: "Who Dey White House", owner: Ben, seasons: [2024, 2026], basis: name}
+  # 2025-2026
+  - {name: "Calls on TeSlaa", owner: Ryan, seasons: [2025], basis: name}
+  - {name: "Hello Fascism", owner: Johnny, seasons: [2025, 2026], basis: name}
+  - {name: "Top of the Food Achane", owner: Max, seasons: [2025, 2026], basis: name}
+  - {name: "Ja'Jah Pachulia", owner: Jordan, seasons: [2026, 2026], basis: name}
+  - {name: "Duck Prescott", owner: Ryan, seasons: [2026, 2026], basis: name}

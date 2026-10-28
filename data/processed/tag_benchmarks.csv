@@ -1,0 +1,37 @@
+season,position,sheet_value,tag_cost,top5_salaries,source
+2021,DEF,2.0,2,,rookie_drafts_tags_rfa.xlsx:2021 Rookie Draft
+2021,K,2.0,2,,rookie_drafts_tags_rfa.xlsx:2021 Rookie Draft
+2021,QB,38.0,38,,rookie_drafts_tags_rfa.xlsx:2021 Rookie Draft
+2021,RB,63.0,63,,rookie_drafts_tags_rfa.xlsx:2021 Rookie Draft
+2021,TE,41.0,41,,rookie_drafts_tags_rfa.xlsx:2021 Rookie Draft
+2021,WR,74.0,74,,rookie_drafts_tags_rfa.xlsx:2021 Rookie Draft
+2022,DEF,2.2,2,,rookie_drafts_tags_rfa.xlsx:2022 Rookie Draft
+2022,K,2.2,2,,rookie_drafts_tags_rfa.xlsx:2022 Rookie Draft
+2022,QB,35.8,36,,rookie_drafts_tags_rfa.xlsx:2022 Rookie Draft
+2022,RB,74.6,75,,rookie_drafts_tags_rfa.xlsx:2022 Rookie Draft
+2022,TE,25.4,25,,rookie_drafts_tags_rfa.xlsx:2022 Rookie Draft
+2022,WR,80.4,80,,rookie_drafts_tags_rfa.xlsx:2022 Rookie Draft
+2023,DEF,2.0,2,,rookie_drafts_tags_rfa.xlsx:2023 Rookie Draft
+2023,K,2.0,2,,rookie_drafts_tags_rfa.xlsx:2023 Rookie Draft
+2023,QB,27.0,27,,rookie_drafts_tags_rfa.xlsx:2023 Rookie Draft
+2023,RB,94.0,94,,rookie_drafts_tags_rfa.xlsx:2023 Rookie Draft
+2023,TE,30.0,30,,rookie_drafts_tags_rfa.xlsx:2023 Rookie Draft
+2023,WR,70.0,70,,rookie_drafts_tags_rfa.xlsx:2023 Rookie Draft
+2024,DEF,2.0,2,2 2 1 1 1,rookie_drafts_tags_rfa.xlsx:2024 Rookie Draft
+2024,K,2.0,2,2 1 1 1 1,rookie_drafts_tags_rfa.xlsx:2024 Rookie Draft
+2024,QB,38.0,38,27 24 54 41 43,rookie_drafts_tags_rfa.xlsx:2024 Rookie Draft
+2024,RB,93.0,93,87 94 107 96 81,rookie_drafts_tags_rfa.xlsx:2024 Rookie Draft
+2024,TE,32.0,32,30 22 20 30 56,rookie_drafts_tags_rfa.xlsx:2024 Rookie Draft
+2024,WR,79.0,79,81 72 86 81 75,rookie_drafts_tags_rfa.xlsx:2024 Rookie Draft
+2025,DEF,1.4,1,2 1 1 1 2,rookie_drafts_tags_rfa.xlsx:2025 Rookie Draft
+2025,K,1,1,1 1 1 1 1,rookie_drafts_tags_rfa.xlsx:2025 Rookie Draft
+2025,QB,39.4,39,47 16 49 57 28,rookie_drafts_tags_rfa.xlsx:2025 Rookie Draft
+2025,RB,98,98,93 105 108 93 91,rookie_drafts_tags_rfa.xlsx:2025 Rookie Draft
+2025,TE,26.2,26,36 9 23 29 34,rookie_drafts_tags_rfa.xlsx:2025 Rookie Draft
+2025,WR,79,79,79 79 79 79 79,rookie_drafts_tags_rfa.xlsx:2025 Rookie Draft
+2026,DEF,2.0,2,1 1 1 1 1,rookie_drafts_tags_rfa.xlsx:2026 Rookie Draft
+2026,K,2.0,2,1 2 2 1 1,rookie_drafts_tags_rfa.xlsx:2026 Rookie Draft
+2026,QB,27.6,28,31 17 15 12 63,rookie_drafts_tags_rfa.xlsx:2026 Rookie Draft
+2026,RB,90,90,119 81 76 98 76,rookie_drafts_tags_rfa.xlsx:2026 Rookie Draft
+2026,TE,16.8,17,38 8 26 7 5,rookie_drafts_tags_rfa.xlsx:2026 Rookie Draft
+2026,WR,97.4,97,93 135 79 93 87,rookie_drafts_tags_rfa.xlsx:2026 Rookie Draft

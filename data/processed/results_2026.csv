@@ -1,0 +1,91 @@
+season,week,team_a,team_b,score_a,score_b,winner,basis,source
+2026,1,Jordan,Ben,129.16,118.72,Jordan,screenshot,screenshots/2026
+2026,1,Ryan,Matt,84.6,96.96,Matt,screenshot,screenshots/2026
+2026,1,Qasim,Johnny,130.96,150.14,Johnny,screenshot,screenshots/2026
+2026,1,Zach,Mike,145.8,104.26,Zach,screenshot,screenshots/2026
+2026,1,Russ,Max,142.96,143.92,Max,screenshot,screenshots/2026
+2026,2,Jordan,Ryan,117.78,140.86,Ryan,screenshot,screenshots/2026
+2026,2,Qasim,Matt,83.32,117.3,Matt,screenshot,screenshots/2026
+2026,2,Johnny,Russ,124.76,84.78,Johnny,screenshot,screenshots/2026
+2026,2,Zach,Max,146.78,125.94,Zach,screenshot,screenshots/2026
+2026,2,Mike,Ben,78.42,132.58,Ben,screenshot,screenshots/2026
+2026,3,Jordan,Qasim,144.04,111.58,Jordan,screenshot,screenshots/2026
+2026,3,Ryan,Mike,101.64,80.16,Ryan,screenshot,screenshots/2026
+2026,3,Johnny,Max,104.76,80.62,Johnny,screenshot,screenshots/2026
+2026,3,Zach,Ben,161.94,116.64,Zach,screenshot,screenshots/2026
+2026,3,Matt,Russ,97.34,132.18,Russ,screenshot,screenshots/2026
+2026,4,Jordan,Russ,105.66,153.62,Russ,screenshot,screenshots/2026
+2026,4,Ryan,Ben,110.5,149.8,Ben,screenshot,screenshots/2026
+2026,4,Qasim,Mike,111.48,67.42,Qasim,screenshot,screenshots/2026
+2026,4,Johnny,Zach,174.68,94.08,Johnny,screenshot,screenshots/2026
+2026,4,Matt,Max,123.88,145.52,Max,screenshot,screenshots/2026
+2026,5,Jordan,Max,160.48,135.76,Jordan,screenshot,screenshots/2026
+2026,5,Ryan,Zach,88.94,173.92,Zach,screenshot,screenshots/2026
+2026,5,Qasim,Ben,121.84,68.76,Qasim,screenshot,screenshots/2026
+2026,5,Johnny,Matt,138.54,86.24,Johnny,screenshot,screenshots/2026
+2026,5,Mike,Russ,115.0,170.6,Russ,screenshot,screenshots/2026
+2026,6,Jordan,Johnny,125.74,113.72,Jordan,screenshot,screenshots/2026
+2026,6,Ryan,Qasim,82.62,116.3,Qasim,derived_from_standings,screenshots/2026
+2026,6,Zach,Matt,101.48,115.66,Matt,derived_from_standings,screenshots/2026
+2026,6,Mike,Max,72.1,120.3,Max,derived_from_standings,screenshots/2026
+2026,6,Russ,Ben,134.12,84.18,Russ,derived_from_standings,screenshots/2026
+2026,7,Jordan,Matt,128.36,123.02,Jordan,screenshot,screenshots/2026
+2026,7,Ryan,Russ,117.18,162.78,Russ,screenshot,screenshots/2026
+2026,7,Qasim,Zach,99.42,129.7,Zach,screenshot,screenshots/2026
+2026,7,Johnny,Mike,141.82,97.14,Johnny,screenshot,screenshots/2026
+2026,7,Max,Ben,109.38,82.9,Max,screenshot,screenshots/2026
+2026,8,Jordan,Zach,,,,scheduled,screenshots/2026
+2026,8,Ryan,Max,,,,scheduled,screenshots/2026
+2026,8,Qasim,Russ,,,,scheduled,screenshots/2026
+2026,8,Johnny,Ben,,,,scheduled,screenshots/2026
+2026,8,Mike,Matt,,,,scheduled,screenshots/2026
+2026,9,Jordan,Mike,,,,scheduled,screenshots/2026
+2026,9,Ryan,Johnny,,,,scheduled,screenshots/2026
+2026,9,Qasim,Max,,,,scheduled,screenshots/2026
+2026,9,Zach,Russ,,,,scheduled,screenshots/2026
+2026,9,Matt,Ben,,,,scheduled,screenshots/2026
+2026,10,Jordan,Ben,,,,scheduled,screenshots/2026 (repeat of week 1)
+2026,10,Ryan,Matt,,,,scheduled,screenshots/2026 (repeat of week 1)
+2026,10,Qasim,Johnny,,,,scheduled,screenshots/2026 (repeat of week 1)
+2026,10,Zach,Mike,,,,scheduled,screenshots/2026 (repeat of week 1)
+2026,10,Russ,Max,,,,scheduled,screenshots/2026 (repeat of week 1)
+2026,11,Jordan,Ryan,,,,scheduled,screenshots/2026 (repeat of week 2)
+2026,11,Qasim,Matt,,,,scheduled,screenshots/2026 (repeat of week 2)
+2026,11,Johnny,Russ,,,,scheduled,screenshots/2026 (repeat of week 2)
+2026,11,Zach,Max,,,,scheduled,screenshots/2026 (repeat of week 2)
+2026,11,Mike,Ben,,,,scheduled,screenshots/2026 (repeat of week 2)
+2026,12,Jordan,Qasim,,,,scheduled,screenshots/2026 (repeat of week 3)
+2026,12,Ryan,Mike,,,,scheduled,screenshots/2026 (repeat of week 3)
+2026,12,Johnny,Max,,,,scheduled,screenshots/2026 (repeat of week 3)
+2026,12,Zach,Ben,,,,scheduled,screenshots/2026 (repeat of week 3)
+2026,12,Matt,Russ,,,,scheduled,screenshots/2026 (repeat of week 3)
+2026,13,Jordan,Russ,,,,scheduled,screenshots/2026 (repeat of week 4)
+2026,13,Ryan,Ben,,,,scheduled,screenshots/2026 (repeat of week 4)
+2026,13,Qasim,Mike,,,,scheduled,screenshots/2026 (repeat of week 4)
+2026,13,Johnny,Zach,,,,scheduled,screenshots/2026 (repeat of week 4)
+2026,13,Matt,Max,,,,scheduled,screenshots/2026 (repeat of week 4)
+2026,14,Jordan,Max,,,,scheduled,screenshots/2026 (repeat of week 5)
+2026,14,Ryan,Zach,,,,scheduled,screenshots/2026 (repeat of week 5)
+2026,14,Qasim,Ben,,,,scheduled,screenshots/2026 (repeat of week 5)
+2026,14,Johnny,Matt,,,,scheduled,screenshots/2026 (repeat of week 5)
+2026,14,Mike,Russ,,,,scheduled,screenshots/2026 (repeat of week 5)
+2026,15,Jordan,Johnny,,,,scheduled,screenshots/2026 (repeat of week 6)
+2026,15,Ryan,Qasim,,,,scheduled,screenshots/2026 (repeat of week 6)
+2026,15,Zach,Matt,,,,scheduled,screenshots/2026 (repeat of week 6)
+2026,15,Mike,Max,,,,scheduled,screenshots/2026 (repeat of week 6)
+2026,15,Russ,Ben,,,,scheduled,screenshots/2026 (repeat of week 6)
+2026,16,Jordan,Matt,,,,scheduled,screenshots/2026 (repeat of week 7)
+2026,16,Ryan,Russ,,,,scheduled,screenshots/2026 (repeat of week 7)
+2026,16,Qasim,Zach,,,,scheduled,screenshots/2026 (repeat of week 7)
+2026,16,Johnny,Mike,,,,scheduled,screenshots/2026 (repeat of week 7)
+2026,16,Max,Ben,,,,scheduled,screenshots/2026 (repeat of week 7)
+2026,17,Jordan,Zach,,,,scheduled,screenshots/2026 (repeat of week 8)
+2026,17,Ryan,Max,,,,scheduled,screenshots/2026 (repeat of week 8)
+2026,17,Qasim,Russ,,,,scheduled,screenshots/2026 (repeat of week 8)
+2026,17,Johnny,Ben,,,,scheduled,screenshots/2026 (repeat of week 8)
+2026,17,Mike,Matt,,,,scheduled,screenshots/2026 (repeat of week 8)
+2026,18,Jordan,Mike,,,,scheduled,screenshots/2026 (repeat of week 9)
+2026,18,Ryan,Johnny,,,,scheduled,screenshots/2026 (repeat of week 9)
+2026,18,Qasim,Max,,,,scheduled,screenshots/2026 (repeat of week 9)
+2026,18,Zach,Russ,,,,scheduled,screenshots/2026 (repeat of week 9)
+2026,18,Matt,Ben,,,,scheduled,screenshots/2026 (repeat of week 9)

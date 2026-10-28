@@ -1,0 +1,1701 @@
+{
+  "_source": "Historic Fantasy Trade Data for AI.xlsx \u2014 52 executed trades, 2013-2024",
+  "_note": "Full executed-trade terms 2013-2024. Bulk archive \u2014 load only when you need actual deal STRUCTURE. Per-owner volume and partner affinity live in fantasy-master.json under owner_profiles[team].trade_analytics, which is what acceptance scoring normally needs.",
+  "trades": [
+    {
+      "season": "2014-2015",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Aaron Rodgers"
+        },
+        {
+          "type": "pick",
+          "desc": "2014 2nd"
+        },
+        {
+          "type": "cap",
+          "amount": 9.0
+        },
+        {
+          "type": "pick",
+          "desc": "2015 2nd (if Austin is cut)"
+        }
+      ],
+      "team2_owner": "Matt",
+      "team2_team": "REESE MODE",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Colin Kaepernick"
+        },
+        {
+          "type": "player",
+          "desc": "Lamar Miller"
+        },
+        {
+          "type": "player",
+          "desc": "Tavon Austin"
+        },
+        {
+          "type": "pick",
+          "desc": "2014 2nd"
+        },
+        {
+          "type": "player",
+          "desc": "$8 (if Austin is cut)"
+        }
+      ]
+    },
+    {
+      "season": "2014-2015",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Matt Ryan"
+        },
+        {
+          "type": "pick",
+          "desc": "2015 2nd"
+        }
+      ],
+      "team2_owner": "Ben",
+      "team2_team": "Who Dey White House",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Marquis Lee"
+        },
+        {
+          "type": "player",
+          "desc": "Bernard Pierce"
+        },
+        {
+          "type": "pick",
+          "desc": "2015 1st"
+        }
+      ]
+    },
+    {
+      "season": "2014-2015",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Tom Brady"
+        },
+        {
+          "type": "player",
+          "desc": "Steve Smith"
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Brandin Cooks"
+        },
+        {
+          "type": "player",
+          "desc": "Roddy White"
+        },
+        {
+          "type": "player",
+          "desc": "Wes Welker"
+        },
+        {
+          "type": "player",
+          "desc": "$4 (If Welker is cut)"
+        },
+        {
+          "type": "player",
+          "desc": "$8 (If Welker retires or isnt on a roster for week 1)"
+        }
+      ]
+    },
+    {
+      "season": "2015-2016",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Joique Bell"
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2015 2nd"
+        }
+      ]
+    },
+    {
+      "season": "2015-2016",
+      "team1_owner": "Ryan",
+      "team1_team": "Calls on TeSlaa",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2015 1st"
+        },
+        {
+          "type": "player",
+          "desc": "Colin Kaepernick"
+        },
+        {
+          "type": "player",
+          "desc": "CJ Spiller"
+        },
+        {
+          "type": "cap",
+          "amount": 9.0
+        }
+      ],
+      "team2_owner": "Matt",
+      "team2_team": "REESE MODE",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Jimmy Graham"
+        },
+        {
+          "type": "player",
+          "desc": "Jeremy Maclin"
+        }
+      ]
+    },
+    {
+      "season": "2015-2016",
+      "team1_owner": "Ryan",
+      "team1_team": "Calls on TeSlaa",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2015 1st"
+        }
+      ],
+      "team2_owner": "Zach",
+      "team2_team": "In the Nix of Time",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "CJ Spiller"
+        },
+        {
+          "type": "cap",
+          "amount": 14.0
+        }
+      ]
+    },
+    {
+      "season": "2015-2016",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Larry Fitzgerald"
+        },
+        {
+          "type": "pick",
+          "desc": "2015 2nd"
+        },
+        {
+          "type": "cap",
+          "amount": 3.0
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Matt Ryan"
+        }
+      ]
+    },
+    {
+      "season": "2015-2016",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Doug Martin"
+        },
+        {
+          "type": "cap",
+          "amount": 28.0
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2016 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2016 2nd (from Qasim) (if Martin and Williams score 240 + points starting Nov. 7)"
+        },
+        {
+          "type": "pick",
+          "desc": "2016 2nd (if Martin and William score 130-239 points starting Nov. 7)"
+        }
+      ]
+    },
+    {
+      "season": "2015-2016",
+      "team1_owner": "Johnny",
+      "team1_team": "Hello Fascism",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Tom Brady"
+        },
+        {
+          "type": "player",
+          "desc": "CJ Anderson"
+        },
+        {
+          "type": "player",
+          "desc": "Rishard Matthews"
+        },
+        {
+          "type": "pick",
+          "desc": "2016 2nd"
+        }
+      ],
+      "team2_owner": "Ben",
+      "team2_team": "Who Dey White House",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Randall Cobb"
+        },
+        {
+          "type": "pick",
+          "desc": "2016 1st"
+        }
+      ]
+    },
+    {
+      "season": "2016-2017",
+      "team1_owner": "Ryan",
+      "team1_team": "Calls on TeSlaa",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Doug Baldwin"
+        }
+      ],
+      "team2_owner": "Ben",
+      "team2_team": "Who Dey White House",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Corey Coleman"
+        },
+        {
+          "type": "pick",
+          "desc": "2018 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2018 3rd"
+        },
+        {
+          "type": "cap",
+          "amount": 20.0
+        }
+      ]
+    },
+    {
+      "season": "2016-2017",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Randall Cobb"
+        },
+        {
+          "type": "pick",
+          "desc": "2017 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2018 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2018 2nd"
+        }
+      ],
+      "team2_owner": "Ben",
+      "team2_team": "Who Dey White House",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Antonio Brown"
+        },
+        {
+          "type": "player",
+          "desc": "Jordan Matthews"
+        },
+        {
+          "type": "cap",
+          "amount": 25.0
+        }
+      ]
+    },
+    {
+      "season": "2016-2017",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Rams Defense"
+        },
+        {
+          "type": "player",
+          "desc": "Andy Dalton"
+        },
+        {
+          "type": "pick",
+          "desc": "2017 3rd"
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Doug Martin"
+        },
+        {
+          "type": "cap",
+          "amount": 37.0
+        }
+      ]
+    },
+    {
+      "season": "2016-2017",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2016 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2016 1st"
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Latvious Murray"
+        },
+        {
+          "type": "cap",
+          "amount": 20.0
+        },
+        {
+          "type": "pick",
+          "desc": "2016 2nd"
+        },
+        {
+          "type": "pick",
+          "desc": "2017 2nd"
+        }
+      ]
+    },
+    {
+      "season": "2018-2019",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2018 2nd"
+        },
+        {
+          "type": "player",
+          "desc": "Travis Kelce"
+        }
+      ],
+      "team2_owner": "Mike",
+      "team2_team": "Mike's Swell Team",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2018 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2018 2nd"
+        }
+      ]
+    },
+    {
+      "season": "2018-2019",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Odell Beckham Jr"
+        },
+        {
+          "type": "player",
+          "desc": "Matt Stafford"
+        },
+        {
+          "type": "pick",
+          "desc": "2019 3rd"
+        }
+      ],
+      "team2_owner": "Ben",
+      "team2_team": "Who Dey White House",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Dez Bryant"
+        },
+        {
+          "type": "player",
+          "desc": "Joe Mixon"
+        },
+        {
+          "type": "pick",
+          "desc": "2018 2nd"
+        },
+        {
+          "type": "player",
+          "desc": "$25 in 2019-2020"
+        },
+        {
+          "type": "pick",
+          "desc": "2019 2nd"
+        }
+      ]
+    },
+    {
+      "season": "2018-2019",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Melvin Gordon"
+        },
+        {
+          "type": "player",
+          "desc": "Doug Baldwin"
+        },
+        {
+          "type": "pick",
+          "desc": "2019 2nd"
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2019 1st"
+        },
+        {
+          "type": "player",
+          "desc": "Emmanuel Sanders"
+        }
+      ]
+    },
+    {
+      "season": "2018-2019",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "John Ross"
+        },
+        {
+          "type": "pick",
+          "desc": "Ryan's 2019 2nd"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Cam Newton"
+        },
+        {
+          "type": "pick",
+          "desc": "2020 3rd Round pick swap"
+        }
+      ]
+    },
+    {
+      "season": "2018-2019",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "cap",
+          "amount": 10.0
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2019 3rd Round Pick"
+        }
+      ]
+    },
+    {
+      "season": "2019-2020",
+      "team1_owner": "Qasim",
+      "team1_team": "Dayton Triangles",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Russell Wilson"
+        }
+      ],
+      "team2_owner": "Matt",
+      "team2_team": "REESE MODE",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2020 2nd"
+        }
+      ]
+    },
+    {
+      "season": "2019-2020",
+      "team1_owner": "Ryan",
+      "team1_team": "Calls on TeSlaa",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Todd Gurley"
+        },
+        {
+          "type": "pick",
+          "desc": "2020 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2021 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2020 2nd"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Ezekiel Elliot"
+        },
+        {
+          "type": "player",
+          "desc": "Keenan Allen"
+        },
+        {
+          "type": "pick",
+          "desc": "2020 3rd"
+        },
+        {
+          "type": "pick",
+          "desc": "2021 3rd"
+        }
+      ]
+    },
+    {
+      "season": "2019-2020",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Michael Thomas"
+        },
+        {
+          "type": "player",
+          "desc": "DeAndre Hopkins"
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Sammy Watkins"
+        },
+        {
+          "type": "pick",
+          "desc": "2020 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2021 1st"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Jared Goff"
+        }
+      ],
+      "team2_owner": "Matt",
+      "team2_team": "REESE MODE",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Ty Johnson"
+        },
+        {
+          "type": "player",
+          "desc": "Swap 2021 3rds - if Ben's is better"
+        },
+        {
+          "type": "player",
+          "desc": "If Ben's isnt better swap 2022 3rds"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Tyreek Hill"
+        },
+        {
+          "type": "player",
+          "desc": "#10 pick in 2020"
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "AJ Brown"
+        },
+        {
+          "type": "player",
+          "desc": "#9 pick in 2020"
+        },
+        {
+          "type": "pick",
+          "desc": "Matts 2021 1st"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Mike Davis"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Michael Gallup"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Will Fuller"
+        }
+      ],
+      "team2_owner": "Russell",
+      "team2_team": "STEIN DYNASTY",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Melvin Gordon"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "Qasim's 2021 2nd"
+        },
+        {
+          "type": "pick",
+          "desc": "Qasim's 2022 3rd"
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Carson Wentz"
+        },
+        {
+          "type": "player",
+          "desc": "Worst of Jordan's 2021 3rds"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Ezekiel Elliot"
+        },
+        {
+          "type": "player",
+          "desc": "2020 pick #21"
+        },
+        {
+          "type": "cap",
+          "amount": 25.0
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Marquis Brown"
+        },
+        {
+          "type": "player",
+          "desc": "Damien Harris"
+        },
+        {
+          "type": "pick",
+          "desc": "Ben's 2021 2nd"
+        },
+        {
+          "type": "pick",
+          "desc": "Ben's 2022 2nd"
+        },
+        {
+          "type": "player",
+          "desc": "$40 in 2021"
+        },
+        {
+          "type": "player",
+          "desc": "$10 in 2022"
+        }
+      ]
+    },
+    {
+      "season": "2020-2021",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "David Montgomery"
+        },
+        {
+          "type": "player",
+          "desc": "TY Hilton"
+        },
+        {
+          "type": "pick",
+          "desc": "Zach's 2021 1st"
+        }
+      ],
+      "team2_owner": "Zach",
+      "team2_team": "In the Nix of Time",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Julio Jones"
+        },
+        {
+          "type": "player",
+          "desc": "Leonard Fournette"
+        },
+        {
+          "type": "pick",
+          "desc": "Ben's 2021 2nd"
+        },
+        {
+          "type": "cap",
+          "amount": 65.0
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Jonathan Taylor"
+        },
+        {
+          "type": "player",
+          "desc": "Chris Carson"
+        },
+        {
+          "type": "player",
+          "desc": "Damien Williams"
+        },
+        {
+          "type": "player",
+          "desc": "DJ Chark"
+        },
+        {
+          "type": "player",
+          "desc": "2021 pick #16"
+        }
+      ],
+      "team2_owner": "Max",
+      "team2_team": "Top of the Food Achane",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "2021 pick #2"
+        },
+        {
+          "type": "player",
+          "desc": "2021 pick #13"
+        },
+        {
+          "type": "player",
+          "desc": "Diontae Johnson"
+        },
+        {
+          "type": "player",
+          "desc": "Marquis Brown"
+        },
+        {
+          "type": "player",
+          "desc": "Darrell Henderson"
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Marlon Mack"
+        },
+        {
+          "type": "player",
+          "desc": "2021 pick #13"
+        },
+        {
+          "type": "pick",
+          "desc": "2022 1st"
+        }
+      ],
+      "team2_owner": "Max",
+      "team2_team": "Top of the Food Achane",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Joe Mixon"
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "2021 pick #10"
+        },
+        {
+          "type": "player",
+          "desc": "2021 pick #30"
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "DeAndre Hopkins"
+        },
+        {
+          "type": "cap",
+          "amount": 20.0
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Ryan",
+      "team1_team": "Calls on TeSlaa",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Dak Prescott"
+        },
+        {
+          "type": "pick",
+          "desc": "2023 3rd"
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Russell Wilson"
+        },
+        {
+          "type": "cap",
+          "amount": 38.0
+        },
+        {
+          "type": "pick",
+          "desc": "2022 2nd"
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Johnny",
+      "team1_team": "Hello Fascism",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "2021 #16"
+        },
+        {
+          "type": "player",
+          "desc": "2021 #20"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "2021 #8"
+        },
+        {
+          "type": "cap",
+          "amount": 5.0
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "David Montgomery"
+        },
+        {
+          "type": "pick",
+          "desc": "2022 1st"
+        },
+        {
+          "type": "player",
+          "desc": "$25 in 2022"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Travis Kelce"
+        },
+        {
+          "type": "player",
+          "desc": "$25 in 2021"
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Stefon Diggs"
+        },
+        {
+          "type": "pick",
+          "desc": "2023 2nd"
+        },
+        {
+          "type": "cap",
+          "amount": 5.0
+        }
+      ],
+      "team2_owner": "Zach",
+      "team2_team": "In the Nix of Time",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Julio Jones"
+        },
+        {
+          "type": "pick",
+          "desc": "2022 1st (best of Matt's)"
+        },
+        {
+          "type": "pick",
+          "desc": "2023 1st"
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Qasim",
+      "team1_team": "Dayton Triangles",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Aaron Rodgers"
+        },
+        {
+          "type": "player",
+          "desc": "George Kittle"
+        },
+        {
+          "type": "player",
+          "desc": "Marvin Jones"
+        },
+        {
+          "type": "player",
+          "desc": "Alexander Mattison"
+        }
+      ],
+      "team2_owner": "Mike",
+      "team2_team": "Mike's Swell Team",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Aaron Jones"
+        },
+        {
+          "type": "player",
+          "desc": "Marquez Calloway"
+        },
+        {
+          "type": "pick",
+          "desc": "2022 2nd (Qasim's)"
+        }
+      ]
+    },
+    {
+      "season": "2021-2022",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Tyler Lockett"
+        },
+        {
+          "type": "player",
+          "desc": "Mike Gesicki"
+        },
+        {
+          "type": "pick",
+          "desc": "2023 2nd"
+        }
+      ],
+      "team2_owner": "Mike",
+      "team2_team": "Mike's Swell Team",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Travis Kelce"
+        },
+        {
+          "type": "player",
+          "desc": "Michael Gallup"
+        }
+      ]
+    },
+    {
+      "season": "2022-2023",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Davante Adams"
+        },
+        {
+          "type": "player",
+          "desc": "Amon-Ra St.Brown"
+        },
+        {
+          "type": "pick",
+          "desc": "2024 1st"
+        }
+      ],
+      "team2_owner": "Mike",
+      "team2_team": "Mike's Swell Team",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Derrick Henry"
+        },
+        {
+          "type": "player",
+          "desc": "Gabriel Davis"
+        },
+        {
+          "type": "pick",
+          "desc": "2023 2nd (his own back)"
+        }
+      ]
+    },
+    {
+      "season": "2022-2023",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Dallas Goedert"
+        },
+        {
+          "type": "player",
+          "desc": "Matt Stafford"
+        },
+        {
+          "type": "player",
+          "desc": "Trevor Lawerence"
+        },
+        {
+          "type": "player",
+          "desc": "Derrick Carr"
+        },
+        {
+          "type": "player",
+          "desc": "Melvin Gordon"
+        },
+        {
+          "type": "player",
+          "desc": "DeAndre Carter"
+        },
+        {
+          "type": "cap",
+          "amount": 20.0
+        },
+        {
+          "type": "player",
+          "desc": "$25 in 2023"
+        },
+        {
+          "type": "pick",
+          "desc": "1st/2nd. (highest between 7-16)"
+        }
+      ],
+      "team2_owner": "Ben",
+      "team2_team": "Who Dey White House",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Davante Adams"
+        },
+        {
+          "type": "player",
+          "desc": "Geno Smith"
+        }
+      ]
+    },
+    {
+      "season": "2022-2023",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Justin Fields"
+        }
+      ],
+      "team2_owner": "Russell",
+      "team2_team": "STEIN DYNASTY",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2023 3rd"
+        },
+        {
+          "type": "player",
+          "desc": "David Bell"
+        }
+      ]
+    },
+    {
+      "season": "2022-2023",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Terry McLaurin"
+        },
+        {
+          "type": "player",
+          "desc": "AJ Brown"
+        },
+        {
+          "type": "player",
+          "desc": "$20 in 2023"
+        }
+      ],
+      "team2_owner": "Ryan",
+      "team2_team": "Calls on TeSlaa",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2024 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2025 1st"
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Calvin Ridley"
+        },
+        {
+          "type": "player",
+          "desc": "Trevor Lawrence"
+        },
+        {
+          "type": "pick",
+          "desc": "2023 2nd Round pick (#12)"
+        },
+        {
+          "type": "pick",
+          "desc": "2024 1st (the weaker)"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "AJ Brown"
+        },
+        {
+          "type": "player",
+          "desc": "Antonio Gibson"
+        },
+        {
+          "type": "cap",
+          "amount": 5.0
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Qasim",
+      "team1_team": "Dayton Triangles",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2023 1st (#10)"
+        },
+        {
+          "type": "player",
+          "desc": "Romeo Doubs"
+        },
+        {
+          "type": "cap",
+          "amount": 3.0
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2023 1st (#6)"
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Rashod Bateman"
+        },
+        {
+          "type": "pick",
+          "desc": "2024 2nd"
+        },
+        {
+          "type": "player",
+          "desc": "$4 in 2024"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Mike Williams"
+        },
+        {
+          "type": "pick",
+          "desc": "2024 3rd"
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "David Montgomery"
+        }
+      ],
+      "team2_owner": "Qasim",
+      "team2_team": "Dayton Triangles",
+      "team2_receives": [
+        {
+          "type": "pick",
+          "desc": "2024 1st"
+        },
+        {
+          "type": "player",
+          "desc": "Michael Mayer"
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Ryan",
+      "team1_team": "Calls on TeSlaa",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2024 3rd"
+        },
+        {
+          "type": "pick",
+          "desc": "2025 3rd"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "cap",
+          "amount": 35.0
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Qasim",
+      "team1_team": "Dayton Triangles",
+      "team1_receives": [
+        {
+          "type": "cap",
+          "amount": 35.0
+        },
+        {
+          "type": "player",
+          "desc": "Darren Waller"
+        },
+        {
+          "type": "player",
+          "desc": "Marquis Brown"
+        },
+        {
+          "type": "player",
+          "desc": "Zach Charbonnet"
+        },
+        {
+          "type": "pick",
+          "desc": "2024 1st (whichever Ben doesnt get)"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Saquan Barkley"
+        },
+        {
+          "type": "pick",
+          "desc": "2025 3rd"
+        },
+        {
+          "type": "player",
+          "desc": "$7 in 2024 cap"
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Dallas Goedert"
+        },
+        {
+          "type": "player",
+          "desc": "Damien Pierce"
+        },
+        {
+          "type": "pick",
+          "desc": "2025 2nd"
+        }
+      ],
+      "team2_owner": "Jordan",
+      "team2_team": "What can Brown do for you?",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Travis Kelce"
+        }
+      ]
+    },
+    {
+      "season": "2024-2025",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Chris Olave"
+        }
+      ],
+      "team2_owner": "Johnny",
+      "team2_team": "Hello Fascism",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Amari Cooper"
+        },
+        {
+          "type": "pick",
+          "desc": "2024 1st (#8)"
+        }
+      ]
+    },
+    {
+      "season": "2024-2025",
+      "team1_owner": "Matt",
+      "team1_team": "REESE MODE",
+      "team1_receives": [
+        {
+          "type": "pick",
+          "desc": "2024 1st (#10)"
+        }
+      ],
+      "team2_owner": "Russell",
+      "team2_team": "STEIN DYNASTY",
+      "team2_receives": [
+        {
+          "type": "cap",
+          "amount": 20.0
+        }
+      ]
+    },
+    {
+      "season": "2024-2025",
+      "team1_owner": "Jordan",
+      "team1_team": "What can Brown do for you?",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "Jamarr Chase"
+        },
+        {
+          "type": "player",
+          "desc": "Josh Jacobs"
+        },
+        {
+          "type": "player",
+          "desc": "Bucky Irving"
+        },
+        {
+          "type": "pick",
+          "desc": "2025 2nd"
+        },
+        {
+          "type": "player",
+          "desc": "$10 in 2025"
+        }
+      ],
+      "team2_owner": "Max",
+      "team2_team": "Top of the Food Achane",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "AJ Brown"
+        },
+        {
+          "type": "player",
+          "desc": "Puka Nacua"
+        },
+        {
+          "type": "player",
+          "desc": "Jermaine Burton"
+        },
+        {
+          "type": "pick",
+          "desc": "2025 1st"
+        },
+        {
+          "type": "pick",
+          "desc": "2026 1st"
+        }
+      ]
+    },
+    {
+      "season": "2024-2025",
+      "team1_owner": "Ben",
+      "team1_team": "Who Dey White House",
+      "team1_receives": [
+        {
+          "type": "player",
+          "desc": "DeVonta Smith"
+        },
+        {
+          "type": "player",
+          "desc": "AJ Brown"
+        },
+        {
+          "type": "player",
+          "desc": "$7 in 2025"
+        }
+      ],
+      "team2_owner": "Max",
+      "team2_team": "Top of the Food Achane",
+      "team2_receives": [
+        {
+          "type": "player",
+          "desc": "Chris Olave"
+        },
+        {
+          "type": "player",
+          "desc": "Isaiah Pacheco"
+        },
+        {
+          "type": "player",
+          "desc": "Calvin Ridley"
+        },
+        {
+          "type": "player",
+          "desc": "Alec Pierce"
+        },
+        {
+          "type": "pick",
+          "desc": "Weaker of Ben's 2025 2nd Rounders"
+        }
+      ]
+    }
+  ],
+  "player_trade_frequency": {
+    "AJ Brown": 5.0,
+    "Travis Kelce": 4.0,
+    "Melvin Gordon": 3.0,
+    "Marquis Brown": 3.0,
+    "David Montgomery": 3.0,
+    "Matt Ryan": 2.0,
+    "Tom Brady": 2.0,
+    "CJ Spiller": 2.0,
+    "Doug Martin": 2.0,
+    "Doug Baldwin": 2.0,
+    "Randall Cobb": 2.0,
+    "Colin Kaepernick": 2.0,
+    "Ezekiel Elliot": 2.0,
+    "Joe Mixon": 2.0,
+    "DeAndre Hopkins": 2.0,
+    "Russell Wilson": 2.0,
+    "Julio Jones": 2.0,
+    "Aaron Rodgers": 2.0,
+    "Michael Gallup": 2.0,
+    "Davante Adams": 2.0,
+    "Matt Stafford": 2.0,
+    "Dallas Goedert": 2.0
+  },
+  "league_aggregates": {
+    "1st Round Picks": 39.0,
+    "2nd Round Picks": 37.0,
+    "3rd Round Picks": 17.0,
+    "Total $": 652.0,
+    "Biggest $": 65.0
+  }
+}

@@ -1,0 +1,24 @@
+# Tunable settings. Change by asking in conversation; each change is a commit with its reason.
+
+objective:
+  measure: expected_payout_dollars       # pure payout, no title bonus (Jordan, 2026-10-23)
+  horizon_seasons: 4                     # current + 3 (longest contract)
+  confidence_haircut_per_year: 0.88      # start here, adjust if the data says so (Jordan)
+
+brief:
+  delivery: front_door_only              # Jordan
+  target_read_minutes: [15, 30]
+
+schedule_central_time:
+  daily_brief: "07:00"
+  game_day_checks: [thursday, sunday, monday, saturday_late_season]
+  waiver_run: monday_after_last_game
+  waiver_final_check: "tuesday 15:00"    # before the 23:59 PT close
+  weekly_review: tuesday_after_waivers
+  quarterly_enhancement_review: true
+
+hard_rules:
+  - never submit, bid, propose or post anything; Jordan acts
+  - ask instead of assuming; if a deadline cannot wait, show both branches
+  - on pushback, re-check the evidence; hold or change position with reasons
+  - every number shows its source and as-of time

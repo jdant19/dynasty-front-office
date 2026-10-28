@@ -1,0 +1,8 @@
+# League site (salaryleaguehq.com, Supabase) tables the snapshot job exports, read-only.
+# To fill in once the table names are confirmed from the site's code or Supabase dashboard.
+tables:
+  # - teams
+  # - players
+  # - contracts
+  # - draft_picks
+  # - transactions
