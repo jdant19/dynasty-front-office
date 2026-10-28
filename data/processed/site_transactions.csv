@@ -1,268 +1,268 @@
 occurred_at,type,player,player_id,from_owner,to_owner,amount,details,as_of
-2026-07-16T21:15:20.813985+00:00,tag,Jonathan Taylor,sl-6813,Matt,Matt,90,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Tucker Kraft,sl-9484,Johnny,Johnny,3,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Justin Herbert,sl-6797,Max,Max,28,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Houston Texans D/ST,def-HOU,Mike,Mike,2,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Javonte Williams,sl-7588,Matt,Matt,17,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Kenneth Walker,sl-8151,Ben,Ben,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Harold Fannin,sl-12506,Ryan,Ryan,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Breece Hall,sl-8155,Ben,Ben,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Brandon Aubrey,sl-11533,Ryan,Ryan,2,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Garrett Wilson,sl-8146,Qasim,Qasim,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Jaxson Dart,sl-12508,Jordan,Jordan,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Tony Pollard,sl-5967,Jordan,Jordan,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Alec Pierce,sl-8142,Max,Max,5,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Drake London,sl-8112,Zach,Zach,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Elic Ayomanor,sl-12499,Mike,Mike,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Denver Broncos D/ST,def-DEN,Zach,Zach,2,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Davante Adams,sl-2133,Zach,Zach,29,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,David Montgomery,sl-5892,Max,Max,21,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Lamar Jackson,sl-4881,Matt,Matt,19,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,George Pickens,sl-8137,Johnny,Johnny,7,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Mike Evans,sl-2216,Qasim,Qasim,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Chris Olave,sl-8144,Max,Max,15,"{""season"": 2026, ""tag_type"": ""MLE"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Dallas Goedert,sl-5022,Mike,Mike,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-07-16T21:15:20.813985+00:00,tag,Ja'Marr Chase,sl-7564,Jordan,Jordan,97,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-01T18:51:51.469935+00:00,rfa,Breece Hall,sl-8155,Ben,Ben,65,"{""matched"": true, ""backfilled"": true, ""high_bidder"": ""team-5""}",2026-10-28T17:24:02+00:00
-2026-08-01T18:51:51.469935+00:00,rfa,Drake London,sl-8112,Zach,Zach,88,"{""matched"": true, ""backfilled"": true, ""high_bidder"": ""team-10""}",2026-10-28T17:24:02+00:00
-2026-08-02T18:40:16.657+00:00,trade,Pat Bryant,sl-12492,Jordan,Zach,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-02T18:40:16.657+00:00,trade,2026 Round 3 pick,,Jordan,Zach,,"{""year"": ""2026"", ""asset"": ""pick"", ""label"": ""#27"", ""round"": ""3"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-02T18:40:16.657+00:00,trade,2026 Round 1 pick,,Zach,Jordan,,"{""year"": ""2026"", ""asset"": ""pick"", ""label"": ""#8"", ""round"": ""1"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-03T03:31:54.536968+00:00,rfa,Garrett Wilson,sl-8146,Qasim,Qasim,51,"{""matched"": true, ""backfilled"": true, ""high_bidder"": ""team-9""}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Jalen Hurts,sl-6904,Jordan,Max,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Omar Cooper,sl-13276,Jordan,Max,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Nico Collins,sl-7569,Jordan,Max,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Chuba Hubbard,sl-7594,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Justin Herbert,sl-6797,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Brandon Aiyuk,sl-6803,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,2028 Round 1 pick,,Max,Jordan,,"{""year"": ""2028"", ""asset"": ""pick"", ""label"": ""TBD"", ""round"": ""1"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,2026 Round 2 pick,,Max,Jordan,,"{""year"": ""2026"", ""asset"": ""pick"", ""label"": ""#13"", ""round"": ""2"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,2027 Round 2 pick,,Max,Jordan,,"{""year"": ""2027"", ""asset"": ""pick"", ""label"": ""TBD"", ""round"": ""2"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T03:48:52.463869+00:00,trade,Emeka Egbuka,sl-12514,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.907269+00:00,rookie_pick,Carnell Tate,sl-13279,,Ryan,5,"{""pick"": ""#2"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.908202+00:00,rookie_pick,Omar Cooper,sl-13276,,Jordan,5,"{""pick"": ""#8"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.925366+00:00,rookie_pick,Jeremiyah Love,sl-13287,,Ben,5,"{""pick"": ""#1"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.936535+00:00,rookie_pick,Jordyn Tyson,sl-13281,,Max,5,"{""pick"": ""#3"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.94047+00:00,rookie_pick,Jadarian Price,sl-13286,,Matt,5,"{""pick"": ""#4"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.966108+00:00,rookie_pick,Makai Lemon,sl-13294,,Mike,5,"{""pick"": ""#5"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:11.97194+00:00,rookie_pick,KC Concepcion,sl-13298,,Qasim,5,"{""pick"": ""#6"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:12.07129+00:00,rookie_pick,Chris Bell,sl-13311,,Russ,5,"{""pick"": ""#9"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:12.119048+00:00,rookie_pick,Kenyon Sadiq,sl-13330,,Max,5,"{""pick"": ""#7"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:12.123025+00:00,rookie_pick,Emmett Johnson,sl-13337,,Johnny,5,"{""pick"": ""#10"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:12.146916+00:00,rookie_pick,Denzel Boston,sl-13346,,Ryan,3,"{""pick"": ""#12"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:12.15139+00:00,rookie_pick,Jonah Coleman,sl-13345,,Jordan,3,"{""pick"": ""#13"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T07:15:12.250796+00:00,rookie_pick,Eli Stowers,sl-13349,,Ben,3,"{""pick"": ""#11"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-05T15:40:47.744279+00:00,rfa,George Pickens,sl-8137,Johnny,Ryan,71,"{""matched"": false, ""backfilled"": true, ""high_bidder"": ""team-9""}",2026-10-28T17:24:02+00:00
-2026-08-05T21:27:42.1568+00:00,rookie_pick,Germie Bernard,sl-13274,,Matt,3,"{""pick"": ""#14"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-07T01:37:04.703473+00:00,rookie_pick,De'Zhaun Stribling,sl-13417,,Mike,3,"{""pick"": ""#15"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-07T01:37:16.001797+00:00,rookie_pick,Antonio Williams,sl-13301,,Qasim,3,"{""pick"": ""#16"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-07T20:07:23.520056+00:00,rfa,Kenneth Walker,sl-8151,Ben,Ben,67,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-6""}",2026-10-28T17:24:02+00:00
-2026-08-08T16:05:59.586547+00:00,rookie_pick,Zachariah Branch,sl-13320,,Jordan,3,"{""pick"": ""#17"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-09T16:13:20.078852+00:00,rfa,Javonte Williams,sl-7588,Matt,Johnny,48,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-1""}",2026-10-28T17:24:02+00:00
-2026-08-10T13:07:38.17799+00:00,rookie_pick,Nicholas Singleton,sl-13288,,Zach,3,"{""pick"": ""#18"", ""round"": 2, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-10T13:10:41.81825+00:00,rfa,Davante Adams,sl-2133,Zach,Zach,39,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-1""}",2026-10-28T17:24:02+00:00
-2026-08-10T16:09:41.372755+00:00,rookie_pick,Ted Hurst,sl-13317,,Russ,3,"{""pick"": ""#19"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-10T18:56:14.349257+00:00,rookie_pick,Ja'Kobi Lane,sl-13293,,Johnny,3,"{""pick"": ""#20"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-11T14:59:58.586437+00:00,rookie_pick,Fernando Mendoza,sl-13269,,Ben,1,"{""pick"": ""#21"", ""round"": 3, ""position"": ""QB"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-12T14:32:27.783479+00:00,rfa,Lamar Jackson,sl-4881,Matt,Matt,28,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-5""}",2026-10-28T17:24:02+00:00
-2026-08-12T19:37:05.165639+00:00,rookie_pick,Malachi Fields,sl-13285,,Ryan,1,"{""pick"": ""#22"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-13T13:40:51.271732+00:00,rookie_pick,Elijah Sarratt,sl-13268,,Max,1,"{""pick"": ""#23"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-14T03:10:57.838404+00:00,rookie_pick,Caleb Douglas,sl-13296,,Matt,1,"{""pick"": ""#24"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-14T13:33:42.672715+00:00,rookie_pick,Kaytron Allen,sl-13405,,Mike,1,"{""pick"": ""#25"", ""round"": 3, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-14T18:18:14.939926+00:00,rfa,David Montgomery,sl-5892,Max,Zach,39,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-3""}",2026-10-28T17:24:02+00:00
-2026-08-15T04:10:07.985633+00:00,rfa,Tony Pollard,sl-5967,Jordan,Qasim,15,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-5""}",2026-10-28T17:24:02+00:00
-2026-08-15T14:16:26.737723+00:00,rookie_pick,Mike Washington,sl-13305,,Qasim,1,"{""pick"": ""#26"", ""round"": 3, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-16T01:45:24.839094+00:00,drop,J.J. McCarthy,sl-11565,Matt,,10,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 10}",2026-10-28T17:24:02+00:00
-2026-08-16T01:46:48.007094+00:00,drop,Nick Chubb,sl-4988,Matt,,4,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 4}",2026-10-28T17:24:02+00:00
-2026-08-17T13:04:05.479068+00:00,rookie_pick,Cyrus Allen,sl-13413,,Zach,1,"{""pick"": ""#27"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-17T13:04:14.461143+00:00,rookie_pick,Kaelon Black,sl-13414,,Zach,1,"{""pick"": ""#28"", ""round"": 3, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-17T13:04:28.707612+00:00,rookie_pick,Skyler Bell,sl-13402,,Russ,1,"{""pick"": ""#29"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-17T14:12:28.017892+00:00,rfa,Alec Pierce,sl-8142,Max,Russ,15,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-2""}",2026-10-28T17:24:02+00:00
-2026-08-17T22:57:05.504083+00:00,rookie_pick,Oscar Delp,sl-13319,,Johnny,1,"{""pick"": ""#30"", ""round"": 3, ""position"": ""TE"", ""draft_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-08-18T03:02:40.932226+00:00,drop,Xavier Legette,sl-11626,Ryan,,10,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 10}",2026-10-28T17:24:02+00:00
-2026-08-18T04:09:26.333446+00:00,rfa,Harold Fannin,sl-12506,Ryan,Jordan,21,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-4""}",2026-10-28T17:24:02+00:00
-2026-08-19T03:29:41.454708+00:00,rfa,Jaxson Dart,sl-12508,Jordan,Jordan,11,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-7""}",2026-10-28T17:24:02+00:00
-2026-08-20T02:26:42.929802+00:00,rfa,Mike Evans,sl-2216,Qasim,Russ,23,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-2""}",2026-10-28T17:24:02+00:00
-2026-08-21T21:08:08.150805+00:00,rfa,Dallas Goedert,sl-5022,Mike,Mike,5,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-7""}",2026-10-28T17:24:02+00:00
-2026-08-23T19:05:46.015902+00:00,rfa,Tucker Kraft,sl-9484,Johnny,Johnny,16,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-7""}",2026-10-28T17:24:02+00:00
-2026-08-23T19:06:05.745597+00:00,rfa,Elic Ayomanor,sl-12499,Mike,Mike,2,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-6""}",2026-10-28T17:24:02+00:00
-2026-08-28T19:46:03.442922+00:00,drop,Ricky Pearsall,sl-11638,Johnny,,10,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 10}",2026-10-28T17:24:02+00:00
-2026-08-28T21:50:12.833349+00:00,drop,Marvin Mims,sl-9494,Qasim,,6,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-09-01T20:06:47.949141+00:00,drop,Dont'e Thornton,sl-12541,Jordan,,6,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-09-02T19:55:12.062297+00:00,fa_signing,Chris Brazzell,sl-13353,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:33:26.974854+00:00,fa_signing,Patrick Mahomes,sl-4046,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:33:58.594508+00:00,fa_signing,Jacksonville Jaguars D/ST,def-JAX,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:34:18.552655+00:00,fa_signing,Kyler Murray,sl-5849,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:35:14.771213+00:00,drop,Dylan Sampson,sl-12469,Max,,11,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 11}",2026-10-28T17:24:02+00:00
-2026-09-02T20:35:52.319907+00:00,fa_signing,Michael Pittman,sl-6819,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:36:13.708202+00:00,fa_signing,Rachaad White,sl-8136,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:36:37.189469+00:00,fa_signing,Tre Tucker,sl-10213,,Max,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:36:52.494138+00:00,fa_signing,Jake Bates,sl-11539,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:37:28.826294+00:00,fa_signing,Deebo Samuel,sl-5872,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:37:45.6141+00:00,fa_signing,Calvin Ridley,sl-4981,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:38:01.363242+00:00,fa_signing,Wan'Dale Robinson,sl-8126,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:38:16.730742+00:00,fa_signing,Malik Davis,sl-8800,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:38:40.639607+00:00,drop,Michael Penix,sl-11559,Ryan,,9,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 9}",2026-10-28T17:24:02+00:00
-2026-09-02T20:39:18.092446+00:00,fa_signing,Tyler Shough,sl-12545,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:39:35.832169+00:00,fa_signing,Los Angeles Chargers D/ST,def-LAC,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:39:58.123947+00:00,drop,T.J. Hockenson,sl-5844,Ryan,,6,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-09-02T20:40:31.937783+00:00,fa_signing,Pittsburgh Steelers D/ST,def-PIT,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:40:44.776064+00:00,fa_signing,Harrison Mevis,sl-12015,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-09-02T20:43:32.30442+00:00,fa_signing,Seth McGowan,sl-13424,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T01:44:44.625277+00:00,fa_signing,Detroit Lions D/ST,def-DET,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T01:51:46.321559+00:00,drop,Troy Franklin,sl-11627,Russ,,10,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 10}",2026-10-28T17:24:02+00:00
-2026-10-16T01:52:18.464493+00:00,fa_signing,Jake Elliott,sl-4195,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T01:53:18.04198+00:00,drop,Elijah Arroyo,sl-12521,Zach,,8,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 8}",2026-10-28T17:24:02+00:00
-2026-10-16T01:53:52.078928+00:00,fa_signing,Isaiah Likely,sl-8131,,Zach,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T01:58:28.811624+00:00,drop,Minnesota Vikings D/ST,def-MIN,Johnny,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T01:59:25.76703+00:00,fa_signing,Tyler Allgeier,sl-8132,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:01:53.149608+00:00,fa_signing,Mark Andrews,sl-5012,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:03:50.037352+00:00,fa_signing,Juwan Johnson,sl-7002,,Zach,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:05:12.399107+00:00,fa_signing,Jalen Coker,sl-11646,,Matt,2,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:05:41.46392+00:00,drop,Malik Davis,sl-8800,Mike,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:06:09.497016+00:00,fa_signing,Woody Marks,sl-12474,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:06:30.683886+00:00,drop,Jacksonville Jaguars D/ST,def-JAX,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:07:09.031909+00:00,fa_signing,Tampa Bay Buccaneers D/ST,def-TB,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:07:35.653348+00:00,drop,Pittsburgh Steelers D/ST,def-PIT,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:08:14.840899+00:00,fa_signing,San Francisco 49ers D/ST,def-SF,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:09:19.038312+00:00,drop,Calvin Ridley,sl-4981,Ben,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:09:58.304003+00:00,fa_signing,Devaughn Vele,sl-11834,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:10:21.898237+00:00,drop,Evan McPherson,sl-7839,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:11:02.491224+00:00,fa_signing,Eddy Pineiro,sl-5189,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:11:38.912727+00:00,drop,Jaydon Blue,sl-12457,Mike,,6,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-10-16T02:12:03.156857+00:00,fa_signing,Jalen Nailor,sl-8180,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:12:31.331428+00:00,drop,Los Angeles Chargers D/ST,def-LAC,Ryan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:12:57.493404+00:00,fa_signing,Pittsburgh Steelers D/ST,def-PIT,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:13:41.703556+00:00,drop,Ja'Tavion Sanders,sl-11600,Mike,,6,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-10-16T02:14:39.917947+00:00,fa_signing,Mack Hollins,sl-4177,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:17:20.190607+00:00,fa_signing,Rashod Bateman,sl-7571,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:18:39.110004+00:00,fa_signing,Baltimore Ravens D/ST,def-BAL,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:19:14.384801+00:00,drop,Tampa Bay Buccaneers D/ST,def-TB,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:19:48.368036+00:00,fa_signing,Kansas City Chiefs D/ST,def-KC,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:21:40.388353+00:00,drop,Dallas Goedert,sl-5022,Mike,,5,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 5}",2026-10-28T17:24:02+00:00
-2026-10-16T02:22:16.25716+00:00,fa_signing,Dalton Schultz,sl-5001,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:22:51.09061+00:00,drop,Trey Benson,sl-11589,Qasim,,13,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 13}",2026-10-28T17:24:02+00:00
-2026-10-16T02:24:56.896617+00:00,fa_signing,Jordan Love,sl-6804,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:26:47.535911+00:00,fa_signing,Bryce Young,sl-9228,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:27:22.277784+00:00,drop,Detroit Lions D/ST,def-DET,Russ,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T02:28:41.171336+00:00,fa_signing,Cincinnati Bengals D/ST,def-CIN,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T02:29:58.641414+00:00,fa_signing,Dontayvion Wicks,sl-9486,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T15:35:14.245438+00:00,drop,Philadelphia Eagles D/ST,def-PHI,Jordan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T15:35:37.495513+00:00,fa_signing,Minnesota Vikings D/ST,def-MIN,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T15:46:38.568727+00:00,drop,Eddy Pineiro,sl-5189,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T15:46:58.782657+00:00,fa_signing,Evan McPherson,sl-7839,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T15:47:16.85376+00:00,drop,Michael Pittman,sl-6819,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T15:47:51.05022+00:00,fa_signing,Jaylen Wright,sl-11643,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T15:48:04.460148+00:00,drop,Quentin Johnston,sl-9754,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T15:48:25.37615+00:00,fa_signing,Emanuel Wilson,sl-11435,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T15:48:47.669363+00:00,drop,Jack Bech,sl-12483,Russ,,11,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 11}",2026-10-28T17:24:02+00:00
-2026-10-16T15:49:03.68999+00:00,fa_signing,George Holani,sl-12048,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T15:59:58.88291+00:00,trade,Puka Nacua,sl-9493,Max,Russ,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-16T15:59:58.88291+00:00,trade,Alec Pierce,sl-8142,Russ,Max,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-16T15:59:58.88291+00:00,trade,Bhayshul Tuten,sl-12490,Max,Russ,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-16T15:59:58.88291+00:00,trade,Chase Brown,sl-9224,Russ,Max,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-16T15:59:58.88291+00:00,trade,$10 cap space,,Max,Russ,10,"{""asset"": ""cap_space""}",2026-10-28T17:24:02+00:00
-2026-10-16T20:41:49.082043+00:00,drop,Jake Elliott,sl-4195,Russ,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:43:22.35822+00:00,drop,George Holani,sl-12048,Russ,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:43:46.200445+00:00,fa_signing,Will Reichard,sl-11792,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:44:02.710669+00:00,drop,Kyle Pitts,sl-7553,Matt,,1,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:44:46.959691+00:00,fa_signing,T.J. Hockenson,sl-5844,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:45:30.580875+00:00,drop,San Francisco 49ers D/ST,def-SF,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:45:48.521485+00:00,drop,Kansas City Chiefs D/ST,def-KC,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:47:16.855022+00:00,fa_signing,Dallas Cowboys D/ST,def-DAL,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:47:40.694823+00:00,drop,Cam Ward,sl-12522,Qasim,,11,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 11}",2026-10-28T17:24:02+00:00
-2026-10-16T20:48:03.380753+00:00,fa_signing,Will Shipley,sl-11577,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:48:31.034339+00:00,drop,Jaylen Wright,sl-11643,Jordan,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:48:54.016792+00:00,fa_signing,Jacoby Brissett,sl-3257,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:49:22.602897+00:00,drop,Rashid Shaheed,sl-8676,Ben,,6,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-10-16T20:49:42.295686+00:00,fa_signing,Keaton Mitchell,sl-9511,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:50:02.885894+00:00,drop,Trevor Lawrence,sl-7523,Johnny,,1,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:50:30.537689+00:00,fa_signing,Jacksonville Jaguars D/ST,def-JAX,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:50:59.724894+00:00,drop,Baltimore Ravens D/ST,def-BAL,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:51:15.852672+00:00,fa_signing,Cleveland Browns D/ST,def-CLE,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:51:34.781328+00:00,fa_signing,Chicago Bears D/ST,def-CHI,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:52:06.575278+00:00,drop,Elic Ayomanor,sl-12499,Mike,,2,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 2}",2026-10-28T17:24:02+00:00
-2026-10-16T20:52:31.343714+00:00,fa_signing,Hunter Henry,sl-3214,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:53:03.679274+00:00,drop,Cameron Dicker,sl-8259,Mike,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:53:34.200851+00:00,fa_signing,Spencer Shrader,sl-12185,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:53:54.324291+00:00,drop,Dontayvion Wicks,sl-9486,Russ,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:54:12.070341+00:00,fa_signing,Brian Robinson,sl-8154,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:54:32.326361+00:00,drop,Jordan Love,sl-6804,Qasim,,1,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:54:53.397336+00:00,fa_signing,Trevor Lawrence,sl-7523,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:55:10.805566+00:00,drop,Kenneth Gainwell,sl-7567,Johnny,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:55:33.77833+00:00,fa_signing,Roman Wilson,sl-11630,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:55:50.728082+00:00,fa_signing,Indianapolis Colts D/ST,def-IND,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:56:06.838674+00:00,drop,Will Shipley,sl-11577,Qasim,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:56:22.90105+00:00,fa_signing,Dameon Pierce,sl-8129,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:56:58.444322+00:00,drop,Dallas Cowboys D/ST,def-DAL,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:57:22.207311+00:00,fa_signing,Kansas City Chiefs D/ST,def-KC,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:57:47.507577+00:00,drop,Courtland Sutton,sl-5045,Matt,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:58:05.121462+00:00,fa_signing,Dallas Goedert,sl-5022,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:58:18.088063+00:00,drop,Jake Bates,sl-11539,Qasim,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:58:35.579813+00:00,fa_signing,Eddy Pineiro,sl-5189,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:58:54.070152+00:00,drop,Harrison Mevis,sl-12015,Ben,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:59:06.094764+00:00,fa_signing,Harrison Butker,sl-4227,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:59:16.377143+00:00,drop,Minnesota Vikings D/ST,def-MIN,Jordan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T20:59:33.923813+00:00,fa_signing,Jordan Love,sl-6804,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T20:59:49.016045+00:00,drop,Keaton Mitchell,sl-9511,Ben,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:00:02.977809+00:00,fa_signing,Kendre Miller,sl-9757,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:00:12.491967+00:00,drop,Jacoby Brissett,sl-3257,Jordan,,1,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:00:26.302008+00:00,fa_signing,Baltimore Ravens D/ST,def-BAL,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:00:37.83671+00:00,drop,Evan McPherson,sl-7839,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:00:51.207011+00:00,fa_signing,Chris Boswell,sl-1945,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:01:11.635887+00:00,drop,Roman Wilson,sl-11630,Johnny,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:01:25.645769+00:00,fa_signing,Kirk Cousins,sl-1166,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:01:45.377671+00:00,drop,Oscar Delp,sl-13319,Johnny,,6,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 6}",2026-10-28T17:24:02+00:00
-2026-10-16T21:02:02.872672+00:00,fa_signing,Keenan Allen,sl-1479,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:02:16.496349+00:00,drop,Brian Robinson,sl-8154,Russ,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:02:44.558393+00:00,fa_signing,Aaron Rodgers,sl-96,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:03:01.131373+00:00,drop,Will Reichard,sl-11792,Russ,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:03:19.11327+00:00,fa_signing,Matt Gay,sl-6083,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-16T21:03:35.609779+00:00,drop,Cincinnati Bengals D/ST,def-CIN,Russ,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-16T21:04:01.568999+00:00,fa_signing,San Francisco 49ers D/ST,def-SF,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-19T21:49:04.734676+00:00,drop,Jauan Jennings,sl-7049,Mike,,20,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 20}",2026-10-28T17:24:02+00:00
-2026-10-19T21:49:23.298852+00:00,fa_signing,Keaton Mitchell,sl-9511,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-19T21:49:54.025853+00:00,drop,Chris Boswell,sl-1945,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-19T21:50:12.367079+00:00,fa_signing,Tyler Bass,sl-7042,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:45:55.934165+00:00,drop,Rashod Bateman,sl-7571,Johnny,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:46:08.042389+00:00,drop,Seattle Seahawks D/ST,def-SEA,Johnny,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:46:26.020092+00:00,fa_signing,Minnesota Vikings D/ST,def-MIN,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:46:48.19927+00:00,drop,Indianapolis Colts D/ST,def-IND,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:47:09.253656+00:00,fa_signing,DeMario Douglas,sl-9501,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:47:26.914763+00:00,fa_signing,Geno Smith,sl-1373,,Max,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:47:43.479918+00:00,drop,Romeo Doubs,sl-8121,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:47:55.639004+00:00,fa_signing,Dontayvion Wicks,sl-9486,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:48:07.810721+00:00,drop,Baltimore Ravens D/ST,def-BAL,Jordan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:48:25.912293+00:00,fa_signing,New York Jets D/ST,def-NYJ,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:48:38.711244+00:00,drop,Tyler Bass,sl-7042,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:48:55.856075+00:00,fa_signing,Will Reichard,sl-11792,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:49:43.327103+00:00,fa_signing,Jakobi Meyers,sl-5947,,Zach,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:49:56.615296+00:00,drop,Mark Andrews,sl-5012,Ben,,1,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:50:12.92006+00:00,fa_signing,Kyle Pitts,sl-7553,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:50:31.862958+00:00,drop,Keaton Mitchell,sl-9511,Mike,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:50:49.082096+00:00,fa_signing,Ryan Flournoy,sl-11783,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:51:08.701563+00:00,drop,Jalen Nailor,sl-8180,Mike,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:51:22.18508+00:00,fa_signing,Courtland Sutton,sl-5045,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-21T20:51:40.85034+00:00,drop,Cam Little,sl-11786,Matt,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-21T20:53:35.359066+00:00,fa_signing,Chris Boswell,sl-1945,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-22T21:20:35.037048+00:00,drop,Emanuel Wilson,sl-11435,Jordan,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-22T21:20:53.946785+00:00,fa_signing,Kendrick Bourne,sl-4454,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-23T02:28:56.962462+00:00,fa_signing,Brian Robinson,sl-8154,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-26T14:30:51.737434+00:00,drop,Dontayvion Wicks,sl-9486,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-26T14:31:32.602224+00:00,fa_signing,Brandin Cooks,sl-2197,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-26T14:31:56.086415+00:00,fa_signing,Emanuel Wilson,sl-11435,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-26T14:33:07.856516+00:00,drop,Rachaad White,sl-8136,Ben,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-26T14:33:41.082394+00:00,drop,Deebo Samuel,sl-5872,Ben,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Patrick Mahomes,sl-4046,Ben,Jordan,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,CeeDee Lamb,sl-6786,Ben,Jordan,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Brandon Aiyuk,sl-6803,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Jonah Coleman,sl-13345,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,2027 Round 1 pick (TBD (from Ja'Jah Pachulia)),,Jordan,Ben,,"{""year"": 2027, ""asset"": ""pick"", ""label"": ""TBD (from Ja'Jah Pachulia)"", ""round"": 1}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Emeka Egbuka,sl-12514,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Wan'Dale Robinson,sl-8126,Ben,Jordan,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Cam Skattebo,sl-12481,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,$30 cap space (2027/2028),,Jordan,Ben,30,"{""asset"": ""cap_space"", ""season"": ""2027/2028""}",2026-10-28T17:24:02+00:00
-2026-10-26T23:13:54.909555+00:00,trade,Justin Herbert,sl-6797,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T17:24:02+00:00
-2026-10-27T02:36:57.876495+00:00,fa_signing,Tyrone Tracy,sl-11655,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-27T02:37:10.44988+00:00,fa_signing,Darius Cooper,sl-13150,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T17:24:02+00:00
-2026-10-28T02:03:57.715163+00:00,drop,Dameon Pierce,sl-8129,Qasim,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T17:24:02+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Jonathan Taylor,sl-6813,Matt,Matt,90,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Tucker Kraft,sl-9484,Johnny,Johnny,3,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Justin Herbert,sl-6797,Max,Max,28,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Houston Texans D/ST,def-HOU,Mike,Mike,2,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Javonte Williams,sl-7588,Matt,Matt,17,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Kenneth Walker,sl-8151,Ben,Ben,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Harold Fannin,sl-12506,Ryan,Ryan,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Breece Hall,sl-8155,Ben,Ben,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Brandon Aubrey,sl-11533,Ryan,Ryan,2,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Garrett Wilson,sl-8146,Qasim,Qasim,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Jaxson Dart,sl-12508,Jordan,Jordan,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Tony Pollard,sl-5967,Jordan,Jordan,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Alec Pierce,sl-8142,Max,Max,5,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Drake London,sl-8112,Zach,Zach,9,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Elic Ayomanor,sl-12499,Mike,Mike,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Denver Broncos D/ST,def-DEN,Zach,Zach,2,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Davante Adams,sl-2133,Zach,Zach,29,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,David Montgomery,sl-5892,Max,Max,21,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Lamar Jackson,sl-4881,Matt,Matt,19,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,George Pickens,sl-8137,Johnny,Johnny,7,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Mike Evans,sl-2216,Qasim,Qasim,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Chris Olave,sl-8144,Max,Max,15,"{""season"": 2026, ""tag_type"": ""MLE"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Dallas Goedert,sl-5022,Mike,Mike,2,"{""season"": 2026, ""tag_type"": ""RFA"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-07-16T21:15:20.813985+00:00,tag,Ja'Marr Chase,sl-7564,Jordan,Jordan,97,"{""season"": 2026, ""tag_type"": ""FT"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-01T18:51:51.469935+00:00,rfa,Breece Hall,sl-8155,Ben,Ben,65,"{""matched"": true, ""backfilled"": true, ""high_bidder"": ""team-5""}",2026-10-28T18:20:52+00:00
+2026-08-01T18:51:51.469935+00:00,rfa,Drake London,sl-8112,Zach,Zach,88,"{""matched"": true, ""backfilled"": true, ""high_bidder"": ""team-10""}",2026-10-28T18:20:52+00:00
+2026-08-02T18:40:16.657+00:00,trade,Pat Bryant,sl-12492,Jordan,Zach,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-02T18:40:16.657+00:00,trade,2026 Round 3 pick,,Jordan,Zach,,"{""year"": ""2026"", ""asset"": ""pick"", ""label"": ""#27"", ""round"": ""3"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-02T18:40:16.657+00:00,trade,2026 Round 1 pick,,Zach,Jordan,,"{""year"": ""2026"", ""asset"": ""pick"", ""label"": ""#8"", ""round"": ""1"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-03T03:31:54.536968+00:00,rfa,Garrett Wilson,sl-8146,Qasim,Qasim,51,"{""matched"": true, ""backfilled"": true, ""high_bidder"": ""team-9""}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Jalen Hurts,sl-6904,Jordan,Max,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Omar Cooper,sl-13276,Jordan,Max,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Nico Collins,sl-7569,Jordan,Max,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Chuba Hubbard,sl-7594,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Justin Herbert,sl-6797,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Brandon Aiyuk,sl-6803,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,2028 Round 1 pick,,Max,Jordan,,"{""year"": ""2028"", ""asset"": ""pick"", ""label"": ""TBD"", ""round"": ""1"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,2026 Round 2 pick,,Max,Jordan,,"{""year"": ""2026"", ""asset"": ""pick"", ""label"": ""#13"", ""round"": ""2"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,2027 Round 2 pick,,Max,Jordan,,"{""year"": ""2027"", ""asset"": ""pick"", ""label"": ""TBD"", ""round"": ""2"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T03:48:52.463869+00:00,trade,Emeka Egbuka,sl-12514,Max,Jordan,,"{""asset"": ""player"", ""backfilled"": true}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.907269+00:00,rookie_pick,Carnell Tate,sl-13279,,Ryan,5,"{""pick"": ""#2"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.908202+00:00,rookie_pick,Omar Cooper,sl-13276,,Jordan,5,"{""pick"": ""#8"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.925366+00:00,rookie_pick,Jeremiyah Love,sl-13287,,Ben,5,"{""pick"": ""#1"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.936535+00:00,rookie_pick,Jordyn Tyson,sl-13281,,Max,5,"{""pick"": ""#3"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.94047+00:00,rookie_pick,Jadarian Price,sl-13286,,Matt,5,"{""pick"": ""#4"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.966108+00:00,rookie_pick,Makai Lemon,sl-13294,,Mike,5,"{""pick"": ""#5"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:11.97194+00:00,rookie_pick,KC Concepcion,sl-13298,,Qasim,5,"{""pick"": ""#6"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:12.07129+00:00,rookie_pick,Chris Bell,sl-13311,,Russ,5,"{""pick"": ""#9"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:12.119048+00:00,rookie_pick,Kenyon Sadiq,sl-13330,,Max,5,"{""pick"": ""#7"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:12.123025+00:00,rookie_pick,Emmett Johnson,sl-13337,,Johnny,5,"{""pick"": ""#10"", ""round"": 1, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:12.146916+00:00,rookie_pick,Denzel Boston,sl-13346,,Ryan,3,"{""pick"": ""#12"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:12.15139+00:00,rookie_pick,Jonah Coleman,sl-13345,,Jordan,3,"{""pick"": ""#13"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T07:15:12.250796+00:00,rookie_pick,Eli Stowers,sl-13349,,Ben,3,"{""pick"": ""#11"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-05T15:40:47.744279+00:00,rfa,George Pickens,sl-8137,Johnny,Ryan,71,"{""matched"": false, ""backfilled"": true, ""high_bidder"": ""team-9""}",2026-10-28T18:20:52+00:00
+2026-08-05T21:27:42.1568+00:00,rookie_pick,Germie Bernard,sl-13274,,Matt,3,"{""pick"": ""#14"", ""round"": 2, ""backfilled"": true, ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-07T01:37:04.703473+00:00,rookie_pick,De'Zhaun Stribling,sl-13417,,Mike,3,"{""pick"": ""#15"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-07T01:37:16.001797+00:00,rookie_pick,Antonio Williams,sl-13301,,Qasim,3,"{""pick"": ""#16"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-07T20:07:23.520056+00:00,rfa,Kenneth Walker,sl-8151,Ben,Ben,67,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-6""}",2026-10-28T18:20:52+00:00
+2026-08-08T16:05:59.586547+00:00,rookie_pick,Zachariah Branch,sl-13320,,Jordan,3,"{""pick"": ""#17"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-09T16:13:20.078852+00:00,rfa,Javonte Williams,sl-7588,Matt,Johnny,48,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-1""}",2026-10-28T18:20:52+00:00
+2026-08-10T13:07:38.17799+00:00,rookie_pick,Nicholas Singleton,sl-13288,,Zach,3,"{""pick"": ""#18"", ""round"": 2, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-10T13:10:41.81825+00:00,rfa,Davante Adams,sl-2133,Zach,Zach,39,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-1""}",2026-10-28T18:20:52+00:00
+2026-08-10T16:09:41.372755+00:00,rookie_pick,Ted Hurst,sl-13317,,Russ,3,"{""pick"": ""#19"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-10T18:56:14.349257+00:00,rookie_pick,Ja'Kobi Lane,sl-13293,,Johnny,3,"{""pick"": ""#20"", ""round"": 2, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-11T14:59:58.586437+00:00,rookie_pick,Fernando Mendoza,sl-13269,,Ben,1,"{""pick"": ""#21"", ""round"": 3, ""position"": ""QB"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-12T14:32:27.783479+00:00,rfa,Lamar Jackson,sl-4881,Matt,Matt,28,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-5""}",2026-10-28T18:20:52+00:00
+2026-08-12T19:37:05.165639+00:00,rookie_pick,Malachi Fields,sl-13285,,Ryan,1,"{""pick"": ""#22"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-13T13:40:51.271732+00:00,rookie_pick,Elijah Sarratt,sl-13268,,Max,1,"{""pick"": ""#23"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-14T03:10:57.838404+00:00,rookie_pick,Caleb Douglas,sl-13296,,Matt,1,"{""pick"": ""#24"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-14T13:33:42.672715+00:00,rookie_pick,Kaytron Allen,sl-13405,,Mike,1,"{""pick"": ""#25"", ""round"": 3, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-14T18:18:14.939926+00:00,rfa,David Montgomery,sl-5892,Max,Zach,39,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-3""}",2026-10-28T18:20:52+00:00
+2026-08-15T04:10:07.985633+00:00,rfa,Tony Pollard,sl-5967,Jordan,Qasim,15,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-5""}",2026-10-28T18:20:52+00:00
+2026-08-15T14:16:26.737723+00:00,rookie_pick,Mike Washington,sl-13305,,Qasim,1,"{""pick"": ""#26"", ""round"": 3, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-16T01:45:24.839094+00:00,drop,J.J. McCarthy,sl-11565,Matt,,10,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 10}",2026-10-28T18:20:52+00:00
+2026-08-16T01:46:48.007094+00:00,drop,Nick Chubb,sl-4988,Matt,,4,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 4}",2026-10-28T18:20:52+00:00
+2026-08-17T13:04:05.479068+00:00,rookie_pick,Cyrus Allen,sl-13413,,Zach,1,"{""pick"": ""#27"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-17T13:04:14.461143+00:00,rookie_pick,Kaelon Black,sl-13414,,Zach,1,"{""pick"": ""#28"", ""round"": 3, ""position"": ""RB"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-17T13:04:28.707612+00:00,rookie_pick,Skyler Bell,sl-13402,,Russ,1,"{""pick"": ""#29"", ""round"": 3, ""position"": ""WR"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-17T14:12:28.017892+00:00,rfa,Alec Pierce,sl-8142,Max,Russ,15,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-2""}",2026-10-28T18:20:52+00:00
+2026-08-17T22:57:05.504083+00:00,rookie_pick,Oscar Delp,sl-13319,,Johnny,1,"{""pick"": ""#30"", ""round"": 3, ""position"": ""TE"", ""draft_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-08-18T03:02:40.932226+00:00,drop,Xavier Legette,sl-11626,Ryan,,10,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 10}",2026-10-28T18:20:52+00:00
+2026-08-18T04:09:26.333446+00:00,rfa,Harold Fannin,sl-12506,Ryan,Jordan,21,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-4""}",2026-10-28T18:20:52+00:00
+2026-08-19T03:29:41.454708+00:00,rfa,Jaxson Dart,sl-12508,Jordan,Jordan,11,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-7""}",2026-10-28T18:20:52+00:00
+2026-08-20T02:26:42.929802+00:00,rfa,Mike Evans,sl-2216,Qasim,Russ,23,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-2""}",2026-10-28T18:20:52+00:00
+2026-08-21T21:08:08.150805+00:00,rfa,Dallas Goedert,sl-5022,Mike,Mike,5,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-7""}",2026-10-28T18:20:52+00:00
+2026-08-23T19:05:46.015902+00:00,rfa,Tucker Kraft,sl-9484,Johnny,Johnny,16,"{""season"": 2026, ""matched"": true, ""high_bidder"": ""team-7""}",2026-10-28T18:20:52+00:00
+2026-08-23T19:06:05.745597+00:00,rfa,Elic Ayomanor,sl-12499,Mike,Mike,2,"{""season"": 2026, ""matched"": false, ""high_bidder"": ""team-6""}",2026-10-28T18:20:52+00:00
+2026-08-28T19:46:03.442922+00:00,drop,Ricky Pearsall,sl-11638,Johnny,,10,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 10}",2026-10-28T18:20:52+00:00
+2026-08-28T21:50:12.833349+00:00,drop,Marvin Mims,sl-9494,Qasim,,6,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-09-01T20:06:47.949141+00:00,drop,Dont'e Thornton,sl-12541,Jordan,,6,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-09-02T19:55:12.062297+00:00,fa_signing,Chris Brazzell,sl-13353,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:33:26.974854+00:00,fa_signing,Patrick Mahomes,sl-4046,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:33:58.594508+00:00,fa_signing,Jacksonville Jaguars D/ST,def-JAX,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:34:18.552655+00:00,fa_signing,Kyler Murray,sl-5849,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:35:14.771213+00:00,drop,Dylan Sampson,sl-12469,Max,,11,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 11}",2026-10-28T18:20:52+00:00
+2026-09-02T20:35:52.319907+00:00,fa_signing,Michael Pittman,sl-6819,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:36:13.708202+00:00,fa_signing,Rachaad White,sl-8136,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:36:37.189469+00:00,fa_signing,Tre Tucker,sl-10213,,Max,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:36:52.494138+00:00,fa_signing,Jake Bates,sl-11539,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:37:28.826294+00:00,fa_signing,Deebo Samuel,sl-5872,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:37:45.6141+00:00,fa_signing,Calvin Ridley,sl-4981,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:38:01.363242+00:00,fa_signing,Wan'Dale Robinson,sl-8126,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:38:16.730742+00:00,fa_signing,Malik Davis,sl-8800,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:38:40.639607+00:00,drop,Michael Penix,sl-11559,Ryan,,9,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 9}",2026-10-28T18:20:52+00:00
+2026-09-02T20:39:18.092446+00:00,fa_signing,Tyler Shough,sl-12545,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:39:35.832169+00:00,fa_signing,Los Angeles Chargers D/ST,def-LAC,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:39:58.123947+00:00,drop,T.J. Hockenson,sl-5844,Ryan,,6,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-09-02T20:40:31.937783+00:00,fa_signing,Pittsburgh Steelers D/ST,def-PIT,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:40:44.776064+00:00,fa_signing,Harrison Mevis,sl-12015,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-09-02T20:43:32.30442+00:00,fa_signing,Seth McGowan,sl-13424,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": false, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T01:44:44.625277+00:00,fa_signing,Detroit Lions D/ST,def-DET,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T01:51:46.321559+00:00,drop,Troy Franklin,sl-11627,Russ,,10,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 10}",2026-10-28T18:20:52+00:00
+2026-10-16T01:52:18.464493+00:00,fa_signing,Jake Elliott,sl-4195,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T01:53:18.04198+00:00,drop,Elijah Arroyo,sl-12521,Zach,,8,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 8}",2026-10-28T18:20:52+00:00
+2026-10-16T01:53:52.078928+00:00,fa_signing,Isaiah Likely,sl-8131,,Zach,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T01:58:28.811624+00:00,drop,Minnesota Vikings D/ST,def-MIN,Johnny,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T01:59:25.76703+00:00,fa_signing,Tyler Allgeier,sl-8132,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:01:53.149608+00:00,fa_signing,Mark Andrews,sl-5012,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:03:50.037352+00:00,fa_signing,Juwan Johnson,sl-7002,,Zach,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:05:12.399107+00:00,fa_signing,Jalen Coker,sl-11646,,Matt,2,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:05:41.46392+00:00,drop,Malik Davis,sl-8800,Mike,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:06:09.497016+00:00,fa_signing,Woody Marks,sl-12474,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:06:30.683886+00:00,drop,Jacksonville Jaguars D/ST,def-JAX,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:07:09.031909+00:00,fa_signing,Tampa Bay Buccaneers D/ST,def-TB,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:07:35.653348+00:00,drop,Pittsburgh Steelers D/ST,def-PIT,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:08:14.840899+00:00,fa_signing,San Francisco 49ers D/ST,def-SF,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:09:19.038312+00:00,drop,Calvin Ridley,sl-4981,Ben,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:09:58.304003+00:00,fa_signing,Devaughn Vele,sl-11834,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:10:21.898237+00:00,drop,Evan McPherson,sl-7839,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:11:02.491224+00:00,fa_signing,Eddy Pineiro,sl-5189,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:11:38.912727+00:00,drop,Jaydon Blue,sl-12457,Mike,,6,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-10-16T02:12:03.156857+00:00,fa_signing,Jalen Nailor,sl-8180,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:12:31.331428+00:00,drop,Los Angeles Chargers D/ST,def-LAC,Ryan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:12:57.493404+00:00,fa_signing,Pittsburgh Steelers D/ST,def-PIT,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:13:41.703556+00:00,drop,Ja'Tavion Sanders,sl-11600,Mike,,6,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-10-16T02:14:39.917947+00:00,fa_signing,Mack Hollins,sl-4177,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:17:20.190607+00:00,fa_signing,Rashod Bateman,sl-7571,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:18:39.110004+00:00,fa_signing,Baltimore Ravens D/ST,def-BAL,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:19:14.384801+00:00,drop,Tampa Bay Buccaneers D/ST,def-TB,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:19:48.368036+00:00,fa_signing,Kansas City Chiefs D/ST,def-KC,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:21:40.388353+00:00,drop,Dallas Goedert,sl-5022,Mike,,5,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 5}",2026-10-28T18:20:52+00:00
+2026-10-16T02:22:16.25716+00:00,fa_signing,Dalton Schultz,sl-5001,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:22:51.09061+00:00,drop,Trey Benson,sl-11589,Qasim,,13,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 13}",2026-10-28T18:20:52+00:00
+2026-10-16T02:24:56.896617+00:00,fa_signing,Jordan Love,sl-6804,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:26:47.535911+00:00,fa_signing,Bryce Young,sl-9228,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:27:22.277784+00:00,drop,Detroit Lions D/ST,def-DET,Russ,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T02:28:41.171336+00:00,fa_signing,Cincinnati Bengals D/ST,def-CIN,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T02:29:58.641414+00:00,fa_signing,Dontayvion Wicks,sl-9486,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T15:35:14.245438+00:00,drop,Philadelphia Eagles D/ST,def-PHI,Jordan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T15:35:37.495513+00:00,fa_signing,Minnesota Vikings D/ST,def-MIN,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T15:46:38.568727+00:00,drop,Eddy Pineiro,sl-5189,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T15:46:58.782657+00:00,fa_signing,Evan McPherson,sl-7839,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T15:47:16.85376+00:00,drop,Michael Pittman,sl-6819,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T15:47:51.05022+00:00,fa_signing,Jaylen Wright,sl-11643,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T15:48:04.460148+00:00,drop,Quentin Johnston,sl-9754,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T15:48:25.37615+00:00,fa_signing,Emanuel Wilson,sl-11435,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T15:48:47.669363+00:00,drop,Jack Bech,sl-12483,Russ,,11,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 11}",2026-10-28T18:20:52+00:00
+2026-10-16T15:49:03.68999+00:00,fa_signing,George Holani,sl-12048,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T15:59:58.88291+00:00,trade,Puka Nacua,sl-9493,Max,Russ,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-16T15:59:58.88291+00:00,trade,Alec Pierce,sl-8142,Russ,Max,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-16T15:59:58.88291+00:00,trade,Bhayshul Tuten,sl-12490,Max,Russ,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-16T15:59:58.88291+00:00,trade,Chase Brown,sl-9224,Russ,Max,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-16T15:59:58.88291+00:00,trade,$10 cap space,,Max,Russ,10,"{""asset"": ""cap_space""}",2026-10-28T18:20:52+00:00
+2026-10-16T20:41:49.082043+00:00,drop,Jake Elliott,sl-4195,Russ,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:43:22.35822+00:00,drop,George Holani,sl-12048,Russ,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:43:46.200445+00:00,fa_signing,Will Reichard,sl-11792,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:44:02.710669+00:00,drop,Kyle Pitts,sl-7553,Matt,,1,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:44:46.959691+00:00,fa_signing,T.J. Hockenson,sl-5844,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:45:30.580875+00:00,drop,San Francisco 49ers D/ST,def-SF,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:45:48.521485+00:00,drop,Kansas City Chiefs D/ST,def-KC,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:47:16.855022+00:00,fa_signing,Dallas Cowboys D/ST,def-DAL,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:47:40.694823+00:00,drop,Cam Ward,sl-12522,Qasim,,11,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 11}",2026-10-28T18:20:52+00:00
+2026-10-16T20:48:03.380753+00:00,fa_signing,Will Shipley,sl-11577,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:48:31.034339+00:00,drop,Jaylen Wright,sl-11643,Jordan,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:48:54.016792+00:00,fa_signing,Jacoby Brissett,sl-3257,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:49:22.602897+00:00,drop,Rashid Shaheed,sl-8676,Ben,,6,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-10-16T20:49:42.295686+00:00,fa_signing,Keaton Mitchell,sl-9511,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:50:02.885894+00:00,drop,Trevor Lawrence,sl-7523,Johnny,,1,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:50:30.537689+00:00,fa_signing,Jacksonville Jaguars D/ST,def-JAX,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:50:59.724894+00:00,drop,Baltimore Ravens D/ST,def-BAL,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:51:15.852672+00:00,fa_signing,Cleveland Browns D/ST,def-CLE,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:51:34.781328+00:00,fa_signing,Chicago Bears D/ST,def-CHI,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:52:06.575278+00:00,drop,Elic Ayomanor,sl-12499,Mike,,2,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 2}",2026-10-28T18:20:52+00:00
+2026-10-16T20:52:31.343714+00:00,fa_signing,Hunter Henry,sl-3214,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:53:03.679274+00:00,drop,Cameron Dicker,sl-8259,Mike,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:53:34.200851+00:00,fa_signing,Spencer Shrader,sl-12185,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:53:54.324291+00:00,drop,Dontayvion Wicks,sl-9486,Russ,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:54:12.070341+00:00,fa_signing,Brian Robinson,sl-8154,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:54:32.326361+00:00,drop,Jordan Love,sl-6804,Qasim,,1,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:54:53.397336+00:00,fa_signing,Trevor Lawrence,sl-7523,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:55:10.805566+00:00,drop,Kenneth Gainwell,sl-7567,Johnny,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:55:33.77833+00:00,fa_signing,Roman Wilson,sl-11630,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:55:50.728082+00:00,fa_signing,Indianapolis Colts D/ST,def-IND,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:56:06.838674+00:00,drop,Will Shipley,sl-11577,Qasim,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:56:22.90105+00:00,fa_signing,Dameon Pierce,sl-8129,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:56:58.444322+00:00,drop,Dallas Cowboys D/ST,def-DAL,Qasim,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:57:22.207311+00:00,fa_signing,Kansas City Chiefs D/ST,def-KC,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:57:47.507577+00:00,drop,Courtland Sutton,sl-5045,Matt,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:58:05.121462+00:00,fa_signing,Dallas Goedert,sl-5022,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:58:18.088063+00:00,drop,Jake Bates,sl-11539,Qasim,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:58:35.579813+00:00,fa_signing,Eddy Pineiro,sl-5189,,Qasim,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:58:54.070152+00:00,drop,Harrison Mevis,sl-12015,Ben,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:59:06.094764+00:00,fa_signing,Harrison Butker,sl-4227,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:59:16.377143+00:00,drop,Minnesota Vikings D/ST,def-MIN,Jordan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T20:59:33.923813+00:00,fa_signing,Jordan Love,sl-6804,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T20:59:49.016045+00:00,drop,Keaton Mitchell,sl-9511,Ben,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:00:02.977809+00:00,fa_signing,Kendre Miller,sl-9757,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:00:12.491967+00:00,drop,Jacoby Brissett,sl-3257,Jordan,,1,"{""season"": 2026, ""position"": ""QB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:00:26.302008+00:00,fa_signing,Baltimore Ravens D/ST,def-BAL,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:00:37.83671+00:00,drop,Evan McPherson,sl-7839,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:00:51.207011+00:00,fa_signing,Chris Boswell,sl-1945,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:01:11.635887+00:00,drop,Roman Wilson,sl-11630,Johnny,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:01:25.645769+00:00,fa_signing,Kirk Cousins,sl-1166,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:01:45.377671+00:00,drop,Oscar Delp,sl-13319,Johnny,,6,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 6}",2026-10-28T18:20:52+00:00
+2026-10-16T21:02:02.872672+00:00,fa_signing,Keenan Allen,sl-1479,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:02:16.496349+00:00,drop,Brian Robinson,sl-8154,Russ,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:02:44.558393+00:00,fa_signing,Aaron Rodgers,sl-96,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:03:01.131373+00:00,drop,Will Reichard,sl-11792,Russ,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:03:19.11327+00:00,fa_signing,Matt Gay,sl-6083,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-16T21:03:35.609779+00:00,drop,Cincinnati Bengals D/ST,def-CIN,Russ,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-16T21:04:01.568999+00:00,fa_signing,San Francisco 49ers D/ST,def-SF,,Russ,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-19T21:49:04.734676+00:00,drop,Jauan Jennings,sl-7049,Mike,,20,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 20}",2026-10-28T18:20:52+00:00
+2026-10-19T21:49:23.298852+00:00,fa_signing,Keaton Mitchell,sl-9511,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-19T21:49:54.025853+00:00,drop,Chris Boswell,sl-1945,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-19T21:50:12.367079+00:00,fa_signing,Tyler Bass,sl-7042,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:45:55.934165+00:00,drop,Rashod Bateman,sl-7571,Johnny,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:46:08.042389+00:00,drop,Seattle Seahawks D/ST,def-SEA,Johnny,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:46:26.020092+00:00,fa_signing,Minnesota Vikings D/ST,def-MIN,,Johnny,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": false, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:46:48.19927+00:00,drop,Indianapolis Colts D/ST,def-IND,Ben,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:47:09.253656+00:00,fa_signing,DeMario Douglas,sl-9501,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:47:26.914763+00:00,fa_signing,Geno Smith,sl-1373,,Max,1,"{""source"": ""commissioner_add"", ""position"": ""QB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:47:43.479918+00:00,drop,Romeo Doubs,sl-8121,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:47:55.639004+00:00,fa_signing,Dontayvion Wicks,sl-9486,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:48:07.810721+00:00,drop,Baltimore Ravens D/ST,def-BAL,Jordan,,1,"{""season"": 2026, ""position"": ""DEF"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:48:25.912293+00:00,fa_signing,New York Jets D/ST,def-NYJ,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""DEF"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:48:38.711244+00:00,drop,Tyler Bass,sl-7042,Jordan,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:48:55.856075+00:00,fa_signing,Will Reichard,sl-11792,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:49:43.327103+00:00,fa_signing,Jakobi Meyers,sl-5947,,Zach,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:49:56.615296+00:00,drop,Mark Andrews,sl-5012,Ben,,1,"{""season"": 2026, ""position"": ""TE"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:50:12.92006+00:00,fa_signing,Kyle Pitts,sl-7553,,Ben,1,"{""source"": ""commissioner_add"", ""position"": ""TE"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:50:31.862958+00:00,drop,Keaton Mitchell,sl-9511,Mike,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:50:49.082096+00:00,fa_signing,Ryan Flournoy,sl-11783,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:51:08.701563+00:00,drop,Jalen Nailor,sl-8180,Mike,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:51:22.18508+00:00,fa_signing,Courtland Sutton,sl-5045,,Mike,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-21T20:51:40.85034+00:00,drop,Cam Little,sl-11786,Matt,,1,"{""season"": 2026, ""position"": ""K"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-21T20:53:35.359066+00:00,fa_signing,Chris Boswell,sl-1945,,Matt,1,"{""source"": ""commissioner_add"", ""position"": ""K"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-22T21:20:35.037048+00:00,drop,Emanuel Wilson,sl-11435,Jordan,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-22T21:20:53.946785+00:00,fa_signing,Kendrick Bourne,sl-4454,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-23T02:28:56.962462+00:00,fa_signing,Brian Robinson,sl-8154,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-26T14:30:51.737434+00:00,drop,Dontayvion Wicks,sl-9486,Jordan,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-26T14:31:32.602224+00:00,fa_signing,Brandin Cooks,sl-2197,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-26T14:31:56.086415+00:00,fa_signing,Emanuel Wilson,sl-11435,,Ryan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-26T14:33:07.856516+00:00,drop,Rachaad White,sl-8136,Ben,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-26T14:33:41.082394+00:00,drop,Deebo Samuel,sl-5872,Ben,,1,"{""season"": 2026, ""position"": ""WR"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Patrick Mahomes,sl-4046,Ben,Jordan,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,CeeDee Lamb,sl-6786,Ben,Jordan,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Brandon Aiyuk,sl-6803,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Jonah Coleman,sl-13345,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,2027 Round 1 pick (TBD (from Ja'Jah Pachulia)),,Jordan,Ben,,"{""year"": 2027, ""asset"": ""pick"", ""label"": ""TBD (from Ja'Jah Pachulia)"", ""round"": 1}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Emeka Egbuka,sl-12514,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Wan'Dale Robinson,sl-8126,Ben,Jordan,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Cam Skattebo,sl-12481,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,$30 cap space (2027/2028),,Jordan,Ben,30,"{""asset"": ""cap_space"", ""season"": ""2027/2028""}",2026-10-28T18:20:52+00:00
+2026-10-26T23:13:54.909555+00:00,trade,Justin Herbert,sl-6797,Jordan,Ben,,"{""asset"": ""player""}",2026-10-28T18:20:52+00:00
+2026-10-27T02:36:57.876495+00:00,fa_signing,Tyrone Tracy,sl-11655,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""RB"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-27T02:37:10.44988+00:00,fa_signing,Darius Cooper,sl-13150,,Jordan,1,"{""source"": ""commissioner_add"", ""position"": ""WR"", ""in_season"": true, ""cap_exempt"": true, ""season_year"": 2026}",2026-10-28T18:20:52+00:00
+2026-10-28T02:03:57.715163+00:00,drop,Dameon Pierce,sl-8129,Qasim,,1,"{""season"": 2026, ""position"": ""RB"", ""dead_money"": 1}",2026-10-28T18:20:52+00:00
