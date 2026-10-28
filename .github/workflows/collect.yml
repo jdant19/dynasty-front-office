@@ -30,6 +30,10 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
         run: python collectors/site_snapshot.py
+      - name: Refresh current-state tables from the snapshot
+        run: |
+          pip install -q pyyaml openpyxl
+          if [ -f data/snapshots/site/latest/players.json ]; then PYTHONPATH=src python -m dfo.ingest.site; fi
       - name: Market values
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '43 11 * * *'
         run: python collectors/fetch_market.py
@@ -37,7 +41,7 @@ jobs:
         run: |
           git config user.name "dfo-collector"
           git config user.email "dfo-collector@users.noreply.github.com"
-          git add data/snapshots
+          git add data/snapshots data/processed
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "collect: snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

@@ -15,5 +15,6 @@ jobs:
       - name: Rebuild history tables and fail if they changed unexpectedly
         run: |
           PYTHONPATH=src python -m dfo.ingest.build_history
+          PYTHONPATH=src python -m dfo.ingest.site
           git diff --stat -- data/processed
       - run: python -m pytest -q

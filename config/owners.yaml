@@ -2,17 +2,18 @@
 # Sources: season finishes from the Historic League Rankings sheet; team-name owners confirmed by
 # Jordan on the design doc's Team name map tab (2026-10-27), or self-evident from the name.
 
+# site_team_id: team id on salaryleaguehq.com, matched from rosters in the 2026-10-28 snapshot
 owners:
-  Jordan: {active: [2013, null], commissioner: true, current_team: "Ja'Jah Pachulia", me: true}
-  Mike:   {active: [2013, null], current_team: "Mike's Swell Team"}
-  Ben:    {active: [2013, null], current_team: "Who Dey White House"}
-  Russ:   {active: [2013, null], current_team: "STEIN DYNASTY", aliases: [Russell]}
-  Matt:   {active: [2013, null], current_team: "REESE MODE"}
-  Qasim:  {active: [2013, null], current_team: "Dayton Triangles", aliases: [Q]}
-  Zach:   {active: [2013, null], current_team: "In the Nix of Time"}
-  Johnny: {active: [2013, null], current_team: "Hello Fascism"}
-  Ryan:   {active: [2015, null], current_team: "Duck Prescott"}
-  Max:    {active: [2019, null], current_team: "Top of the Food Achane"}
+  Jordan: {site_team_id: team-4, active: [2013, null], commissioner: true, current_team: "Ja'Jah Pachulia", me: true}
+  Mike:   {site_team_id: team-6, active: [2013, null], current_team: "Mike's Swell Team"}
+  Ben:    {site_team_id: team-10, active: [2013, null], current_team: "Who Dey White House"}
+  Russ:   {site_team_id: team-2, active: [2013, null], current_team: "STEIN DYNASTY", aliases: [Russell]}
+  Matt:   {site_team_id: team-7, active: [2013, null], current_team: "REESE MODE"}
+  Qasim:  {site_team_id: team-5, active: [2013, null], current_team: "Dayton Triangles", aliases: [Q]}
+  Zach:   {site_team_id: team-3, active: [2013, null], current_team: "In the Nix of Time"}
+  Johnny: {site_team_id: team-1, active: [2013, null], current_team: "Hello Fascism"}
+  Ryan:   {site_team_id: team-9, active: [2015, null], current_team: "Duck Prescott"}
+  Max:    {site_team_id: team-8, active: [2019, null], current_team: "Top of the Food Achane"}
   Winston: {active: [2013, 2018]}
   Eric:    {active: [2013, 2013]}
   Kevin:   {active: [2014, 2014]}
