@@ -25,6 +25,8 @@ jobs:
           python-version: "3.12"
       - name: League site snapshot
         env:
+          LEAGUE_EXPORT_URL: ${{ secrets.LEAGUE_EXPORT_URL }}
+          LEAGUE_EXPORT_TOKEN: ${{ secrets.LEAGUE_EXPORT_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
         run: python collectors/site_snapshot.py

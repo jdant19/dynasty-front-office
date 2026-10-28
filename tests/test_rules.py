@@ -7,6 +7,10 @@ from dfo.rules.contracts import (TradeSide, cut_dead_cap, franchise_tag_cost, ml
                                  rfa_starting_bid, salary_schedule, trade_salaries_legal)
 
 
+def test_tag_has_two_dollar_minimum():
+    assert franchise_tag_cost([1, 2, 2, 1, 1]) == 2 and franchise_tag_cost([31, 17, 15, 12, 63]) == 28
+
+
 def test_money_rounds_to_whole_dollars():
     assert money(27.6) == 28 and money(16.8) == 17 and money(97.4) == 97 and money(4.5) == 5
 
@@ -48,8 +52,6 @@ def test_tag_costs_match_league_sheet():
     rows = list(csv.DictReader(open(PROCESSED / "tag_benchmarks.csv")))
     checked = 0
     for r in rows:
-        if r["position"] in ("K", "DEF"):
-            continue   # open question: sheet shows a $2 K/DEF tag where the top-5 average is $1
         top5 = [float(x) for x in r["top5_salaries"].split()]
         if len(top5) == 5:
             assert franchise_tag_cost(top5) == int(r["tag_cost"]), r

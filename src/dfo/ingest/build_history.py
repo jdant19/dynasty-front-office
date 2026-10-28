@@ -290,7 +290,7 @@ def tag_benchmarks() -> list[dict]:
                         else:
                             avg, top5 = nums[0], []
                         rows.append(dict(season=season, position="DEF" if v == "D" else v,
-                                         sheet_value=round(avg, 2), tag_cost=int(math.floor(avg + 0.5)),
+                                         sheet_value=round(avg, 2), tag_cost=max(2, int(math.floor(avg + 0.5))),   # $2 minimum
                                          top5_salaries=" ".join(str(int(x)) for x in top5),
                                          source=f"{path.name}:{ws.title}"))
     return sorted(rows, key=lambda r: (r["season"], r["position"]))

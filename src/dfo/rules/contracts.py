@@ -51,7 +51,8 @@ def rfa_starting_bid(last_salary: int) -> int:
 def franchise_tag_cost(top5_salaries: list[float]) -> int:
     if len(top5_salaries) != 5:
         raise ValueError("franchise tag needs the five highest salaries at the position")
-    return money(sum(top5_salaries) / 5)
+    floor = _rules()["designations"]["franchise_tag"].get("minimum", 0)
+    return max(floor, money(sum(top5_salaries) / 5))
 
 
 def mle_eligible(prior_salary: int, on_rookie_draft_contract: bool) -> bool:

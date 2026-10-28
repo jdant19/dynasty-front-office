@@ -1,8 +1,63 @@
-# League site (salaryleaguehq.com, Supabase) tables the snapshot job exports, read-only.
-# To fill in once the table names are confirmed from the site's code or Supabase dashboard.
+# League site (salaryleaguehq.com, Lovable Cloud backend) tables the snapshot job exports, read-only.
+# Table list from Jordan, 2026-10-27 (57 tables). Only league data is exported. Tables holding
+# personal data, credentials, tokens or email logs are never exported (see `never` below).
 tables:
-  # - teams
-  # - players
-  # - contracts
-  # - draft_picks
-  # - transactions
+  - players
+  - team_lineups
+  - team_custom_names
+  - team_dead_money
+  - team_draft_picks
+  - contract_decision_submissions
+  - ft_price_table
+  - tag_periods
+  - player_tags
+  - team_tag_submissions
+  - rfa_pool
+  - rfa_auctions
+  - rfa_bids
+  - rfa_match_usage
+  - rfa_contract_staging
+  - rfa_tiebreak_rounds
+  - rfa_tiebreak_bids
+  - rookie_prospects
+  - rookie_draft_results
+  - trades
+  - trade_approvals
+  - traded_cap_space
+  - transactions
+  - league_settings
+  - rule_book_versions
+  - yahoo_team_map
+  - yahoo_player_map
+  - yahoo_matchups
+  - yahoo_standings
+  - yahoo_roster_snapshots
+  - yahoo_roster_diffs
+  - yahoo_player_stats
+  - sync_runs
+
+never:
+  # personal data, credentials and messaging; excluded on purpose
+  - profiles
+  - profiles_public
+  - user_roles
+  - invites
+  - yahoo_oauth_tokens
+  - yahoo_league_config
+  - cron_job_secrets
+  - email_send_log
+  - email_send_state
+  - email_unsubscribe_tokens
+  - suppressed_emails
+  - tag_period_email_log
+  - rfa_auction_email_log
+  - rfa_tiebreak_email_log
+  - watchlist_items        # another owner's private watchlist
+  - draft_boards           # owners' private draft boards
+  - trade_drafts           # owners' unsent trade drafts
+  - roster_scenarios       # owners' private what-ifs
+  - pending_sleeper_players
+  - sync_flags
+  - issues
+  - rule_proposals
+  - rule_proposal_votes
