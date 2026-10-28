@@ -1,0 +1,240 @@
+week,owner,slot,player,yahoo_points
+1,Jordan,QB,Justin Herbert,14.26
+1,Jordan,RB,Cam Skattebo,14.10
+1,Jordan,RB,Jahmyr Gibbs,31.10
+1,Jordan,WR,Ja'Marr Chase,2.20
+1,Jordan,WR,Emeka Egbuka,8.80
+1,Jordan,WR,Parker Washington,16.80
+1,Jordan,TE,Harold Fannin Jr.,3.10
+1,Jordan,FLEX,Bucky Irving,16.80
+1,Jordan,K,Evan McPherson,19.00
+1,Jordan,DEF,Eagles,3.00
+1,Jordan,BN,Zachariah Branch,0.00
+1,Jordan,BN,Chuba Hubbard,22.20
+1,Jordan,BN,Jaxson Dart,26.60
+1,Jordan,BN,George Kittle,2.20
+1,Jordan,BN,Quentin Johnston,2.70
+1,Jordan,BN,Michael Pittman Jr.,7.30
+1,Ben,QB,Kyler Murray,0.62
+1,Ben,RB,Kenneth Walker III,32.60
+1,Ben,RB,Jeremiyah Love,12.00
+1,Ben,WR,CeeDee Lamb,12.90
+1,Ben,WR,Rashid Shaheed,0.90
+1,Ben,WR,Deebo Samuel Sr.,15.00
+1,Ben,TE,Mark Andrews,6.90
+1,Ben,FLEX,Breece Hall,18.80
+1,Ben,K,Harrison Mevis,1.00
+1,Ben,DEF,Steelers,18.00
+1,Ben,BN,Jake Ferguson,1.60
+1,Ben,BN,Tre' Harris,3.50
+1,Ben,BN,Adonai Mitchell,7.50
+1,Ben,BN,Jerry Jeudy,3.60
+1,Ben,BN,MarShawn Lloyd,3.70
+1,Ben,BN,Patrick Mahomes,22.66
+1,Ben,BN,Rachaad White,3.70
+1,Ben,BN,Wan'Dale Robinson,6.30
+2,Jordan,QB,Justin Herbert,9.88
+2,Jordan,RB,Cam Skattebo,7.50
+2,Jordan,RB,Jahmyr Gibbs,20.30
+2,Jordan,WR,Ja'Marr Chase,23.00
+2,Jordan,WR,Emeka Egbuka,8.80
+2,Jordan,WR,Parker Washington,13.30
+2,Jordan,TE,George Kittle,16.00
+2,Jordan,FLEX,Bucky Irving,11.00
+2,Jordan,K,Eddy Pineiro,5.00
+2,Jordan,DEF,Eagles,3.00
+2,Jordan,BN,Harold Fannin Jr.,7.90
+2,Jordan,BN,Zachariah Branch,2.40
+2,Jordan,BN,Ollie Gordon II,0.70
+2,Jordan,BN,Chuba Hubbard,13.40
+2,Jordan,BN,Jonah Coleman,13.30
+2,Jordan,BN,Jaxson Dart,0.80
+2,Jordan,BN,Romeo Doubs,11.10
+2,Jordan,BN,Quentin Johnston,1.90
+2,Ryan,QB,Dak Prescott,29.76
+2,Ryan,RB,Omarion Hampton,16.50
+2,Ryan,RB,Travis Etienne Jr.,6.10
+2,Ryan,WR,Jaylen Waddle,17.80
+2,Ryan,WR,George Pickens,7.00
+2,Ryan,WR,DeVonta Smith,22.70
+2,Ryan,TE,Colston Loveland,0.80
+2,Ryan,FLEX,Derrick Henry,16.20
+2,Ryan,K,Brandon Aubrey,16.00
+2,Ryan,DEF,Steelers,8.00
+2,Ryan,BN,Rome Odunze,5.80
+2,Ryan,BN,Carnell Tate,4.20
+2,Ryan,BN,Xavier Worthy,11.00
+2,Ryan,BN,Isaac TeSlaa,3.60
+2,Ryan,BN,Malachi Fields,4.00
+2,Ryan,BN,Jayden Reed,0.90
+2,Ryan,BN,Jordan Addison,3.10
+2,Ryan,BN,Denzel Boston,18.00
+2,Ryan,BN,Tyler Shough,22.38
+3,Jordan,QB,Bryce Young,14.64
+3,Jordan,RB,Jahmyr Gibbs,37.90
+3,Jordan,RB,Chuba Hubbard,13.00
+3,Jordan,WR,Ja'Marr Chase,20.30
+3,Jordan,WR,Emeka Egbuka,8.70
+3,Jordan,WR,Parker Washington,11.50
+3,Jordan,TE,George Kittle,23.20
+3,Jordan,FLEX,Bucky Irving,6.80
+3,Jordan,K,Eddy Pineiro,8.00
+3,Jordan,DEF,Eagles,0.00
+3,Jordan,BN,Justin Herbert,13.74
+3,Jordan,BN,Cam Skattebo,11.50
+3,Jordan,BN,Harold Fannin Jr.,20.60
+3,Jordan,BN,Zachariah Branch,1.20
+3,Jordan,BN,Ollie Gordon II,13.00
+3,Jordan,BN,Romeo Doubs,6.40
+3,Jordan,BN,Quentin Johnston,5.50
+3,Jordan,BN,Michael Pittman Jr.,2.60
+3,Qasim,QB,Jordan Love,19.48
+3,Qasim,RB,Kyren Williams,18.80
+3,Qasim,RB,Tony Pollard,11.60
+3,Qasim,WR,Garrett Wilson,21.70
+3,Qasim,WR,Malik Nabers,5.10
+3,Qasim,WR,Justin Jefferson,4.20
+3,Qasim,TE,Dalton Kincaid,2.80
+3,Qasim,FLEX,Travis Kelce,12.90
+3,Qasim,K,Jake Bates,7.00
+3,Qasim,DEF,Chiefs,8.00
+3,Qasim,BN,DK Metcalf,10.60
+3,Qasim,BN,Cam Ward,10.44
+3,Qasim,BN,KC Concepcion,1.90
+3,Qasim,BN,Antonio Williams,2.50
+3,Qasim,BN,Tyjae Spears,0.50
+3,Qasim,BN,Kaleb Johnson,2.10
+3,Qasim,BN,Mike Washington Jr.,11.40
+4,Jordan,QB,Bryce Young,21.46
+4,Jordan,RB,Jahmyr Gibbs,15.70
+4,Jordan,RB,Chuba Hubbard,25.40
+4,Jordan,WR,Ja'Marr Chase,4.20
+4,Jordan,WR,Emeka Egbuka,2.30
+4,Jordan,WR,Parker Washington,1.50
+4,Jordan,TE,George Kittle,15.00
+4,Jordan,FLEX,Cam Skattebo,7.10
+4,Jordan,K,Evan McPherson,5.00
+4,Jordan,DEF,Vikings,8.00
+4,Jordan,BN,Bucky Irving,6.10
+4,Jordan,BN,Justin Herbert,11.56
+4,Jordan,BN,Harold Fannin Jr.,10.20
+4,Jordan,BN,Zachariah Branch,2.00
+4,Jordan,BN,Ollie Gordon II,17.00
+4,Jordan,BN,Romeo Doubs,20.80
+4,Jordan,BN,Jaylen Wright,0.70
+4,Jordan,BN,Emanuel Wilson,25.50
+4,Russ,QB,Joe Burrow,25.72
+4,Russ,RB,Bijan Robinson,27.20
+4,Russ,RB,D'Andre Swift,6.40
+4,Russ,WR,Matthew Golden,10.20
+4,Russ,WR,Puka Nacua,23.20
+4,Russ,WR,Tee Higgins,21.20
+4,Russ,TE,Trey McBride,6.60
+4,Russ,FLEX,Bhayshul Tuten,10.10
+4,Russ,K,Will Reichard,19.00
+4,Russ,DEF,Bengals,4.00
+4,Russ,BN,Jameson Williams,13.20
+4,Russ,BN,Jaylin Noel,10.40
+4,Russ,BN,Mike Evans,10.10
+4,Russ,BN,Josh Downs,3.10
+4,Russ,BN,Ted Hurst,3.50
+4,Russ,BN,Malik Washington,9.50
+4,Russ,BN,Dontayvion Wicks,3.30
+4,Russ,BN,George Holani,2.50
+5,Jordan,QB,Jacoby Brissett,25.78
+5,Jordan,RB,Jahmyr Gibbs,35.20
+5,Jordan,RB,Cam Skattebo,6.10
+5,Jordan,WR,Ja'Marr Chase,16.70
+5,Jordan,WR,Emeka Egbuka,14.20
+5,Jordan,WR,Parker Washington,27.40
+5,Jordan,TE,George Kittle,4.90
+5,Jordan,FLEX,Emanuel Wilson,12.20
+5,Jordan,K,Evan McPherson,7.00
+5,Jordan,DEF,Vikings,11.00
+5,Jordan,BN,Bucky Irving,30.50
+5,Jordan,BN,Justin Herbert,11.24
+5,Jordan,BN,Harold Fannin Jr.,0.90
+5,Jordan,BN,Zachariah Branch,2.50
+5,Jordan,BN,Ollie Gordon II,14.80
+5,Jordan,BN,Romeo Doubs,2.10
+5,Max,QB,Jayden Daniels,32.26
+5,Max,RB,Ashton Jeanty,9.20
+5,Max,RB,Chase Brown,5.50
+5,Max,WR,Chris Olave,6.60
+5,Max,WR,Nico Collins,8.10
+5,Max,WR,Brian Thomas Jr.,0.00
+5,Max,TE,Sam LaPorta,17.30
+5,Max,FLEX,Jaylen Warren,33.80
+5,Max,K,Ka'imi Fairbairn,17.00
+5,Max,DEF,Patriots,6.00
+5,Max,BN,Jalen Hurts,13.00
+5,Max,BN,Tre Tucker,5.50
+5,Max,BN,Kenyon Sadiq,-0.70
+5,Max,BN,Chris Godwin Jr.,5.50
+5,Max,BN,J.K. Dobbins,14.40
+6,Jordan,QB,Jordan Love,21.24
+6,Jordan,RB,Chuba Hubbard,18.60
+6,Jordan,RB,Emanuel Wilson,5.20
+6,Jordan,WR,Emeka Egbuka,14.30
+6,Jordan,WR,Parker Washington,8.40
+6,Jordan,WR,Romeo Doubs,10.70
+6,Jordan,TE,George Kittle,15.40
+6,Jordan,FLEX,Bucky Irving,5.90
+6,Jordan,K,Tyler Bass,17.00
+6,Jordan,DEF,Ravens,9.00
+6,Jordan,BN,Cam Skattebo,0.00
+6,Jordan,BN,Bryce Young,19.84
+6,Jordan,BN,Justin Herbert,9.76
+6,Jordan,BN,Harold Fannin Jr.,1.40
+6,Jordan,BN,Zachariah Branch,-0.10
+6,Johnny,QB,Kirk Cousins,19.52
+6,Johnny,RB,Javonte Williams,12.00
+6,Johnny,RB,Tyler Allgeier,5.30
+6,Johnny,WR,Zay Flowers,9.70
+6,Johnny,WR,Tetairoa McMillan,11.60
+6,Johnny,WR,Keenan Allen,12.20
+6,Johnny,TE,Tucker Kraft,6.20
+6,Johnny,FLEX,Christian McCaffrey,26.20
+6,Johnny,K,Jason Myers,8.00
+6,Johnny,DEF,Seahawks,3.00
+6,Johnny,BN,Ladd McConkey,2.20
+6,Johnny,BN,Stefon Diggs,13.40
+6,Johnny,BN,Marvin Harrison Jr.,4.90
+6,Johnny,BN,Emmett Johnson,3.40
+6,Johnny,BN,Jaguars,1.00
+6,Johnny,BN,Ja'Kobi Lane,6.00
+7,Jordan,QB,Jordan Love,17.96
+7,Jordan,RB,Chuba Hubbard,8.00
+7,Jordan,RB,Jahmyr Gibbs,14.80
+7,Jordan,WR,Ja'Marr Chase,14.70
+7,Jordan,WR,CeeDee Lamb,21.90
+7,Jordan,WR,Wan'Dale Robinson,2.70
+7,Jordan,TE,George Kittle,10.80
+7,Jordan,FLEX,Bucky Irving,23.50
+7,Jordan,K,Will Reichard,13.00
+7,Jordan,DEF,Jets,1.00
+7,Jordan,BN,Brandin Cooks,1.80
+7,Jordan,BN,Kendrick Bourne,2.40
+7,Jordan,BN,Bryce Young,7.42
+7,Jordan,BN,Harold Fannin Jr.,10.10
+7,Jordan,BN,Zachariah Branch,2.20
+7,Jordan,BN,Ollie Gordon II,16.80
+7,Jordan,BN,Patrick Mahomes,7.00
+7,Jordan,BN,Tyrone Tracy Jr.,8.20
+7,Jordan,BN,Darius Cooper,2.20
+7,Matt,QB,Brock Purdy,14.02
+7,Matt,RB,Jonathan Taylor,18.00
+7,Matt,RB,Braelon Allen,16.40
+7,Matt,WR,Luther Burden III,21.70
+7,Matt,WR,A.J. Brown,6.30
+7,Matt,WR,Jalen Coker,1.40
+7,Matt,TE,Dallas Goedert,7.30
+7,Matt,FLEX,Quinshon Judkins,22.90
+7,Matt,K,Chris Boswell,11.00
+7,Matt,DEF,Bears,4.00
+7,Matt,BN,Michael Wilson,8.60
+7,Matt,BN,T.J. Hockenson,11.50
+7,Matt,BN,Germie Bernard,4.20
+7,Matt,BN,Caleb Douglas,20.00
+7,Matt,BN,Mason Taylor,22.70
+7,Matt,BN,Rams,2.00

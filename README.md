@@ -9,7 +9,7 @@ Design: "Dynasty Front Office — System Design" (claude.ai doc). Build status f
 | Phase | Status |
 | --- | --- |
 | 1. Foundations (repo, site snapshot, first collector) | Done 2026-10-28: site snapshot every 4 hours, FantasyCalc daily |
-| 2. Rules engine and data layer | History tables and rules core built and tested; player ID map and scoring reconciliation next |
+| 2. Rules engine and data layer | Done 2026-10-28: rules core, history 2013-2026, one player ID map, league scoring 2013-2026 matching Yahoo on 239/239 player-weeks |
 | 3. Projections | Not started |
 | 4. Valuation, including picks | Not started |
 | 5. Simulator and dial | Not started |
@@ -31,10 +31,14 @@ tests/             checks against the constitution and league history
 .github/workflows/ scheduled collector jobs
 ```
 
-## Rebuild the history tables
+## Rebuild the data
 
 ```
 pip install -r requirements.txt
-PYTHONPATH=src python -m dfo.ingest.build_history
-PYTHONPATH=src python -m pytest -q
+PYTHONPATH=src python -m dfo.ingest.build_history     # league history tables
+PYTHONPATH=src python -m dfo.ingest.site              # current state from the latest site snapshot
+PYTHONPATH=src python -m dfo.scoring 2026             # league scoring from nflverse (any season)
+PYTHONPATH=src python -m dfo.ingest.player_ids        # one ID per player across sources
+PYTHONPATH=src python -m dfo.reconcile                # computed points vs Yahoo
+PYTHONPATH=src python -m pytest -q                    # or: python scripts/run_tests.py
 ```

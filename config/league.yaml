@@ -63,6 +63,9 @@ in_season:
   contract_years: 1
   designation_eligible: true             # Jordan: in-season adds can be RFA'd, tagged or extended
   offseason_conversion: {zero_dollar_contracts_become: 1}   # Jordan
+  zero_dollar_adds:                      # Jordan, 2026-10-27
+    faab_cost: 0                         # take nothing from remaining FAAB / cap space when signed
+    salary_for_everything_else: 1        # count as $1 for cap totals, trades, offseason, RFA start
 
 contracts:
   years: [1, 4]

@@ -1,0 +1,240 @@
+season,week,owner,slot,player,yahoo,computed,diff,status,source
+2026,1,Jordan,QB,Justin Herbert,14.26,14.26,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,RB,Cam Skattebo,14.1,14.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,RB,Jahmyr Gibbs,31.1,31.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,WR,Ja'Marr Chase,2.2,2.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,WR,Emeka Egbuka,8.8,8.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,WR,Parker Washington,16.8,16.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,TE,Harold Fannin Jr.,3.1,3.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,FLEX,Bucky Irving,16.8,16.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,K,Evan McPherson,19.0,19.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,DEF,Eagles,3.0,3.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,BN,Zachariah Branch,0.0,0.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,BN,Chuba Hubbard,22.2,22.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,BN,Jaxson Dart,26.6,26.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,BN,George Kittle,2.2,2.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,BN,Quentin Johnston,2.7,2.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Jordan,BN,Michael Pittman Jr.,7.3,7.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,QB,Kyler Murray,0.62,0.62,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,RB,Kenneth Walker III,32.6,32.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,RB,Jeremiyah Love,12.0,12.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,WR,CeeDee Lamb,12.9,12.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,WR,Rashid Shaheed,0.9,0.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,WR,Deebo Samuel Sr.,15.0,15.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,TE,Mark Andrews,6.9,6.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,FLEX,Breece Hall,18.8,18.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,K,Harrison Mevis,1.0,1.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,DEF,Steelers,18.0,18.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Jake Ferguson,1.6,1.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Tre' Harris,3.5,3.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Adonai Mitchell,7.5,7.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Jerry Jeudy,3.6,3.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,MarShawn Lloyd,3.7,3.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Patrick Mahomes,22.66,22.66,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Rachaad White,3.7,3.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,1,Ben,BN,Wan'Dale Robinson,6.3,6.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,QB,Justin Herbert,9.88,9.88,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,RB,Cam Skattebo,7.5,7.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,RB,Jahmyr Gibbs,20.3,20.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,WR,Ja'Marr Chase,23.0,23.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,WR,Emeka Egbuka,8.8,8.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,WR,Parker Washington,13.3,13.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,TE,George Kittle,16.0,16.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,FLEX,Bucky Irving,11.0,11.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,K,Eddy Pineiro,5.0,5.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,DEF,Eagles,3.0,3.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Harold Fannin Jr.,7.9,7.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Zachariah Branch,2.4,2.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Ollie Gordon II,0.7,0.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Chuba Hubbard,13.4,13.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Jonah Coleman,13.3,13.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Jaxson Dart,0.8,0.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Romeo Doubs,11.1,11.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Jordan,BN,Quentin Johnston,1.9,1.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,QB,Dak Prescott,29.76,29.76,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,RB,Omarion Hampton,16.5,16.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,RB,Travis Etienne Jr.,6.1,6.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,WR,Jaylen Waddle,17.8,17.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,WR,George Pickens,7.0,7.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,WR,DeVonta Smith,22.7,22.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,TE,Colston Loveland,0.8,0.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,FLEX,Derrick Henry,16.2,16.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,K,Brandon Aubrey,16.0,16.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,DEF,Steelers,8.0,8.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Rome Odunze,5.8,5.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Carnell Tate,4.2,4.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Xavier Worthy,11.0,11.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Isaac TeSlaa,3.6,3.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Malachi Fields,4.0,4.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Jayden Reed,0.9,0.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Jordan Addison,3.1,3.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Denzel Boston,18.0,18.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,2,Ryan,BN,Tyler Shough,22.38,22.38,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,QB,Bryce Young,14.64,14.64,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,RB,Jahmyr Gibbs,37.9,37.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,RB,Chuba Hubbard,13.0,13.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,WR,Ja'Marr Chase,20.3,20.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,WR,Emeka Egbuka,8.7,8.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,WR,Parker Washington,11.5,11.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,TE,George Kittle,23.2,23.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,FLEX,Bucky Irving,6.8,6.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,K,Eddy Pineiro,8.0,8.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,DEF,Eagles,0.0,0.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Justin Herbert,13.74,13.74,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Cam Skattebo,11.5,11.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Harold Fannin Jr.,20.6,20.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Zachariah Branch,1.2,1.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Ollie Gordon II,13.0,13.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Romeo Doubs,6.4,6.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Quentin Johnston,5.5,5.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Jordan,BN,Michael Pittman Jr.,2.6,2.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,QB,Jordan Love,19.48,19.48,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,RB,Kyren Williams,18.8,18.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,RB,Tony Pollard,11.6,11.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,WR,Garrett Wilson,21.7,21.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,WR,Malik Nabers,5.1,5.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,WR,Justin Jefferson,4.2,4.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,TE,Dalton Kincaid,2.8,2.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,FLEX,Travis Kelce,12.9,12.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,K,Jake Bates,7.0,7.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,DEF,Chiefs,8.0,8.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,DK Metcalf,10.6,10.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,Cam Ward,10.44,10.44,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,KC Concepcion,1.9,1.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,Antonio Williams,2.5,2.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,Tyjae Spears,0.5,0.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,Kaleb Johnson,2.1,2.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,3,Qasim,BN,Mike Washington Jr.,11.4,11.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,QB,Bryce Young,21.46,21.46,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,RB,Jahmyr Gibbs,15.7,15.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,RB,Chuba Hubbard,25.4,25.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,WR,Ja'Marr Chase,4.2,4.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,WR,Emeka Egbuka,2.3,2.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,WR,Parker Washington,1.5,1.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,TE,George Kittle,15.0,15.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,FLEX,Cam Skattebo,7.1,7.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,K,Evan McPherson,5.0,5.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,DEF,Vikings,8.0,8.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Bucky Irving,6.1,6.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Justin Herbert,11.56,11.56,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Harold Fannin Jr.,10.2,10.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Zachariah Branch,2.0,2.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Ollie Gordon II,17.0,17.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Romeo Doubs,20.8,20.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Jaylen Wright,0.7,0.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Jordan,BN,Emanuel Wilson,25.5,25.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,QB,Joe Burrow,25.72,25.72,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,RB,Bijan Robinson,27.2,27.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,RB,D'Andre Swift,6.4,6.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,WR,Matthew Golden,10.2,10.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,WR,Puka Nacua,23.2,23.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,WR,Tee Higgins,21.2,21.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,TE,Trey McBride,6.6,6.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,FLEX,Bhayshul Tuten,10.1,10.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,K,Will Reichard,19.0,19.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,DEF,Bengals,4.0,4.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Jameson Williams,13.2,13.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Jaylin Noel,10.4,10.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Mike Evans,10.1,10.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Josh Downs,3.1,3.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Ted Hurst,3.5,3.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Malik Washington,9.5,9.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,Dontayvion Wicks,3.3,3.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,4,Russ,BN,George Holani,2.5,2.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,QB,Jacoby Brissett,25.78,25.78,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,RB,Jahmyr Gibbs,35.2,35.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,RB,Cam Skattebo,6.1,6.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,WR,Ja'Marr Chase,16.7,16.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,WR,Emeka Egbuka,14.2,14.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,WR,Parker Washington,27.4,27.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,TE,George Kittle,4.9,4.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,FLEX,Emanuel Wilson,12.2,12.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,K,Evan McPherson,7.0,7.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,DEF,Vikings,11.0,11.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,BN,Bucky Irving,30.5,30.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,BN,Justin Herbert,11.24,11.24,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,BN,Harold Fannin Jr.,0.9,0.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,BN,Zachariah Branch,2.5,2.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,BN,Ollie Gordon II,14.8,14.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Jordan,BN,Romeo Doubs,2.1,2.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,QB,Jayden Daniels,32.26,32.26,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,RB,Ashton Jeanty,9.2,9.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,RB,Chase Brown,5.5,5.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,WR,Chris Olave,6.6,6.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,WR,Nico Collins,8.1,8.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,WR,Brian Thomas Jr.,0.0,0.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,TE,Sam LaPorta,17.3,17.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,FLEX,Jaylen Warren,33.8,33.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,K,Ka'imi Fairbairn,17.0,17.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,DEF,Patriots,6.0,6.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,BN,Jalen Hurts,13.0,13.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,BN,Tre Tucker,5.5,5.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,BN,Kenyon Sadiq,-0.7,-0.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,BN,Chris Godwin Jr.,5.5,5.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,5,Max,BN,J.K. Dobbins,14.4,14.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,QB,Jordan Love,21.24,21.24,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,RB,Chuba Hubbard,18.6,18.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,RB,Emanuel Wilson,5.2,5.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,WR,Emeka Egbuka,14.3,14.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,WR,Parker Washington,8.4,8.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,WR,Romeo Doubs,10.7,10.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,TE,George Kittle,15.4,15.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,FLEX,Bucky Irving,5.9,5.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,K,Tyler Bass,17.0,17.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,DEF,Ravens,9.0,9.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,BN,Cam Skattebo,0.0,,,did_not_play,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,BN,Bryce Young,19.84,19.84,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,BN,Justin Herbert,9.76,9.76,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,BN,Harold Fannin Jr.,1.4,1.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Jordan,BN,Zachariah Branch,-0.1,-0.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,QB,Kirk Cousins,19.52,19.52,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,RB,Javonte Williams,12.0,12.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,RB,Tyler Allgeier,5.3,5.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,WR,Zay Flowers,9.7,9.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,WR,Tetairoa McMillan,11.6,11.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,WR,Keenan Allen,12.2,12.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,TE,Tucker Kraft,6.2,6.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,FLEX,Christian McCaffrey,26.2,26.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,K,Jason Myers,8.0,8.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,DEF,Seahawks,3.0,3.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,BN,Ladd McConkey,2.2,2.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,BN,Stefon Diggs,13.4,13.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,BN,Marvin Harrison Jr.,4.9,4.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,BN,Emmett Johnson,3.4,3.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,BN,Jaguars,1.0,1.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,6,Johnny,BN,Ja'Kobi Lane,6.0,6.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,QB,Jordan Love,17.96,17.96,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,RB,Chuba Hubbard,8.0,8.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,RB,Jahmyr Gibbs,14.8,14.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,WR,Ja'Marr Chase,14.7,14.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,WR,CeeDee Lamb,21.9,21.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,WR,Wan'Dale Robinson,2.7,2.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,TE,George Kittle,10.8,10.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,FLEX,Bucky Irving,23.5,23.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,K,Will Reichard,13.0,13.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,DEF,Jets,1.0,1.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Brandin Cooks,1.8,1.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Kendrick Bourne,2.4,2.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Bryce Young,7.42,7.42,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Harold Fannin Jr.,10.1,10.1,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Zachariah Branch,2.2,2.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Ollie Gordon II,16.8,16.8,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Patrick Mahomes,7.0,7.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Tyrone Tracy Jr.,8.2,8.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Jordan,BN,Darius Cooper,2.2,2.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,QB,Brock Purdy,14.02,14.02,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,RB,Jonathan Taylor,18.0,18.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,RB,Braelon Allen,16.4,16.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,WR,Luther Burden III,21.7,21.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,WR,A.J. Brown,6.3,6.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,WR,Jalen Coker,1.4,1.4,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,TE,Dallas Goedert,7.3,7.3,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,FLEX,Quinshon Judkins,22.9,22.9,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,K,Chris Boswell,11.0,11.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,DEF,Bears,4.0,4.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,BN,Michael Wilson,8.6,8.6,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,BN,T.J. Hockenson,11.5,11.5,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,BN,Germie Bernard,4.2,4.2,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,BN,Caleb Douglas,20.0,20.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,BN,Mason Taylor,22.7,22.7,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
+2026,7,Matt,BN,Rams,2.0,2.0,0.0,match,yahoo_points_2026_w01-07_transcribed.csv
