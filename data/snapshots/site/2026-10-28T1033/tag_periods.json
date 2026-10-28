@@ -1,0 +1,18 @@
+{
+ "table": "tag_periods",
+ "as_of": "2026-10-28T10:33:57+00:00",
+ "rows": [
+  {
+   "id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "season_start_year": 2026,
+   "status": "closed",
+   "opened_at": "2026-06-28T04:17:08.541298+00:00",
+   "deadline_at": "2026-07-08T02:17:00+00:00",
+   "closed_at": "2026-07-16T21:15:20.813985+00:00",
+   "opened_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "notes": null,
+   "created_at": "2026-06-28T04:17:08.541298+00:00",
+   "updated_at": "2026-07-16T21:15:20.813985+00:00"
+  }
+ ]
+}
