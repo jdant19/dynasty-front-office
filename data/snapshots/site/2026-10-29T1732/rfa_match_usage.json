@@ -1,0 +1,13 @@
+{
+ "table": "rfa_match_usage",
+ "as_of": "2026-10-29T17:32:17+00:00",
+ "rows": [
+  {
+   "id": "4aa6e7d9-6908-494e-a70c-466c57559842",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-10",
+   "used_over_cap_match": true,
+   "used_at": "2026-08-07T20:07:23.520056+00:00"
+  }
+ ]
+}
