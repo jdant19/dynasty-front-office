@@ -1,0 +1,159 @@
+{
+ "table": "rfa_pool",
+ "as_of": "2026-10-29T15:13:17+00:00",
+ "rows": [
+  {
+   "id": "050c37fb-49b4-4849-b43c-5b8b9eccf0b0",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-5022",
+   "tagging_team_id": "team-6",
+   "min_bid": 2,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "17fe4bcf-6337-4399-8db5-745aa1cd0399",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-12499",
+   "tagging_team_id": "team-6",
+   "min_bid": 2,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "2aabfea0-5196-4550-8ce7-8eedc01fe876",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-8112",
+   "tagging_team_id": "team-3",
+   "min_bid": 9,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "36001a4e-950f-4d65-b9cf-0252ddb824ca",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-2133",
+   "tagging_team_id": "team-3",
+   "min_bid": 29,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "3af4e605-961a-42c1-be7d-a4a5861c0b26",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-8151",
+   "tagging_team_id": "team-10",
+   "min_bid": 9,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "642d5264-1442-44d8-bb1b-88ad7eae044a",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-8142",
+   "tagging_team_id": "team-8",
+   "min_bid": 5,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "a0ce2680-0ba3-4d68-a8b1-503945c8dc29",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-12506",
+   "tagging_team_id": "team-9",
+   "min_bid": 2,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "b3f91aef-45f1-464a-a79a-5e46e148b7bc",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-12508",
+   "tagging_team_id": "team-4",
+   "min_bid": 2,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "d0f1a351-c9ef-4279-892c-21132758f26c",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-4881",
+   "tagging_team_id": "team-7",
+   "min_bid": 19,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "d2cf92db-89b7-4c64-9df5-407431ce7f3a",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-7588",
+   "tagging_team_id": "team-7",
+   "min_bid": 17,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "d6a3596f-bf4a-498b-a012-9a125c9e12a3",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-5967",
+   "tagging_team_id": "team-4",
+   "min_bid": 2,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "daebdab0-4556-437f-b95a-ed9137a1b4db",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-5892",
+   "tagging_team_id": "team-8",
+   "min_bid": 21,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "def4ec58-33cb-4516-897f-ae57f21e7037",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-9484",
+   "tagging_team_id": "team-1",
+   "min_bid": 3,
+   "status": "pending",
+   "created_at": "2026-07-25T18:31:42.15164+00:00"
+  },
+  {
+   "id": "e2621309-52ef-4297-85d7-15d9fc248c32",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-8155",
+   "tagging_team_id": "team-10",
+   "min_bid": 9,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "e3a87e68-d898-4903-b789-9a67ecf52b87",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-2216",
+   "tagging_team_id": "team-5",
+   "min_bid": 2,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  },
+  {
+   "id": "f1062d9f-8440-490d-9cf2-5dfbd91a3fae",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-8137",
+   "tagging_team_id": "team-1",
+   "min_bid": 7,
+   "status": "pending",
+   "created_at": "2026-07-25T18:31:42.15164+00:00"
+  },
+  {
+   "id": "ff2652fb-ce52-487f-aca8-71fc1682fe1b",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "player_id": "sl-8146",
+   "tagging_team_id": "team-5",
+   "min_bid": 9,
+   "status": "pending",
+   "created_at": "2026-07-16T21:15:20.813985+00:00"
+  }
+ ]
+}

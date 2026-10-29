@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-10-29T05:45:56+00:00",
+ "as_of": "2026-10-29T15:13:17+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -763,11 +763,11 @@
    "sleeper_id": "13355",
    "name": "DJ Rogers",
    "position": "TE",
-   "nfl_team": "DAL",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Inactive",
    "created_at": "2026-04-16T03:03:34.656103+00:00",
-   "synced_at": "2026-09-02T07:00:06.371+00:00",
+   "synced_at": "2026-10-29T07:00:06.752+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -2849,11 +2849,11 @@
    "sleeper_id": "13580",
    "name": "Carsen Ryan",
    "position": "TE",
-   "nfl_team": "FA",
+   "nfl_team": "CLE",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-26T07:00:21.27589+00:00",
-   "synced_at": "2026-10-28T07:00:08.862+00:00",
+   "synced_at": "2026-10-29T07:00:06.752+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -2975,11 +2975,11 @@
    "sleeper_id": "13937",
    "name": "Jackson Acker",
    "position": "FB",
-   "nfl_team": "SEA",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-05-09T07:00:23.998719+00:00",
-   "synced_at": "2026-10-21T20:15:07.036+00:00",
+   "synced_at": "2026-10-29T07:00:06.752+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -5257,11 +5257,11 @@
    "sleeper_id": "13879",
    "name": "Jameson Geers",
    "position": "TE",
-   "nfl_team": "ARI",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Inactive",
    "created_at": "2026-04-29T07:00:21.204994+00:00",
-   "synced_at": "2026-08-16T07:15:07.88+00:00",
+   "synced_at": "2026-10-29T07:00:06.752+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
