@@ -1,0 +1,96 @@
+{
+ "table": "team_tag_submissions",
+ "as_of": "2026-10-29T05:45:56+00:00",
+ "rows": [
+  {
+   "id": "245dc7a6-074a-48c7-85cd-25ebb5332dd6",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-8",
+   "no_tags": false,
+   "submitted_at": "2026-07-03T19:23:31.541+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-03T19:23:31.737227+00:00",
+   "updated_at": "2026-07-03T19:23:31.737227+00:00"
+  },
+  {
+   "id": "50cda348-09cd-4748-93dc-c31a8fe7499d",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-10",
+   "no_tags": false,
+   "submitted_at": "2026-07-08T00:19:34.469+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-06T19:45:12.783874+00:00",
+   "updated_at": "2026-07-08T00:19:34.573819+00:00"
+  },
+  {
+   "id": "5ca1e9b1-615f-41d5-9ed3-162269c5d181",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-7",
+   "no_tags": false,
+   "submitted_at": "2026-07-07T03:24:00.88+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-07T03:18:30.106336+00:00",
+   "updated_at": "2026-07-07T03:24:00.961795+00:00"
+  },
+  {
+   "id": "8c271584-3f50-46f6-a61b-2280342f0d07",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-3",
+   "no_tags": false,
+   "submitted_at": "2026-07-02T01:03:07.847+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-02T01:03:07.25941+00:00",
+   "updated_at": "2026-07-02T01:03:07.25941+00:00"
+  },
+  {
+   "id": "a2a577be-c837-464e-8eb8-bca7e638603b",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-9",
+   "no_tags": false,
+   "submitted_at": "2026-07-03T18:48:57.211+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-03T18:42:13.191367+00:00",
+   "updated_at": "2026-07-03T18:48:57.544992+00:00"
+  },
+  {
+   "id": "be05b369-f472-4c5a-91b6-b9030e737e97",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-5",
+   "no_tags": false,
+   "submitted_at": "2026-06-28T10:46:46.277+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-06-28T10:46:46.46586+00:00",
+   "updated_at": "2026-06-28T10:46:46.46586+00:00"
+  },
+  {
+   "id": "befa63b0-d787-4dd9-8048-190b2d500d88",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-6",
+   "no_tags": false,
+   "submitted_at": "2026-06-29T16:14:28.839+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-06-29T16:14:29.104781+00:00",
+   "updated_at": "2026-06-29T16:14:29.104781+00:00"
+  },
+  {
+   "id": "dd3377b7-907c-4473-886b-cf8b46821500",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-2",
+   "no_tags": true,
+   "submitted_at": "2026-07-03T00:51:17.602+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-03T00:51:17.837239+00:00",
+   "updated_at": "2026-07-03T00:51:17.837239+00:00"
+  },
+  {
+   "id": "ec20d1c0-d546-48b4-92d4-e6b3e69f3fcb",
+   "period_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
+   "team_id": "team-4",
+   "no_tags": false,
+   "submitted_at": "2026-07-02T18:58:08.815+00:00",
+   "last_reminder_sent_at": null,
+   "created_at": "2026-07-02T18:58:09.036444+00:00",
+   "updated_at": "2026-07-02T18:58:09.036444+00:00"
+  }
+ ]
+}
