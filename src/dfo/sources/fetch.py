@@ -51,7 +51,9 @@ def dynastyprocess() -> Path:
         stamp.read_text().strip())).total_seconds() < 12 * 3600
     if not fresh:
         if (d / ".git").exists():
-            subprocess.run(["git", "-C", str(d), "pull", "-q", "--depth", "1"], check=True)
+            # a shallow clone cannot merge new upstream commits; take the latest snapshot as-is
+            subprocess.run(["git", "-C", str(d), "fetch", "-q", "--depth", "1", "origin"], check=True)
+            subprocess.run(["git", "-C", str(d), "reset", "-q", "--hard", "FETCH_HEAD"], check=True)
         else:
             d.parent.mkdir(parents=True, exist_ok=True)
             subprocess.run(["git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse",

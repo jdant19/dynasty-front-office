@@ -126,6 +126,11 @@ rookie_draft:
   order: reverse_regular_season_standings   # Jordan
   snake: false
 
+offseason_calendar:                      # Jordan, 2026-10-29; usual timing (exact dates agreed each year)
+  designations_and_rfa: june_july        # 2026 ran late: tags Jun 28-Jul 16, RFA bids Aug 18-20 (site)
+  rookie_draft: june_july
+  auction: mid_to_late_august
+
 offseason_auction:
   format: live_nomination_auction
   nomination_order: random

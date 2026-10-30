@@ -1,0 +1,4 @@
+predictor,buys,mae,rank_corr
+league price,258,20.3,0.46
+engine,258,21.9,0.459
+50/50,258,20.9,0.473

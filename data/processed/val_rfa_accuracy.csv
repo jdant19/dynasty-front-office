@@ -1,0 +1,3 @@
+predictor,players,mae,rank_corr
+RFA price,84,28.3,0.649
+engine,84,25.8,0.565
