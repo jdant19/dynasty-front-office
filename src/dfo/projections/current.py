@@ -28,7 +28,15 @@ SEASON = 2026
 ROS_WEIGHTS = {"fp_pts": 0.5, "points_std": 0.25, "xfp_std": 0.25}
 
 
-def next_week() -> int:
+def next_week(today: dt.date | None = None) -> int:
+    """The first regular-season week with games still to be played (a week whose Thursday game is
+    already scored is still the current week until its last game)."""
+    today = today or dt.datetime.now(dt.timezone.utc).date()
+    imp = implied_totals([SEASON])
+    last = pd.to_datetime(imp.groupby("week").gameday.max()).dt.date
+    upcoming = last[last >= today]
+    if len(upcoming):
+        return int(upcoming.index.min())
     p = pd.read_csv(PROCESSED / f"points_{SEASON}.csv")
     return int(p[p.season_type == "REG"].week.max()) + 1
 
@@ -85,7 +93,8 @@ def main() -> None:
                              np.where(wk.fp_pts.notna(), 0.5 * wk.fp_pts + 0.5 * fallback.fillna(wk.fp_pts), fallback))
     wk["ros_ppg"] = wk.ros_ppg.fillna(wk.points_std).fillna(0)
     imp = implied_totals([SEASON])
-    games_left = imp[imp.week >= week].groupby("team").size()
+    today = dt.datetime.now(dt.timezone.utc).date()
+    games_left = imp[(imp.week >= week) & (pd.to_datetime(imp.gameday).dt.date >= today)].groupby("team").size()
     avail = availability(df, min(week, 17))
     wk["games_left"] = wk.team.map(games_left).fillna(0)
     wk["availability"] = wk.pos.map(avail).fillna(0.85)
