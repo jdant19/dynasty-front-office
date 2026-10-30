@@ -2459,3 +2459,202 @@ season,pick,player,nfl_team,pos,salary,team_name,owner,kind,source
 2025,198,Amon-Ra St. Brown,Det,WR,79,What can Brown do for you?,Jordan,kept,yahoo_draft_results_2025.pdf
 2025,199,Jalen Hurts,Phi,QB,15,What can Brown do for you?,Jordan,kept,yahoo_draft_results_2025.pdf
 2025,200,Nico Collins,Hou,WR,87,What can Brown do for you?,Jordan,kept,yahoo_draft_results_2025.pdf
+2026,1,Christian McCaffrey,SF,RB,68,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,2,James Cook III,Buf,RB,79,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,3,Justin Jefferson,Min,WR,92,Dayton Triangles,Qasim,auction,yahoo_draft_results_2026.pdf
+2026,4,Amon-Ra St. Brown,Det,WR,100,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,5,Saquon Barkley,Phi,RB,71,Mike's Swell Team,Mike,auction,yahoo_draft_results_2026.pdf
+2026,6,Rhamondre Stevenson,NE,RB,7,In the Nix of Time,Zach,auction,yahoo_draft_results_2026.pdf
+2026,7,Ka'imi Fairbairn,Hou,K,2,Top of the Food Achane,Max,auction,yahoo_draft_results_2026.pdf
+2026,8,Derrick Henry,Bal,RB,33,Duck Prescott,Ryan,auction,yahoo_draft_results_2026.pdf
+2026,9,DeVonta Smith,Phi,WR,51,Duck Prescott,Ryan,auction,yahoo_draft_results_2026.pdf
+2026,10,Los Angeles,LAR,DEF,2,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,11,Trevor Lawrence,Jax,QB,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,12,Matthew Stafford,LAR,QB,3,In the Nix of Time,Zach,auction,yahoo_draft_results_2026.pdf
+2026,13,Tee Higgins,Cin,WR,38,STEIN DYNASTY,Russ,auction,yahoo_draft_results_2026.pdf
+2026,14,D'Andre Swift,Chi,RB,26,STEIN DYNASTY,Russ,auction,yahoo_draft_results_2026.pdf
+2026,15,Cameron Dicker,LAC,K,1,Mike's Swell Team,Mike,auction,yahoo_draft_results_2026.pdf
+2026,16,Terry McLaurin,Was,WR,25,STEIN DYNASTY,Russ,auction,yahoo_draft_results_2026.pdf
+2026,17,DJ Moore,Buf,WR,22,Mike's Swell Team,Mike,auction,yahoo_draft_results_2026.pdf
+2026,18,Jameson Williams,Det,WR,27,STEIN DYNASTY,Russ,auction,yahoo_draft_results_2026.pdf
+2026,19,Jason Myers,Sea,K,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,20,Christian Watson,GB,WR,27,In the Nix of Time,Zach,auction,yahoo_draft_results_2026.pdf
+2026,21,Parker Washington,Jax,WR,26,Ja'Jah Pachulia,Jordan,auction,yahoo_draft_results_2026.pdf
+2026,22,Jaylen Warren,Pit,RB,11,Top of the Food Achane,Max,auction,yahoo_draft_results_2026.pdf
+2026,23,DK Metcalf,Pit,WR,3,Dayton Triangles,Qasim,auction,yahoo_draft_results_2026.pdf
+2026,24,Cam Little,Jax,K,1,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,25,Philadelphia,Phi,DEF,1,Ja'Jah Pachulia,Jordan,auction,yahoo_draft_results_2026.pdf
+2026,26,Seattle,Sea,DEF,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,27,Tyler Loop,Bal,K,2,In the Nix of Time,Zach,auction,yahoo_draft_results_2026.pdf
+2026,28,Rico Dowdle,Pit,RB,4,Dayton Triangles,Qasim,auction,yahoo_draft_results_2026.pdf
+2026,29,J.K. Dobbins,Den,RB,2,Top of the Food Achane,Max,auction,yahoo_draft_results_2026.pdf
+2026,30,New England,NE,DEF,1,Top of the Food Achane,Max,auction,yahoo_draft_results_2026.pdf
+2026,31,Kyle Pitts Sr.,Atl,TE,1,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,32,Evan McPherson,Cin,K,1,Ja'Jah Pachulia,Jordan,auction,yahoo_draft_results_2026.pdf
+2026,33,Jordan Mason,Min,RB,2,Mike's Swell Team,Mike,auction,yahoo_draft_results_2026.pdf
+2026,34,Josh Jacobs,GB,RB,3,Dayton Triangles,Qasim,auction,yahoo_draft_results_2026.pdf
+2026,35,Brock Purdy,SF,QB,1,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,36,Romeo Doubs,NE,WR,1,Ja'Jah Pachulia,Jordan,auction,yahoo_draft_results_2026.pdf
+2026,37,Aaron Jones Sr.,Min,RB,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,38,Courtland Sutton,Den,WR,1,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,39,George Kittle,SF,TE,1,Ja'Jah Pachulia,Jordan,auction,yahoo_draft_results_2026.pdf
+2026,40,Kenny Gainwell,TB,RB,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,41,Michael Wilson,Ari,WR,1,REESE MODE,Matt,auction,yahoo_draft_results_2026.pdf
+2026,42,Quentin Johnston,LAC,WR,1,Ja'Jah Pachulia,Jordan,auction,yahoo_draft_results_2026.pdf
+2026,43,Jared Goff,Det,QB,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,44,Stefon Diggs,Was,WR,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,45,Minnesota,Min,DEF,1,Hello Fascism,Johnny,auction,yahoo_draft_results_2026.pdf
+2026,46,Squirrel White,Chi,WR,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,47,Xavier Guillory,Bal,WR,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,48,Gregory Desrosiers,NYG,RB,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,49,Grant Finley,NYG,RB,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,50,Roydell Williams,Det,RB,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,51,Ke'Shawn Williams,Cin,WR,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,52,EJ Smith,KC,RB,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,53,Anthony Smith,Dal,WR,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,54,Rashid Shaheed,Sea,WR,3,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,55,MarShawn Lloyd,GB,RB,5,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,56,Breece Hall,NYJ,RB,65,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,57,Eli Stowers,Phi,TE,3,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,58,Jerry Jeudy,Cle,WR,32,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,59,Jeremiyah Love,Ari,RB,5,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,60,CeeDee Lamb,Dal,WR,98,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,61,Fernando Mendoza,LV,QB,1,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,62,Tre' Harris,LAC,WR,4,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,63,Jake Ferguson,Dal,TE,2,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,64,Kenneth Walker III,KC,RB,67,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,65,Adonai Mitchell,NYJ,WR,5,Who Dey White House,Ben,kept,yahoo_draft_results_2026.pdf
+2026,66,De'Von Achane,Mia,RB,8,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,67,Brian Thomas Jr.,Jax,WR,7,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,68,Kenyon Sadiq,NYJ,TE,5,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,69,Bhayshul Tuten,Jax,RB,2,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,70,Chris Olave,NO,WR,15,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,71,Jordyn Tyson,NO,WR,5,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,72,Puka Nacua,LAR,WR,45,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,73,Jayden Daniels,Was,QB,5,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,74,Ashton Jeanty,LV,RB,6,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,75,Omar Cooper Jr.,NYJ,WR,5,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,76,Elijah Sarratt,Bal,WR,1,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,77,Sam LaPorta,Det,TE,6,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,78,Dylan Sampson,Cle,RB,4,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,79,Chris Godwin Jr.,TB,WR,4,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,80,Nico Collins,Hou,WR,91,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,81,Jalen Hurts,Phi,QB,30,Top of the Food Achane,Max,kept,yahoo_draft_results_2026.pdf
+2026,82,Alec Pierce,Ind,WR,15,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,83,Mike Evans,SF,WR,23,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,84,Chase Brown,Cin,RB,4,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,85,Troy Franklin,Den,WR,5,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,86,Malik Washington,Mia,WR,3,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,87,Jack Bech,LV,WR,4,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,88,Bijan Robinson,Atl,RB,8,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,89,Skyler Bell,Buf,WR,1,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,90,Christian Kirk,SF,WR,10,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,91,Ted Hurst III,TB,WR,3,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,92,Chris Bell,Mia,WR,5,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,93,Josh Downs,Ind,WR,4,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,94,Trey McBride,Ari,TE,42,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,95,Jaylin Noel,Hou,WR,2,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,96,Matthew Golden,GB,WR,6,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,97,Joe Burrow,Cin,QB,13,STEIN DYNASTY,Russ,kept,yahoo_draft_results_2026.pdf
+2026,98,Lamar Jackson,Bal,QB,28,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,99,Quinshon Judkins,Cle,RB,6,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,100,Jonathan Taylor,Ind,RB,90,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,101,Luther Burden III,Chi,WR,4,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,102,Caleb Douglas,Mia,WR,1,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,103,Jadarian Price,Sea,RB,5,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,104,Jacory Croskey-Merritt,Was,RB,2,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,105,Braelon Allen,NYJ,RB,3,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,106,Germie Bernard,Pit,WR,3,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,107,Mason Taylor,NYJ,TE,2,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,108,Rashee Rice,KC,WR,6,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,109,A.J. Brown,NE,WR,48,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,110,Keon Coleman,Buf,WR,7,REESE MODE,Matt,kept,yahoo_draft_results_2026.pdf
+2026,111,TreVeyon Henderson,NE,RB,6,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,112,Ja'Tavion Sanders,Car,TE,3,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,113,De'Zhaun Stribling,SF,WR,3,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,114,Jauan Jennings,Min,WR,20,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,115,Kaytron Allen,Mia,RB,1,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,116,Makai Lemon,Phi,WR,5,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,117,Khalil Shakir,Buf,WR,5,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,118,Jaydon Blue,Phi,RB,2,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,119,Josh Allen,Buf,QB,72,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,120,Bo Nix,Den,QB,6,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,121,Houston,Hou,DEF,2,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,122,Dallas Goedert,Phi,TE,5,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,123,Jayden Higgins,Hou,WR,4,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,124,Elic Ayomanor,Ten,WR,2,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,125,Tank Dell,Hou,WR,45,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,126,Drake Maye,NE,QB,2,Mike's Swell Team,Mike,kept,yahoo_draft_results_2026.pdf
+2026,127,Davante Adams,LAR,WR,39,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,128,Denver,Den,DEF,2,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,129,Blake Corum,LAR,RB,5,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,130,David Montgomery,Hou,RB,39,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,131,Kaelon Black,SF,RB,1,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,132,Cyrus Allen,KC,WR,1,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,133,Alvin Kamara,NO,RB,33,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,134,Nicholas Singleton,Ten,RB,3,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,135,Brock Bowers,LV,TE,7,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,136,Kyle Monangai,Chi,RB,2,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,137,Pat Bryant,Den,WR,2,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,138,Drake London,Atl,WR,88,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,139,Elijah Arroyo,Sea,TE,4,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,140,RJ Harvey,Den,RB,6,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,141,Jaxon Smith-Njigba,Sea,WR,8,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,142,C.J. Stroud,Hou,QB,4,In the Nix of Time,Zach,kept,yahoo_draft_results_2026.pdf
+2026,143,Marvin Harrison Jr.,Hou,WR,7,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,144,Javonte Williams,Dal,RB,48,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,145,Emmett Johnson,KC,RB,5,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,146,Zay Flowers,Bal,WR,8,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,147,Oscar Delp,NO,TE,1,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,148,Tetairoa McMillan,Car,WR,6,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,149,Ja'Kobi Lane,Bal,WR,3,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,150,Tyler Warren,Ind,TE,4,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,151,Tucker Kraft,GB,TE,16,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,152,Ladd McConkey,LAC,WR,7,Hello Fascism,Johnny,kept,yahoo_draft_results_2026.pdf
+2026,153,Cam Ward,Ten,QB,4,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,154,Malik Nabers,NYG,WR,7,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,155,Mike Washington Jr.,LV,RB,1,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,156,Jonathon Brooks,Car,RB,7,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,157,Antonio Williams,Was,WR,3,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,158,Dalton Kincaid,Buf,TE,8,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,159,KC Concepcion Jr.,Cle,WR,5,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,160,Garrett Wilson,NYJ,WR,51,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,161,Kaleb Johnson,GB,RB,6,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,162,Trey Benson,Ari,RB,7,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,163,Caleb Williams,Chi,QB,5,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,164,Tyjae Spears,Ten,RB,6,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,165,Travis Kelce,KC,TE,4,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,166,Kyren Williams,LAR,RB,45,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,167,Zach Charbonnet,Sea,RB,8,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,168,Tony Pollard,Ten,RB,15,Dayton Triangles,Qasim,kept,yahoo_draft_results_2026.pdf
+2026,169,George Pickens,Dal,WR,71,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,170,Michael Penix Jr.,Atl,QB,3,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,171,Jaylen Waddle,Den,WR,29,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,172,Travis Etienne Jr.,NO,RB,20,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,173,Denzel Boston,Cle,WR,3,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,174,Jordan Addison,Min,WR,8,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,175,Dak Prescott,Dal,QB,2,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,177,Colston Loveland,Chi,TE,4,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,178,Jayden Reed,GB,WR,4,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,179,Malachi Fields,NYG,WR,1,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,180,Carnell Tate,Ten,WR,5,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,181,Brandon Aubrey,Dal,K,2,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,182,Xavier Worthy,KC,WR,7,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,183,T.J. Hockenson,Min,TE,3,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,184,Omarion Hampton,LAC,RB,6,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,185,Isaac TeSlaa,Det,WR,2,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,186,Rome Odunze,Chi,WR,7,Duck Prescott,Ryan,kept,yahoo_draft_results_2026.pdf
+2026,187,Jaxson Dart,NYG,QB,11,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,188,Jonah Coleman,Den,RB,3,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,189,Chuba Hubbard,Car,RB,34,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,190,Brandon Aiyuk,SF,WR,44,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,191,Ollie Gordon II,Mia,RB,2,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,192,Zachariah Branch,Atl,WR,3,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,193,Dont'e Thornton Jr.,LV,WR,2,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,194,Bucky Irving,TB,RB,3,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,195,Harold Fannin Jr.,Cle,TE,21,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,196,Jahmyr Gibbs,Det,RB,8,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,197,Cam Skattebo,NYG,RB,4,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,198,Emeka Egbuka,TB,WR,6,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,199,Ja'Marr Chase,Cin,WR,97,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf
+2026,200,Justin Herbert,LAC,QB,28,Ja'Jah Pachulia,Jordan,kept,yahoo_draft_results_2026.pdf

@@ -1,12 +1,14 @@
 # Valuation (Phase 4) — method and backtest report
 
-As of 2026-10-30. Rebuild everything with `PYTHONPATH=src python -m dfo.valuation.build` (about 90
+As of 2026-10-30 (2026 auction included). Rebuild everything with `PYTHONPATH=src python -m dfo.valuation.build` (about 90
 seconds). Every backtest scores a season with models fit without that season.
 
 ## How a dollar value is built
 
 1. **Expected points for a season.** This season: the calibrated rest-of-season rate (Phase 3).
-   Next season: the Phase 3 projection. 2028-2029: next season's points per game carried forward by
+   Next season: the Phase 3 projection, corrected for its measured age bias (it ran about 1 point
+   per game high for players 22 and under and up to 1 low for productive players past 30;
+   `params_age_bias.csv`). 2028-2029: next season's points per game carried forward by
    the position's aging curve, times the projected games (`params_aging.csv`).
 2. **Gap calibration.** Projections spread players too far apart, so each is pulled toward its
    position's startable mean by the measured factor (`params_gap_shrink.csv`): rest of season RB
@@ -21,36 +23,49 @@ seconds). Every backtest scores a season with models fit without that season.
 
 | Position | First non-starter (season pts) | Market level shift | Market replacement |
 | --- | --- | --- | --- |
-| QB | 243 | +100 | 343 (about the 4th QB) |
-| RB | 132 | +25 | 157 |
-| WR | 134 | +30 | 164 |
-| TE | 113 | +40 | 153 |
+| QB | 243 | +105 | 348 (about the 4th QB) |
+| RB | 132 | +30 | 162 |
+| WR | 134 | +25 | 159 |
+| TE | 113 | +45 | 158 |
 
-At that level the league pays **$1.12 per expected point** for the coming season (in-season level:
-$0.66), and one price fits stars and mid-tier players alike: average pricing error $7.4, against
-$10.4 with the first-non-starter level, where mid-tier players cost $0.31 a point and stars $0.70.
+Fit to the 2020-2026 auctions (292 buys). At that level the league pays **$1.14 per expected point**
+for the coming season (in-season level: $0.66), and one price fits stars and mid-tier players alike:
+average pricing error $7.5, against about $10.4 with the first-non-starter level, where mid-tier
+players cost $0.31 a point and stars $0.70.
 
-## The four prices (`prices.csv`, `ours_jordan.csv`)
+## Two values, used for different things (`prices.csv`, `ours_jordan.csv`)
 
-- **Season $**: rest of this season. Current salary is not subtracted (owed either way; in-season cap buys almost nothing).
-- **Lifetime $**: Season $ plus each later contract season through 2029 (value minus salary, x0.88 a
-  year), keeping or cutting each offseason, whichever is better (dead cap per the constitution), plus
-  the best designation when the contract ends: tag at the site's tag price, mid-level extension
-  ($15/$30/$45), or RFA at the going RFA price.
-- **Market $**: auction (what next season would fetch at the auction) and trade (FantasyCalc's
-  ordering, 10-team 1QB half PPR, put on our dollar scale, minus the cost of holding him through 2029:
-  his salaries, then the auction price once his contract ends).
-- **Our $**: Jordan's lineup gain this season (lineup re-picked each remaining week with byes; a
-  waiver pickup always available at each position; the cheapest current player dropped to make room),
-  plus Lifetime $ beyond this season. Season weight is 1.0 until the Phase 5 dial exists.
+Every player carries two values that are never added together for a decision (P14):
+
+- **Season $**: what he adds this season. For a team pushing to win now, this is the one that counts.
+  Current salary is not subtracted (owed either way; in-season cap buys almost nothing).
+- **Future $**: what his contract is worth from 2027 through 2029: each season's value minus that
+  season's salary (x0.88 a year), keeping or cutting each offseason, whichever is better (dead cap per
+  the constitution), plus the best designation when it ends (tag at the site's price, mid-level
+  extension $15/$30/$45, or RFA at the going RFA price). For a team building, this is the one that counts.
+  A season's value is what the same production would cost at that August's auction, so a cheap
+  salary is surplus only to the extent his production would cost more than that salary to replace.
+
+How much each counts for Jordan is the dial's job (Phase 5), computed from payout odds; until then the
+two are shown side by side. Lifetime $ (their sum) is kept only as a reference.
+
+Also per player:
+- **Market $**: what his next season would fetch at this league's auction.
+- **FC reference**: FantasyCalc's order within his position on our dollar scale, minus the cost of
+  holding him. An outside view: not this league's price, and no odds that anyone here would pay it
+  (owner models, Phase 6). Kittle is the example: FantasyCalc rates him like a mid QB, but this
+  league bought him for $1 in August 2026.
+- **Our $**: this season, Jordan's lineup gain (lineup re-picked each remaining week with byes; a
+  waiver pickup always available at each position; the cheapest current player dropped to make
+  room); later seasons, his Future $. Shown as two columns, never summed.
 
 ## Backtest 1: auctions 2020-2025 (258 skill-position buys)
 
 | Predictor of what the coming season returned | Average miss | Ranking |
 | --- | --- | --- |
-| League price | $20.3 | 0.460 |
-| Engine | $21.9 | 0.459 |
-| 50/50 | $20.9 | 0.473 |
+| League price | $20.3 | 0.463 |
+| Engine | $21.8 | 0.457 |
+| 50/50 | $20.8 | 0.474 |
 
 **Owners already price the coming season about as well as the engine.** No edge for the coming
 season by itself; combining the two orders players slightly better than either.
@@ -68,7 +83,7 @@ at $1-2), so only top QBs carry value. "Later contract years are free" was the s
 
 ## Backtest 2: RFA bids 2020-2026 (102 players with rankings as of July 1)
 
-- RFAs cost **35% more per point** than the auction: $1.51 vs $1.12 per point of coming-season value.
+- RFAs cost **31% more per point** than the auction: $1.50 vs $1.14 per point of coming-season value.
   RBs go at about auction rates; WRs, TEs and QBs well above (buyers pay for multi-year control).
 - RFA prices rank what players returned better than the engine (0.65 vs 0.57): bidders know
   something the rankings don't, or price future years the coming-season value leaves out.
@@ -90,11 +105,26 @@ over the market level minus rookie salary, 0.88 a year):
 | 2.08-2.10 | 27 | 63% | 44% | 19% | $30 |
 | 3rd round | 90 | 78% | 36% | 3% | $10 |
 
-The smoothed curve has a cliff after the first two picks (1.01 $183, 1.02 $141, 1.03-1.09 $54).
+The averages include the busts as $0. The spread behind them (`val_picks_distribution.csv`):
 
-**Use or sell, today's prices** (2027 picks, one year out; FantasyCalc on our dollar scale vs use
-value with its 90% band): mid 1st sell ($79 vs $35, band $32-65) and late 3rd sell ($11 vs $1);
-everything else is a close call inside the band.
+| Slots | Average | Chance of $0 | 25th pct | Median | 75th pct | 90th pct |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1.01-1.03 | $119 | 30% | $0 | $76 | $199 | $332 |
+| 1.04-1.07 | $51 | 42% | $0 | $25 | $72 | $148 |
+| 1.08-1.10 | $55 | 74% | $0 | $0 | $19 | $235 |
+| 2nd round | $15-31 | 48-78% | $0 | $0-4 | $0-33 | $46-79 |
+| 3rd round | $10 | 79% | $0 | $0 | $0 | $50 |
+
+A pick is lumpy: an early 1st is a 30% chance of nothing and a 1-in-4 chance of $200+. An
+established player with the same average comes with a much narrower spread. Which matters more
+depends on the team's position, and the simulator (Phase 5) prices that by playing out the real
+spread (bust, starter, star) in the payout odds instead of using the average. The smoothed curve has
+a cliff after the first two picks.
+
+**Against the outside reference** (2027 picks, one year out; FantasyCalc on our dollar scale vs use
+value with its 90% band): a buyer paying FantasyCalc's price would overpay for a mid 1st ($70 vs
+$36) and a late 3rd; everything else is inside the band. That is a ceiling on what to ask, not a
+price anyone in this league has paid.
 
 **Past pick trades in this league** (20 trades that could be scored: two teams, picks and players,
 three later seasons observed; conditional picks and swaps left out):
@@ -113,13 +143,17 @@ for their season. Phase 5 can price that.
 
 - The 2026 auction is not in yet (Jordan will upload it); the fit uses 2020-2025.
 - Rankings before Aug 2020 are not available, so auctions and RFAs before 2020 are not scored.
-- The trade-market price leans on FantasyCalc alone; KTC and DynastyProcess values are not wired in.
+- The only outside trade reference is FantasyCalc; KTC and DynastyProcess values are not wired in,
+  and none of them says whether a sale is possible (owner models, Phase 6).
+- Old productive players are the weakest case for the future projection (few comparable players).
+  Kittle's 2027 is projected at about 8 points per game after the age correction; at 10-11 his 2027
+  would be worth about $15 at auction prices, and at his current 12.5 about $34, against a $2 salary.
 - Our $ uses expected points; injury risk beyond position availability, and the dial, come in Phase 5.
 - Designation slots are limited (2 RFA, 1 tag, 1 extension per team); rights are valued one player
   at a time, so a team with several tag-worthy players is overstated until the simulator allocates them.
 
 ## Files
 
-Parameters: `params_market.csv`, `params_gap_shrink.csv`, `params_aging.csv`. Backtests:
+Parameters: `params_market.csv`, `params_gap_shrink.csv`, `params_aging.csv`, `params_age_bias.csv`. Backtests:
 `val_auction_*`, `val_rfa_*`, `val_picks_*`. Live: `prices.csv`, `ours_jordan.csv`.
 Tests: `tests/test_valuation.py`.

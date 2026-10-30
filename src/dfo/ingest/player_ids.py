@@ -158,9 +158,14 @@ DEF_CITY = {  # "San Fran D", "Houston D" -> defense
     "sanfrancisco": "SF", "tampabay": "TB", "tennessee": "TEN", "washington": "WAS"}
 
 
-def match_name(name: str, season: int, idx, pos: str | None = None, rookie: bool = False) -> tuple[str, str]:
+def match_name(name: str, season: int, idx, pos: str | None = None, rookie: bool = False,
+               team: str | None = None) -> tuple[str, str]:
     key = player_key(name)
     key = ALIASES.get(key, key)
+    if pos in ("DEF", "D") and team and (key in DEF_CITY or key == "losangeles"):
+        # 2026 lists defenses by city ("Los Angeles"); the NFL team column settles which one
+        t = team.upper()
+        return f"DEF-{ {'LAR': 'LA', 'JAC': 'JAX', 'WSH': 'WAS', 'OAK': 'LV', 'SD': 'LAC', 'STL': 'LA'}.get(t, t)}", "city+team"
     for suffix in ("def", "d"):
         if key.endswith(suffix) and key[: -len(suffix)] in DEF_CITY:
             return f"DEF-{DEF_CITY[key[: -len(suffix)]]}", "alias"
@@ -191,12 +196,12 @@ def match_history(ids: list[dict]) -> list[dict]:
     idx = _index(ids)
     rows = []
     sources = {
-        "auctions": ("player", "pos"),
-        "rookie_drafts": ("player", None),
-        "rfa_bids": ("player", None),
-        "designations": ("player", None),
+        "auctions": ("player", "pos", "nfl_team"),
+        "rookie_drafts": ("player", None, None),
+        "rfa_bids": ("player", None, None),
+        "designations": ("player", None, None),
     }
-    for table, (col, poscol) in sources.items():
+    for table, (col, poscol, teamcol) in sources.items():
         seen = set()
         for r in csv.DictReader(open(PROCESSED / f"{table}.csv", encoding="utf-8")):
             name = r[col]
@@ -208,7 +213,8 @@ def match_history(ids: list[dict]) -> list[dict]:
                 continue
             seen.add(k)
             pos = r.get(poscol) if poscol else None
-            cid, how = match_name(name, season, idx, pos, rookie=(table == "rookie_drafts"))
+            cid, how = match_name(name, season, idx, pos, rookie=(table == "rookie_drafts"),
+                                  team=r.get(teamcol) if teamcol else None)
             rows.append(dict(table=table, season=season, name=name, pos=pos or "", canonical_id=cid,
                              method=how))
     return rows

@@ -95,6 +95,8 @@ designations:                            # per team, per offseason, players on r
   franchise_tag:
     per_team: 1
     cost: max(2, round(mean(top 5 salaries at position)))   # $2 minimum (Jordan, 2026-10-27)
+    # prior season's salaries. 2026 TE was charged $16 though the top 5 ($38/8/26/7/5) average $16.80;
+    # Jordan 2026-10-30: likely a rounding error. Site's 2027 table matches this rule.
     minimum: 2
     years: 1
     may_not_exceed_cap: true

@@ -40,7 +40,7 @@ def test_gap_and_aging_parameters():
 
 def test_prices_follow_money_rules():
     p = _csv("prices.csv")
-    for col in ["season_dollars", "lifetime_dollars", "market_auction", "value_2027", "value_2028", "value_2029"]:
+    for col in ["season_dollars", "future_dollars", "lifetime_dollars", "market_auction", "value_2027", "value_2028", "value_2029"]:
         v = p[col].dropna()
         assert (v == v.round()).all(), col                  # whole dollars
     assert (p.season_dollars >= 0).all()

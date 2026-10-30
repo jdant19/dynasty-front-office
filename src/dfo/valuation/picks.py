@@ -9,8 +9,9 @@ that is positive (a bust is cut for a few dollars of dead cap), 0.88 a year. Smo
 (isotonic), with odds of a bust (no season above replacement), a starter (a season inside the
 league's starters at his position) and a star (a top-5 season at his position).
 
-Market value: FantasyCalc's early/mid/late pick values (10-team, 1QB, half PPR), put in dollars
-with the same FantasyCalc-to-dollars map used for players (prices.py).
+Outside reference: FantasyCalc's early/mid/late pick values (10-team, 1QB, half PPR), put in
+dollars with a FantasyCalc-to-dollars map fit on players. Not this league's price: the league's own
+pick prices come from its past pick trades (below).
 
 League history: every past trade that moved picks, scored on what each side's assets returned over
 the next three seasons (picks at their round's average for that draft; players at auction-price
@@ -107,8 +108,14 @@ def slot_curve(real: pd.DataFrame) -> pd.DataFrame:
                                                  starter=("starter", "mean"), star=("star", "mean"),
                                                  avg_use_value=("use_value", "mean")).round(3).reset_index()
     odds = odds.rename(columns={"overall": "slots"})
+    # the spread behind each average: a pick's value is lumpy (often $0, sometimes huge)
+    dist = full.groupby(band, observed=True).use_value.agg(
+        picks="size", mean="mean", zero_share=lambda v: (v == 0).mean(),
+        p25=lambda v: v.quantile(0.25), median="median", p75=lambda v: v.quantile(0.75),
+        p90=lambda v: v.quantile(0.9), best="max").round(2).reset_index().rename(columns={"overall": "slots"})
     slots.round(1).to_csv(PROCESSED / "val_picks_slots.csv", index=False)
     odds.to_csv(PROCESSED / "val_picks_odds.csv", index=False)
+    dist.to_csv(PROCESSED / "val_picks_distribution.csv", index=False)
     return slots, odds
 
 
@@ -136,13 +143,14 @@ def market_vs_use(slots: pd.DataFrame) -> pd.DataFrame:
         sl = slots[slots.overall.between((rnd - 1) * 10 + lo, (rnd - 1) * 10 + hi)]
         wait = year - 2026                         # seasons until the rookie plays
         use = h ** wait * sl.use_value_3yr.mean()
-        rows.append(dict(pick=name, fc_value=x["value"], market_dollars=round(float(fmap.predict([x["value"]])[0]), 1),
+        rows.append(dict(pick=name, fc_value=x["value"], fc_reference=round(float(fmap.predict([x["value"]])[0]), 1),
                          use_dollars=round(float(use), 1), use_low_90=round(float(h ** wait * sl.low_90.mean()), 1),
                          use_high_90=round(float(h ** wait * sl.high_90.mean()), 1)))
     out = pd.DataFrame(rows)
-    out["market_minus_use"] = (out.market_dollars - out.use_dollars).round(1)
-    out["lean"] = np.where(out.market_dollars > out.use_high_90, "sell",
-                           np.where(out.market_dollars < out.use_low_90, "use/buy", "close call"))
+    out["reference_minus_use"] = (out.fc_reference - out.use_dollars).round(1)
+    # where an outside buyer paying FantasyCalc's price would overpay; not a price anyone here will pay
+    out["if_a_buyer_paid_fc"] = np.where(out.fc_reference > out.use_high_90, "sell",
+                                         np.where(out.fc_reference < out.use_low_90, "use/buy", "close call"))
     out.to_csv(PROCESSED / "val_picks_market.csv", index=False)
     return out
 

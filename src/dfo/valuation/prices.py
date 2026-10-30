@@ -20,12 +20,15 @@ Lifetime $ Season $ plus each later contract season through 2029 (value - salary
            keeping or cutting each offseason, whichever is better (cutting costs the dead cap in
            config/league.yaml), plus the best designation available when the contract ends
            (franchise tag, mid-level extension or RFA at market price).
-Market $   what this league would pay:
-             auction  what his next season would fetch at the auction: 1 + price per point x
-                      expected points over the market replacement level
-             trade    FantasyCalc's order (10-team, 1QB, half PPR) scaled to our contract-free
-                      dollar values, minus the cost of holding him through 2029: his salaries,
-                      then the auction price once his contract ends (FantasyCalc ignores contracts)
+Two values, kept apart and never added for a decision: Season $ (this season) and Future $
+(2027-2029 under his contract, rights included). Which one counts more depends on whether the team is
+pushing now or building; the dial (Phase 5) sets that. Lifetime $ = the two summed, a reference only.
+
+Market $   what this league would pay: what his next season would fetch at the auction
+           (1 + price per point x expected points over the market replacement level).
+FC reference  FantasyCalc's order (10-team, 1QB, half PPR) within his position, on our dollar
+           scale, minus the cost of holding him through 2029. An outside view only: it is not this
+           league's price and carries no odds that anyone here would pay it (owner models, Phase 6).
 Projections enter after gap calibration (calibrate.py): rest of season and future seasons are
 pulled toward their position's startable mean by the measured factor.
 """
@@ -107,7 +110,12 @@ def build() -> pd.DataFrame:
     ev_now = ExpectedValue("auction")                    # structural replacement: this season
     ev = ExpectedValue("auction", shift=shift)           # market replacement: later seasons
     ros = pd.read_csv(PROCESSED / "proj_ros.csv")
-    fut = trajectory(pd.read_csv(PROCESSED / "proj_future.csv"))
+    fut = pd.read_csv(PROCESSED / "proj_future.csv")
+    # next season's points per game, corrected for the projections' measured age bias
+    c = calibrate.age_correction(fut.pos, fut.age + 1)
+    fut[f"ppg_{FUTURE[0]}"] = (fut[f"ppg_{FUTURE[0]}"] + c).clip(lower=0)
+    fut[f"points_{FUTURE[0]}"] = fut[f"ppg_{FUTURE[0]}"] * fut[f"games_{FUTURE[0]}"]
+    fut = trajectory(fut)
     roster = pd.read_csv(PROCESSED / "site_rosters.csv")
     ids = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str)
     roster = roster.merge(ids[["site_player_id", "canonical_id"]].rename(columns={"site_player_id": "player_id",
@@ -193,19 +201,25 @@ def build() -> pd.DataFrame:
     fc = fantasycalc()
     base = base.merge(fc[["player_id", "fc_value"]], on="player_id", how="left")
     free_value = base.value_2026 + sum(h ** k * base[f"value_{y}"] for k, y in enumerate(FUTURE, start=1))
-    m = base.fc_value.notna()
-    iso = IsotonicRegression(increasing=True, out_of_bounds="clip").fit(base.fc_value[m], free_value[m])
-    base["market_trade"] = np.where(m, iso.predict(base.fc_value.fillna(0)) - base.hold_cost, np.nan)
+    # outside reference only: FantasyCalc's order within his position, on our dollar scale, minus the
+    # cost of holding him. Not this league's price, and says nothing about whether anyone would buy.
+    base["fc_reference"] = np.nan
+    for pos, g in base[base.fc_value.notna()].groupby("pos"):
+        if len(g) < 8:
+            continue
+        iso = IsotonicRegression(increasing=True, out_of_bounds="clip").fit(g.fc_value, free_value[g.index])
+        base.loc[g.index, "fc_reference"] = iso.predict(g.fc_value) - base.hold_cost[g.index]
+    base["future_dollars"] = base.lifetime - base.value_2026
 
-    for c in ["value_2026", "lifetime", "rights_value", "market_auction", "market_trade"] + [f"value_{y}" for y in FUTURE]:
+    for c in ["value_2026", "lifetime", "future_dollars", "rights_value", "market_auction", "fc_reference"] + [f"value_{y}" for y in FUTURE]:
         base[c] = base[c].map(lambda v: money(v) if pd.notna(v) else v)
     base = base.rename(columns={"value_2026": "season_dollars", "lifetime": "lifetime_dollars"})
     stamp = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     base["lambda"] = round(lam, 3)
     base["fantasycalc_as_of"] = fc.attrs.get("as_of")
     base["made_at"] = stamp
-    cols = ["player_id", "player", "pos", "team", "owner", "season_dollars", "lifetime_dollars", "market_auction",
-            "market_trade", "value_2027", "value_2028", "value_2029", "salary_2026", "salary_2027", "salary_2028",
+    cols = ["player_id", "player", "pos", "team", "owner", "season_dollars", "future_dollars", "lifetime_dollars",
+            "market_auction", "fc_reference", "value_2027", "value_2028", "value_2029", "salary_2026", "salary_2027", "salary_2028",
             "salary_2029", "contract_years_left", "rights", "rights_value", "fc_value", "lambda",
             "fantasycalc_as_of", "made_at"]
     out = base[cols].sort_values("lifetime_dollars", ascending=False)

@@ -9,7 +9,8 @@ alone left a strong star premium (mid-tier players cost $0.31 per point, stars $
 mid-tier players, and every QB outside the top few, as freely available, which with 18-man rosters
 and $1 QB11-15s at past auctions they are.
 
-Per auction (2020-2025; 2026 when its results arrive), every model is fit with that season left out:
+Prices from every auction 2020-2026 set the market fit; outcome backtests use 2020-2025 (complete
+seasons), each with models fit with that season left out:
   engine0   lambda x expected value over the market replacement level, coming season
   future    value of contract years 2-4 at the best contract length (salary schedule from
             config/league.yaml, haircut 0.88 a year)
@@ -135,8 +136,9 @@ def backtest() -> pd.DataFrame:
     buys = auction_buys()
     h = haircut()
     st = season_totals()
-    seasons = sorted(s for s in buys.season.unique() if s <= LAST_COMPLETE)
-    structural = {s: ExpectedValue("auction", exclude_season=s) for s in seasons}
+    priced = sorted(buys.loc[buys.redraft_rank.notna(), "season"].unique())      # prices: every auction
+    seasons = [s for s in priced if s <= LAST_COMPLETE]                          # outcomes: complete seasons
+    structural = {s: ExpectedValue("auction", exclude_season=s) for s in priced}
     fr = _fit_rows(buys, structural)
     pool = _Pool()
     shift_all, lam_all, mae_all = fit_market(fr, pool)
@@ -145,7 +147,7 @@ def backtest() -> pd.DataFrame:
     pd.DataFrame([dict(pos=p, replacement_shift=shift_all[p], structural_replacement=round(
         ExpectedValue("auction").replacement[0][p], 1)) for p in SKILL]).assign(
         price_per_point=round(lam_all, 4), price_per_point_structural=round(lam_struct, 4),
-        fit_mae=round(mae_all, 2), auctions=f"{min(seasons)}-{max(seasons)}",
+        fit_mae=round(mae_all, 2), auctions=f"{min(priced)}-{max(priced)}",
         buys=len(fr), fit_date=dt.date.today().isoformat()).to_csv(MARKET_PARAMS, index=False)
     rows = []
     for s in seasons:

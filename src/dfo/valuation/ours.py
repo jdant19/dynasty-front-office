@@ -9,9 +9,10 @@ rate x his position's availability). A waiver pickup at each position is always 
 waiver level (weekly points of the best unrostered player by weekly rank, 2020-2025, roster depth from
 the site), so losing a kicker costs his edge over streaming, not his points. Converted at the
 in-season price per point.
-Later seasons: his Lifetime $ beyond this season (next year's roster is rebuilt at the auction, so
-the market level is the team's real alternative then).
-Season weight: 1.0 until the simulator computes the dial (Phase 5); labeled in the output.
+Later seasons: his Future $ (next year's roster is rebuilt at the auction, so the market level is
+the team's real alternative then).
+The two stay separate columns: pushing now weights this season, building weights later seasons, and
+the dial (Phase 5) sets the weights. Until then there is no combined number.
 """
 from __future__ import annotations
 
@@ -104,7 +105,7 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
     # future value too (a negative future is owed whether he is cut now or later, so it counts as 0)
     life = prices.set_index("player_id")
     def drop_cost(r):
-        fut = float(life.lifetime_dollars.get(r["player_id"], 0) - life.season_dollars.get(r["player_id"], 0))
+        fut = float(life.future_dollars.get(r["player_id"], 0))
         return lam_now * r["lineup_change"] + max(0.0, fut)
     cheapest_drop = min(rows, key=drop_cost)["player_id"] if rows else None
     others = pool.drop(index=pool.index.intersection(mine.index))
@@ -116,15 +117,14 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
                          lineup_change=lineup_points(pd.concat([without, g_others.loc[[pid]]])) - base))
     out = pd.DataFrame(rows).merge(prices, on="player_id", how="left")
     out["ours_season"] = (DIAL_WEIGHT * lam_now * out.lineup_change).round().astype(int)
-    out["ours_future"] = (out.lifetime_dollars - out.season_dollars).fillna(0).round().astype(int)
-    out["ours_dollars"] = out.ours_season + out.ours_future
+    out["ours_future"] = out.future_dollars.fillna(0).round().astype(int)
     out["dial_weight"] = DIAL_WEIGHT
     out["dial_note"] = "placeholder 1.0 until Phase 5 computes the dial"
     out["drop_if_added"] = cheapest_drop
     cols = ["player_id", "player", "pos", "team", "owner", "on_roster", "lineup_change", "ours_season",
-            "ours_future", "ours_dollars", "season_dollars", "lifetime_dollars", "market_auction", "market_trade",
+            "ours_future", "season_dollars", "future_dollars", "market_auction", "fc_reference",
             "dial_weight", "dial_note", "drop_if_added", "made_at"]
-    out = out[cols].sort_values("ours_dollars", ascending=False)
+    out = out[cols].sort_values(["ours_season", "ours_future"], ascending=False)
     out.to_csv(PROCESSED / f"ours_{owner.lower()}.csv", index=False)
     return out
 

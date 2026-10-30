@@ -85,7 +85,41 @@ def future() -> list[dict]:
     return out
 
 
+AGE_BIAS = PROCESSED / "params_age_bias.csv"
+
+
+def age_bias() -> pd.DataFrame:
+    """Next-season projections (+1, as used) missed by age: too high for young players, too low for
+    old productive ones. Fit actual - projected points per game on age (weighted least squares, by
+    position group: QB, and RB/WR/TE together), 2021-2025 backtest. Applied before pricing."""
+    ev, _ = backtest_future(1)
+    ev = ev[(ev.games_next >= 4) & ev.age.notna()].copy()
+    w = MODEL_WEIGHT[1]
+    ev["used"] = np.where(ev.rank_ppg.notna(), w * ev.model_ppg + (1 - w) * ev.rank_ppg, ev.model_ppg)
+    ev["res"] = ev.ppg_next - ev.used
+    rows = []
+    for group, g in [("QB", ev[ev.pos == "QB"]), ("RB/WR/TE", ev[ev.pos != "QB"])]:
+        a = g.age.clip(21, 34)
+        b, c = np.polyfit(a, g.res, 1)
+        rows.append(dict(group=group, slope=round(b, 4), intercept=round(c, 4), players=len(g),
+                         bias_at_22=round(b * 22 + c, 2), bias_at_32=round(b * 32 + c, 2)))
+    out = pd.DataFrame(rows)
+    out["fit_date"] = dt.date.today().isoformat()
+    out.to_csv(AGE_BIAS, index=False)
+    return out
+
+
+def age_correction(pos: pd.Series, age_next_season: pd.Series) -> pd.Series:
+    p = pd.read_csv(AGE_BIAS).set_index("group")
+    grp = np.where(pos == "QB", "QB", "RB/WR/TE")
+    a = age_next_season.clip(21, 34)
+    out = pd.Series([p.loc[g, "slope"] * x + p.loc[g, "intercept"] if pd.notna(x) else 0.0
+                     for g, x in zip(grp, a)], index=pos.index)
+    return out.where(pos.isin(["QB", "RB", "WR", "TE"]), 0.0)
+
+
 def fit() -> pd.DataFrame:
+    age_bias()
     p = pd.DataFrame(weekly() + rest_of_season() + future())
     p["fit_on"] = "2021-2025 backtest"
     p["fit_date"] = dt.date.today().isoformat()

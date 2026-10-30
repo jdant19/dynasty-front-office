@@ -53,6 +53,10 @@ AUCTION_LINE = re.compile(
     r"^\s*(\d+)\.\s+(.+?)\s+\((\w*)\s*-\s*([A-Z,/]*)\)\s*\S?\s+\$(\d+)\s+(.+?)\s*$")
 
 
+# Last auction pick in years without keeper icons (kept players follow, entered team by team).
+AUCTION_LAST_PICK = {2025: 59, 2026: 45}
+
+
 def auctions() -> list[dict]:
     rows = []
     for pdf in sorted((RAW / "auctions").glob("yahoo_draft_results_*.pdf")):
@@ -72,10 +76,10 @@ def auctions() -> list[dict]:
             seen_picks.add(int(pick))
             if season == 2013:
                 kind = "startup_auction"
-            elif season == 2025:
-                # New Yahoo league: no keeper icons; picks 1-59 are the auction, 60+ are kept players
-                # entered team by team.
-                kind = "auction" if int(pick) <= 59 else "kept"
+            elif season in AUCTION_LAST_PICK:
+                # New Yahoo league (2025+): no keeper icons; the auction comes first, then kept
+                # players entered team by team.
+                kind = "auction" if int(pick) <= AUCTION_LAST_PICK[season] else "kept"
             else:
                 kind = "kept" if has_keeper_icon else "auction"
             owner = team_owner(team, season) or ""
