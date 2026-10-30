@@ -1,0 +1,546 @@
+{
+ "table": "rfa_bids",
+ "as_of": "2026-10-30T17:12:14+00:00",
+ "rows": [
+  {
+   "id": "01c445e6-b3c9-4b0c-a09e-4654c84e032c",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-3",
+   "amount": 33,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "04377b6a-dd2e-4f84-9cd2-f2c4ecbacbb9",
+   "auction_id": "175880fb-b6e5-44bc-8fce-8e48ae835c64",
+   "team_id": "team-5",
+   "amount": 18,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-14T18:18:14.805982+00:00"
+  },
+  {
+   "id": "052ea386-3eb5-4b6d-b6f8-b9188cb6c63c",
+   "auction_id": "c00391c8-910c-4682-ad5a-adf2d74b5881",
+   "team_id": "team-4",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T18:23:35.220147+00:00"
+  },
+  {
+   "id": "11f5b580-bc0d-4b4c-8221-144eac52b504",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-7",
+   "amount": 47,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "14e470bb-8539-4d57-a293-5a78ebe634e0",
+   "auction_id": "021ceaf9-c3e9-49ed-8efa-9839223382a9",
+   "team_id": "team-4",
+   "amount": 6,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-20T02:26:42.729141+00:00"
+  },
+  {
+   "id": "29a6745f-baf1-49d7-8257-915808f47842",
+   "auction_id": "6641f12a-072d-449f-8d50-78bca6f69e55",
+   "team_id": "team-5",
+   "amount": 38,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-09T16:13:19.604884+00:00"
+  },
+  {
+   "id": "2a3b6eeb-ab13-44f9-a1f5-bd0fab3ad191",
+   "auction_id": "021ceaf9-c3e9-49ed-8efa-9839223382a9",
+   "team_id": "team-2",
+   "amount": 23,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-20T02:26:42.729141+00:00"
+  },
+  {
+   "id": "2f472329-b7bc-4321-86d3-e33a828b2f35",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-4",
+   "amount": 26,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "34610636-b738-40e6-b3ad-e17869aa49f7",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-6",
+   "amount": 67,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "34be7895-f08e-4c6d-ab0b-dc3b8a07afc0",
+   "auction_id": "60fcb37c-20b4-4df7-9620-2e671222ff01",
+   "team_id": "team-9",
+   "amount": 71,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-05T15:40:47.301648+00:00"
+  },
+  {
+   "id": "3a17a0d5-1884-42b4-969e-8fa9585172da",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-5",
+   "amount": 47,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "3ed293c8-d1c9-45ee-8aae-0f596197c294",
+   "auction_id": "c00391c8-910c-4682-ad5a-adf2d74b5881",
+   "team_id": "team-5",
+   "amount": 65,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T18:23:35.220147+00:00"
+  },
+  {
+   "id": "408a9b9a-0009-4f2f-abf6-5115ebc80d07",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-2",
+   "amount": 18,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "409624bc-0f2e-4d21-af7c-83b91e1c7227",
+   "auction_id": "f6e79b1b-b124-4e7f-aa1d-6cf56ec7ba72",
+   "team_id": "team-4",
+   "amount": 11,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-23T19:05:45.615594+00:00"
+  },
+  {
+   "id": "45e433d0-daf2-4bff-81ce-3be27486ef1c",
+   "auction_id": "b09e1c01-0019-40ff-ae5c-2a3969b8f348",
+   "team_id": "team-5",
+   "amount": 15,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-15T04:10:07.02151+00:00"
+  },
+  {
+   "id": "4b7ab3c3-98cf-4d68-9d66-3a0c9342d7b6",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-9",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "4ee53752-ed64-4b4a-ad18-66e56dbaa5f3",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-1",
+   "amount": 48,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "4f905b0b-30d2-49bc-a82d-39ab2dd510d6",
+   "auction_id": "6641f12a-072d-449f-8d50-78bca6f69e55",
+   "team_id": "team-9",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-09T16:13:19.604884+00:00"
+  },
+  {
+   "id": "51b25310-9c6f-4897-b203-1afa5bcbb689",
+   "auction_id": "d6ddd290-aed3-414f-a944-40251cf1df00",
+   "team_id": "team-2",
+   "amount": 15,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-17T14:12:27.457555+00:00"
+  },
+  {
+   "id": "53cce01f-e3b9-4b4b-ac81-8b6085614fb7",
+   "auction_id": "b09e1c01-0019-40ff-ae5c-2a3969b8f348",
+   "team_id": "team-8",
+   "amount": 3,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-15T04:10:07.02151+00:00"
+  },
+  {
+   "id": "58fa54e9-731f-4106-972b-80bbc12178a7",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-7",
+   "amount": 68,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "5fbd58e8-38e7-4ff3-aef3-f13b765306de",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-5",
+   "amount": 61,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "65fefc1d-9261-4907-942f-5fb4e6a74b2a",
+   "auction_id": "5ecbff58-c2f3-4cc5-811b-2f305236ac70",
+   "team_id": "team-1",
+   "amount": 39,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-10T13:10:41.360744+00:00"
+  },
+  {
+   "id": "6602fe20-0114-4486-ac8f-c98f4fc56421",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-4",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "66765b4b-11bd-499a-b0d9-b3522531d142",
+   "auction_id": "175880fb-b6e5-44bc-8fce-8e48ae835c64",
+   "team_id": "team-2",
+   "amount": 32,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-14T18:18:14.805982+00:00"
+  },
+  {
+   "id": "6679cf68-2c3f-4e47-9035-fbefa381850a",
+   "auction_id": "b1677cd6-e21a-4801-ae44-841d53600c0a",
+   "team_id": "team-4",
+   "amount": 21,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-18T04:09:24.95164+00:00"
+  },
+  {
+   "id": "6b973f1c-a0ec-4651-8778-168d14dfad0e",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-2",
+   "amount": 18,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "717c72af-1e6e-4741-96c2-df51471f1812",
+   "auction_id": "2b65e13a-86de-4082-9d19-f5b98274d6bd",
+   "team_id": "team-6",
+   "amount": 2,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-23T19:06:05.623439+00:00"
+  },
+  {
+   "id": "79e0a81e-e655-46ed-9e7b-89c416edf13f",
+   "auction_id": "5ecbff58-c2f3-4cc5-811b-2f305236ac70",
+   "team_id": "team-2",
+   "amount": 38,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-10T13:10:41.360744+00:00"
+  },
+  {
+   "id": "7c6d3011-1729-4bff-8bb4-893021d0d464",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-1",
+   "amount": 58,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "7efb398d-93cf-4409-a729-b6293f33f4cc",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-1",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "83d0cbf9-0fed-4af1-90e8-81ded91902f6",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-4",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "84510e29-8b4a-4489-9965-7116590e407e",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-6",
+   "amount": 47,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "84755ac6-5ca5-473f-991a-2f3d6d00d010",
+   "auction_id": "60fcb37c-20b4-4df7-9620-2e671222ff01",
+   "team_id": "team-3",
+   "amount": 35,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-05T15:40:47.301648+00:00"
+  },
+  {
+   "id": "86c917c1-a63c-497d-ae32-cda7e0e700c9",
+   "auction_id": "c00391c8-910c-4682-ad5a-adf2d74b5881",
+   "team_id": "team-1",
+   "amount": 38,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T18:23:35.220147+00:00"
+  },
+  {
+   "id": "9284953c-7df2-43cc-9d1b-c23511662854",
+   "auction_id": "c00391c8-910c-4682-ad5a-adf2d74b5881",
+   "team_id": "team-7",
+   "amount": 21,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T18:23:35.220147+00:00"
+  },
+  {
+   "id": "93d0754b-e4a8-4205-a3cd-c436e3a99018",
+   "auction_id": "60fcb37c-20b4-4df7-9620-2e671222ff01",
+   "team_id": "team-2",
+   "amount": 50,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-05T15:40:47.301648+00:00"
+  },
+  {
+   "id": "96f8d02d-0ec4-4155-a65f-74ccd4bd0776",
+   "auction_id": "6641f12a-072d-449f-8d50-78bca6f69e55",
+   "team_id": "team-1",
+   "amount": 48,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-09T16:13:19.604884+00:00"
+  },
+  {
+   "id": "a4ad5b97-b048-4e07-8aee-4aef933630a9",
+   "auction_id": "ce495160-2120-42e9-870b-59ebcff1e3e8",
+   "team_id": "team-3",
+   "amount": 41,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-07T20:07:20.525488+00:00"
+  },
+  {
+   "id": "a9067948-6888-4fb1-8072-b082eeeeff45",
+   "auction_id": "b1677cd6-e21a-4801-ae44-841d53600c0a",
+   "team_id": "team-5",
+   "amount": 6,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-18T04:09:24.95164+00:00"
+  },
+  {
+   "id": "ab24a82d-12be-4b8c-9b6a-5416a4da76ca",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-2",
+   "amount": 30,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "ae1c3d8f-3f2a-4298-97c1-3d2e253bdf89",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-6",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "b1a90591-547a-4625-bc56-a4a051e323b9",
+   "auction_id": "60fcb37c-20b4-4df7-9620-2e671222ff01",
+   "team_id": "team-4",
+   "amount": 33,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-05T15:40:47.301648+00:00"
+  },
+  {
+   "id": "b4cc9599-0443-4c3b-8340-11ac6ae162e7",
+   "auction_id": "c00391c8-910c-4682-ad5a-adf2d74b5881",
+   "team_id": "team-3",
+   "amount": 31,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T18:23:35.220147+00:00"
+  },
+  {
+   "id": "c1413f96-19cc-4bd9-ab85-38a89a9c09e7",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-10",
+   "amount": 50,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "c26100f1-281e-4d58-b9a3-5795ad22cade",
+   "auction_id": "0f9da939-5ab0-42fc-979c-a9951cd116a6",
+   "team_id": "team-10",
+   "amount": 88,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T04:58:20.973254+00:00"
+  },
+  {
+   "id": "c52e5ede-6690-445f-9d7f-7a4946ed1db3",
+   "auction_id": "b1677cd6-e21a-4801-ae44-841d53600c0a",
+   "team_id": "team-7",
+   "amount": 19,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-18T04:09:24.95164+00:00"
+  },
+  {
+   "id": "d045e382-63cb-4d42-8b5d-7ae9d4367fe2",
+   "auction_id": "175880fb-b6e5-44bc-8fce-8e48ae835c64",
+   "team_id": "team-3",
+   "amount": 39,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-14T18:18:14.805982+00:00"
+  },
+  {
+   "id": "d11bc843-4ec5-42ce-b998-fba9764855d1",
+   "auction_id": "b2e0dc6a-a1d8-4357-8cb4-0e7fd9f1eec2",
+   "team_id": "team-5",
+   "amount": 28,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-12T14:32:27.554186+00:00"
+  },
+  {
+   "id": "d1d64f42-024f-4f78-bd68-15c9dfccbc1d",
+   "auction_id": "60fcb37c-20b4-4df7-9620-2e671222ff01",
+   "team_id": "team-10",
+   "amount": 50,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-05T15:40:47.301648+00:00"
+  },
+  {
+   "id": "d25b40b3-214a-41cb-8566-c20c3dfd1518",
+   "auction_id": "4ea21f2b-c654-494e-80bd-efbaf5ed8201",
+   "team_id": "team-9",
+   "amount": 51,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-03T03:31:53.643083+00:00"
+  },
+  {
+   "id": "d29f5a77-2b3a-4573-a3cc-b5e9f216aa71",
+   "auction_id": "60fcb37c-20b4-4df7-9620-2e671222ff01",
+   "team_id": "team-5",
+   "amount": 25,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-05T15:40:47.301648+00:00"
+  },
+  {
+   "id": "dc6c1b9f-c2a6-4f8e-aa37-3d7518af44ef",
+   "auction_id": "b09e1c01-0019-40ff-ae5c-2a3969b8f348",
+   "team_id": "team-7",
+   "amount": 12,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-15T04:10:07.02151+00:00"
+  },
+  {
+   "id": "dcfcfef0-7d21-4925-9526-e86f20c38fa1",
+   "auction_id": "6641f12a-072d-449f-8d50-78bca6f69e55",
+   "team_id": "team-3",
+   "amount": 43,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-09T16:13:19.604884+00:00"
+  },
+  {
+   "id": "e188c268-0fc8-4ddd-8d56-c6a966b77a83",
+   "auction_id": "516f7c66-7d5e-4b32-bb39-7d8445f26113",
+   "team_id": "team-7",
+   "amount": 5,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-21T21:08:07.96521+00:00"
+  },
+  {
+   "id": "e455c655-a569-443f-8f0f-00a6d2fd4180",
+   "auction_id": "f6e79b1b-b124-4e7f-aa1d-6cf56ec7ba72",
+   "team_id": "team-7",
+   "amount": 16,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-23T19:05:45.615594+00:00"
+  },
+  {
+   "id": "e82a1eb9-2ba2-416e-b6d1-70b93d5adad0",
+   "auction_id": "0db94372-1622-4f0f-bf71-733e33529e4c",
+   "team_id": "team-7",
+   "amount": 11,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-19T03:29:41.0595+00:00"
+  },
+  {
+   "id": "ee065651-a52a-4cb4-a5f3-cbff84b9ba6d",
+   "auction_id": "b2e0dc6a-a1d8-4357-8cb4-0e7fd9f1eec2",
+   "team_id": "team-4",
+   "amount": 22,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-12T14:32:27.554186+00:00"
+  },
+  {
+   "id": "f72cb0d6-9d0c-438e-9a17-3074c813f132",
+   "auction_id": "f6e79b1b-b124-4e7f-aa1d-6cf56ec7ba72",
+   "team_id": "team-5",
+   "amount": 8,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-23T19:05:45.615594+00:00"
+  },
+  {
+   "id": "ff9e7280-7532-4895-972e-3af2603e8b40",
+   "auction_id": "c00391c8-910c-4682-ad5a-adf2d74b5881",
+   "team_id": "team-8",
+   "amount": 36,
+   "passed": false,
+   "submitted_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "submitted_at": "2026-08-01T18:23:35.220147+00:00"
+  }
+ ]
+}

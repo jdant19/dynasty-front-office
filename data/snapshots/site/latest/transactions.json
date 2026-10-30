@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-10-30T15:02:21+00:00",
+ "as_of": "2026-10-30T17:12:14+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -967,6 +967,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-26T14:30:51.737434+00:00"
+  },
+  {
+   "id": "2926267d-4fd2-4cde-914e-fe901f32ba27",
+   "occurred_at": "2026-10-30T16:47:12.629527+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-5045",
+   "player_name": "Courtland Sutton",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "WR",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-30T16:47:12.629527+00:00"
   },
   {
    "id": "29489243-549b-471c-a3ef-f4710c826d98",
@@ -2040,6 +2059,24 @@
    },
    "source_id": null,
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "66a4d54c-6d25-42ab-a245-20da66c5562e",
+   "occurred_at": "2026-10-30T16:46:57.879363+00:00",
+   "type": "drop",
+   "player_id": "sl-4454",
+   "player_name": "Kendrick Bourne",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-10-30T16:46:57.879363+00:00"
   },
   {
    "id": "67ce645a-44df-4b53-b70d-3cb2ff05752f",
@@ -4776,6 +4813,25 @@
    "created_at": "2026-10-26T23:13:54.909555+00:00"
   },
   {
+   "id": "ee15ca79-82b4-40a4-b1e8-e7354355e9d5",
+   "occurred_at": "2026-10-30T16:46:01.415599+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-4147",
+   "player_name": "Samaje Perine",
+   "from_team_id": null,
+   "to_team_id": "team-6",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-30T16:46:01.415599+00:00"
+  },
+  {
    "id": "eeb36c76-b913-4a16-917f-cb3f6e970fdc",
    "occurred_at": "2026-10-16T15:47:51.05022+00:00",
    "type": "fa_signing",
@@ -4812,6 +4868,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T15:48:25.37615+00:00"
+  },
+  {
+   "id": "f03e26bb-65a6-4d43-ad91-eb3fa4bec388",
+   "occurred_at": "2026-10-30T16:45:46.817848+00:00",
+   "type": "drop",
+   "player_id": "sl-4177",
+   "player_name": "Mack Hollins",
+   "from_team_id": "team-6",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-10-30T16:45:46.817848+00:00"
   },
   {
    "id": "f057eaab-9786-4d95-a4fa-edb0e3e0bed1",
