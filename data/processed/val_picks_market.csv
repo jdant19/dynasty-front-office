@@ -1,0 +1,10 @@
+pick,fc_value,market_dollars,use_dollars,use_low_90,use_high_90,market_minus_use,lean
+2027 1st (Early),4673,139.6,88.3,69.9,160.9,51.3,close call
+2027 1st (Mid),3077,78.9,34.5,32.2,65.3,44.4,sell
+2027 1st (Late),2374,46.4,29.7,19.6,56.1,16.7,close call
+2027 2nd (Early),1909,25.6,21.4,14.6,37.0,4.2,close call
+2027 2nd (Mid),1587,20.5,17.0,12.4,28.8,3.5,close call
+2027 2nd (Late),1367,14.2,17.0,11.1,27.1,-2.8,close call
+2027 3rd (Early),1200,12.9,8.7,6.2,17.9,4.2,close call
+2027 3rd (Mid),1068,10.7,4.4,3.3,11.8,6.3,close call
+2027 3rd (Late),962,10.7,1.4,0.0,3.6,9.3,sell
