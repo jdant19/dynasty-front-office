@@ -1,0 +1,4 @@
+event,team_seasons,brier,brier_no_skill,mean_prob_when_it_happened,mean_prob_otherwise,strength_vs_finish_rank_corr
+regular-season 1st,60,0.0881,0.09,0.122,0.098,0.319
+top 4,60,0.2207,0.24,0.44,0.373,0.319
+playoff title,60,0.0879,0.09,0.117,0.098,0.319

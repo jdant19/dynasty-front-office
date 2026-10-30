@@ -6,7 +6,7 @@ evidence across seasons and Jordan's sign-off. Add the date and reason to the ch
 | # | Principle | Rationale | Evidence / status |
 | --- | --- | --- | --- |
 | P1 | Maximize expected payout over the current season and the next three, haircut 0.88 per future year. | Regular-season 1st ($400) is the largest prize; future titles count equally but are less predictable. | Jordan, 2026-10 |
-| P2 | Rebuild when future seasons offer more expected payout than the current one, judged by what added strength buys in each. | Raw odds can mislead: a strong young team can have better odds next year yet gain most by pushing now. | Design doc s1 |
+| P2 | Rebuild when future seasons offer more expected payout than the current one, judged by what added strength buys in each. | Raw odds can mislead: a strong young team can have better odds next year yet gain most by pushing now. | Design doc s1; computed by the dial (dial.csv) as payout per lineup point by season, from 2026-10-30 |
 | P3 | Value an acquisition as the gain over the current starter after re-optimizing the lineup, not over zero. | A filled slot is not an adequate one; a 3-for-2 can be free if a replacement is available. | Design doc s2, s8 |
 | P4 | Score decisions on end states: the move plus follow-on moves, against the best plan that skips it. | Single-move scoring misses replacements, cuts and chained designations. | Design doc s2 |
 | P5 | In-season cap is worth close to nothing; next season's cap is priced at what it buys. | No carryover; FAAB buys only this season. | Jordan |
@@ -23,4 +23,4 @@ evidence across seasons and Jordan's sign-off. Add the date and reason to the ch
 
 ## Change log
 - 2026-10-27: initial set from the design doc.
-- 2026-10-30: P7 tested; P10-P13 added with the valuation engine (Phase 4); P14 and P15 from Jordan's review.
+- 2026-10-30: P7 tested; P10-P13 added with the valuation engine (Phase 4); P14 and P15 from Jordan's review; P2 now computed by the dial.

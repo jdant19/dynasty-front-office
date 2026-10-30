@@ -1,0 +1,15 @@
+# NFL structure (stable facts used by the playoff simulator). nflverse team codes, quoted
+# (YAML would read NO as false).
+divisions:
+  AFC East: ["BUF", "MIA", "NE", "NYJ"]
+  AFC North: ["BAL", "CIN", "CLE", "PIT"]
+  AFC South: ["HOU", "IND", "JAX", "TEN"]
+  AFC West: ["DEN", "KC", "LV", "LAC"]
+  NFC East: ["DAL", "NYG", "PHI", "WAS"]
+  NFC North: ["CHI", "DET", "GB", "MIN"]
+  NFC South: ["ATL", "CAR", "NO", "TB"]
+  NFC West: ["ARI", "LA", "SF", "SEA"]
+playoffs:
+  teams_per_conference: 7      # 4 division winners (seeds 1-4), 3 wild cards (5-7); seed 1 has a bye
+  home_field_points: 1.5
+game_margin_sd: 13.5           # points; standard for NFL game outcomes around the spread
