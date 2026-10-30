@@ -1,0 +1,132 @@
+{
+ "table": "trade_approvals",
+ "as_of": "2026-10-30T20:47:04+00:00",
+ "rows": [
+  {
+   "id": "09ccc49d-9947-4a2c-8a07-9d67b2ac17b6",
+   "trade_id": "77a69590-dd64-443b-84e6-649bd69e745c",
+   "team_id": "team-3",
+   "user_id": "058292e4-deb9-425b-9bc5-ac9879b46371",
+   "status": "approved",
+   "responded_at": "2026-08-02T18:40:15.233+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "48698c82-c1dc-412f-8ef0-031320af0550",
+   "trade_id": "ce338e97-d69f-4c31-be0a-24a1a5d1a12c",
+   "team_id": "team-4",
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "rejected",
+   "responded_at": "2026-04-21T02:12:50.942+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "6810682a-6487-4cf5-b1ab-1a838589db73",
+   "trade_id": "31b93a69-ed36-4214-bc8b-a8acf8dea054",
+   "team_id": "team-2",
+   "user_id": null,
+   "status": "approved",
+   "responded_at": "2026-10-16T15:59:58.88291+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "6dcdd626-087d-402a-995b-bfe2ab6493e1",
+   "trade_id": "591a0d58-9b2a-473a-b648-f0cdf8c7cefd",
+   "team_id": "team-4",
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "approved",
+   "responded_at": "2026-08-05T01:13:15.207+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "9433d471-b40d-4a8b-9c21-6689cfd6c395",
+   "trade_id": "efea591a-0575-468c-9027-0fa32a0f1603",
+   "team_id": "team-10",
+   "user_id": "759652ba-e845-4641-b5e7-897e54c30815",
+   "status": "approved",
+   "responded_at": "2026-10-26T23:13:53.892+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "a479d5c6-bfbf-43a2-af47-e7fc20ba373a",
+   "trade_id": "77a69590-dd64-443b-84e6-649bd69e745c",
+   "team_id": "team-4",
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "approved",
+   "responded_at": "2026-08-01T20:12:11.742+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "beeb72fe-24ea-4246-ad12-50ba3df7a690",
+   "trade_id": "5e8c4f78-3eed-496a-b137-9811ee7d2be3",
+   "team_id": "team-6",
+   "user_id": "3e5af2c0-c58c-429e-afa0-ba49b0df8342",
+   "status": "rejected",
+   "responded_at": "2026-05-04T18:01:27.756+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "c4f66a51-49b5-4130-b837-14454c8e228d",
+   "trade_id": "ce338e97-d69f-4c31-be0a-24a1a5d1a12c",
+   "team_id": "team-6",
+   "user_id": "3e5af2c0-c58c-429e-afa0-ba49b0df8342",
+   "status": "approved",
+   "responded_at": "2026-04-14T15:37:38.342+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "c6ac7345-db29-463f-9f18-9f0661604622",
+   "trade_id": "591a0d58-9b2a-473a-b648-f0cdf8c7cefd",
+   "team_id": "team-8",
+   "user_id": "3d3aed6f-e693-410e-8e09-13416d49bcad",
+   "status": "approved",
+   "responded_at": "2026-08-05T01:21:04.711+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "d60798b4-ffd1-45d6-82d3-09956d772e54",
+   "trade_id": "977ad2fc-5056-4073-b775-973b9cab698d",
+   "team_id": "team-6",
+   "user_id": "3e5af2c0-c58c-429e-afa0-ba49b0df8342",
+   "status": "approved",
+   "responded_at": "2026-04-21T02:48:36.751+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "ddf8d088-d089-45c9-9e3e-da995a5b620c",
+   "trade_id": "efea591a-0575-468c-9027-0fa32a0f1603",
+   "team_id": "team-4",
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "approved",
+   "responded_at": "2026-10-26T19:18:32.216175+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "e4b92217-bb0a-4bce-b9c1-9a73c90a11e6",
+   "trade_id": "31b93a69-ed36-4214-bc8b-a8acf8dea054",
+   "team_id": "team-8",
+   "user_id": "3d3aed6f-e693-410e-8e09-13416d49bcad",
+   "status": "approved",
+   "responded_at": "2026-10-16T15:59:58.88291+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "ef16bc54-5a37-46d9-88a7-a152979be41c",
+   "trade_id": "5e8c4f78-3eed-496a-b137-9811ee7d2be3",
+   "team_id": "team-9",
+   "user_id": "bbd36b4e-7121-4d96-b95e-2aadf6caa826",
+   "status": "approved",
+   "responded_at": "2026-05-02T20:00:21.204+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "f4a3ac35-c2fb-4f67-a2e4-f8f45fc6b221",
+   "trade_id": "977ad2fc-5056-4073-b775-973b9cab698d",
+   "team_id": "team-4",
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "rejected",
+   "responded_at": "2026-04-22T02:16:07.083+00:00",
+   "drop_player_ids": null
+  }
+ ]
+}
