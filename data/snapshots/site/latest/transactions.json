@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-10-29T21:07:03+00:00",
+ "as_of": "2026-10-30T05:44:37+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -110,6 +110,25 @@
    },
    "source_id": null,
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "02ed68c6-4357-43b3-8564-eec6c0858601",
+   "occurred_at": "2026-10-29T21:28:26.600116+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-8136",
+   "player_name": "Rachaad White",
+   "from_team_id": null,
+   "to_team_id": "team-1",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": false,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:28:26.600116+00:00"
   },
   {
    "id": "03c4930f-fdb7-4ad7-92a0-ef9adff54147",
@@ -495,6 +514,25 @@
    "created_at": "2026-10-16T20:43:46.200445+00:00"
   },
   {
+   "id": "17092b3b-c65c-471b-8607-5aa659982c1a",
+   "occurred_at": "2026-10-29T21:41:08.268672+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-5872",
+   "player_name": "Deebo Samuel",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "WR",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:41:08.268672+00:00"
+  },
+  {
    "id": "1740510a-a6a3-4c6c-9ccd-0414d722dd08",
    "occurred_at": "2026-07-16T21:15:20.813985+00:00",
    "type": "tag",
@@ -823,6 +861,25 @@
    "created_at": "2026-08-28T19:46:03.442922+00:00"
   },
   {
+   "id": "231e0257-855c-4ade-9d61-0da36c49d8ad",
+   "occurred_at": "2026-10-29T21:31:49.428455+00:00",
+   "type": "fa_signing",
+   "player_id": "def-DET",
+   "player_name": "Detroit Lions D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-2",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:31:49.428455+00:00"
+  },
+  {
    "id": "243af850-d08a-4ce3-ac21-303d4d97f34b",
    "occurred_at": "2026-10-16T02:12:03.156857+00:00",
    "type": "fa_signing",
@@ -999,6 +1056,23 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "2dbc2945-5ee8-4dcd-a99a-0c1395aaf29e",
+   "occurred_at": "2026-10-29T21:29:25.537276+00:00",
+   "type": "drop",
+   "player_id": "def-NYJ",
+   "player_name": "New York Jets D/ST",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:29:25.537276+00:00"
+  },
+  {
    "id": "2e4bd990-34e0-4be9-b3aa-bd93a47fd843",
    "occurred_at": "2026-10-21T20:48:25.912293+00:00",
    "type": "fa_signing",
@@ -1053,6 +1127,23 @@
    "created_at": "2026-10-16T02:11:38.912727+00:00"
   },
   {
+   "id": "2f470ab2-afc2-4a46-96fe-ad7649940e32",
+   "occurred_at": "2026-10-29T21:32:03.077997+00:00",
+   "type": "drop",
+   "player_id": "sl-5045",
+   "player_name": "Courtland Sutton",
+   "from_team_id": "team-6",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:32:03.077997+00:00"
+  },
+  {
    "id": "2fd1e725-7687-48b6-9d58-2d1c713fbb2e",
    "occurred_at": "2026-10-21T20:50:31.862958+00:00",
    "type": "drop",
@@ -1068,6 +1159,23 @@
    },
    "source_id": null,
    "created_at": "2026-10-21T20:50:31.862958+00:00"
+  },
+  {
+   "id": "2fee01af-c881-463b-b9bf-4bcec1043bd5",
+   "occurred_at": "2026-10-29T21:31:12.613963+00:00",
+   "type": "drop",
+   "player_id": "def-SF",
+   "player_name": "San Francisco 49ers D/ST",
+   "from_team_id": "team-2",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:31:12.613963+00:00"
   },
   {
    "id": "3029a0d4-68ef-47af-a6e3-8501e8519586",
@@ -1118,6 +1226,24 @@
    },
    "source_id": "f6e79b1b-b124-4e7f-aa1d-6cf56ec7ba72",
    "created_at": "2026-08-23T19:05:46.015902+00:00"
+  },
+  {
+   "id": "35ec964d-0f69-4899-b5ef-9e51fc7799f2",
+   "occurred_at": "2026-10-29T21:40:46.25922+00:00",
+   "type": "drop",
+   "player_id": "sl-2197",
+   "player_name": "Brandin Cooks",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:40:46.25922+00:00"
   },
   {
    "id": "36f2d245-a20c-4218-8e97-c2b472dc4a62",
@@ -1401,6 +1527,23 @@
    "created_at": "2026-09-02T21:37:31.596752+00:00"
   },
   {
+   "id": "48a55194-6947-4796-b358-f4754a1958e9",
+   "occurred_at": "2026-10-29T21:28:12.987902+00:00",
+   "type": "drop",
+   "player_id": "sl-1166",
+   "player_name": "Kirk Cousins",
+   "from_team_id": "team-1",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "QB",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:28:12.987902+00:00"
+  },
+  {
    "id": "4978ba17-bfe1-4f95-9ef1-838e0cde8e9c",
    "occurred_at": "2026-10-16T20:44:02.710669+00:00",
    "type": "drop",
@@ -1433,6 +1576,23 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:54:32.326361+00:00"
+  },
+  {
+   "id": "4b1b108d-2119-49d3-b3b1-e4bf94ff127d",
+   "occurred_at": "2026-10-29T21:27:53.474633+00:00",
+   "type": "drop",
+   "player_id": "def-KC",
+   "player_name": "Kansas City Chiefs D/ST",
+   "from_team_id": "team-5",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:27:53.474633+00:00"
   },
   {
    "id": "4d1afb15-fd73-48f8-9cd3-04babb94e04e",
@@ -2063,6 +2223,25 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "6c0d8a1a-3350-4b68-b024-cb9d2d149ec4",
+   "occurred_at": "2026-10-29T21:32:48.776037+00:00",
+   "type": "fa_signing",
+   "player_id": "def-GB",
+   "player_name": "Green Bay Packers D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-6",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:32:48.776037+00:00"
+  },
+  {
    "id": "6cdd9d84-04ea-4adb-a124-08b9916c6a98",
    "occurred_at": "2026-10-26T14:31:32.602224+00:00",
    "type": "fa_signing",
@@ -2099,6 +2278,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-19T21:50:12.367079+00:00"
+  },
+  {
+   "id": "6d1a6943-ea03-4929-a3f3-93272172c8ef",
+   "occurred_at": "2026-10-29T21:27:17.453545+00:00",
+   "type": "fa_signing",
+   "player_id": "def-CIN",
+   "player_name": "Cincinnati Bengals D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-5",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:27:17.453545+00:00"
   },
   {
    "id": "6e6182f9-7145-403e-a76b-6a5db962a727",
@@ -2186,6 +2384,23 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:50:59.724894+00:00"
+  },
+  {
+   "id": "74bde2bc-0258-45d1-8020-d3cbd345faac",
+   "occurred_at": "2026-10-29T21:30:24.127483+00:00",
+   "type": "drop",
+   "player_id": "sl-13150",
+   "player_name": "Darius Cooper",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:30:24.127483+00:00"
   },
   {
    "id": "75b8fb82-d363-46f4-9b8c-182ec8d3e4f5",
@@ -2331,6 +2546,25 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "7bcfda2e-5b04-438d-ac51-a3641410a41a",
+   "occurred_at": "2026-10-29T21:30:10.159676+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-9480",
+   "player_name": "Brenton Strange",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "TE",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:30:10.159676+00:00"
+  },
+  {
    "id": "7d1f19c8-48c1-4853-995f-c1ee20a6bec4",
    "occurred_at": "2026-10-21T20:50:12.92006+00:00",
    "type": "fa_signing",
@@ -2468,6 +2702,23 @@
    },
    "source_id": null,
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "82f0d91e-20c3-4f4d-ad12-82c2d0ee5d9f",
+   "occurred_at": "2026-10-29T21:29:55.218128+00:00",
+   "type": "drop",
+   "player_id": "sl-11655",
+   "player_name": "Tyrone Tracy",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "RB",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:29:55.218128+00:00"
   },
   {
    "id": "855ae214-853f-4dba-8056-3b1c286397a7",
@@ -2842,6 +3093,25 @@
    "created_at": "2026-10-16T15:46:58.782657+00:00"
   },
   {
+   "id": "9315636c-6316-4e87-b137-e672e1e476a2",
+   "occurred_at": "2026-10-29T21:28:54.296882+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-11786",
+   "player_name": "Cam Little",
+   "from_team_id": null,
+   "to_team_id": "team-5",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:28:54.296882+00:00"
+  },
+  {
    "id": "93a3e71f-4478-43c9-a4dc-938484367b90",
    "occurred_at": "2026-10-16T20:55:50.728082+00:00",
    "type": "fa_signing",
@@ -2985,6 +3255,25 @@
    "created_at": "2026-09-02T21:37:31.596752+00:00"
   },
   {
+   "id": "9a43610c-1893-4638-b9e2-769142ff37ac",
+   "occurred_at": "2026-10-29T21:30:54.303642+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-10219",
+   "player_name": "Chris Rodriguez",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:30:54.303642+00:00"
+  },
+  {
    "id": "9abd3fb1-e4f0-4129-afdf-aebab0c412cc",
    "occurred_at": "2026-08-05T07:15:11.908202+00:00",
    "type": "rookie_pick",
@@ -3037,6 +3326,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T15:47:16.85376+00:00"
+  },
+  {
+   "id": "9c5b04ae-0837-457c-bbd0-ba54fe331cf5",
+   "occurred_at": "2026-10-29T21:41:15.025644+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-7567",
+   "player_name": "Kenneth Gainwell",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:41:15.025644+00:00"
   },
   {
    "id": "9c829a2c-cdab-4f01-bac2-be2e82f39cab",
@@ -3848,6 +4156,25 @@
    "created_at": "2026-08-14T13:33:42.672715+00:00"
   },
   {
+   "id": "cec8739d-c5a5-4fc0-8e75-7762a535a1a5",
+   "occurred_at": "2026-10-29T21:29:46.110924+00:00",
+   "type": "fa_signing",
+   "player_id": "def-WAS",
+   "player_name": "Washington Commanders D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:29:46.110924+00:00"
+  },
+  {
    "id": "d05d175e-c1d4-4ad5-9460-dd9edcf89419",
    "occurred_at": "2026-07-16T21:15:20.813985+00:00",
    "type": "tag",
@@ -4243,6 +4570,23 @@
    "created_at": "2026-10-16T02:05:41.46392+00:00"
   },
   {
+   "id": "e8e0b322-54bf-4afb-8cbb-100e0edd6349",
+   "occurred_at": "2026-10-29T21:28:42.124243+00:00",
+   "type": "drop",
+   "player_id": "sl-5189",
+   "player_name": "Eddy Pineiro",
+   "from_team_id": "team-5",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:28:42.124243+00:00"
+  },
+  {
    "id": "e8fa6dd0-56d7-4f9f-956b-aeef4d754482",
    "occurred_at": "2026-10-16T20:53:34.200851+00:00",
    "type": "fa_signing",
@@ -4627,6 +4971,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:56:58.444322+00:00"
+  },
+  {
+   "id": "f4fe4aa0-9a25-4f2f-8b55-2b863b317b11",
+   "occurred_at": "2026-10-29T21:40:39.771097+00:00",
+   "type": "drop",
+   "player_id": "sl-10219",
+   "player_name": "Chris Rodriguez",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "RB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-10-29T21:40:39.771097+00:00"
   },
   {
    "id": "f6841811-2c1a-453b-9592-a4af6c37049c",
