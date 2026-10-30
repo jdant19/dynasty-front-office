@@ -33,6 +33,17 @@ for the coming season (in-season level: $0.66), and one price fits stars and mid
 average pricing error $7.5, against about $10.4 with the first-non-starter level, where mid-tier
 players cost $0.31 a point and stars $0.70.
 
+## Units (P15)
+
+Points for what a player adds; dollars only for real cap money. In `prices.csv`:
+`points_now` (rest of this season, over in-season replacement); for each of 2027-2029
+`proj_points`, `points` (over the market replacement level), `auction_cost` (cap $ that production
+would cost in August), `salary`, `cap_saved` (cap $); `cap_saved_2027_29` (the contract's whole later
+value, x0.88 a year, rights included). In `ours_jordan.csv`: `lineup_points_now` (points to Jordan's
+lineup) next to the same later-season columns. Picks: points per rookie season and cap saved, as
+spreads (`val_picks_distribution.csv`). The sections below still quote some values in dollars where
+they were computed that way for the backtests.
+
 ## Two values, used for different things (`prices.csv`, `ours_jordan.csv`)
 
 Every player carries two values that are never added together for a decision (P14):

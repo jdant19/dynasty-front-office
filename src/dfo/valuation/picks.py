@@ -59,16 +59,18 @@ def realized_slot_values() -> pd.DataFrame:
     rows = []
     for _, p in picks.iterrows():
         sal0 = ROUND_SALARY.get(int(p["round"]), 1)
-        vals, por_any, starter, star = [], False, False, False
+        vals, pors, por_any, starter, star = [], [], False, False, False
         for j in range(4):
             y = int(p.season) + j
             if y > LAST_COMPLETE:
                 vals.append(np.nan)
+                pors.append(np.nan)
                 continue
             key = (y, p.player_id)
             pts = float(st.points.get(key, 0.0)) if isinstance(p.player_id, str) else 0.0
             rank = float(st.pos_rank.get(key, 999)) if isinstance(p.player_id, str) else 999
             por = max(0.0, pts - R.get(p.pos, 1e9)) if p.pos in R else 0.0
+            pors.append(por)
             por_any |= por > 0
             starter |= rank <= n_start.get(p.pos, 10) + (10 if p.pos in ("RB", "WR") else 0) / 2
             star |= rank <= 5
@@ -77,6 +79,7 @@ def realized_slot_values() -> pd.DataFrame:
         rows.append(dict(season=p.season, round=p["round"], pick=p.pick, overall=p.overall, owner=p.owner,
                          player=p.player, player_id=p.player_id, pos=p.pos, years_observed=observed,
                          value_y1=vals[0], value_y2=vals[1], value_y3=vals[2], value_y4=vals[3],
+                         points_y1=pors[0], points_y2=pors[1], points_y3=pors[2], points_y4=pors[3],
                          use_value=sum(h ** j * v for j, v in enumerate(vals) if not np.isnan(v)),
                          use_value_3yr=sum(h ** j * v for j, v in enumerate(vals[:3]) if not np.isnan(v)),
                          bust=not por_any, starter=starter, star=star))
@@ -108,11 +111,22 @@ def slot_curve(real: pd.DataFrame) -> pd.DataFrame:
                                                  starter=("starter", "mean"), star=("star", "mean"),
                                                  avg_use_value=("use_value", "mean")).round(3).reset_index()
     odds = odds.rename(columns={"overall": "slots"})
-    # the spread behind each average: a pick's value is lumpy (often $0, sometimes huge)
-    dist = full.groupby(band, observed=True).use_value.agg(
-        picks="size", mean="mean", zero_share=lambda v: (v == 0).mean(),
-        p25=lambda v: v.quantile(0.25), median="median", p75=lambda v: v.quantile(0.75),
-        p90=lambda v: v.quantile(0.9), best="max").round(2).reset_index().rename(columns={"overall": "slots"})
+    # the spread behind each average: a pick's value is lumpy (often nothing, sometimes huge).
+    # points: what the player added over the market replacement level, by rookie-deal season;
+    # cap: those seasons' auction cost minus rookie salary (use_value)
+    pts = full.assign(points_total=full[["points_y1", "points_y2", "points_y3", "points_y4"]].sum(axis=1))
+    g = pts.groupby(band, observed=True)
+    dist = pd.concat([
+        g.size().rename("picks"),
+        g.points_y1.mean().rename("points_y1"), g.points_y2.mean().rename("points_y2"),
+        g.points_y3.mean().rename("points_y3"), g.points_y4.mean().rename("points_y4"),
+        g.points_total.apply(lambda v: (v == 0).mean()).rename("chance_no_points"),
+        g.points_total.median().rename("points_total_median"),
+        g.points_total.quantile(0.75).rename("points_total_p75"),
+        g.points_total.quantile(0.9).rename("points_total_p90"),
+        g.use_value.mean().rename("cap_saved_mean"),
+        g.use_value.median().rename("cap_saved_median")], axis=1).round(2).reset_index().rename(
+        columns={"overall": "slots"})
     slots.round(1).to_csv(PROCESSED / "val_picks_slots.csv", index=False)
     odds.to_csv(PROCESSED / "val_picks_odds.csv", index=False)
     dist.to_csv(PROCESSED / "val_picks_distribution.csv", index=False)
@@ -126,8 +140,8 @@ def market_vs_use(slots: pd.DataFrame) -> pd.DataFrame:
     from dfo.valuation.prices import SNAP
     h = haircut()
     prices = pd.read_csv(PROCESSED / "prices.csv")
-    fut_cols = ["value_2027", "value_2028", "value_2029"]
-    free = prices.season_dollars.fillna(0) + sum(h ** (k + 1) * prices[c].fillna(0) for k, c in enumerate(fut_cols))
+    fut_cols = ["auction_cost_2027", "auction_cost_2028", "auction_cost_2029"]
+    free = prices._season_auction_equiv.fillna(0) + sum(h ** (k + 1) * prices[c].fillna(0) for k, c in enumerate(fut_cols))
     m = prices.fc_value.notna()
     fmap = IsotonicRegression(increasing=True, out_of_bounds="clip").fit(prices.fc_value[m], free[m])
     d = json.load(open(SNAP / "market" / "fantasycalc" / "latest.json"))

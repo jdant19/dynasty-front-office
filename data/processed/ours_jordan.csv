@@ -1,378 +1,378 @@
-player_id,player,pos,team,owner,on_roster,lineup_change,ours_season,ours_future,season_dollars,future_dollars,market_auction,fc_reference,dial_weight,dial_note,drop_if_added,made_at
-00-0039139,Jahmyr Gibbs,RB,DET,Jordan,True,85.10271968000006,56,17,80,17,95,78.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036358,CeeDee Lamb,WR,DAL,Jordan,True,60.95298879999996,40,0,45,0,70,33.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038543,Jaxon Smith-Njigba,WR,SEA,Zach,False,56.26828240000032,37,0,57,0,85,55.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038134,Kenneth Walker III,RB,KC,Ben,False,52.45088639999949,35,-1,68,-1,66,62.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036900,Ja'Marr Chase,WR,CIN,Jordan,True,44.77484000000004,30,0,35,0,76,63.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034857,Josh Allen,QB,BUF,Mike,False,44.73208529999988,30,0,59,0,26,57.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039075,Puka Nacua,WR,LA,Russ,False,41.170650399999886,27,0,48,0,92,15.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033280,Christian McCaffrey,RB,SF,Johnny,False,35.828812799999696,24,0,55,0,75,32.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038542,Bijan Robinson,RB,ATL,Russ,False,34.12055679999958,23,29,54,29,109,52.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036963,Amon-Ra St. Brown,WR,DET,Johnny,False,31.934451999999965,21,0,44,0,68,42.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038606,Parker Washington,WR,JAX,Jordan,True,29.71421200000009,20,-4,27,-4,23,21.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039404,Will Reichard,K,MIN,Jordan,True,29.005380822633697,19,0,16,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036555,Chuba Hubbard,RB,CAR,Jordan,True,24.073417280000513,16,0,39,0,22,34.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033288,George Kittle,TE,SF,Jordan,True,22.172471999999743,15,1,20,1,4,23.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037840,Kyren Williams,RB,LA,Qasim,False,23.27684479999948,15,0,47,0,64,33.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036223,Jonathan Taylor,RB,IND,Matt,False,19.043340799999896,13,0,45,0,95,43.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0032764,Derrick Henry,RB,BAL,Ryan,False,16.815180800000007,11,8,44,8,45,34.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037239,Chris Olave,WR,NO,Max,False,16.97003440000026,11,5,33,5,47,38.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035700,Josh Jacobs,RB,GB,Qasim,False,14.438476799999535,10,24,39,24,22,56.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037744,Trey McBride,TE,ARI,Russ,False,15.15118920000009,10,22,28,22,45,15.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037248,James Cook,RB,BUF,Matt,False,14.379059199999574,10,12,45,12,90,29.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039064,Zay Flowers,WR,BAL,Johnny,False,14.675786400000334,10,0,32,0,41,24.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039337,Malik Nabers,WR,NYG,Qasim,False,14.157730399999764,9,36,32,36,50,77.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036997,Javonte Williams,RB,DAL,Johnny,False,13.918572799999765,9,0,42,0,59,13.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031381,Davante Adams,WR,LA,Zach,False,12.97360239999989,9,0,31,0,8,18.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036442,Joe Burrow,QB,CIN,Russ,False,12.996625499999936,9,-10,41,-10,5,23.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039361,Bucky Irving,RB,TB,Jordan,True,11.437888000000157,8,38,34,38,48,57.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039338,Brock Bowers,TE,LV,Zach,False,12.254785199999787,8,22,26,22,27,50.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039851,Drake Maye,QB,NE,Mike,False,12.613346999999749,8,3,39,3,6,40.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-MIN,Vikings,DEF,MIN,Johnny,False,11.465080000000171,8,0,9,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040122,Ashton Jeanty,RB,LV,Max,False,10.873420799999849,7,87,40,87,63,139.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040667,Matthew Golden,WR,GB,Russ,False,10.901378399999658,7,27,27,27,23,54.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-WAS,Commanders,DEF,WAS,Jordan,True,10.250932592592562,7,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038124,Christian Watson,WR,GB,Zach,False,9.939274400000158,7,0,27,0,28,19.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037834,Brock Purdy,QB,SF,Matt,False,9.09415349999972,6,0,37,0,5,32.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036264,Jordan Love,QB,GB,Jordan,True,7.317135000000462,5,0,30,0,4,29.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033077,Dak Prescott,QB,DAL,Ryan,False,7.9094744999999875,5,-2,36,-2,5,28.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033106,Jared Goff,QB,DET,Johnny,False,6.174268199999688,4,0,38,0,2,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036275,D'Andre Swift,RB,CHI,Russ,False,5.496127999999771,4,0,38,0,22,46.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037238,Drake London,WR,ATL,Zach,False,5.498794400000179,4,0,27,0,53,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-CIN,Bengals,DEF,CIN,Qasim,False,6.185519999999769,4,0,5,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-JAX,Jaguars,DEF,JAX,Johnny,False,5.62319999999977,4,0,5,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-PIT,Steelers,DEF,PIT,Ryan,False,6.759200000000419,4,0,6,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040124,Tetairoa McMillan,WR,CAR,Johnny,False,5.069547999999713,3,44,26,44,35,69.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036971,Trevor Lawrence,QB,JAX,Qasim,False,3.874597199999698,3,0,36,0,4,33.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-KC,Chiefs,DEF,KC,,False,3.9049999999999727,3,0,4,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-DEN,Broncos,DEF,DEN,Zach,False,4.771199999999908,3,0,4,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-SEA,Seahawks,DEF,SEA,,False,4.032799999999952,3,0,4,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039910,Jayden Daniels,QB,WAS,Max,False,3.7979414999995242,3,-4,36,-4,2,31.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036410,Tee Higgins,WR,CIN,Russ,False,5.232365599999639,3,-15,28,-15,23,10.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039576,Spencer Shrader,K,IND,Mike,False,3.578136000000086,2,0,17,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036322,Justin Jefferson,WR,MIN,Qasim,False,2.316450399999667,2,0,26,0,39,44.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036554,Nico Collins,WR,HOU,Max,False,2.3682559999997466,2,0,25,0,25,22.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037838,Isaiah Likely,TE,NYG,Zach,False,3.445721999999705,2,0,22,0,16,19.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-NE,Patriots,DEF,NE,Max,False,3.2943999999997686,2,0,3,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040198,Ollie Gordon II,RB,MIA,Jordan,True,2.5048284800000147,2,-3,30,-3,3,36.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040743,Tyler Shough,QB,NO,Ryan,False,3.2404454999996233,2,-3,34,-3,4,13.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034796,Lamar Jackson,QB,BAL,Matt,False,2.3345144999996137,2,-22,33,-22,5,13.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040719,Bhayshul Tuten,RB,JAX,Russ,False,0.854127999999946,1,50,35,50,35,72.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040735,Luther Burden III,WR,CHI,Matt,False,1.4283543999999893,1,27,20,27,22,48.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037228,Jaylen Warren,RB,PIT,Max,False,1.1289343999999346,1,14,34,14,22,40.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035640,DK Metcalf,WR,PIT,Qasim,False,0.9695047999998678,1,4,17,4,10,20.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035719,Deebo Samuel Sr.,WR,SF,Jordan,True,1.302540800000088,1,0,13,0,2,8.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039150,Bryce Young,QB,CAR,Jordan,True,1.2334599000000708,1,0,29,0,2,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031408,Mike Evans,WR,SF,Russ,False,2.235041599999704,1,0,24,0,8,17.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031588,Stefon Diggs,WR,WAS,Johnny,False,1.2063303999998425,1,0,20,0,2,11.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039491,Jalen Coker,WR,CAR,Matt,False,1.983414399999674,1,0,23,0,10,23.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038563,Tre Tucker,WR,LV,Max,False,1.1915287999997872,1,0,18,0,4,10.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039065,Sam LaPorta,TE,DET,Max,False,1.3083756000000903,1,0,16,0,14,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-TB,Buccaneers,DEF,TB,,False,2.1868000000001757,1,0,3,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-CLE,Browns,DEF,CLE,Ben,False,1.7892000000003918,1,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-CHI,Bears,DEF,CHI,Matt,False,1.533600000000206,1,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-GB,Packers,DEF,GB,Mike,False,0.8519999999998618,1,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038996,Tucker Kraft,TE,GB,Johnny,False,1.1086236000001009,1,-2,13,-2,16,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037240,Jameson Williams,WR,DET,Russ,False,1.4949615999998969,1,-6,21,-6,22,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041511,Omar Cooper Jr.,WR,NYJ,Max,False,1.0361120000000028,1,-7,18,-7,2,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037740,Garrett Wilson,WR,NYJ,Qasim,False,1.7021839999999884,1,-27,21,-27,24,-3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041027,Jeremiyah Love,RB,ARI,Ben,False,0.0,0,83,17,83,22,133.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041037,Denzel Boston,WR,CLE,Ryan,False,0.3996431999999004,0,38,15,38,22,35.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041438,Carnell Tate,WR,TEN,Ryan,False,0.3774407999999312,0,37,15,37,21,51.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040784,Quinshon Judkins,RB,CLE,Matt,False,0.0,0,36,24,36,22,54.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040666,Omarion Hampton,RB,LAC,Ryan,False,0.0,0,30,17,30,22,54.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038559,Michael Wilson,WR,ARI,Matt,False,0.0,0,28,21,28,22,35.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041547,KC Concepcion,WR,CLE,Qasim,False,0.0,0,28,12,28,18,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040867,Makai Lemon,WR,PHI,Mike,False,0.0,0,27,6,27,17,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040715,Cam Skattebo,RB,NYG,Ben,False,0.0,0,25,23,25,22,32.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040129,Emeka Egbuka,WR,TB,Ben,False,0.21462320000000545,0,22,14,22,21,35.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040734,TreVeyon Henderson,RB,NE,Mike,False,0.0,0,19,6,19,19,24.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040126,Colston Loveland,TE,CHI,Ryan,False,0.7290947999999844,0,15,13,15,16,27.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040128,Tyler Warren,TE,IND,Johnny,False,0.5942622000000028,0,15,12,15,16,26.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041512,Jadarian Price,RB,SEA,Matt,False,0.0,0,13,7,13,9,35.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040730,RJ Harvey,RB,DEN,Zach,False,0.0,0,11,16,11,16,14.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041496,Jonah Coleman,RB,DEN,Ben,False,0.0,0,11,14,11,9,35.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039915,Ladd McConkey,WR,LAC,Johnny,False,0.0,0,11,8,11,21,17.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039919,Rome Odunze,WR,CHI,Ryan,False,0.0,0,11,10,11,21,12.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040236,Kyle Monangai,RB,CHI,Zach,False,0.0,0,10,13,10,16,18.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039738,Blake Corum,RB,LA,Zach,False,0.0,0,8,17,8,16,22.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036875,Rhamondre Stevenson,RB,NE,Zach,False,0.0,0,6,23,6,16,23.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038117,Wan'Dale Robinson,WR,TEN,Jordan,True,0.0,0,5,8,5,10,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041040,Antonio Williams,WR,WAS,Qasim,False,0.0,0,3,7,3,7,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040242,Jacory Croskey-Merritt,RB,WAS,Matt,False,0.0,0,2,15,2,5,15.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033873,Patrick Mahomes,QB,KC,Jordan,True,0.0,0,1,24,1,5,28.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036158,J.K. Dobbins,RB,DEN,Max,False,0.0,0,1,13,1,5,11.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039893,Brian Thomas Jr.,WR,JAX,Max,False,0.0,0,1,2,1,10,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033307,Kendrick Bourne,WR,ARI,Jordan,True,0.0,0,0,7,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036919,Kenny Gainwell,RB,TB,Jordan,True,0.0,0,0,7,0,5,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038935,Brenton Strange,TE,JAX,Jordan,True,0.17478299999993396,0,0,10,0,2,8.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0026498,Matthew Stafford,QB,LA,Zach,False,0.0,0,0,31,0,2,17.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039163,C.J. Stroud,QB,HOU,Zach,False,0.10453050000000985,0,0,29,0,2,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033119,Jacoby Brissett,QB,ARI,,False,0.0,0,0,28,0,1,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0029604,Kirk Cousins,QB,LV,,False,0.0,0,0,25,0,1,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0023459,Aaron Rodgers,QB,PIT,Russ,False,0.0,0,0,21,0,1,13.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038128,Malik Willis,QB,MIA,,False,0.0,0,0,17,0,1,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039917,Michael Penix Jr.,QB,ATL,,False,0.0,0,0,20,0,2,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036355,Justin Herbert,QB,LAC,Ben,False,0.0,0,0,15,0,2,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033537,Deshaun Watson,QB,CLE,,False,0.0,0,0,16,0,1,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034869,Sam Darnold,QB,SEA,,False,0.0,0,0,16,0,2,14.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034855,Baker Mayfield,QB,TB,,False,0.0,0,0,16,0,1,18.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0030565,Geno Smith,QB,NYJ,Max,False,0.0,0,0,14,0,1,13.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038400,Tanner McKee,QB,PHI,,False,0.0,0,0,14,0,1,11.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038597,Chase Brown,RB,CIN,Max,False,0.0,0,0,30,0,33,27.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035710,Daniel Jones,QB,IND,,False,0.0,0,0,10,0,2,12.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0032726,Ka'imi Fairbairn,K,HOU,Max,False,0.0,0,0,13,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035261,Tony Pollard,RB,TEN,Qasim,False,0.0,0,0,27,0,13,15.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036162,Tyler Bass,K,BUF,,False,0.0,0,0,11,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040676,Cam Ward,QB,TEN,,False,0.0,0,0,8,0,2,15.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036854,Evan McPherson,K,CIN,,False,0.0,0,0,10,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039409,Cam Little,K,JAX,Qasim,False,0.0,0,0,10,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035358,Chase McLaughlin,K,TB,,False,0.0,0,0,11,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033293,Aaron Jones,RB,MIN,Johnny,False,0.0,0,0,20,0,5,15.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038567,Chad Ryland,K,ARI,,False,0.0,0,0,10,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031136,Chris Boswell,K,PIT,Matt,False,0.0,0,0,10,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039172,Jake Bates,K,DET,,False,0.0,0,0,9,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033303,Harrison Butker,K,KC,Ben,False,0.0,0,0,8,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040074,Tyler Loop,K,BAL,Zach,False,0.0,0,0,9,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037256,Rachaad White,RB,WAS,Johnny,False,0.0,0,0,18,0,5,7.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035269,Matt Gay,K,LV,Russ,False,0.0,0,0,9,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039424,Devaughn Vele,WR,NO,Ben,False,0.7548815999998624,0,0,16,0,4,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039794,Braelon Allen,RB,NYJ,Matt,False,0.0,0,0,19,0,5,23.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036973,Travis Etienne,RB,NO,Ryan,False,0.0,0,0,19,0,22,7.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038797,Emanuel Wilson,RB,SEA,Ryan,False,0.0,0,0,19,0,4,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039067,Rashee Rice,WR,KC,Matt,False,0.0,0,0,14,0,21,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040279,Ryan Fitzgerald,K,CAR,,False,0.0,0,0,8,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031492,Jason Myers,K,SEA,Johnny,False,0.0,0,0,8,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036912,DeVonta Smith,WR,PHI,Ryan,False,0.5698615999999674,0,0,15,0,22,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037692,Brandon Aubrey,K,DAL,Ryan,False,0.0,0,0,8,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039040,De'Von Achane,RB,MIA,Max,False,0.0,0,0,15,0,22,54.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031203,Cairo Santos,K,CHI,,False,0.0,0,0,7,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038428,Andre Szmyt,K,CLE,,False,0.0,0,0,7,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035676,A.J. Brown,WR,NE,Matt,False,0.0,0,0,13,0,10,26.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033906,Alvin Kamara,RB,NO,Zach,False,0.0,0,0,15,0,5,8.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0030506,Travis Kelce,TE,KC,Qasim,False,0.5343365999999605,0,0,12,0,2,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040583,Woody Marks,RB,HOU,Mike,False,0.0,0,0,15,0,13,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034794,Jason Sanders,K,NYJ,,False,0.0,0,0,6,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034960,Jakobi Meyers,WR,JAX,Zach,False,0.0,0,0,10,0,4,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0025565,Nick Folk,K,ATL,,False,0.0,0,0,6,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035685,David Montgomery,RB,HOU,Zach,False,0.0,0,0,14,0,16,-5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0030279,Keenan Allen,WR,IND,Johnny,False,0.0,0,0,11,0,2,3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038933,Dalton Kincaid,TE,BUF,Qasim,False,0.35955360000002656,0,0,11,0,11,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035229,T.J. Hockenson,TE,MIN,Matt,False,0.3295908000000054,0,0,11,0,2,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0032569,Wil Lutz,K,DEN,,False,0.0,0,0,5,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038994,Jordan Addison,WR,MIN,Ryan,False,0.0,0,0,9,0,8,-5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037258,Dameon Pierce,RB,PHI,,False,0.0,0,0,13,0,1,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034351,Dallas Goedert,TE,PHI,Matt,False,0.6192312000000584,0,0,12,0,3,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037224,Cameron Dicker,K,LAC,,False,0.0,0,0,4,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036139,Rico Dowdle,RB,PIT,Qasim,False,0.0,0,0,13,0,12,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038997,Josh Downs,WR,IND,Russ,False,0.0,0,0,10,0,9,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034829,Mike Gesicki,TE,CIN,,False,0.07490699999993922,0,0,10,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0029822,Brandon McManus,K,LA,,False,0.0,0,0,4,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040899,Trey Smack,K,GB,,False,0.0,0,0,5,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038621,DeMario Douglas,WR,NE,Ben,False,0.0,0,0,8,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039410,Ryan Flournoy,WR,DAL,Mike,False,0.0,0,0,8,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037746,Brian Robinson,RB,ATL,Ryan,False,0.0,0,0,10,0,4,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038551,Kendre Miller,RB,NO,Ben,False,0.0,0,0,10,0,3,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033555,Mack Hollins,WR,NE,Mike,False,0.0,0,0,8,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035192,Joey Slye,K,TEN,,False,0.0,0,0,3,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-LA,Rams,DEF,LA,Matt,False,0.6816000000003442,0,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036040,Juwan Johnson,TE,NO,Zach,False,0.0,0,0,9,0,2,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033787,Jake Elliott,K,PHI,,False,0.0,0,0,3,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-DET,Lions,DEF,DET,Russ,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033526,Samaje Perine,RB,CIN,,False,0.0,0,0,7,0,2,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037263,Tyler Allgeier,RB,ARI,Johnny,False,0.0,0,0,9,0,9,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-NYJ,Jets,DEF,NYJ,,False,0.1420000000005075,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034383,Dalton Schultz,TE,HOU,Mike,False,0.0,0,0,9,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036894,Pat Freiermuth,TE,PIT,,False,0.0,0,0,9,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033090,Hunter Henry,TE,NE,Mike,False,0.0,0,0,9,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-LV,Raiders,DEF,LV,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037809,Chig Okonkwo,TE,WAS,,False,0.0,0,0,7,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036970,Kyle Pitts,TE,ATL,Ben,False,0.0,0,0,8,0,5,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037742,Treylon Burks,WR,WAS,,False,0.0,0,0,5,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-ATL,Falcons,DEF,ATL,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033862,Zane Gonzalez,K,MIA,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033110,Tyler Higbee,TE,LA,,False,0.0,0,0,8,0,1,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034348,Courtland Sutton,WR,DEN,,False,0.0,0,0,5,0,2,3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037157,Bam Knight,RB,ARI,,False,0.0,0,0,7,0,2,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040024,Darius Cooper,WR,PHI,,False,0.0,0,0,5,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-HOU,Texans,DEF,HOU,Mike,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040162,Dylan Sampson,RB,CLE,,False,0.0,0,0,7,0,2,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037741,Jahan Dotson,WR,ATL,,False,0.0,0,0,5,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034753,Mark Andrews,TE,BAL,,False,0.0,0,0,7,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-TEN,Titans,DEF,TEN,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038454,Keaton Mitchell,RB,LAC,,False,0.0,0,0,5,0,3,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-CAR,Panthers,DEF,CAR,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-LAC,Chargers,DEF,LAC,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038393,Dontayvion Wicks,WR,PHI,,False,0.0,0,0,5,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036550,Rashod Bateman,WR,BAL,,False,0.0,0,0,5,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0032464,Kalif Raymond,WR,CHI,,False,0.0,0,0,4,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038544,Quentin Johnston,WR,LAC,,False,0.0,0,0,3,0,3,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039066,Michael Mayer,TE,LV,,False,0.0,0,0,7,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037252,Greg Dulcich,TE,MIA,,False,0.0,0,0,6,0,1,3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039021,Roschon Johnson,RB,CHI,,False,0.0,0,0,6,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033908,Cooper Kupp,WR,SEA,,False,0.0,0,0,4,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038611,Chris Rodriguez Jr.,RB,JAX,,False,0.0,0,0,4,0,4,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039391,Kimani Vidal,RB,LAC,,False,0.0,0,0,4,0,2,3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0031610,Darren Waller,TE,CAR,,False,0.0,0,0,6,0,1,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037545,Rashid Shaheed,WR,SEA,,False,0.0,0,0,4,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-BAL,Ravens,DEF,BAL,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040184,KeAndre Lambert-Smith,WR,LAC,,False,0.0,0,0,3,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039299,George Holani,RB,SEA,,False,0.0,0,0,5,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-BUF,Bills,DEF,BUF,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039165,Zach Charbonnet,RB,SEA,Qasim,False,0.0,0,0,5,0,5,20.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038098,Pierre Strong,RB,GB,,False,0.0,0,0,6,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036988,Josh Palmer,WR,BUF,,False,0.0,0,0,2,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040590,Konata Mumpfield,WR,LA,,False,0.0,0,0,3,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036407,Jerry Jeudy,WR,CLE,Ben,False,0.0,0,0,3,0,2,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039793,AJ Barner,TE,SEA,,False,0.0,0,0,5,0,1,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038558,Darnell Washington,TE,PIT,,False,0.0,0,0,5,0,1,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040009,Savion Williams,WR,GB,,False,0.0,0,0,3,0,1,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038951,Sean Tucker,RB,TB,,False,0.0,0,0,4,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-DAL,Cowboys,DEF,DAL,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034975,Justice Hill,RB,BAL,,False,0.0,0,0,4,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040237,Tez Johnson,WR,TB,,False,0.0,0,0,2,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0032951,Laquon Treadwell,WR,IND,,False,0.0,0,0,2,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-IND,Colts,DEF,IND,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036244,Colby Parkinson,TE,LA,,False,0.0,0,0,4,0,1,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035891,Cody White,WR,LV,,False,0.0,0,0,2,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041100,Josh Cameron,WR,JAX,,False,0.0,0,0,2,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038640,Jalen Brooks,WR,ARI,,False,0.0,0,0,2,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037614,John Metchie III,WR,CAR,,False,0.0,0,0,2,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040170,Elic Ayomanor,WR,TEN,,False,0.0,0,0,2,0,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040563,Efton Chism III,WR,NE,,False,0.0,0,0,2,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-PHI,Eagles,DEF,PHI,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041395,Eli Raridon,TE,NE,,False,0.0,0,0,4,0,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038129,Cade Otton,TE,TB,,False,0.0,0,0,4,0,1,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040785,Dohnte Meyers,WR,CIN,,False,0.0,0,0,1,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041070,Reggie Virgil,WR,ARI,,False,0.0,0,0,2,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-ARI,Cardinals,DEF,ARI,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040646,Jalen Royals,WR,KC,,False,0.0,0,0,1,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037005,Tommy Tremble,TE,CAR,,False,0.0,0,0,4,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-DEF-MIA,Dolphins,DEF,MIA,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040131,Kyle Williams,WR,NE,,False,0.0,0,0,2,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035537,Ty Johnson,RB,BUF,,False,0.0,0,0,2,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036567,Elijah Mitchell,RB,PHI,,False,0.0,0,0,2,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040189,Oronde Gadsden II,TE,LAC,,False,0.0,0,0,3,0,1,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033699,Austin Ekeler,RB,WAS,,False,0.0,0,0,2,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038977,Tank Dell,WR,HOU,Mike,False,0.0,0,0,1,0,1,4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040648,Tory Horton,WR,SEA,,False,0.0,0,0,1,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037291,Jalen Nailor,WR,LV,,False,0.0,0,0,1,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037120,Tyler Goodson,RB,DAL,,False,0.0,0,0,2,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038976,Marvin Mims Jr.,WR,DEN,,False,0.0,0,0,1,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038046,Charlie Kolar,TE,LAC,,False,0.0,0,0,3,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038840,Brycen Tremayne,WR,CAR,,False,0.0,0,0,1,0,2,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033881,Evan Engram,TE,DEN,,False,0.0,0,0,3,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036626,Dyami Brown,WR,WAS,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035662,Marquise Brown,WR,PHI,,False,0.0,0,0,1,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040298,Andrew Armstrong,WR,KC,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039041,Elijah Higgins,TE,ARI,,False,0.0,0,0,3,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041125,Seth McGowan,RB,IND,Mike,False,0.0,0,0,2,0,2,11.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040556,Corey Kiner,RB,NE,,False,0.0,0,0,2,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036637,Noah Gray,TE,KC,,False,0.0,0,0,2,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041529,Kevin Coleman Jr.,WR,MIA,,False,0.0,0,0,1,0,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039074,Davis Allen,TE,LA,,False,0.0,0,0,3,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039146,Jayden Reed,WR,GB,Ryan,False,0.0,0,0,1,0,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033955,Jeremy McNichols,RB,WAS,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036259,Jauan Jennings,WR,MIN,,False,0.0,0,0,1,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040584,Gunnar Helm,TE,TEN,,False,0.0,0,0,2,0,1,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038394,Will Mallory,TE,IND,,False,0.0,0,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039874,Jaylen Wright,RB,MIA,,False,0.0,0,0,1,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039032,Tyjae Spears,RB,TEN,Qasim,False,0.0,0,0,1,0,4,3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040887,Josh Cuevas,TE,BAL,,False,0.0,0,0,2,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039868,Troy Franklin,WR,DEN,,False,0.0,0,0,1,0,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035631,Drew Sample,TE,CIN,,False,0.0,0,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036849,Tutu Atwell,WR,LA,,False,0.0,0,0,1,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035689,Dawson Knox,TE,BUF,,False,0.0,0,0,2,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036906,Khalil Herbert,RB,ATL,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039364,Sione Vaki,RB,DET,,False,0.0,0,0,1,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039798,Isaiah Davis,RB,NYJ,,False,0.0,0,0,1,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040782,Isaiah Bond,WR,CLE,,False,0.0,0,0,1,0,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0032392,Austin Hooper,TE,ATL,,False,0.0,0,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040644,Trevor Etienne,RB,CAR,,False,0.0,0,0,1,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041550,Brenen Thompson,WR,LAC,,False,0.0,0,0,0,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036924,Michael Carter,RB,TEN,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040394,Anthony Tyus III,RB,CAR,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038794,Jaleel McLaughlin,RB,CLE,,False,0.0,0,0,1,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033217,Mo Alie-Cox,TE,IND,,False,0.0,0,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040187,Mitchell Evans,TE,CAR,,False,0.0,0,0,2,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039751,Jordan Whittington,WR,LA,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039407,Dylan Laube,RB,LV,,False,0.0,0,0,1,0,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039814,Erick All,TE,CIN,,False,0.0,0,0,1,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039875,Ray Davis,RB,BUF,,False,0.0,0,0,0,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036265,AJ Dillon,RB,CAR,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039530,Brevyn Spann-Ford,TE,DAL,,False,0.0,0,0,1,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041558,Sam Roush,TE,CHI,,False,0.0,0,0,1,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038738,Hunter Luepke,RB,DAL,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038115,Daniel Bellinger,TE,TEN,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040705,Chimere Dike,WR,TEN,,False,0.0,0,0,0,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036628,John Bates,TE,WAS,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040238,LeQuint Allen Jr.,RB,JAX,,False,0.0,0,0,0,0,1,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040179,DJ Giddens,RB,IND,,False,0.0,0,0,0,0,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041104,Demond Claiborne,RB,MIN,,False,0.0,0,0,0,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039796,Rasheen Ali,RB,BAL,,False,0.0,0,0,0,0,2,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040894,Malik Benson,WR,LV,,False,0.0,0,0,0,0,2,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040208,Tahj Brooks,RB,CIN,,False,0.0,0,0,0,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037091,Bo Melton,WR,GB,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041524,Will Kacmarek,TE,MIA,,False,0.0,0,0,1,0,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040948,J. Michael Sturdivant,WR,GB,,False,0.0,0,0,0,0,2,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041069,Colbie Young,WR,CIN,,False,0.0,0,0,0,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033589,David Moore,WR,CAR,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038547,Luke Schoonmaker,TE,DAL,,False,0.0,0,0,1,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039912,Ben Sinnott,TE,WAS,,False,0.0,0,0,1,0,1,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037594,Julius Chestnut,RB,TEN,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034775,Christian Kirk,WR,SF,Russ,False,0.0,0,0,0,0,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040352,Coleman Owen,WR,GB,,False,0.0,0,0,0,0,1,,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037261,Khalil Shakir,WR,BUF,Mike,False,0.0,0,-1,9,-1,6,3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040878,Mike Washington Jr.,RB,LV,Qasim,False,0.0,0,-1,5,-1,4,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039849,Marvin Harrison Jr.,WR,HOU,Johnny,False,0.0,0,-1,4,-1,7,12.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037525,Jordan Mason,RB,MIN,Mike,False,0.0,0,-2,21,-2,2,17.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039880,Malik Washington,WR,MIA,Russ,False,0.0,0,-2,11,-2,2,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040138,Jaylin Noel,WR,HOU,Russ,False,0.0,0,-2,6,-2,4,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041562,Fernando Mendoza,QB,LV,Ben,False,0.0,0,-2,0,-2,1,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035228,Kyler Murray,QB,MIN,Ben,False,0.0,0,-3,16,-3,2,14.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039894,Xavier Worthy,WR,KC,Ryan,False,0.0,0,-3,9,-3,6,-3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041042,Malachi Fields,WR,NYG,Ryan,False,0.0,0,-3,5,-3,4,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039811,MarShawn Lloyd,RB,GB,Ben,False,0.0,0,-3,7,-3,3,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039918,Caleb Williams,QB,CHI,Qasim,False,0.6689951999999266,0,-4,32,-4,2,33.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041523,Caleb Douglas,WR,MIA,Matt,False,0.0,0,-4,11,-4,2,9.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039890,Adonai Mitchell,WR,NYJ,Ben,False,0.0,0,-4,5,-4,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040134,Pat Bryant,WR,DEN,Zach,False,0.0,0,-4,4,-4,2,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041052,Kaelon Black,RB,SF,Zach,False,0.0,0,-4,5,-4,3,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040669,Isaac TeSlaa,WR,DET,Ryan,False,0.0,0,-4,3,-4,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038041,Jake Ferguson,TE,DAL,Ben,False,0.0,0,-4,5,-4,2,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041047,Chris Brazzell II,WR,CAR,Jordan,True,0.0,0,-5,0,-5,1,-4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040736,Mason Taylor,TE,NYJ,Matt,False,0.0,0,-5,8,-5,1,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041013,Emmett Johnson,RB,KC,Johnny,False,0.0,0,-5,3,-5,7,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040890,Cyrus Allen,WR,KC,Zach,False,0.0,0,-5,1,-5,2,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041096,Kaytron Allen,RB,MIA,Mike,False,0.0,0,-5,0,-5,2,-3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040876,Elijah Sarratt,WR,BAL,Max,False,0.0,0,-5,0,-5,1,-5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041443,Skyler Bell,WR,BUF,Russ,False,0.0,0,-5,0,-5,1,-4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039901,Keon Coleman,WR,BUF,Matt,False,0.0,0,-6,8,-6,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0033921,Chris Godwin Jr.,WR,TB,Max,False,0.0,0,-6,6,-6,4,0.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039344,Jonathon Brooks,RB,CAR,Qasim,False,0.0,0,-6,3,-6,2,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040727,Tre Harris,WR,LAC,Ben,False,0.0,0,-7,5,-7,2,-3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040130,Jayden Higgins,WR,HOU,Mike,False,0.0,0,-7,0,-7,2,2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041489,Germie Bernard,WR,PIT,Matt,False,0.0,0,-8,12,-8,2,16.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041525,Chris Bell,WR,MIA,Russ,False,0.0,0,-8,2,-8,5,-4.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041044,Zachariah Branch,WR,ATL,Jordan,True,0.0,0,-9,1,-9,2,-6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040870,Ja'Kobi Lane,WR,BAL,Johnny,False,0.0,0,-9,5,-9,2,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041048,Ted Hurst III,WR,TB,Russ,False,0.0,0,-9,4,-9,2,-2.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040886,Nicholas Singleton,RB,TEN,Zach,False,0.0,0,-9,0,-9,1,-3.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041483,Eli Stowers,TE,PHI,Ben,False,0.0,0,-9,1,-9,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041035,De'Zhaun Stribling,WR,SF,Mike,False,0.0,0,-9,0,-9,1,5.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041032,Kenyon Sadiq,TE,NYJ,Max,False,0.0,0,-10,4,-10,2,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040142,Kaleb Johnson,RB,GB,Qasim,False,0.0,0,-10,1,-10,2,-10.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0039732,Bo Nix,QB,DEN,Mike,False,0.0,0,-11,17,-11,2,6.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040718,Travis Hunter,WR,,Ryan,False,0.0,0,-11,0,-11,1,-1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0041029,Jordyn Tyson,WR,NO,Max,False,0.0,0,-12,0,-12,1,30.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040663,Harold Fannin Jr.,TE,CLE,Jordan,True,0.0,0,-14,9,-14,8,-10.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0040691,Jaxson Dart,QB,NYG,Jordan,True,0.0,0,-24,11,-24,1,-11.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037664,Alec Pierce,WR,IND,Max,False,0.0,0,-25,3,-25,2,-13.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034827,DJ Moore,WR,BUF,Mike,False,0.16281759999992573,0,-26,14,-26,10,-14.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036613,Jaylen Waddle,WR,DEN,Ryan,False,0.0,0,-32,10,-32,21,-35.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036389,Jalen Hurts,QB,PHI,Max,False,0.0,0,-39,23,-39,2,-22.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0038120,Breece Hall,RB,NYJ,Ben,False,0.0,0,-42,27,-42,22,1.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0036261,Brandon Aiyuk,WR,SF,Ben,False,0.0,0,-42,0,-42,2,-42.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0034844,Saquon Barkley,RB,PHI,Mike,False,0.0,0,-48,15,-48,22,-21.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0035659,Terry McLaurin,WR,WAS,Russ,False,0.0,0,-52,10,-52,4,-58.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
-00-0037247,George Pickens,WR,DAL,Ryan,False,0.0,0,-93,23,-93,24,-70.0,1.0,placeholder 1.0 until Phase 5 computes the dial,00-0033307,2026-10-30T17:00:24+00:00
+player_id,player,pos,team,owner,on_roster,lineup_points_now,points_now,points_2027,points_2028,points_2029,cap_saved_2027_29,market_auction,fc_reference,drop_if_added,made_at
+00-0039139,Jahmyr Gibbs,RB,DET,Jordan,True,85.1,120.9,83.0,91.3,83.0,17,95,78.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036358,CeeDee Lamb,WR,DAL,Jordan,True,61.0,68.6,60.6,52.5,34.4,0,70,33.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038543,Jaxon Smith-Njigba,WR,SEA,Zach,False,56.3,86.1,73.7,86.0,86.1,0,85,55.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038134,Kenneth Walker III,RB,KC,Ben,False,52.5,103.1,56.8,70.6,41.1,-1,66,62.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036900,Ja'Marr Chase,WR,CIN,Jordan,True,44.8,53.6,65.6,66.9,48.4,0,76,63.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034857,Josh Allen,QB,BUF,Mike,False,44.7,89.6,21.7,20.8,24.9,0,26,57.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039075,Puka Nacua,WR,LA,Russ,False,41.2,72.0,79.8,80.9,76.9,0,92,15.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033280,Christian McCaffrey,RB,SF,Johnny,False,35.8,83.4,64.7,41.1,18.1,0,75,32.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038542,Bijan Robinson,RB,ATL,Russ,False,34.1,81.8,95.1,91.9,85.1,29,109,52.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036963,Amon-Ra St. Brown,WR,DET,Johnny,False,31.9,66.4,58.5,63.4,39.3,0,68,42.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038606,Parker Washington,WR,JAX,Jordan,True,29.7,40.8,19.6,21.5,19.1,-4,23,21.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039404,Will Reichard,K,MIN,Jordan,True,29.0,24.1,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036555,Chuba Hubbard,RB,CAR,Jordan,True,24.1,59.2,18.1,18.1,12.9,0,22,34.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037840,Kyren Williams,RB,LA,Qasim,False,23.3,71.8,54.9,49.1,20.4,0,64,33.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033288,George Kittle,TE,SF,Jordan,True,22.2,30.6,2.8,1.1,0.8,1,4,23.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036223,Jonathan Taylor,RB,IND,Matt,False,19.0,67.9,83.0,54.9,39.1,0,95,43.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037239,Chris Olave,WR,NO,Max,False,17.0,50.2,40.2,29.7,22.6,5,47,38.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0032764,Derrick Henry,RB,BAL,Ryan,False,16.8,65.9,38.7,18.1,13.1,8,45,34.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037744,Trey McBride,TE,ARI,Russ,False,15.2,41.7,39.1,30.0,27.9,22,45,15.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039064,Zay Flowers,WR,BAL,Johnny,False,14.7,48.2,35.0,40.5,29.7,0,41,24.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035700,Josh Jacobs,RB,GB,Qasim,False,14.4,58.5,18.1,14.8,10.1,24,22,56.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037248,James Cook,RB,BUF,Matt,False,14.4,67.8,78.2,63.9,33.7,12,90,29.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039337,Malik Nabers,WR,NYG,Qasim,False,14.2,47.8,43.1,48.3,52.7,36,50,77.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036997,Javonte Williams,RB,DAL,Johnny,False,13.9,63.3,50.8,41.1,18.1,0,59,13.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0031381,Davante Adams,WR,LA,Zach,False,13.0,46.8,5.7,1.3,1.0,0,8,18.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036442,Joe Burrow,QB,CIN,Russ,False,13.0,62.5,3.1,3.1,3.1,-10,5,23.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039851,Drake Maye,QB,NE,Mike,False,12.6,59.4,4.0,3.1,15.5,3,6,40.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039338,Brock Bowers,TE,LV,Zach,False,12.3,39.2,22.5,24.5,31.4,22,27,50.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-MIN,Vikings,DEF,MIN,Johnny,False,11.5,13.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039361,Bucky Irving,RB,TB,Jordan,True,11.4,52.0,41.7,35.5,29.4,38,48,57.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040122,Ashton Jeanty,RB,LV,Max,False,10.9,60.6,54.4,50.4,52.2,87,63,139.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040667,Matthew Golden,WR,GB,Russ,False,10.9,41.4,19.7,22.6,21.4,27,23,54.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-WAS,Commanders,DEF,WAS,Jordan,True,10.3,1.8,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038124,Christian Watson,WR,GB,Zach,False,9.9,40.7,23.6,18.9,15.5,0,28,19.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037834,Brock Purdy,QB,SF,Matt,False,9.1,55.9,3.1,2.9,2.9,0,5,32.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033077,Dak Prescott,QB,DAL,Ryan,False,7.9,55.0,3.1,0.8,0.8,-2,5,28.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036264,Jordan Love,QB,GB,Jordan,True,7.3,45.8,2.6,0.8,0.8,0,4,29.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-PIT,Steelers,DEF,PIT,Ryan,False,6.8,8.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033106,Jared Goff,QB,DET,Johnny,False,6.2,57.1,0.8,0.8,0.8,0,2,30.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-CIN,Bengals,DEF,CIN,Qasim,False,6.2,8.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+DEF-JAX,Jaguars,DEF,JAX,Johnny,False,5.6,7.5,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036275,D'Andre Swift,RB,CHI,Russ,False,5.5,56.8,18.1,18.1,13.1,0,22,46.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037238,Drake London,WR,ATL,Zach,False,5.5,40.5,45.5,43.6,31.4,0,53,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036410,Tee Higgins,WR,CIN,Russ,False,5.2,43.1,19.7,19.0,13.7,-15,23,10.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040124,Tetairoa McMillan,WR,CAR,Johnny,False,5.1,39.9,29.7,29.7,29.7,44,35,69.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-DEN,Broncos,DEF,DEN,Zach,False,4.8,6.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+DEF-SEA,Seahawks,DEF,SEA,,False,4.0,5.7,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036971,Trevor Lawrence,QB,JAX,Qasim,False,3.9,55.2,2.9,2.4,2.3,0,4,33.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-KC,Chiefs,DEF,KC,,False,3.9,5.7,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039910,Jayden Daniels,QB,WAS,Max,False,3.8,55.2,0.8,0.8,2.7,-4,2,31.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039576,Spencer Shrader,K,IND,Mike,False,3.6,25.5,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037838,Isaiah Likely,TE,NYG,Zach,False,3.4,33.5,12.8,7.5,3.3,0,16,19.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-NE,Patriots,DEF,NE,Max,False,3.3,5.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040743,Tyler Shough,QB,NO,Ryan,False,3.2,51.3,2.3,0.8,0.8,-3,4,13.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040198,Ollie Gordon II,RB,MIA,Jordan,True,2.5,45.3,1.8,1.6,1.3,-3,3,36.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036554,Nico Collins,WR,HOU,Max,False,2.4,37.2,21.1,19.4,14.0,0,25,22.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036322,Justin Jefferson,WR,MIN,Qasim,False,2.3,39.5,33.4,29.7,18.0,0,39,44.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034796,Lamar Jackson,QB,BAL,Matt,False,2.3,50.5,3.1,0.8,3.1,-22,5,13.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0031408,Mike Evans,WR,SF,Russ,False,2.2,36.1,6.0,1.3,1.0,0,8,17.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-TB,Buccaneers,DEF,TB,,False,2.2,3.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039491,Jalen Coker,WR,CAR,Matt,False,2.0,34.1,7.7,7.7,7.7,0,10,23.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-CLE,Browns,DEF,CLE,Ben,False,1.8,3.5,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037740,Garrett Wilson,WR,NYJ,Qasim,False,1.7,31.9,20.1,18.9,14.8,-27,24,-3.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-CHI,Bears,DEF,CHI,Matt,False,1.5,3.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037240,Jameson Williams,WR,DET,Russ,False,1.5,32.3,18.3,17.6,7.7,-6,22,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040735,Luther Burden III,WR,CHI,Matt,False,1.4,29.7,18.6,19.3,19.8,27,22,48.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035719,Deebo Samuel Sr.,WR,SF,Jordan,True,1.3,19.5,1.0,1.0,0.5,0,2,8.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039065,Sam LaPorta,TE,DET,Max,False,1.3,24.9,11.4,12.0,4.5,0,14,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039150,Bryce Young,QB,CAR,Jordan,True,1.2,43.7,0.8,0.8,0.8,0,2,30.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0031588,Stefon Diggs,WR,WAS,Johnny,False,1.2,29.9,1.1,1.0,0.5,0,2,11.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038563,Tre Tucker,WR,LV,Max,False,1.2,28.0,2.4,1.1,1.0,0,4,10.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037228,Jaylen Warren,RB,PIT,Max,False,1.1,51.8,18.1,18.1,13.1,14,22,40.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038996,Tucker Kraft,TE,GB,Johnny,False,1.1,20.4,12.8,12.8,8.9,-2,16,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035640,DK Metcalf,WR,PIT,Qasim,False,1.0,26.3,7.7,2.4,1.0,4,10,20.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041511,Omar Cooper Jr.,WR,NYJ,Max,False,1.0,26.8,1.1,4.8,5.6,-7,2,30.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040719,Bhayshul Tuten,RB,JAX,Russ,False,0.9,53.3,30.1,28.6,18.1,50,35,72.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-GB,Packers,DEF,GB,Mike,False,0.9,2.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039424,Devaughn Vele,WR,NO,Ben,False,0.8,24.7,2.4,1.0,0.5,0,4,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040126,Colston Loveland,TE,CHI,Ryan,False,0.7,19.1,12.8,12.8,12.8,15,16,27.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-LA,Rams,DEF,LA,Matt,False,0.7,2.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039918,Caleb Williams,QB,CHI,Qasim,False,0.7,48.8,0.8,0.8,2.6,-4,2,33.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040128,Tyler Warren,TE,IND,Johnny,False,0.6,18.1,12.8,12.8,12.8,15,16,26.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036912,DeVonta Smith,WR,PHI,Ryan,False,0.6,23.4,18.7,15.8,7.7,0,22,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034351,Dallas Goedert,TE,PHI,Matt,False,0.6,18.3,1.5,1.1,0.4,0,3,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0030506,Travis Kelce,TE,KC,Qasim,False,0.5,18.7,1.1,0.4,0.3,0,2,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041037,Denzel Boston,WR,CLE,Ryan,False,0.4,22.2,18.0,18.9,19.2,38,22,35.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041438,Carnell Tate,WR,TEN,Ryan,False,0.4,22.1,17.6,19.8,22.8,37,21,51.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038933,Dalton Kincaid,TE,BUF,Qasim,False,0.4,17.4,9.2,5.8,1.6,0,11,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035229,T.J. Hockenson,TE,MIN,Matt,False,0.3,17.1,1.1,1.1,0.4,0,2,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040129,Emeka Egbuka,WR,TB,Ben,False,0.2,21.0,17.5,18.7,17.9,22,21,35.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038935,Brenton Strange,TE,JAX,Jordan,True,0.2,14.7,1.1,1.1,0.4,0,2,8.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034827,DJ Moore,WR,BUF,Mike,False,0.2,21.7,7.7,7.0,1.3,-26,10,-14.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039163,C.J. Stroud,QB,HOU,Zach,False,0.1,44.5,0.8,0.8,0.8,0,2,30.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034829,Mike Gesicki,TE,CIN,,False,0.1,15.3,0.3,0.2,0.0,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-NYJ,Jets,DEF,NYJ,,False,0.1,1.8,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0041027,Jeremiyah Love,RB,ARI,Ben,False,0.0,25.3,18.1,54.4,43.0,83,22,133.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040784,Quinshon Judkins,RB,CLE,Matt,False,0.0,36.2,18.1,34.0,18.1,36,22,54.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040666,Omarion Hampton,RB,LAC,Ryan,False,0.0,25.8,18.1,27.0,18.1,30,22,54.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038559,Michael Wilson,WR,ARI,Matt,False,0.0,31.7,18.3,15.8,7.7,28,22,35.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041547,KC Concepcion,WR,CLE,Qasim,False,0.0,18.3,15.3,17.7,17.5,28,18,30.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040867,Makai Lemon,WR,PHI,Mike,False,0.0,9.2,14.1,17.6,17.7,27,17,30.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040715,Cam Skattebo,RB,NYG,Ben,False,0.0,34.3,18.1,18.1,13.1,25,22,32.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040734,TreVeyon Henderson,RB,NE,Mike,False,0.0,9.0,15.4,18.1,14.5,19,19,24.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041512,Jadarian Price,RB,SEA,Matt,False,0.0,10.5,7.3,13.1,13.1,13,9,35.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040730,RJ Harvey,RB,DEN,Zach,False,0.0,23.5,13.1,12.2,6.1,11,16,14.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041496,Jonah Coleman,RB,DEN,Ben,False,0.0,20.8,7.2,10.7,7.9,11,9,35.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039915,Ladd McConkey,WR,LAC,Johnny,False,0.0,12.7,17.6,17.1,7.7,11,21,17.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039919,Rome Odunze,WR,CHI,Ryan,False,0.0,15.3,18.0,17.7,13.3,11,21,12.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040236,Kyle Monangai,RB,CHI,Zach,False,0.0,19.2,13.1,13.1,12.2,10,16,18.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039738,Blake Corum,RB,LA,Zach,False,0.0,26.0,13.1,11.8,4.9,8,16,22.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036875,Rhamondre Stevenson,RB,NE,Zach,False,0.0,35.0,13.1,10.4,3.6,6,16,23.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038117,Wan'Dale Robinson,WR,TEN,Jordan,True,0.0,11.7,7.6,3.6,1.4,5,10,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041040,Antonio Williams,WR,WAS,Qasim,False,0.0,10.6,5.1,5.1,5.7,3,7,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040242,Jacory Croskey-Merritt,RB,WAS,Matt,False,0.0,22.3,3.9,3.9,1.9,2,5,15.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033873,Patrick Mahomes,QB,KC,Jordan,True,0.0,36.9,3.1,2.6,2.6,1,5,28.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036158,J.K. Dobbins,RB,DEN,Max,False,0.0,19.0,3.9,1.4,0.6,1,5,11.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039893,Brian Thomas Jr.,WR,JAX,Max,False,0.0,3.2,7.7,7.7,7.7,1,10,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033307,Kendrick Bourne,WR,ARI,Jordan,True,0.0,10.2,0.5,0.0,0.0,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036919,Kenny Gainwell,RB,TB,Jordan,True,0.0,11.0,3.9,1.7,0.9,0,5,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0026498,Matthew Stafford,QB,LA,Zach,False,0.0,47.3,0.8,0.0,0.0,0,2,17.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033119,Jacoby Brissett,QB,ARI,,False,0.0,42.2,0.0,0.0,0.0,0,1,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0029604,Kirk Cousins,QB,LV,,False,0.0,38.5,0.0,0.0,0.0,0,1,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0023459,Aaron Rodgers,QB,PIT,Russ,False,0.0,31.2,0.0,0.0,0.0,0,1,13.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038128,Malik Willis,QB,MIA,,False,0.0,25.2,0.0,0.0,0.1,0,1,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039917,Michael Penix Jr.,QB,ATL,,False,0.0,30.0,0.7,0.0,0.6,0,2,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036355,Justin Herbert,QB,LAC,Ben,False,0.0,22.1,0.8,0.8,0.8,0,2,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033537,Deshaun Watson,QB,CLE,,False,0.0,24.6,0.0,0.0,0.0,0,1,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034869,Sam Darnold,QB,SEA,,False,0.0,24.3,0.7,0.7,0.7,0,2,14.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034855,Baker Mayfield,QB,TB,,False,0.0,24.1,0.0,0.0,0.0,0,1,18.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0030565,Geno Smith,QB,NYJ,Max,False,0.0,21.3,0.0,0.0,0.0,0,1,13.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038400,Tanner McKee,QB,PHI,,False,0.0,20.5,0.0,0.0,0.0,0,1,11.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038597,Chase Brown,RB,CIN,Max,False,0.0,44.7,28.4,18.1,18.1,0,33,27.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035710,Daniel Jones,QB,IND,,False,0.0,15.4,0.7,0.0,0.0,0,2,12.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0032726,Ka'imi Fairbairn,K,HOU,Max,False,0.0,19.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0035261,Tony Pollard,RB,TEN,Qasim,False,0.0,40.2,10.4,3.6,1.5,0,13,15.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036162,Tyler Bass,K,BUF,,False,0.0,16.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040676,Cam Ward,QB,TEN,,False,0.0,12.8,0.5,0.0,0.7,0,2,15.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036854,Evan McPherson,K,CIN,,False,0.0,15.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039409,Cam Little,K,JAX,Qasim,False,0.0,15.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0035358,Chase McLaughlin,K,TB,,False,0.0,16.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033293,Aaron Jones,RB,MIN,Johnny,False,0.0,30.4,3.3,1.2,0.4,0,5,15.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038567,Chad Ryland,K,ARI,,False,0.0,15.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0031136,Chris Boswell,K,PIT,Matt,False,0.0,14.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039172,Jake Bates,K,DET,,False,0.0,13.1,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033303,Harrison Butker,K,KC,Ben,False,0.0,12.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040074,Tyler Loop,K,BAL,Zach,False,0.0,13.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037256,Rachaad White,RB,WAS,Johnny,False,0.0,26.9,3.9,2.5,1.2,0,5,7.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035269,Matt Gay,K,LV,Russ,False,0.0,13.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039794,Braelon Allen,RB,NYJ,Matt,False,0.0,29.1,3.9,2.9,2.1,0,5,23.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036973,Travis Etienne,RB,NO,Ryan,False,0.0,28.7,18.0,13.1,9.6,0,22,7.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038797,Emanuel Wilson,RB,SEA,Ryan,False,0.0,28.6,2.3,0.9,0.3,0,4,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039067,Rashee Rice,WR,KC,Matt,False,0.0,20.4,17.9,17.5,7.7,0,21,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040279,Ryan Fitzgerald,K,CAR,,False,0.0,12.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0031492,Jason Myers,K,SEA,Johnny,False,0.0,12.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037692,Brandon Aubrey,K,DAL,Ryan,False,0.0,12.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039040,De'Von Achane,RB,MIA,Max,False,0.0,23.0,18.1,31.4,18.1,0,22,54.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0031203,Cairo Santos,K,CHI,,False,0.0,10.8,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038428,Andre Szmyt,K,CLE,,False,0.0,10.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0035676,A.J. Brown,WR,NE,Matt,False,0.0,19.2,7.7,7.7,4.1,0,10,26.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033906,Alvin Kamara,RB,NO,Zach,False,0.0,22.5,3.1,1.1,0.2,0,5,8.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040583,Woody Marks,RB,HOU,Mike,False,0.0,22.5,10.4,3.9,2.8,0,13,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034794,Jason Sanders,K,NYJ,,False,0.0,9.1,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0034960,Jakobi Meyers,WR,JAX,Zach,False,0.0,14.7,2.4,1.0,1.0,0,4,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0025565,Nick Folk,K,ATL,,False,0.0,8.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0035685,David Montgomery,RB,HOU,Zach,False,0.0,21.1,13.1,10.5,3.2,0,16,-5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0030279,Keenan Allen,WR,IND,Johnny,False,0.0,16.8,1.0,0.0,0.0,0,2,3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0032569,Wil Lutz,K,DEN,,False,0.0,7.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038994,Jordan Addison,WR,MIN,Ryan,False,0.0,13.3,5.9,7.7,7.7,0,8,-5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037258,Dameon Pierce,RB,PHI,,False,0.0,19.9,0.2,0.0,0.0,0,1,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037224,Cameron Dicker,K,LAC,,False,0.0,5.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036139,Rico Dowdle,RB,PIT,Qasim,False,0.0,19.0,9.5,4.7,1.9,0,12,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038997,Josh Downs,WR,IND,Russ,False,0.0,14.8,7.2,3.5,2.4,0,9,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0029822,Brandon McManus,K,LA,,False,0.0,5.8,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040899,Trey Smack,K,GB,,False,0.0,7.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038621,DeMario Douglas,WR,NE,Ben,False,0.0,12.6,1.0,0.9,0.5,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039410,Ryan Flournoy,WR,DAL,Mike,False,0.0,12.1,1.0,1.0,0.0,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037746,Brian Robinson,RB,ATL,Ryan,False,0.0,15.6,2.5,1.1,0.4,0,4,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038551,Kendre Miller,RB,NO,Ben,False,0.0,15.4,1.3,0.7,0.4,0,3,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033555,Mack Hollins,WR,NE,Mike,False,0.0,11.8,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035192,Joey Slye,K,TEN,,False,0.0,4.7,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036040,Juwan Johnson,TE,NO,Zach,False,0.0,14.1,1.1,0.4,0.3,0,2,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033787,Jake Elliott,K,PHI,,False,0.0,3.8,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+DEF-DET,Lions,DEF,DET,Russ,False,0.0,0.5,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033526,Samaje Perine,RB,CIN,,False,0.0,11.3,1.0,0.0,0.0,0,2,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037263,Tyler Allgeier,RB,ARI,Johnny,False,0.0,13.2,7.2,3.7,1.6,0,9,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034383,Dalton Schultz,TE,HOU,Mike,False,0.0,13.3,0.4,0.3,0.3,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036894,Pat Freiermuth,TE,PIT,,False,0.0,13.0,0.4,0.3,0.3,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033090,Hunter Henry,TE,NE,Mike,False,0.0,13.0,0.4,0.3,0.2,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-LV,Raiders,DEF,LV,,False,0.0,1.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037809,Chig Okonkwo,TE,WAS,,False,0.0,11.1,0.4,0.4,0.3,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036970,Kyle Pitts,TE,ATL,Ben,False,0.0,12.6,3.3,2.0,1.1,0,5,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037742,Treylon Burks,WR,WAS,,False,0.0,7.1,0.8,0.0,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-ATL,Falcons,DEF,ATL,,False,0.0,0.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033862,Zane Gonzalez,K,MIA,,False,0.0,0.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033110,Tyler Higbee,TE,LA,,False,0.0,12.1,0.1,0.0,0.0,0,1,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034348,Courtland Sutton,WR,DEN,,False,0.0,8.3,1.0,1.0,0.5,0,2,3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037157,Bam Knight,RB,ARI,,False,0.0,10.9,0.5,0.2,0.0,0,2,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040024,Darius Cooper,WR,PHI,,False,0.0,8.0,0.8,0.0,0.0,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-HOU,Texans,DEF,HOU,Mike,False,0.0,0.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040162,Dylan Sampson,RB,CLE,,False,0.0,10.7,0.6,1.3,1.8,0,2,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037741,Jahan Dotson,WR,ATL,,False,0.0,7.9,1.0,0.5,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034753,Mark Andrews,TE,BAL,,False,0.0,11.3,0.4,0.3,0.3,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-TEN,Titans,DEF,TEN,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038454,Keaton Mitchell,RB,LAC,,False,0.0,8.3,1.9,1.4,0.9,0,3,2.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-CAR,Panthers,DEF,CAR,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+DEF-LAC,Chargers,DEF,LAC,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038393,Dontayvion Wicks,WR,PHI,,False,0.0,7.0,1.0,1.0,0.5,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036550,Rashod Bateman,WR,BAL,,False,0.0,6.9,1.0,0.5,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0032464,Kalif Raymond,WR,CHI,,False,0.0,6.7,0.8,0.0,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038544,Quentin Johnston,WR,LAC,,False,0.0,5.1,1.4,1.2,1.0,0,3,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039066,Michael Mayer,TE,LV,,False,0.0,10.1,0.4,0.3,0.3,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037252,Greg Dulcich,TE,MIA,,False,0.0,8.4,0.4,0.3,0.3,0,1,3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039021,Roschon Johnson,RB,CHI,,False,0.0,8.5,0.9,0.2,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033908,Cooper Kupp,WR,SEA,,False,0.0,6.0,0.7,0.0,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038611,Chris Rodriguez Jr.,RB,JAX,,False,0.0,6.7,3.1,1.4,0.5,0,4,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039391,Kimani Vidal,RB,LAC,,False,0.0,6.7,1.2,0.8,0.4,0,2,3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0031610,Darren Waller,TE,CAR,,False,0.0,9.5,0.1,0.0,0.0,0,1,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037545,Rashid Shaheed,WR,SEA,,False,0.0,5.9,1.3,1.0,0.5,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-BAL,Ravens,DEF,BAL,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040184,KeAndre Lambert-Smith,WR,LAC,,False,0.0,4.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039299,George Holani,RB,SEA,,False,0.0,7.7,1.1,0.3,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-BUF,Bills,DEF,BUF,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039165,Zach Charbonnet,RB,SEA,Qasim,False,0.0,7.7,3.9,3.9,2.1,0,5,20.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038098,Pierre Strong,RB,GB,,False,0.0,8.5,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036988,Josh Palmer,WR,BUF,,False,0.0,3.4,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040590,Konata Mumpfield,WR,LA,,False,0.0,4.4,0.5,0.5,0.0,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036407,Jerry Jeudy,WR,CLE,Ben,False,0.0,4.1,1.0,0.5,0.0,0,2,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039793,AJ Barner,TE,SEA,,False,0.0,7.4,0.4,0.4,0.4,0,1,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038558,Darnell Washington,TE,PIT,,False,0.0,7.3,0.3,0.2,0.1,0,1,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040009,Savion Williams,WR,GB,,False,0.0,5.3,0.0,0.0,0.0,0,1,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038951,Sean Tucker,RB,TB,,False,0.0,5.6,0.7,0.4,0.3,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-DAL,Cowboys,DEF,DAL,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0034975,Justice Hill,RB,BAL,,False,0.0,5.6,1.0,0.1,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040237,Tez Johnson,WR,TB,,False,0.0,3.7,0.6,0.5,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0032951,Laquon Treadwell,WR,IND,,False,0.0,3.7,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-IND,Colts,DEF,IND,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036244,Colby Parkinson,TE,LA,,False,0.0,6.7,0.1,0.0,0.0,0,1,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035891,Cody White,WR,LV,,False,0.0,3.3,0.7,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041100,Josh Cameron,WR,JAX,,False,0.0,2.4,1.0,0.6,0.5,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038640,Jalen Brooks,WR,ARI,,False,0.0,3.2,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037614,John Metchie III,WR,CAR,,False,0.0,3.2,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040170,Elic Ayomanor,WR,TEN,,False,0.0,3.2,1.0,1.0,0.7,0,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040563,Efton Chism III,WR,NE,,False,0.0,3.1,0.9,0.5,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-PHI,Eagles,DEF,PHI,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0041395,Eli Raridon,TE,NE,,False,0.0,6.1,0.4,0.4,0.4,0,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038129,Cade Otton,TE,TB,,False,0.0,6.0,0.4,0.3,0.3,0,1,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040785,Dohnte Meyers,WR,CIN,,False,0.0,2.1,0.5,0.0,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041070,Reggie Virgil,WR,ARI,,False,0.0,2.8,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-ARI,Cardinals,DEF,ARI,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040646,Jalen Royals,WR,KC,,False,0.0,1.9,0.5,0.5,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037005,Tommy Tremble,TE,CAR,,False,0.0,5.6,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+DEF-MIA,Dolphins,DEF,MIA,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040131,Kyle Williams,WR,NE,,False,0.0,2.5,1.0,0.5,0.5,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035537,Ty Johnson,RB,BUF,,False,0.0,2.9,0.4,0.1,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036567,Elijah Mitchell,RB,PHI,,False,0.0,3.7,0.1,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040189,Oronde Gadsden II,TE,LAC,,False,0.0,4.5,0.4,0.4,0.4,0,1,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033699,Austin Ekeler,RB,WAS,,False,0.0,2.6,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038977,Tank Dell,WR,HOU,Mike,False,0.0,2.1,0.0,0.0,0.0,0,1,4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040648,Tory Horton,WR,SEA,,False,0.0,2.1,0.5,0.5,0.5,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037291,Jalen Nailor,WR,LV,,False,0.0,2.1,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037120,Tyler Goodson,RB,DAL,,False,0.0,3.2,0.3,0.1,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038976,Marvin Mims Jr.,WR,DEN,,False,0.0,1.8,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038046,Charlie Kolar,TE,LAC,,False,0.0,3.8,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038840,Brycen Tremayne,WR,CAR,,False,0.0,1.8,0.5,0.0,0.0,0,2,,00-0033307,2026-10-30T17:42:59+00:00
+00-0033881,Evan Engram,TE,DEN,,False,0.0,4.5,0.3,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036626,Dyami Brown,WR,WAS,,False,0.0,1.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0035662,Marquise Brown,WR,PHI,,False,0.0,1.7,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040298,Andrew Armstrong,WR,KC,,False,0.0,1.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039041,Elijah Higgins,TE,ARI,,False,0.0,4.2,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041125,Seth McGowan,RB,IND,Mike,False,0.0,2.6,1.1,0.6,0.3,0,2,11.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040556,Corey Kiner,RB,NE,,False,0.0,2.6,0.8,0.3,0.1,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036637,Noah Gray,TE,KC,,False,0.0,3.5,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041529,Kevin Coleman Jr.,WR,MIA,,False,0.0,1.0,0.6,0.5,0.5,0,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039074,Davis Allen,TE,LA,,False,0.0,3.9,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039146,Jayden Reed,WR,GB,Ryan,False,0.0,1.9,0.5,0.5,1.0,0,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033955,Jeremy McNichols,RB,WAS,,False,0.0,1.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036259,Jauan Jennings,WR,MIN,,False,0.0,0.9,0.5,0.0,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040584,Gunnar Helm,TE,TEN,,False,0.0,3.6,0.3,0.3,0.3,0,1,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038394,Will Mallory,TE,IND,,False,0.0,3.5,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039874,Jaylen Wright,RB,MIA,,False,0.0,1.4,0.5,0.4,0.3,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039032,Tyjae Spears,RB,TEN,Qasim,False,0.0,1.9,2.5,1.4,1.0,0,4,3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040887,Josh Cuevas,TE,BAL,,False,0.0,3.3,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039868,Troy Franklin,WR,DEN,,False,0.0,1.0,0.9,0.5,0.5,0,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035631,Drew Sample,TE,CIN,,False,0.0,2.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0036849,Tutu Atwell,WR,LA,,False,0.0,0.9,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035689,Dawson Knox,TE,BUF,,False,0.0,2.6,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036906,Khalil Herbert,RB,ATL,,False,0.0,1.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039364,Sione Vaki,RB,DET,,False,0.0,1.1,0.5,0.1,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039798,Isaiah Davis,RB,NYJ,,False,0.0,1.5,1.0,0.4,0.1,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040782,Isaiah Bond,WR,CLE,,False,0.0,0.8,0.5,0.5,0.5,0,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0032392,Austin Hooper,TE,ATL,,False,0.0,2.7,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040644,Trevor Etienne,RB,CAR,,False,0.0,1.3,0.2,0.2,0.1,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041550,Brenen Thompson,WR,LAC,,False,0.0,0.5,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036924,Michael Carter,RB,TEN,,False,0.0,1.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040394,Anthony Tyus III,RB,CAR,,False,0.0,1.1,0.4,0.1,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038794,Jaleel McLaughlin,RB,CLE,,False,0.0,1.1,0.6,0.1,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033217,Mo Alie-Cox,TE,IND,,False,0.0,2.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040187,Mitchell Evans,TE,CAR,,False,0.0,2.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039751,Jordan Whittington,WR,LA,,False,0.0,0.4,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039407,Dylan Laube,RB,LV,,False,0.0,0.8,0.6,0.1,0.0,0,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039814,Erick All,TE,CIN,,False,0.0,1.7,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039875,Ray Davis,RB,BUF,,False,0.0,0.5,0.7,0.4,0.1,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036265,AJ Dillon,RB,CAR,,False,0.0,0.7,0.1,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039530,Brevyn Spann-Ford,TE,DAL,,False,0.0,1.9,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041558,Sam Roush,TE,CHI,,False,0.0,1.9,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038738,Hunter Luepke,RB,DAL,,False,0.0,0.6,0.1,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038115,Daniel Bellinger,TE,TEN,,False,0.0,1.6,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040705,Chimere Dike,WR,TEN,,False,0.0,0.3,0.6,0.5,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036628,John Bates,TE,WAS,,False,0.0,1.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040238,LeQuint Allen Jr.,RB,JAX,,False,0.0,0.4,0.3,0.2,0.2,0,1,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040179,DJ Giddens,RB,IND,,False,0.0,0.5,1.1,0.4,0.3,0,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041104,Demond Claiborne,RB,MIN,,False,0.0,0.3,0.3,0.4,0.4,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039796,Rasheen Ali,RB,BAL,,False,0.0,0.4,0.5,0.2,0.0,0,2,,00-0033307,2026-10-30T17:42:59+00:00
+00-0040894,Malik Benson,WR,LV,,False,0.0,0.2,0.5,0.0,0.0,0,2,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040208,Tahj Brooks,RB,CIN,,False,0.0,0.3,0.3,0.1,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037091,Bo Melton,WR,GB,,False,0.0,0.3,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0041524,Will Kacmarek,TE,MIA,,False,0.0,1.1,0.0,0.0,0.0,0,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040948,J. Michael Sturdivant,WR,GB,,False,0.0,0.3,0.5,0.0,0.0,0,2,,00-0033307,2026-10-30T17:42:59+00:00
+00-0041069,Colbie Young,WR,CIN,,False,0.0,0.1,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033589,David Moore,WR,CAR,,False,0.0,0.2,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0038547,Luke Schoonmaker,TE,DAL,,False,0.0,1.1,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0039912,Ben Sinnott,TE,WAS,,False,0.0,0.8,0.0,0.0,0.0,0,1,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037594,Julius Chestnut,RB,TEN,,False,0.0,0.1,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0034775,Christian Kirk,WR,SF,Russ,False,0.0,0.0,0.5,0.0,0.0,0,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040352,Coleman Owen,WR,GB,,False,0.0,0.0,0.0,0.0,0.0,0,1,,00-0033307,2026-10-30T17:42:59+00:00
+00-0037261,Khalil Shakir,WR,BUF,Mike,False,0.0,14.3,4.7,2.4,1.0,-1,6,3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040878,Mike Washington Jr.,RB,LV,Qasim,False,0.0,7.7,2.7,1.9,1.6,-1,4,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039849,Marvin Harrison Jr.,WR,HOU,Johnny,False,0.0,5.3,5.7,5.0,3.5,-1,7,12.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037525,Jordan Mason,RB,MIN,Mike,False,0.0,31.2,1.1,1.5,0.6,-2,2,17.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039880,Malik Washington,WR,MIA,Russ,False,0.0,17.0,1.0,1.0,0.5,-2,2,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040138,Jaylin Noel,WR,HOU,Russ,False,0.0,9.3,2.3,1.0,1.0,-2,4,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041562,Fernando Mendoza,QB,LV,Ben,False,0.0,0.2,0.0,0.0,0.7,-2,1,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035228,Kyler Murray,QB,MIN,Ben,False,0.0,24.0,0.7,0.1,0.0,-3,2,14.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039894,Xavier Worthy,WR,KC,Ryan,False,0.0,13.6,4.5,4.0,3.5,-3,6,-3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041042,Malachi Fields,WR,NYG,Ryan,False,0.0,6.9,2.4,1.0,1.0,-3,4,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039811,MarShawn Lloyd,RB,GB,Ben,False,0.0,10.2,2.1,1.1,0.3,-3,3,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041523,Caleb Douglas,WR,MIA,Matt,False,0.0,16.6,1.0,1.0,1.0,-4,2,9.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039890,Adonai Mitchell,WR,NYJ,Ben,False,0.0,7.5,1.0,1.0,1.0,-4,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040134,Pat Bryant,WR,DEN,Zach,False,0.0,5.9,1.0,1.0,1.0,-4,2,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041052,Kaelon Black,RB,SF,Zach,False,0.0,7.4,1.6,1.1,0.5,-4,3,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040669,Isaac TeSlaa,WR,DET,Ryan,False,0.0,3.8,1.0,0.8,0.5,-4,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038041,Jake Ferguson,TE,DAL,Ben,False,0.0,7.7,1.1,0.4,0.4,-4,2,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041047,Chris Brazzell II,WR,CAR,Jordan,True,0.0,0.0,0.0,0.0,0.0,-5,1,-4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040736,Mason Taylor,TE,NYJ,Matt,False,0.0,11.7,0.4,0.4,0.4,-5,1,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041013,Emmett Johnson,RB,KC,Johnny,False,0.0,4.2,5.0,3.9,3.9,-5,7,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040890,Cyrus Allen,WR,KC,Zach,False,0.0,0.8,0.5,0.5,0.0,-5,2,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041096,Kaytron Allen,RB,MIA,Mike,False,0.0,0.7,0.4,0.4,0.4,-5,2,-3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040876,Elijah Sarratt,WR,BAL,Max,False,0.0,0.5,0.0,0.5,0.0,-5,1,-5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041443,Skyler Bell,WR,BUF,Russ,False,0.0,0.2,0.0,0.0,0.0,-5,1,-4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039901,Keon Coleman,WR,BUF,Matt,False,0.0,12.8,1.1,1.0,1.0,-6,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0033921,Chris Godwin Jr.,WR,TB,Max,False,0.0,9.5,2.4,1.0,0.6,-6,4,0.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039344,Jonathon Brooks,RB,CAR,Qasim,False,0.0,5.1,0.7,1.9,1.5,-6,2,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040727,Tre Harris,WR,LAC,Ben,False,0.0,7.5,1.0,1.0,1.0,-7,2,-3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040130,Jayden Higgins,WR,HOU,Mike,False,0.0,0.0,1.3,1.0,1.1,-7,2,2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041489,Germie Bernard,WR,PIT,Matt,False,0.0,17.7,1.2,1.1,1.0,-8,2,16.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041525,Chris Bell,WR,MIA,Russ,False,0.0,2.7,3.7,3.2,2.4,-8,5,-4.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041044,Zachariah Branch,WR,ATL,Jordan,True,0.0,0.9,1.0,0.7,0.6,-9,2,-6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040870,Ja'Kobi Lane,WR,BAL,Johnny,False,0.0,8.3,1.0,1.0,1.0,-9,2,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041048,Ted Hurst III,WR,TB,Russ,False,0.0,6.2,1.0,1.0,1.0,-9,2,-2.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040886,Nicholas Singleton,RB,TEN,Zach,False,0.0,0.3,0.4,1.0,1.2,-9,1,-3.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041483,Eli Stowers,TE,PHI,Ben,False,0.0,0.9,0.3,0.4,0.4,-9,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041035,De'Zhaun Stribling,WR,SF,Mike,False,0.0,0.0,0.0,0.0,0.0,-9,1,5.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041032,Kenyon Sadiq,TE,NYJ,Max,False,0.0,5.5,1.1,2.7,3.3,-10,2,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040142,Kaleb Johnson,RB,GB,Qasim,False,0.0,1.6,1.1,1.1,0.7,-10,2,-10.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0039732,Bo Nix,QB,DEN,Mike,False,0.0,26.3,0.8,0.8,0.8,-11,2,6.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040718,Travis Hunter,WR,,Ryan,False,0.0,0.0,0.0,0.0,0.0,-11,1,-1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0041029,Jordyn Tyson,WR,NO,Max,False,0.0,0.0,0.0,0.0,0.0,-12,1,30.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040663,Harold Fannin Jr.,TE,CLE,Jordan,True,0.0,12.9,5.8,9.6,10.4,-14,8,-10.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0040691,Jaxson Dart,QB,NYG,Jordan,True,0.0,16.4,0.0,0.0,0.7,-24,1,-11.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037664,Alec Pierce,WR,IND,Max,False,0.0,5.2,1.0,2.4,1.0,-25,2,-13.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036613,Jaylen Waddle,WR,DEN,Ryan,False,0.0,15.7,17.8,7.7,6.7,-32,21,-35.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036389,Jalen Hurts,QB,PHI,Max,False,0.0,34.3,0.8,0.8,0.8,-39,2,-22.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0038120,Breece Hall,RB,NYJ,Ben,False,0.0,40.5,18.1,18.1,18.1,-42,22,1.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0036261,Brandon Aiyuk,WR,SF,Ben,False,0.0,0.0,0.5,0.0,0.0,-42,2,-42.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0034844,Saquon Barkley,RB,PHI,Mike,False,0.0,23.1,18.1,18.1,12.0,-48,22,-21.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0035659,Terry McLaurin,WR,WAS,Russ,False,0.0,15.8,2.4,1.0,1.0,-52,4,-58.0,00-0033307,2026-10-30T17:42:59+00:00
+00-0037247,George Pickens,WR,DAL,Ryan,False,0.0,35.3,20.2,19.1,16.5,-93,24,-70.0,00-0033307,2026-10-30T17:42:59+00:00

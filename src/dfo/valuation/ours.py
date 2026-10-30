@@ -8,7 +8,7 @@ the lineup re-picked every week (byes from the NFL schedule, each player's calib
 rate x his position's availability). A waiver pickup at each position is always available at the
 waiver level (weekly points of the best unrostered player by weekly rank, 2020-2025, roster depth from
 the site), so losing a kicker costs his edge over streaming, not his points. Converted at the
-in-season price per point.
+in-season price per point only to choose which player to drop.
 Later seasons: his Future $ (next year's roster is rebuilt at the auction, so the market level is
 the team's real alternative then).
 The two stay separate columns: pushing now weights this season, building weights later seasons, and
@@ -27,7 +27,6 @@ from dfo.valuation import calibrate
 from dfo.valuation.auction import market_params
 
 SEASON = 2026
-DIAL_WEIGHT = 1.0          # placeholder until Phase 5
 
 
 def _slots() -> tuple[dict[str, int], list[str]]:
@@ -105,7 +104,7 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
     # future value too (a negative future is owed whether he is cut now or later, so it counts as 0)
     life = prices.set_index("player_id")
     def drop_cost(r):
-        fut = float(life.future_dollars.get(r["player_id"], 0))
+        fut = float(life.cap_saved_2027_29.get(r["player_id"], 0))
         return lam_now * r["lineup_change"] + max(0.0, fut)
     cheapest_drop = min(rows, key=drop_cost)["player_id"] if rows else None
     others = pool.drop(index=pool.index.intersection(mine.index))
@@ -116,15 +115,13 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
         rows.append(dict(player_id=pid, on_roster=False,
                          lineup_change=lineup_points(pd.concat([without, g_others.loc[[pid]]])) - base))
     out = pd.DataFrame(rows).merge(prices, on="player_id", how="left")
-    out["ours_season"] = (DIAL_WEIGHT * lam_now * out.lineup_change).round().astype(int)
-    out["ours_future"] = out.future_dollars.fillna(0).round().astype(int)
-    out["dial_weight"] = DIAL_WEIGHT
-    out["dial_note"] = "placeholder 1.0 until Phase 5 computes the dial"
+    out["lineup_points_now"] = out.lineup_change.round(1)                 # points to Jordan's lineup, rest of 2026
+    out["cap_saved_2027_29"] = out.cap_saved_2027_29.fillna(0).round().astype(int)
     out["drop_if_added"] = cheapest_drop
-    cols = ["player_id", "player", "pos", "team", "owner", "on_roster", "lineup_change", "ours_season",
-            "ours_future", "season_dollars", "future_dollars", "market_auction", "fc_reference",
-            "dial_weight", "dial_note", "drop_if_added", "made_at"]
-    out = out[cols].sort_values(["ours_season", "ours_future"], ascending=False)
+    cols = ["player_id", "player", "pos", "team", "owner", "on_roster", "lineup_points_now", "points_now",
+            "points_2027", "points_2028", "points_2029", "cap_saved_2027_29", "market_auction", "fc_reference",
+            "drop_if_added", "made_at"]
+    out = out[cols].sort_values(["lineup_points_now", "cap_saved_2027_29"], ascending=False)
     out.to_csv(PROCESSED / f"ours_{owner.lower()}.csv", index=False)
     return out
 
@@ -133,6 +130,6 @@ if __name__ == "__main__":
     import warnings
     warnings.filterwarnings("ignore")
     o = build(sys.argv[1] if len(sys.argv) > 1 else "Jordan")
-    print(o[o.on_roster].drop(columns=["dial_note", "made_at", "player_id", "drop_if_added"]).to_string(index=False))
+    print(o[o.on_roster].drop(columns=["made_at", "player_id", "drop_if_added"]).to_string(index=False))
     print("\nTop free agents / other teams' players by lineup gain:")
-    print(o[~o.on_roster].head(12).drop(columns=["dial_note", "made_at", "player_id"]).to_string(index=False))
+    print(o[~o.on_roster].head(12).drop(columns=["made_at", "player_id"]).to_string(index=False))

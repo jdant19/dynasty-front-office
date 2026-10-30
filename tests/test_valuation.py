@@ -40,15 +40,18 @@ def test_gap_and_aging_parameters():
 
 def test_prices_follow_money_rules():
     p = _csv("prices.csv")
-    for col in ["season_dollars", "future_dollars", "lifetime_dollars", "market_auction", "value_2027", "value_2028", "value_2029"]:
+    cap_cols = ["cap_saved_2027_29", "market_auction"] + [f"{c}_{y}" for y in (2027, 2028, 2029)
+                                                          for c in ("auction_cost", "cap_saved")]
+    for col in cap_cols:
         v = p[col].dropna()
-        assert (v == v.round()).all(), col                  # whole dollars
-    assert (p.season_dollars >= 0).all()
+        assert (v == v.round()).all(), col                  # cap money is whole dollars
+    assert (p.points_now >= 0).all()                        # this season is in points, never below 0
+    assert not any(c in p for c in ("season_dollars", "lifetime_dollars"))   # P14/P15: no blind sum
     assert (p.market_auction >= 1).all()
     roster = _csv("site_rosters.csv")
     assert p.owner.ne("").sum() >= 0.9 * len(roster)         # nearly every rostered player is priced
-    sk = p[p.pos.isin(["QB", "RB", "WR", "TE"]) & (p.value_2027 > 20)]
-    assert (sk.value_2029 / sk.value_2027).median() <= 1.0  # values fall with age on the whole
+    sk = p[p.pos.isin(["QB", "RB", "WR", "TE"]) & (p.points_2027 > 20)]
+    assert (sk.points_2029 / sk.points_2027).median() <= 1.0  # values fall with age on the whole
 
 
 def test_pick_model():
@@ -66,7 +69,7 @@ def test_ours_uses_waivers_and_roster():
     mine = o[o.on_roster]
     assert len(mine) >= 15
     assert o.drop_if_added.dropna().isin(mine.player_id).all()
-    assert (o.dial_weight == 1.0).all()                      # placeholder until Phase 5, labeled
+    assert "lineup_points_now" in o and "cap_saved_2027_29" in o   # two numbers, never one total
     k = mine[mine.pos == "K"]
     if len(k):                                               # a kicker is worth his edge over streaming
-        assert (k.lineup_change < 60).all()
+        assert (k.lineup_points_now < 60).all()

@@ -18,8 +18,9 @@ evidence across seasons and Jordan's sign-off. Add the date and reason to the ch
 | P11 | Replacement depends on when a player would have to be replaced: in season, the next startable player; for later seasons, the level the auction prices imply. | With 18-man rosters waivers are thin in season, but every August mid-tier production (and any QB outside the top few) sells for $1-2. | Auction fit 2020-2025: QB +100, TE +40, WR +30, RB +25 points over the first non-starter; one price per point ($1.12) then fits stars and mid-tier alike (MAE $7.4 vs $10.4) |
 | P12 | A season is worth E[max(0, points - replacement)], never below zero. | A season below replacement is benched or cut, so upside counts and downside stops at replacement. | Coming-season values built this way match what auction buys returned |
 | P14 | Keep this-season value and contract value (later seasons) as two numbers; weight them by the dial, never sum them blindly. | Pushing now and building need different answers from the same player; a single total hides which one a move serves. | Jordan, 2026-10-30 |
+| P15 | Points for what a player adds; dollars only for real cap money (salaries, bids, tag prices, cap space, auction prices, cap saved). Payout dollars only for the dial's answer. | One "$" for three different things confused the review; points are what win a season, cap saved is what buys more points. | Jordan, 2026-10-30 |
 | P13 | Projection gaps are shrunk to their measured size before pricing; later seasons follow position aging curves from next season's projection. | Projections spread players too far apart (rest of season: RB/WR 0.84, QB 0.78, TE 0.61) and per-horizon fits jumped around for single players. | params_gap_shrink.csv, params_aging.csv (fit 2026-10-30) |
 
 ## Change log
 - 2026-10-27: initial set from the design doc.
-- 2026-10-30: P7 tested; P10-P13 added with the valuation engine (Phase 4); P14 from Jordan's review.
+- 2026-10-30: P7 tested; P10-P13 added with the valuation engine (Phase 4); P14 and P15 from Jordan's review.
