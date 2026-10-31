@@ -1,0 +1,950 @@
+{
+ "table": "trades",
+ "as_of": "2026-10-31T16:19:47+00:00",
+ "rows": [
+  {
+   "id": "31b93a69-ed36-4214-bc8b-a8acf8dea054",
+   "proposed_by": "3d3aed6f-e693-410e-8e09-13416d49bcad",
+   "status": "executed",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12490",
+       "name": "Bhayshul Tuten",
+       "team": "JAX",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 2,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-2",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9493",
+       "name": "Puka Nacua",
+       "team": "LAR",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 45,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-2",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "cap_space",
+      "toTeamId": "team-2",
+      "capAmount": 10,
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9224",
+       "name": "Chase Brown",
+       "team": "CIN",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 4,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-2"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-8142",
+       "name": "Alec Pierce",
+       "team": "IND",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 15,
+        "2027/2028": 16,
+        "2028/2029": 18,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-2"
+     }
+    ],
+    "teamIds": [
+     "team-8",
+     "team-2"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-10-04T13:36:18.941827+00:00",
+   "executed_at": "2026-10-16T15:59:58.88291+00:00",
+   "parent_trade_id": null
+  },
+  {
+   "id": "591a0d58-9b2a-473a-b648-f0cdf8c7cefd",
+   "proposed_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "executed",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-6904",
+       "name": "Jalen Hurts",
+       "team": "PHI",
+       "position": "QB",
+       "salaries": {
+        "2026/2027": 30,
+        "2027/2028": 45,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-6803",
+       "name": "Brandon Aiyuk",
+       "team": "SF",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 44,
+        "2027/2028": 48,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-7569",
+       "name": "Nico Collins",
+       "team": "HOU",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 91,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-6797",
+       "name": "Justin Herbert",
+       "team": "LAC",
+       "position": "QB",
+       "salaries": {
+        "2026/2027": 28,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-7594",
+       "name": "Chuba Hubbard",
+       "team": "CAR",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 34,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     },
+     {
+      "pick": {
+       "pick": "#13",
+       "year": "2026",
+       "round": 2,
+       "salaries": {
+        "2026/2027": 3,
+        "2027/2028": 4,
+        "2028/2029": 5,
+        "2029/2030": 6,
+        "2030/2031": 0
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     },
+     {
+      "pick": {
+       "pick": "TBD",
+       "year": "2028",
+       "round": 1,
+       "salaries": {
+        "2026/2027": 0,
+        "2027/2028": 0,
+        "2028/2029": 5,
+        "2029/2030": 6,
+        "2030/2031": 7
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12514",
+       "name": "Emeka Egbuka",
+       "team": "TB",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 6,
+        "2027/2028": 7,
+        "2028/2029": 8,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-13276",
+       "name": "Omar Cooper",
+       "team": "NYJ",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 5,
+        "2027/2028": 6,
+        "2028/2029": 7,
+        "2029/2030": 8,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-4"
+     },
+     {
+      "pick": {
+       "pick": "TBD",
+       "year": "2027",
+       "round": 2,
+       "salaries": {
+        "2026/2027": 0,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 5,
+        "2030/2031": 6
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-4",
+      "fromTeamId": "team-8"
+     }
+    ],
+    "teamIds": [
+     "team-4",
+     "team-8"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-08-05T01:13:15.017319+00:00",
+   "executed_at": "2026-08-05T03:48:52.463869+00:00",
+   "parent_trade_id": null
+  },
+  {
+   "id": "5e8c4f78-3eed-496a-b137-9811ee7d2be3",
+   "proposed_by": "bbd36b4e-7121-4d96-b95e-2aadf6caa826",
+   "status": "rejected",
+   "trade_data": {
+    "assets": [
+     {
+      "pick": {
+       "pick": "#2",
+       "year": "2026",
+       "round": 1,
+       "salaries": {
+        "2025/2026": 0,
+        "2026/2027": 5,
+        "2027/2028": 6,
+        "2028/2029": 7,
+        "2029/2030": 8
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-6",
+      "fromTeamId": "team-9"
+     },
+     {
+      "pick": {
+       "pick": "#5",
+       "year": "2026",
+       "round": 1,
+       "salaries": {
+        "2025/2026": 0,
+        "2026/2027": 5,
+        "2027/2028": 6,
+        "2028/2029": 7,
+        "2029/2030": 8
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-9",
+      "fromTeamId": "team-6"
+     },
+     {
+      "pick": {
+       "pick": "TBD",
+       "year": "2027",
+       "round": 2,
+       "salaries": {
+        "2025/2026": 0,
+        "2026/2027": 0,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 5
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-9",
+      "fromTeamId": "team-6"
+     }
+    ],
+    "teamIds": [
+     "team-9",
+     "team-6"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-05-02T20:00:21.118582+00:00",
+   "executed_at": null,
+   "parent_trade_id": null
+  },
+  {
+   "id": "750d539d-0f5d-4c72-ae15-c9f01df18646",
+   "proposed_by": "3d3aed6f-e693-410e-8e09-13416d49bcad",
+   "status": "cancelled",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12490",
+       "name": "Bhayshul Tuten",
+       "team": "JAX",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 2,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-2",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9493",
+       "name": "Puka Nacua",
+       "team": "LAR",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 45,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-2",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "cap_space",
+      "toTeamId": "team-2",
+      "capAmount": 10,
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9224",
+       "name": "Chase Brown",
+       "team": "CIN",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 4,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-2"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-8142",
+       "name": "Alec Pierce",
+       "team": "IND",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 15,
+        "2027/2028": 16,
+        "2028/2029": 18,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-2"
+     }
+    ],
+    "teamIds": [
+     "team-8",
+     "team-2"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-10-04T13:36:50.96392+00:00",
+   "executed_at": null,
+   "parent_trade_id": null
+  },
+  {
+   "id": "77a69590-dd64-443b-84e6-649bd69e745c",
+   "proposed_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "executed",
+   "trade_data": {
+    "assets": [
+     {
+      "pick": {
+       "pick": "#27",
+       "year": "2026",
+       "round": 3,
+       "salaries": {
+        "2026/2027": 1,
+        "2027/2028": 2,
+        "2028/2029": 3,
+        "2029/2030": 4,
+        "2030/2031": 0
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-3",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12492",
+       "name": "Pat Bryant",
+       "team": "DEN",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 2,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-3",
+      "fromTeamId": "team-4"
+     },
+     {
+      "pick": {
+       "pick": "#8",
+       "year": "2026",
+       "round": 1,
+       "salaries": {
+        "2026/2027": 5,
+        "2027/2028": 6,
+        "2028/2029": 7,
+        "2029/2030": 8,
+        "2030/2031": 0
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-4",
+      "fromTeamId": "team-3"
+     }
+    ],
+    "teamIds": [
+     "team-4",
+     "team-3"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-08-01T20:12:11.602691+00:00",
+   "executed_at": "2026-08-02T18:40:16.657+00:00",
+   "parent_trade_id": null
+  },
+  {
+   "id": "977ad2fc-5056-4073-b775-973b9cab698d",
+   "proposed_by": "3e5af2c0-c58c-429e-afa0-ba49b0df8342",
+   "status": "rejected",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-11563",
+       "name": "Bo Nix",
+       "team": "DEN",
+       "position": "QB",
+       "salaries": {
+        "2025/2026": 5,
+        "2026/2027": 6,
+        "2027/2028": 7,
+        "2028/2029": 8,
+        "2029/2030": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-6"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-11600",
+       "name": "Ja'Tavion Sanders",
+       "team": "CAR",
+       "position": "TE",
+       "salaries": {
+        "2025/2026": 2,
+        "2026/2027": 3,
+        "2027/2028": 4,
+        "2028/2029": 0,
+        "2029/2030": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-6"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9221",
+       "name": "Jahmyr Gibbs",
+       "team": "DET",
+       "position": "RB",
+       "salaries": {
+        "2025/2026": 7,
+        "2026/2027": 8,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0
+       }
+      },
+      "toTeamId": "team-6",
+      "fromTeamId": "team-4"
+     }
+    ],
+    "teamIds": [
+     "team-6",
+     "team-4"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-04-21T02:48:36.65208+00:00",
+   "executed_at": null,
+   "parent_trade_id": null
+  },
+  {
+   "id": "bae5cc51-5793-432d-83f7-42c5cd81c16a",
+   "proposed_by": "3d3aed6f-e693-410e-8e09-13416d49bcad",
+   "status": "cancelled",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12490",
+       "name": "Bhayshul Tuten",
+       "team": "JAX",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 2,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-2",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9493",
+       "name": "Puka Nacua",
+       "team": "LAR",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 45,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-2",
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "cap_space",
+      "toTeamId": "team-2",
+      "capAmount": 10,
+      "fromTeamId": "team-8"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-9224",
+       "name": "Chase Brown",
+       "team": "CIN",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 4,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-2"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-8142",
+       "name": "Alec Pierce",
+       "team": "IND",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 15,
+        "2027/2028": 16,
+        "2028/2029": 18,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-8",
+      "fromTeamId": "team-2"
+     }
+    ],
+    "teamIds": [
+     "team-8",
+     "team-2"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-10-04T13:36:31.498811+00:00",
+   "executed_at": null,
+   "parent_trade_id": null
+  },
+  {
+   "id": "ce338e97-d69f-4c31-be0a-24a1a5d1a12c",
+   "proposed_by": "3e5af2c0-c58c-429e-afa0-ba49b0df8342",
+   "status": "rejected",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "p120",
+       "name": "Jaydon Blue",
+       "team": "DAL",
+       "position": "RB",
+       "salaries": {
+        "2025/2026": 1,
+        "2026/2027": 2,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-6"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "p107",
+       "name": "Tank Dell",
+       "team": "HOU",
+       "position": "WR",
+       "salaries": {
+        "2025/2026": 30,
+        "2026/2027": 45,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-6"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "p68",
+       "name": "Jahmyr Gibbs",
+       "team": "DET",
+       "position": "RB",
+       "salaries": {
+        "2025/2026": 7,
+        "2026/2027": 8,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0
+       }
+      },
+      "toTeamId": "team-6",
+      "fromTeamId": "team-4"
+     }
+    ],
+    "teamIds": [
+     "team-6",
+     "team-4"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-04-14T15:37:38.233186+00:00",
+   "executed_at": null,
+   "parent_trade_id": null
+  },
+  {
+   "id": "efea591a-0575-468c-9027-0fa32a0f1603",
+   "proposed_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "status": "executed",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-6797",
+       "name": "Justin Herbert",
+       "team": "LAC",
+       "position": "QB",
+       "salaries": {
+        "2026/2027": 28,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-10",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12481",
+       "name": "Cam Skattebo",
+       "team": "NYG",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 4,
+        "2027/2028": 5,
+        "2028/2029": 6,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-10",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-13345",
+       "name": "Jonah Coleman",
+       "team": "DEN",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 3,
+        "2027/2028": 4,
+        "2028/2029": 5,
+        "2029/2030": 6,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-10",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12514",
+       "name": "Emeka Egbuka",
+       "team": "TB",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 6,
+        "2027/2028": 7,
+        "2028/2029": 8,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-10",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-6803",
+       "name": "Brandon Aiyuk",
+       "team": "SF",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 44,
+        "2027/2028": 48,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-10",
+      "fromTeamId": "team-4"
+     },
+     {
+      "pick": {
+       "id": "165c1baf-0f6b-4e31-9463-1e0cf39afa8d",
+       "pick": "TBD",
+       "year": "2027",
+       "round": 1,
+       "salaries": {
+        "2026/2027": 0,
+        "2027/2028": 5,
+        "2028/2029": 6,
+        "2029/2030": 7,
+        "2030/2031": 8
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-10",
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "cap_space",
+      "season": "2027/2028",
+      "toTeamId": "team-10",
+      "capAmount": 30,
+      "fromTeamId": "team-4"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-4046",
+       "name": "Patrick Mahomes",
+       "team": "KC",
+       "position": "QB",
+       "salaries": {
+        "2026/2027": 1,
+        "2027/2028": 2,
+        "2028/2029": 3,
+        "2029/2030": 4,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-10"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-6786",
+       "name": "CeeDee Lamb",
+       "team": "DAL",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 98,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-10"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-8126",
+       "name": "Wan'Dale Robinson",
+       "team": "TEN",
+       "position": "WR",
+       "salaries": {
+        "2026/2027": 1,
+        "2027/2028": 2,
+        "2028/2029": 3,
+        "2029/2030": 4,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-4",
+      "fromTeamId": "team-10"
+     }
+    ],
+    "teamIds": [
+     "team-4",
+     "team-10"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-10-26T19:18:32.216175+00:00",
+   "executed_at": "2026-10-26T23:13:54.909555+00:00",
+   "parent_trade_id": null
+  }
+ ]
+}

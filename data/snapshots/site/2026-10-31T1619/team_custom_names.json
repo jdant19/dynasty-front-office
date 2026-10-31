@@ -1,0 +1,27 @@
+{
+ "table": "team_custom_names",
+ "as_of": "2026-10-31T16:19:47+00:00",
+ "rows": [
+  {
+   "id": "81e62874-c0be-4f13-9f07-3c6950cd7216",
+   "team_id": "team-6",
+   "custom_name": "Mike's Swell Team",
+   "updated_at": "2026-04-14T17:34:25.000381+00:00",
+   "updated_by": "3e5af2c0-c58c-429e-afa0-ba49b0df8342"
+  },
+  {
+   "id": "92eaac98-fd6d-4c8d-99b5-ff91d2771e54",
+   "team_id": "team-9",
+   "custom_name": "Duck Prescott",
+   "updated_at": "2026-09-14T19:43:28.721519+00:00",
+   "updated_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e"
+  },
+  {
+   "id": "e7316ce9-f771-415a-8fb9-7172d507cea3",
+   "team_id": "team-4",
+   "custom_name": "Ja'Jah Pachulia",
+   "updated_at": "2026-09-14T19:43:02.639593+00:00",
+   "updated_by": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e"
+  }
+ ]
+}

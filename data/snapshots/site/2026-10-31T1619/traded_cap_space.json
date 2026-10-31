@@ -1,0 +1,58 @@
+{
+ "table": "traded_cap_space",
+ "as_of": "2026-10-31T16:19:47+00:00",
+ "rows": [
+  {
+   "id": "6dfa29ab-72e7-483e-967b-298a248459d4",
+   "team_id": "team-2",
+   "description": "Trade cap from Top of the Food Achane",
+   "amount_year1": 10,
+   "amount_year2": 0,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "trade_id": "31b93a69-ed36-4214-bc8b-a8acf8dea054",
+   "created_at": "2026-10-16T15:59:58.88291+00:00"
+  },
+  {
+   "id": "7bbadfd2-576a-47ed-ab5e-609be011bf74",
+   "team_id": "team-4",
+   "description": "Trade cap to Who Dey White House (2027/2028)",
+   "amount_year1": 0,
+   "amount_year2": -30,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "trade_id": "efea591a-0575-468c-9027-0fa32a0f1603",
+   "created_at": "2026-10-26T23:13:54.909555+00:00"
+  },
+  {
+   "id": "ed74f55a-8f9a-4256-8799-b05ff5def094",
+   "team_id": "team-8",
+   "description": "Trade cap to STEIN DYNASTY",
+   "amount_year1": -10,
+   "amount_year2": 0,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "trade_id": "31b93a69-ed36-4214-bc8b-a8acf8dea054",
+   "created_at": "2026-10-16T15:59:58.88291+00:00"
+  },
+  {
+   "id": "f3ddaf0d-ce32-4459-8e61-1fdcc646e6ec",
+   "team_id": "team-10",
+   "description": "Trade cap from Ja'Jah Pachulia (2027/2028)",
+   "amount_year1": 0,
+   "amount_year2": 30,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "trade_id": "efea591a-0575-468c-9027-0fa32a0f1603",
+   "created_at": "2026-10-26T23:13:54.909555+00:00"
+  }
+ ]
+}
