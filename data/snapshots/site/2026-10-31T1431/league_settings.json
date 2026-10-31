@@ -1,0 +1,15 @@
+{
+ "table": "league_settings",
+ "as_of": "2026-10-31T14:31:30+00:00",
+ "rows": [
+  {
+   "id": "6c14ba71-3a83-45e4-bd33-710d011d023e",
+   "current_start_year": 2026,
+   "updated_at": "2026-07-16T21:15:20.813985+00:00",
+   "updated_by": null,
+   "current_season_year": 2026,
+   "regular_season_started_at": "2026-10-15T22:35:57.567+00:00",
+   "ufa_draft_completed_at": "2026-09-02T19:54:34.376+00:00"
+  }
+ ]
+}

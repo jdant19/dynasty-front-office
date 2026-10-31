@@ -1,216 +1,216 @@
 owner,team_id,player_id,sleeper_id,player,pos,nfl_team,slot,salary_now,salaries,salary_start_year,free_agency_year,acquisition,designation_rights,injury_status,as_of
-Matt,team-7,def-CHI,CHI,Chicago Bears D/ST,DEF,CHI,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,def-CIN,CIN,Cincinnati Bengals D/ST,DEF,CIN,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ben,team-10,def-CLE,CLE,Cleveland Browns D/ST,DEF,CLE,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Zach,team-3,def-DEN,DEN,Denver Broncos D/ST,DEF,DEN,DEF,2,2 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T05:37:59+00:00
-Russ,team-2,def-DET,DET,Detroit Lions D/ST,DEF,DET,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,def-GB,GB,Green Bay Packers D/ST,DEF,GB,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,def-HOU,HOU,Houston Texans D/ST,DEF,HOU,DEF,2,2 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T05:37:59+00:00
-Johnny,team-1,def-JAX,JAX,Jacksonville Jaguars D/ST,DEF,JAX,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,def-LAR,LAR,Los Angeles Rams D/ST,DEF,LAR,BN,2,2 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,def-MIN,MIN,Minnesota Vikings D/ST,DEF,MIN,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,def-NE,NE,New England Patriots D/ST,DEF,NE,DEF,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,def-PIT,PIT,Pittsburgh Steelers D/ST,DEF,PIT,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,def-WAS,WAS,Washington Commanders D/ST,DEF,WAS,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-10213,10213,Tre Tucker,WR,LV,WR,1,1 0 0 0 0,2026,2027,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-10222,10222,Jayden Reed,WR,GB,BN,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-10229,10229,Rashee Rice,WR,KC,WR,6,6 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-10232,10232,Michael Wilson,WR,ARI,FLEX,1,1 2 3 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-10236,10236,Dalton Kincaid,TE,BUF,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Max,team-8,sl-10859,10859,Sam LaPorta,TE,DET,BN,6,6 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-11435,11435,Emanuel Wilson,RB,SEA,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-11533,11533,Brandon Aubrey,K,DAL,K,2,2 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-11560,11560,Caleb Williams,QB,CHI,QB,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-11563,11563,Bo Nix,QB,DEN,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-11564,11564,Drake Maye,QB,NE,QB,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-11566,11566,Jayden Daniels,QB,WAS,BN,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-11576,11576,Braelon Allen,RB,NYJ,BN,3,3 4 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-11581,11581,MarShawn Lloyd,RB,GB,RB,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-11583,11583,Jonathon Brooks,RB,CAR,IR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-11584,11584,Bucky Irving,RB,TB,FLEX,3,3 4 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-11586,11586,Blake Corum,RB,LAR,BN,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-11604,11604,Brock Bowers,TE,LV,TE,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-11610,11610,Malik Washington,WR,MIA,BN,3,3 4 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-11620,11620,Rome Odunze,WR,CHI,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-11624,11624,Xavier Worthy,WR,KC,FLEX,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-11625,11625,Adonai Mitchell,WR,NYJ,WR,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-11628,11628,Marvin Harrison,WR,HOU,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-11631,11631,Brian Thomas,WR,JAX,BN,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-11632,11632,Malik Nabers,WR,NYG,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-11635,11635,Ladd McConkey,WR,LAC,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-11637,11637,Keon Coleman,WR,BUF,BN,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-11646,11646,Jalen Coker,WR,CAR,BN,2,2 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-11783,11783,Ryan Flournoy,WR,DAL,WR,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-11786,11786,Cam Little,K,JAX,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-11792,11792,Will Reichard,K,MIN,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-11834,11834,Devaughn Vele,WR,NO,WR,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-12185,12185,Spencer Shrader,K,IND,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-12474,12474,Woody Marks,RB,HOU,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-12481,12481,Cam Skattebo,RB,NYG,BN,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-12484,12484,Jayden Higgins,WR,HOU,IR,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-12489,12489,RJ Harvey,RB,DEN,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-12490,12490,Bhayshul Tuten,RB,JAX,RB,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-12492,12492,Pat Bryant,WR,DEN,IR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-12495,12495,Ollie Gordon,RB,MIA,BN,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-12498,12498,Mason Taylor,TE,NYJ,TE,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-12501,12501,Matthew Golden,WR,GB,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-12504,12504,Kaleb Johnson,RB,GB,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-12506,12506,Harold Fannin,TE,CLE,TE,21,21 22 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-12507,12507,Omarion Hampton,RB,LAC,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-12508,12508,Jaxson Dart,QB,NYG,IR,11,11 12 13 15 0,2026,2030,rfa,Franchise Tag,IR,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-12509,12509,Tre' Harris,WR,LAC,FLEX,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-12512,12512,Quinshon Judkins,RB,CLE,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-12514,12514,Emeka Egbuka,WR,TB,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-12517,12517,Colston Loveland,TE,CHI,BN,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-12518,12518,Tyler Warren,TE,IND,FLEX,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-12519,12519,Luther Burden,WR,CHI,WR,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-12526,12526,Tetairoa McMillan,WR,CAR,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-12527,12527,Ashton Jeanty,RB,LV,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-12529,12529,TreVeyon Henderson,RB,NE,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-12530,12530,Travis Hunter,DB,JAX,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-12533,12533,Jacory Croskey-Merritt,RB,WAS,IR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",IR,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-12534,12534,Kyle Monangai,RB,CHI,IR,2,2 3 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-12535,12535,Isaac TeSlaa,WR,DET,WR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-12536,12536,Jaylin Noel,WR,HOU,IR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-12545,12545,Tyler Shough,QB,NO,QB,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-12711,12711,Tyler Loop,K,BAL,K,2,2 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-13268,13268,Elijah Sarratt,WR,BAL,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-13269,13269,Fernando Mendoza,QB,LV,BN,1,1 2 0 0 0,2026,2028,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-13274,13274,Germie Bernard,WR,PIT,WR,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-13276,13276,Omar Cooper,WR,NYJ,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-13279,13279,Carnell Tate,WR,TEN,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Max,team-8,sl-13281,13281,Jordyn Tyson,WR,NO,IR,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-13285,13285,Malachi Fields,WR,NYG,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-13286,13286,Jadarian Price,RB,SEA,IR,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-13287,13287,Jeremiyah Love,RB,ARI,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-13288,13288,Nicholas Singleton,RB,TEN,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-13293,13293,Ja'Kobi Lane,WR,BAL,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-13294,13294,Makai Lemon,WR,PHI,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-13296,13296,Caleb Douglas,WR,MIA,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-13298,13298,KC Concepcion,WR,CLE,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-13301,13301,Antonio Williams,WR,WAS,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-13305,13305,Mike Washington,RB,LV,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-13311,13311,Chris Bell,WR,MIA,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-13317,13317,Ted Hurst,WR,TB,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-13320,13320,Zachariah Branch,WR,ATL,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-13330,13330,Kenyon Sadiq,TE,NYJ,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-13337,13337,Emmett Johnson,RB,KC,RB,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-13345,13345,Jonah Coleman,RB,DEN,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-13346,13346,Denzel Boston,WR,CLE,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-13349,13349,Eli Stowers,TE,PHI,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-13353,13353,Chris Brazzell,WR,CAR,IR,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",IR,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-13402,13402,Skyler Bell,WR,BUF,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-13405,13405,Kaytron Allen,RB,MIA,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-13413,13413,Cyrus Allen,WR,KC,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-13414,13414,Kaelon Black,RB,SF,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-13417,13417,De'Zhaun Stribling,WR,SF,IR,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-13424,13424,Seth McGowan,RB,IND,BN,1,1 0 0 0 0,2026,2027,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-1373,1373,Geno Smith,QB,NYJ,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-1466,1466,Travis Kelce,TE,KC,TE,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-1479,1479,Keenan Allen,WR,IND,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-1945,1945,Chris Boswell,K,PIT,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-2133,2133,Davante Adams,WR,LAR,WR,39,39 0 0 0 0,2026,2027,rfa,Franchise Tag,IR,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-2216,2216,Mike Evans,WR,SF,WR,23,23 0 0 0 0,2026,2027,rfa,Franchise Tag,Out,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-2449,2449,Stefon Diggs,WR,WAS,WR,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-2747,2747,Jason Myers,K,SEA,K,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-3163,3163,Jared Goff,QB,DET,QB,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-3198,3198,Derrick Henry,RB,BAL,RB,33,33 35 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-3214,3214,Hunter Henry,TE,NE,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-3294,3294,Dak Prescott,QB,DAL,BN,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-3451,3451,Ka'imi Fairbairn,K,HOU,K,2,2 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-4034,4034,Christian McCaffrey,RB,SF,BN,68,68 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-4035,4035,Alvin Kamara,RB,NO,BN,33,33 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T05:37:59+00:00
-Max,team-8,sl-4037,4037,Chris Godwin,WR,TB,WR,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-4046,4046,Patrick Mahomes,QB,KC,BN,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-4147,4147,Samaje Perine,RB,CIN,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-4199,4199,Aaron Jones,RB,MIN,RB,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-421,421,Matthew Stafford,QB,LAR,BN,3,3 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-4217,4217,George Kittle,TE,SF,BN,1,1 2 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-4227,4227,Harrison Butker,K,KC,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-4866,4866,Saquon Barkley,RB,PHI,BN,71,71 75 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-4881,4881,Lamar Jackson,QB,BAL,QB,28,28 29 0 0 0,2026,2028,rfa,Franchise Tag,Questionable,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-4950,4950,Christian Kirk,WR,SF,BN,10,10 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-4983,4983,DJ Moore,WR,BUF,WR,22,22 23 25 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-4984,4984,Josh Allen,QB,BUF,BN,72,72 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-5001,5001,Dalton Schultz,TE,HOU,TE,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-5022,5022,Dallas Goedert,TE,PHI,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-5045,5045,Courtland Sutton,WR,DEN,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-5844,5844,T.J. Hockenson,TE,MIN,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-5846,5846,DK Metcalf,WR,PIT,WR,3,3 4 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-5849,5849,Kyler Murray,QB,MIN,BN,1,1 2 3 0 0,2026,2029,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-5850,5850,Josh Jacobs,RB,GB,BN,3,3 4 5 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-5859,5859,A.J. Brown,WR,NE,BN,48,48 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-5872,5872,Deebo Samuel,WR,SF,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Out,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-5892,5892,David Montgomery,RB,HOU,RB,39,39 0 0 0 0,2026,2027,rfa,Franchise Tag,Out,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-5927,5927,Terry McLaurin,WR,WAS,WR,25,25 26 29 33 0,2026,2030,fa_auction,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-5947,5947,Jakobi Meyers,WR,JAX,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-5967,5967,Tony Pollard,RB,TEN,BN,15,15 0 0 0 0,2026,2027,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-6083,6083,Matt Gay,K,LV,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-6770,6770,Joe Burrow,QB,CIN,QB,13,13 15 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-6783,6783,Jerry Jeudy,WR,CLE,WR,32,32 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-6786,6786,CeeDee Lamb,WR,DAL,BN,98,98 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-6790,6790,D'Andre Swift,RB,CHI,BN,26,26 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-6794,6794,Justin Jefferson,WR,MIN,WR,92,92 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-6797,6797,Justin Herbert,QB,LAC,QB,28,28 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-6801,6801,Tee Higgins,WR,CIN,WR,38,38 40 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-6803,6803,Brandon Aiyuk,WR,SF,BN,44,44 48 0 0 0,2026,2028-2029,,Franchise Tag,DNR,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-6804,6804,Jordan Love,QB,GB,QB,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-6806,6806,J.K. Dobbins,RB,DEN,RB,2,2 3 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-6813,6813,Jonathan Taylor,RB,IND,RB,90,90 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T05:37:59+00:00
-Max,team-8,sl-6904,6904,Jalen Hurts,QB,PHI,QB,30,30 45 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-7002,7002,Juwan Johnson,TE,NO,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-7021,7021,Rico Dowdle,RB,PIT,BN,4,4 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-7523,7523,Trevor Lawrence,QB,JAX,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-7525,7525,DeVonta Smith,WR,PHI,WR,51,51 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-7526,7526,Jaylen Waddle,WR,DEN,BN,29,29 32 37 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-7543,7543,Travis Etienne,RB,NO,BN,20,20 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-7547,7547,Amon-Ra St. Brown,WR,DET,BN,100,100 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-7553,7553,Kyle Pitts,TE,ATL,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-7564,7564,Ja'Marr Chase,WR,CIN,WR,97,97 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-7567,7567,Kenneth Gainwell,RB,TB,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Max,team-8,sl-7569,7569,Nico Collins,WR,HOU,WR,91,91 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-7588,7588,Javonte Williams,RB,DAL,BN,48,48 0 0 0 0,2026,2027,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-7594,7594,Chuba Hubbard,RB,CAR,BN,34,34 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-7611,7611,Rhamondre Stevenson,RB,NE,FLEX,7,7 8 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-8110,8110,Jake Ferguson,TE,DAL,TE,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-8112,8112,Drake London,WR,ATL,WR,88,88 0 0 0 0,2026,2027,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-8126,8126,Wan'Dale Robinson,WR,TEN,WR,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-8130,8130,Trey McBride,TE,ARI,TE,42,42 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-8131,8131,Isaiah Likely,TE,NYG,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-8132,8132,Tyler Allgeier,RB,ARI,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-8134,8134,Khalil Shakir,WR,BUF,WR,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-8136,8136,Rachaad White,RB,WAS,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-8137,8137,George Pickens,WR,DAL,BN,71,71 75 83 0 0,2026,2029,rfa,Franchise Tag,Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-8138,8138,James Cook,RB,BUF,BN,79,79 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-8142,8142,Alec Pierce,WR,IND,BN,15,15 16 18 0 0,2026,2029,rfa,Franchise Tag,IR,2026-10-31T05:37:59+00:00
-Max,team-8,sl-8144,8144,Chris Olave,WR,NO,BN,15,15 30 45 0 0,2026,2029,mle,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-8146,8146,Garrett Wilson,WR,NYJ,BN,51,51 54 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-8148,8148,Jameson Williams,WR,DET,FLEX,27,27 28 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-8150,8150,Kyren Williams,RB,LAR,RB,45,45 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-8151,8151,Kenneth Walker,RB,KC,RB,67,67 70 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-8154,8154,Brian Robinson,RB,ATL,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-8155,8155,Breece Hall,RB,NYJ,BN,65,65 68 0 0 0,2026,2028,rfa,Franchise Tag,Questionable,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-8167,8167,Christian Watson,WR,GB,BN,27,27 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Matt,team-7,sl-8183,8183,Brock Purdy,QB,SF,BN,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-8228,8228,Jaylen Warren,RB,PIT,FLEX,11,11 12 13 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-8408,8408,Jordan Mason,RB,MIN,RB,2,2 3 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-9221,9221,Jahmyr Gibbs,RB,DET,RB,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-9224,9224,Chase Brown,RB,CIN,BN,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Max,team-8,sl-9226,9226,De'Von Achane,RB,MIA,RB,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-9228,9228,Bryce Young,QB,CAR,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-9480,9480,Brenton Strange,TE,JAX,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-9484,9484,Tucker Kraft,TE,GB,TE,16,16 17 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T05:37:59+00:00
-Jordan,team-4,sl-9487,9487,Parker Washington,WR,JAX,WR,26,26 27 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-9488,9488,Jaxon Smith-Njigba,WR,SEA,WR,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-9493,9493,Puka Nacua,WR,LAR,BN,45,45 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-9500,9500,Josh Downs,WR,IND,BN,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-9501,9501,DeMario Douglas,WR,NE,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Mike,team-6,sl-9502,9502,Tank Dell,WR,HOU,BN,45,45 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-9508,9508,Tyjae Spears,RB,TEN,FLEX,6,6 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-9509,9509,Bijan Robinson,RB,ATL,RB,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Russ,team-2,sl-96,96,Aaron Rodgers,QB,PIT,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Qasim,team-5,sl-9753,9753,Zach Charbonnet,RB,SEA,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T05:37:59+00:00
-Ryan,team-9,sl-9756,9756,Jordan Addison,WR,MIN,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Ben,team-10,sl-9757,9757,Kendre Miller,RB,NO,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T05:37:59+00:00
-Zach,team-3,sl-9758,9758,C.J. Stroud,QB,HOU,QB,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
-Johnny,team-1,sl-9997,9997,Zay Flowers,WR,BAL,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T05:37:59+00:00
+Matt,team-7,def-CHI,CHI,Chicago Bears D/ST,DEF,CHI,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,def-CIN,CIN,Cincinnati Bengals D/ST,DEF,CIN,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ben,team-10,def-CLE,CLE,Cleveland Browns D/ST,DEF,CLE,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Zach,team-3,def-DEN,DEN,Denver Broncos D/ST,DEF,DEN,DEF,2,2 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T14:31:30+00:00
+Russ,team-2,def-DET,DET,Detroit Lions D/ST,DEF,DET,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,def-GB,GB,Green Bay Packers D/ST,DEF,GB,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,def-HOU,HOU,Houston Texans D/ST,DEF,HOU,DEF,2,2 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T14:31:30+00:00
+Johnny,team-1,def-JAX,JAX,Jacksonville Jaguars D/ST,DEF,JAX,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,def-LAR,LAR,Los Angeles Rams D/ST,DEF,LAR,BN,2,2 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,def-MIN,MIN,Minnesota Vikings D/ST,DEF,MIN,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,def-NE,NE,New England Patriots D/ST,DEF,NE,DEF,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,def-PIT,PIT,Pittsburgh Steelers D/ST,DEF,PIT,DEF,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,def-WAS,WAS,Washington Commanders D/ST,DEF,WAS,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-10213,10213,Tre Tucker,WR,LV,WR,1,1 0 0 0 0,2026,2027,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-10222,10222,Jayden Reed,WR,GB,BN,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-10229,10229,Rashee Rice,WR,KC,WR,6,6 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-10232,10232,Michael Wilson,WR,ARI,FLEX,1,1 2 3 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-10236,10236,Dalton Kincaid,TE,BUF,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Max,team-8,sl-10859,10859,Sam LaPorta,TE,DET,BN,6,6 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-11435,11435,Emanuel Wilson,RB,SEA,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-11533,11533,Brandon Aubrey,K,DAL,K,2,2 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-11560,11560,Caleb Williams,QB,CHI,QB,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-11563,11563,Bo Nix,QB,DEN,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-11564,11564,Drake Maye,QB,NE,QB,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-11566,11566,Jayden Daniels,QB,WAS,BN,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-11576,11576,Braelon Allen,RB,NYJ,BN,3,3 4 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-11581,11581,MarShawn Lloyd,RB,GB,RB,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-11583,11583,Jonathon Brooks,RB,CAR,IR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-11584,11584,Bucky Irving,RB,TB,FLEX,3,3 4 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-11586,11586,Blake Corum,RB,LAR,BN,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-11604,11604,Brock Bowers,TE,LV,TE,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-11610,11610,Malik Washington,WR,MIA,BN,3,3 4 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-11620,11620,Rome Odunze,WR,CHI,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-11624,11624,Xavier Worthy,WR,KC,FLEX,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-11625,11625,Adonai Mitchell,WR,NYJ,WR,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-11628,11628,Marvin Harrison,WR,HOU,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-11631,11631,Brian Thomas,WR,JAX,BN,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-11632,11632,Malik Nabers,WR,NYG,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-11635,11635,Ladd McConkey,WR,LAC,WR,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-11637,11637,Keon Coleman,WR,BUF,BN,7,7 8 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-11646,11646,Jalen Coker,WR,CAR,BN,2,2 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-11783,11783,Ryan Flournoy,WR,DAL,WR,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-11786,11786,Cam Little,K,JAX,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-11792,11792,Will Reichard,K,MIN,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-11834,11834,Devaughn Vele,WR,NO,WR,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-12185,12185,Spencer Shrader,K,IND,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-12474,12474,Woody Marks,RB,HOU,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-12481,12481,Cam Skattebo,RB,NYG,BN,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-12484,12484,Jayden Higgins,WR,HOU,IR,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-12489,12489,RJ Harvey,RB,DEN,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-12490,12490,Bhayshul Tuten,RB,JAX,RB,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-12492,12492,Pat Bryant,WR,DEN,IR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-12495,12495,Ollie Gordon,RB,MIA,BN,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-12498,12498,Mason Taylor,TE,NYJ,TE,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-12501,12501,Matthew Golden,WR,GB,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-12504,12504,Kaleb Johnson,RB,GB,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-12506,12506,Harold Fannin,TE,CLE,TE,21,21 22 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-12507,12507,Omarion Hampton,RB,LAC,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-12508,12508,Jaxson Dart,QB,NYG,IR,11,11 12 13 15 0,2026,2030,rfa,Franchise Tag,IR,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-12509,12509,Tre' Harris,WR,LAC,FLEX,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-12512,12512,Quinshon Judkins,RB,CLE,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-12514,12514,Emeka Egbuka,WR,TB,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-12517,12517,Colston Loveland,TE,CHI,BN,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-12518,12518,Tyler Warren,TE,IND,FLEX,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-12519,12519,Luther Burden,WR,CHI,WR,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-12526,12526,Tetairoa McMillan,WR,CAR,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-12527,12527,Ashton Jeanty,RB,LV,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-12529,12529,TreVeyon Henderson,RB,NE,RB,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-12530,12530,Travis Hunter,DB,JAX,BN,6,6 7 8 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-12533,12533,Jacory Croskey-Merritt,RB,WAS,IR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",IR,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-12534,12534,Kyle Monangai,RB,CHI,IR,2,2 3 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-12535,12535,Isaac TeSlaa,WR,DET,WR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-12536,12536,Jaylin Noel,WR,HOU,IR,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-12545,12545,Tyler Shough,QB,NO,QB,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-12711,12711,Tyler Loop,K,BAL,K,2,2 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-13268,13268,Elijah Sarratt,WR,BAL,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-13269,13269,Fernando Mendoza,QB,LV,BN,1,1 2 0 0 0,2026,2028,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-13274,13274,Germie Bernard,WR,PIT,WR,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-13276,13276,Omar Cooper,WR,NYJ,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-13279,13279,Carnell Tate,WR,TEN,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T14:31:30+00:00
+Max,team-8,sl-13281,13281,Jordyn Tyson,WR,NO,IR,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-13285,13285,Malachi Fields,WR,NYG,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-13286,13286,Jadarian Price,RB,SEA,IR,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-13287,13287,Jeremiyah Love,RB,ARI,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-13288,13288,Nicholas Singleton,RB,TEN,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-13293,13293,Ja'Kobi Lane,WR,BAL,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-13294,13294,Makai Lemon,WR,PHI,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-13296,13296,Caleb Douglas,WR,MIA,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-13298,13298,KC Concepcion,WR,CLE,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-13301,13301,Antonio Williams,WR,WAS,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-13305,13305,Mike Washington,RB,LV,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-13311,13311,Chris Bell,WR,MIA,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-13317,13317,Ted Hurst,WR,TB,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-13320,13320,Zachariah Branch,WR,ATL,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-13330,13330,Kenyon Sadiq,TE,NYJ,BN,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-13337,13337,Emmett Johnson,RB,KC,RB,5,5 6 7 8 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-13345,13345,Jonah Coleman,RB,DEN,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-13346,13346,Denzel Boston,WR,CLE,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-13349,13349,Eli Stowers,TE,PHI,BN,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-13353,13353,Chris Brazzell,WR,CAR,IR,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",IR,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-13402,13402,Skyler Bell,WR,BUF,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-13405,13405,Kaytron Allen,RB,MIA,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-13413,13413,Cyrus Allen,WR,KC,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-13414,13414,Kaelon Black,RB,SF,BN,1,1 2 3 4 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-13417,13417,De'Zhaun Stribling,WR,SF,IR,3,3 4 5 6 0,2026,2030,rookie_draft,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-13424,13424,Seth McGowan,RB,IND,BN,1,1 0 0 0 0,2026,2027,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-1373,1373,Geno Smith,QB,NYJ,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-1466,1466,Travis Kelce,TE,KC,TE,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-1479,1479,Keenan Allen,WR,IND,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-1945,1945,Chris Boswell,K,PIT,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-2133,2133,Davante Adams,WR,LAR,WR,39,39 0 0 0 0,2026,2027,rfa,Franchise Tag,IR,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-2216,2216,Mike Evans,WR,SF,WR,23,23 0 0 0 0,2026,2027,rfa,Franchise Tag,Out,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-2449,2449,Stefon Diggs,WR,WAS,WR,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-2747,2747,Jason Myers,K,SEA,K,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-3163,3163,Jared Goff,QB,DET,QB,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-3198,3198,Derrick Henry,RB,BAL,RB,33,33 35 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-3214,3214,Hunter Henry,TE,NE,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-3294,3294,Dak Prescott,QB,DAL,BN,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-3451,3451,Ka'imi Fairbairn,K,HOU,K,2,2 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-4034,4034,Christian McCaffrey,RB,SF,BN,68,68 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-4035,4035,Alvin Kamara,RB,NO,BN,33,33 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T14:31:30+00:00
+Max,team-8,sl-4037,4037,Chris Godwin,WR,TB,WR,4,4 5 6 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-4046,4046,Patrick Mahomes,QB,KC,BN,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-4147,4147,Samaje Perine,RB,CIN,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-4199,4199,Aaron Jones,RB,MIN,RB,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-421,421,Matthew Stafford,QB,LAR,BN,3,3 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-4217,4217,George Kittle,TE,SF,BN,1,1 2 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-4227,4227,Harrison Butker,K,KC,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-4866,4866,Saquon Barkley,RB,PHI,BN,71,71 75 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-4881,4881,Lamar Jackson,QB,BAL,QB,28,28 29 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-4950,4950,Christian Kirk,WR,SF,BN,10,10 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-4983,4983,DJ Moore,WR,BUF,WR,22,22 23 25 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-4984,4984,Josh Allen,QB,BUF,BN,72,72 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-5001,5001,Dalton Schultz,TE,HOU,TE,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-5022,5022,Dallas Goedert,TE,PHI,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-5045,5045,Courtland Sutton,WR,DEN,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-5844,5844,T.J. Hockenson,TE,MIN,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-5846,5846,DK Metcalf,WR,PIT,WR,3,3 4 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-5849,5849,Kyler Murray,QB,MIN,BN,1,1 2 3 0 0,2026,2029,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-5850,5850,Josh Jacobs,RB,GB,BN,3,3 4 5 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-5859,5859,A.J. Brown,WR,NE,BN,48,48 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-5872,5872,Deebo Samuel,WR,SF,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Out,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-5892,5892,David Montgomery,RB,HOU,RB,39,39 0 0 0 0,2026,2027,rfa,Franchise Tag,Out,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-5927,5927,Terry McLaurin,WR,WAS,WR,25,25 26 29 33 0,2026,2030,fa_auction,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-5947,5947,Jakobi Meyers,WR,JAX,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-5967,5967,Tony Pollard,RB,TEN,BN,15,15 0 0 0 0,2026,2027,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-6083,6083,Matt Gay,K,LV,K,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-6770,6770,Joe Burrow,QB,CIN,QB,13,13 15 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-6783,6783,Jerry Jeudy,WR,CLE,WR,32,32 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-6786,6786,CeeDee Lamb,WR,DAL,BN,98,98 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-6790,6790,D'Andre Swift,RB,CHI,BN,26,26 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-6794,6794,Justin Jefferson,WR,MIN,WR,92,92 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-6797,6797,Justin Herbert,QB,LAC,QB,28,28 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-6801,6801,Tee Higgins,WR,CIN,WR,38,38 40 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-6803,6803,Brandon Aiyuk,WR,SF,BN,44,44 48 0 0 0,2026,2028-2029,,Franchise Tag,DNR,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-6804,6804,Jordan Love,QB,GB,QB,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-6806,6806,J.K. Dobbins,RB,DEN,RB,2,2 3 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-6813,6813,Jonathan Taylor,RB,IND,RB,90,90 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T14:31:30+00:00
+Max,team-8,sl-6904,6904,Jalen Hurts,QB,PHI,QB,30,30 45 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-7002,7002,Juwan Johnson,TE,NO,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-7021,7021,Rico Dowdle,RB,PIT,BN,4,4 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-7523,7523,Trevor Lawrence,QB,JAX,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-7525,7525,DeVonta Smith,WR,PHI,WR,51,51 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-7526,7526,Jaylen Waddle,WR,DEN,BN,29,29 32 37 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-7543,7543,Travis Etienne,RB,NO,BN,20,20 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-7547,7547,Amon-Ra St. Brown,WR,DET,BN,100,100 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-7553,7553,Kyle Pitts,TE,ATL,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-7564,7564,Ja'Marr Chase,WR,CIN,WR,97,97 0 0 0 0,2026,2027,franchise_tag,none,,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-7567,7567,Kenneth Gainwell,RB,TB,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Questionable,2026-10-31T14:31:30+00:00
+Max,team-8,sl-7569,7569,Nico Collins,WR,HOU,WR,91,91 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-7588,7588,Javonte Williams,RB,DAL,BN,48,48 0 0 0 0,2026,2027,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-7594,7594,Chuba Hubbard,RB,CAR,BN,34,34 0 0 0 0,2026,2027-2028,,Franchise Tag,,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-7611,7611,Rhamondre Stevenson,RB,NE,FLEX,7,7 8 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-8110,8110,Jake Ferguson,TE,DAL,TE,2,2 3 4 0 0,2026,2029-2030,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-8112,8112,Drake London,WR,ATL,WR,88,88 0 0 0 0,2026,2027,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-8126,8126,Wan'Dale Robinson,WR,TEN,WR,1,1 2 3 4 0,2026,2030,fa_signing,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-8130,8130,Trey McBride,TE,ARI,TE,42,42 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-8131,8131,Isaiah Likely,TE,NYG,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-8132,8132,Tyler Allgeier,RB,ARI,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-8134,8134,Khalil Shakir,WR,BUF,WR,5,5 6 0 0 0,2026,2028-2029,,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-8136,8136,Rachaad White,RB,WAS,,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-8137,8137,George Pickens,WR,DAL,BN,71,71 75 83 0 0,2026,2029,rfa,Franchise Tag,Questionable,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-8138,8138,James Cook,RB,BUF,BN,79,79 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-8142,8142,Alec Pierce,WR,IND,BN,15,15 16 18 0 0,2026,2029,rfa,Franchise Tag,IR,2026-10-31T14:31:30+00:00
+Max,team-8,sl-8144,8144,Chris Olave,WR,NO,BN,15,15 30 45 0 0,2026,2029,mle,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-8146,8146,Garrett Wilson,WR,NYJ,BN,51,51 54 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-8148,8148,Jameson Williams,WR,DET,FLEX,27,27 28 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-8150,8150,Kyren Williams,RB,LAR,RB,45,45 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-8151,8151,Kenneth Walker,RB,KC,RB,67,67 70 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-8154,8154,Brian Robinson,RB,ATL,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",Out,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-8155,8155,Breece Hall,RB,NYJ,BN,65,65 68 0 0 0,2026,2028,rfa,Franchise Tag,Questionable,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-8167,8167,Christian Watson,WR,GB,BN,27,27 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Matt,team-7,sl-8183,8183,Brock Purdy,QB,SF,BN,1,1 0 0 0 0,2026,2027,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-8228,8228,Jaylen Warren,RB,PIT,FLEX,11,11 12 13 0 0,2026,2029,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-8408,8408,Jordan Mason,RB,MIN,RB,2,2 3 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-9221,9221,Jahmyr Gibbs,RB,DET,RB,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-9224,9224,Chase Brown,RB,CIN,BN,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Max,team-8,sl-9226,9226,De'Von Achane,RB,MIA,RB,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",IR,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-9228,9228,Bryce Young,QB,CAR,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-9480,9480,Brenton Strange,TE,JAX,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-9484,9484,Tucker Kraft,TE,GB,TE,16,16 17 0 0 0,2026,2028,rfa,Franchise Tag,,2026-10-31T14:31:30+00:00
+Jordan,team-4,sl-9487,9487,Parker Washington,WR,JAX,WR,26,26 27 0 0 0,2026,2028,fa_auction,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-9488,9488,Jaxon Smith-Njigba,WR,SEA,WR,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-9493,9493,Puka Nacua,WR,LAR,BN,45,45 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-9500,9500,Josh Downs,WR,IND,BN,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-9501,9501,DeMario Douglas,WR,NE,BN,1,1 0 0 0 0,2026,2026-2027,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Mike,team-6,sl-9502,9502,Tank Dell,WR,HOU,BN,45,45 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-9508,9508,Tyjae Spears,RB,TEN,FLEX,6,6 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Out,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-9509,9509,Bijan Robinson,RB,ATL,RB,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Russ,team-2,sl-96,96,Aaron Rodgers,QB,PIT,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Qasim,team-5,sl-9753,9753,Zach Charbonnet,RB,SEA,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",Questionable,2026-10-31T14:31:30+00:00
+Ryan,team-9,sl-9756,9756,Jordan Addison,WR,MIN,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Ben,team-10,sl-9757,9757,Kendre Miller,RB,NO,BN,1,1 0 0 0 0,2026,,in_season_fa,"Restricted Free Agent, Franchise Tag, Mid-Level Extension",,2026-10-31T14:31:30+00:00
+Zach,team-3,sl-9758,9758,C.J. Stroud,QB,HOU,QB,4,4 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
+Johnny,team-1,sl-9997,9997,Zay Flowers,WR,BAL,BN,8,8 0 0 0 0,2026,2027-2028,,"Restricted Free Agent, Franchise Tag",,2026-10-31T14:31:30+00:00
