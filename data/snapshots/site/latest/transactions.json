@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-10-31T23:23:08+00:00",
+ "as_of": "2026-11-01T05:59:34+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -1612,6 +1612,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-29T21:27:53.474633+00:00"
+  },
+  {
+   "id": "4bdab1aa-988a-46a5-b9b1-94a94a7818d5",
+   "occurred_at": "2026-11-01T02:05:18.16596+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-7839",
+   "player_name": "Evan McPherson",
+   "from_team_id": null,
+   "to_team_id": "team-8",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-01T02:05:18.16596+00:00"
   },
   {
    "id": "4d1afb15-fd73-48f8-9cd3-04babb94e04e",
@@ -5114,6 +5133,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T01:53:18.04198+00:00"
+  },
+  {
+   "id": "fa53c07b-8ff3-45a5-80e5-fed5fc4fd65e",
+   "occurred_at": "2026-11-01T03:44:45.2636+00:00",
+   "type": "fa_signing",
+   "player_id": "def-SEA",
+   "player_name": "Seattle Seahawks D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-5",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-01T03:44:45.2636+00:00"
   },
   {
    "id": "fb67f1e2-6433-4d33-9fd0-4786ebce9aa9",
