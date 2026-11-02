@@ -115,7 +115,7 @@ auctions,2013,Antonio Gates,TE,00-0021547,exact
 auctions,2013,Knowshon Moreno,RB,00-0026988,exact
 auctions,2013,Patriots,DEF,DEF-NE,exact
 auctions,2013,Dan Bailey,K,00-0028660,exact
-auctions,2013,Rams,DEF,DEF-LA,exact
+auctions,2013,Rams,DEF,DEF-LA,city+team
 auctions,2013,Chris Ivory,RB,00-0027531,exact
 auctions,2013,Josh Gordon,WR,00-0029664,exact
 auctions,2013,Josh Brown,K,00-0021940,exact
@@ -177,7 +177,7 @@ auctions,2014,Chiefs,DEF,DEF-KC,exact
 auctions,2014,Kyle Rudolph,TE,00-0027981,exact
 auctions,2014,Larry Fitzgerald,WR,00-0022921,exact
 auctions,2014,Nick Foles,QB,00-0029567,exact
-auctions,2014,Rams,DEF,DEF-LA,exact
+auctions,2014,Rams,DEF,DEF-LA,city+team
 auctions,2014,C.J. Spiller,RB,00-0027861,exact
 auctions,2014,Michael Crabtree,WR,00-0026986,exact
 auctions,2014,Trent Richardson,RB,00-0029675,exact
@@ -332,7 +332,7 @@ auctions,2014,Peyton Manning,QB,00-0010346,exact
 auctions,2015,Stephen Gostkowski,K,00-0024333,exact
 auctions,2015,Marshawn Lynch,RB,00-0025399,exact
 auctions,2015,Justin Forsett,RB,00-0026373,exact
-auctions,2015,Rams,DEF,DEF-LA,exact
+auctions,2015,Rams,DEF,DEF-LA,city+team
 auctions,2015,Bills,DEF,DEF-BUF,exact
 auctions,2015,Dez Bryant,WR,00-0027902,exact
 auctions,2015,Mark Ingram II,RB,00-0027966,exact
@@ -538,7 +538,7 @@ auctions,2016,Aaron Rodgers,QB,00-0023459,exact
 auctions,2016,Patriots,DEF,DEF-NE,exact
 auctions,2016,Chandler Catanzaro,K,00-0030896,exact
 auctions,2016,Drew Brees,QB,00-0020531,exact
-auctions,2016,Rams,DEF,DEF-LA,exact
+auctions,2016,Rams,DEF,DEF-LA,city+team
 auctions,2016,Allen Hurns,WR,00-0030821,exact
 auctions,2016,DeMarco Murray,RB,00-0028009,exact
 auctions,2016,Bengals,DEF,DEF-CIN,exact
@@ -882,7 +882,7 @@ auctions,2018,Jimmy Graham,TE,00-0027696,exact
 auctions,2018,Wil Lutz,K,00-0032569,exact
 auctions,2018,Harrison Butker,K,00-0033303,exact
 auctions,2018,Davante Adams,WR,00-0031381,exact
-auctions,2018,Rams,DEF,DEF-LA,exact
+auctions,2018,Rams,DEF,DEF-LA,city+team
 auctions,2018,Vikings,DEF,DEF-MIN,exact
 auctions,2018,Larry Fitzgerald,WR,00-0022921,exact
 auctions,2018,Russell Wilson,QB,00-0029263,exact
@@ -1067,7 +1067,7 @@ auctions,2018,Mack Hollins,WR,00-0033555,exact
 auctions,2018,Tarik Cohen,RB,00-0033556,exact
 auctions,2018,Alvin Kamara,RB,00-0033906,exact
 auctions,2018,Jameis Winston,QB,00-0031503,exact
-auctions,2019,Rams,DEF,DEF-LA,exact
+auctions,2019,Rams,DEF,DEF-LA,city+team
 auctions,2019,Ravens,DEF,DEF-BAL,exact
 auctions,2019,Jaguars,DEF,DEF-JAX,exact
 auctions,2019,Odell Beckham Jr.,WR,00-0031235,exact
@@ -1474,7 +1474,7 @@ auctions,2021,Patrick Mahomes,QB,00-0033873,exact
 auctions,2021,Buccaneers,DEF,DEF-TB,exact
 auctions,2021,Steelers,DEF,DEF-PIT,exact
 auctions,2021,Rob Gronkowski,TE,00-0027656,exact
-auctions,2021,Rams,DEF,DEF-LA,exact
+auctions,2021,Rams,DEF,DEF-LA,city+team
 auctions,2021,Jalen Hurts,QB,00-0036389,exact
 auctions,2021,Darren Waller,TE,00-0031610,exact
 auctions,2021,Allen Robinson,WR,00-0031428,exact
@@ -1675,7 +1675,7 @@ auctions,2022,Packers,DEF,DEF-GB,exact
 auctions,2022,Dawson Knox,TE,00-0035689,exact
 auctions,2022,Bills,DEF,DEF-BUF,exact
 auctions,2022,Buccaneers,DEF,DEF-TB,exact
-auctions,2022,Rams,DEF,DEF-LA,exact
+auctions,2022,Rams,DEF,DEF-LA,city+team
 auctions,2022,Dalvin Cook,RB,00-0033893,exact
 auctions,2022,49ers,DEF,DEF-SF,exact
 auctions,2022,Justin Tucker,K,00-0029597,exact

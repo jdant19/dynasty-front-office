@@ -1,0 +1,302 @@
+trade_id,season,date,receiver,sender,kind,asset,cap,player_id,pick_year,pick_round
+T2014-001,2014,,Jordan,Matt,player,Aaron Rodgers,,00-0023459,,
+T2014-001,2014,,Jordan,Matt,pick,2014 2nd,,,2014.0,2.0
+T2014-001,2014,,Jordan,Matt,cap,,9.0,,,
+T2014-001,2014,,Jordan,Matt,pick,2015 2nd (if Austin is cut),,,2015.0,2.0
+T2014-001,2014,,Matt,Jordan,player,Colin Kaepernick,,00-0027974,,
+T2014-001,2014,,Matt,Jordan,player,Lamar Miller,,00-0029615,,
+T2014-001,2014,,Matt,Jordan,player,Tavon Austin,,00-0030525,,
+T2014-001,2014,,Matt,Jordan,pick,2014 2nd,,,2014.0,2.0
+T2014-001,2014,,Matt,Jordan,player,$8 (if Austin is cut),,,,
+T2014-002,2014,,Jordan,Ben,player,Matt Ryan,,00-0026143,,
+T2014-002,2014,,Jordan,Ben,pick,2015 2nd,,,2015.0,2.0
+T2014-002,2014,,Ben,Jordan,player,Marquis Lee,,00-0031431,,
+T2014-002,2014,,Ben,Jordan,player,Bernard Pierce,,00-0029264,,
+T2014-002,2014,,Ben,Jordan,pick,2015 1st,,,2015.0,1.0
+T2014-003,2014,,Ben,Qasim,player,Tom Brady,,00-0019596,,
+T2014-003,2014,,Ben,Qasim,player,Steve Smith,,00-0020337,,
+T2014-003,2014,,Qasim,Ben,player,Brandin Cooks,,00-0031236,,
+T2014-003,2014,,Qasim,Ben,player,Roddy White,,00-0023462,,
+T2014-003,2014,,Qasim,Ben,player,Wes Welker,,00-0022427,,
+T2014-003,2014,,Qasim,Ben,player,$4 (If Welker is cut),,,,
+T2014-003,2014,,Qasim,Ben,player,$8 (If Welker retires or isnt on a roster for week 1),,,,
+T2015-004,2015,,Jordan,Ryan,player,Joique Bell,,00-0027218,,
+T2015-004,2015,,Ryan,Jordan,pick,2015 2nd,,,2015.0,2.0
+T2015-005,2015,,Ryan,Matt,pick,2015 1st,,,2015.0,1.0
+T2015-005,2015,,Ryan,Matt,player,Colin Kaepernick,,00-0027974,,
+T2015-005,2015,,Ryan,Matt,player,CJ Spiller,,00-0027861,,
+T2015-005,2015,,Ryan,Matt,cap,,9.0,,,
+T2015-005,2015,,Matt,Ryan,player,Jimmy Graham,,00-0027696,,
+T2015-005,2015,,Matt,Ryan,player,Jeremy Maclin,,00-0026995,,
+T2015-006,2015,,Ryan,Zach,pick,2015 1st,,,2015.0,1.0
+T2015-006,2015,,Zach,Ryan,player,CJ Spiller,,00-0027861,,
+T2015-006,2015,,Zach,Ryan,cap,,14.0,,,
+T2015-007,2015,,Jordan,Qasim,player,Larry Fitzgerald,,00-0022921,,
+T2015-007,2015,,Jordan,Qasim,pick,2015 2nd,,,2015.0,2.0
+T2015-007,2015,,Jordan,Qasim,cap,,3.0,,,
+T2015-007,2015,,Qasim,Jordan,player,Matt Ryan,,00-0026143,,
+T2015-008,2015,,Jordan,Ryan,player,Doug Martin,,00-0029613,,
+T2015-008,2015,,Jordan,Ryan,cap,,28.0,,,
+T2015-008,2015,,Ryan,Jordan,pick,2016 1st,,,2016.0,1.0
+T2015-008,2015,,Ryan,Jordan,pick,2016 2nd (from Qasim) (if Martin and Williams score 240 + points starting Nov. 7),,,2016.0,2.0
+T2015-008,2015,,Ryan,Jordan,pick,2016 2nd (if Martin and William score 130-239 points starting Nov. 7),,,2016.0,2.0
+T2015-009,2015,,Johnny,Ben,player,Tom Brady,,00-0019596,,
+T2015-009,2015,,Johnny,Ben,player,CJ Anderson,,00-0029854,,
+T2015-009,2015,,Johnny,Ben,player,Rishard Matthews,,00-0029580,,
+T2015-009,2015,,Johnny,Ben,pick,2016 2nd,,,2016.0,2.0
+T2015-009,2015,,Ben,Johnny,player,Randall Cobb,,00-0028002,,
+T2015-009,2015,,Ben,Johnny,pick,2016 1st,,,2016.0,1.0
+T2016-010,2016,,Ryan,Ben,player,Doug Baldwin,,00-0028434,,
+T2016-010,2016,,Ben,Ryan,player,Corey Coleman,,00-0032966,,
+T2016-010,2016,,Ben,Ryan,pick,2018 1st,,,2018.0,1.0
+T2016-010,2016,,Ben,Ryan,pick,2018 3rd,,,2018.0,3.0
+T2016-010,2016,,Ben,Ryan,cap,,20.0,,,
+T2016-011,2016,,Jordan,Ben,player,Randall Cobb,,00-0028002,,
+T2016-011,2016,,Jordan,Ben,pick,2017 1st,,,2017.0,1.0
+T2016-011,2016,,Jordan,Ben,pick,2018 1st,,,2018.0,1.0
+T2016-011,2016,,Jordan,Ben,pick,2018 2nd,,,2018.0,2.0
+T2016-011,2016,,Ben,Jordan,player,Antonio Brown,,00-0027793,,
+T2016-011,2016,,Ben,Jordan,player,Jordan Matthews,,00-0031299,,
+T2016-011,2016,,Ben,Jordan,cap,,25.0,,,
+T2016-012,2016,,Jordan,Qasim,player,Rams Defense,,DEF-LA,,
+T2016-012,2016,,Jordan,Qasim,player,Andy Dalton,,00-0027973,,
+T2016-012,2016,,Jordan,Qasim,pick,2017 3rd,,,2017.0,3.0
+T2016-012,2016,,Qasim,Jordan,player,Doug Martin,,00-0029613,,
+T2016-012,2016,,Qasim,Jordan,cap,,37.0,,,
+T2016-013,2016,,Ben,Ryan,pick,2016 1st,,,2016.0,1.0
+T2016-013,2016,,Ben,Ryan,pick,2016 1st,,,2016.0,1.0
+T2016-013,2016,,Ryan,Ben,player,Latvious Murray,,00-0030513,,
+T2016-013,2016,,Ryan,Ben,cap,,20.0,,,
+T2016-013,2016,,Ryan,Ben,pick,2016 2nd,,,2016.0,2.0
+T2016-013,2016,,Ryan,Ben,pick,2017 2nd,,,2017.0,2.0
+T2018-014,2018,,Jordan,Mike,pick,2018 2nd,,,2018.0,2.0
+T2018-014,2018,,Jordan,Mike,player,Travis Kelce,,00-0030506,,
+T2018-014,2018,,Mike,Jordan,pick,2018 1st,,,2018.0,1.0
+T2018-014,2018,,Mike,Jordan,pick,2018 2nd,,,2018.0,2.0
+T2018-015,2018,,Jordan,Ben,player,Odell Beckham Jr,,00-0031235,,
+T2018-015,2018,,Jordan,Ben,player,Matt Stafford,,00-0026498,,
+T2018-015,2018,,Jordan,Ben,pick,2019 3rd,,,2019.0,3.0
+T2018-015,2018,,Ben,Jordan,player,Dez Bryant,,00-0027902,,
+T2018-015,2018,,Ben,Jordan,player,Joe Mixon,,00-0033897,,
+T2018-015,2018,,Ben,Jordan,pick,2018 2nd,,,2018.0,2.0
+T2018-015,2018,,Ben,Jordan,cap,$25 in 2019-2020,25.0,,,
+T2018-015,2018,,Ben,Jordan,pick,2019 2nd,,,2019.0,2.0
+T2018-016,2018,,Jordan,Ryan,player,Melvin Gordon,,00-0032144,,
+T2018-016,2018,,Jordan,Ryan,player,Doug Baldwin,,00-0028434,,
+T2018-016,2018,,Jordan,Ryan,pick,2019 2nd,,,2019.0,2.0
+T2018-016,2018,,Ryan,Jordan,pick,2019 1st,,,2019.0,1.0
+T2018-016,2018,,Ryan,Jordan,player,Emmanuel Sanders,,00-0027685,,
+T2018-017,2018,,Ben,Jordan,player,John Ross,,00-0033460,,
+T2018-017,2018,,Ben,Jordan,pick,Ryan's 2019 2nd,,,2019.0,2.0
+T2018-017,2018,,Jordan,Ben,player,Cam Newton,,00-0027939,,
+T2018-017,2018,,Jordan,Ben,pick,2020 3rd Round pick swap,,,2020.0,3.0
+T2018-018,2018,,Matt,Ryan,cap,,10.0,,,
+T2018-018,2018,,Ryan,Matt,pick,2019 3rd Round Pick,,,2019.0,3.0
+T2019-019,2019,,Qasim,Matt,player,Russell Wilson,,00-0029263,,
+T2019-019,2019,,Matt,Qasim,pick,2020 2nd,,,2020.0,2.0
+T2019-020,2019,,Ryan,Jordan,player,Todd Gurley,,00-0032241,,
+T2019-020,2019,,Ryan,Jordan,pick,2020 1st,,,2020.0,1.0
+T2019-020,2019,,Ryan,Jordan,pick,2021 1st,,,2021.0,1.0
+T2019-020,2019,,Ryan,Jordan,pick,2020 2nd,,,2020.0,2.0
+T2019-020,2019,,Jordan,Ryan,player,Ezekiel Elliot,,00-0033045,,
+T2019-020,2019,,Jordan,Ryan,player,Keenan Allen,,00-0030279,,
+T2019-020,2019,,Jordan,Ryan,pick,2020 3rd,,,2020.0,3.0
+T2019-020,2019,,Jordan,Ryan,pick,2021 3rd,,,2021.0,3.0
+T2019-021,2019,,Ben,Ryan,player,Michael Thomas,,00-0032765,,
+T2019-021,2019,,Ben,Ryan,player,DeAndre Hopkins,,00-0030564,,
+T2019-021,2019,,Ryan,Ben,player,Sammy Watkins,,00-0031325,,
+T2019-021,2019,,Ryan,Ben,pick,2020 1st,,,2020.0,1.0
+T2019-021,2019,,Ryan,Ben,pick,2021 1st,,,2021.0,1.0
+T2020-022,2020,,Ben,Matt,player,Jared Goff,,00-0033106,,
+T2020-022,2020,,Matt,Ben,player,Ty Johnson,,00-0035537,,
+T2020-022,2020,,Matt,Ben,player,Swap 2021 3rds - if Ben's is better,,,,
+T2020-022,2020,,Matt,Ben,player,If Ben's isnt better swap 2022 3rds,,,,
+T2020-023,2020,,Matt,Ryan,player,Tyreek Hill,,00-0033040,,
+T2020-023,2020,,Matt,Ryan,pick,#10 pick in 2020,,,2020.0,1.0
+T2020-023,2020,,Ryan,Matt,player,AJ Brown,,00-0035676,,
+T2020-023,2020,,Ryan,Matt,pick,#9 pick in 2020,,,2020.0,1.0
+T2020-023,2020,,Ryan,Matt,pick,Matts 2021 1st,,,2021.0,1.0
+T2020-024,2020,,Ben,Jordan,player,Mike Davis,,00-0032063,,
+T2020-024,2020,,Jordan,Ben,player,Michael Gallup,,00-0034764,,
+T2020-025,2020,,Ben,Russ,player,Will Fuller,,00-0033127,,
+T2020-025,2020,,Russ,Ben,player,Melvin Gordon,,00-0032144,,
+T2020-026,2020,,Jordan,Qasim,pick,Qasim's 2021 2nd,,,2021.0,2.0
+T2020-026,2020,,Jordan,Qasim,pick,Qasim's 2022 3rd,,,2022.0,3.0
+T2020-026,2020,,Qasim,Jordan,player,Carson Wentz,,00-0032950,,
+T2020-026,2020,,Qasim,Jordan,player,Worst of Jordan's 2021 3rds,,,,
+T2020-027,2020,,Ben,Jordan,player,Ezekiel Elliot,,00-0033045,,
+T2020-027,2020,,Ben,Jordan,pick,2020 pick #21,,,2020.0,3.0
+T2020-027,2020,,Ben,Jordan,cap,,25.0,,,
+T2020-027,2020,,Jordan,Ben,player,Marquis Brown,,00-0035662,,
+T2020-027,2020,,Jordan,Ben,player,Damien Harris,,00-0035657,,
+T2020-027,2020,,Jordan,Ben,pick,Ben's 2021 2nd,,,2021.0,2.0
+T2020-027,2020,,Jordan,Ben,pick,Ben's 2022 2nd,,,2022.0,2.0
+T2020-027,2020,,Jordan,Ben,cap,$40 in 2021,40.0,,,
+T2020-027,2020,,Jordan,Ben,cap,$10 in 2022,10.0,,,
+T2020-028,2020,,Jordan,Zach,player,David Montgomery,,00-0035685,,
+T2020-028,2020,,Jordan,Zach,player,TY Hilton,,00-0029608,,
+T2020-028,2020,,Jordan,Zach,pick,Zach's 2021 1st,,,2021.0,1.0
+T2020-028,2020,,Zach,Jordan,player,Julio Jones,,00-0027944,,
+T2020-028,2020,,Zach,Jordan,player,Leonard Fournette,,00-0033856,,
+T2020-028,2020,,Zach,Jordan,pick,Ben's 2021 2nd,,,2021.0,2.0
+T2020-028,2020,,Zach,Jordan,cap,,65.0,,,
+T2021-029,2021,,Jordan,Max,player,Jonathan Taylor,,00-0036223,,
+T2021-029,2021,,Jordan,Max,player,Chris Carson,,00-0033594,,
+T2021-029,2021,,Jordan,Max,player,Damien Williams,,00-0030874,,
+T2021-029,2021,,Jordan,Max,player,DJ Chark,,00-0034777,,
+T2021-029,2021,,Jordan,Max,pick,2021 pick #16,,,2021.0,2.0
+T2021-029,2021,,Max,Jordan,pick,2021 pick #2,,,2021.0,1.0
+T2021-029,2021,,Max,Jordan,pick,2021 pick #13,,,2021.0,2.0
+T2021-029,2021,,Max,Jordan,player,Diontae Johnson,,00-0035216,,
+T2021-029,2021,,Max,Jordan,player,Marquis Brown,,00-0035662,,
+T2021-029,2021,,Max,Jordan,player,Darrell Henderson,,00-0035664,,
+T2021-030,2021,,Ben,Max,player,Marlon Mack,,00-0033951,,
+T2021-030,2021,,Ben,Max,pick,2021 pick #13,,,2021.0,2.0
+T2021-030,2021,,Ben,Max,pick,2022 1st,,,2022.0,1.0
+T2021-030,2021,,Max,Ben,player,Joe Mixon,,00-0033897,,
+T2021-031,2021,,Ben,Qasim,pick,2021 pick #10,,,2021.0,1.0
+T2021-031,2021,,Ben,Qasim,pick,2021 pick #30,,,2021.0,3.0
+T2021-031,2021,,Qasim,Ben,player,DeAndre Hopkins,,00-0030564,,
+T2021-031,2021,,Qasim,Ben,cap,,20.0,,,
+T2021-032,2021,,Ryan,Qasim,player,Dak Prescott,,00-0033077,,
+T2021-032,2021,,Ryan,Qasim,pick,2023 3rd,,,2023.0,3.0
+T2021-032,2021,,Qasim,Ryan,player,Russell Wilson,,00-0029263,,
+T2021-032,2021,,Qasim,Ryan,cap,,38.0,,,
+T2021-032,2021,,Qasim,Ryan,pick,2022 2nd,,,2022.0,2.0
+T2021-033,2021,,Johnny,Jordan,pick,2021 #16,,,2021.0,2.0
+T2021-033,2021,,Johnny,Jordan,pick,2021 #20,,,2021.0,2.0
+T2021-033,2021,,Jordan,Johnny,pick,2021 #8,,,2021.0,1.0
+T2021-033,2021,,Jordan,Johnny,cap,,5.0,,,
+T2021-034,2021,,Matt,Jordan,player,David Montgomery,,00-0035685,,
+T2021-034,2021,,Matt,Jordan,pick,2022 1st,,,2022.0,1.0
+T2021-034,2021,,Matt,Jordan,cap,$25 in 2022,25.0,,,
+T2021-034,2021,,Jordan,Matt,player,Travis Kelce,,00-0030506,,
+T2021-034,2021,,Jordan,Matt,cap,$25 in 2021,25.0,,,
+T2021-035,2021,,Matt,Zach,player,Stefon Diggs,,00-0031588,,
+T2021-035,2021,,Matt,Zach,pick,2023 2nd,,,2023.0,2.0
+T2021-035,2021,,Matt,Zach,cap,,5.0,,,
+T2021-035,2021,,Zach,Matt,player,Julio Jones,,00-0027944,,
+T2021-035,2021,,Zach,Matt,pick,2022 1st (best of Matt's),,,2022.0,1.0
+T2021-035,2021,,Zach,Matt,pick,2023 1st,,,2023.0,1.0
+T2021-036,2021,,Qasim,Mike,player,Aaron Rodgers,,00-0023459,,
+T2021-036,2021,,Qasim,Mike,player,George Kittle,,00-0033288,,
+T2021-036,2021,,Qasim,Mike,player,Marvin Jones,,00-0029293,,
+T2021-036,2021,,Qasim,Mike,player,Alexander Mattison,,00-0034972,,
+T2021-036,2021,,Mike,Qasim,player,Aaron Jones,,00-0033293,,
+T2021-036,2021,,Mike,Qasim,player,Marquez Calloway,,00-0036219,,
+T2021-036,2021,,Mike,Qasim,pick,2022 2nd (Qasim's),,,2022.0,2.0
+T2021-037,2021,,Jordan,Mike,player,Tyler Lockett,,00-0032211,,
+T2021-037,2021,,Jordan,Mike,player,Mike Gesicki,,00-0034829,,
+T2021-037,2021,,Jordan,Mike,pick,2023 2nd,,,2023.0,2.0
+T2021-037,2021,,Mike,Jordan,player,Travis Kelce,,00-0030506,,
+T2021-037,2021,,Mike,Jordan,player,Michael Gallup,,00-0034764,,
+T2022-038,2022,,Jordan,Mike,player,Davante Adams,,00-0031381,,
+T2022-038,2022,,Jordan,Mike,player,Amon-Ra St.Brown,,00-0036963,,
+T2022-038,2022,,Jordan,Mike,pick,2024 1st,,,2024.0,1.0
+T2022-038,2022,,Mike,Jordan,player,Derrick Henry,,00-0032764,,
+T2022-038,2022,,Mike,Jordan,player,Gabriel Davis,,00-0036196,,
+T2022-038,2022,,Mike,Jordan,pick,2023 2nd (his own back),,,2023.0,2.0
+T2022-039,2022,,Jordan,Ben,player,Dallas Goedert,,00-0034351,,
+T2022-039,2022,,Jordan,Ben,player,Matt Stafford,,00-0026498,,
+T2022-039,2022,,Jordan,Ben,player,Trevor Lawerence,,00-0036971,,
+T2022-039,2022,,Jordan,Ben,player,Derrick Carr,,00-0031280,,
+T2022-039,2022,,Jordan,Ben,player,Melvin Gordon,,00-0032144,,
+T2022-039,2022,,Jordan,Ben,player,DeAndre Carter,,00-0031763,,
+T2022-039,2022,,Jordan,Ben,cap,,20.0,,,
+T2022-039,2022,,Jordan,Ben,cap,$25 in 2023,25.0,,,
+T2022-039,2022,,Jordan,Ben,pick,1st/2nd. (highest between 7-16),,,,
+T2022-039,2022,,Ben,Jordan,player,Davante Adams,,00-0031381,,
+T2022-039,2022,,Ben,Jordan,player,Geno Smith,,00-0030565,,
+T2022-040,2022,,Matt,Russ,player,Justin Fields,,00-0036945,,
+T2022-040,2022,,Russ,Matt,pick,2023 3rd,,,2023.0,3.0
+T2022-040,2022,,Russ,Matt,player,David Bell,,00-0037257,,
+T2022-041,2022,,Ben,Ryan,player,Terry McLaurin,,00-0035659,,
+T2022-041,2022,,Ben,Ryan,player,AJ Brown,,00-0035676,,
+T2022-041,2022,,Ben,Ryan,cap,$20 in 2023,20.0,,,
+T2022-041,2022,,Ryan,Ben,pick,2024 1st,,,2024.0,1.0
+T2022-041,2022,,Ryan,Ben,pick,2025 1st,,,2025.0,1.0
+T2023-042,2023,,Ben,Jordan,player,Calvin Ridley,,00-0034837,,
+T2023-042,2023,,Ben,Jordan,player,Trevor Lawrence,,00-0036971,,
+T2023-042,2023,,Ben,Jordan,pick,2023 2nd Round pick (#12),,,2023.0,2.0
+T2023-042,2023,,Ben,Jordan,pick,2024 1st (the weaker),,,2024.0,1.0
+T2023-042,2023,,Jordan,Ben,player,AJ Brown,,00-0035676,,
+T2023-042,2023,,Jordan,Ben,player,Antonio Gibson,,00-0036328,,
+T2023-042,2023,,Jordan,Ben,cap,,5.0,,,
+T2023-043,2023,,Qasim,Jordan,pick,2023 1st (#10),,,2023.0,1.0
+T2023-043,2023,,Qasim,Jordan,player,Romeo Doubs,,00-0037816,,
+T2023-043,2023,,Qasim,Jordan,cap,,3.0,,,
+T2023-043,2023,,Jordan,Qasim,pick,2023 1st (#6),,,2023.0,1.0
+T2023-044,2023,,Ben,Jordan,player,Rashod Bateman,,00-0036550,,
+T2023-044,2023,,Ben,Jordan,pick,2024 2nd,,,2024.0,2.0
+T2023-044,2023,,Ben,Jordan,cap,$4 in 2024,4.0,,,
+T2023-044,2023,,Jordan,Ben,player,Mike Williams,,00-0033536,,
+T2023-044,2023,,Jordan,Ben,pick,2024 3rd,,,2024.0,3.0
+T2023-045,2023,,Matt,Qasim,player,David Montgomery,,00-0035685,,
+T2023-045,2023,,Qasim,Matt,pick,2024 1st,,,2024.0,1.0
+T2023-045,2023,,Qasim,Matt,player,Michael Mayer,,00-0039066,,
+T2023-046,2023,,Ryan,Jordan,pick,2024 3rd,,,2024.0,3.0
+T2023-046,2023,,Ryan,Jordan,pick,2025 3rd,,,2025.0,3.0
+T2023-046,2023,,Jordan,Ryan,cap,,35.0,,,
+T2023-047,2023,,Qasim,Jordan,cap,,35.0,,,
+T2023-047,2023,,Qasim,Jordan,player,Darren Waller,,00-0031610,,
+T2023-047,2023,,Qasim,Jordan,player,Marquis Brown,,00-0035662,,
+T2023-047,2023,,Qasim,Jordan,player,Zach Charbonnet,,00-0039165,,
+T2023-047,2023,,Qasim,Jordan,pick,2024 1st (whichever Ben doesnt get),,,2024.0,1.0
+T2023-047,2023,,Jordan,Qasim,player,Saquan Barkley,,00-0034844,,
+T2023-047,2023,,Jordan,Qasim,pick,2025 3rd,,,2025.0,3.0
+T2023-047,2023,,Jordan,Qasim,cap,$7 in 2024 cap,7.0,,,
+T2023-048,2023,,Ben,Jordan,player,Dallas Goedert,,00-0034351,,
+T2023-048,2023,,Ben,Jordan,player,Damien Pierce,,00-0037258,,
+T2023-048,2023,,Ben,Jordan,pick,2025 2nd,,,2025.0,2.0
+T2023-048,2023,,Jordan,Ben,player,Travis Kelce,,00-0030506,,
+T2024-049,2024,,Ben,Johnny,player,Chris Olave,,00-0037239,,
+T2024-049,2024,,Johnny,Ben,player,Amari Cooper,,00-0031544,,
+T2024-049,2024,,Johnny,Ben,pick,2024 1st (#8),,,2024.0,1.0
+T2024-050,2024,,Matt,Russ,pick,2024 1st (#10),,,2024.0,1.0
+T2024-050,2024,,Russ,Matt,cap,,20.0,,,
+T2024-051,2024,,Jordan,Max,player,Jamarr Chase,,00-0036900,,
+T2024-051,2024,,Jordan,Max,player,Josh Jacobs,,00-0035700,,
+T2024-051,2024,,Jordan,Max,player,Bucky Irving,,00-0039361,,
+T2024-051,2024,,Jordan,Max,pick,2025 2nd,,,2025.0,2.0
+T2024-051,2024,,Jordan,Max,cap,$10 in 2025,10.0,,,
+T2024-051,2024,,Max,Jordan,player,AJ Brown,,00-0035676,,
+T2024-051,2024,,Max,Jordan,player,Puka Nacua,,00-0039075,,
+T2024-051,2024,,Max,Jordan,player,Jermaine Burton,,00-0039810,,
+T2024-051,2024,,Max,Jordan,pick,2025 1st,,,2025.0,1.0
+T2024-051,2024,,Max,Jordan,pick,2026 1st,,,2026.0,1.0
+T2024-052,2024,,Ben,Max,player,DeVonta Smith,,00-0036912,,
+T2024-052,2024,,Ben,Max,player,AJ Brown,,00-0035676,,
+T2024-052,2024,,Ben,Max,cap,$7 in 2025,7.0,,,
+T2024-052,2024,,Max,Ben,player,Chris Olave,,00-0037239,,
+T2024-052,2024,,Max,Ben,player,Isaiah Pacheco,,00-0037197,,
+T2024-052,2024,,Max,Ben,player,Calvin Ridley,,00-0034837,,
+T2024-052,2024,,Max,Ben,player,Alec Pierce,,00-0037664,,
+T2024-052,2024,,Max,Ben,pick,Weaker of Ben's 2025 2nd Rounders,,,2025.0,2.0
+S2026-01,2026,2026-08-02,Zach,Jordan,player,Pat Bryant,,00-0040134,,
+S2026-01,2026,2026-08-02,Zach,Jordan,pick,2026 Round 3 pick,,,2026.0,3.0
+S2026-01,2026,2026-08-02,Jordan,Zach,pick,2026 Round 1 pick,,,2026.0,1.0
+S2026-02,2026,2026-08-05,Max,Jordan,player,Jalen Hurts,,00-0036389,,
+S2026-02,2026,2026-08-05,Max,Jordan,player,Omar Cooper,,00-0041511,,
+S2026-02,2026,2026-08-05,Max,Jordan,player,Nico Collins,,00-0036554,,
+S2026-02,2026,2026-08-05,Jordan,Max,player,Chuba Hubbard,,00-0036555,,
+S2026-02,2026,2026-08-05,Jordan,Max,player,Justin Herbert,,00-0036355,,
+S2026-02,2026,2026-08-05,Jordan,Max,player,Brandon Aiyuk,,00-0036261,,
+S2026-02,2026,2026-08-05,Jordan,Max,pick,2028 Round 1 pick,,,2028.0,1.0
+S2026-02,2026,2026-08-05,Jordan,Max,pick,2026 Round 2 pick,,,2026.0,2.0
+S2026-02,2026,2026-08-05,Jordan,Max,pick,2027 Round 2 pick,,,2027.0,2.0
+S2026-02,2026,2026-08-05,Jordan,Max,player,Emeka Egbuka,,00-0040129,,
+S2026-03,2026,2026-10-16,Russ,Max,player,Puka Nacua,,00-0039075,,
+S2026-03,2026,2026-10-16,Max,Russ,player,Alec Pierce,,00-0037664,,
+S2026-03,2026,2026-10-16,Russ,Max,player,Bhayshul Tuten,,00-0040719,,
+S2026-03,2026,2026-10-16,Max,Russ,player,Chase Brown,,00-0038597,,
+S2026-03,2026,2026-10-16,Russ,Max,cap,$10 cap space,10.0,,,
+S2026-04,2026,2026-10-26,Jordan,Ben,player,Patrick Mahomes,,00-0033873,,
+S2026-04,2026,2026-10-26,Jordan,Ben,player,CeeDee Lamb,,00-0036358,,
+S2026-04,2026,2026-10-26,Ben,Jordan,player,Brandon Aiyuk,,00-0036261,,
+S2026-04,2026,2026-10-26,Ben,Jordan,player,Jonah Coleman,,00-0041496,,
+S2026-04,2026,2026-10-26,Ben,Jordan,pick,2027 Round 1 pick (TBD (from Ja'Jah Pachulia)),,,2027.0,1.0
+S2026-04,2026,2026-10-26,Ben,Jordan,player,Emeka Egbuka,,00-0040129,,
+S2026-04,2026,2026-10-26,Jordan,Ben,player,Wan'Dale Robinson,,00-0038117,,
+S2026-04,2026,2026-10-26,Ben,Jordan,player,Cam Skattebo,,00-0040715,,
+S2026-04,2026,2026-10-26,Ben,Jordan,cap,$30 cap space (2027/2028),30.0,,,
+S2026-04,2026,2026-10-26,Ben,Jordan,player,Justin Herbert,,00-0036355,,

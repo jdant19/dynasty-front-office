@@ -15,7 +15,7 @@ def test_every_rostered_player_has_a_canonical_id():
 
 def test_history_names_match_at_least_99_5_percent():
     m = list(csv.DictReader(open(PROCESSED / "name_matches.csv", encoding="utf-8")))
-    c = Counter(r["method"] in ("exact", "alias") for r in m)
+    c = Counter(r["method"] in ("exact", "alias", "city+team") for r in m)
     assert c[True] / len(m) >= 0.995, c
 
 

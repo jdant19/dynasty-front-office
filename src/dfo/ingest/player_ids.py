@@ -147,9 +147,13 @@ ALIASES = {  # spelling variants seen in the league's own sheets -> standard nam
     "kennethgainwell": "kennygainwell", "cameronward": "camward", "gabrieldavis": "gabedavis",
     "rashadpenny": "rashaadpenny", "isaiahpacheco": "isiahpacheco", "kennanallen": "keenanallen",
     "austinekler": "austinekeler", "emanuelsanders": "emmanuelsanders",
+    # trade archive spellings
+    "mattstafford": "matthewstafford", "trevorlawerence": "trevorlawrence", "derrickcarr": "derekcarr",
+    "damienpierce": "dameonpierce", "marquislee": "marqiselee", "latviousmurray": "lataviusmurray",
+    "marquezcalloway": "marquezcallaway",
 }
-DEF_CITY = {  # "San Fran D", "Houston D" -> defense
-    "arizona": "ARI", "atlanta": "ATL", "baltimore": "BAL", "buffalo": "BUF", "carolina": "CAR",
+DEF_CITY = {  # "San Fran D", "Houston D", "Rams Defense" -> defense
+    "rams": "LA", "arizona": "ARI", "atlanta": "ATL", "baltimore": "BAL", "buffalo": "BUF", "carolina": "CAR",
     "chicago": "CHI", "cincinnati": "CIN", "cleveland": "CLE", "dallas": "DAL", "denver": "DEN",
     "detroit": "DET", "greenbay": "GB", "houston": "HOU", "indianapolis": "IND", "jacksonville": "JAX",
     "kansascity": "KC", "losangelesrams": "LA", "losangeleschargers": "LAC", "lasvegas": "LV",
@@ -166,7 +170,7 @@ def match_name(name: str, season: int, idx, pos: str | None = None, rookie: bool
         # 2026 lists defenses by city ("Los Angeles"); the NFL team column settles which one
         t = team.upper()
         return f"DEF-{ {'LAR': 'LA', 'JAC': 'JAX', 'WSH': 'WAS', 'OAK': 'LV', 'SD': 'LAC', 'STL': 'LA'}.get(t, t)}", "city+team"
-    for suffix in ("def", "d"):
+    for suffix in ("defense", "def", "d"):
         if key.endswith(suffix) and key[: -len(suffix)] in DEF_CITY:
             return f"DEF-{DEF_CITY[key[: -len(suffix)]]}", "alias"
     cands = idx.get(key, [])

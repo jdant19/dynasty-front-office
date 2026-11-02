@@ -13,7 +13,7 @@ Design: "Dynasty Front Office — System Design" (claude.ai doc). Build status f
 | 3. Projections | Done 2026-10-28: weekly, rest-of-season and 3-season projections, backtested 2021-2025 against FantasyPros (docs/projections.md) |
 | 4. Valuation, including picks | Done 2026-10-30: points and cap values, pick model, auction/RFA/pick-trade backtests (docs/valuation.md) |
 | 5. Simulator and dial | Done 2026-11-01: regular season, playoffs, 2027-29 with designation plans, dial for all ten teams (docs/simulation.md) |
-| 6. History grading and owner models | Not started |
+| 6. History grading and owner models | Built 2026-11-02, in review: graded trades/auctions/drafts/RFAs/tags, owner models, reads doc for Jordan (docs/owners.md) |
 | 7. Decision modules | Not started |
 | 8. Front door, scheduled runs, journal | Not started |
 | 9. Shadow mode | Not started |

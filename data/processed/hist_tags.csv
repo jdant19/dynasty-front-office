@@ -1,0 +1,49 @@
+season,owner,kind,player,source,name,canonical_id,pos,cost,points,surplus
+2019,Jordan,franchise_tag,Travis Kelce,rookie_drafts_tags_rfa.xlsx:2019- RFA and Franchise,Travis Kelce,00-0030506,TE,,48.27200000000002,
+2019,Russ,franchise_tag,Zach Ertz,rookie_drafts_tags_rfa.xlsx:2019- RFA and Franchise,Zach Ertz,00-0030061,TE,,14.072000000000003,
+2019,Ben,franchise_tag,Le’Veon Bell,rookie_drafts_tags_rfa.xlsx:2019- RFA and Franchise,Le’Veon Bell,00-0030496,RB,,19.622580645161293,
+2019,Max,franchise_tag,Drew Brees,rookie_drafts_tags_rfa.xlsx:2019- RFA and Franchise,Drew Brees,00-0020531,QB,,0.0,
+2019,Johnny,franchise_tag,Bears D,rookie_drafts_tags_rfa.xlsx:2019- RFA and Franchise,Bears D,DEF-CHI,DEF,,0.0,
+2019,Qasim,franchise_tag,Justin Tucker,rookie_drafts_tags_rfa.xlsx:2019- RFA and Franchise,Justin Tucker,00-0029597,K,,13.518518518518505,
+2020,Jordan,franchise_tag,Ezekiel Elliot,rookie_drafts_tags_rfa.xlsx:2020 - RFA and Franchise,Ezekiel Elliot,00-0033045,RB,,35.32258064516128,
+2020,Mike,franchise_tag,San Fran D,rookie_drafts_tags_rfa.xlsx:2020 - RFA and Franchise,San Fran D,DEF-SF,DEF,,0.0,
+2020,Ben,franchise_tag,Michael Thomas,rookie_drafts_tags_rfa.xlsx:2020 - RFA and Franchise,Michael Thomas,00-0032765,WR,,0.0,
+2020,Matt,franchise_tag,Harrison Butker,rookie_drafts_tags_rfa.xlsx:2020 - RFA and Franchise,Harrison Butker,00-0033303,K,,0.0,
+2020,Johnny,franchise_tag,Mark Andrews,rookie_drafts_tags_rfa.xlsx:2020 - RFA and Franchise,Mark Andrews,00-0034753,TE,,0.0,
+2020,Zach,franchise_tag,Baltimore D,rookie_drafts_tags_rfa.xlsx:2020 - RFA and Franchise,Baltimore D,DEF-BAL,DEF,,3.379310344827587,
+2021,Russ,franchise_tag,Alvin Kamara,rookie_drafts_tags_rfa.xlsx:2021 - RFA and Franchise,Alvin Kamara,00-0033906,RB,63.0,48.82258064516128,-7.4350209677419485
+2021,Ben,franchise_tag,Joe Mixon,rookie_drafts_tags_rfa.xlsx:2021 - RFA and Franchise,Joe Mixon,00-0033897,RB,63.0,104.52258064516127,55.95714903225803
+2021,Matt,franchise_tag,Travis Kelce,rookie_drafts_tags_rfa.xlsx:2021 - RFA and Franchise,Travis Kelce,00-0030506,TE,41.0,59.27200000000002,26.45746320000002
+2021,Johnny,franchise_tag,Christian McCaffery,rookie_drafts_tags_rfa.xlsx:2021 - RFA and Franchise,Christian McCaffery,00-0033280,RB,63.0,0.0,-63.0
+2021,Ryan,franchise_tag,Russell Wilson,rookie_drafts_tags_rfa.xlsx:2021 - RFA and Franchise,Russell Wilson,00-0029263,QB,38.0,0.0,-38.0
+2021,Qasim,franchise_tag,Dalvin Cook,rookie_drafts_tags_rfa.xlsx:2021 - RFA and Franchise,Dalvin Cook,00-0033893,RB,63.0,26.922580645161304,-32.35941096774192
+2022,Jordan,franchise_tag,Derrick Henry,rookie_drafts_tags_rfa.xlsx:2022 - RFA and Franchise,Derrick Henry,00-0032764,RB,75.0,123.88258064516128,65.99076503225805
+2022,Mike,franchise_tag,Davante Adams,rookie_drafts_tags_rfa.xlsx:2022 - RFA and Franchise,Davante Adams,00-0031381,WR,80.0,126.83862068965519,64.35503420689656
+2022,Russ,franchise_tag,Evan McPherson,rookie_drafts_tags_rfa.xlsx:2022 - RFA and Franchise,Evan McPherson,00-0036854,K,2.0,0.0,-2.0
+2022,Matt,franchise_tag,Tyreke Hill,rookie_drafts_tags_rfa.xlsx:2022 - RFA and Franchise,Tyreke Hill,00-0033040,WR,80.0,129.03862068965518,66.85885420689655
+2022,Max,franchise_tag,Chris Boswell,rookie_drafts_tags_rfa.xlsx:2022 - RFA and Franchise,Chris Boswell,00-0031136,K,2.0,0.0,-2.0
+2022,Qasim,franchise_tag,George Kittle,rookie_drafts_tags_rfa.xlsx:2022 - RFA and Franchise,George Kittle,00-0033288,TE,25.0,12.972000000000008,-10.236566799999991
+2023,Jordan,franchise_tag,Dallas Goedert,rookie_drafts_tags_rfa.xlsx:2023 - RFA and Franchise,Dallas Goedert,00-0034351,TE,30.0,0.0,-30.0
+2023,Mike,franchise_tag,Christian McCaffery,rookie_drafts_tags_rfa.xlsx:2023 - RFA and Franchise,Christian McCaffery,00-0033280,RB,94.0,195.4225806451613,128.41043903225807
+2023,Ben,franchise_tag,Travis Kelce,rookie_drafts_tags_rfa.xlsx:2023 - RFA and Franchise,Travis Kelce,00-0030506,TE,30.0,15.372000000000014,-12.505126799999985
+2023,Max,franchise_tag,Chris Godwin,rookie_drafts_tags_rfa.xlsx:2023 - RFA and Franchise,Chris Godwin,00-0033921,WR,70.0,9.038620689655176,-59.71314579310344
+2023,Qasim,franchise_tag,Lamar Jackson,rookie_drafts_tags_rfa.xlsx:2023 - RFA and Franchise,Lamar Jackson,00-0034796,QB,27.0,0.0,-27.0
+2023,Zach,franchise_tag,Cooper Kupp,rookie_drafts_tags_rfa.xlsx:2023 - RFA and Franchise,Cooper Kupp,00-0033908,WR,70.0,0.0,-70.0
+2024,Jordan,franchise_tag,AJ Brown,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,AJ Brown,00-0035676,WR,79.0,24.738620689655193,-50.84497579310343
+2024,Russ,franchise_tag,Ceedee Lamb,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,Ceedee Lamb,00-0036358,WR,79.0,54.23862068965519,-17.271025793103433
+2024,Ben,franchise_tag,Justin Tucker,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,Justin Tucker,00-0029597,K,2.0,3.518518518518505,2.0044259259259096
+2024,Matt,franchise_tag,Tyreek Hill,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,Tyreek Hill,00-0033040,WR,79.0,19.038620689655176,-57.33214579310345
+2024,Max,franchise_tag,Austin Ekeler,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,Austin Ekeler,00-0033699,RB,93.0,0.0,-93.0
+2024,Johnny,franchise_tag,Justin Jefferson,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,Justin Jefferson,00-0036322,WR,79.0,107.3186206896552,43.13932220689658
+2024,Qasim,franchise_tag,DK Metcalf,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,DK Metcalf,00-0035640,WR,79.0,0.0,-79.0
+2024,Zach,franchise_tag,49ers D,rookie_drafts_tags_rfa.xlsx:2024 - RFA and Franchise,49ers D,DEF-SF,DEF,2.0,0.0,-2.0
+2025,Jordan,franchise_tag,Amon-Ra St. Brown,rookie_drafts_tags_rfa.xlsx:2025 - RFA and Franchise,Amon-Ra St. Brown,00-0036963,WR,79.0,106.83862068965519,42.59303420689656
+2025,Russ,franchise_tag,Tee Higgins,rookie_drafts_tags_rfa.xlsx:2025 - RFA and Franchise,Tee Higgins,00-0036410,WR,79.0,23.43862068965518,-52.32450579310344
+2025,Ben,franchise_tag,George Kittle,rookie_drafts_tags_rfa.xlsx:2025 - RFA and Franchise,George Kittle,00-0033288,TE,26.0,0.0,-26.0
+2025,Qasim,franchise_tag,Saquan Barkley,rookie_drafts_tags_rfa.xlsx:2025 - RFA and Franchise,Saquan Barkley,00-0034844,RB,98.0,51.422580645161275,-39.475960967741955
+2026,Jordan,franchise_tag,JaMarr Chase,rookie_drafts_tags_rfa.xlsx:2026 - RFA and Franchise,JaMarr Chase,00-0036900,WR,97.0,,
+2026,Mike,franchise_tag,Houston D,rookie_drafts_tags_rfa.xlsx:2026 - RFA and Franchise,Houston D,DEF-HOU,DEF,2.0,,
+2026,Matt,franchise_tag,Jonathan Taylor,rookie_drafts_tags_rfa.xlsx:2026 - RFA and Franchise,Jonathan Taylor,00-0036223,RB,90.0,,
+2026,Max,franchise_tag,Justin Herbert,rookie_drafts_tags_rfa.xlsx:2026 - RFA and Franchise,Justin Herbert,00-0036355,QB,28.0,,
+2026,Ryan,franchise_tag,Brandon Aubrey,rookie_drafts_tags_rfa.xlsx:2026 - RFA and Franchise,Brandon Aubrey,00-0037692,K,2.0,,
+2026,Zach,franchise_tag,Broncos D,rookie_drafts_tags_rfa.xlsx:2026 - RFA and Franchise,Broncos D,DEF-DEN,DEF,2.0,,
