@@ -75,8 +75,14 @@ def trajectory(fut: pd.DataFrame) -> pd.DataFrame:
     return f
 
 
-def rfa_price_per_point() -> float:
-    return float(pd.read_csv(PROCESSED / "val_rfa_overall.csv").rfa_price_per_point.iloc[0])
+def rfa_price_per_point() -> dict[str, float]:
+    """RFA price per point by position (own position with 20+ past RFAs, else league-wide)."""
+    p = pd.read_csv(PROCESSED / "val_rfa_price.csv")
+    pooled = float(pd.read_csv(PROCESSED / "val_rfa_overall.csv").rfa_price_per_point.iloc[0])
+    out = dict(zip(p.pos, p.used))
+    for pos in ["QB", "RB", "WR", "TE", "K", "DEF"]:
+        out.setdefault(pos, pooled)
+    return out
 
 
 def _salaries(row) -> list[int]:
@@ -166,7 +172,7 @@ def build() -> pd.DataFrame:
     dplan = rights.plan(base, tags, lam_rfa, h)
     dplan.to_csv(PROCESSED / "designation_plan.csv", index=False)
     rv_by = {}
-    for r in dplan.itertuples():
+    for r in dplan.itertuples():      # each designation's own seasons, discounted to now
         rv_by[r.player_id] = rv_by.get(r.player_id, 0.0) + h ** (FUTURE.index(r.offseason) + 1) * r.worth
     base["designation"] = base.player_id.map(dplan.groupby("player_id").apply(
         lambda g: " then ".join(f"{t} {y}" for t, y in zip(g.type, g.offseason))) if len(dplan) else {}).fillna("")

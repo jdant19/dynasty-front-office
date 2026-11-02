@@ -72,6 +72,11 @@ def summarize(bt: pd.DataFrame) -> dict[str, pd.DataFrame]:
              rank_corr=round(float(spearmanr(sk.engine0, sk.realized0).statistic), 3))])
     by_outcome = bt.groupby("outcome").agg(players=("final", "size"), avg_price=("final", "mean"),
                                            avg_engine=("engine0", "mean"), avg_realized=("realized0", "mean")).round(1)
+    # price used for planning: own position where there are 20+ past RFAs, the league-wide rate otherwise
+    price = by_pos.reset_index()[["pos", "players", "price_per_point"]].copy()
+    price["used"] = [v if n >= 20 else round(lam_rfa, 3) for v, n in zip(price.price_per_point, price.players)]
+    price["basis"] = ["own position (20+ RFAs)" if n >= 20 else "league-wide (fewer than 20 RFAs)" for n in price.players]
+    price.to_csv(PROCESSED / "val_rfa_price.csv", index=False)
     res = {"accuracy": acc, "position": by_pos.reset_index(), "season": by_season,
            "outcome": by_outcome.reset_index(),
            "overall": pd.DataFrame([dict(rfa_price_per_point=round(lam_rfa, 3),

@@ -1,0 +1,6 @@
+pos,players,price_per_point,used,basis
+DEF,1,0.033,1.495,league-wide (fewer than 20 RFAs)
+QB,12,3.372,1.495,league-wide (fewer than 20 RFAs)
+RB,26,1.17,1.17,own position (20+ RFAs)
+TE,14,2.764,1.495,league-wide (fewer than 20 RFAs)
+WR,49,1.629,1.629,own position (20+ RFAs)
