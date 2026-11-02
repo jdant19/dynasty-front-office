@@ -22,8 +22,9 @@ his rate x his NFL team's expected playoff games. NFL teams are rated from the b
 2026 spread), the rest of the NFL season and the playoff bracket are played out, and each starter
 scores over his team's playoff games. Highest total takes $200, second $100.
 
-**Future seasons** (`sim/future.py`). Strength = projected points of players under contract (open
-slots at the market replacement level), plus what the team's cap room buys at that August's auction,
+**Future seasons** (`sim/future.py`). Strength = projected points of players under contract or kept
+by the team's designation plan (open slots at the market replacement level; designated players at
+their tag, extension or RFA salary), plus what the team's cap room buys at that August's auction,
 plus rookies from its picks. Each auction clears at its own price: all teams' room against the
 talent not under contract (2027 $1.06 a point, 2028 $1.20, 2029 $1.38, against the $1.14 fit on past
 auctions: money piles up as contracts run out). Seasons are played out with strength uncertainty,
@@ -73,7 +74,8 @@ Jordan's future seasons: about $102, $106 and $103 expected (league average is $
   Owner tendencies come with Phase 6.
 - Playoff injuries score 0; the league substitutes the next player on the NFL depth chart.
 - NFL tiebreakers are approximated by team rating.
-- Future strength leaves out designation rights (tag, RFA, extension) and assumes every team spends
-  its room at the clearing price; it takes no account of what is actually available at each position.
+- Future strength assumes every team spends its room at the clearing price; it takes no account of
+  what is actually available at each position. Designations follow the planned best use of each
+  team's slots, not each owner's habits (Phase 6).
 - The in-season simulator cannot be backtested on past seasons (no weekly rosters before 2026);
   it is checked against 2026's actual scores instead.

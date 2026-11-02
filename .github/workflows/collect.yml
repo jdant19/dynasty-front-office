@@ -45,3 +45,9 @@ jobs:
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "collect: snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
+      # Pushes made by this job do not trigger the tests workflow, so run the checks here: new site
+      # data that breaks one fails this run (and sends the usual GitHub email) after the data is saved.
+      - name: Checks on the new data
+        run: |
+          pip install -q -r requirements.txt
+          python -m pytest -q

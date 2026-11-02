@@ -57,6 +57,16 @@ Every player carries two values that are never added together for a decision (P1
   A season's value is what the same production would cost at that August's auction, so a cheap
   salary is surplus only to the extent his production would cost more than that salary to replace.
 
+**Designation rights** (`rights.py`, `designation_plan.csv`). Each team's expiring players are
+planned offseason by offseason through 2029 within the league's limits (1 tag, 1 extension, 2 RFAs a
+team a year) and chain rules (none the season after a tag, no repeated type, at most three in a row),
+starting from the rights the site shows. Each option is priced (tag: the site's tag price; extension:
+$15/$30/$45; RFA: matching the going RFA price, about 31% over auction rates per point) and the team
+uses its slots where they are worth most. A player's rights value is what his team would actually use
+on him. As of 2026-10-30 the plan uses only a few tags (Bijan, Gibbs, Cook in 2027) and almost no RFA
+matches: matching at what this league's RFA bidders pay usually costs more than buying the same
+production at the auction, so letting a player go and bidding on him in August is often cheaper.
+
 How much each counts for Jordan is the dial's job (Phase 5), computed from payout odds; until then the
 two are shown side by side. Lifetime $ (their sum) is kept only as a reference.
 

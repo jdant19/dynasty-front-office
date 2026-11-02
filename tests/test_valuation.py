@@ -73,3 +73,30 @@ def test_ours_uses_waivers_and_roster():
     k = mine[mine.pos == "K"]
     if len(k):                                               # a kicker is worth his edge over streaming
         assert (k.lineup_points_now < 60).all()
+
+
+def test_designation_plan_respects_league_limits_and_chains():
+    from dfo.common import load_config
+    d = load_config("league")["designations"]
+    lim = {"tag": d["franchise_tag"]["per_team"], "mle": d["mid_level_extension"]["per_team"],
+           "rfa": d["rfa"]["per_team"]}
+    p = _csv("designation_plan.csv")
+    if not len(p):
+        return
+    per = p.groupby(["owner", "offseason", "type"]).size()
+    for (o, y, t), n in per.items():
+        assert n <= lim[t], (o, y, t)
+    assert (p.worth > 0).all()
+    assert not p.duplicated(["player_id", "offseason"]).any()
+    roster = _csv("site_rosters.csv")
+    ids = _csv("player_ids.csv")[["site_player_id", "canonical_id"]]
+    r = roster.merge(ids, left_on="player_id", right_on="site_player_id")
+    none = set(r[r.designation_rights == "none"].canonical_id)
+    first = p.sort_values("offseason").drop_duplicates("player_id")
+    assert not set(first.player_id) & none                    # tagged this year: no designation next
+    for pid, g in p.sort_values("offseason").groupby("player_id"):
+        types = list(g.type)
+        assert len(types) == len(set(types)), pid             # no repeating a type in a chain
+        for a, b in zip(g.offseason, g.offseason[1:]):
+            prev = g[g.offseason == a].type.iloc[0]
+            assert not (prev == "tag" and b == a + 1), pid    # nothing the season after a tag

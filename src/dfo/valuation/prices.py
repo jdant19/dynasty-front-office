@@ -48,7 +48,7 @@ from sklearn.isotonic import IsotonicRegression
 
 from dfo.common import PROCESSED, ROOT, load_config
 from dfo.rules.contracts import cut_dead_cap, mle_eligible, money
-from dfo.valuation import calibrate
+from dfo.valuation import calibrate, rights
 from dfo.valuation.auction import contract_value, haircut, market_params
 from dfo.valuation.expected import STREAMED, ExpectedValue
 
@@ -161,28 +161,21 @@ def build() -> pd.DataFrame:
     base["rights"] = base.player_id.map(r.designation_rights).fillna("")
     tags = tag_costs()
 
-    ext_sal = load_config("league")["designations"]["mid_level_extension"]["salaries"]
+    # designations: each team's plan within its slots (rights.py); a player's rights are worth
+    # what his team would actually use on him, discounted to now
+    dplan = rights.plan(base, tags, lam_rfa, h)
+    dplan.to_csv(PROCESSED / "designation_plan.csv", index=False)
+    rv_by = {}
+    for r in dplan.itertuples():
+        rv_by[r.player_id] = rv_by.get(r.player_id, 0.0) + h ** (FUTURE.index(r.offseason) + 1) * r.worth
+    base["designation"] = base.player_id.map(dplan.groupby("player_id").apply(
+        lambda g: " then ".join(f"{t} {y}" for t, y in zip(g.type, g.offseason))) if len(dplan) else {}).fillna("")
     lifetime, rights_val, keep_years, hold_cost = [], [], [], []
     for _, x in base.iterrows():
         vals = [float(x[f"value_{y}"]) for y in FUTURE]
         sals = [int(x[f"salary_{y}"]) for y in FUTURE]
         end = next((i for i, v in enumerate(sals) if v == 0), len(sals))   # index of first season off contract
-        # value of the best designation when the contract ends (if this owner holds the rights)
-        rv = 0.0
-        if x.owner and end < len(FUTURE) and x.rights:
-            y, v_end, left = FUTURE[end], vals[end], len(FUTURE) - end
-            options = [0.0]
-            if "Franchise Tag" in x.rights:
-                options.append(v_end - tags[y].get(x.pos, 2))
-            last_sal = sals[end - 1] if end > 0 else int(x[f"salary_{SEASON}"])
-            if "Mid-Level Extension" in x.rights and mle_eligible(max(last_sal, 1), x.acquisition == "rookie_draft"):
-                options.append(sum(h ** j * (vals[end + j] - ext_sal[j]) for j in range(min(3, left))))
-            if "Restricted Free Agent" in x.rights:
-                price = max(1, money(1 + lam_rfa * x[f"por_{y}"]))          # matching the going RFA price
-                later = {j: np.array([vals[end + j]]) for j in range(1, left)}
-                _, fut_surplus = contract_value(pd.Series([price]), later, h)
-                options.append(v_end - price + float(fut_surplus[0]))
-            rv = h ** (end + 1) * max(options)
+        rv = rv_by.get(x.player_id, 0.0)
         # keep or cut each offseason under contract (backward): cutting owes the dead cap on what remains
         cont = rv
         for i in reversed(range(end)):
@@ -236,7 +229,7 @@ def build() -> pd.DataFrame:
     cols = (["player_id", "player", "pos", "team", "owner", "points_now", "cap_saved_2027_29"]
             + [c for y in FUTURE for c in (f"proj_points_{y}", f"points_{y}", f"auction_cost_{y}", f"salary_{y}",
                                            f"cap_saved_{y}")]
-            + ["salary_2026", "contract_years_left", "rights", "rights_value", "market_auction", "fc_reference",
+            + ["salary_2026", "contract_years_left", "rights", "designation", "rights_value", "market_auction", "fc_reference",
                "fc_value", "_season_auction_equiv", "fantasycalc_as_of", "made_at"])
     out = base[cols].sort_values(["points_now", "cap_saved_2027_29"], ascending=False)
     out.to_csv(PROCESSED / "prices.csv", index=False)

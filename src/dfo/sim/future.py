@@ -4,7 +4,9 @@
     PYTHONPATH=src python -m dfo.sim.future            # 2027-2029 odds for all ten teams
 
 Strength = expected starting-lineup points for the season (QB, 2 RB, 3 WR, TE, FLEX, K, DEF):
-  - players under contract that season, at their projected points (prices.csv: calibrated, aged);
+  - players under contract that season, at their projected points (prices.csv: calibrated, aged),
+    including players kept by the team's designation plan (tag, extension or RFA match within its
+    slots: designation_plan.csv) at the designation's salary;
     empty or weak slots filled at the market replacement level (what $1-2 buys in August; K/DEF at
     streaming level)
   - plus what the team's remaining cap buys at that August's auction: cap left after salaries, dead
@@ -183,9 +185,22 @@ def backtest_summary(bt: pd.DataFrame) -> pd.DataFrame:
 
 
 # ------------------------------------------------------------------ 2027-2029
+def contracts() -> pd.DataFrame:
+    """prices.csv with each season's salary including planned designations."""
+    prices = pd.read_csv(PROCESSED / "prices.csv")
+    plan = pd.read_csv(PROCESSED / "designation_plan.csv")
+    prices = prices.set_index("player_id")
+    for r in plan.itertuples():
+        for y in FUTURE:
+            v = getattr(r, f"salary_{y}")
+            if v and r.player_id in prices.index:
+                prices.loc[r.player_id, f"salary_{y}"] = v
+    return prices.reset_index()
+
+
 def _cap_by_year() -> dict[str, dict[int, float]]:
     """Cap committed per owner and season: salaries, dead money, traded cap, rookie salaries."""
-    prices = pd.read_csv(PROCESSED / "prices.csv")
+    prices = contracts()
     roster_owner = prices[prices.owner.fillna("") != ""]
     out: dict[str, dict[int, float]] = {}
     for o, g in roster_owner.groupby("owner"):
@@ -218,7 +233,7 @@ def strengths() -> pd.DataFrame:
     shift, lam, _ = market_params()
     ev = ExpectedValue("auction", shift=shift, horizons=(0,))
     repl = dict(ev.replacement[0])
-    prices = pd.read_csv(PROCESSED / "prices.csv")
+    prices = contracts()
     cap = _cap_by_year()
     dist = pd.read_csv(PROCESSED / "val_picks_distribution.csv")
     by_round = {1: dist[dist.slots.str.startswith("1.")][["points_y1", "points_y2", "points_y3"]].mean(),

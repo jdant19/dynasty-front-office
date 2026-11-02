@@ -12,7 +12,7 @@ Design: "Dynasty Front Office — System Design" (claude.ai doc). Build status f
 | 2. Rules engine and data layer | Done 2026-10-28: rules core, history 2013-2026, one player ID map, league scoring 2013-2026 matching Yahoo on 239/239 player-weeks |
 | 3. Projections | Done 2026-10-28: weekly, rest-of-season and 3-season projections, backtested 2021-2025 against FantasyPros (docs/projections.md) |
 | 4. Valuation, including picks | Done 2026-10-30: points and cap values, pick model, auction/RFA/pick-trade backtests (docs/valuation.md) |
-| 5. Simulator and dial | Built 2026-10-30, in review: regular season, playoffs, 2027-29, dial for all ten teams (docs/simulation.md) |
+| 5. Simulator and dial | Done 2026-11-01: regular season, playoffs, 2027-29 with designation plans, dial for all ten teams (docs/simulation.md) |
 | 6. History grading and owner models | Not started |
 | 7. Decision modules | Not started |
 | 8. Front door, scheduled runs, journal | Not started |
