@@ -27,6 +27,7 @@ Trades: 3 (0.23 a season); most with Ben 2, Jordan 1.
 
 - has lost later-season value in trades: -44 cap-equivalent per trade over the next two seasons (league average -1; low confidence, n=2)
 - spends big at the auction: $139 per auction (league average $83; high confidence, n=60)
+- gives short contracts: 1.15 years an auction buy of $5+ stays on its original contract (league average 1.48; high confidence, n=48)
 
 Jordan's notes:
 
@@ -64,6 +65,7 @@ Record: 7 seasons, 0 playoff titles, average regular-season finish 7.1.
 Trades: 6 (0.86 a season); most with Jordan 3, Ben 2.
 
 - overpays at the auction: -9 cap $ returned over price per buy (2020-2025) (league average +3; high confidence, n=15)
+- keeps auction buys on long contracts: 2.00 years an auction buy of $5+ stays on its original contract (league average 1.48; medium confidence, n=10)
 - buys younger players: 26.8 average age at purchase (league average 28.0; high confidence, n=15)
 - drafts rookies well: +47 points over four seasons vs the slot average (league average +5; medium confidence, n=11)
 - tags poorly: -52 cap $ per tag, value over cost (league average -7; low confidence, n=3)

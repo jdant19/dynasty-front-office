@@ -38,6 +38,8 @@ def table() -> pd.DataFrame:
     s = pd.read_csv(PROCESSED / "site_transactions.csv")
     adds = s[s.type == "fa_signing"].groupby("to_owner").size()
     drops = s[s.type == "drop"].groupby("from_owner").size()
+    from dfo.owners.rankings import contract_years
+    cy = contract_years().groupby("owner").years.agg(["mean", "size"])
     results = res.groupby("owner").agg(titles=("playoff_result", lambda x: int((x == "champion").sum())),
                                        avg_finish=("regular_season_finish", "mean"))
     rows = []
@@ -66,6 +68,7 @@ def table() -> pd.DataFrame:
             rfa_players_bid_on=g_(f, "players_bid_on"),
             rfa_match_rate=g_(f, "match_rate"), rfa_own=g_(f, "own_rfas"),
             rfa_matched_value_vs_price=g_(f, "matched_value_vs_price"),
+            contract_years=round(float(cy["mean"].get(o, np.nan)), 2), contract_buys=int(cy["size"].get(o, 0)),
             tags=g_(g, "tags"), tag_surplus=g_(g, "avg_tag_surplus"), tags_graded=g_(g, "graded"),
             adds_2026=int(adds.get(o, 0)), drops_2026=int(drops.get(o, 0)),
             posture=d.posture.get(o, ""), payout_2026=d.payout_2026.get(o, np.nan),
@@ -96,6 +99,8 @@ TRAITS = [
      "pays below the league rate per point", "{:.2f}x", "the league's price per point"),
     ("auction_surplus_per_buy", "auction_graded", "gets value at the auction", "overpays at the auction",
      "{:+.0f}", "cap $ returned over price per buy (2020-2025)"),
+    ("contract_years", "contract_buys", "keeps auction buys on long contracts", "gives short contracts",
+     "{:.2f}", "years an auction buy of $5+ stays on its original contract"),
     ("auction_age", "auction_graded", "buys older players", "buys younger players", "{:.1f}", "average age at purchase"),
     ("spend_RB", "auction_graded", "spends heavily on RBs", "spends lightly on RBs", "{:.0%}", "of auction spend on RBs"),
     ("spend_WR", "auction_graded", "spends heavily on WRs", "spends lightly on WRs", "{:.0%}", "of auction spend on WRs"),

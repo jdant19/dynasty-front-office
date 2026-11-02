@@ -28,6 +28,22 @@ One row per current owner with every parameter above, sample sizes, 2026 waiver 
 A read lists a trait only when the owner is at least one standard deviation from the league average;
 confidence is low under 5 events, medium 5-14, high 15+.
 
+## Rankings, careers and Jordan's notes (`owners/rankings.py`)
+
+- `owner_rankings.csv`: current owners ranked 1-10 on each aspect, with the sample size beside each rank:
+  auction (cap $ returned over price per buy, 2020-2025), rookie draft (points over four seasons vs the
+  slot average), RFA (cap $ returned over price on every RFA he ended up holding, matched or won), tags
+  (cap $ over tag cost), trades (cap-equivalent per trade over the next two seasons) and results (average
+  regular-season finish). `avg_decision_rank` averages the five decision aspects. Contract length (years
+  a $5+ auction buy stays on its original schedule, buys through 2023) is a style column, not ranked.
+- `owner_careers.csv`, `owner_finishes.csv`: every season 2013-2025 with finish, playoff result and payout.
+  Payouts use today's table ($400/$200/$100 regular season, $200/$100 playoffs); earlier seasons may
+  have paid differently.
+- `observations.csv`: Jordan's notes on owners (raw copy in `data/raw/owner_notes/`), each with the
+  evidence, a verdict and an expiry date one year out.
+
+Small samples rank too: RFA and tag ranks rest on 1-9 events per owner and move a lot with one case.
+
 ## League-wide findings
 
 - The trade market is thin: Jordan was in 32 of 56 trades and Ben in 23; Johnny, Russ, Mike, Zach 3-4 each.
