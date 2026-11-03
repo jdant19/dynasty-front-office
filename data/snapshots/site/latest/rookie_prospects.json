@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-03T02:16:59+00:00",
+ "as_of": "2026-11-03T11:55:35+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -77,11 +77,11 @@
    "sleeper_id": "13923",
    "name": "Joshua Pitsenberger",
    "position": "RB",
-   "nfl_team": "FA",
+   "nfl_team": "HOU",
    "years_exp": 0,
-   "status": "Inactive",
+   "status": "Active",
    "created_at": "2026-05-08T07:00:22.723004+00:00",
-   "synced_at": "2026-08-26T07:00:05.005+00:00",
+   "synced_at": "2026-11-03T07:15:06.647+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -2725,9 +2725,9 @@
    "position": "RB",
    "nfl_team": "SEA",
    "years_exp": 0,
-   "status": "Inactive",
+   "status": "Active",
    "created_at": "2026-04-16T03:03:34.571908+00:00",
-   "synced_at": "2026-10-04T07:15:06.681+00:00",
+   "synced_at": "2026-11-03T07:15:06.647+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-01T22:30:32.564+00:00",
    "drafted_at": "2026-09-01T22:00:13.700357+00:00"
