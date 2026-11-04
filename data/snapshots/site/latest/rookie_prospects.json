@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-04T00:36:44+00:00",
+ "as_of": "2026-11-04T12:06:17+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -1199,9 +1199,9 @@
    "position": "RB",
    "nfl_team": "ARI",
    "years_exp": 0,
-   "status": "Active",
+   "status": "Inactive",
    "created_at": "2026-04-16T03:03:34.571908+00:00",
-   "synced_at": "2026-04-16T03:03:31.858+00:00",
+   "synced_at": "2026-11-04T07:00:08.375+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-01T22:30:32.564+00:00",
    "drafted_at": "2026-09-01T22:00:13.700357+00:00"
@@ -1479,9 +1479,9 @@
    "position": "RB",
    "nfl_team": "LAR",
    "years_exp": 0,
-   "status": "Active",
+   "status": "Inactive",
    "created_at": "2026-04-16T03:03:34.599741+00:00",
-   "synced_at": "2026-09-02T07:00:06.371+00:00",
+   "synced_at": "2026-11-04T07:00:08.375+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -3815,11 +3815,11 @@
    "sleeper_id": "13418",
    "name": "Robert Henry Jr.",
    "position": "RB",
-   "nfl_team": "SEA",
+   "nfl_team": "WAS",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-16T03:03:34.683247+00:00",
-   "synced_at": "2026-10-22T10:15:07.706+00:00",
+   "synced_at": "2026-11-04T07:00:08.375+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
