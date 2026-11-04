@@ -115,22 +115,51 @@ def holdings() -> pd.DataFrame:
     return h
 
 
-def weekly() -> pd.DataFrame:
+def weekly(held: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Player-weeks with what a manager could expect before the week. With `held` (holdings), also adds
+    an absent row (points NaN) for each week a held player's NFL team played without him: the healthy
+    counterfactual for injury luck. Players with no game that season and no prior season are left out."""
     frames = []
     for s in range(FIRST - 1, LAST + 1):
         p = pd.read_csv(PROCESSED / f"points_{s}.csv", low_memory=False,
-                        usecols=["season", "season_type", "week", "player_id", "pos", "points"])
+                        usecols=["season", "season_type", "week", "player_id", "pos", "team", "points"])
         frames.append(p[(p.season_type == "REG") & p.week.between(1, 18)])
     w = pd.concat(frames, ignore_index=True)
     w["pos"] = w.pos.replace({"DST": "DEF"})
-    w = w.groupby(["season", "week", "player_id"], as_index=False).agg(points=("points", "sum"), pos=("pos", "first"))
-    w = w.sort_values(["player_id", "season", "week"])
+    w = w.groupby(["season", "week", "player_id"], as_index=False).agg(
+        points=("points", "sum"), pos=("pos", "first"), team=("team", "first"))
     last = w.groupby(["season", "player_id"]).points.mean().rename("last_ppg").reset_index()
     last["season"] += 1
-    w = w.merge(last, on=["season", "player_id"], how="left")
-    g = w.groupby(["season", "player_id"]).points
+    if held is not None:
+        team_weeks = w[w.pos != "DEF"].groupby(["season", "team"]).week.unique()
+        info = w.groupby(["season", "player_id"]).agg(pos=("pos", "first"), team=("team", "last"))
+        prev = w.groupby(["season", "player_id"]).agg(pos=("pos", "first"), team=("team", "last")).reset_index()
+        prev["season"] += 1
+        prev = prev.set_index(["season", "player_id"])
+        played = set(zip(w.season, w.week, w.player_id))
+        add = []
+        for (s, pid) in set(zip(held.season, held.player_id)):
+            if s < FIRST:
+                continue
+            if (s, pid) in info.index:
+                pos, team = info.loc[(s, pid)]
+            elif (s, pid) in prev.index:
+                pos, team = prev.loc[(s, pid)]
+            else:
+                continue
+            if pos == "DEF":
+                continue
+            for wk in team_weeks.get((s, team), []):
+                if (s, wk, pid) not in played:
+                    add.append((s, wk, pid, np.nan, pos, team))
+        w = pd.concat([w, pd.DataFrame(add, columns=["season", "week", "player_id", "points", "pos", "team"])],
+                      ignore_index=True)
+    w = w.merge(last, on=["season", "player_id"], how="left").sort_values(["player_id", "season", "week"])
+    g = w.assign(p0=w.points.fillna(0), n0=w.points.notna().astype(int)).groupby(["season", "player_id"])
     prior = w.last_ppg.fillna(w.groupby(["season", "pos"]).points.transform("median"))
-    w["expected"] = (g.cumsum() - w.points + PRIOR_GAMES * prior) / (g.cumcount() + PRIOR_GAMES)
+    w["expected"] = (g.p0.cumsum() - w.points.fillna(0) + PRIOR_GAMES * prior) / (
+        g.n0.cumsum() - w.points.notna().astype(int) + PRIOR_GAMES)
+    w["absent"] = w.points.isna()
     return w[w.season >= FIRST]
 
 
@@ -138,7 +167,10 @@ def waiver_levels() -> dict[str, float]:
     return {"QB": 8.57, "RB": 1.91, "WR": 2.8, "TE": 4.69, "K": 7.61, "DEF": 6.05}   # ours.waiver_weekly, 2026-11-02
 
 
-def lineups(h: pd.DataFrame, w: pd.DataFrame) -> pd.DataFrame:
+def lineups(h: pd.DataFrame, w: pd.DataFrame, healthy: bool = False) -> pd.DataFrame:
+    """Weekly lineups. healthy=False: who actually played. healthy=True: absent players play at what they
+    were expected to score (the counterfactual for injury luck)."""
+    w = w.assign(points=w.points.fillna(w.expected)) if healthy else w[~w.absent]
     st = dict(load_config("league")["roster"]["starters"])
     flex = st.pop("FLEX")
     flex_ok = load_config("league")["roster"]["flex_eligible"]
@@ -165,10 +197,14 @@ def lineups(h: pd.DataFrame, w: pd.DataFrame) -> pd.DataFrame:
 def build():
     h = holdings()
     h.to_csv(PROCESSED / "owner_season_rosters.csv", index=False)
-    L = lineups(h, weekly())
+    w = weekly(h)
+    L = lineups(h, w)
     L.to_csv(PROCESSED / "lineup_attribution.csv", index=False)
+    H = lineups(h, w, healthy=True)
     weeks = L.groupby("season").week.nunique()
     team = L.groupby(["season", "owner"]).points.sum().div(weeks, level=0).rename("lineup_ppg").reset_index()
+    team["healthy_ppg"] = (H.groupby(["season", "owner"]).points.sum().div(weeks, level=0)).values
+    team["injury_cost_ppg"] = (team.healthy_ppg - team.lineup_ppg).round(2)
     ch = L.groupby(["season", "owner", "channel"]).over_waiver.sum().unstack(fill_value=0)
     ch = ch.div(weeks.reindex(ch.index.get_level_values(0)).values, axis=0).round(2).reset_index()
     res = pd.read_csv(PROCESSED / "season_results.csv")[["season", "owner", "regular_season_finish", "playoff_result"]]

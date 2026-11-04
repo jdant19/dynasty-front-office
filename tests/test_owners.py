@@ -35,7 +35,7 @@ def test_owner_model_covers_current_owners():
 def test_rankings_cover_every_aspect_with_sample_sizes():
     r = _csv("owner_rankings.csv")
     assert len(r) == 10
-    for a in ("auction", "rookie_draft", "rfa", "tags", "trades", "results"):
+    for a in ("auction", "rookie_draft", "rfa_bidding", "rfa_matching", "tags", "trades", "waiver_fa", "results"):
         assert r[f"{a}_rank"].dropna().between(1, 10).all(), a
         assert (r[f"{a}_n"] >= 0).all(), a
     assert r.contract_years.dropna().between(1, 4).all()
@@ -55,3 +55,28 @@ def test_jordans_notes_are_logged_with_a_verdict():
     assert set(o.owner) >= {"Ben", "Johnny", "Mike", "Russ", "Ryan", "Zach"}
     assert o.verdict.notna().all() and o.date.notna().all() and o.expires.notna().all()
     assert (PROCESSED.parent / "raw" / "owner_notes" / "2026-11-02_owner_reads_doc.md").exists()
+
+
+def test_decision_grades_use_the_right_baselines():
+    d = _csv("grades_decisions.csv")
+    assert {"auction", "rookie_pick", "rfa_bid", "rfa_match", "rfa_let_go", "tag", "trade", "waiver_fa"} <= set(d.type)
+    assert abs(d[d.type == "auction"].grade.mean()) < 10          # the price curve is the going rate
+    assert abs(d[d.type == "rookie_pick"].grade.mean()) < 10      # graded against the slot average
+    t = d[d.type == "trade"].groupby("trade_id").grade_unweighted.sum()
+    assert (t.abs() < 1).all()                                     # unweighted, a trade is zero-sum
+    won = d[d.type == "rfa_bid"].grade.sum()
+    assert abs(won + d[d.type == "rfa_let_go"].grade.sum()) < 1    # letting go mirrors the winner's deal
+    c = _csv("params_price_curve.csv")
+    for _, g in c.groupby("pos"):
+        assert g.expected_points.is_monotonic_increasing
+
+
+def test_rebuilt_lineups_explain_finishes():
+    from scipy.stats import spearmanr
+    o = _csv("owner_season_lineups.csv")
+    assert spearmanr(o.lineup_ppg, -o.regular_season_finish).statistic >= 0.6
+    assert (o.injury_cost_ppg > -5).all()
+    p = _csv("owner_season_posture.csv")
+    assert abs(p.weight_mid.mean() - 1) < 0.01 and p.weight.between(0, 3).all()
+    b = _csv("owner_bridge.csv")
+    assert len(b) == 10

@@ -3,13 +3,9 @@
     PYTHONPATH=src python -m dfo.owners.rankings    # writes owner_rankings.csv, owner_careers.csv,
                                                     # owner_finishes.csv, observations.csv
 
-Aspects (current owners; 1 = best; each with its sample size):
-  auction      cap $ returned over price per auction buy, 2020-2025
-  rookie draft points over four seasons vs the slot average, 2014-2022 drafts
-  RFA          cap $ returned over price on every RFA he ended up holding (matched or won), 2020-2025
-  tags         cap $ returned over the tag cost in the tag season
-  trades       cap-equivalent gained per trade over the next two seasons (graded trades)
-  results      average regular-season finish
+Skill per decision (current owners; 1 = best; each with its sample size) from grades.py, each judged
+by the metric that fits the decision (P16; see ASPECTS). Why owners win is the bridge: each owner's
+weekly lineup edge split by how his starters were acquired, plus injury luck (diagnose.py).
 Contract length (years an auction buy stays on its original schedule) is a style, not ranked.
 Payouts in careers use today's payout table; earlier seasons may have paid differently.
 """
@@ -43,44 +39,63 @@ def contract_years() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def rfa_held() -> pd.DataFrame:
-    bt = pd.read_csv(PROCESSED / "val_rfa_backtest.csv")
-    b = pd.read_csv(PROCESSED / "rfa_bids.csv").drop_duplicates(["season", "player"])[["season", "player", "final_owner"]]
-    bt = bt.merge(b, on=["season", "player"], how="left")
-    bt["holder"] = np.where(bt.outcome == "matched", bt.original_owner, bt.final_owner)
-    bt = bt[bt.outcome.isin(["matched", "changed_teams"]) & bt.realized0.notna()]
-    bt["surplus"] = bt.realized0 - (bt.final - 1)
-    return bt
+ASPECTS = {   # aspect: (decision types, how it is judged)
+    "auction": (["auction"], "lineup points over waiver per buy, every season held, minus what the price normally buys"),
+    "rookie_draft": (["rookie_pick"], "player's points over waiver in his first four seasons minus the slot average"),
+    "rfa_bidding": (["rfa_bid"], "RFAs won from others: lineup points over waiver minus what the price normally buys"),
+    "rfa_matching": (["rfa_match", "rfa_let_go"], "own RFAs: matched (his deal's return) or let go (minus the winner's return)"),
+    "tags": (["tag"], "lineup points over waiver in the tag season minus what the tag cost normally buys"),
+    "trades": (["trade"], "lineup points net of salary, trade season + 2 seasons, both sides, weighted by posture"),
+    "waiver_fa": (["waiver_fa"], "kept waiver/FA pickups: lineup points over waiver minus what the salary normally buys"),
+}
 
 
 def rankings(owners: list[str]) -> pd.DataFrame:
-    a = pd.read_csv(PROCESSED / "hist_auctions_by_owner.csv").set_index("owner")
-    r = pd.read_csv(PROCESSED / "hist_rookies_by_owner.csv").set_index("owner")
-    g = pd.read_csv(PROCESSED / "hist_tags_by_owner.csv").set_index("owner")
-    t = pd.read_csv(PROCESSED / "hist_trades_by_owner.csv").set_index("owner")
+    """Skill per decision: the average grade of each kind of decision (P16), with how many there were."""
+    d = pd.read_csv(PROCESSED / "grades_decisions.csv")
+    d = d[~((d.type == "trade") & ~d.complete.fillna(True).astype(bool))]
     res = pd.read_csv(PROCESSED / "season_results.csv")
-    rf = rfa_held().groupby("holder").surplus.agg(["mean", "size"])
-    cy = contract_years().groupby("owner").years.agg(["mean", "size"])
-    aspects = {
-        "auction": (a.surplus_per_buy, a.graded_buys),
-        "rookie_draft": (r.points_vs_slot, r.graded_picks),
-        "rfa": (rf["mean"], rf["size"]),
-        "tags": (g.avg_tag_surplus, g.graded),
-        "trades": (t.avg_net_later_cap_equiv, t.graded),
-        "results": (-res.groupby("owner").regular_season_finish.mean(), res.groupby("owner").size()),
-    }
     out = pd.DataFrame(index=owners)
-    for name, (val, n) in aspects.items():
-        v = val.reindex(owners)
-        out[f"{name}_value"] = v.round(1) if name != "results" else (-v).round(1)
-        out[f"{name}_n"] = n.reindex(owners).fillna(0).astype(int)
+    for name, (types, _) in ASPECTS.items():
+        g = d[d.type.isin(types)].groupby("owner").grade
+        v = g.mean().reindex(owners)
+        out[f"{name}_value"] = v.round(1)
+        out[f"{name}_n"] = g.size().reindex(owners).fillna(0).astype(int)
         out[f"{name}_rank"] = v.rank(ascending=False, method="min")
-    decision = ["auction", "rookie_draft", "rfa", "tags", "trades"]
-    out["avg_decision_rank"] = out[[f"{a_}_rank" for a_ in decision]].mean(axis=1).round(1)
+    fin = res.groupby("owner").regular_season_finish
+    out["results_value"] = fin.mean().reindex(owners).round(1)
+    out["results_n"] = fin.size().reindex(owners).fillna(0).astype(int)
+    out["results_rank"] = out.results_value.rank(method="min")
+    cy = contract_years().groupby("owner").years.agg(["mean", "size"])
     out["contract_years"] = cy["mean"].reindex(owners).round(2)
     out["contract_buys"] = cy["size"].reindex(owners).fillna(0).astype(int)
-    out = out.reset_index().rename(columns={"index": "owner"}).sort_values("avg_decision_rank")
+    out = out.reset_index().rename(columns={"index": "owner"}).sort_values("results_rank")
     out.to_csv(PROCESSED / "owner_rankings.csv", index=False)
+    return out
+
+
+def bridge(owners: list[str]) -> pd.DataFrame:
+    """Why owners win: each owner's weekly lineup edge over the league average (points over waiver),
+    split by how the starters were acquired, plus injury luck, against the average finish."""
+    o = pd.read_csv(PROCESSED / "owner_season_lineups.csv")
+    chans = {"auction": "auction", "rookie_draft": "rookie_draft", "rfa": ["rfa_won", "rfa_matched"],
+             "trade": "trade", "waiver_fa": "other"}
+    for k, v in chans.items():
+        o[f"c_{k}"] = o[v].sum(axis=1) if isinstance(v, list) else o[v]
+    cols = [f"c_{k}" for k in chans] + ["lineup_ppg", "injury_cost_ppg"]
+    rel = o[cols] - o.groupby("season")[cols].transform("mean")
+    rel[["season", "owner"]] = o[["season", "owner"]]
+    g = rel[rel.owner.isin(owners)].groupby("owner")
+    out = g[cols].mean().round(1)
+    out.columns = [c.replace("c_", "") + "_edge" if c.startswith("c_") else c for c in out.columns]
+    out = out.rename(columns={"lineup_ppg": "lineup_edge", "injury_cost_ppg": "injury_cost_vs_league"})
+    out["seasons"] = g.size()
+    lr = o[o.owner.isin(owners)].groupby("owner")
+    out["lineup_rank"] = lr.lineup_rank.mean().round(1)
+    out["finish"] = lr.regular_season_finish.mean().round(1)
+    out["finish_vs_lineup"] = (out.lineup_rank - out.finish).round(1)     # + finished better than the lineup
+    out = out.reset_index().sort_values("finish")
+    out.to_csv(PROCESSED / "owner_bridge.csv", index=False)
     return out
 
 
@@ -156,6 +171,7 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     owners = sorted(pd.read_csv(PROCESSED / "site_rosters.csv").owner.dropna().unique())
     print(rankings(owners).to_string(index=False))
+    print(bridge(owners).to_string(index=False))
     c, _ = careers(owners)
     print(c.to_string(index=False))
     print(observations().to_string(index=False))

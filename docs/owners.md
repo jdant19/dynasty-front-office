@@ -28,21 +28,38 @@ One row per current owner with every parameter above, sample sizes, 2026 waiver 
 A read lists a trait only when the owner is at least one standard deviation from the league average;
 confidence is low under 5 events, medium 5-14, high 15+.
 
-## Rankings, careers and Jordan's notes (`owners/rankings.py`)
+## What wins, and decision grades (`owners/diagnose.py`, `owners/grades.py`, `owners/rankings.py`)
 
-- `owner_rankings.csv`: current owners ranked 1-10 on each aspect, with the sample size beside each rank:
-  auction (cap $ returned over price per buy, 2020-2025), rookie draft (points over four seasons vs the
-  slot average), RFA (cap $ returned over price on every RFA he ended up holding, matched or won), tags
-  (cap $ over tag cost), trades (cap-equivalent per trade over the next two seasons) and results (average
-  regular-season finish). `avg_decision_rank` averages the five decision aspects. Contract length (years
-  a $5+ auction buy stays on its original schedule, buys through 2023) is a style column, not ranked.
-- `owner_careers.csv`, `owner_finishes.csv`: every season 2013-2025 with finish, playoff result and payout.
-  Payouts use today's table ($400/$200/$100 regular season, $200/$100 playoffs); earlier seasons may
-  have paid differently.
-- `observations.csv`: Jordan's notes on owners (raw copy in `data/raw/owner_notes/`), each with the
-  evidence, a verdict and an expiry date one year out.
+Each metric answers one question (principle P16, `docs/metrics.md`).
 
-Small samples rank too: RFA and tag ranks rest on 1-9 events per owner and move a lot with one case.
+- **Rebuilt lineups** (`lineup_attribution.csv`, `owner_season_lineups.csv`): every owner-season 2014-2025
+  from its preseason roster (keepers + auction buys) plus in-season trades (archive trades have no date:
+  offseason if the receiver kept the player at that auction, otherwise assumed at midseason). Each week it
+  starts the best lineup by points per game so far (3 games of last season's rate as a prior). Rebuilt
+  lineup strength tracks the final standings at 0.67 rank correlation a season (preseason roster alone 0.57).
+  Every started point over the waiver level is credited to the decision that brought the player to that
+  owner. A healthy counterfactual (absent players at their expected points) measures injury luck.
+- **Why owners win** (`owner_bridge.csv`): each owner's average weekly lineup edge over the league, split by
+  channel (auction, rookie draft, RFA, trade, waiver/FA), injury cost vs the league, and finish vs lineup rank.
+- **Decision grades** (`grades_decisions.csv`, about 1,450 rows), in lineup points over waiver:
+  - cap decisions (auction buys, RFA wins and matches, tags, kept waiver/FA pickups): every season held, the
+    points he started for, minus what that salary normally buys (`params_price_curve.csv`: what auction buys at
+    each price and position started for in the season bought); later seasons haircut 0.88 a year;
+  - letting an RFA go: minus what the winner's deal returned over its price;
+  - rookie picks: the player's own points over waiver in his first four seasons minus the slot average
+    (fewer seasons for recent drafts, against the slot average over the same seasons);
+  - trades: what each side's received players started for, net of salary (none for the in-season half), trade
+    season + 2 seasons, minus the same for what it sent, plus picks (round average) and cap moved; each season
+    weighted by that owner's posture (`owner_season_posture.csv`: payout per point before the season from the
+    preseason simulator 2020-2025 or prior finish before; at midseason from first-half lineup strength).
+- **Rankings** (`owner_rankings.csv`): skill = average grade per decision of each kind, with its count.
+  Volume (how many decisions, and the lineup points they brought) is in the bridge, not the skill rank.
+- `owner_careers.csv`, `owner_finishes.csv`: every season 2013-2025; payouts at today's table.
+- `observations.csv`: Jordan's notes on owners, each with evidence, a verdict and an expiry.
+
+Known gaps: waiver moves inside a season are not recorded (kept pickups show up as "waiver/FA"; a few may be
+unrecorded trades); in-game injuries count as games played; no trades are on record for 2017 or 2025
+(Jordan: there were none).
 
 ## League-wide findings
 

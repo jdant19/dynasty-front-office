@@ -76,6 +76,15 @@ def table() -> pd.DataFrame:
             payout_per_point_2027=d.per_point_2027_haircut.get(o, np.nan),
             cap_room_2027=room.get(o, np.nan)))
     out = pd.DataFrame(rows)
+    # skill grades come from grades.py (P16): lineup points over waiver against the right baseline
+    rk = pd.read_csv(PROCESSED / "owner_rankings.csv").set_index("owner")
+    for col, src in {"auction_surplus_per_buy": "auction", "draft_points_vs_slot": "rookie_draft",
+                     "tag_surplus": "tags", "trade_net_later_cap_equiv": "trades",
+                     "rfa_matched_value_vs_price": "rfa_matching", "waiver_fa_grade": "waiver_fa"}.items():
+        out[col] = out.owner.map(rk[f"{src}_value"])
+        n = {"auction": "auction_graded", "rookie_draft": "draft_graded", "tags": "tags_graded",
+             "trades": "trades_graded", "waiver_fa": "waiver_fa_n", "rfa_matching": "rfa_matching_n"}[src]
+        out[n] = out.owner.map(rk[f"{src}_n"])
     out.to_csv(PROCESSED / "owner_model.csv", index=False)
     return out
 
@@ -90,22 +99,22 @@ TRAITS = [
     ("trades_per_season", "trades", "trades often", "rarely trades", "{:.1f}", "trades a season"),
     ("trade_points_now", "trades_graded", "trades for points now (contender style)",
      "trades current points away for later value", "{:+.0f}", "points in the trade season, per trade"),
-    ("trade_net_later_cap_equiv", "trades_graded", "has come out ahead on later seasons in trades",
-     "has lost later-season value in trades", "{:+.0f}", "cap-equivalent per trade over the next two seasons"),
+    ("trade_net_later_cap_equiv", "trades_graded", "comes out ahead in trades", "comes out behind in trades",
+     "{:+.0f}", "lineup points per trade, both sides, trade season + 2, posture-weighted"),
     ("picks_bought_minus_sold", "trades", "accumulates picks", "sells picks", "{:+.0f}", "picks bought minus sold"),
     ("auction_spend", "auction_graded", "spends big at the auction", "spends little at the auction",
      "${:.0f}", "per auction"),
     ("auction_price_vs_league", "auction_graded", "pays above the league rate per point",
      "pays below the league rate per point", "{:.2f}x", "the league's price per point"),
     ("auction_surplus_per_buy", "auction_graded", "gets value at the auction", "overpays at the auction",
-     "{:+.0f}", "cap $ returned over price per buy (2020-2025)"),
+     "{:+.0f}", "lineup points over waiver per buy vs what the price normally buys"),
     ("contract_years", "contract_buys", "keeps auction buys on long contracts", "gives short contracts",
      "{:.2f}", "years an auction buy of $5+ stays on its original contract"),
     ("auction_age", "auction_graded", "buys older players", "buys younger players", "{:.1f}", "average age at purchase"),
     ("spend_RB", "auction_graded", "spends heavily on RBs", "spends lightly on RBs", "{:.0%}", "of auction spend on RBs"),
     ("spend_WR", "auction_graded", "spends heavily on WRs", "spends lightly on WRs", "{:.0%}", "of auction spend on WRs"),
     ("draft_points_vs_slot", "draft_graded", "drafts rookies well", "drafts rookies poorly",
-     "{:+.0f}", "points over four seasons vs the slot average"),
+     "{:+.0f}", "points over waiver in four seasons vs the slot average"),
     ("draft_reach", "draft_ranked", "takes rookies earlier than consensus", "lets rookies fall past consensus",
      "{:+.1f}", "slots vs FantasyPros rookie order (2021+)"),
     ("rfa_bids_per_season", "rfa_players_bid_on", "bids on many RFAs", "bids on few RFAs", "{:.1f}",
@@ -113,7 +122,9 @@ TRAITS = [
     ("rfa_bid_vs_final", "rfa_players_bid_on", "bids close to the final RFA price",
      "bids well under the final RFA price", "{:.0%}", "of the final price, average bid"),
     ("rfa_match_rate", "rfa_own", "matches RFA offers", "lets RFAs go", "{:.0%}", "of contested RFAs matched"),
-    ("tag_surplus", "tags_graded", "tags well", "tags poorly", "{:+.0f}", "cap $ per tag, value over cost"),
+    ("tag_surplus", "tags_graded", "tags well", "tags poorly", "{:+.0f}", "lineup points per tag vs what the tag cost normally buys"),
+    ("waiver_fa_grade", "waiver_fa_n", "finds keepers on waivers", "keeps waiver pickups that don't pay off", "{:+.0f}",
+     "lineup points per kept waiver/FA pickup vs what the salary normally buys"),
     ("adds_2026", None, "works the waiver wire", "rarely uses waivers", "{:.0f}", "adds this season"),
 ]
 
