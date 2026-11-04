@@ -66,7 +66,7 @@ def events() -> pd.DataFrame:
     ev.append(pd.DataFrame(dict(season=rk.season, step=1, owner=rk.owner, player_id=rk.canonical_id,
                                 channel="rookie_draft", event=[f"D{s}-{o}" for s, o in zip(rk.season, rk.overall)],
                                 cost=rk.salary)))
-    rf = pd.read_csv(PROCESSED / "rfa_bids.csv").drop_duplicates(["season", "player"])
+    rf = pd.read_csv(PROCESSED / "rfa_bids.csv").groupby(["season", "player"], as_index=False).first()
     rf = rf.merge(_ids("rfa_bids"), left_on=["season", "player"], right_on=["season", "name"], how="left")
     rf = rf[rf.canonical_id.notna() & rf.final_owner.notna() & (rf.season <= LAST)]
     ev.append(pd.DataFrame(dict(season=rf.season, step=2, owner=rf.final_owner, player_id=rf.canonical_id,

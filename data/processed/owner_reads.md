@@ -88,7 +88,7 @@ Trades: 4 (0.31 a season); most with Jordan 3, Qasim 1.
 - bids on few RFAs: 4.8 RFAs bid on a season (league average 7.2; high confidence, n=38)
 - bids well under the final RFA price: 33% of the final price, average bid (league average 46%; high confidence, n=38)
 - matches RFA offers: 100% of contested RFAs matched (league average 75%; medium confidence, n=6)
-- tags well: +43 lineup points per tag vs what the tag cost normally buys (league average -30; low confidence, n=3)
+- tags well: +107 lineup points per tag vs what the tag cost normally buys (league average -0; low confidence, n=3)
 - finds keepers on waivers: +55 lineup points per kept waiver/FA pickup vs what the salary normally buys (league average -21; medium confidence, n=14)
 
 Jordan's notes:
@@ -130,7 +130,7 @@ Trades: 14 (1.27 a season); most with Jordan 5, Ben 4.
 - drafts rookies poorly: -51 points over waiver in four seasons vs the slot average (league average +8; high confidence, n=45)
 - bids on few RFAs: 5.0 RFAs bid on a season (league average 7.2; high confidence, n=40)
 - bids well under the final RFA price: 29% of the final price, average bid (league average 46%; high confidence, n=40)
-- tags poorly: -200 lineup points per tag vs what the tag cost normally buys (league average -30; low confidence, n=1)
+- tags poorly: -134 lineup points per tag vs what the tag cost normally buys (league average -0; low confidence, n=1)
 
 Jordan's notes:
 

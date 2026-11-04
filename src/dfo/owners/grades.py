@@ -191,11 +191,16 @@ def cap_decisions(h: pd.DataFrame, curve: PriceCurve) -> pd.DataFrame:
 
 def rfa_let_go(cap: pd.DataFrame) -> pd.DataFrame:
     """Letting an RFA go: the original owner's grade is minus what the winner's deal returned over price."""
-    r = pd.read_csv(PROCESSED / "rfa_bids.csv").drop_duplicates(["season", "player"])
+    r = pd.read_csv(PROCESSED / "rfa_bids.csv").groupby(["season", "player"], as_index=False).first()
     nm = pd.read_csv(PROCESSED / "name_matches.csv")
     r = r.merge(nm[nm.table == "rfa_bids"][["season", "name", "canonical_id"]].drop_duplicates(["season", "name"]),
                 left_on=["season", "player"], right_on=["season", "name"], how="left")
     r = r[(r.outcome == "changed_teams") & r.canonical_id.notna() & (r.season <= LAST)]
+    # original owner missing in the RFA sheet for some years: whoever held him at the end of the season before
+    h = pd.read_csv(PROCESSED / "owner_season_rosters.csv").sort_values("w1")
+    last_holder = h.groupby(["season", "player_id"]).owner.last()
+    r["original_owner"] = [o if isinstance(o, str) else last_holder.get((s - 1, pid), np.nan)
+                           for o, s, pid in zip(r.original_owner, r.season, r.canonical_id)]
     won = cap[cap.type == "rfa_bid"].set_index(["season", "player_id"])
     rows = []
     for x in r.itertuples():
@@ -213,13 +218,17 @@ def rfa_let_go(cap: pd.DataFrame) -> pd.DataFrame:
 def tag_decisions(h: pd.DataFrame, curve: PriceCurve) -> pd.DataFrame:
     t = pd.read_csv(PROCESSED / "hist_tags.csv").dropna(subset=["canonical_id"])
     t = t[t.season <= LAST]
-    got = h.groupby(["season", "owner", "player_id"]).started_pts.sum()
+    # a tagged player traded before or during the season is graded on whoever started him: the tag set his
+    # price; the trade grade covers what was exchanged for him
+    got = h.groupby(["season", "player_id"]).started_pts.sum()
+    holders = h.groupby(["season", "player_id"]).owner.agg(lambda s: ", ".join(sorted(set(s))))
     rows = []
     for x in t.itertuples():
         pos = "DEF" if str(x.canonical_id).startswith("DEF-") else _POS.get(x.canonical_id)
         exp = float(curve([pos], [x.cost])[0]) if pd.notna(x.cost) else np.nan
-        pts = float(got.get((x.season, x.owner, x.canonical_id), 0.0))
-        rows.append(dict(type="tag", season=x.season, owner=x.owner, player_id=x.canonical_id, pos=pos, price=x.cost,
+        pts = float(got.get((x.season, x.canonical_id), 0.0))
+        held = holders.get((x.season, x.canonical_id), "")
+        rows.append(dict(type="tag", partner=(held if held and held != x.owner else np.nan), season=x.season, owner=x.owner, player_id=x.canonical_id, pos=pos, price=x.cost,
                          seasons_held=1, last_season=x.season, points=round(pts, 1), expected=round(exp, 1),
                          grade=round(pts - exp, 1), grade_year0=round(pts - exp, 1), grade_later=0.0))
     return pd.DataFrame(rows)
