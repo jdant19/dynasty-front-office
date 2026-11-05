@@ -392,16 +392,23 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
     is definite; a pick was only a chance). For each played season from the trade season through two
     after: take the trade out of both teams' rebuilt lineups (received players' lineup points net of
     salary, minus the same for what was sent, plus cap moved), re-rank the season, shift each team's
-    actual finish by its change in lineup rank, and pay out the counterfactual: regular-season payout at
+    actual finish by its change in lineup rank times the measured slope of finish on lineup rank
+    (about 0.7, rounded to whole places), and pay out the counterfactual: regular-season payout at
     the new finish; the actual playoff payout kept if still in the top four, lost if pushed out, and
     the average playoff payout if pushed in. The grade is actual payout minus counterfactual payout.
     Picks are valued at what a pick in that round is expected to deliver (round-average lineup points
-    times the average payout per point), discounted 0.88 a year."""
+    times the average payout per point), discounted 0.88 a year. Traded picks are resolved to the player
+    drafted (traded_picks.py, 2026-11-05): one the receiver used counts as that player's lineup points in
+    the re-run of every played season of his rookie deal (the grade runs through the last of them),
+    plus expectation for rookie seasons not yet played; one passed on counts at what the player
+    actually gave whoever drafted him; picks that can't be traced stay at expectation."""
     reg, po, seeds, po_avg = _payout_table()
     o = pd.read_csv(PROCESSED / "owner_season_lineups.csv")
     weeks = o.season.map(lambda s: 18 if s >= 2021 else 17)
     o["total"] = o.lineup_ppg * weeks
     tot = {s: g.set_index("owner").total.to_dict() for s, g in o.groupby("season")}
+    # a place of rebuilt-lineup rank has moved the actual finish by this much on average (2014-2025)
+    slope = float(np.polyfit(o.lineup_rank, o.regular_season_finish, 1)[0])
     fin = o.set_index(["season", "owner"])[["regular_season_finish", "playoff_result"]]
     per_point = float(post[post.basis == "preseason simulator"].per_point.mean())
     L = pd.read_csv(PROCESSED / "lineup_attribution.csv")
@@ -412,6 +419,15 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
     ins = (x.season == x.event.str.slice(1, 5).astype(int)) & (x.w0 > 1)
     x["net"] = x.started_pts - np.where(ins, 0.0, curve(x.pos, x.salary) * x.share)
     got = x.groupby(["event", "owner", "season"]).net.sum()
+    # traded picks resolved to the player drafted (traded_picks.py): a pick the receiver used counts
+    # as that player's lineup points net of what his rookie salary normally buys, in every played
+    # season of his rookie deal; one the receiver passed on counts at what the player actually gave
+    # whoever drafted him (all played seasons, average payout per point); unknown picks at expectation
+    tp = pd.read_csv(PROCESSED / "traded_picks.csv") if (PROCESSED / "traded_picks.csv").exists() else None
+    hd = h[h.channel == "rookie_draft"].copy()
+    hd["net"] = hd.started_pts - curve(hd.pos, hd.salary) * hd.share
+    pick_net = hd.groupby(["event", "owner", "season"]).net.sum()
+    pick_total = hd.groupby(["event", "owner"]).net.sum()
 
     def pay(s, team, finish):
         f = fin.loc[(s, team)]
@@ -435,11 +451,40 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
             yr = int(m[1]) if pd.notna(m[1]) else y0 + 1
             caps[r.receiver][yr] = caps[r.receiver].get(yr, 0.0) + amt * curve.slope
         season_rows = {t: [] for t in teams}
-        for s in range(y0, min(y0 + TRADE_YEARS, LAST) + 1):
+        used = {t: {} for t in teams}           # season -> lineup points from picks this side drafted
+        realized = {t: 0.0 for t in teams}      # $ from picks this side passed on, at what they became
+        expected_pk = {t: [] for t in teams}    # (round, year) still valued at expectation
+        names = {t: [] for t in teams}
+        last = y0 + TRADE_YEARS
+        mine = tp[tp.trade_id == tid] if tp is not None else g.iloc[0:0]
+        for r in mine.itertuples():
+            t = r.receiver
+            if t not in used:
+                continue
+            if r.use == "used by receiver" and isinstance(r.event, str):
+                for (ev, o, ss), v in pick_net.loc[[r.event]].items() if r.event in pick_net.index.get_level_values(0) else []:
+                    if o == t and ss <= LAST:
+                        used[t][ss] = used[t].get(ss, 0.0) + float(v)
+                        last = max(last, ss)
+                names[t].append(f"{r.asset} = {r.player}")
+                seen = max(0, min(3, LAST - int(r.pick_year) + 1))
+                if seen < 3 and pd.notna(r.round):        # rookie seasons not played yet: expectation
+                    realized[t] += (pv.get(int(r.round), 0.0) * (3 - seen) / 3 * per_point
+                                    * HAIRCUT ** max(0, int(r.pick_year) - y0 + 1))
+            elif r.use == "re-traded" and isinstance(r.event, str):
+                realized[t] += float(pick_total.get((r.event, r.drafted_by), 0.0)) * per_point
+                names[t].append(f"{r.asset} = {r.player} (drafted by {r.drafted_by})")
+            elif pd.notna(r.round):
+                expected_pk[t].append((int(r.round), r.pick_year))
+                names[t].append(f"{r.asset}" + (f" = {r.player}?" if isinstance(r.player, str) else ""))
+        for s in range(y0, min(last, LAST) + 1):
             if s not in tot or t0 not in tot[s] or t1 not in tot[s]:
                 continue
-            d0 = (float(got.get((tid, t0, s), 0.0)) + caps[t0].get(s, 0.0)
-                  - float(got.get((tid, t1, s), 0.0)) - caps[t1].get(s, 0.0))
+            in_win = s <= y0 + TRADE_YEARS
+            d0 = ((float(got.get((tid, t0, s), 0.0)) + caps[t0].get(s, 0.0) if in_win else 0.0)
+                  + used[t0].get(s, 0.0)
+                  - (float(got.get((tid, t1, s), 0.0)) + caps[t1].get(s, 0.0) if in_win else 0.0)
+                  - used[t1].get(s, 0.0))
             cf = dict(tot[s])
             cf[t0] -= d0
             cf[t1] += d0
@@ -447,20 +492,19 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
             rank_cf = pd.Series(cf).rank(ascending=False, method="first")
             for t, d in ((t0, d0), (t1, -d0)):
                 f = int(fin.loc[(s, t)].regular_season_finish)
-                f_cf = int(min(max(f + rank_cf[t] - rank[t], 1), 10))
+                f_cf = int(min(max(f + round(slope * (rank_cf[t] - rank[t])), 1), 10))
                 season_rows[t].append((s, d, f, f_cf, pay(s, t, f) - pay(s, t, f_cf)))
         for t, other in ((t0, t1), (t1, t0)):
-            pk = 0.0
+            pk = realized[t] - realized[other]
             for side, sign in ((t, 1), (other, -1)):
-                p = g[(g.receiver == side) & (g.kind == "pick")]
-                for r, yr in zip(p.pick_round, p.pick_year):
-                    if pd.notna(r):
-                        yrs = (yr if pd.notna(yr) else y0 + 1) - y0 + 1
-                        pk += sign * pv.get(int(r), 0.0) * per_point * HAIRCUT ** max(0, yrs)
+                for rnd, yr in expected_pk[side]:
+                    yrs = (yr if pd.notna(yr) else y0 + 1) - y0 + 1
+                    pk += sign * pv.get(int(rnd), 0.0) * per_point * HAIRCUT ** max(0, yrs)
             sr = season_rows[t]
             rows.append(dict(trade_id=tid, owner=t, payout_grade=round(sum(r[4] for r in sr) + pk),
                              payout_trade_season=round(sr[0][4]) if sr and sr[0][0] == y0 else 0,
-                             payout_picks=round(pk),
+                             payout_picks=round(pk), picks_got="; ".join(names[t]), picks_gave="; ".join(names[other]),
+                             seasons_through=min(last, LAST),
                              finish_changes="; ".join(f"{s}: {f} vs {fc} without" for s, d, f, fc, _ in sr if f != fc),
                              seasons_realized=len(sr)))
     return pd.DataFrame(rows)

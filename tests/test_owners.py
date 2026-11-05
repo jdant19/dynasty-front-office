@@ -80,3 +80,19 @@ def test_rebuilt_lineups_explain_finishes():
     assert abs(p.weight_mid.mean() - 1) < 0.01 and p.weight.between(0, 3).all()
     b = _csv("owner_bridge.csv")
     assert len(b) == 10
+
+
+def test_traded_picks_resolve_to_the_players_drafted():
+    t = _csv("traded_picks.csv")
+    key = lambda tid, rec, asset: t[(t.trade_id == tid) & (t.receiver == rec) & (t.asset == asset)].iloc[0]
+    chase = key("T2021-029", "Max", "2021 pick #2")
+    assert chase.player == "Ja'marr Chase" and chase.use == "used by receiver"
+    zach = key("T2020-028", "Jordan", "Zach's 2021 1st")
+    assert zach.overall == 2 and zach.use == "re-traded"                 # Jordan passed it on to Max
+    assert key("T2019-020", "Ryan", "2021 1st").player == "Kyle PItts"
+    assert key("T2021-035", "Zach", "2022 1st (best of Matt's)").player == "Treylon Burks"
+    drafted = t[t.status == "drafted"]
+    assert (drafted.use != "unverified").mean() >= 0.85                 # the chain explains most picks
+    d = _csv("grades_decisions.csv")
+    tr = d[d.type == "trade"]
+    assert tr.payout_grade.notna().all() and (tr.payout_grade == tr.payout_grade.round()).all()

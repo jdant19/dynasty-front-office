@@ -52,6 +52,16 @@ Each metric answers one question (principle P16, `docs/metrics.md`).
     season + 2 seasons, minus the same for what it sent, plus picks (round average) and cap moved; each season
     weighted by that owner's posture (`owner_season_posture.csv`: payout per point before the season from the
     preseason simulator 2020-2025 or prior finish before; at midseason from first-half lineup strength).
+- **Trades in payout $** (`payout_grade`, 2026-11-05): each played season from the trade season
+  through two after is re-run without the trade; finishes shift by the change in rebuilt-lineup rank
+  times the measured slope of finish on lineup rank (0.69); payouts at today's table (playoff payout
+  kept if still top four). Traded picks are resolved to the player drafted (`traded_picks.csv`,
+  `owners/traded_picks.py`: draft order is the reverse of the previous regular-season finish, a pick's
+  original team comes from the asset text or the picks the sender held). A pick the receiver used counts
+  as that player's lineup points through his rookie deal (the grade runs that long), a pick passed on
+  at what the player gave whoever drafted him, and untraceable picks at expectation. Of 101 traded
+  picks: 72 used by the receiver, 16 passed on, 8 drafted by a team the trade record can't connect
+  (unrecorded trades or conditions that didn't convey), 5 unreadable or not yet drafted.
 - **Rankings** (`owner_rankings.csv`): skill = average grade per decision of each kind, with its count.
   Volume (how many decisions, and the lineup points they brought) is in the bridge, not the skill rank.
 - `owner_careers.csv`, `owner_finishes.csv`: every season 2013-2025; payouts at today's table.

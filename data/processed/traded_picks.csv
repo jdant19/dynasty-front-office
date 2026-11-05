@@ -1,0 +1,102 @@
+trade_id,season,receiver,sender,asset,pick_year,round,original_team,overall,how,player,drafted_by,status,use,player_id,event
+T2014-001,2014,Jordan,Matt,2014 2nd,2014.0,2.0,Matt,11.0,sender's own pick,Jordan Matthews,Jordan,drafted,used by receiver,00-0031299,D2014-11
+T2014-001,2014,Jordan,Matt,2015 2nd (if Austin is cut),2015.0,2.0,Matt,11.0,sender's own pick,Breshad Perriman,Jordan,drafted,used by receiver,00-0032054,D2015-11
+T2014-001,2014,Matt,Jordan,2014 2nd,2014.0,2.0,Jordan,18.0,sender's own pick,Ka'Deem Carey,Matt,drafted,used by receiver,00-0031057,D2014-18
+T2014-002,2014,Jordan,Ben,2015 2nd,2015.0,2.0,Ben,17.0,sender's own pick,Jaelen Strong,Ryan,drafted,re-traded,00-0031560,D2015-17
+T2014-002,2014,Ben,Jordan,2015 1st,2015.0,1.0,Jordan,10.0,sender's own pick,Nelson Agholor,Ben,drafted,used by receiver,00-0031549,D2015-10
+T2015-004,2015,Ryan,Jordan,2015 2nd,2015.0,2.0,Ben,17.0,matched to the slot the receiver drafted,Jaelen Strong,Ryan,drafted,used by receiver,00-0031560,D2015-17
+T2015-005,2015,Ryan,Matt,2015 1st,2015.0,1.0,Matt,1.0,sender's own pick,Todd Gurley,Ryan,drafted,used by receiver,00-0032241,D2015-1
+T2015-006,2015,Ryan,Zach,2015 1st,2015.0,1.0,Zach,5.0,sender's own pick,Kevin White,Ryan,drafted,used by receiver,00-0031545,D2015-5
+T2015-007,2015,Jordan,Qasim,2015 2nd,2015.0,2.0,Qasim,13.0,sender's own pick,Marcus Mariotta,Qasim,drafted,unverified,00-0032268,D2015-13
+T2015-008,2015,Ryan,Jordan,2016 1st,2016.0,1.0,Jordan,8.0,sender's own pick,Michael Thomas,Ryan,drafted,used by receiver,00-0032765,D2016-8
+T2015-008,2015,Ryan,Jordan,2016 2nd (from Qasim) (if Martin and Williams score 240 + points starting Nov. 7),2016.0,2.0,Qasim,19.0,team named in the asset,Paul Perkins,Jordan,drafted,unverified,00-0032417,D2016-19
+T2015-008,2015,Ryan,Jordan,2016 2nd (if Martin and William score 130-239 points starting Nov. 7),2016.0,2.0,Jordan,18.0,sender's own pick,Pharoh Cooper,Ryan,drafted,used by receiver,00-0033111,D2016-18
+T2015-009,2015,Johnny,Ben,2016 2nd,2016.0,2.0,Ben,15.0,sender's own pick,Tajae Sharpe,Johnny,drafted,used by receiver,00-0032778,D2016-15
+T2015-009,2015,Ben,Johnny,2016 1st,2016.0,1.0,Johnny,2.0,sender's own pick,Laquon Treadwell,Ryan,drafted,unverified,00-0032951,D2016-2
+T2016-010,2016,Ben,Ryan,2018 1st,2018.0,1.0,Ryan,9.0,sender's own pick,Kerryon Johnson,Ben,drafted,used by receiver,00-0034349,D2018-9
+T2016-010,2016,Ben,Ryan,2018 3rd,2018.0,3.0,Ryan,29.0,sender's own pick,Chase Edmonds,Ben,drafted,used by receiver,00-0034681,D2018-29
+T2016-011,2016,Jordan,Ben,2017 1st,2017.0,1.0,Ben,3.0,sender's own pick,Joe Mixon,Jordan,drafted,used by receiver,00-0033897,D2017-3
+T2016-011,2016,Jordan,Ben,2018 1st,2018.0,1.0,Ben,8.0,sender's own pick,Calvin Ridley,Mike,drafted,re-traded,00-0034837,D2018-8
+T2016-011,2016,Jordan,Ben,2018 2nd,2018.0,2.0,Ben,18.0,sender's own pick,Sam Darnold,Mike,drafted,re-traded,00-0034869,D2018-18
+T2016-012,2016,Jordan,Qasim,2017 3rd,2017.0,3.0,Qasim,24.0,sender's own pick,Kenny Golladay,Ben,drafted,unverified,00-0033932,D2017-24
+T2016-013,2016,Ben,Ryan,2016 1st,2016.0,1.0,Ryan,1.0,sender's own pick,Ezekiel Elliot,Ryan,drafted,unverified,00-0033045,D2016-1
+T2016-013,2016,Ben,Ryan,2016 1st,2016.0,1.0,Jordan,8.0,only such pick the sender held,Michael Thomas,Ryan,drafted,unverified,00-0032765,D2016-8
+T2016-013,2016,Ryan,Ben,2016 2nd,2016.0,2.0,,,,,,unresolved,unresolved,,
+T2016-013,2016,Ryan,Ben,2017 2nd,2017.0,2.0,Ben,13.0,sender's own pick,David Njoku,Jordan,drafted,unverified,00-0033885,D2017-13
+T2018-014,2018,Jordan,Mike,2018 2nd,2018.0,2.0,Mike,14.0,sender's own pick,Nyheim Hines,Jordan,drafted,used by receiver,00-0034367,D2018-14
+T2018-014,2018,Mike,Jordan,2018 1st,2018.0,1.0,Ben,8.0,matched to the slot the receiver drafted,Calvin Ridley,Mike,drafted,used by receiver,00-0034837,D2018-8
+T2018-014,2018,Mike,Jordan,2018 2nd,2018.0,2.0,Ben,18.0,matched to the slot the receiver drafted,Sam Darnold,Mike,drafted,used by receiver,00-0034869,D2018-18
+T2018-015,2018,Jordan,Ben,2019 3rd,2019.0,3.0,Ben,22.0,sender's own pick,Ryquell Armstead,Jordan,drafted,used by receiver,00-0035268,D2019-22
+T2018-015,2018,Ben,Jordan,2018 2nd,2018.0,2.0,Jordan,13.0,matched to the slot the receiver drafted,Michael Gallup,Ben,drafted,used by receiver,00-0034764,D2018-13
+T2018-015,2018,Ben,Jordan,2019 2nd,2019.0,2.0,Jordan,18.0,sender's own pick,Damien Harris,Ben,drafted,used by receiver,00-0035657,D2019-18
+T2018-016,2018,Jordan,Ryan,2019 2nd,2019.0,2.0,Ryan,19.0,sender's own pick,Justice Hill,Ben,drafted,re-traded,00-0034975,D2019-19
+T2018-016,2018,Ryan,Jordan,2019 1st,2019.0,1.0,Jordan,8.0,sender's own pick,Darrell Henderson,Jordan,drafted,unverified,00-0035664,D2019-8
+T2018-017,2018,Ben,Jordan,Ryan's 2019 2nd,2019.0,2.0,Ryan,19.0,team named in the asset,Justice Hill,Ben,drafted,used by receiver,00-0034975,D2019-19
+T2018-017,2018,Jordan,Ben,2020 3rd Round pick swap,2020.0,3.0,Ben,27.0,sender's own pick,KJ Hamler,Jordan,drafted,used by receiver,00-0036412,D2020-27
+T2018-018,2018,Ryan,Matt,2019 3rd Round Pick,2019.0,3.0,Matt,25.0,sender's own pick,Terry McLaurin,Ryan,drafted,used by receiver,00-0035659,D2019-25
+T2019-019,2019,Matt,Qasim,2020 2nd,2020.0,2.0,Qasim,14.0,sender's own pick,Tee Higgins,Matt,drafted,used by receiver,00-0036410,D2020-14
+T2019-020,2019,Ryan,Jordan,2020 1st,2020.0,1.0,Jordan,10.0,sender's own pick,Ke'Shawn Vaughn,Matt,drafted,re-traded,00-0036450,D2020-10
+T2019-020,2019,Ryan,Jordan,2021 1st,2021.0,1.0,Jordan,3.0,sender's own pick,Kyle PItts,Ryan,drafted,used by receiver,00-0036970,D2021-3
+T2019-020,2019,Ryan,Jordan,2020 2nd,2020.0,2.0,Jordan,20.0,sender's own pick,AJ Dillon,Ryan,drafted,used by receiver,00-0036265,D2020-20
+T2019-020,2019,Jordan,Ryan,2020 3rd,2020.0,3.0,Ryan,21.0,sender's own pick,Antonio Gibson,Ben,drafted,re-traded,00-0036328,D2020-21
+T2019-020,2019,Jordan,Ryan,2021 3rd,2021.0,3.0,Ryan,21.0,sender's own pick,Nico Collins,Jordan,drafted,used by receiver,00-0036554,D2021-21
+T2019-021,2019,Ryan,Ben,2020 1st,2020.0,1.0,Ben,7.0,sender's own pick,Jerry Juedy,Ryan,drafted,used by receiver,00-0036407,D2020-7
+T2019-021,2019,Ryan,Ben,2021 1st,2021.0,1.0,Ben,5.0,sender's own pick,Javonte Williams,Ryan,drafted,used by receiver,00-0036997,D2021-5
+T2020-023,2020,Matt,Ryan,#10 pick in 2020,2020.0,1.0,Jordan,10.0,pick number in the asset,Ke'Shawn Vaughn,Matt,drafted,used by receiver,00-0036450,D2020-10
+T2020-023,2020,Ryan,Matt,#9 pick in 2020,2020.0,1.0,Matt,9.0,pick number in the asset,Henry Ruggs III,Ryan,drafted,used by receiver,00-0036357,D2020-9
+T2020-023,2020,Ryan,Matt,Matts 2021 1st,2021.0,1.0,Matt,7.0,team named in the asset,Jaylen Waddle,Ryan,drafted,used by receiver,00-0036613,D2021-7
+T2020-026,2020,Jordan,Qasim,Qasim's 2021 2nd,2021.0,2.0,Qasim,20.0,team named in the asset,Dyami Brown,Johnny,drafted,re-traded,00-0036626,D2021-20
+T2020-026,2020,Jordan,Qasim,Qasim's 2022 3rd,2022.0,3.0,Qasim,25.0,team named in the asset,Romeo Doubs,Jordan,drafted,used by receiver,00-0037816,D2022-25
+T2020-027,2020,Ben,Jordan,2020 pick #21,2020.0,3.0,Ryan,21.0,pick number in the asset,Antonio Gibson,Ben,drafted,used by receiver,00-0036328,D2020-21
+T2020-027,2020,Jordan,Ben,Ben's 2021 2nd,2021.0,2.0,Ben,15.0,team named in the asset,Terrace Marshall Jr,Zach,drafted,re-traded,00-0036955,D2021-15
+T2020-027,2020,Jordan,Ben,Ben's 2022 2nd,2022.0,2.0,Ben,11.0,team named in the asset,Skyy Moore,Jordan,drafted,used by receiver,00-0038090,D2022-11
+T2020-028,2020,Jordan,Zach,Zach's 2021 1st,2021.0,1.0,Zach,2.0,team named in the asset,Ja'marr Chase,Max,drafted,re-traded,00-0036900,D2021-2
+T2020-028,2020,Zach,Jordan,Ben's 2021 2nd,2021.0,2.0,Ben,15.0,team named in the asset,Terrace Marshall Jr,Zach,drafted,used by receiver,00-0036955,D2021-15
+T2021-029,2021,Jordan,Max,2021 pick #16,2021.0,2.0,Max,16.0,pick number in the asset,Trey Lance,Johnny,drafted,re-traded,00-0037012,D2021-16
+T2021-029,2021,Max,Jordan,2021 pick #2,2021.0,1.0,Zach,2.0,pick number in the asset,Ja'marr Chase,Max,drafted,used by receiver,00-0036900,D2021-2
+T2021-029,2021,Max,Jordan,2021 pick #13,2021.0,2.0,Jordan,13.0,pick number in the asset,Trevor Lawrence,Ben,drafted,re-traded,00-0036971,D2021-13
+T2021-030,2021,Ben,Max,2021 pick #13,2021.0,2.0,Jordan,13.0,pick number in the asset,Trevor Lawrence,Ben,drafted,used by receiver,00-0036971,D2021-13
+T2021-030,2021,Ben,Max,2022 1st,2022.0,1.0,Max,4.0,sender's own pick,Kenneth Walker,Ben,drafted,used by receiver,00-0038134,D2022-4
+T2021-031,2021,Ben,Qasim,2021 pick #10,2021.0,1.0,Qasim,10.0,pick number in the asset,Rondale Moore,Ben,drafted,used by receiver,00-0036936,D2021-10
+T2021-031,2021,Ben,Qasim,2021 pick #30,2021.0,3.0,Qasim,30.0,pick number in the asset,Mac Jones,Ben,drafted,used by receiver,00-0036972,D2021-30
+T2021-032,2021,Ryan,Qasim,2023 3rd,2023.0,3.0,Qasim,26.0,sender's own pick,Jayden Reed,Ryan,drafted,used by receiver,00-0039146,D2023-26
+T2021-032,2021,Qasim,Ryan,2022 2nd,2022.0,2.0,Ryan,19.0,sender's own pick,Jalen Tolbert,Qasim,drafted,used by receiver,00-0037666,D2022-19
+T2021-033,2021,Johnny,Jordan,2021 #16,2021.0,2.0,Max,16.0,pick number in the asset,Trey Lance,Johnny,drafted,used by receiver,00-0037012,D2021-16
+T2021-033,2021,Johnny,Jordan,2021 #20,2021.0,2.0,Qasim,20.0,pick number in the asset,Dyami Brown,Johnny,drafted,used by receiver,00-0036626,D2021-20
+T2021-033,2021,Jordan,Johnny,2021 #8,2021.0,1.0,Johnny,8.0,pick number in the asset,Rashod Bateman,Jordan,drafted,used by receiver,00-0036550,D2021-8
+T2021-034,2021,Matt,Jordan,2022 1st,2022.0,1.0,Jordan,3.0,sender's own pick,Treylon Burks,Zach,drafted,re-traded,00-0037742,D2022-3
+T2021-035,2021,Matt,Zach,2023 2nd,2023.0,2.0,Zach,13.0,sender's own pick,Michael Mayer,Matt,drafted,used by receiver,00-0039066,D2023-13
+T2021-035,2021,Zach,Matt,2022 1st (best of Matt's),2022.0,1.0,Jordan,3.0,best of the sender's picks in that round,Treylon Burks,Zach,drafted,used by receiver,00-0037742,D2022-3
+T2021-035,2021,Zach,Matt,2023 1st,2023.0,1.0,Matt,5.0,sender's own pick,Quentin Johnston,Zach,drafted,used by receiver,00-0038544,D2023-5
+T2021-036,2021,Mike,Qasim,2022 2nd (Qasim's),2022.0,2.0,Qasim,15.0,team named in the asset,Tyler Allgeier,Mike,drafted,used by receiver,00-0037263,D2022-15
+T2021-037,2021,Jordan,Mike,2023 2nd,2023.0,2.0,Mike,19.0,sender's own pick,Jalin Hyatt,Mike,drafted,re-traded,00-0038938,D2023-19
+T2022-038,2022,Jordan,Mike,2024 1st,2024.0,1.0,Mike,8.0,sender's own pick,Ladd McConkey,Johnny,drafted,re-traded,00-0039915,D2024-8
+T2022-038,2022,Mike,Jordan,2023 2nd (his own back),2023.0,2.0,Mike,19.0,team named in the asset,Jalin Hyatt,Mike,drafted,used by receiver,00-0038938,D2023-19
+T2022-039,2022,Jordan,Ben,1st/2nd. (highest between 7-16),,,,,,,,unresolved,unresolved,,
+T2022-040,2022,Russ,Matt,2023 3rd,2023.0,3.0,Matt,25.0,sender's own pick,Chase Brown,Russ,drafted,used by receiver,00-0038597,D2023-25
+T2022-041,2022,Ryan,Ben,2024 1st,2024.0,1.0,Ben,5.0,sender's own pick,Xavier Worthy,Ryan,drafted,used by receiver,00-0039894,D2024-5
+T2022-041,2022,Ryan,Ben,2025 1st,2025.0,1.0,Ben,5.0,sender's own pick,Travis Hunter,Ryan,drafted,used by receiver,00-0040718,D2025-5
+T2023-042,2023,Ben,Jordan,2023 2nd Round pick (#12),2023.0,2.0,Jordan,12.0,pick number in the asset,Kendre Miller,Ben,drafted,used by receiver,00-0038551,D2023-12
+T2023-042,2023,Ben,Jordan,2024 1st (the weaker),2024.0,1.0,Mike,8.0,weaker of the sender's picks in that round,Ladd McConkey,Johnny,drafted,re-traded,00-0039915,D2024-8
+T2023-043,2023,Qasim,Jordan,2023 1st (#10),2023.0,1.0,Ben,10.0,pick number in the asset,Dalton Kincaid,Qasim,drafted,used by receiver,00-0038933,D2023-10
+T2023-043,2023,Jordan,Qasim,2023 1st (#6),2023.0,1.0,Qasim,6.0,pick number in the asset,Zach Charbonnet,Jordan,drafted,used by receiver,00-0039165,D2023-6
+T2023-044,2023,Ben,Jordan,2024 2nd,2024.0,2.0,Jordan,17.0,sender's own pick,Adonai Mitchell,Ben,drafted,used by receiver,00-0039890,D2024-17
+T2023-044,2023,Jordan,Ben,2024 3rd,2024.0,3.0,Ben,25.0,sender's own pick,Jermaine Burton,Jordan,drafted,used by receiver,00-0039810,D2024-25
+T2023-045,2023,Qasim,Matt,2024 1st,2024.0,1.0,Matt,9.0,sender's own pick,Trey Benson,Qasim,drafted,used by receiver,00-0039921,D2024-9
+T2023-046,2023,Ryan,Jordan,2024 3rd,2024.0,3.0,Jordan,27.0,sender's own pick,Brenden Rice,Ryan,drafted,used by receiver,00-0039415,D2024-27
+T2023-046,2023,Ryan,Jordan,2025 3rd,2025.0,3.0,Jordan,30.0,sender's own pick,Isaac TeSlaa,Ryan,drafted,used by receiver,00-0040669,D2025-30
+T2023-047,2023,Qasim,Jordan,2024 1st (whichever Ben doesnt get),2024.0,1.0,Jordan,7.0,matched to the slot the receiver drafted,Jonathon Brooks,Qasim,drafted,used by receiver,00-0039344,D2024-7
+T2023-047,2023,Jordan,Qasim,2025 3rd,2025.0,3.0,Qasim,28.0,sender's own pick,Pat Bryant,Jordan,drafted,used by receiver,00-0040134,D2025-28
+T2023-048,2023,Ben,Jordan,2025 2nd,2025.0,2.0,Jordan,20.0,sender's own pick,Dylan Sampson,Max,drafted,re-traded,00-0040162,D2025-20
+T2024-049,2024,Johnny,Ben,2024 1st (#8),2024.0,1.0,Mike,8.0,pick number in the asset,Ladd McConkey,Johnny,drafted,used by receiver,00-0039915,D2024-8
+T2024-050,2024,Matt,Russ,2024 1st (#10),2024.0,1.0,Russ,10.0,pick number in the asset,Keon Coleman,Matt,drafted,used by receiver,00-0039901,D2024-10
+T2024-051,2024,Jordan,Max,2025 2nd,2025.0,2.0,Max,11.0,sender's own pick,Cam Skattebo,Jordan,drafted,used by receiver,00-0040715,D2025-11
+T2024-051,2024,Max,Jordan,2025 1st,2025.0,1.0,Jordan,10.0,sender's own pick,Emeka Egbuka,Max,drafted,used by receiver,00-0040129,D2025-10
+T2024-051,2024,Max,Jordan,2026 1st,2026.0,1.0,Jordan,7.0,sender's own pick,Kenyon Sadiq,Max,drafted,used by receiver,00-0041032,D2026-7
+T2024-052,2024,Max,Ben,Weaker of Ben's 2025 2nd Rounders,2025.0,2.0,Jordan,20.0,weaker of the sender's picks in that round,Dylan Sampson,Max,drafted,used by receiver,00-0040162,D2025-20
+S2026-01,2026,Zach,Jordan,2026 Round 3 pick,2026.0,3.0,Jordan,27.0,sender's own pick,Cyrus Allen,Zach,drafted,used by receiver,00-0040890,D2026-27
+S2026-01,2026,Jordan,Zach,2026 Round 1 pick,2026.0,1.0,Zach,8.0,sender's own pick,Omar Cooper Jr,Jordan,drafted,used by receiver,00-0041511,D2026-8
+S2026-02,2026,Jordan,Max,2028 Round 1 pick,2028.0,1.0,,,,,,future pick,future pick,,
+S2026-02,2026,Jordan,Max,2026 Round 2 pick,2026.0,2.0,Max,13.0,sender's own pick,Jonah Coleman,Jordan,drafted,used by receiver,00-0041496,D2026-13
+S2026-02,2026,Jordan,Max,2027 Round 2 pick,2027.0,2.0,,,,,,future pick,future pick,,
+S2026-04,2026,Ben,Jordan,2027 Round 1 pick (TBD (from Ja'Jah Pachulia)),2027.0,1.0,,,,,,future pick,future pick,,
