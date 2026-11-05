@@ -40,8 +40,7 @@ def test_gap_and_aging_parameters():
 
 def test_prices_follow_money_rules():
     p = _csv("prices.csv")
-    cap_cols = ["cap_saved_2027_29", "market_auction"] + [f"{c}_{y}" for y in (2027, 2028, 2029)
-                                                          for c in ("auction_cost", "cap_saved")]
+    cap_cols = ["market_auction"] + [f"{c}_{y}" for y in (2027, 2028, 2029) for c in ("auction_cost", "cap_saved")]
     for col in cap_cols:
         v = p[col].dropna()
         assert (v == v.round()).all(), col                  # cap money is whole dollars
@@ -50,8 +49,12 @@ def test_prices_follow_money_rules():
     assert (p.market_auction >= 1).all()
     roster = _csv("site_rosters.csv")
     assert p.owner.ne("").sum() >= 0.9 * len(roster)         # nearly every rostered player is priced
-    sk = p[p.pos.isin(["QB", "RB", "WR", "TE"]) & (p.points_2027 > 20)]
-    assert (sk.points_2029 / sk.points_2027).median() <= 1.0  # values fall with age on the whole
+    sk = p[p.pos.isin(["QB", "RB", "WR", "TE"]) & (p.proj_points_2027 > 50)]
+    assert (sk.proj_points_2029 / sk.proj_points_2027).median() <= 1.0   # values fall with age on the whole
+    # P16: later seasons judged in lineup points against what the salary normally buys
+    on = p.salary_2027 > 0
+    assert ((p.surplus_2027 - (p.lineup_2027 - p.norm_2027)).abs()[on] < 0.2).all()
+    assert p.norm_2027[~on].isna().all() and not any(c in p for c in ("cap_saved_2027_29", "points_2027"))
 
 
 def test_pick_model():
@@ -69,7 +72,7 @@ def test_ours_uses_waivers_and_roster():
     mine = o[o.on_roster]
     assert len(mine) >= 15
     assert o.drop_if_added.dropna().isin(mine.player_id).all()
-    assert "lineup_points_now" in o and "cap_saved_2027_29" in o   # two numbers, never one total
+    assert "lineup_points_now" in o and "surplus_2027_29" in o      # two numbers, never one total
     k = mine[mine.pos == "K"]
     if len(k):                                               # a kicker is worth his edge over streaming
         assert (k.lineup_points_now < 60).all()
@@ -100,3 +103,16 @@ def test_designation_plan_respects_league_limits_and_chains():
         for a, b in zip(g.offseason, g.offseason[1:]):
             prev = g[g.offseason == a].type.iloc[0]
             assert not (prev == "tag" and b == a + 1), pid    # nothing the season after a tag
+
+
+def test_price_tiers_and_lineup_value():
+    t = _csv("params_price_tiers.csv")
+    assert set(t.pos) == {"QB", "RB", "WR", "TE"} and (t.buys >= 15).all()
+    for _, g in t.groupby("pos"):
+        g = g.sort_values("tier")
+        assert g.mean_points.is_monotonic_increasing and (g.price_from.diff().dropna() > 0).all()
+    lv = _csv("params_lineup_value.csv")
+    for _, g in lv[lv.pos.isin(["QB", "RB", "WR", "TE"])].groupby("pos"):
+        assert g.sort_values("projected_points").lineup_points.is_monotonic_increasing
+    s = _csv("val_picks_slots.csv")
+    assert (np.diff(s.use_lineup) <= 1e-6).all() and s.use_lineup.iloc[0] > 0

@@ -2,7 +2,12 @@
 
     PYTHONPATH=src python -m dfo.valuation.picks     # writes data/processed/val_picks_*.csv
 
-Use value of a slot: what this league's picks at that slot actually produced over the four-year
+Use value in lineup points (P16, the measure for decisions): each rookie-deal season, the lineup
+points over waiver the player started for (whoever held him) minus what his rookie salary normally
+buys (price curve), kept only while positive, 0.88 a year: use_lineup, by slot, with the chance a
+pick gives no lineup value at all. The cap $ columns below are the older market lens.
+
+Use value of a slot in cap $: what this league's picks at that slot actually produced over the four-year
 rookie deal (2014-2022 drafts, every season observed): each season, auction-price value over the
 market replacement level minus the rookie salary ($5/$3/$1 by round, +$1 a year), kept only while
 that is positive (a bust is cut for a few dollars of dead cap), 0.88 a year. Smoothed across slots
@@ -56,6 +61,11 @@ def realized_slot_values() -> pd.DataFrame:
     n_start, _, _ = starters()
     st = _season_ranks().set_index(["season", "player_id"])
     picks = rookie_picks()
+    from dfo.owners.grades import PriceCurve, _load
+    _, hold = _load()
+    curve = PriceCurve(hold)
+    L = pd.read_csv(PROCESSED / "lineup_attribution.csv")
+    started = L.groupby(["season", "player_id"]).over_waiver.sum()
     rows = []
     for _, p in picks.iterrows():
         sal0 = ROUND_SALARY.get(int(p["round"]), 1)
@@ -75,6 +85,10 @@ def realized_slot_values() -> pd.DataFrame:
             starter |= rank <= n_start.get(p.pos, 10) + (10 if p.pos in ("RB", "WR") else 0) / 2
             star |= rank <= 5
             vals.append(max(0.0, lam * por - (sal0 + j)))
+        lin = [float(started.get((int(p.season) + j, p.player_id), 0.0)) if isinstance(p.player_id, str)
+               and int(p.season) + j <= LAST_COMPLETE else np.nan for j in range(4)]
+        net = [max(0.0, v - float(curve([p.pos], [sal0 + j])[0])) if not np.isnan(v) else np.nan
+               for j, v in enumerate(lin)]
         observed = sum(1 for v in vals if not np.isnan(v))
         rows.append(dict(season=p.season, round=p["round"], pick=p.pick, overall=p.overall, owner=p.owner,
                          player=p.player, player_id=p.player_id, pos=p.pos, years_observed=observed,
@@ -82,6 +96,10 @@ def realized_slot_values() -> pd.DataFrame:
                          points_y1=pors[0], points_y2=pors[1], points_y3=pors[2], points_y4=pors[3],
                          use_value=sum(h ** j * v for j, v in enumerate(vals) if not np.isnan(v)),
                          use_value_3yr=sum(h ** j * v for j, v in enumerate(vals[:3]) if not np.isnan(v)),
+                         lineup_y1=lin[0], lineup_y2=lin[1], lineup_y3=lin[2], lineup_y4=lin[3],
+                         use_lineup=sum(h ** j * v for j, v in enumerate(net) if not np.isnan(v)),
+                         use_lineup_3yr=sum(h ** j * v for j, v in enumerate(net[:3]) if not np.isnan(v)),
+                         no_lineup_value=all((np.isnan(v) or v <= 0) for v in net),
                          bust=not por_any, starter=starter, star=star))
     out = pd.DataFrame(rows)
     out.to_csv(PROCESSED / "val_picks_realized.csv", index=False)
@@ -102,6 +120,10 @@ def slot_curve(real: pd.DataFrame) -> pd.DataFrame:
     slots = pd.DataFrame(dict(overall=np.arange(1, 31)))
     slots["round"] = (slots.overall - 1) // 10 + 1
     slots["use_value"] = iso.predict(slots.overall)
+    slots["use_lineup"] = IsotonicRegression(increasing=False, out_of_bounds="clip").fit(
+        full.overall, full.use_lineup).predict(slots.overall)
+    slots["use_lineup_3yr"] = IsotonicRegression(increasing=False, out_of_bounds="clip").fit(
+        full.overall, full.use_lineup_3yr).predict(slots.overall)
     slots["use_value_3yr"] = iso3.predict(slots.overall)
     slots["low_90"] = np.percentile(boot, 5, axis=0)
     slots["high_90"] = np.percentile(boot, 95, axis=0)
@@ -109,7 +131,9 @@ def slot_curve(real: pd.DataFrame) -> pd.DataFrame:
                                                                         "2.01-2.03", "2.04-2.07", "2.08-2.10", "3rd"])
     odds = full.groupby(band, observed=True).agg(picks=("bust", "size"), bust=("bust", "mean"),
                                                  starter=("starter", "mean"), star=("star", "mean"),
-                                                 avg_use_value=("use_value", "mean")).round(3).reset_index()
+                                                 avg_use_value=("use_value", "mean"),
+                                                 avg_use_lineup=("use_lineup", "mean"),
+                                                 no_lineup_value=("no_lineup_value", "mean")).round(3).reset_index()
     odds = odds.rename(columns={"overall": "slots"})
     # the spread behind each average: a pick's value is lumpy (often nothing, sometimes huge).
     # points: what the player added over the market replacement level, by rookie-deal season;
@@ -125,7 +149,11 @@ def slot_curve(real: pd.DataFrame) -> pd.DataFrame:
         g.points_total.quantile(0.75).rename("points_total_p75"),
         g.points_total.quantile(0.9).rename("points_total_p90"),
         g.use_value.mean().rename("cap_saved_mean"),
-        g.use_value.median().rename("cap_saved_median")], axis=1).round(2).reset_index().rename(
+        g.use_value.median().rename("cap_saved_median"),
+        g.lineup_y1.mean().rename("lineup_y1"), g.lineup_y2.mean().rename("lineup_y2"),
+        g.lineup_y3.mean().rename("lineup_y3"), g.lineup_y4.mean().rename("lineup_y4"),
+        g.use_lineup.mean().rename("use_lineup_mean"), g.use_lineup.median().rename("use_lineup_median"),
+        g.no_lineup_value.mean().rename("chance_no_lineup_value")], axis=1).round(2).reset_index().rename(
         columns={"overall": "slots"})
     slots.round(1).to_csv(PROCESSED / "val_picks_slots.csv", index=False)
     odds.to_csv(PROCESSED / "val_picks_odds.csv", index=False)

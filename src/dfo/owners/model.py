@@ -100,7 +100,7 @@ TRAITS = [
     ("trade_points_now", "trades_graded", "trades for points now (contender style)",
      "trades current points away for later value", "{:+.0f}", "points in the trade season, per trade"),
     ("trade_net_later_cap_equiv", "trades_graded", "comes out ahead in trades", "comes out behind in trades",
-     "{:+.0f}", "lineup points per trade, both sides, trade season + 2, posture-weighted"),
+     "${:+.0f}", "payout per trade, finishes re-run without it (trade season + 2)"),
     ("picks_bought_minus_sold", "trades", "accumulates picks", "sells picks", "{:+.0f}", "picks bought minus sold"),
     ("auction_spend", "auction_graded", "spends big at the auction", "spends little at the auction",
      "${:.0f}", "per auction"),

@@ -1,4 +1,4 @@
-"""Season $, Lifetime $ and Market $ for every rostered player and every ranked free agent.
+"""Value and price for every rostered player and every ranked free agent.
 
     PYTHONPATH=src python -m dfo.valuation.prices      # writes data/processed/prices.csv
 
@@ -21,12 +21,20 @@ Lifetime $ Season $ plus each later contract season through 2029 (value - salary
            config/league.yaml), plus the best designation available when the contract ends
            (franchise tag, mid-level extension or RFA at market price).
 Units (P15): points for what a player adds, cap dollars only for real cap money.
+Cap decisions use lineup points (P16, 2026-11-05): value = expected lineup points over waiver
+(lineup_value.py), cost = what the salary normally buys in lineup points (price curve,
+owners/grades.py). The market model below stays only as the estimate of what things will cost.
   points_now           points over in-season replacement for the rest of this season
-  points_<year>        points over the market replacement level that season (proj_points = raw)
-  auction_cost_<year>  cap $: what that production would cost at that August's auction
-  cap_saved_<year>     cap $: auction cost minus his salary, seasons under contract
-  cap_saved_2027_29    cap $: the contract's whole later value, x0.88 a year, keep/cut each offseason,
+  lineup_<year>        expected lineup points over waiver that season, for a typical team
+  norm_<year>          lineup points his salary that season normally buys (seasons under contract)
+  surplus_<year>       lineup_<year> - norm_<year>
+  surplus_2027_29      the contract's whole later value in lineup points, x0.88 a year, keep or cut
+                       each offseason (cutting costs the dead cap at the price curve's points per $),
                        plus the best designation when it ends
+  auction_cost_<year>  cap $: what that production would cost at that August's auction (market model)
+  cap_saved_<year>     cap $: auction cost minus his salary, seasons under contract (market lens only)
+  por_market_<year>    points over the market-implied level (what the auction prices; the simulator's
+                       auction clearing uses it)
 This season and later seasons are never added together; the dial weights them (P14).
 
 Market $   what this league would pay: what his next season would fetch at the auction
@@ -115,6 +123,8 @@ def fantasycalc() -> pd.DataFrame:
 
 
 def build() -> pd.DataFrame:
+    from dfo.valuation.lineup_value import load as load_lineup_value
+    lv, curve = load_lineup_value()
     shift, lam, lam_struct = market_params()
     lam_rfa = rfa_price_per_point()
     h = haircut()
@@ -157,6 +167,7 @@ def build() -> pd.DataFrame:
         base[f"proj_points_{y}"] = pts
         base[f"por_{y}"] = ev.por_from_points(base.pos, pts.fillna(0), k)
         base[f"value_{y}"] = lam * base[f"por_{y}"]
+        base[f"lineup_{y}"] = lv(base.pos, pts.fillna(0))
 
     # ---- contracts
     r = roster.set_index("pid")
@@ -169,7 +180,7 @@ def build() -> pd.DataFrame:
 
     # designations: each team's plan within its slots (rights.py); a player's rights are worth
     # what his team would actually use on him, discounted to now
-    dplan = rights.plan(base, tags, lam_rfa, h)
+    dplan = rights.plan(base, tags, lam_rfa, h, curve)
     dplan.to_csv(PROCESSED / "designation_plan.csv", index=False)
     rv_by = {}
     for r in dplan.itertuples():      # each designation's own seasons, discounted to now
@@ -178,18 +189,19 @@ def build() -> pd.DataFrame:
         lambda g: " then ".join(f"{t} {y}" for t, y in zip(g.type, g.offseason))) if len(dplan) else {}).fillna("")
     lifetime, rights_val, keep_years, hold_cost = [], [], [], []
     for _, x in base.iterrows():
-        vals = [float(x[f"value_{y}"]) for y in FUTURE]
+        vals = [float(x[f"lineup_{y}"]) for y in FUTURE]
         sals = [int(x[f"salary_{y}"]) for y in FUTURE]
         end = next((i for i, v in enumerate(sals) if v == 0), len(sals))   # index of first season off contract
         rv = rv_by.get(x.player_id, 0.0)
-        # keep or cut each offseason under contract (backward): cutting owes the dead cap on what remains
+        # keep or cut each offseason under contract (backward), in lineup points: keeping costs what the
+        # salary normally buys; cutting owes the dead cap on what remains, at the curve's points per $
         cont = rv
         for i in reversed(range(end)):
-            keep = h ** (i + 1) * (vals[i] - sals[i]) + cont
+            keep = h ** (i + 1) * (vals[i] - float(curve([x.pos], [sals[i]])[0])) + cont
             dead = cut_dead_cap(sals[i:end])
-            cut = -sum(h ** (i + 1 + j) * d for j, d in enumerate(dead))
+            cut = -sum(h ** (i + 1 + j) * d * curve.slope for j, d in enumerate(dead))
             cont = max(keep, cut)
-        lifetime.append(x.value_2026 + cont)
+        lifetime.append(cont)
         rights_val.append(rv)
         keep_years.append(end)
         # cost to hold him through the horizon: his salaries, then the going auction price
@@ -214,17 +226,21 @@ def build() -> pd.DataFrame:
             continue
         iso = IsotonicRegression(increasing=True, out_of_bounds="clip").fit(g.fc_value, free_value[g.index])
         base.loc[g.index, "fc_reference"] = iso.predict(g.fc_value) - base.hold_cost[g.index]
-    base["future_dollars"] = base.lifetime - base.value_2026
 
     # ---- output: points for this season; points and cap for later seasons (P14, P15)
     base["points_now"] = base.por_2026.round(1)                      # rest of 2026, over in-season replacement
     for y in FUTURE:
-        base[f"points_{y}"] = base[f"por_{y}"].round(1)              # over the market replacement level
         base[f"proj_points_{y}"] = base[f"proj_points_{y}"].round(1)
+        base[f"lineup_{y}"] = base[f"lineup_{y}"].round(1)
+        base[f"por_market_{y}"] = base[f"por_{y}"].round(1)          # price lens: the sim's auction clearing
+        on = base[f"salary_{y}"] > 0
+        base[f"norm_{y}"] = np.where(on, curve(base.pos, base[f"salary_{y}"]), np.nan).round(1)
+        base[f"surplus_{y}"] = (base[f"lineup_{y}"] - base[f"norm_{y}"]).round(1)
         base[f"auction_cost_{y}"] = base[f"value_{y}"]                # what that production costs in August
-        base[f"cap_saved_{y}"] = np.where(base[f"salary_{y}"] > 0, base[f"value_{y}"] - base[f"salary_{y}"], np.nan)
-    base["cap_saved_2027_29"] = base.future_dollars
-    for c in ["value_2026", "cap_saved_2027_29", "rights_value", "market_auction", "fc_reference"] + \
+        base[f"cap_saved_{y}"] = np.where(on, base[f"value_{y}"] - base[f"salary_{y}"], np.nan)
+    base["surplus_2027_29"] = base.lifetime.round(1)
+    base["rights_value"] = base.rights_value.round(1)
+    for c in ["value_2026", "market_auction", "fc_reference"] + \
              [f"auction_cost_{y}" for y in FUTURE] + [f"cap_saved_{y}" for y in FUTURE]:
         base[c] = base[c].map(lambda v: money(v) if pd.notna(v) else v)
     # internal only: this season converted at the in-season auction rate, for the FantasyCalc reference map
@@ -232,12 +248,12 @@ def build() -> pd.DataFrame:
     stamp = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     base["fantasycalc_as_of"] = fc.attrs.get("as_of")
     base["made_at"] = stamp
-    cols = (["player_id", "player", "pos", "team", "owner", "points_now", "cap_saved_2027_29"]
-            + [c for y in FUTURE for c in (f"proj_points_{y}", f"points_{y}", f"auction_cost_{y}", f"salary_{y}",
-                                           f"cap_saved_{y}")]
+    cols = (["player_id", "player", "pos", "team", "owner", "points_now", "surplus_2027_29"]
+            + [c for y in FUTURE for c in (f"proj_points_{y}", f"lineup_{y}", f"salary_{y}", f"norm_{y}",
+                                           f"surplus_{y}", f"auction_cost_{y}", f"cap_saved_{y}", f"por_market_{y}")]
             + ["salary_2026", "contract_years_left", "rights", "designation", "rights_value", "market_auction", "fc_reference",
                "fc_value", "_season_auction_equiv", "fantasycalc_as_of", "made_at"])
-    out = base[cols].sort_values(["points_now", "cap_saved_2027_29"], ascending=False)
+    out = base[cols].sort_values(["points_now", "surplus_2027_29"], ascending=False)
     out.to_csv(PROCESSED / "prices.csv", index=False)
     return out
 

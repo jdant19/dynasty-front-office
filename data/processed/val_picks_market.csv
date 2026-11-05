@@ -1,10 +1,10 @@
 pick,fc_value,fc_reference,use_dollars,use_low_90,use_high_90,reference_minus_use,if_a_buyer_paid_fc
-2027 1st (Early),4662,135.5,87.2,68.6,157.0,48.3,close call
-2027 1st (Mid),3070,61.8,36.3,34.5,67.8,25.5,close call
-2027 1st (Late),2388,45.6,30.0,20.3,58.1,15.6,close call
-2027 2nd (Early),1938,26.9,21.3,15.0,38.3,5.6,close call
-2027 2nd (Mid),1625,17.3,17.3,12.7,29.5,0.0,close call
-2027 2nd (Late),1381,16.5,17.3,11.3,27.7,-0.8,close call
-2027 3rd (Early),1196,11.4,9.0,6.6,18.6,2.4,close call
-2027 3rd (Mid),1051,9.7,4.8,3.5,12.4,4.9,close call
-2027 3rd (Late),947,9.7,1.6,0.0,3.7,8.1,sell
+2027 1st (Early),4729,140.5,87.2,68.6,157.0,53.3,close call
+2027 1st (Mid),3114,70.0,36.3,34.5,67.8,33.7,sell
+2027 1st (Late),2411,43.7,30.0,20.3,58.1,13.7,close call
+2027 2nd (Early),1947,25.7,21.3,15.0,38.3,4.4,close call
+2027 2nd (Mid),1624,21.5,17.3,12.7,29.5,4.2,close call
+2027 2nd (Late),1391,14.9,17.3,11.3,27.7,-2.4,close call
+2027 3rd (Early),1212,12.4,9.0,6.6,18.6,3.4,close call
+2027 3rd (Mid),1073,9.8,4.8,3.5,12.4,5.0,close call
+2027 3rd (Late),978,9.8,1.6,0.0,3.7,8.2,sell

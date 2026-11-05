@@ -263,7 +263,7 @@ def strengths() -> pd.DataFrame:
     out = pd.DataFrame(rows)
     # each auction clears: all teams' room against the talent not under contract that season
     for y in FUTURE:
-        pool = prices[(prices[f"salary_{y}"].fillna(0) == 0) & (prices[f"points_{y}"] > 0)][f"points_{y}"].sum()
+        pool = prices[(prices[f"salary_{y}"].fillna(0) == 0) & (prices[f"por_market_{y}"] > 0)][f"por_market_{y}"].sum()
         m = out.season == y
         money = out.loc[m, "cap_room"].clip(lower=0).sum()
         price = max(money / pool, 0.5) if pool > 0 else lam

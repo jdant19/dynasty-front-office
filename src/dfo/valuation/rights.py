@@ -12,9 +12,10 @@ Cost of each option (cap $):
   RFA   matching the going price: the larger of the starting bid and 1 + RFA price per point at his
         position x his points over the market level (RBs have gone near auction rates, WRs well
         above: val_rfa_price.csv); length 1-4 years, with the usual raises
-Chains are valued whole: every legal path through 2029 (for example RFA for one year, then the tag
-the next season) is worth the sum of each covered season's auction cost of his production minus his
-salary, 0.88 a year. Each player's best path is kept where it is worth more than letting him go;
+Chains are valued whole, in lineup points (P16): every legal path through 2029 (for example RFA for
+one year, then the tag the next season) is worth the sum over covered seasons of his expected lineup
+points over waiver minus what that season's salary normally buys (price curve), 0.88 a year. The
+designation's cost in dollars (tag price, MLE, RFA market price) is what goes into the price curve. Each player's best path is kept where it is worth more than letting him go;
 teams fill their slots with the most valuable paths first, falling back to a player's next-best path
 when a slot is taken.
 """
@@ -37,7 +38,7 @@ def _limits() -> dict[str, int]:
 
 
 def _paths(x, y0: int, first_rights: set[str], last_salary: int, rookie: bool, tags, rfa_ppp: dict, h: float,
-           chain: tuple[str, ...] = ()) -> list[tuple[float, tuple]]:
+           norm, chain: tuple[str, ...] = ()) -> list[tuple[float, tuple]]:
     """Every legal designation path for player row x from offseason y0 through the horizon:
     [(worth valued at y0, ((offseason, type, {season: salary}), ...))]. Includes stopping (letting
     him go) at any point."""
@@ -51,7 +52,8 @@ def _paths(x, y0: int, first_rights: set[str], last_salary: int, rookie: bool, t
         rights = first_rights
     out = [(0.0, ())]                                            # let him go
     i0 = FUTURE.index(y0)
-    vals = {yy: float(x[f"value_{yy}"]) for yy in FUTURE}
+    vals = {yy: float(x[f"lineup_{yy}"]) for yy in FUTURE}
+    cost = lambda sal: float(norm([x.pos], [sal])[0])
     opts = []
     if "tag" in rights:
         opts.append(("tag", {y0: tags[y0].get(x.pos, 2)}))
@@ -68,16 +70,16 @@ def _paths(x, y0: int, first_rights: set[str], last_salary: int, rookie: bool, t
             if i0 + length >= len(FUTURE):
                 break
     for typ, sal in opts:
-        here = sum(h ** (yy - y0) * (vals[yy] - s) for yy, s in sal.items())
+        here = sum(h ** (yy - y0) * (vals[yy] - cost(s)) for yy, s in sal.items())
         nxt = max(sal) + 1
-        for w, rest in _paths(x, nxt, first_rights, sal[max(sal)], False, tags, rfa_ppp, h, chain + (typ,)):
+        for w, rest in _paths(x, nxt, first_rights, sal[max(sal)], False, tags, rfa_ppp, h, norm, chain + (typ,)):
             out.append((here + h ** (nxt - y0) * w, ((y0, typ, sal),) + rest))
     return out
 
 
-def plan(base: pd.DataFrame, tags: dict, rfa_ppp: dict, h: float) -> pd.DataFrame:
-    """One row per designation used: owner, player_id, offseason, type, salaries, worth (cap $,
-    valued at that offseason, this designation's covered seasons only)."""
+def plan(base: pd.DataFrame, tags: dict, rfa_ppp: dict, h: float, norm) -> pd.DataFrame:
+    """One row per designation used: owner, player_id, offseason, type, salaries, worth (lineup points
+    over what the salary normally buys, valued at that offseason, this designation's seasons only)."""
     lim = _limits()
     site_rights = {"Restricted Free Agent": "rfa", "Franchise Tag": "tag", "Mid-Level Extension": "mle"}
     info = base[base.owner.fillna("") != ""].set_index("player_id")
@@ -93,7 +95,7 @@ def plan(base: pd.DataFrame, tags: dict, rfa_ppp: dict, h: float) -> pd.DataFram
         if not rights:
             continue
         paths = sorted((p for p in _paths(x, y0, rights, sal[end - 1], str(x.acquisition) == "rookie_draft",
-                                          tags, rfa_ppp, h) if p[1] and p[0] > 0), key=lambda p: -p[0])
+                                          tags, rfa_ppp, h, norm) if p[1] and p[0] > 0), key=lambda p: -p[0])
         if paths:
             cands.append((pid, x.owner, y0, paths))
     used: dict[tuple, int] = {}
@@ -109,7 +111,8 @@ def plan(base: pd.DataFrame, tags: dict, rfa_ppp: dict, h: float) -> pd.DataFram
                     used[k] = used.get(k, 0) + n
                 x = info.loc[pid]
                 for (yy, typ, sal) in steps:
-                    w = sum(h ** (s - yy) * (float(x[f"value_{s}"]) - v) for s, v in sal.items())
+                    w = sum(h ** (s - yy) * (float(x[f"lineup_{s}"]) - float(norm([x.pos], [v])[0]))
+                            for s, v in sal.items())
                     rows.append(dict(owner=owner, player_id=pid, offseason=yy, type=typ, worth=round(w, 1),
                                      path_worth=round(worth, 1),
                                      **{f"salary_{s}": sal.get(s, 0) for s in FUTURE}))

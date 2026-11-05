@@ -45,7 +45,7 @@ ASPECTS = {   # aspect: (decision types, how it is judged)
     "rfa_bidding": (["rfa_bid"], "RFAs won from others: lineup points over waiver minus what the price normally buys"),
     "rfa_matching": (["rfa_match", "rfa_let_go"], "own RFAs: matched (his deal's return) or let go (minus the winner's return)"),
     "tags": (["tag"], "lineup points over waiver in the tag season minus what the tag cost normally buys"),
-    "trades": (["trade"], "lineup points net of salary, trade season + 2 seasons, both sides, weighted by posture"),
+    "trades": (["trade"], "payout $ won or lost: finishes re-run without the trade, trade season + 2 seasons; picks at expected value"),
     "waiver_fa": (["waiver_fa"], "kept waiver/FA pickups: lineup points over waiver minus what the salary normally buys"),
 }
 
@@ -53,7 +53,7 @@ ASPECTS = {   # aspect: (decision types, how it is judged)
 def rankings(owners: list[str]) -> pd.DataFrame:
     """Skill per decision: the average grade of each kind of decision (P16), with how many there were."""
     d = pd.read_csv(PROCESSED / "grades_decisions.csv")
-    d = d[~((d.type == "trade") & ~d.complete.fillna(True).astype(bool))]
+    d.loc[d.type == "trade", "grade"] = d.loc[d.type == "trade", "payout_grade"]     # trades in payout $ (2026-11-05)
     res = pd.read_csv(PROCESSED / "season_results.csv")
     out = pd.DataFrame(index=owners)
     for name, (types, _) in ASPECTS.items():

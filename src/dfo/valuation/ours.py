@@ -103,9 +103,14 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
     # everyone else: add him, dropping the current player whose loss hurts least, counting his
     # future value too (a negative future is owed whether he is cut now or later, so it counts as 0)
     life = prices.set_index("player_id")
+    # this season's lineup points and later seasons' surplus (both lineup points) are weighted by what a
+    # point is worth to this team now and in 2027 (the dial, P14), never added as they are
+    dial = pd.read_csv(PROCESSED / "dial.csv").set_index("owner")
+    w_now = float(dial.per_point_2026.get(owner, 1.0))
+    w_later = float(dial.per_point_2027_haircut.get(owner, 1.0))
     def drop_cost(r):
-        fut = float(life.cap_saved_2027_29.get(r["player_id"], 0))
-        return lam_now * r["lineup_change"] + max(0.0, fut)
+        fut = float(life.surplus_2027_29.get(r["player_id"], 0))
+        return w_now * r["lineup_change"] + w_later * max(0.0, fut)
     cheapest_drop = min(rows, key=drop_cost)["player_id"] if rows else None
     others = pool.drop(index=pool.index.intersection(mine.index))
     others = others[others.rate > 0]
@@ -116,12 +121,12 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
                          lineup_change=lineup_points(pd.concat([without, g_others.loc[[pid]]])) - base))
     out = pd.DataFrame(rows).merge(prices, on="player_id", how="left")
     out["lineup_points_now"] = out.lineup_change.round(1)                 # points to Jordan's lineup, rest of 2026
-    out["cap_saved_2027_29"] = out.cap_saved_2027_29.fillna(0).round().astype(int)
+    out["surplus_2027_29"] = out.surplus_2027_29.fillna(0).round(1)
     out["drop_if_added"] = cheapest_drop
     cols = ["player_id", "player", "pos", "team", "owner", "on_roster", "lineup_points_now", "points_now",
-            "points_2027", "points_2028", "points_2029", "cap_saved_2027_29", "market_auction", "fc_reference",
+            "lineup_2027", "lineup_2028", "lineup_2029", "surplus_2027_29", "market_auction", "fc_reference",
             "drop_if_added", "made_at"]
-    out = out[cols].sort_values(["lineup_points_now", "cap_saved_2027_29"], ascending=False)
+    out = out[cols].sort_values(["lineup_points_now", "surplus_2027_29"], ascending=False)
     out.to_csv(PROCESSED / f"ours_{owner.lower()}.csv", index=False)
     return out
 

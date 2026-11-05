@@ -11,7 +11,7 @@ Record: 13 seasons, 2 playoff titles, average regular-season finish 6.2.
 Trades: 23 (1.77 a season); most with Jordan 11, Ryan 4.
 
 - trades often: 1.8 trades a season (league average 0.9; high confidence, n=23)
-- trades for points now (contender style): +19 points in the trade season, per trade (league average -8; high confidence, n=20)
+- trades for points now (contender style): +19 points in the trade season, per trade (league average -8; high confidence, n=22)
 - spends lightly on RBs: 26% of auction spend on RBs (league average 45%; high confidence, n=81)
 - spends heavily on WRs: 55% of auction spend on WRs (league average 38%; high confidence, n=81)
 - lets rookies fall past consensus: -2.7 slots vs FantasyPros rookie order (2021+) (league average -0.2; high confidence, n=16)
@@ -50,7 +50,7 @@ Now: **build** (2026 expected payout $15; a lineup point is worth $0.42 now vs $
 Record: 13 seasons, 3 playoff titles, average regular-season finish 5.8.
 Trades: 11 (0.85 a season); most with Ryan 3, Jordan 2.
 
-- trades for points now (contender style): +21 points in the trade season, per trade (league average -8; medium confidence, n=10)
+- trades for points now (contender style): +21 points in the trade season, per trade (league average -8; medium confidence, n=11)
 - bids on many RFAs: 8.9 RFAs bid on a season (league average 7.2; high confidence, n=71)
 - bids close to the final RFA price: 61% of the final price, average bid (league average 46%; high confidence, n=71)
 - lets RFAs go: 33% of contested RFAs matched (league average 75%; medium confidence, n=9)
@@ -64,7 +64,6 @@ Now: **build (close)** (2026 expected payout $48; a lineup point is worth $0.77 
 Record: 7 seasons, 0 playoff titles, average regular-season finish 7.1.
 Trades: 6 (0.86 a season); most with Jordan 3, Ben 2.
 
-- comes out ahead in trades: +141 lineup points per trade, both sides, trade season + 2, posture-weighted (league average -7; low confidence, n=2)
 - overpays at the auction: -9 lineup points over waiver per buy vs what the price normally buys (league average -2; high confidence, n=24)
 - keeps auction buys on long contracts: 2.00 years an auction buy of $5+ stays on its original contract (league average 1.48; medium confidence, n=10)
 - buys younger players: 26.8 average age at purchase (league average 28.0; high confidence, n=24)
@@ -79,7 +78,7 @@ Now: **build** (2026 expected payout $0; a lineup point is worth $0.00 now vs $0
 Record: 13 seasons, 0 playoff titles, average regular-season finish 4.8.
 Trades: 4 (0.31 a season); most with Jordan 3, Qasim 1.
 
-- comes out behind in trades: -134 lineup points per trade, both sides, trade season + 2, posture-weighted (league average -7; low confidence, n=4)
+- comes out behind in trades: -78 lineup points per trade, both sides, trade season + 2, posture-weighted (league average +17; low confidence, n=4)
 - spends little at the auction: $42 per auction (league average $83; high confidence, n=44)
 - pays below the league rate per point: 0.82x the league's price per point (league average 1.02x; high confidence, n=44)
 - buys younger players: 26.4 average age at purchase (league average 28.0; high confidence, n=44)
@@ -125,6 +124,7 @@ Record: 11 seasons, 1 playoff title, average regular-season finish 6.4.
 Trades: 14 (1.27 a season); most with Jordan 5, Ben 4.
 
 - trades current points away for later value: -45 points in the trade season, per trade (league average -8; medium confidence, n=14)
+- comes out ahead in trades: +114 lineup points per trade, both sides, trade season + 2, posture-weighted (league average +17; medium confidence, n=14)
 - accumulates picks: +13 picks bought minus sold (league average +0; medium confidence, n=14)
 - pays above the league rate per point: 1.42x the league's price per point (league average 1.02x; high confidence, n=45)
 - drafts rookies poorly: -51 points over waiver in four seasons vs the slot average (league average +8; high confidence, n=45)
@@ -141,7 +141,7 @@ Record: 13 seasons, 0 playoff titles, average regular-season finish 6.2.
 Trades: 4 (0.31 a season); most with Jordan 2, Ryan 1.
 
 - trades current points away for later value: -50 points in the trade season, per trade (league average -8; low confidence, n=3)
-- comes out behind in trades: -120 lineup points per trade, both sides, trade season + 2, posture-weighted (league average -7; low confidence, n=3)
+- comes out behind in trades: -90 lineup points per trade, both sides, trade season + 2, posture-weighted (league average +17; low confidence, n=3)
 - buys older players: 28.9 average age at purchase (league average 28.0; high confidence, n=80)
 - matches RFA offers: 100% of contested RFAs matched (league average 75%; medium confidence, n=9)
 - rarely uses waivers: 3 adds this season (league average 11; this season only)

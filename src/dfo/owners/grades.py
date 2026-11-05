@@ -366,8 +366,8 @@ def build():
     curve.table.to_csv(PROCESSED / "params_price_curve.csv", index=False)
     post = posture()
     cap = cap_decisions(h, curve)
-    d = pd.concat([cap, rfa_let_go(cap), tag_decisions(h, curve), rookie_decisions(),
-                   trade_decisions(h, L, curve, post)], ignore_index=True)
+    tr = trade_decisions(h, L, curve, post).merge(trade_payouts(h, curve, post), on=["trade_id", "owner"], how="left")
+    d = pd.concat([cap, rfa_let_go(cap), tag_decisions(h, curve), rookie_decisions(), tr], ignore_index=True)
     names = _names()
     if "player" not in d:
         d["player"] = np.nan
@@ -375,6 +375,95 @@ def build():
     d = d.sort_values(["season", "type", "owner"]).reset_index(drop=True)
     d.to_csv(PROCESSED / "grades_decisions.csv", index=False)
     return d, curve, post
+
+
+
+# ------------------------------------------------------------------ trades in payout dollars
+def _payout_table():
+    pay = load_config("league")["payouts"]
+    reg = {int(k): float(v) for k, v in pay["regular_season"].items()}
+    po = {"champion": float(pay["playoffs"][1]), "runner_up": float(pay["playoffs"][2])}
+    seeds = int(load_config("league")["playoffs"]["teams"])
+    return reg, po, seeds, sum(po.values()) / seeds
+
+
+def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.DataFrame:
+    """Each trade side in payout dollars, from what actually happened (Jordan, 2026-11-05: a title won
+    is definite; a pick was only a chance). For each played season from the trade season through two
+    after: take the trade out of both teams' rebuilt lineups (received players' lineup points net of
+    salary, minus the same for what was sent, plus cap moved), re-rank the season, shift each team's
+    actual finish by its change in lineup rank, and pay out the counterfactual: regular-season payout at
+    the new finish; the actual playoff payout kept if still in the top four, lost if pushed out, and
+    the average playoff payout if pushed in. The grade is actual payout minus counterfactual payout.
+    Picks are valued at what a pick in that round is expected to deliver (round-average lineup points
+    times the average payout per point), discounted 0.88 a year."""
+    reg, po, seeds, po_avg = _payout_table()
+    o = pd.read_csv(PROCESSED / "owner_season_lineups.csv")
+    weeks = o.season.map(lambda s: 18 if s >= 2021 else 17)
+    o["total"] = o.lineup_ppg * weeks
+    tot = {s: g.set_index("owner").total.to_dict() for s, g in o.groupby("season")}
+    fin = o.set_index(["season", "owner"])[["regular_season_finish", "playoff_result"]]
+    per_point = float(post[post.basis == "preseason simulator"].per_point.mean())
+    L = pd.read_csv(PROCESSED / "lineup_attribution.csv")
+    pv = pick_value(L)
+    a = pd.read_csv(PROCESSED / "hist_trade_assets.csv")
+    a = a[a.season <= LAST]
+    x = h[h.channel == "trade"].copy()
+    ins = (x.season == x.event.str.slice(1, 5).astype(int)) & (x.w0 > 1)
+    x["net"] = x.started_pts - np.where(ins, 0.0, curve(x.pos, x.salary) * x.share)
+    got = x.groupby(["event", "owner", "season"]).net.sum()
+
+    def pay(s, team, finish):
+        f = fin.loc[(s, team)]
+        actual_in = f.regular_season_finish <= seeds
+        out = reg.get(int(finish), 0.0)
+        if finish <= seeds:
+            out += po.get(f.playoff_result, 0.0) if actual_in else po_avg
+        return out
+
+    rows = []
+    for tid, g in a.groupby("trade_id"):
+        y0 = int(g.season.iloc[0])
+        teams = sorted(set(g.receiver.dropna()) | set(g.sender.dropna()))
+        if len(teams) != 2:
+            continue
+        t0, t1 = teams
+        caps = {t: {} for t in teams}
+        for r in g[g.kind == "cap"].itertuples():
+            m = pd.Series([str(r.asset)]).str.extract(r"\$(\d+)\D+(\d{4})").iloc[0]
+            amt = float(r.cap) if pd.notna(r.cap) else (float(m[0]) if pd.notna(m[0]) else 0.0)
+            yr = int(m[1]) if pd.notna(m[1]) else y0 + 1
+            caps[r.receiver][yr] = caps[r.receiver].get(yr, 0.0) + amt * curve.slope
+        season_rows = {t: [] for t in teams}
+        for s in range(y0, min(y0 + TRADE_YEARS, LAST) + 1):
+            if s not in tot or t0 not in tot[s] or t1 not in tot[s]:
+                continue
+            d0 = (float(got.get((tid, t0, s), 0.0)) + caps[t0].get(s, 0.0)
+                  - float(got.get((tid, t1, s), 0.0)) - caps[t1].get(s, 0.0))
+            cf = dict(tot[s])
+            cf[t0] -= d0
+            cf[t1] += d0
+            rank = pd.Series(tot[s]).rank(ascending=False, method="first")
+            rank_cf = pd.Series(cf).rank(ascending=False, method="first")
+            for t, d in ((t0, d0), (t1, -d0)):
+                f = int(fin.loc[(s, t)].regular_season_finish)
+                f_cf = int(min(max(f + rank_cf[t] - rank[t], 1), 10))
+                season_rows[t].append((s, d, f, f_cf, pay(s, t, f) - pay(s, t, f_cf)))
+        for t, other in ((t0, t1), (t1, t0)):
+            pk = 0.0
+            for side, sign in ((t, 1), (other, -1)):
+                p = g[(g.receiver == side) & (g.kind == "pick")]
+                for r, yr in zip(p.pick_round, p.pick_year):
+                    if pd.notna(r):
+                        yrs = (yr if pd.notna(yr) else y0 + 1) - y0 + 1
+                        pk += sign * pv.get(int(r), 0.0) * per_point * HAIRCUT ** max(0, yrs)
+            sr = season_rows[t]
+            rows.append(dict(trade_id=tid, owner=t, payout_grade=round(sum(r[4] for r in sr) + pk),
+                             payout_trade_season=round(sr[0][4]) if sr and sr[0][0] == y0 else 0,
+                             payout_picks=round(pk),
+                             finish_changes="; ".join(f"{s}: {f} vs {fc} without" for s, d, f, fc, _ in sr if f != fc),
+                             seasons_realized=len(sr)))
+    return pd.DataFrame(rows)
 
 
 if __name__ == "__main__":
