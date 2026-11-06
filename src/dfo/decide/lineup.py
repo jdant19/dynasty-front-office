@@ -13,7 +13,7 @@ whose swap into a slot changes the median by under 2 points; each one is shown w
 Players listed Out, on IR or on a bye are not started. A Questionable player counts at his chance of
 playing (params_questionable.csv: fantasy starters listed Questionable 2021-2025 played 52% of the
 time at QB, 74-80% elsewhere) times his projection, with the extra spread that brings, and is flagged
-with the start to use if he is ruled out. A FantasyPros rank that moved 20+ places since last week
+with the start to use if he is ruled out. A FantasyPros rank that rose or fell 20+ places since last week
 is flagged to check the news before trusting it. Players whose game has already kicked off are locked: the
 recommendation fills only the open slots and says so.
 """
@@ -132,7 +132,7 @@ def close_calls(lineup: pd.DataFrame, pool: pd.DataFrame, opp_mu, opp_sd) -> pd.
 
 
 def rank_jumps(week: int, ids, places: float = 20) -> pd.DataFrame:
-    """Players whose FantasyPros positional rank moved `places`+ from last week: often injury news
+    """Players whose FantasyPros positional rank rose or fell `places`+ from last week: often injury news
     the rank caught before the projection inputs did (Chase went WR3 -> WR45 in Week 5 and played)."""
     e = pd.read_csv(PROCESSED / "ecr_weekly_recent.csv")
     e = e[(e.season == 2026) & e.player_id.isin(set(ids))]
@@ -206,7 +206,8 @@ def to_markdown(r: dict) -> str:
     if len(r.get("rank_jumps", [])):
         names = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str).set_index("canonical_id").name
         L += ["", "Check the news first: " + ", ".join(f"{names.get(x.player_id, x.player_id)} (FantasyPros rank "
-                                                       f"moved {x.rank_change:+.0f} places since last week)"
+                                                       f"{'fell' if x.rank_change > 0 else 'rose'} "
+                                                       f"{abs(x.rank_change):.0f} places since last week)"
                                                        for _, x in r["rank_jumps"].iterrows())]
     if len(r["questionable"]):
         L += ["", "Questionable starters:"] + [f"- {x.questionable}: if ruled out, start {x.start_instead}"
@@ -246,7 +247,7 @@ def project_past(weeks: list[int], players: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(out, ignore_index=True)
 
 
-def review(weeks=(4, 5, 6, 7)) -> pd.DataFrame:
+def review(weeks=(4, 5, 6, 7, 8)) -> pd.DataFrame:
     """Jordan's real lineups (screenshots) against the module's pick, both scored with what happened."""
     lu = pd.read_csv(PROCESSED / "jordan_lineups_2026.csv")    # transcribed from the Yahoo screenshots
     rows, detail = [], []

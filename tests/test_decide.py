@@ -37,9 +37,14 @@ def test_questionable_players_count_at_their_chance_of_playing():
 
 def test_lineup_review_covers_jordans_weeks():
     r = pd.read_csv(PROCESSED / "decide_lineup_review.csv")
-    assert set(r.week) == {4, 5, 6, 7}
+    assert set(r.week) == {4, 5, 6, 7, 8}
     assert (r.best_possible >= r[["jordan_points", "module_points"]].max(axis=1) - 0.01).all()
     lu = pd.read_csv(PROCESSED / "jordan_lineups_2026.csv")
     st, _ = L.slots()
     starts = lu[~lu.slot.isin(["BN", "IR"])].groupby("week").size()
     assert (starts == sum(st.values())).all()
+
+
+def test_rank_flags_catch_falls_and_rises():
+    import inspect
+    assert "abs()" in inspect.getsource(L.rank_jumps)        # a fall (Chase WR3 -> WR45) counts as much as a rise
