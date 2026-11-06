@@ -1,6 +1,6 @@
 {
  "table": "team_dead_money",
- "as_of": "2026-11-05T21:58:40+00:00",
+ "as_of": "2026-11-06T06:40:22+00:00",
  "rows": [
   {
    "id": "00b07175-4aae-4de1-9f03-59fd63a7adbc",
@@ -301,6 +301,18 @@
    "amount_year5": 0,
    "salary_start_year": 2026,
    "created_at": "2026-04-05T19:39:28.248552+00:00"
+  },
+  {
+   "id": "5383f79b-4bbc-4f9f-972f-9ea7d867e888",
+   "team_id": "team-3",
+   "label": "Tyler Loop (dropped 2026/2027)",
+   "amount_year1": 2,
+   "amount_year2": 0,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "created_at": "2026-11-05T22:15:39.418033+00:00"
   },
   {
    "id": "5cb62e1a-8fde-44e9-9b42-fcc8d2c4b13e",

@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-05T21:58:40+00:00",
+ "as_of": "2026-11-06T06:40:22+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -255,6 +255,25 @@
    "created_at": "2026-09-02T21:37:31.596752+00:00"
   },
   {
+   "id": "08ee0286-f748-483e-a9c3-5ea929b8e2a3",
+   "occurred_at": "2026-11-05T22:15:22.382432+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-7042",
+   "player_name": "Tyler Bass",
+   "from_team_id": null,
+   "to_team_id": "team-7",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:15:22.382432+00:00"
+  },
+  {
    "id": "0954fe81-b15d-4568-8f32-eeb5872d5aab",
    "occurred_at": "2026-10-26T23:13:54.909555+00:00",
    "type": "trade",
@@ -410,6 +429,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T21:00:12.491967+00:00"
+  },
+  {
+   "id": "100b52e1-89b0-4565-90f4-771936372bad",
+   "occurred_at": "2026-11-05T22:15:39.418033+00:00",
+   "type": "drop",
+   "player_id": "sl-12711",
+   "player_name": "Tyler Loop",
+   "from_team_id": "team-3",
+   "to_team_id": null,
+   "amount": 2,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "cap_exempt": false,
+    "dead_money": 2
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:15:39.418033+00:00"
   },
   {
    "id": "1066689b-a833-414b-8aea-83f635c41a6a",
@@ -600,6 +637,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-19T21:49:04.734676+00:00"
+  },
+  {
+   "id": "1957b65d-0256-46a8-8726-07e7b8215f8c",
+   "occurred_at": "2026-11-05T22:13:40.268739+00:00",
+   "type": "drop",
+   "player_id": "sl-9228",
+   "player_name": "Bryce Young",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "QB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:13:40.268739+00:00"
   },
   {
    "id": "19abb5ff-5397-45d6-90e6-ca94d8b0582b",
@@ -952,6 +1007,25 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "27bad117-aa04-4e46-9784-6997bd68d7a9",
+   "occurred_at": "2026-11-05T22:13:53.590645+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-4993",
+   "player_name": "Mike Gesicki",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "TE",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:13:53.590645+00:00"
+  },
+  {
    "id": "28fcb91f-9fca-4aca-831a-a760e80dd553",
    "occurred_at": "2026-10-26T14:30:51.737434+00:00",
    "type": "drop",
@@ -1263,6 +1337,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-29T21:40:46.25922+00:00"
+  },
+  {
+   "id": "361d3d7e-f33c-402c-bda4-7ff10edb1b29",
+   "occurred_at": "2026-11-05T22:14:10.801766+00:00",
+   "type": "drop",
+   "player_id": "sl-1945",
+   "player_name": "Chris Boswell",
+   "from_team_id": "team-7",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:14:10.801766+00:00"
   },
   {
    "id": "36f2d245-a20c-4218-8e97-c2b472dc4a62",
@@ -1722,6 +1814,25 @@
    "created_at": "2026-10-16T02:11:02.491224+00:00"
   },
   {
+   "id": "528384c5-1b52-4885-909f-dda69b687170",
+   "occurred_at": "2026-11-05T22:16:31.685752+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-5189",
+   "player_name": "Eddy Pineiro",
+   "from_team_id": null,
+   "to_team_id": "team-3",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:16:31.685752+00:00"
+  },
+  {
    "id": "52dcb49b-bf27-4930-8ce0-f9041988a56b",
    "occurred_at": "2026-08-16T01:46:48.007094+00:00",
    "type": "drop",
@@ -2132,6 +2243,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-23T02:28:56.962462+00:00"
+  },
+  {
+   "id": "6814187b-63ac-4eeb-92f6-d13b95e78375",
+   "occurred_at": "2026-11-05T22:24:56.19725+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-11539",
+   "player_name": "Jake Bates",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:24:56.19725+00:00"
   },
   {
    "id": "68bf4930-86de-4d56-b3a5-98f5050b783b",
@@ -3725,6 +3855,24 @@
    "created_at": "2026-10-16T20:58:05.121462+00:00"
   },
   {
+   "id": "b38c0c6e-8359-4c66-a8a1-b561d02cbced",
+   "occurred_at": "2026-11-05T22:13:09.60945+00:00",
+   "type": "drop",
+   "player_id": "def-WAS",
+   "player_name": "Washington Commanders D/ST",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:13:09.60945+00:00"
+  },
+  {
    "id": "b3d2e9bc-9ad0-42c6-b257-fe1b46d2c485",
    "occurred_at": "2026-08-05T03:48:52.463869+00:00",
    "type": "trade",
@@ -3920,6 +4068,24 @@
    },
    "source_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "bd79f85a-e67d-409b-a596-056b252e4a4b",
+   "occurred_at": "2026-11-05T22:24:40.520007+00:00",
+   "type": "drop",
+   "player_id": "sl-11792",
+   "player_name": "Will Reichard",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:24:40.520007+00:00"
   },
   {
    "id": "becedbf2-620a-4a46-a55c-9c1bf87aca33",
@@ -4535,6 +4701,25 @@
    },
    "source_id": null,
    "created_at": "2026-09-02T21:37:31.596752+00:00"
+  },
+  {
+   "id": "e5a1fcd3-98bb-4cfa-b26b-81715db92f3e",
+   "occurred_at": "2026-11-05T22:13:26.281445+00:00",
+   "type": "fa_signing",
+   "player_id": "def-KC",
+   "player_name": "Kansas City Chiefs D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-05T22:13:26.281445+00:00"
   },
   {
    "id": "e5ddd502-15ba-4555-a4ee-e5b21181fc91",
