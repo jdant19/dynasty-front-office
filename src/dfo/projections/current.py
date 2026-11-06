@@ -91,7 +91,7 @@ def main() -> None:
     fallback = wk[["points_std", "xfp_std"]].mean(axis=1)
     wk["ros_ppg"] = np.where(wk[list(ROS_WEIGHTS)].notna().all(axis=1), rate,
                              np.where(wk.fp_pts.notna(), 0.5 * wk.fp_pts + 0.5 * fallback.fillna(wk.fp_pts), fallback))
-    wk["ros_ppg"] = wk.ros_ppg.fillna(wk.points_std).fillna(0)
+    wk["ros_ppg"] = wk.ros_ppg.fillna(wk.points_std).fillna(0).clip(lower=0)   # an expected rate is never below 0
     imp = implied_totals([SEASON])
     today = dt.datetime.now(dt.timezone.utc).date()
     games_left = imp[(imp.week >= week) & (pd.to_datetime(imp.gameday).dt.date >= today)].groupby("team").size()
