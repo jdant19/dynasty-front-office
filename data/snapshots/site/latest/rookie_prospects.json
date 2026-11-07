@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-07T05:55:52+00:00",
+ "as_of": "2026-11-07T14:53:54+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -2849,11 +2849,11 @@
    "sleeper_id": "13580",
    "name": "Carsen Ryan",
    "position": "TE",
-   "nfl_team": "CLE",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-26T07:00:21.27589+00:00",
-   "synced_at": "2026-10-29T07:00:06.752+00:00",
+   "synced_at": "2026-11-07T07:00:10.61+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -5423,13 +5423,13 @@
   {
    "id": "d54282a2-354c-439b-8067-98182ec9831d",
    "sleeper_id": "13743",
-   "name": "Joseph Manjack",
+   "name": "Joseph Manjack IV",
    "position": "WR",
    "nfl_team": "NYJ",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-28T07:00:23.008327+00:00",
-   "synced_at": "2026-11-05T07:00:06.647+00:00",
+   "synced_at": "2026-11-07T07:00:10.61+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
