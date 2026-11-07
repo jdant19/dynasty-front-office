@@ -170,6 +170,12 @@ def recommend(owner: str = "Jordan", proj_path=PROCESSED / "proj_week.csv", lock
     pool = eligible(mine[~mine.started_already | mine.player_id.isin(locked.player_id)])
     if len(locked):
         locked["sd"] = _sd(locked)
+        # a game already played counts at its actual points, with no spread left
+        pts = pd.read_csv(PROCESSED / f"points_{int(p.season.iloc[0])}.csv")
+        done = pts[(pts.season_type == "REG") & (pts.week == week)].groupby("player_id").points.sum()
+        got = locked.player_id.map(done)
+        locked.loc[got.notna(), ["proj", "low", "high"]] = np.repeat(got[got.notna()].to_numpy()[:, None], 3, axis=1)
+        locked.loc[got.notna(), "sd"] = 0.0
         locked["locked"] = True
         locked["slot"] = locked.pos      # a locked FLEX should be passed with slot set by the caller
     line = best_lineup(pool, o_mu, o_sd, locked=locked if len(locked) else None)
@@ -288,12 +294,19 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     ap = argparse.ArgumentParser()
     ap.add_argument("--review", action="store_true")
+    ap.add_argument("--started", nargs="*", default=[],
+                    help="players Jordan already started in games that have kicked off (names as in proj_week)")
     a = ap.parse_args()
     if a.review:
         print(review().to_string(index=False))
         print(pd.read_csv(PROCESSED / "decide_lineup_review_detail.csv").to_string(index=False))
     else:
-        r = recommend()
+        pw = pd.read_csv(PROCESSED / "proj_week.csv")
+        ids = pw[pw.player.isin(a.started)].player_id.tolist()
+        missing = set(a.started) - set(pw.player)
+        if missing:
+            raise SystemExit(f"not in proj_week: {sorted(missing)}")
+        r = recommend(locked_starts=ids)
         md = to_markdown(r)
         (PROCESSED / f"decide_lineup_w{r['week']}.md").write_text(md)
         r["lineup"].to_csv(PROCESSED / f"decide_lineup_w{r['week']}.csv", index=False)

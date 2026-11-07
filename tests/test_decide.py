@@ -48,3 +48,38 @@ def test_lineup_review_covers_jordans_weeks():
 def test_rank_flags_catch_falls_and_rises():
     import inspect
     assert "abs()" in inspect.getsource(L.rank_jumps)        # a fall (Chase WR3 -> WR45) counts as much as a rise
+
+
+def test_waiver_bids_are_zero_or_one_dollar():
+    from dfo.decide import waivers as W
+    best = pd.DataFrame(dict(net_payout=[3.9, 0.99, 0.0, 1.0]))
+    assert list(W.bid(best)) == [1, 0, 0, 1]          # every 2026 add went for $0 or $1
+
+
+def test_waiver_moves_add_free_agents_and_drop_own_players():
+    w = sorted(PROCESSED.glob("decide_waivers_w*.csv"))
+    assert w, "run python -m dfo.decide.waivers"
+    best = pd.read_csv(w[-1])
+    ros = pd.read_csv(PROCESSED / "site_rosters.csv")
+    ids = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str)
+    c = ros.merge(ids[["site_player_id", "canonical_id"]], left_on="player_id", right_on="site_player_id")
+    mine = set(c[c.owner == "Jordan"].canonical_id)
+    assert not best["add"].isin(set(c.canonical_id)).any()
+    assert best["drop"].isin(mine).all()
+    assert best["add"].is_unique
+
+
+def test_waiver_review_scores_lineup_points():
+    r = pd.read_csv(PROCESSED / "decide_waivers_review.csv")
+    assert set(r.week) == {7, 8, 9}
+    for col in ("lineup_that_week_jordan", "lineup_that_week_module", "lineup_through_jordan"):
+        assert col in r
+    # Jordan's roster in Week 7 is the one he actually had: its best lineup is the review's best possible
+    lr = pd.read_csv(PROCESSED / "decide_lineup_review.csv").set_index("week")
+    assert abs(r.set_index("week").lineup_that_week_jordan[7] - lr.best_possible[7]) < 0.5
+
+
+def test_actual_lineup_uses_legal_slots():
+    from dfo.decide.waivers import _actual_lineup
+    pts = pd.DataFrame(dict(player_id=["a", "b", "c"], pos=["QB", "QB", "K"], week=[1, 1, 1], points=[20.0, 30.0, 5.0]))
+    assert _actual_lineup({"a", "b", "c"}, pts, [1]) == 35.0   # one QB slot
