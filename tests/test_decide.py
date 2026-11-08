@@ -83,3 +83,23 @@ def test_actual_lineup_uses_legal_slots():
     from dfo.decide.waivers import _actual_lineup
     pts = pd.DataFrame(dict(player_id=["a", "b", "c"], pos=["QB", "QB", "K"], week=[1, 1, 1], points=[20.0, 30.0, 5.0]))
     assert _actual_lineup({"a", "b", "c"}, pts, [1]) == 35.0   # one QB slot
+
+
+def test_over_the_cap_means_zero_dollar_bids_only():
+    from dfo.decide import waivers as W
+    from dfo.rules.cap import cap_room
+    c = cap_room()
+    assert (c.max_bid >= 0).all() and (c.max_bid == c.room.clip(lower=0)).all()
+    assert load_config("league")["cap"]["at_or_over_cap"] == "only_zero_dollar_adds"
+    best = pd.DataFrame(dict(net_payout=[3.9, 1.5]))
+    assert list(W.bid(best, max_bid=0)) == [0, 0]
+
+
+def test_stream_adjustments_only_where_backtest_beat_rate():
+    from dfo.decide.streaming import adjustments
+    p = pd.read_csv(PROCESSED / "params_stream_matchup.csv")
+    used = p[p.use]
+    assert (used.backtest_gain > 2 * used.gain_se).all()
+    assert set(used.k) <= {2, 3}                     # the coming week uses the weekly projection
+    a = adjustments(2026, 9)
+    assert a.adj.abs().max() < 6

@@ -14,8 +14,9 @@ Question (P16): does swapping this free agent in for this rostered player raise 
   surplus (if positive) and leaves dead cap in later seasons (75/50/25% of the remaining salary),
   priced at what that cap normally buys.
 In-season cap does not carry over, so this season's dead cap and the FAAB dollar cost close to nothing.
-Bids: every 2026 add on record went for $0 or $1, and ties go to the worse record, so a $1 bid on a
-contested player is close to free and beats any $0 claim; $0 for everyone else.
+Bids: every 2026 add on record went for $0 or $1 (one $2), and ties go by rolling reverse standings, so a
+$1 bid on a contested player is close to free and beats any $0 claim; $0 for everyone else. Never more
+than the team's cap room; at or over the cap, only $0 adds (rules/cap.py).
 """
 from __future__ import annotations
 
@@ -33,10 +34,18 @@ SEASON = 2026
 TOP_FA = 40          # free agents evaluated per run, by rest-of-season rate
 
 
-def _grid(df: pd.DataFrame, weeks: list[int], plays: dict, first: pd.Series | None = None) -> pd.DataFrame:
+def _grid(df: pd.DataFrame, weeks: list[int], plays: dict, first: pd.Series | None = None,
+          adj: pd.DataFrame | None = None) -> pd.DataFrame:
     """Expected points by week: the rest-of-season rate, except the coming week, which uses that
-    week's projection (matchup and bye) when there is one: streaming and bye fills live there."""
+    week's projection (matchup and bye) when there is one: streaming and bye fills live there.
+    `adj` (decide/streaming.py): matchup adjustments for defenses in the tested weeks after that."""
     g = pd.DataFrame({w: np.where(df.team.isin(plays[w]), df.rate, 0.0) for w in weeks}, index=df.player_id)
+    if adj is not None and len(adj):
+        for (pos, w), a in adj.groupby(["pos", "week"]):
+            if w in g.columns:
+                m = (df.pos == pos).to_numpy() & (g[w].to_numpy() > 0)
+                add = df.team.map(a.set_index("team").adj).fillna(0).to_numpy()
+                g[w] = np.where(m, np.maximum(0.0, g[w].to_numpy() + add), g[w].to_numpy())
     if first is not None and len(weeks):
         wk = df.player_id.map(first)
         g[weeks[0]] = np.where(wk.notna(), wk, g[weeks[0]].to_numpy())
@@ -77,13 +86,15 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
     plays = {w: set(sched[sched.week == w].team) for w in weeks}
     pool = ros.drop_duplicates("player_id").set_index("player_id")
     waiver = _waiver_rows(weeks)
-    team = pd.concat([_grid(pool.loc[pool.index.intersection(mine)].reset_index(), weeks, plays, first), waiver])
+    from dfo.decide.streaming import adjustments
+    adj = adjustments(SEASON, week0)
+    team = pd.concat([_grid(pool.loc[pool.index.intersection(mine)].reset_index(), weeks, plays, first, adj), waiver])
     base = lineup_points(team)
     w_now, w_later = _weights(owner)
     option, drop_later = _later_values(prices)
     loss = {pid: base - lineup_points(team.drop(index=pid)) for pid in team.index.difference(waiver.index)}
     fa = pool[~pool.index.isin(rostered) & (pool.rate > 0)].nlargest(TOP_FA, "rate")
-    g_fa = _grid(fa.reset_index(), weeks, plays, first)
+    g_fa = _grid(fa.reset_index(), weeks, plays, first, adj)
     names = pool.player
     rows = []
     for add in g_fa.index:
@@ -102,8 +113,11 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
     return best.reset_index(drop=True), out
 
 
-def bid(best: pd.DataFrame, others_gain: pd.Series | None = None) -> pd.Series:
-    return pd.Series(np.where(best.net_payout >= 1.0, 1, 0), index=best.index)
+def bid(best: pd.DataFrame, max_bid: int | None = None) -> pd.Series:
+    """$1 when the move is worth $1+ of payout, else $0; never more than the team's room (at or over
+    the cap only $0 adds are allowed: rules/cap.py)."""
+    b = pd.Series(np.where(best.net_payout >= 1.0, 1, 0), index=best.index)
+    return b.clip(upper=max_bid) if max_bid is not None else b
 
 
 def plan_moves(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], prices: pd.DataFrame,
@@ -123,7 +137,9 @@ def plan_moves(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str]
         rostered = (rostered - {m["drop"]}) | {m["add"]}
     p = pd.DataFrame(moves)
     if len(p):
-        p["bid"] = bid(p)
+        from dfo.rules.cap import cap_room
+        room = cap_room().set_index("owner").max_bid
+        p["bid"] = bid(p, int(room.get(owner, 0)) if owner in room else None)
     return p, look
 
 
@@ -147,6 +163,14 @@ def to_markdown(res: dict, owner: str = "Jordan") -> str:
     L = [f"# Waivers, Week {res['week']} ({owner})", "",
          f"Rest-of-season projections made {res['made_at']}. A lineup point is worth ${w_now:.2f} of expected "
          f"payout to you this season and ${w_later:.2f} in 2027 (the dial).", ""]
+    from dfo.rules.cap import cap_room
+    cr = cap_room().set_index("owner")
+    if owner in cr.index:
+        c = cr.loc[owner]
+        L += [f"Cap room: ${int(c.room)} (salary ${int(c.salary)}, dead money ${int(c.dead)}, traded cap "
+              f"${int(c.traded_cap)}; site as of {c.as_of})."
+              + (" At or over the cap, only $0 adds are allowed, so every claim below is $0 and goes by waiver priority."
+                 if c.room <= 0 else ""), ""]
     p = res["plan"]
     if not len(p):
         L += ["No add beats your current roster by enough to be worth a move this week."]

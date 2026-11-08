@@ -48,8 +48,12 @@ Question: does swapping this free agent in for this rostered player raise expect
   lineup points over waiver minus what his likely RFA price normally buys, if positive, x0.88) at the
   dial's 2027 weight; a drop loses the player's later surplus and leaves 75/50/25% dead cap.
 - Moves are planned one at a time (best move, update the roster, look again) until none is worth $0.25.
-- Bids: $1 when the move is worth $1+ of payout, else $0. Every 2026 add on record went for $0 or $1
-  and ties go to the worse record.
+- Bids: $1 when the move is worth $1+ of payout, else $0, never more than the team's cap room
+  (`rules/cap.py`: cap - counting salary - this season's dead money + traded cap). At or over the cap
+  only $0 adds are allowed (league.yaml `cap.at_or_over_cap`). Jordan (2026-11-08): owners have bid
+  more than $1 in past seasons, but only 2026 is on record (one $2 win, the rest $0/$1).
+- Defenses two weeks out (`decide/streaming.py`, `params_stream_matchup.csv`): the rate is adjusted for
+  the opponent (points defenses have scored against it so far, its average implied total so far).
 - Output: `decide_waivers_w<week>.md` and `.csv` (the plan, then the next best free agents).
 
 Exit test (`--review`, `decide_waivers_review.csv`): Jordan's waiver windows for Weeks 7-9 against the
@@ -66,6 +70,28 @@ same hindsight rule for both, so the gap is the moves, not lineup calls).
 Week 7's gap is mostly Vikings DEF over Jets (10 vs 1) and keeping Emanuel Wilson (18 in Week 7). Two
 scored weeks are a small sample; one boom player swings them.
 
-Known limits: kicker and defense values use rest-of-season rates after the coming week, so streaming
-by matchup two or more weeks out is not valued; rival bids above $1 have not happened this season
-and are not modeled.
+### K/DEF matchups beyond the coming week (back-test 2021-2025, `val_stream_backtest.csv`)
+
+At each week 4-14, from the units ranked 11-20 by scoring rate (the free-agent pool), pick one by rate
+alone or by rate + opponent; points scored k weeks later, 55 decisions per row:
+
+| Unit | Weeks ahead | Pool average | Pick by rate | Pick by rate + opponent | Gain (se) | Seasons better |
+|---|---|---|---|---|---|---|
+| DEF | 1 | 6.3 | 6.0 | 6.9 | +0.9 (0.9) | 4 of 5 |
+| DEF | 2 | 6.4 | 6.0 | 8.4 | +2.4 (0.9) | 4 of 5 |
+| DEF | 3 | 6.2 | 6.8 | 8.1 | +1.2 (0.7) | 5 of 5 |
+| K | 1 | 8.2 | 8.4 | 8.2 | -0.2 (0.8) | 2 of 5 |
+| K | 2 | 8.3 | 8.5 | 7.5 | -1.1 (0.7) | 2 of 5 |
+| K | 3 | 8.4 | 8.4 | 8.8 | +0.4 (0.8) | 3 of 5 |
+
+Used where the gain is more than two standard errors: defenses two weeks out. The coming week already
+uses the weekly projection (betting lines). Three weeks out for defenses is positive every season but
+under the bar, so it is not used. Kicker schedules add nothing.
+
+Known limits: rivals' bids are not modeled (no bid records before 2026).
+
+## Trades: exit-test sample
+
+One trade per season with trades (none in 2017 or 2025; 2026 trades are graded separately once the
+season ends), `decide_trade_sample.csv`. Five were the first random draw; the other five drawn
+2026-11-08 (seed 20261108). Awaiting Jordan's approval.
