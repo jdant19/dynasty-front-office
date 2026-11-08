@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-08T05:57:58+00:00",
+ "as_of": "2026-11-08T15:10:13+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -272,6 +272,24 @@
    },
    "source_id": null,
    "created_at": "2026-11-05T22:15:22.382432+00:00"
+  },
+  {
+   "id": "09440f05-4f84-4ea6-b7c4-5d16ea4144e6",
+   "occurred_at": "2026-11-08T06:08:08.629583+00:00",
+   "type": "drop",
+   "player_id": "sl-6797",
+   "player_name": "Justin Herbert",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 28,
+   "details": {
+    "season": 2026,
+    "position": "QB",
+    "cap_exempt": false,
+    "dead_money": 28
+   },
+   "source_id": null,
+   "created_at": "2026-11-08T06:08:08.629583+00:00"
   },
   {
    "id": "0954fe81-b15d-4568-8f32-eeb5872d5aab",
@@ -1689,6 +1707,24 @@
    "created_at": "2026-10-16T20:54:32.326361+00:00"
   },
   {
+   "id": "4b03ed6e-060a-4de9-bd55-e82cb9eb1b5c",
+   "occurred_at": "2026-11-08T06:07:45.585412+00:00",
+   "type": "drop",
+   "player_id": "def-CLE",
+   "player_name": "Cleveland Browns D/ST",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-08T06:07:45.585412+00:00"
+  },
+  {
    "id": "4b1b108d-2119-49d3-b3b1-e4bf94ff127d",
    "occurred_at": "2026-10-29T21:27:53.474633+00:00",
    "type": "drop",
@@ -2979,6 +3015,25 @@
    },
    "source_id": null,
    "created_at": "2026-09-02T21:37:31.596752+00:00"
+  },
+  {
+   "id": "874707e5-3d5e-406b-ab21-98bfce2fca85",
+   "occurred_at": "2026-11-08T06:09:22.440621+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-11559",
+   "player_name": "Michael Penix",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "QB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-08T06:09:22.440621+00:00"
   },
   {
    "id": "87bdfd6a-a196-4919-a55a-591bd548788e",
@@ -4501,6 +4556,25 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "d6798687-8798-4dce-b5ed-485914fff0b4",
+   "occurred_at": "2026-11-08T06:12:14.96441+00:00",
+   "type": "fa_signing",
+   "player_id": "def-NO",
+   "player_name": "New Orleans Saints D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-08T06:12:14.96441+00:00"
+  },
+  {
    "id": "d84c3106-674a-4d1c-86de-030c8319e104",
    "occurred_at": "2026-10-16T20:56:22.90105+00:00",
    "type": "fa_signing",
@@ -4663,6 +4737,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T02:12:31.331428+00:00"
+  },
+  {
+   "id": "e3c1d852-24b7-4162-b67d-ad04186e01f7",
+   "occurred_at": "2026-11-08T06:08:27.043592+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-6130",
+   "player_name": "Devin Singletary",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-08T06:08:27.043592+00:00"
   },
   {
    "id": "e4153db9-7c9a-4205-ac5e-d3300a09eed2",
@@ -4964,6 +5057,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T02:19:48.368036+00:00"
+  },
+  {
+   "id": "ec470ebd-1c05-4ffc-a1c6-764412e23aca",
+   "occurred_at": "2026-11-08T06:07:53.316812+00:00",
+   "type": "drop",
+   "player_id": "sl-9757",
+   "player_name": "Kendre Miller",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "RB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-08T06:07:53.316812+00:00"
   },
   {
    "id": "ec729ed7-2a76-4501-834e-08a855fbb402",

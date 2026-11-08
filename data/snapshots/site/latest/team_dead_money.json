@@ -1,6 +1,6 @@
 {
  "table": "team_dead_money",
- "as_of": "2026-11-08T05:57:58+00:00",
+ "as_of": "2026-11-08T15:10:13+00:00",
  "rows": [
   {
    "id": "00b07175-4aae-4de1-9f03-59fd63a7adbc",
@@ -649,6 +649,18 @@
    "amount_year5": 0,
    "salary_start_year": 2026,
    "created_at": "2026-10-16T20:47:40.694823+00:00"
+  },
+  {
+   "id": "e318928c-70cc-444d-ba4d-1b2f0534631e",
+   "team_id": "team-10",
+   "label": "Justin Herbert (dropped 2026/2027)",
+   "amount_year1": 28,
+   "amount_year2": 0,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "created_at": "2026-11-08T06:08:08.629583+00:00"
   },
   {
    "id": "e98c1d77-a86f-4a05-ad4e-272b62e84ae2",
