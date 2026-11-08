@@ -103,3 +103,28 @@ def test_stream_adjustments_only_where_backtest_beat_rate():
     assert set(used.k) <= {2, 3}                     # the coming week uses the weekly projection
     a = adjustments(2026, 9)
     assert a.adj.abs().max() < 6
+
+
+def test_trade_review_covers_sample_and_2026():
+    h = pd.read_csv(PROCESSED / "decide_trades_review_history.csv")
+    s = pd.read_csv(PROCESSED / "decide_trade_sample.csv")
+    assert set(h.trade_id) == set(s.trade_id) and len(h) == 2 * len(s)
+    assert s.approved_by_jordan.notna().all()
+    t = pd.read_csv(PROCESSED / "decide_trades_review_2026.csv")
+    assert t.trade.nunique() == 4 and len(t) == 8
+    # each side is scored by its own dial: the two sides need not sum to zero, but each row's parts add up
+    assert ((t.payout_now + t.payout_later - t.payout).abs() < 0.05).all()
+
+
+def test_trade_salary_rule_matches_league_config():
+    from dfo.rules.contracts import TradeSide, trade_salaries_legal
+    assert trade_salaries_legal(TradeSide([19]), TradeSide([47]))[0] is False      # Puka trade without cap
+    assert trade_salaries_legal(TradeSide([40]), TradeSide([47]))[0] is True
+    assert trade_salaries_legal(TradeSide([5, 6]), TradeSide([18]))[0] is True     # nobody over $20
+
+
+def test_nothing_for_nothing_is_worth_nothing():
+    from dfo.decide.trades import Assets, Trade, live
+    st = live()
+    e = st.evaluate(Trade("Jordan", "Ben", Assets(), Assets()))
+    assert (e.payout.abs() < 1e-6).all() and e.legal.all()

@@ -90,8 +90,44 @@ under the bar, so it is not used. Kicker schedules add nothing.
 
 Known limits: rivals' bids are not modeled (no bid records before 2026).
 
-## Trades: exit-test sample
+## Trades (`decide/trades.py`, `decide/trades_history.py`)
 
-One trade per season with trades (none in 2017 or 2025; 2026 trades are graded separately once the
-season ends), `decide_trade_sample.csv`. Five were the first random draw; the other five drawn
-2026-11-08 (seed 20261108). Awaiting Jordan's approval.
+Question: does the deal, with the moves it forces, raise this team's expected payout over skipping it?
+Both sides are scored the same way, each with its own dial, so a trade can be worth it to both.
+
+- This season: change in best-lineup points over the remaining weeks (lineup re-picked, byes, waiver
+  pickups at the waiver level), times the team's payout per point now. Over the roster limit, the
+  team drops whoever costs it least; under it, the open spot is a waiver pickup.
+- Later: players' surplus 2027-29 (lineup points over waiver minus what the salary normally buys,
+  keep/cut each season), dead cap of forced drops, picks at their slot (or the expected slot from the
+  original team's simulated finish; later years the round average x0.88), next season's cap at what
+  cap buys; at the dial's 2027 weight. This season's cap is shown, not valued.
+- Legal: the 25% salary rule, roster limit, Week 14 deadline.
+- History (2014-2024): the same parts with the inputs known then (rates before the trade week,
+  players on a run of missed games counted at the share of the season such players went on to play,
+  contract salaries, the posture table's payout per point); next two seasons while the contract runs.
+
+Exit test: the approved sample (one trade per season, `decide_trade_sample.csv`, approved 2026-11-08)
+and the four 2026 site trades, `decide_trades_review_history.csv` and `decide_trades_review_2026.csv`.
+Outcome grades are `grades_decisions.csv` payout grades.
+
+| Trade | At the time (engine) | Outcome |
+|---|---|---|
+| 2014 Jordan-Matt (Rodgers) | Jordan +$69, Matt -$43 | $0 / $0 |
+| 2015 Jordan-Ryan (Doug Martin for a 1st + two 2nds) | Jordan -$84, Ryan +$91 | Jordan -$135, Ryan +$335 |
+| 2016 Ryan-Ben (Baldwin for a 1st + 3rd) | Ben +$24, Ryan +$1 | Ryan +$300 (title), Ben -$100 |
+| 2018 Jordan-Ryan (Gordon, Baldwin for a 1st, Sanders) | Jordan -$38, Ryan +$72 | Jordan -$49, Ryan +$149 |
+| 2019 Qasim-Matt (Wilson for a 2nd) | Matt +$22, Qasim +$2 | Matt +$300 (Tee Higgins), Qasim -$250 |
+| 2020 Ben-Jordan (Elliott, #21 for Brown, Harris, 2nds, cap) | Jordan +$66, Ben -$87 | Ben +$286, Jordan -$186 |
+| 2021 Ben-Qasim (#10, #30 for Hopkins) | Ben +$63, Qasim -$93 | $0 / $0 |
+| 2022 Jordan-Ben (Adams, Geno for six players + cap + pick) | Ben +$24, Jordan +$5 | Ben +$325, Jordan +$200 |
+| 2023 Jordan-Qasim (#6 for #10 + Doubs) | Jordan +$42, Qasim -$38 | Jordan $0, Qasim -$75 |
+| 2024 Matt-Russ (#10 for $20 cap) | Matt +$21, Russ -$21 | Matt +$35, Russ +$165 |
+| 2026-01 Jordan-Zach (#8 for Bryant, #27) | Jordan +$66, Zach -$71 | season in progress |
+| 2026-02 Jordan-Max (Aiyuk, Herbert, Hubbard, Egbuka, picks for Hurts, Collins, Cooper) | Jordan +$214, Max -$242 | |
+| 2026-03 Russ-Max (Puka, Tuten, $10 for Brown, Pierce) | Russ +$310, Max -$268 | |
+| 2026-04 Jordan-Ben (Lamb, Mahomes, Robinson for Aiyuk, Herbert, Skattebo, Coleman, Egbuka, 2027 1st, $30 2027) | Ben +$119, Jordan -$30 (+$89 now, -$119 later) | |
+
+2026 trades use today's prices and dial (marked in the file); the rosters and projections are as of
+each trade. The engine and the outcome pick the same winner in 5 of the 8 decided historical trades; the
+misses are 2016 (Ryan's title), 2020 (Gibson at #21) and 2024.
