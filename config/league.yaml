@@ -117,7 +117,7 @@ trades:
     applies_if_any_player_salary_gt: 20
     tolerance: 0.25                      # combined salaries within 25% of the higher side
   cap_space:
-    compensation: counts toward salary matching
+    compensation: counts toward salary matching   # with the receiving side's outgoing salaries (Jordan 2026-11-08)
     considerations: outside matching; may carry performance conditions
     received_cap_applies_first_to: [trade_cost, negative_cap_space]
   picks: {years_ahead: 3, outside_matching: true, conditions_allowed: true}

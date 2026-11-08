@@ -102,7 +102,10 @@ Both sides are scored the same way, each with its own dial, so a trade can be wo
   keep/cut each season), dead cap of forced drops, picks at their slot (or the expected slot from the
   original team's simulated finish; later years the round average x0.88), next season's cap at what
   cap buys; at the dial's 2027 weight. This season's cap is shown, not valued.
-- Legal: the 25% salary rule, roster limit, Week 14 deadline.
+- Legal: the 25% salary rule (cap received as compensation counts with the receiving side's outgoing
+  salaries, Jordan 2026-11-08), roster limit, Week 14 deadline.
+- The site's rejected and cancelled trades (3 rejected, 2 cancelled, April-October 2026) were tests
+  (Jordan 2026-11-08) and are not evidence of what owners accept.
 - History (2014-2024): the same parts with the inputs known then (rates before the trade week,
   players on a run of missed games counted at the share of the season such players went on to play,
   contract salaries, the posture table's payout per point); next two seasons while the contract runs.
@@ -115,7 +118,7 @@ Outcome grades are `grades_decisions.csv` payout grades.
 |---|---|---|
 | 2014 Jordan-Matt (Rodgers) | Jordan +$69, Matt -$43 | $0 / $0 |
 | 2015 Jordan-Ryan (Doug Martin for a 1st + two 2nds) | Jordan -$84, Ryan +$91 | Jordan -$135, Ryan +$335 |
-| 2016 Ryan-Ben (Baldwin for a 1st + 3rd) | Ben +$24, Ryan +$1 | Ryan +$300 (title), Ben -$100 |
+| 2016 Ryan-Ben (Baldwin for a 1st + 3rd) | Ben +$24, Ryan +$1 | Ryan +$300 (1st vs 3rd regular-season payout; title kept), Ben -$100 |
 | 2018 Jordan-Ryan (Gordon, Baldwin for a 1st, Sanders) | Jordan -$38, Ryan +$72 | Jordan -$49, Ryan +$149 |
 | 2019 Qasim-Matt (Wilson for a 2nd) | Matt +$22, Qasim +$2 | Matt +$300 (Tee Higgins), Qasim -$250 |
 | 2020 Ben-Jordan (Elliott, #21 for Brown, Harris, 2nds, cap) | Jordan +$66, Ben -$87 | Ben +$286, Jordan -$186 |

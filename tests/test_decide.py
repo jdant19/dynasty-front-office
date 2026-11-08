@@ -119,6 +119,8 @@ def test_trade_review_covers_sample_and_2026():
 def test_trade_salary_rule_matches_league_config():
     from dfo.rules.contracts import TradeSide, trade_salaries_legal
     assert trade_salaries_legal(TradeSide([19]), TradeSide([47]))[0] is False      # Puka trade without cap
+    ok, why = trade_salaries_legal(TradeSide([15, 4], cap_compensation=10), TradeSide([45, 2]))
+    assert "$29 vs $47" in why                                                      # Jordan's reading of the cap
     assert trade_salaries_legal(TradeSide([40]), TradeSide([47]))[0] is True
     assert trade_salaries_legal(TradeSide([5, 6]), TradeSide([18]))[0] is True     # nobody over $20
 

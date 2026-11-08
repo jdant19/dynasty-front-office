@@ -143,8 +143,9 @@ class State:
     def legal(self, t: Trade) -> tuple[bool, str]:
         sa = [int(round(float(self.salary.get(p, 0)))) for p in t.a_gives.players]
         sb = [int(round(float(self.salary.get(p, 0)))) for p in t.b_gives.players]
-        ok, why = trade_salaries_legal(TradeSide(sa, t.a_gives.cap.get(SEASON, 0)),
-                                       TradeSide(sb, t.b_gives.cap.get(SEASON, 0)))
+        # cap a side receives counts with the salaries it sends (league.yaml trades.cap_space)
+        ok, why = trade_salaries_legal(TradeSide(sa, t.b_gives.cap.get(SEASON, 0)),
+                                       TradeSide(sb, t.a_gives.cap.get(SEASON, 0)))
         if self.week0 > DEADLINE_WEEK + 1:
             return False, "after the Week 14 deadline"
         return ok, why

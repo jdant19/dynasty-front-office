@@ -71,12 +71,14 @@ def cut_dead_cap(remaining_salaries: list[int]) -> list[int]:
 @dataclass
 class TradeSide:
     player_salaries: list[int]
-    cap_compensation: int = 0      # cap sent to help salaries match (counts toward matching)
+    cap_compensation: int = 0      # cap this side RECEIVES as salary compensation; it counts with the
+                                   # salaries this side sends (Jordan 2026-11-08: Puka trade = $47 vs $19 + $10 = $29)
 
 
 def trade_salaries_legal(a: TradeSide, b: TradeSide) -> tuple[bool, str]:
-    """Salary-matching rule: if any player is over $20, combined salaries (plus cap sent as
-    compensation) must be within 25% of the higher side. Picks and cap considerations are outside it."""
+    """Salary-matching rule: if any player is over $20, combined salaries must be within 25% of the
+    higher side. Cap received as compensation counts with the receiving side's outgoing salaries
+    (it offsets the extra salary that side takes on). Picks and cap considerations are outside it."""
     t = _rules()["trades"]["salary_match"]
     all_salaries = a.player_salaries + b.player_salaries
     if not any(s > t["applies_if_any_player_salary_gt"] for s in all_salaries):
