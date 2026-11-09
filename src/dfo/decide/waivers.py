@@ -319,5 +319,6 @@ if __name__ == "__main__":
         res = live()
         md = to_markdown(res)
         (PROCESSED / f"decide_waivers_w{res['week']}.md").write_text(md)
-        res["best"].to_csv(PROCESSED / f"decide_waivers_w{res['week']}.csv", index=False)
+        rost_as_of = str(pd.read_csv(PROCESSED / "site_rosters.csv").as_of.max())
+        res["best"].assign(rosters_as_of=rost_as_of).to_csv(PROCESSED / f"decide_waivers_w{res['week']}.csv", index=False)
         print(md)

@@ -143,9 +143,9 @@ class State:
     def legal(self, t: Trade) -> tuple[bool, str]:
         sa = [int(round(float(self.salary.get(p, 0)))) for p in t.a_gives.players]
         sb = [int(round(float(self.salary.get(p, 0)))) for p in t.b_gives.players]
-        # cap a side receives counts with the salaries it sends (league.yaml trades.cap_space)
-        ok, why = trade_salaries_legal(TradeSide(sa, t.b_gives.cap.get(SEASON, 0)),
-                                       TradeSide(sb, t.a_gives.cap.get(SEASON, 0)))
+        room = self.cap_room if hasattr(self, "cap_room") else {}
+        ok, why = trade_salaries_legal(TradeSide(sa, t.a_gives.cap.get(SEASON, 0), room.get(t.a)),
+                                       TradeSide(sb, t.b_gives.cap.get(SEASON, 0), room.get(t.b)))
         if self.week0 > DEADLINE_WEEK + 1:
             return False, "after the Week 14 deadline"
         return ok, why
@@ -176,7 +176,10 @@ def live() -> State:
     wk = pd.read_csv(PROCESSED / "proj_week.csv")
     week0 = int(ros.from_week.iloc[0])
     first = wk.groupby("player_id").proj.first() if int(wk.week.iloc[0]) == week0 else None
-    return State(ros, rosters, week0, first, salary=sal, made_at=str(ros.made_at.iloc[0]))
+    st = State(ros, rosters, week0, first, salary=sal, made_at=str(ros.made_at.iloc[0]))
+    from dfo.rules.cap import cap_room
+    st.cap_room = cap_room().set_index("owner").room.to_dict()
+    return st
 
 
 def at(when: pd.Timestamp, week: int, df: pd.DataFrame | None = None) -> State:

@@ -116,8 +116,9 @@ trades:
   salary_match:
     applies_if_any_player_salary_gt: 20
     tolerance: 0.25                      # combined salaries within 25% of the higher side
+    absorb_exception: legal outside 25% when the team taking on more salary has the cap space for the difference   # Jordan 2026-11-08
   cap_space:
-    compensation: counts toward salary matching   # with the receiving side's outgoing salaries (Jordan 2026-11-08)
+    compensation: counts toward salary matching   # added to the lower side (constitution example; Puka trade $19 + $10 vs $47)
     considerations: outside matching; may carry performance conditions
     received_cap_applies_first_to: [trade_cost, negative_cap_space]
   picks: {years_ahead: 3, outside_matching: true, conditions_allowed: true}

@@ -1,5 +1,6 @@
 """Decision modules (Phase 7): legal outputs and the exit-test records."""
 import pandas as pd
+import pytest
 
 from dfo.common import PROCESSED, load_config
 from dfo.decide import lineup as L
@@ -61,6 +62,10 @@ def test_waiver_moves_add_free_agents_and_drop_own_players():
     assert w, "run python -m dfo.decide.waivers"
     best = pd.read_csv(w[-1])
     ros = pd.read_csv(PROCESSED / "site_rosters.csv")
+    # the collector refreshes rosters several times a day; a plan made on older rosters is stale, not
+    # wrong (someone may have claimed one of its free agents since), so it is only checked on its own rosters
+    if "rosters_as_of" not in best or str(best.rosters_as_of.iloc[0]) != str(ros.as_of.max()):
+        pytest.skip("waiver plan was made on older rosters; rerun python -m dfo.decide.waivers")
     ids = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str)
     c = ros.merge(ids[["site_player_id", "canonical_id"]], left_on="player_id", right_on="site_player_id")
     mine = set(c[c.owner == "Jordan"].canonical_id)
@@ -119,8 +124,11 @@ def test_trade_review_covers_sample_and_2026():
 def test_trade_salary_rule_matches_league_config():
     from dfo.rules.contracts import TradeSide, trade_salaries_legal
     assert trade_salaries_legal(TradeSide([19]), TradeSide([47]))[0] is False      # Puka trade without cap
-    ok, why = trade_salaries_legal(TradeSide([15, 4], cap_compensation=10), TradeSide([45, 2]))
-    assert "$29 vs $47" in why                                                      # Jordan's reading of the cap
+    # Puka trade: Max sends $47 and $10 of cap for $19; Russ had the space to absorb the rest
+    ok, why = trade_salaries_legal(TradeSide([15, 4]), TradeSide([45, 2], cap_compensation=10))
+    assert "$29 vs $47" in why and ok is False                                      # no room known
+    assert trade_salaries_legal(TradeSide([15, 4], cap_room=18), TradeSide([45, 2], cap_compensation=10))[0]
+    assert not trade_salaries_legal(TradeSide([15, 4], cap_room=17), TradeSide([45, 2], cap_compensation=10))[0]
     assert trade_salaries_legal(TradeSide([40]), TradeSide([47]))[0] is True
     assert trade_salaries_legal(TradeSide([5, 6]), TradeSide([18]))[0] is True     # nobody over $20
 
