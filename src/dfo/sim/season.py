@@ -46,20 +46,53 @@ def _waiver_levels() -> dict[str, float]:
     return waiver_weekly()
 
 
-def load_state(today: dt.date | None = None) -> tuple[list[Team], pd.DataFrame, list[int], pd.DataFrame]:
-    today = today or dt.datetime.now(dt.timezone.utc).date()
-    lg = load_config("league")
-    res = pd.read_csv(PROCESSED / "results_2026.csv")
-    done = res[res.score_a.notna()]
-    weeks = sorted(res[res.score_a.isna()].week.unique())
-    ros = pd.read_csv(PROCESSED / "proj_ros.csv")
-    ros["rate"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros").clip(lower=0)
-    wk = pd.read_csv(PROCESSED / "proj_week.csv")
-    cur_week = int(wk.week.iloc[0])
+def rosters_now() -> pd.DataFrame:
     roster = pd.read_csv(PROCESSED / "site_rosters.csv")
     ids = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str)[["site_player_id", "canonical_id"]]
-    roster = roster.merge(ids.rename(columns={"site_player_id": "player_id", "canonical_id": "pid"}),
-                          on="player_id", how="left")
+    return roster.merge(ids.rename(columns={"site_player_id": "player_id", "canonical_id": "pid"}),
+                        on="player_id", how="left")
+
+
+def apply_moves(roster: pd.DataFrame, moves: dict[str, str] | None, pos: pd.Series | None = None) -> pd.DataFrame:
+    """Rosters with players moved (canonical id -> new owner); a player not yet on a roster is added."""
+    if not moves:
+        return roster
+    r = roster.copy()
+    have = set(r.pid.dropna())
+    for pid, owner in moves.items():
+        if pid in have:
+            r.loc[r.pid == pid, "owner"] = owner
+        else:
+            r = pd.concat([r, pd.DataFrame([dict(owner=owner, pid=pid, pos=(pos.get(pid) if pos is not None else None),
+                                                 injury_status="", slot="BN")])], ignore_index=True)
+    return r
+
+
+def load_state(today: dt.date | None = None, moves: dict[str, str] | None = None,
+               inputs: dict | None = None) -> tuple[list[Team], pd.DataFrame, list[int], pd.DataFrame]:
+    """`moves`: players to move between teams first (a trade). `inputs`: as of an earlier date, any of
+    ros (rest-of-season rates), wk (that week's projections), roster (rosters with pid), through_week
+    (results after it are treated as unplayed)."""
+    today = today or dt.datetime.now(dt.timezone.utc).date()
+    inputs = inputs or {}
+    lg = load_config("league")
+    res = pd.read_csv(PROCESSED / "results_2026.csv")
+    if "through_week" in inputs:
+        res.loc[res.week > inputs["through_week"], ["score_a", "score_b"]] = np.nan
+    done = res[res.score_a.notna()]
+    weeks = sorted(res[res.score_a.isna()].week.unique())
+    ros = inputs.get("ros")
+    ros = pd.read_csv(PROCESSED / "proj_ros.csv") if ros is None else ros.copy()
+    ros["rate"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros").clip(lower=0)
+    wk = inputs.get("wk")
+    wk = pd.read_csv(PROCESSED / "proj_week.csv") if wk is None else wk
+    cur_week = int(wk.week.iloc[0])
+    roster = inputs.get("roster")
+    roster = rosters_now() if roster is None else roster
+    roster = apply_moves(roster, moves, ros.drop_duplicates("player_id").set_index("player_id").pos)
+    for c, v in (("injury_status", ""), ("slot", "BN"), ("nfl_team", None)):
+        if c not in roster:
+            roster[c] = v
     sched = implied_totals([SEASON])
     plays = {w: set(sched[sched.week == w].team) for w in weeks}
     played = sched[(sched.week == cur_week) & (pd.to_datetime(sched.gameday).dt.date < today)]

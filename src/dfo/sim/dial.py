@@ -30,9 +30,9 @@ PROBE = 10.0
 N_NOW, N_FUTURE = 4000, 8000
 
 
-def season_payouts(boost=None, state=None, n=N_NOW) -> tuple[pd.DataFrame, dict]:
+def season_payouts(boost=None, state=None, n=N_NOW, moves=None, inputs=None) -> tuple[pd.DataFrame, dict]:
     s = season.simulate(n, seed=21, boost=boost, state=state)
-    place = playoffs.simulate(s["rank"], s["owners"], seed=22, boost=boost)
+    place = playoffs.simulate(s["rank"], s["owners"], seed=22, boost=boost, moves=moves, inputs=inputs)
     reg = season.summarize(s)
     po = playoffs.summarize(place, s["owners"])
     out = reg.merge(po, on="owner")

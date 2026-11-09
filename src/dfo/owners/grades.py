@@ -390,10 +390,11 @@ def _payout_table():
 def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.DataFrame:
     """Each trade side in payout dollars, from what actually happened (Jordan, 2026-11-05: a title won
     is definite; a pick was only a chance). For each played season from the trade season through two
-    after: take the trade out of both teams' rebuilt lineups (received players' lineup points net of
-    salary, minus the same for what was sent, plus cap moved), re-rank the season, shift each team's
-    actual finish by its change in lineup rank times the measured slope of finish on lineup rank
-    (about 0.7, rounded to whole places), and pay out the counterfactual: regular-season payout at
+    after: rebuild both teams' lineups with the trade undone (each player back with the team that sent
+    him, so the gain is over the next best option, P16), net of what the salaries moved would otherwise
+    buy, plus cap moved; shift each team's
+    actual finish by the trade's lineup points times the places a point is worth (P18: 0.011, 2014-2025;
+    fractional, payouts interpolated between places), and pay out the counterfactual: regular-season payout at
     the new finish; the actual playoff payout kept if still in the top four, lost if pushed out, and
     the average playoff payout if pushed in. The grade is actual payout minus counterfactual payout.
     Picks are valued at what a pick in that round is expected to deliver (round-average lineup points
@@ -407,18 +408,46 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
     weeks = o.season.map(lambda s: 18 if s >= 2021 else 17)
     o["total"] = o.lineup_ppg * weeks
     tot = {s: g.set_index("owner").total.to_dict() for s, g in o.groupby("season")}
-    # a place of rebuilt-lineup rank has moved the actual finish by this much on average (2014-2025)
-    slope = float(np.polyfit(o.lineup_rank, o.regular_season_finish, 1)[0])
+    # P18: a lineup point over a season moves the finish this many places (2014-2025, every team the
+    # same), and later points are worth the league-average value of a point
+    from dfo.valuation import conversions
+    conv = conversions.load()
+    ppp = float(conv["places_per_point"])
     fin = o.set_index(["season", "owner"])[["regular_season_finish", "playoff_result"]]
-    per_point = float(post[post.basis == "preseason simulator"].per_point.mean())
+    per_point = float(conv["dollars_per_point_later"])
     L = pd.read_csv(PROCESSED / "lineup_attribution.csv")
     pv = pick_value(L)
     a = pd.read_csv(PROCESSED / "hist_trade_assets.csv")
     a = a[a.season <= LAST]
     x = h[h.channel == "trade"].copy()
     ins = (x.season == x.event.str.slice(1, 5).astype(int)) & (x.w0 > 1)
-    x["net"] = x.started_pts - np.where(ins, 0.0, curve(x.pos, x.salary) * x.share)
-    got = x.groupby(["event", "owner", "season"]).net.sum()
+    # what the salaries of the players received would otherwise have bought (none for the in-season half)
+    x["sal_pts"] = np.where(ins, 0.0, curve(x.pos, x.salary) * x.share)
+    sal_cost = x.groupby(["event", "owner", "season"]).sal_pts.sum()
+    # the players' part (P16: over the next best option, not over waiver): both teams' lineups rebuilt
+    # with the trade undone (each player back with the team that sent him), the rest of the season as it was
+    from dfo.owners import diagnose as D
+    wk_all = D.weekly(h)
+    sender = {}
+    for r in a[a.kind == "player"].itertuples():
+        if pd.notna(r.player_id):
+            sender[(r.trade_id, r.player_id)] = r.sender
+    _cache = {}
+
+    def team_total(hs):
+        L_ = D.lineups(hs, wk_all[wk_all.season.isin(hs.season.unique())])
+        return L_.groupby("owner").points.sum().to_dict()
+
+    def lineup_delta(tid, s, t0, t1):
+        hs = h[(h.season == s) & h.owner.isin([t0, t1])]
+        if (s, t0, t1) not in _cache:
+            _cache[(s, t0, t1)] = team_total(hs)
+        base = _cache[(s, t0, t1)]
+        cf = hs.copy()
+        m = cf.event == tid
+        cf.loc[m, "owner"] = [sender.get((tid, p), o) for p, o in zip(cf.loc[m, "player_id"], cf.loc[m, "owner"])]
+        alt = team_total(cf)
+        return {t: base.get(t, 0.0) - alt.get(t, 0.0) for t in (t0, t1)}
     # traded picks resolved to the player drafted (traded_picks.py): a pick the receiver used counts
     # as that player's lineup points net of what his rookie salary normally buys, in every played
     # season of his rookie deal; one the receiver passed on counts at what the player actually gave
@@ -428,6 +457,11 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
     hd["net"] = hd.started_pts - curve(hd.pos, hd.salary) * hd.share
     pick_net = hd.groupby(["event", "owner", "season"]).net.sum()
     pick_total = hd.groupby(["event", "owner"]).net.sum()
+
+    def pay_frac(s, team, x):
+        """Payout at a fractional finish: between the payouts of the places either side."""
+        ks = np.arange(1, 11)
+        return float(np.interp(min(max(x, 1.0), 10.0), ks, [pay(s, team, k) for k in ks]))
 
     def pay(s, team, finish):
         f = fin.loc[(s, team)]
@@ -481,19 +515,16 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
             if s not in tot or t0 not in tot[s] or t1 not in tot[s]:
                 continue
             in_win = s <= y0 + TRADE_YEARS
-            d0 = ((float(got.get((tid, t0, s), 0.0)) + caps[t0].get(s, 0.0) if in_win else 0.0)
-                  + used[t0].get(s, 0.0)
-                  - (float(got.get((tid, t1, s), 0.0)) + caps[t1].get(s, 0.0) if in_win else 0.0)
-                  - used[t1].get(s, 0.0))
-            cf = dict(tot[s])
-            cf[t0] -= d0
-            cf[t1] += d0
-            rank = pd.Series(tot[s]).rank(ascending=False, method="first")
-            rank_cf = pd.Series(cf).rank(ascending=False, method="first")
-            for t, d in ((t0, d0), (t1, -d0)):
+            ld = lineup_delta(tid, s, t0, t1) if in_win else {t0: 0.0, t1: 0.0}
+            dd = {}
+            for t, u in ((t0, t1), (t1, t0)):
+                dd[t] = ((ld[t] - float(sal_cost.get((tid, t, s), 0.0)) + float(sal_cost.get((tid, u, s), 0.0))
+                          + caps[t].get(s, 0.0) - caps[u].get(s, 0.0) if in_win else 0.0)
+                         + used[t].get(s, 0.0) - used[u].get(s, 0.0))
+            for t, d in ((t0, dd[t0]), (t1, dd[t1])):
                 f = int(fin.loc[(s, t)].regular_season_finish)
-                f_cf = int(min(max(f + round(slope * (rank_cf[t] - rank[t])), 1), 10))
-                season_rows[t].append((s, d, f, f_cf, pay(s, t, f) - pay(s, t, f_cf)))
+                f_cf = min(max(f + ppp * d, 1.0), 10.0)      # without the trade's d points
+                season_rows[t].append((s, d, f, round(f_cf, 1), pay(s, t, f) - pay_frac(s, t, f_cf)))
         for t, other in ((t0, t1), (t1, t0)):
             pk = realized[t] - realized[other]
             for side, sign in ((t, 1), (other, -1)):
@@ -505,7 +536,7 @@ def trade_payouts(h: pd.DataFrame, curve: PriceCurve, post: pd.DataFrame) -> pd.
                              payout_trade_season=round(sr[0][4]) if sr and sr[0][0] == y0 else 0,
                              payout_picks=round(pk), picks_got="; ".join(names[t]), picks_gave="; ".join(names[other]),
                              seasons_through=min(last, LAST),
-                             finish_changes="; ".join(f"{s}: {f} vs {fc} without" for s, d, f, fc, _ in sr if f != fc),
+                             finish_changes="; ".join(f"{s}: {f} vs {fc:.1f} without" for s, d, f, fc, _ in sr if abs(f - fc) >= 0.05),
                              seasons_realized=len(sr)))
     return pd.DataFrame(rows)
 

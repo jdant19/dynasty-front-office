@@ -28,3 +28,22 @@ evidence across seasons and Jordan's sign-off. Add the date and reason to the ch
 - 2026-10-30: P7 tested; P10-P13 added with the valuation engine (Phase 4); P14 and P15 from Jordan's review; P2 now computed by the dial.
 - 2026-11-04: P16 from Jordan (right metric for each decision); owner grades rebuilt on it.
 - 2026-11-05: P16 extended to Phase 4 and trades (payout $); P17 price tiers from Jordan's cliff question.
+
+## P18. Decisions are scored with three stable conversions (Jordan, 2026-11-08)
+
+1. Salary <-> points: what $1 of salary normally buys in lineup points over waiver (1.6 points, the
+   auction price curve). This is the only price per point.
+2. Points <-> finish: 0.011 places in the final standings per lineup point over a season (2014-2025,
+   se 0.0009), the same for every team.
+3. Finish <-> payout: the payout table ($400/$200/$100 regular season, a top-four finish also carries
+   the $75 average playoff payout).
+
+Where a team stands enters only through its finish odds: this season from the season simulator run
+from the actual standings (both rosters changed for a trade, so the partner's gain counts, and
+players' NFL playoff games count through the playoff draft); later seasons at the league-average
+value of a place ($47.50, so $0.53 a point), because finishes do not carry over in this league (rank
+correlation 0.09 year to year, 2013-2025). Replaces the per-team payout-per-point dial for later
+seasons and for trades (`valuation/conversions.py`, `params_conversions.csv`). For small in-season
+moves (waivers, drops) the simulator's slope at the current standings is the same conversion in
+small form. Evidence: Jordan's review of the trade exit test; the Baldwin 2016 grade fell from $300
+to about $160 once whole-place rounding was replaced by the points slope.

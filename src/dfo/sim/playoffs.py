@@ -21,13 +21,14 @@ from dfo.sim.outcomes import Pools, absence
 from dfo.valuation import calibrate
 
 
-def player_table() -> pd.DataFrame:
-    ros = pd.read_csv(PROCESSED / "proj_ros.csv")
+def player_table(moves: dict[str, str] | None = None, inputs: dict | None = None) -> pd.DataFrame:
+    from dfo.sim.season import apply_moves, rosters_now
+    inputs = inputs or {}
+    ros = inputs.get("ros")
+    ros = pd.read_csv(PROCESSED / "proj_ros.csv") if ros is None else ros.copy()
     ros["rate"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros").clip(lower=0)
-    roster = pd.read_csv(PROCESSED / "site_rosters.csv")
-    ids = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str)[["site_player_id", "canonical_id"]]
-    roster = roster.merge(ids.rename(columns={"site_player_id": "player_id", "canonical_id": "pid"}),
-                          on="player_id", how="left")
+    roster = inputs.get("roster")
+    roster = apply_moves(rosters_now() if roster is None else roster, moves)
     owner = roster.dropna(subset=["pid"]).drop_duplicates("pid").set_index("pid").owner
     t = ros[["player_id", "player", "pos", "team", "rate"]].copy()
     t["owner"] = t.player_id.map(owner).fillna("")
@@ -93,7 +94,8 @@ def draft(seeds: tuple[str, ...], players: pd.DataFrame, exp_games: dict[str, fl
     return {o: _best_lineup(rosters[o], v, pos)[1] for o in seeds}
 
 
-def simulate(rank: np.ndarray, owners: list[str], seed: int = 11, boost: dict[str, float] | None = None) -> pd.DataFrame:
+def simulate(rank: np.ndarray, owners: list[str], seed: int = 11, boost: dict[str, float] | None = None,
+             moves: dict[str, str] | None = None, inputs: dict | None = None) -> pd.DataFrame:
     """rank: (sims, teams) final regular-season places. Returns per sim the playoff place (1, 2 or 0)
     of each team."""
     n = rank.shape[0]
@@ -101,7 +103,7 @@ def simulate(rank: np.ndarray, owners: list[str], seed: int = 11, boost: dict[st
     teams, played = nfl.simulate(n, rng)
     tix = {t: i for i, t in enumerate(teams)}
     exp_games = dict(zip(teams, played.mean(axis=0)))
-    players = player_table().reset_index(drop=True)
+    players = player_table(moves, inputs).reset_index(drop=True)
     pools = Pools()
     place = np.zeros((n, len(owners)), dtype=int)
     seeds_by_sim = [tuple(owners[j] for j in np.argsort(rank[s])[:4]) for s in range(n)]

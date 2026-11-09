@@ -103,11 +103,13 @@ def build(owner: str = "Jordan") -> pd.DataFrame:
     # everyone else: add him, dropping the current player whose loss hurts least, counting his
     # future value too (a negative future is owed whether he is cut now or later, so it counts as 0)
     life = prices.set_index("player_id")
-    # this season's lineup points and later seasons' surplus (both lineup points) are weighted by what a
-    # point is worth to this team now and in 2027 (the dial, P14), never added as they are
+    # this season's lineup points at what a few more points do to this team's finish odds now (the
+    # simulator from the actual standings); later seasons' surplus at the league-average value of a
+    # point (P18), never added as they are
+    from dfo.valuation import conversions
     dial = pd.read_csv(PROCESSED / "dial.csv").set_index("owner")
     w_now = float(dial.per_point_2026.get(owner, 1.0))
-    w_later = float(dial.per_point_2027_haircut.get(owner, 1.0))
+    w_later = float(conversions.load()["dollars_per_point_later"])
     def drop_cost(r):
         fut = float(life.surplus_2027_29.get(r["player_id"], 0))
         return w_now * r["lineup_change"] + w_later * max(0.0, fut)

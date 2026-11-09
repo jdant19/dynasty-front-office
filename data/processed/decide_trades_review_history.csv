@@ -1,21 +1,21 @@
-trade_id,season,timing,owner,partner,lineup_points_now,salary_charge_now,per_point_now,payout_now,payout_players_later,payout_picks,payout_cap,payout,picks_got,outcome_payout_grade
-T2014-001,2014,offseason,Jordan,Matt,11.1,-36.1,0.625,29.0,16.0,15.0,9.0,69.0,"2014 2nd (round average); 2015 2nd (if Austin is cut) (round average (conditional, half))",0.0
-T2014-001,2014,offseason,Matt,Jordan,30.4,36.1,0.568,-3.0,-16.0,-15.0,-9.0,-43.0,2014 2nd (round average),0.0
-T2015-008,2015,in-season (assumed midseason),Jordan,Ryan,26.7,0.0,0.73,19.0,0.0,-104.0,0.0,-84.0,,-135.0
-T2015-008,2015,in-season (assumed midseason),Ryan,Jordan,-47.7,0.0,0.28,-13.0,0.0,104.0,0.0,91.0,"2016 1st (round average); 2016 2nd (from Qasim) (if Martin and Williams score 240 + points starting Nov. 7) (round average (conditional, half)); 2016 2nd (if Martin and William score 130-239 points starting Nov. 7) (round average (conditional, half))",335.0
-T2016-010,2016,in-season (assumed midseason),Ben,Ryan,-17.6,0.0,0.793,-14.0,-40.0,78.0,0.0,24.0,2018 1st (round average); 2018 3rd (round average),-100.0
-T2016-010,2016,in-season (assumed midseason),Ryan,Ben,60.0,0.0,0.651,39.0,40.0,-78.0,0.0,1.0,,300.0
-T2018-016,2018,offseason,Jordan,Ryan,107.3,97.0,0.576,6.0,0.0,-44.0,0.0,-38.0,2019 2nd (round average),-49.0
-T2018-016,2018,offseason,Ryan,Jordan,-51.1,-97.0,0.625,29.0,0.0,44.0,0.0,72.0,2019 1st (round average),149.0
-T2019-019,2019,in-season (assumed midseason),Matt,Qasim,-9.7,0.0,0.835,-8.0,0.0,30.0,0.0,22.0,2020 2nd (round average),300.0
-T2019-019,2019,in-season (assumed midseason),Qasim,Matt,38.7,0.0,0.838,32.0,0.0,-30.0,0.0,2.0,,-250.0
-T2020-027,2020,offseason,Ben,Jordan,81.6,75.0,0.701,5.0,-52.0,-23.0,-16.0,-87.0,2020 pick #21 (slot 21),286.0
-T2020-027,2020,offseason,Jordan,Ben,-152.7,-75.0,0.339,-26.0,52.0,23.0,16.0,66.0,Ben's 2021 2nd (round average); Ben's 2022 2nd (round average),-186.0
-T2021-031,2021,offseason,Ben,Qasim,-58.2,-148.7,0.466,42.0,0.0,40.0,-19.0,63.0,2021 pick #10 (slot 10); 2021 pick #30 (slot 30),0.0
-T2021-031,2021,offseason,Qasim,Ben,46.2,148.7,0.707,-72.0,0.0,-40.0,19.0,-93.0,,0.0
-T2022-039,2022,in-season (assumed midseason),Ben,Jordan,98.0,0.0,0.509,50.0,35.0,-39.0,-22.0,24.0,,325.0
-T2022-039,2022,in-season (assumed midseason),Jordan,Ben,-61.2,0.0,0.343,-21.0,-35.0,39.0,22.0,5.0,1st/2nd. (highest between 7-16) (slots 7-16 average),200.0
-T2023-043,2023,offseason,Jordan,Qasim,0.0,-38.3,0.621,24.0,-6.0,27.0,-3.0,42.0,2023 1st (#6) (slot 6),0.0
-T2023-043,2023,offseason,Qasim,Jordan,0.0,38.3,0.534,-20.0,6.0,-27.0,3.0,-38.0,2023 1st (#10) (slot 10),-75.0
-T2024-050,2024,offseason,Matt,Russ,0.0,0.0,0.517,0.0,0.0,40.0,-19.0,21.0,2024 1st (#10) (slot 10),35.0
-T2024-050,2024,offseason,Russ,Matt,0.0,0.0,0.648,0.0,0.0,-40.0,19.0,-21.0,,165.0
+trade_id,season,timing,owner,partner,lineup_points_now,salary_charge_now,expected_finish,places_moved,payout_now,payout_players_later,payout_picks,payout_cap,payout,picks_got,outcome_payout_grade
+T2014-001,2014,offseason,Jordan,Matt,11.1,-36.1,5.4,0.53,26.0,15.0,13.0,8.0,61.0,"2014 2nd (round average); 2015 2nd (if Austin is cut) (round average (conditional, half))",153.0
+T2014-001,2014,offseason,Matt,Jordan,30.4,36.1,8.6,-0.06,-0.0,-15.0,-13.0,-8.0,-36.0,2014 2nd (round average),57.0
+T2015-008,2015,in-season (assumed midseason),Jordan,Ryan,26.7,0.0,4.8,0.3,18.0,0.0,-92.0,0.0,-74.0,,-168.0
+T2015-008,2015,in-season (assumed midseason),Ryan,Jordan,-47.7,0.0,8.4,-0.53,-1.0,0.0,92.0,0.0,91.0,"2016 1st (round average); 2016 2nd (from Qasim) (if Martin and Williams score 240 + points starting Nov. 7) (round average (conditional, half)); 2016 2nd (if Martin and William score 130-239 points starting Nov. 7) (round average (conditional, half))",514.0
+T2016-010,2016,in-season (assumed midseason),Ben,Ryan,-17.6,0.0,3.2,-0.2,-17.0,-35.0,70.0,0.0,17.0,2018 1st (round average); 2018 3rd (round average),3.0
+T2016-010,2016,in-season (assumed midseason),Ryan,Ben,60.0,0.0,6.8,0.67,16.0,35.0,-70.0,0.0,-18.0,,78.0
+T2018-016,2018,offseason,Jordan,Ryan,107.3,97.0,3.8,0.12,9.0,0.0,-39.0,0.0,-30.0,2019 2nd (round average),-103.0
+T2018-016,2018,offseason,Ryan,Jordan,-51.1,-97.0,1.0,0.51,28.0,0.0,39.0,0.0,67.0,2019 1st (round average),131.0
+T2019-019,2019,in-season (assumed midseason),Matt,Qasim,-9.7,0.0,3.3,-0.11,-9.0,0.0,27.0,0.0,17.0,2020 2nd (round average),288.0
+T2019-019,2019,in-season (assumed midseason),Qasim,Matt,38.7,0.0,3.9,0.43,32.0,0.0,-27.0,0.0,5.0,,-74.0
+T2020-027,2020,offseason,Ben,Jordan,81.6,75.0,2.9,0.07,6.0,-49.0,-22.0,-15.0,-81.0,2020 pick #21 (slot 21),337.0
+T2020-027,2020,offseason,Jordan,Ben,-152.7,-75.0,7.9,-0.87,-4.0,49.0,22.0,15.0,83.0,Ben's 2021 2nd (round average); Ben's 2022 2nd (round average),-139.0
+T2021-031,2021,offseason,Ben,Qasim,-58.2,-148.7,8.1,1.01,10.0,0.0,35.0,-17.0,28.0,2021 pick #10 (slot 10); 2021 pick #30 (slot 30),0.0
+T2021-031,2021,offseason,Qasim,Ben,46.2,148.7,4.3,-1.14,-62.0,0.0,-35.0,17.0,-80.0,,0.0
+T2022-039,2022,in-season (assumed midseason),Ben,Jordan,98.0,0.0,5.6,1.09,51.0,31.0,-34.0,-19.0,28.0,,229.0
+T2022-039,2022,in-season (assumed midseason),Jordan,Ben,-61.2,0.0,7.1,-0.68,-6.0,-31.0,34.0,19.0,16.0,1st/2nd. (highest between 7-16) (slots 7-16 average),126.0
+T2023-043,2023,offseason,Jordan,Qasim,0.0,-38.3,5.5,0.43,21.0,-5.0,23.0,-3.0,36.0,2023 1st (#6) (slot 6),294.0
+T2023-043,2023,offseason,Qasim,Jordan,0.0,38.3,6.4,-0.43,-7.0,5.0,-23.0,3.0,-23.0,2023 1st (#10) (slot 10),-70.0
+T2024-050,2024,offseason,Matt,Russ,0.0,0.0,5.0,0.0,0.0,0.0,35.0,-17.0,18.0,2024 1st (#10) (slot 10),-6.0
+T2024-050,2024,offseason,Russ,Matt,0.0,0.0,6.2,0.0,0.0,0.0,-35.0,17.0,-18.0,,54.0

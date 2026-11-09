@@ -10,7 +10,7 @@ Question (P16): does swapping this free agent in for this rostered player raise 
   each position's waiver level), at what a lineup point is worth to the team now (the dial).
 - Later seasons: an in-season add signs for one year but can be designated (RFA) next offseason, so
   he carries an option: his expected 2027 lineup points over waiver minus what his likely RFA price
-  normally buys, if positive, x0.88, at the dial's 2027 weight. Dropping a player loses his later
+  normally buys, if positive, x0.88, at the league-average value of a later point. Dropping a player loses his later
   surplus (if positive) and leaves dead cap in later seasons (75/50/25% of the remaining salary),
   priced at what that cap normally buys.
 In-season cap does not carry over, so this season's dead cap and the FAAB dollar cost close to nothing.
@@ -54,8 +54,12 @@ def _grid(df: pd.DataFrame, weeks: list[int], plays: dict, first: pd.Series | No
 
 
 def _weights(owner: str) -> tuple[float, float]:
+    """This season: the simulator's change in expected payout for a few more lineup points, from the
+    actual standings (the small-move form of re-running the season, P18). Later seasons: the
+    league-average value of a point (valuation/conversions.py), the same for every team."""
+    from dfo.valuation import conversions
     d = pd.read_csv(PROCESSED / "dial.csv").set_index("owner")
-    return float(d.per_point_2026.get(owner, 1.0)), float(d.per_point_2027_haircut.get(owner, 1.0))
+    return float(d.per_point_2026.get(owner, 1.0)), float(conversions.load()["dollars_per_point_later"])
 
 
 def _later_values(prices: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
@@ -162,7 +166,8 @@ def to_markdown(res: dict, owner: str = "Jordan") -> str:
     w_now, w_later = _weights(owner)
     L = [f"# Waivers, Week {res['week']} ({owner})", "",
          f"Rest-of-season projections made {res['made_at']}. A lineup point is worth ${w_now:.2f} of expected "
-         f"payout to you this season and ${w_later:.2f} in 2027 (the dial).", ""]
+         f"payout to you this season (your finish odds from today's standings) and ${w_later:.2f} in later seasons "
+         f"(league average: 0.011 places a point x $47.50 a place).", ""]
     from dfo.rules.cap import cap_room
     cr = cap_room().set_index("owner")
     if owner in cr.index:

@@ -11,13 +11,15 @@ Same question and units as decide/trades.py (P16), with the inputs a manager had
   counts at the share of the rest of the season such players went on to play (2014-2025), since injury
   reports before 2021 are not on file. Offseason trades also move this season's
   salary, charged at what it normally buys (PriceCurve); in-season cap is worth close to nothing.
-  Weighted by the team's payout per point then (owner_season_posture.csv: preseason or midseason).
+  Points become places (0.011 a point) and places become payout from the team's finish odds then (its
+  lineup strength vs the league at that week, the historical spread around it). Banked wins in an
+  in-season trade are unknown (no weekly results before 2026), so strength stands in for the record.
 - Next two seasons: each player's expected lineup points over waiver (LineupValue of his rate x 16
   games, aged one year at a time) minus what his salary normally buys, while his contract runs (the
   contract length was set when he signed: read from the salaries he was later kept at), never below
   cutting him (dead cap); after it ends, 0 (rights not valued). Picks at the slot when the asset names
-  it, else the round average; conditional picks at half. Later cap at what cap buys. Weighted by the
-  league's average payout per point that preseason, x0.88 a year.
+  it, else the round average; conditional picks at half. Later cap at what cap buys. All later points at
+  the league-average value of a point (valuation/conversions.py), x0.88 a year.
 Known gaps: rookie and pick values use curves fit on 2014-2022 drafts (some hindsight for early
 trades); conditional terms are taken at half.
 """
@@ -165,8 +167,9 @@ def evaluate(c, tid: str) -> pd.DataFrame:
     in_season = bool(len(tr) and tr.in_season.any())
     week = nweeks // 2 + 1 if in_season else 1
     h = c["h"]
-    post = c["post"].set_index(["season", "owner"])
-    lg = c["post"][c["post"].season == y0].per_point.mean()
+    from dfo.valuation import conversions as C
+    conv = C.load()
+    lg = conv["dollars_per_point_later"]
     held = h[(h.season == y0) & (h.w0 <= week) & (h.w1 >= week)]
     players = g[(g.kind == "player") & g.player_id.notna()]
     moved = set(players.player_id)
@@ -175,8 +178,12 @@ def evaluate(c, tid: str) -> pd.DataFrame:
     for r in players.itertuples():
         roster[r.receiver].discard(r.player_id)
         roster[r.sender].add(r.player_id)
-    allp = set().union(*roster.values()) | moved
+    allp = set(held.player_id) | moved
     rates = _rate(c, y0, week, allp)
+    # where each team stood: its lineup strength at the trade vs the league, as an expected finish
+    strength = {o: _lineup(c, set(g.player_id) if o not in roster else roster[o], rates)
+                for o, g in held.groupby("owner")}
+    lg_mean = float(np.mean(list(strength.values())))
     sal = h[(h.season == y0) & h.player_id.isin(list(moved))].groupby("player_id").salary.max()
     rows = []
     for o in teams:
@@ -192,8 +199,10 @@ def evaluate(c, tid: str) -> pd.DataFrame:
                 pos = rates.pos.get(p)
                 if pos and pd.notna(sal.get(p)):
                     charge += sign * float(c["curve"]([pos], [float(sal[p])])[0])
-        wt = float(post.per_point_mid.get((y0, o), lg) if in_season else post.per_point.get((y0, o), lg))
-        now = wt * (lineup - charge)
+        mean_finish = 5.5 - conv["places_per_point"] * (strength.get(o, lg_mean) - lg_mean) * nweeks
+        odds = C.finish_odds(float(np.clip(mean_finish, 1, 10)))
+        shift = conv["places_per_point"] * (lineup - charge)
+        now = C.expected_payout(odds, shift) - C.expected_payout(odds)
         later = 0.0
         for p, sign in [(p, 1) for p in gets] + [(p, -1) for p in gives]:
             later += sign * _future(c, p, rates.pos.get(p), float(rates.rate.get(p, np.nan)), y0,
@@ -216,7 +225,8 @@ def evaluate(c, tid: str) -> pd.DataFrame:
             cap += v if r.receiver == o else -v
         rows.append(dict(trade_id=tid, season=y0, timing="in-season (assumed midseason)" if in_season else "offseason",
                          owner=o, partner=other, lineup_points_now=round(lineup, 1), salary_charge_now=round(charge, 1),
-                         per_point_now=round(wt, 3), payout_now=round(now, 0), payout_players_later=round(later, 0),
+                         expected_finish=round(float(np.clip(mean_finish, 1, 10)), 1), places_moved=round(shift, 2),
+                         payout_now=round(now, 0), payout_players_later=round(later, 0),
                          payout_picks=round(pk, 0), payout_cap=round(cap, 0),
                          payout=round(now + later + pk + cap, 0), picks_got="; ".join(picks_txt)))
     return pd.DataFrame(rows)
