@@ -16,8 +16,8 @@ jobs:
         run: |
           PYTHONPATH=src python -m dfo.ingest.build_history
           PYTHONPATH=src python -m dfo.ingest.site
-          PYTHONPATH=src python -m dfo.scoring 2026
-          PYTHONPATH=src python -m dfo.ingest.player_ids
-          PYTHONPATH=src python -m dfo.reconcile
+          PYTHONPATH=src python -m dfo.tolerant dfo.scoring 2026
+          PYTHONPATH=src python -m dfo.tolerant dfo.ingest.player_ids
+          PYTHONPATH=src python -m dfo.tolerant dfo.reconcile
           git diff --stat -- data/processed
       - run: python -m pytest -q

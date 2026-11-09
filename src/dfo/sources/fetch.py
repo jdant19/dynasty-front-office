@@ -16,6 +16,10 @@ from dfo.common import ROOT
 CACHE = ROOT / "data" / "cache"
 
 
+class SourceUnavailable(RuntimeError):
+    """A source could not be reached after retries and no cached copy exists."""
+
+
 def fetch(source: str, name: str, url: str, max_age_hours: float = 12) -> Path:
     d = CACHE / source
     d.mkdir(parents=True, exist_ok=True)
@@ -37,7 +41,7 @@ def fetch(source: str, name: str, url: str, max_age_hours: float = 12) -> Path:
             if attempt == 2:
                 if path.exists():
                     return path
-                raise
+                raise SourceUnavailable(f"{source}: {url} unreachable after 3 tries")
             time.sleep(10 * (attempt + 1) ** 2)
     meta.write_text(json.dumps({"url": url, "as_of": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}))
     return path
