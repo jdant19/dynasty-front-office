@@ -25,8 +25,20 @@ def fetch(source: str, name: str, url: str, max_age_hours: float = 12) -> Path:
         if age.total_seconds() < max_age_hours * 3600:
             return path
     req = urllib.request.Request(url, headers={"User-Agent": "dynasty-front-office/1.0"})
-    with urllib.request.urlopen(req, timeout=180) as r:
-        path.write_bytes(r.read())
+    # sources have short outages (nflverse returned 504s on 2026-11-09 while republishing): retry, then
+    # fall back to the cached copy if there is one; its as-of time stays in the sidecar, so it is labeled
+    import time
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                path.write_bytes(r.read())
+            break
+        except Exception:
+            if attempt == 2:
+                if path.exists():
+                    return path
+                raise
+            time.sleep(10 * (attempt + 1) ** 2)
     meta.write_text(json.dumps({"url": url, "as_of": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}))
     return path
 
