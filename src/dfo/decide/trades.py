@@ -127,18 +127,30 @@ class State:
         r1 = (r0 - set(gives.players)) | set(gets.players)
         base = self.lineup(r0)
         drops = []
+        order = getattr(self, "drop_order", {}).get(owner)
+        if order is not None:                         # quick pass: his cheapest drops, worked out once
+            extra = len(r1) - roster_max()
+            for d in order:
+                if extra <= 0:
+                    break
+                if d in r1 and d not in gets.players:
+                    drops.append(d)
+                    r1 = r1 - {d}
+                    extra -= 1
         while len(r1) > roster_max():
             cost = {}
             for pid in r1:
                 loss = self.lineup(r1) - self.lineup(r1 - {pid})
-                cost[pid] = w_now * loss + w_later * float(self.drop_later.get(pid, 0.0))
+                cost[pid] = w_now * loss + w_later * max(0.0, float(self.drop_later.get(pid, 0.0)))
             d = min(cost, key=cost.get)
             drops.append(d)
             r1 = r1 - {d}
         now = self.lineup(r1) - base
         later = (sum(float(self.surplus.get(p, 0.0)) for p in gets.players)
                  - sum(float(self.surplus.get(p, 0.0)) for p in gives.players)
-                 - sum(float(self.drop_later.get(p, 0.0)) for p in drops))
+                 # a cut that pays on its own (a contract worse than its dead cap) is open to him without
+                 # the trade, so the trade is charged only what a forced drop costs, never credited
+                 - sum(max(0.0, float(self.drop_later.get(p, 0.0))) for p in drops))
         picks = sum(self.pick_points(*k) for k in gets.picks) - sum(self.pick_points(*k) for k in gives.picks)
         cap = self.cap_points(gets.cap) - self.cap_points(gives.cap)
         later_pts = later + picks + cap

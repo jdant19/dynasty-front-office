@@ -142,3 +142,27 @@ The engine and the outcome pick the same winner in 6 of the 9 decided trades; th
 | Jordan-Ben (Lamb, Mahomes, Robinson for Aiyuk, Herbert, Skattebo, Coleman, Egbuka, 2027 1st, $30 2027), Oct 26 | Jordan 1st 5% -> 16%, top 4 67% -> 87% (+$96); Ben -$1 | Jordan -$89 (-$76) | Jordan +$20, Ben +$75 |
 
 2026 rosters and projections are as of each trade; player values and the pick curve are today's.
+
+## Trade search (`decide/trade_search.py`)
+
+Question: which deals raise Jordan's expected payout the most, and what should he offer?
+
+- Quick pass, every partner: each of the partner's players who would add 8+ lineup points to Jordan's
+  team this season, for packages of up to three of Jordan's players (the cheapest for him to lose,
+  plus his biggest salaries as fillers; three-player packages only when salaries must match). This
+  season priced at each team's simulator slope from today's standings, later seasons at $0.53 a point;
+  illegal packages (salary rule with each team's cap room, roster limit) dropped; the best package per
+  target kept when it is worth more to the two teams together than it costs.
+- Picks and cap are not searched over: later value is worth the same to every team (P18), so they move
+  value between the sides without creating any. They settle the gap instead: opening (the partner
+  gains $5), target (the joint gain split evenly), walk-away (Jordan gains $0), in next season's cap
+  ($1 of 2027 cap = 1.6 points = $0.85).
+- Full pass, the ten best: the season re-simulated with both rosters changed (the partner's gain
+  counts; it matters most with Russ and Johnny).
+- Forced drops are charged only what they cost; a cut that pays on its own is open without the trade.
+- Output: `decide_trade_search.md` and `.csv`, status "idea" until Jordan says a deal was proposed,
+  with a draft message each (never sent).
+
+Known limits: one player from the partner per deal; acceptance odds are not modeled (no real declines on
+record), so each partner's gain and trades per season are shown instead; 2027 cap sweeteners assume
+Jordan's 2027 room (about $220 uncommitted today) is free to spend.

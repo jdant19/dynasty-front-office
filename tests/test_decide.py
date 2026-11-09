@@ -138,3 +138,34 @@ def test_nothing_for_nothing_is_worth_nothing():
     st = live()
     e = st.evaluate(Trade("Jordan", "Ben", Assets(), Assets()))
     assert (e.payout.abs() < 1e-6).all() and e.legal.all()
+
+
+def test_trade_versions_split_the_joint_gain():
+    from dfo.decide.trade_search import Search
+    s = Search.__new__(Search)
+    s.cap_dollar = 1.6 * 0.53
+    v = s.versions(40.0, -10.0)                       # joint gain $30
+    assert abs(v["opening"]["partner"] - 5) <= 1
+    assert abs(v["target"]["partner"] - 15) <= 1 and abs(v["target"]["jordan"] - 15) <= 1
+    assert abs(v["walk_away"]["jordan"]) <= 1
+    assert v["opening"]["cap_2027_to_partner"] < v["target"]["cap_2027_to_partner"] < v["walk_away"]["cap_2027_to_partner"]
+
+
+def test_trade_search_output_is_legal_and_never_marked_proposed():
+    p = PROCESSED / "decide_trade_search.csv"
+    if not p.exists():
+        pytest.skip("run python -m dfo.decide.trade_search")
+    d = pd.read_csv(p)
+    assert (d.salary_rule.str.contains("within|not required|space")).all()
+    assert "status" not in d or (d.status == "idea").all()
+    assert (d.joint == d.jordan + d.partner_gain).all() or ((d.joint - d.jordan - d.partner_gain).abs() <= 1).all()
+
+
+def test_conversions_are_stable_league_wide():
+    from dfo.valuation import conversions as C
+    c = C.load()
+    assert 0.009 < c["places_per_point"] < 0.014
+    assert abs(c["dollars_per_point_later"] - c["places_per_point"] * c["dollars_per_place_avg"]) < 1e-3
+    assert c["finish_carryover_rank_corr"] < 0.3              # why later seasons use one league-wide value
+    odds = C.finish_odds(2.0)
+    assert abs(odds.sum() - 1) < 1e-9 and C.expected_payout(odds, 1.0) > C.expected_payout(odds)
