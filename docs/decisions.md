@@ -143,26 +143,42 @@ The engine and the outcome pick the same winner in 6 of the 9 decided trades; th
 
 2026 rosters and projections are as of each trade; player values and the pick curve are today's.
 
+## Three-year outlook (`decide/outlook.py`)
+
+Question: what does my team look like in 2027-29, and what does a move do to it?
+
+- Per season: players under contract (signed salaries plus the designation plan), cap committed
+  (salaries, dead money, traded cap, rookie salaries for picks owned), cap room, the best lineup from
+  those players, what the room buys at that August's auction (the season's clearing price), rookies
+  from picks owned; the sum is the team's strength, and the future simulator turns all ten teams'
+  strengths into expected payout.
+- A plan that does not fit under $300 gives something up: the one release that leaves the strongest
+  team if one is enough, otherwise planned designations first (free to skip), then contracts (75% dead).
+- A trade rebuilds both teams' outlooks; the change in strength, x0.88 a year, is the trade's later
+  value (replaces adding up each player's surplus, so bench depth and cap with no room count for what
+  they really do). Output: `decide_outlook_<owner>.md` and `.csv`.
+- Finding 2026-11-10: Jordan's 2027 plan (RFA match on Gibbs at $98 and tag on Lamb at $96) is $20
+  over the cap; the model keeps Gibbs and skips Lamb's tag, leaving $75 of room.
+
 ## Trade search (`decide/trade_search.py`)
 
 Question: which deals raise Jordan's expected payout the most, and what should he offer?
 
 - Quick pass, every partner: each of the partner's players who would add 8+ lineup points to Jordan's
   team this season, for packages of up to three of Jordan's players (the cheapest for him to lose,
-  plus his biggest salaries as fillers; three-player packages only when salaries must match). This
-  season priced at each team's simulator slope from today's standings, later seasons at $0.53 a point;
-  illegal packages (salary rule with each team's cap room, roster limit) dropped; the best package per
-  target kept when it is worth more to the two teams together than it costs.
-- Picks and cap are not searched over: later value is worth the same to every team (P18), so they move
-  value between the sides without creating any. They settle the gap instead: opening (the partner
-  gains $5), target (the joint gain split evenly), walk-away (Jordan gains $0), in next season's cap
-  ($1 of 2027 cap = 1.6 points = $0.85).
-- Full pass, the ten best: the season re-simulated with both rosters changed (the partner's gain
-  counts; it matters most with Russ and Johnny).
-- Forced drops are charged only what they cost; a cut that pays on its own is open without the trade.
+  plus his biggest salaries as fillers; three-player packages only when salaries must match); illegal
+  packages dropped; the best four per target re-scored through both teams' three-year outlook.
+- Picks settle the gap, because picks are what this league trades in (92% of the 52 trades 2014-2024
+  included a pick, cap moved in 54%; Jordan's partners got picks in 76% of his trades; Jordan
+  2026-11-10). Every set of up to two of Jordan's picks is tried: opening (the smallest add leaving the
+  partner $5 ahead), target (the most even split), walk-away (the most Jordan can add and stay ahead).
+  No cap is offered while his 2027 plan is over the cap.
+- Full pass: the season re-simulated with both rosters changed. Each idea shows Jordan's cap room and
+  strength change for 2027, 2028 and 2029 and anything his plan would have to give up.
+- Players Jordan asks about (`--targets`) are always evaluated; ideas where no version leaves both
+  sides ahead are listed separately.
 - Output: `decide_trade_search.md` and `.csv`, status "idea" until Jordan says a deal was proposed,
   with a draft message each (never sent).
 
 Known limits: one player from the partner per deal; acceptance odds are not modeled (no real declines on
-record), so each partner's gain and trades per season are shown instead; 2027 cap sweeteners assume
-Jordan's 2027 room (about $220 uncommitted today) is free to spend.
+record); a player's planned designation travels with him at the planned salary.

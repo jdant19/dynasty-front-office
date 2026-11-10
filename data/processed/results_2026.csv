@@ -39,11 +39,11 @@ season,week,team_a,team_b,score_a,score_b,winner,basis,source
 2026,8,Qasim,Russ,122.4,205.58,Russ,screenshot,screenshots/2026/week08_scoreboard.png
 2026,8,Johnny,Ben,95.74,107.0,Ben,screenshot,screenshots/2026/week08_scoreboard.png
 2026,8,Mike,Matt,89.56,113.2,Matt,screenshot,screenshots/2026/week08_scoreboard.png
-2026,9,Jordan,Mike,,,,scheduled,screenshots/2026
-2026,9,Ryan,Johnny,,,,scheduled,screenshots/2026
-2026,9,Qasim,Max,,,,scheduled,screenshots/2026
-2026,9,Zach,Russ,,,,scheduled,screenshots/2026
-2026,9,Matt,Ben,,,,scheduled,screenshots/2026
+2026,9,Jordan,Mike,169.88,91.46,Jordan,screenshot,screenshots/2026/week09_scoreboard.png
+2026,9,Ryan,Johnny,96.78,102.4,Johnny,screenshot,screenshots/2026/week09_scoreboard.png
+2026,9,Qasim,Max,94.58,82.26,Qasim,screenshot,screenshots/2026/week09_scoreboard.png
+2026,9,Zach,Russ,129.42,140.34,Russ,screenshot,screenshots/2026/week09_scoreboard.png
+2026,9,Matt,Ben,120.78,102.38,Matt,screenshot,screenshots/2026/week09_scoreboard.png
 2026,10,Jordan,Ben,,,,scheduled,screenshots/2026 (repeat of week 1)
 2026,10,Ryan,Matt,,,,scheduled,screenshots/2026 (repeat of week 1)
 2026,10,Qasim,Johnny,,,,scheduled,screenshots/2026 (repeat of week 1)

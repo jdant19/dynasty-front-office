@@ -8,11 +8,12 @@ skipping it? Scored with the three stable conversions (valuation/conversions.py)
   and as they would be after the trade (same random draws), regular season and the playoff draft and
   games. The change in each team's finish odds, through the payout table, is the this-season value.
   This catches the partner getting stronger, banked wins, and players' NFL playoff games.
-- Later seasons: points over what the salary normally buys (players' surplus 2027-29, x0.88 a year;
-  dead cap of forced drops), picks at their slot or expected slot, next season's cap at 1.6 points per
-  $1; all at the league-average value of a lineup point ($0.53: 0.011 places a point x $47.50 a
-  place), the same for every team because finishes do not carry over year to year. Also shown as the
-  auction dollars the same points would cost.
+- Later seasons: both teams' three-year outlook (decide/outlook.py) rebuilt with the trade: contracts
+  and planned designations, cap room each season (a plan that no longer fits gives something up),
+  what the room buys at auction, rookies from picks. The change in strength 2027-29, x0.88 a year, at
+  the league-average value of a lineup point ($0.53: 0.011 places a point x $47.50 a place), the same
+  for every team because finishes do not carry over year to year. Also shown as the auction dollars
+  the same points would cost.
 - Over the roster limit, the team drops whoever costs it least; under it, the open spot is a waiver
   pickup. This season's cap is worth close to nothing (CLAUDE.md) and is shown but not valued.
 - Legal: the salary rule (rules/contracts.py), the roster limit, the Week 14 deadline.
@@ -161,6 +162,30 @@ class State:
                     forced_drops=", ".join(str(self.names.get(d, d)) for d in drops),
                     cap_this_season=gets.cap.get(SEASON, 0) - gives.cap.get(SEASON, 0))
 
+    def later(self, t: Trade, drops: dict[str, list[str]] | None = None) -> dict:
+        """Later seasons. Players and cap: both teams' three-year outlook (decide/outlook.py) rebuilt for
+        2027-29 with the trade (players dropped to make room are gone too). Picks: the rookie deal's
+        lineup points at the expected slot (pick_points), because a 2028 or 2029 pick pays mostly after
+        the outlook's last season."""
+        from dfo.decide.outlook import Outlook
+        if not hasattr(self, "outlook"):
+            self.outlook = Outlook()
+        drops = drops or {}
+        o = self.outlook
+        fut = lambda c: {y: v for y, v in c.items() if y > SEASON}
+        res = {}
+        for me, give, get in ((t.a, t.a_gives, t.b_gives), (t.b, t.b_gives, t.a_gives)):
+            cap = {y: fut(give.cap).get(y, 0) - fut(get.cap).get(y, 0) for y in (2027, 2028, 2029)}
+            before = o.team(me)
+            after = o.team(me, add=tuple(get.players), remove=tuple(give.players) + tuple(drops.get(me, ())), cap_out=cap)
+            d = after.strength.to_numpy() - before.strength.to_numpy()
+            players = float(sum(v * HAIRCUT ** (y - SEASON) for v, y in zip(d, before.season)))
+            picks = sum(self.pick_points(*k) for k in get.picks) - sum(self.pick_points(*k) for k in give.picks)
+            res[me] = dict(before=before, after=after, delta=dict(zip(before.season, np.round(d, 1))),
+                           players_cap_points=round(players, 1), pick_points=round(picks, 1),
+                           later_points=round(players + picks, 1))
+        return res
+
     def season_odds(self, moves: dict[str, str] | None, n: int = 6000) -> pd.DataFrame:
         """Finish odds and expected payout this season for every team, rosters with `moves` applied."""
         from dfo.sim import dial, season
@@ -188,6 +213,20 @@ class State:
         ok, why = self.legal(t)
         rows = [self.side(t.a, t.b_gives, t.a_gives), self.side(t.b, t.a_gives, t.b_gives)]
         out = pd.DataFrame(rows)
+        ids = {v: k for k, v in self.names.items()}
+        drops = {r["owner"]: [ids[x] for x in r["forced_drops"].split(", ") if x in ids] for r in rows}
+        lat = self.later(t, {o: d for o, d in drops.items() if d})
+        out["later_points"] = [lat[o]["later_points"] for o in out.owner]
+        out["later_pick_points"] = [lat[o]["pick_points"] for o in out.owner]
+        out["later_auction_dollars"] = (out.later_points / self.conv["points_per_cap_dollar"]).round()
+        out["payout_later"] = (out.later_points * self.conv["dollars_per_point_later"]).round()
+        for y in (2027, 2028, 2029):
+            out[f"strength_change_{y}"] = [lat[o]["delta"][y] for o in out.owner]
+            out[f"cap_room_{y}"] = [f"{int(lat[o]['before'].set_index('season').cap_room[y])} -> "
+                                    f"{int(lat[o]['after'].set_index('season').cap_room[y])}" for o in out.owner]
+        out["given_up_to_fit_cap"] = [" | ".join(f"{r.season}: {r.released}" for r in lat[o]["after"].itertuples() if r.released)
+                                      for o in out.owner]
+        out = out.drop(columns=["later_players", "later_picks", "later_cap"])
         before = self.season_odds(None, n) if base is None else base
         after = self.season_odds(self.moves(t), n)
         for c in ("p_first", "p_top4", "p_playoff_champ", "exp_payout"):

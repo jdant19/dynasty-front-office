@@ -140,15 +140,19 @@ def test_nothing_for_nothing_is_worth_nothing():
     assert (e.payout.abs() < 1e-6).all() and e.legal.all()
 
 
-def test_trade_versions_split_the_joint_gain():
-    from dfo.decide.trade_search import Search
-    s = Search.__new__(Search)
-    s.cap_dollar = 1.6 * 0.53
-    v = s.versions(40.0, -10.0)                       # joint gain $30
-    assert abs(v["opening"]["partner"] - 5) <= 1
-    assert abs(v["target"]["partner"] - 15) <= 1 and abs(v["target"]["jordan"] - 15) <= 1
-    assert abs(v["walk_away"]["jordan"]) <= 1
-    assert v["opening"]["cap_2027_to_partner"] < v["target"]["cap_2027_to_partner"] < v["walk_away"]["cap_2027_to_partner"]
+def test_outlook_fits_under_the_cap_every_season():
+    from dfo.decide.outlook import Outlook
+    o = Outlook()
+    t = o.team("Jordan")
+    assert list(t.season) == [2027, 2028, 2029] and (t.cap_room >= 0).all()
+
+
+def test_a_pick_sent_costs_the_sender_what_it_gives_the_receiver():
+    from dfo.decide.trades import Assets, Trade, live
+    st = live()
+    d = st.later(Trade("Jordan", "Ben", Assets(picks=[(2028, 1, "Jordan")]), Assets()))
+    assert d["Jordan"]["later_points"] < 0 < d["Ben"]["later_points"]
+    assert abs(d["Jordan"]["later_points"] + d["Ben"]["later_points"]) < 1e-6
 
 
 def test_trade_search_output_is_legal_and_never_marked_proposed():
