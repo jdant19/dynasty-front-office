@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-10T02:43:51+00:00",
+ "as_of": "2026-11-10T12:36:59+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -5525,9 +5525,9 @@
    "position": "RB",
    "nfl_team": "MIN",
    "years_exp": 0,
-   "status": "Active",
+   "status": "Inactive",
    "created_at": "2026-04-16T03:03:34.656103+00:00",
-   "synced_at": "2026-04-16T03:03:31.858+00:00",
+   "synced_at": "2026-11-10T07:00:08.467+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
