@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-10T12:36:59+00:00",
+ "as_of": "2026-11-10T18:49:52+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -253,6 +253,25 @@
    },
    "source_id": null,
    "created_at": "2026-09-02T21:37:31.596752+00:00"
+  },
+  {
+   "id": "07df68dc-9be2-4209-a1ef-8ad5c28bd915",
+   "occurred_at": "2026-11-10T16:55:55.036173+00:00",
+   "type": "fa_signing",
+   "player_id": "def-BUF",
+   "player_name": "Buffalo Bills D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-9",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-10T16:55:55.036173+00:00"
   },
   {
    "id": "08ee0286-f748-483e-a9c3-5ea929b8e2a3",
@@ -3496,6 +3515,25 @@
    "created_at": "2026-09-02T21:37:31.596752+00:00"
   },
   {
+   "id": "993b92d5-32e3-4ce3-83f9-036dcb052843",
+   "occurred_at": "2026-11-10T16:54:30.831026+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-3286",
+   "player_name": "Demarcus Robinson",
+   "from_team_id": null,
+   "to_team_id": "team-2",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "WR",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-10T16:54:30.831026+00:00"
+  },
+  {
    "id": "9a43610c-1893-4638-b9e2-769142ff37ac",
    "occurred_at": "2026-10-29T21:30:54.303642+00:00",
    "type": "fa_signing",
@@ -4573,6 +4611,24 @@
    },
    "source_id": null,
    "created_at": "2026-11-08T06:12:14.96441+00:00"
+  },
+  {
+   "id": "d7ae0686-30c1-46dd-841f-5d39e1bcd9e4",
+   "occurred_at": "2026-11-10T16:54:54.004488+00:00",
+   "type": "drop",
+   "player_id": "sl-8154",
+   "player_name": "Brian Robinson",
+   "from_team_id": "team-9",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "RB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-10T16:54:54.004488+00:00"
   },
   {
    "id": "d84c3106-674a-4d1c-86de-030c8319e104",

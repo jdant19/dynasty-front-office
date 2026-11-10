@@ -1,6 +1,6 @@
 {
  "table": "team_lineups",
- "as_of": "2026-11-10T12:36:59+00:00",
+ "as_of": "2026-11-10T18:49:52+00:00",
  "rows": [
   {
    "id": "0009e24d-af7f-4e3e-b262-abb4c8384ac4",
@@ -105,8 +105,8 @@
    "id": "0e232385-3ee3-4dd2-8b5b-03b775c4fb93",
    "team_id": "team-2",
    "player_id": "sl-4950",
-   "slot": "BN",
-   "slot_index": 10,
+   "slot": "IR",
+   "slot_index": 1,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:19:28.470932+00:00"
   },
@@ -285,8 +285,8 @@
    "id": "24f5f8a0-45e2-4156-b01f-a7e8eee6a3c1",
    "team_id": "team-9",
    "player_id": "sl-7543",
-   "slot": "BN",
-   "slot_index": 8,
+   "slot": "IR",
+   "slot_index": 1,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:22:47.16181+00:00"
   },
@@ -1725,8 +1725,8 @@
    "id": "e4696efe-ce90-4702-a18c-f9e8fee0d83e",
    "team_id": "team-9",
    "player_id": "sl-7525",
-   "slot": "WR",
-   "slot_index": 2,
+   "slot": "IR",
+   "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:38:30.267904+00:00"
   },
@@ -1747,15 +1747,6 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:34:41.160127+00:00"
-  },
-  {
-   "id": "e6e73e47-c0cb-438f-b970-5849e9fffef1",
-   "team_id": "team-9",
-   "player_id": "sl-8154",
-   "slot": "BN",
-   "slot_index": 12,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-10-25T14:47:17.003135+00:00"
   },
   {
    "id": "e80c0fc0-6fb8-4588-80c8-c1c922fef8ea",
