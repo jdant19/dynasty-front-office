@@ -6,9 +6,10 @@ The working model of a team for the next three seasons, built on the future-seas
 (sim/future.py), one season at a time:
   - who is under contract (prices.csv salaries plus the designation plan: tags, RFA matches, extensions)
   - cap committed: those salaries, dead money, cap traded, rookie salaries for picks owned
-  - cap room = $300 - committed - $1 fillers to 18 players. If room is negative the plan does not fit:
-    the team gives up whatever costs it least per dollar freed (a planned designation is skipped for
-    free; a real contract is cut and leaves 75% dead) until it fits
+  - cap room = $300 - committed - $1 fillers to 18 players. RFA matches may take a team over the cap
+    (tags and extensions may not), so a plan fits when everything but its matches fits; the team then
+    buys nothing at auction. Otherwise the team gives something up (a planned designation is skipped
+    for free; a real contract is cut and leaves 75% dead) until it fits
   - strength = best lineup from players under contract + what the room buys at that August's auction
     (the season's clearing price) + rookies from picks owned
 A trade moves players, picks and cap between two teams; the outlook is rebuilt for both. The change
@@ -53,6 +54,15 @@ class Outlook:
         self.base = F.strengths()
         self.price = self.base.drop_duplicates("season").set_index("season").price_per_point
         self.names = self.prices.set_index("player_id").player
+        # RFA matches may take a team over the cap (league.yaml designations.rfa.match_may_exceed_cap);
+        # tags and extensions may not, so a plan fits if everything but its RFA matches fits
+        plan = pd.read_csv(PROCESSED / "designation_plan.csv")
+        self.rfa_years = {}
+        for r in plan[plan.type == "rfa"].itertuples():
+            for y in F.FUTURE:
+                if y >= int(r.offseason) and float(getattr(r, f"salary_{y}", 0) or 0) > 0:
+                    self.rfa_years.setdefault(y, set()).add(r.player_id)
+        self.allow_rfa_over_cap = load_config("league")["designations"]["rfa"].get("match_may_exceed_cap", False)
         self._cache = {}
 
     # ------------------------------------------------------------ one team, one season
@@ -86,7 +96,9 @@ class Outlook:
             return 300 - com - max(0, 18 - len(gg))
 
         room = room_of(g, committed)
-        while room < 0 and len(g):
+        matched = (self.rfa_years.get(y, set()) & set(g.index)) if self.allow_rfa_over_cap else set()
+        over_ok = lambda gg, r: sum(float(gg.salary.get(m, 0)) for m in matched if m in gg.index) + r >= 0
+        while room < 0 and len(g) and not over_ok(g, room):
             base = F.lineup_points(g, self.repl)
             opts = []
             for pid, r in g.iterrows():
@@ -112,7 +124,8 @@ class Outlook:
         lineup = F.lineup_points(g, self.repl)
         bought = max(room, 0.0) / price
         rook = self._rookies(own, y)
-        return dict(season=y, owner=owner, contracted=len(g), committed=round(committed), cap_room=round(room),
+        note = ("over the cap through RFA matches (allowed); nothing bought at auction" if room < 0 else "")
+        return dict(season=y, owner=owner, contracted=len(g), committed=round(committed), cap_room=round(room), note=note,
                     lineup_points=round(lineup, 1), points_bought=round(bought, 1), rookie_points=round(rook, 1),
                     strength=round(lineup + bought + rook, 1), released="; ".join(released))
 

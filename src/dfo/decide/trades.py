@@ -114,9 +114,9 @@ class State:
             v = float(np.interp(ov, self.slots.overall, self.slots.use_lineup))
         else:
             v = float(self.slots[self.slots["round"] == rnd].use_lineup.mean())
-        # a rookie deal's points come over four seasons from the draft year
-        within = float(np.mean([HAIRCUT ** k for k in range(4)]))
-        return v * within * HAIRCUT ** max(0, year - (SEASON + 1))
+        # use_lineup already sums the rookie deal's four seasons at 0.88 a year from the draft year;
+        # only the years until the draft are discounted here
+        return v * HAIRCUT ** max(0, year - (SEASON + 1))
 
     def cap_points(self, cap: dict[int, int]) -> float:
         return sum(amt * self.slope * HAIRCUT ** (yr - (SEASON + 1)) for yr, amt in cap.items() if yr > SEASON)

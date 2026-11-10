@@ -152,13 +152,17 @@ Question: what does my team look like in 2027-29, and what does a move do to it?
   those players, what the room buys at that August's auction (the season's clearing price), rookies
   from picks owned; the sum is the team's strength, and the future simulator turns all ten teams'
   strengths into expected payout.
-- A plan that does not fit under $300 gives something up: the one release that leaves the strongest
-  team if one is enough, otherwise planned designations first (free to skip), then contracts (75% dead).
+- RFA matches may take a team over the cap (tags and extensions may not), so a plan fits when everything
+  but its matches fits; the team then buys nothing at auction. A plan that still does not fit gives
+  something up: the one release that leaves the strongest team if one is enough, otherwise planned
+  designations first (free to skip), then contracts (75% dead).
 - A trade rebuilds both teams' outlooks; the change in strength, x0.88 a year, is the trade's later
   value (replaces adding up each player's surplus, so bench depth and cap with no room count for what
   they really do). Output: `decide_outlook_<owner>.md` and `.csv`.
-- Finding 2026-11-10: Jordan's 2027 plan (RFA match on Gibbs at $98 and tag on Lamb at $96) is $20
-  over the cap; the model keeps Gibbs and skips Lamb's tag, leaving $75 of room.
+- Jordan's 2027 plan (Jordan 2026-11-10): tag Lamb ($96) first, then match Gibbs ($98) over the cap.
+  Model, 2026-11-10 (expected 2027 payout): both $84 (room -$20), Gibbs only $105, Lamb only $94,
+  neither $136 ($172 of room at $0.94 a point). The ranking rests on the auction's clearing price per
+  point; scarcity of elite players at auction is not in it.
 
 ## Trade search (`decide/trade_search.py`)
 
@@ -168,6 +172,10 @@ Question: which deals raise Jordan's expected payout the most, and what should h
   team this season, for packages of up to three of Jordan's players (the cheapest for him to lose,
   plus his biggest salaries as fillers; three-player packages only when salaries must match); illegal
   packages dropped; the best four per target re-scored through both teams' three-year outlook.
+- A partner still chasing the top four (simulator 40%+, or Jordan's dated read in observations.csv)
+  must not lose this season in the deal; contenders do not sell for later value.
+- Picks are valued at their rookie deal's lineup points over what the rookie salary buys, four seasons
+  at 0.88 a year from the draft (`val_picks_slots.csv` use_lineup), x0.88 a year until the draft.
 - Picks settle the gap, because picks are what this league trades in (92% of the 52 trades 2014-2024
   included a pick, cap moved in 54%; Jordan's partners got picks in 76% of his trades; Jordan
   2026-11-10). Every set of up to two of Jordan's picks is tried: opening (the smallest add leaving the

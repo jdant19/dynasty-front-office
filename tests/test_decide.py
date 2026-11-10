@@ -144,7 +144,12 @@ def test_outlook_fits_under_the_cap_every_season():
     from dfo.decide.outlook import Outlook
     o = Outlook()
     t = o.team("Jordan")
-    assert list(t.season) == [2027, 2028, 2029] and (t.cap_room >= 0).all()
+    assert list(t.season) == [2027, 2028, 2029]
+    # under the cap, or over it only by RFA matches (league.yaml: a match may exceed the cap)
+    for r in t.itertuples():
+        g = o.prices[o.prices.player_id.isin(o.rfa_years.get(r.season, set())) & (o.prices.owner == "Jordan")]
+        assert r.cap_room + g[f"salary_{r.season}"].fillna(0).sum() >= 0
+        assert r.cap_room >= 0 or r.points_bought == 0
 
 
 def test_a_pick_sent_costs_the_sender_what_it_gives_the_receiver():

@@ -256,7 +256,14 @@ def run(top: int = 10, sims: int = 3000, targets: tuple[str, ...] = (), partners
             walk_away=describe_versions(st, t, v)[2], draft_message=message(st, t, v),
             status="idea", inputs=st.made_at))
     out = pd.DataFrame(rows).sort_values("jordan", ascending=False)
-    out["works_for_both"] = (out.jordan > 0) & (out.partner_gain > 0)
+    # a team still chasing the top four (simulator 40%+, or Jordan's dated read that it sees itself
+    # contending) does not sell this season for later value: it must not lose this season either
+    sim = pd.read_csv(PROCESSED / "sim_2026.csv").set_index("owner").p_top4
+    obs = pd.read_csv(PROCESSED / "observations.csv")
+    obs = obs[obs.note.str.contains("contending", case=False) & (pd.to_datetime(obs.expires) >= pd.Timestamp.now())]
+    contending = set(sim[sim >= 0.4].index) | set(obs.owner)
+    out["partner_contending"] = out.partner.isin(contending)
+    out["works_for_both"] = (out.jordan > 0) & (out.partner_gain > 0) & (~out.partner_contending | (out.partner_now >= 0))
     if save:
         out.to_csv(PROCESSED / "decide_trade_search.csv", index=False)
         (PROCESSED / "decide_trade_search.md").write_text(to_markdown(out, st))
@@ -268,8 +275,11 @@ def to_markdown(d: pd.DataFrame, st) -> str:
          f"Inputs: projections {st.made_at}; rosters and cap from the site. Ideas only: nothing is proposed until "
          "Jordan says so. Values in expected payout $ (P18); 'later' at $0.53 a point.", ""]
     good = d[d.works_for_both]
-    L += ["Asked about or searched, but no version leaves both sides ahead: "
-          + ("; ".join(f"{r.you_get} ({r.partner}: you {r.jordan:+d}, him {r.partner_gain:+d})" for r in d[~d.works_for_both].itertuples()) or "none") + ".", ""]
+    L += ["Asked about or searched, but no version leaves both sides ahead (or the partner is still contending "
+          "and would lose this season): "
+          + ("; ".join(f"{r.you_get} ({r.partner}: you {r.jordan:+d}, him {r.partner_gain:+d}"
+                       + (", contending" if r.partner_contending else "") + ")" for r in d[~d.works_for_both].itertuples())
+             or "none") + ".", ""]
     for r in good.itertuples():
         L += [f"## {r.partner}: you get {r.you_get}", "",
               f"- You give {r.you_give} (target version). You {r.jordan:+d} (this season {r.jordan_now:+.0f}, later {r.jordan_later:+.0f}); "

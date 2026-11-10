@@ -4,11 +4,9 @@ Built 2026-11-10 from prices.csv, the designation plan, site picks, dead money a
 
 | Season | Under contract | Cap committed | Cap room | Lineup points | Bought with room | Rookies | Strength | Expected payout | 1st | Top 4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2027 | 10 | $217 | $75 | 1818 | 80 | 7 | 1905 | $103 | 11% | 41% |
+| 2027 | 11 | $313 | $-20 | 1866 | 0 | 7 | 1873 | $82 | 8% | 34% |
 | 2028 | 8 | $211 | $79 | 1825 | 68 | 63 | 1956 | $105 | 11% | 40% |
 | 2029 | 6 | $156 | $132 | 1740 | 94 | 103 | 1937 | $85 | 9% | 34% |
-
-2027: the plan does not fit under the cap; given up to fit: CeeDee Lamb (designation skipped).
 
 ## Contracts and planned designations
 
