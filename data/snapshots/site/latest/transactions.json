@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-11T18:52:39+00:00",
+ "as_of": "2026-11-11T22:41:22+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -451,6 +451,25 @@
    "created_at": "2026-10-16T02:07:09.031909+00:00"
   },
   {
+   "id": "0ee663c7-d529-4267-b1d3-7ab6e21c44e4",
+   "occurred_at": "2026-11-11T21:59:39.416488+00:00",
+   "type": "fa_signing",
+   "player_id": "def-BAL",
+   "player_name": "Baltimore Ravens D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:59:39.416488+00:00"
+  },
+  {
    "id": "0f235d32-3615-4ec6-adb9-e0b79572db70",
    "occurred_at": "2026-10-16T21:00:12.491967+00:00",
    "type": "drop",
@@ -757,6 +776,24 @@
    },
    "source_id": "591a0d58-9b2a-473a-b648-f0cdf8c7cefd",
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "1ce3d55b-6c6b-4aec-b81c-a10171f03878",
+   "occurred_at": "2026-11-11T21:59:49.354892+00:00",
+   "type": "drop",
+   "player_id": "sl-5045",
+   "player_name": "Courtland Sutton",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:59:49.354892+00:00"
   },
   {
    "id": "1d540529-3bec-423e-856d-c7527326186a",
@@ -1150,6 +1187,24 @@
    },
    "source_id": null,
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "2c16b9eb-49dd-45b0-8750-cff8a4d97bc0",
+   "occurred_at": "2026-11-11T21:59:23.259028+00:00",
+   "type": "drop",
+   "player_id": "def-KC",
+   "player_name": "Kansas City Chiefs D/ST",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:59:23.259028+00:00"
   },
   {
    "id": "2cf85b1d-99d1-446f-91f8-828fc7f659f2",
@@ -1692,6 +1747,24 @@
    "created_at": "2026-10-29T21:28:12.987902+00:00"
   },
   {
+   "id": "48fd5a5f-6586-433a-a36c-d31addbacc04",
+   "occurred_at": "2026-11-11T21:58:50.400742+00:00",
+   "type": "drop",
+   "player_id": "sl-2747",
+   "player_name": "Jason Myers",
+   "from_team_id": "team-1",
+   "to_team_id": null,
+   "amount": 1,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "cap_exempt": false,
+    "dead_money": 1
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:58:50.400742+00:00"
+  },
+  {
    "id": "4978ba17-bfe1-4f95-9ef1-838e0cde8e9c",
    "occurred_at": "2026-10-16T20:44:02.710669+00:00",
    "type": "drop",
@@ -1939,6 +2012,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:44:46.959691+00:00"
+  },
+  {
+   "id": "5647543a-cddd-4ac2-83a8-8b6b4c6accb6",
+   "occurred_at": "2026-11-11T21:59:07.574632+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-11792",
+   "player_name": "Will Reichard",
+   "from_team_id": null,
+   "to_team_id": "team-1",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:59:07.574632+00:00"
   },
   {
    "id": "57a70991-4787-41ca-a1d3-28ca1b41752d",
@@ -3477,6 +3569,25 @@
    "created_at": "2026-10-16T02:08:14.840899+00:00"
   },
   {
+   "id": "9535879a-14d7-4fa4-a93b-195e241c4af9",
+   "occurred_at": "2026-11-11T21:58:32.973668+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-12491",
+   "player_name": "Corey Kiner",
+   "from_team_id": null,
+   "to_team_id": "team-2",
+   "amount": 4,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": false,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:58:32.973668+00:00"
+  },
+  {
    "id": "97156de4-0bbb-4172-b82e-53dd292a776b",
    "occurred_at": "2026-10-16T20:51:34.781328+00:00",
    "type": "fa_signing",
@@ -3891,6 +4002,24 @@
    "created_at": "2026-10-16T20:58:54.070152+00:00"
   },
   {
+   "id": "ab4890c4-cf07-458c-854b-b4f9e3763450",
+   "occurred_at": "2026-11-11T21:58:08.08585+00:00",
+   "type": "drop",
+   "player_id": "sl-96",
+   "player_name": "Aaron Rodgers",
+   "from_team_id": "team-2",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "QB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T21:58:08.08585+00:00"
+  },
+  {
    "id": "ac03baf5-fcf6-4aef-a58f-0701515d1a9f",
    "occurred_at": "2026-10-16T21:02:02.872672+00:00",
    "type": "fa_signing",
@@ -4074,6 +4203,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:50:30.537689+00:00"
+  },
+  {
+   "id": "ba4c2f80-f89c-462f-862b-f26c17bf3b90",
+   "occurred_at": "2026-11-11T22:00:02.960351+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-11579",
+   "player_name": "Audric Estime",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-11T22:00:02.960351+00:00"
   },
   {
    "id": "bb127429-0cac-4720-a399-67ceac680beb",
