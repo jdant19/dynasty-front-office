@@ -1,6 +1,6 @@
 {
  "table": "team_lineups",
- "as_of": "2026-11-10T21:48:25+00:00",
+ "as_of": "2026-11-11T06:12:53+00:00",
  "rows": [
   {
    "id": "0009e24d-af7f-4e3e-b262-abb4c8384ac4",
@@ -1443,6 +1443,15 @@
    "updated_at": "2026-09-02T20:34:41.160127+00:00"
   },
   {
+   "id": "c23a9554-dda5-49b0-a5bf-3cd673f82658",
+   "team_id": "team-9",
+   "player_id": "def-BUF",
+   "slot": "BN",
+   "slot_index": 8,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-10T22:54:08.372973+00:00"
+  },
+  {
    "id": "c3fd2cf7-64de-4f8a-8f3f-1b2bf2545811",
    "team_id": "team-6",
    "player_id": "def-GB",
@@ -1540,6 +1549,15 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-10-20T21:21:43.546496+00:00"
+  },
+  {
+   "id": "cec6523e-59fe-4758-8eb8-e1553b58eba7",
+   "team_id": "team-2",
+   "player_id": "sl-3286",
+   "slot": "BN",
+   "slot_index": 10,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-10T22:53:38.831478+00:00"
   },
   {
    "id": "d018366f-8bcb-4547-9371-29c9e5379013",
