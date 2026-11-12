@@ -195,6 +195,22 @@ Question: which deals raise Jordan's expected payout the most, and what should h
 Known limits: one player from the partner per deal; acceptance odds are not modeled (no real declines on
 record); a player's planned designation travels with him at the planned salary.
 
+## Other owners' likely plans (`decide/owner_plans.py`)
+
+The model's read of each owner's 2027 designations, from how owners have behaved (2019-2026), for
+Jordan to review: `decide_owner_plans_2027.md`; corrections in `config/owner_plans.yaml` win.
+
+- RFA costs nothing to designate (the owner can decline to match) and owners use 1.2-1.9 of their two
+  slots a year: each owner designates his two most valuable RFA-eligible players someone would bid on.
+- Matching: 90% of RFAs valued $50+ were matched, 76% at $25-50, 69% below (101 RFAs 2020-2026).
+- RFA prices ran 1.08x the auction model at $50+, 1.50x at $25-50, 1.79x below, and bids are limited
+  to the bidder's cap room.
+- Tags: used in 44-86% of offseasons, on stars, usually at a loss; an owner tags his best tag-eligible
+  player not otherwise designated when his market value is at least half the tag cost.
+- Auction stars: $50+ players sold at 0.89-1.02 of the model's price 2020-2025 (Jefferson and Lamb $93
+  vs $93, McCaffrey $108 vs $105 and $114), so the model already prices the premium; in scenarios a
+  star never goes below his market price unless no team that needs players can pay it.
+
 ## Offseason plan scenarios (`decide/offseason.py`)
 
 Question: which designations (RFA match, tag, let go) give the best team and payout?
@@ -205,10 +221,10 @@ Question: which designations (RFA match, tag, let go) give the best team and pay
   room; a team over the cap (through RFA matches only) is locked out and takes $0 leftovers; the rest
   buy in price order. Ten strengths go through the future simulator; 2028-29 from the outlook.
 - Output: `decide_offseason_2027.md`, `.csv`, `decide_offseason_2027_auction_prices.csv`.
-- 2026-11-11, expected 2027 payout: tag Lamb + match Gibbs $119 at any Gibbs price (locked out);
-  match Gibbs and buy Chase at auction $124; let both go $140 (buys Bijan Robinson and Chase). If
-  Russ keeps Bijan: $128 / $128 / $122. If stars also cost 30% more: $128 / $124 / $113. Keeping both
-  is the steady plan; the alternatives win only when a top back reaches the auction near his market price.
+- 2026-11-12, with the behavioral owner plans: no other team is likely to have more than about $80 of
+  2027 room once its own designations are paid, so Gibbs's RFA price tops out near $78-80. Expected
+  2027 payout: match Gibbs and buy at auction (Lamb to the auction) $131; let both go $125; tag Lamb +
+  match Gibbs $121; tag Lamb and let Gibbs go $111. Range over other owners' match outcomes: about $5.
 - History (2014-2025, 115 team-seasons): teams that spent $0-25 at auction (15) finished 4.7 on average;
   $26-175 finished 5.4-5.8; $176+ (5) finished 5.0.
 

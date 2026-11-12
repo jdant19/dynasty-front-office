@@ -196,5 +196,15 @@ def test_locked_out_team_buys_nothing_and_still_fills_its_roster():
     gid, lid = p.index[p.player == "Jahmyr Gibbs"][0], p.index[p.player == "CeeDee Lamb"][0]
     r = a.play({lid: 96, gid: 125})
     assert r["jordan_room"] < 0 and r["jordan_spent"] == 0 and r["jordan_free"]
-    open_ = a.play({}, (gid,))
+    open_ = a.play({}, {gid: 102})
     assert open_["jordan_spent"] <= open_["jordan_room"] + 18 and open_["jordan_bought"]
+
+
+def test_owner_plans_follow_behavior_not_bargains():
+    from dfo.decide.owner_plans import predict
+    d = predict(exclude_owner="Jordan")
+    assert (d.groupby("owner").apply(lambda g: (g.action == "RFA").sum()) <= 2).all()
+    assert (d.groupby("owner").apply(lambda g: (g.action == "tag").sum()) <= 1).all()
+    # the most valuable RFA-eligible player of each owner is designated when anyone would bid on him
+    bij = d[d.player == "Bijan Robinson"]
+    assert len(bij) == 1 and bij.action.iloc[0] in ("RFA", "tag") and bij.p_keep.iloc[0] >= 0.85

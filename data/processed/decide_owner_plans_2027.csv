@@ -1,0 +1,91 @@
+owner,player_id,player,pos,salary_2026,market_value,action,expected_price,p_keep,reason,made_at
+Ben,00-0036970,Kyle Pitts,TE,1,4,RFA,7,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Ben,00-0039424,Devaughn Vele,WR,1,3,RFA,5,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Ben,00-0038551,Kendre Miller,RB,1,2,auction,2,0.0,low value,2026-11-12T15:22:57+00:00
+Ben,00-0038621,DeMario Douglas,WR,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Ben,00-0033303,Harrison Butker,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Ben,00-0036407,Jerry Jeudy,WR,32,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Ben,DEF-CLE,Browns,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,00-0033280,Christian McCaffrey,RB,68,74,tag,75,0.9,his best tag-eligible player; owners tag stars even above value (tag $75),2026-11-12T15:22:57+00:00
+Johnny,00-0036963,Amon-Ra St. Brown,WR,100,67,auction,67,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Johnny,00-0036997,Javonte Williams,RB,48,58,auction,58,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Johnny,00-0039064,Zay Flowers,WR,8,40,RFA,60,0.76,one of his two most valuable RFA-eligible players; owners match 76% at this value,2026-11-12T15:22:57+00:00
+Johnny,00-0037263,Tyler Allgeier,RB,1,8,RFA,14,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Johnny,00-0037256,Rachaad White,RB,1,4,auction,4,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,00-0033293,Aaron Jones,RB,1,4,auction,4,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,00-0033106,Jared Goff,QB,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,00-0031588,Stefon Diggs,WR,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,00-0030279,Keenan Allen,WR,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,DEF-MIN,Vikings,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,00-0031492,Jason Myers,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Johnny,DEF-JAX,Jaguars,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,00-0037248,James Cook,RB,79,89,RFA,96,0.9,one of his two most valuable RFA-eligible players; owners match 90% at this value,2026-11-12T15:22:57+00:00
+Matt,00-0039067,Rashee Rice,WR,6,20,RFA,36,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Matt,00-0035676,A.J. Brown,WR,48,9,auction,9,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,00-0039491,Jalen Coker,WR,2,9,auction,9,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,00-0037834,Brock Purdy,QB,1,4,auction,4,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,00-0034351,Dallas Goedert,TE,1,2,auction,2,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,00-0035229,T.J. Hockenson,TE,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,00-0031136,Chris Boswell,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,DEF-CHI,Bears,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Matt,DEF-LA,Rams,DEF,2,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Max,00-0038597,Chase Brown,RB,4,32,RFA,48,0.76,one of his two most valuable RFA-eligible players; owners match 76% at this value,2026-11-12T15:22:57+00:00
+Max,00-0036554,Nico Collins,WR,91,24,auction,24,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Max,00-0039040,De'Von Achane,RB,8,21,RFA,38,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Max,00-0039065,Sam LaPorta,TE,6,13,auction,13,0.0,low value,2026-11-12T15:22:57+00:00
+Max,00-0038563,Tre Tucker,WR,1,3,auction,3,0.0,low value,2026-11-12T15:22:57+00:00
+Max,00-0030565,Geno Smith,QB,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Max,00-0032726,Ka'imi Fairbairn,K,2,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Max,00-0036854,Evan McPherson,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Max,DEF-NE,Patriots,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0034857,Josh Allen,QB,72,25,tag,34,0.9,his best tag-eligible player; owners tag stars even above value (tag $34),2026-11-12T15:22:57+00:00
+Mike,00-0040583,Woody Marks,RB,1,12,RFA,21,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Mike,00-0039576,Spencer Shrader,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0034383,Dalton Schultz,TE,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0033090,Hunter Henry,TE,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0039410,Ryan Flournoy,WR,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0033526,Samaje Perine,RB,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0041125,Seth McGowan,RB,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,DEF-GB,Packers,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Mike,00-0038977,Tank Dell,WR,45,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0037840,Kyren Williams,RB,45,63,RFA,68,0.9,one of his two most valuable RFA-eligible players; owners match 90% at this value,2026-11-12T15:22:57+00:00
+Qasim,00-0036322,Justin Jefferson,WR,92,38,auction,38,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Qasim,00-0035261,Tony Pollard,RB,15,12,auction,12,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0036139,Rico Dowdle,RB,4,11,RFA,20,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Qasim,00-0038933,Dalton Kincaid,TE,8,10,auction,10,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0039165,Zach Charbonnet,RB,8,4,auction,4,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0036971,Trevor Lawrence,QB,1,3,auction,3,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0039032,Tyjae Spears,RB,6,3,auction,3,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0039409,Cam Little,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,00-0030506,Travis Kelce,TE,4,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,DEF-CIN,Bengals,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Qasim,DEF-SEA,Seahawks,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Russ,00-0038542,Bijan Robinson,RB,8,108,RFA,117,0.9,one of his two most valuable RFA-eligible players; owners match 90% at this value,2026-11-12T15:22:57+00:00
+Russ,00-0039075,Puka Nacua,WR,45,91,RFA,98,0.9,one of his two most valuable RFA-eligible players; owners match 90% at this value,2026-11-12T15:22:57+00:00
+Russ,00-0037744,Trey McBride,TE,42,44,tag,19,0.9,his best tag-eligible player; owners tag stars even above value (tag $19),2026-11-12T15:22:57+00:00
+Russ,00-0036275,D'Andre Swift,RB,26,21,auction,21,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Russ,00-0038997,Josh Downs,WR,4,8,auction,8,0.0,low value,2026-11-12T15:22:57+00:00
+Russ,00-0031408,Mike Evans,WR,23,7,auction,7,0.0,low value,2026-11-12T15:22:57+00:00
+Russ,00-0023459,Aaron Rodgers,QB,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Russ,00-0035269,Matt Gay,K,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Russ,DEF-DET,Lions,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Russ,00-0034775,Christian Kirk,WR,10,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Ryan,00-0036973,Travis Etienne,RB,20,21,auction,21,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Ryan,00-0036912,DeVonta Smith,WR,51,21,auction,21,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Ryan,00-0038994,Jordan Addison,WR,8,7,auction,7,0.0,low value,2026-11-12T15:22:57+00:00
+Ryan,00-0038797,Emanuel Wilson,RB,1,3,RFA,5,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Ryan,00-0037746,Brian Robinson,RB,1,3,RFA,5,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Ryan,DEF-PIT,Steelers,DEF,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Ryan,00-0039146,Jayden Reed,WR,4,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0038543,Jaxon Smith-Njigba,WR,8,84,RFA,91,0.9,one of his two most valuable RFA-eligible players; owners match 90% at this value,2026-11-12T15:22:57+00:00
+Zach,00-0037238,Drake London,WR,88,52,tag,96,0.9,his best tag-eligible player; owners tag stars even above value (tag $96),2026-11-12T15:22:57+00:00
+Zach,00-0038124,Christian Watson,WR,27,27,auction,27,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Zach,00-0037838,Isaiah Likely,TE,1,15,RFA,27,0.69,one of his two most valuable RFA-eligible players; owners match 69% at this value,2026-11-12T15:22:57+00:00
+Zach,00-0035685,David Montgomery,RB,39,15,auction,15,0.0,no designation left for him,2026-11-12T15:22:57+00:00
+Zach,00-0031381,Davante Adams,WR,39,7,auction,7,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0033906,Alvin Kamara,RB,33,4,auction,4,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0034960,Jakobi Meyers,WR,1,3,auction,3,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0039163,C.J. Stroud,QB,4,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0026498,Matthew Stafford,QB,3,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0036040,Juwan Johnson,TE,1,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
+Zach,00-0040074,Tyler Loop,K,2,1,auction,1,0.0,low value,2026-11-12T15:22:57+00:00
