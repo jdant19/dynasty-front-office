@@ -1,6 +1,6 @@
 {
  "table": "trade_approvals",
- "as_of": "2026-11-11T22:41:22+00:00",
+ "as_of": "2026-11-12T07:07:40+00:00",
  "rows": [
   {
    "id": "09ccc49d-9947-4a2c-8a07-9d67b2ac17b6",
@@ -27,6 +27,15 @@
    "user_id": null,
    "status": "approved",
    "responded_at": "2026-10-16T15:59:58.88291+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "68d84091-e6b5-4df9-a034-38803b92c8cf",
+   "trade_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "team_id": "team-3",
+   "user_id": "058292e4-deb9-425b-9bc5-ac9879b46371",
+   "status": "approved",
+   "responded_at": "2026-11-12T00:35:44.311856+00:00",
    "drop_player_ids": null
   },
   {
@@ -108,6 +117,15 @@
    "user_id": "3d3aed6f-e693-410e-8e09-13416d49bcad",
    "status": "approved",
    "responded_at": "2026-10-16T15:59:58.88291+00:00",
+   "drop_player_ids": null
+  },
+  {
+   "id": "ec70ae9a-d83f-4668-8e81-908786a9873f",
+   "trade_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "team_id": "team-6",
+   "user_id": "3e5af2c0-c58c-429e-afa0-ba49b0df8342",
+   "status": "approved",
+   "responded_at": "2026-11-12T00:58:50.694+00:00",
    "drop_player_ids": null
   },
   {

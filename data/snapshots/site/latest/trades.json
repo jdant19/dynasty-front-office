@@ -1,6 +1,6 @@
 {
  "table": "trades",
- "as_of": "2026-11-11T22:41:22+00:00",
+ "as_of": "2026-11-12T07:07:40+00:00",
  "rows": [
   {
    "id": "31b93a69-ed36-4214-bc8b-a8acf8dea054",
@@ -592,6 +592,131 @@
    },
    "created_at": "2026-04-21T02:48:36.65208+00:00",
    "executed_at": null,
+   "parent_trade_id": null
+  },
+  {
+   "id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "proposed_by": "058292e4-deb9-425b-9bc5-ac9879b46371",
+   "status": "executed",
+   "trade_data": {
+    "assets": [
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-4035",
+       "name": "Alvin Kamara",
+       "team": "NO",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 33,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-6",
+      "fromTeamId": "team-3"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-5892",
+       "name": "David Montgomery",
+       "team": "HOU",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 39,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-6",
+      "fromTeamId": "team-3"
+     },
+     {
+      "pick": {
+       "id": "e65cb973-7b38-4cb9-91af-043f12fdca80",
+       "pick": "TBD",
+       "year": "2027",
+       "round": 2,
+       "salaries": {
+        "2026/2027": 0,
+        "2027/2028": 3,
+        "2028/2029": 4,
+        "2029/2030": 5,
+        "2030/2031": 6
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-6",
+      "fromTeamId": "team-3"
+     },
+     {
+      "pick": {
+       "id": "012d6abc-3e37-446d-931a-b98cb9377cab",
+       "pick": "TBD",
+       "year": "2028",
+       "round": 1,
+       "salaries": {
+        "2026/2027": 0,
+        "2027/2028": 0,
+        "2028/2029": 5,
+        "2029/2030": 6,
+        "2030/2031": 7
+       }
+      },
+      "type": "pick",
+      "toTeamId": "team-6",
+      "fromTeamId": "team-3"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-4984",
+       "name": "Josh Allen",
+       "team": "BUF",
+       "position": "QB",
+       "salaries": {
+        "2026/2027": 72,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-3",
+      "fromTeamId": "team-6"
+     },
+     {
+      "type": "player",
+      "player": {
+       "id": "sl-12474",
+       "name": "Woody Marks",
+       "team": "HOU",
+       "position": "RB",
+       "salaries": {
+        "2026/2027": 1,
+        "2027/2028": 0,
+        "2028/2029": 0,
+        "2029/2030": 0,
+        "2030/2031": 0
+       }
+      },
+      "toTeamId": "team-3",
+      "fromTeamId": "team-6"
+     }
+    ],
+    "teamIds": [
+     "team-3",
+     "team-6"
+    ],
+    "currentSeason": "2026/2027"
+   },
+   "created_at": "2026-11-12T00:35:44.311856+00:00",
+   "executed_at": "2026-11-12T00:58:52.456289+00:00",
    "parent_trade_id": null
   },
   {

@@ -1,13 +1,13 @@
 {
  "table": "team_draft_picks",
- "as_of": "2026-11-11T22:41:22+00:00",
+ "as_of": "2026-11-12T07:07:40+00:00",
  "rows": [
   {
    "id": "012d6abc-3e37-446d-931a-b98cb9377cab",
-   "team_id": "team-3",
+   "team_id": "team-6",
    "round": 1,
    "draft_year": 2028,
-   "pick_label": "TBD",
+   "pick_label": "TBD (from In the Nix of Time)",
    "year1_salary": 5,
    "year2_salary": 6,
    "year3_salary": 7,
@@ -1369,10 +1369,10 @@
   },
   {
    "id": "e65cb973-7b38-4cb9-91af-043f12fdca80",
-   "team_id": "team-3",
+   "team_id": "team-6",
    "round": 2,
    "draft_year": 2027,
-   "pick_label": "TBD",
+   "pick_label": "TBD (from In the Nix of Time)",
    "year1_salary": 3,
    "year2_salary": 4,
    "year3_salary": 5,

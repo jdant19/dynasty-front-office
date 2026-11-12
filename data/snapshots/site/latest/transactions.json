@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-11T22:41:22+00:00",
+ "as_of": "2026-11-12T07:07:40+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -503,6 +503,24 @@
    },
    "source_id": null,
    "created_at": "2026-11-05T22:15:39.418033+00:00"
+  },
+  {
+   "id": "1039e3f2-c532-40c0-9f61-63a123f92080",
+   "occurred_at": "2026-11-12T00:58:52.456289+00:00",
+   "type": "trade",
+   "player_id": null,
+   "player_name": "2028 Round 1 pick (TBD (from In the Nix of Time))",
+   "from_team_id": "team-3",
+   "to_team_id": "team-6",
+   "amount": null,
+   "details": {
+    "year": 2028,
+    "asset": "pick",
+    "label": "TBD (from In the Nix of Time)",
+    "round": 1
+   },
+   "source_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "created_at": "2026-11-12T00:58:52.456289+00:00"
   },
   {
    "id": "1066689b-a833-414b-8aea-83f635c41a6a",
@@ -3037,6 +3055,21 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "82951faf-fafb-400a-8af0-64ae1fdd4823",
+   "occurred_at": "2026-11-12T00:58:52.456289+00:00",
+   "type": "trade",
+   "player_id": "sl-5892",
+   "player_name": "David Montgomery",
+   "from_team_id": "team-3",
+   "to_team_id": "team-6",
+   "amount": null,
+   "details": {
+    "asset": "player"
+   },
+   "source_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "created_at": "2026-11-12T00:58:52.456289+00:00"
+  },
+  {
    "id": "82f0d91e-20c3-4f4d-ad12-82c2d0ee5d9f",
    "occurred_at": "2026-10-29T21:29:55.218128+00:00",
    "type": "drop",
@@ -3088,6 +3121,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:55:10.805566+00:00"
+  },
+  {
+   "id": "862014c3-8f4f-4808-a991-54933213f259",
+   "occurred_at": "2026-11-12T03:10:38.232345+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-9228",
+   "player_name": "Bryce Young",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "QB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-12T03:10:38.232345+00:00"
   },
   {
    "id": "86c70e13-d61f-4468-8a22-9497fd8745bb",
@@ -3164,6 +3216,21 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "8803ece1-0038-493d-9ff6-ba177fef3cd9",
+   "occurred_at": "2026-11-12T00:58:52.456289+00:00",
+   "type": "trade",
+   "player_id": "sl-4984",
+   "player_name": "Josh Allen",
+   "from_team_id": "team-6",
+   "to_team_id": "team-3",
+   "amount": null,
+   "details": {
+    "asset": "player"
+   },
+   "source_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "created_at": "2026-11-12T00:58:52.456289+00:00"
+  },
+  {
    "id": "89bef834-0e35-42d0-aa2d-384e01e2a831",
    "occurred_at": "2026-10-21T20:50:49.082096+00:00",
    "type": "fa_signing",
@@ -3181,6 +3248,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-21T20:50:49.082096+00:00"
+  },
+  {
+   "id": "8bfcabcc-ab78-4e6a-a3d1-870c64fc2a30",
+   "occurred_at": "2026-11-12T03:10:21.804882+00:00",
+   "type": "drop",
+   "player_id": "sl-11559",
+   "player_name": "Michael Penix",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "QB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-12T03:10:21.804882+00:00"
   },
   {
    "id": "8cb7d34b-c7d5-40fb-99ce-860b6aea76b2",
@@ -3215,6 +3300,21 @@
    },
    "source_id": null,
    "created_at": "2026-09-02T21:37:31.596752+00:00"
+  },
+  {
+   "id": "8ec82c48-f2e4-440d-9195-a0f917342f14",
+   "occurred_at": "2026-11-12T00:58:52.456289+00:00",
+   "type": "trade",
+   "player_id": "sl-4035",
+   "player_name": "Alvin Kamara",
+   "from_team_id": "team-3",
+   "to_team_id": "team-6",
+   "amount": null,
+   "details": {
+    "asset": "player"
+   },
+   "source_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "created_at": "2026-11-12T00:58:52.456289+00:00"
   },
   {
    "id": "8f30a44a-5096-4375-a944-531c76eb84b8",
@@ -4114,6 +4214,24 @@
    "created_at": "2026-08-05T21:33:26.453873+00:00"
   },
   {
+   "id": "b3fc3b91-f2de-467f-99dc-87556cbec6c3",
+   "occurred_at": "2026-11-12T00:58:52.456289+00:00",
+   "type": "trade",
+   "player_id": null,
+   "player_name": "2027 Round 2 pick (TBD (from In the Nix of Time))",
+   "from_team_id": "team-3",
+   "to_team_id": "team-6",
+   "amount": null,
+   "details": {
+    "year": 2027,
+    "asset": "pick",
+    "label": "TBD (from In the Nix of Time)",
+    "round": 2
+   },
+   "source_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "created_at": "2026-11-12T00:58:52.456289+00:00"
+  },
+  {
    "id": "b5125e76-d815-41d6-8131-c377f15b5970",
    "occurred_at": "2026-10-16T20:57:22.207311+00:00",
    "type": "fa_signing",
@@ -4239,6 +4357,25 @@
    },
    "source_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "bbcd1658-3ec4-4ac5-9668-00a0cbca1ac1",
+   "occurred_at": "2026-11-12T03:15:08.622423+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-7562",
+   "player_name": "Tutu Atwell",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "WR",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-12T03:15:08.622423+00:00"
   },
   {
    "id": "bc63006e-e5da-4d9e-bde0-100013ef9641",
@@ -4704,6 +4841,21 @@
    },
    "source_id": null,
    "created_at": "2026-09-02T21:37:31.596752+00:00"
+  },
+  {
+   "id": "d5a7cee5-ffc5-47a1-9408-f3793a833364",
+   "occurred_at": "2026-11-12T00:58:52.456289+00:00",
+   "type": "trade",
+   "player_id": "sl-12474",
+   "player_name": "Woody Marks",
+   "from_team_id": "team-6",
+   "to_team_id": "team-3",
+   "amount": null,
+   "details": {
+    "asset": "player"
+   },
+   "source_id": "988a3741-18f8-43aa-9836-9522df4a9116",
+   "created_at": "2026-11-12T00:58:52.456289+00:00"
   },
   {
    "id": "d5b50890-14c1-4853-8ecc-b14fa2071663",
@@ -5706,6 +5858,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T02:06:30.683886+00:00"
+  },
+  {
+   "id": "ff004b9f-363c-4d88-96cd-e75f1e5c1013",
+   "occurred_at": "2026-11-12T03:14:52.445792+00:00",
+   "type": "drop",
+   "player_id": "sl-6130",
+   "player_name": "Devin Singletary",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "RB",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-12T03:14:52.445792+00:00"
   }
  ]
 }
