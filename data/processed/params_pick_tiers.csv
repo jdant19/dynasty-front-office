@@ -1,0 +1,4 @@
+tier,first_slot,last_slot,picks,mean_points,median_points,chance_no_value,chance_100_plus,mean_low,mean_high,drafts,fit_date
+1,1,3,27,226.7,219.7,0.22,0.67,175.3,270.9,2014-2022,2026-11-12
+2,4,9,54,109.9,28.7,0.39,0.41,86.9,138.4,2014-2022,2026-11-12
+3,10,30,189,44.0,0.0,0.58,0.17,36.9,51.6,2014-2022,2026-11-12

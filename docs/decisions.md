@@ -174,8 +174,12 @@ Question: which deals raise Jordan's expected payout the most, and what should h
   packages dropped; the best four per target re-scored through both teams' three-year outlook.
 - A partner still chasing the top four (simulator 40%+, or Jordan's dated read in observations.csv)
   must not lose this season in the deal; contenders do not sell for later value.
-- Picks are valued at their rookie deal's lineup points over what the rookie salary buys, four seasons
-  at 0.88 a year from the draft (`val_picks_slots.csv` use_lineup), x0.88 a year until the draft.
+- Picks are valued by slot tier, not round (`valuation/pick_tiers.py`, `params_pick_tiers.csv`, drafts
+  2014-2022): lineup points over what the rookie salary buys, four seasons at 0.88 a year. Picks 1-3:
+  227 on average (22% give nothing); picks 4-9: 110 (median 29, 39% nothing); picks 10-30: 44 (median
+  0, 58% nothing). A second or third is worth what the last pick of the first round is. A future
+  pick averages the slots it could be: next year's from the original team's simulated finish, later
+  years every slot in the round; x0.88 a year until the draft.
 - Picks settle the gap, because picks are what this league trades in (92% of the 52 trades 2014-2024
   included a pick, cap moved in 54%; Jordan's partners got picks in 76% of his trades; Jordan
   2026-11-10). Every set of up to two of Jordan's picks is tried: opening (the smallest add leaving the
@@ -190,3 +194,23 @@ Question: which deals raise Jordan's expected payout the most, and what should h
 
 Known limits: one player from the partner per deal; acceptance odds are not modeled (no real declines on
 record); a player's planned designation travels with him at the planned salary.
+
+## Offseason plan scenarios (`decide/offseason.py`)
+
+Question: which designations (RFA match, tag, let go) give the best team and payout?
+
+- Each scenario is played through the 2027 auction player by player: other teams follow their likely
+  plans (`designation_plan.csv`); everyone not kept is the pool; prices are each player's market price
+  scaled so the league's room is spent; Jordan buys the set that adds most to his lineup within his
+  room; a team over the cap (through RFA matches only) is locked out and takes $0 leftovers; the rest
+  buy in price order. Ten strengths go through the future simulator; 2028-29 from the outlook.
+- Output: `decide_offseason_2027.md`, `.csv`, `decide_offseason_2027_auction_prices.csv`.
+- 2026-11-11, expected 2027 payout: tag Lamb + match Gibbs $119 at any Gibbs price (locked out);
+  match Gibbs and buy Chase at auction $124; let both go $140 (buys Bijan Robinson and Chase). If
+  Russ keeps Bijan: $128 / $128 / $122. If stars also cost 30% more: $128 / $124 / $113. Keeping both
+  is the steady plan; the alternatives win only when a top back reaches the auction near his market price.
+- History (2014-2025, 115 team-seasons): teams that spent $0-25 at auction (15) finished 4.7 on average;
+  $26-175 finished 5.4-5.8; $176+ (5) finished 5.0.
+
+Known limits: other teams' plans are the model's, not confirmed; RFA prices for other teams' players
+are market prices; one auction path per scenario (no bidding randomness yet).

@@ -104,18 +104,16 @@ class State:
         return lineup_points(pd.concat([g, self.waiver]))
 
     def pick_points(self, year: int, rnd: int, original: str, overall: int | None = None) -> float:
-        """Lineup points over the rookie deal, at the slot when known, else the expected slot (2027: from
-        the simulated finish of the pick's original team; later years: the round average), x0.88 a
-        year after 2027."""
+        """Lineup points over the rookie deal by slot tier (valuation/pick_tiers.py: picks 1-3, 4-9, 10+):
+        the slot when known; next year's draft from the original team's simulated finish; later drafts
+        every slot in the round equally likely. x0.88 a year until the draft."""
+        from dfo.valuation import pick_tiers
         if overall:
-            v = float(np.interp(overall, self.slots.overall, self.slots.use_lineup))
+            v = float(pick_tiers.slot_value(overall)[0])
         elif year == SEASON + 1 and original in self.slot_mean.index:
-            ov = (rnd - 1) * 10 + float(self.slot_mean[original])
-            v = float(np.interp(ov, self.slots.overall, self.slots.use_lineup))
+            v = pick_tiers.pick_value(rnd, float(self.slot_mean[original]))
         else:
-            v = float(self.slots[self.slots["round"] == rnd].use_lineup.mean())
-        # use_lineup already sums the rookie deal's four seasons at 0.88 a year from the draft year;
-        # only the years until the draft are discounted here
+            v = pick_tiers.pick_value(rnd)
         return v * HAIRCUT ** max(0, year - (SEASON + 1))
 
     def cap_points(self, cap: dict[int, int]) -> float:

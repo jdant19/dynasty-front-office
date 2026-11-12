@@ -178,3 +178,23 @@ def test_conversions_are_stable_league_wide():
     assert c["finish_carryover_rank_corr"] < 0.3              # why later seasons use one league-wide value
     odds = C.finish_odds(2.0)
     assert abs(odds.sum() - 1) < 1e-9 and C.expected_payout(odds, 1.0) > C.expected_payout(odds)
+
+
+def test_pick_tiers_fall_with_slot_and_cover_every_slot():
+    from dfo.valuation import pick_tiers as T
+    t = T.load()
+    assert t.first_slot.iloc[0] == 1 and t.last_slot.iloc[-1] == 30
+    assert (t.first_slot.iloc[1:].to_numpy() == t.last_slot.iloc[:-1].to_numpy() + 1).all()
+    assert t.mean_points.is_monotonic_decreasing
+    assert T.pick_value(1, 2) > T.pick_value(1) > T.pick_value(1, 9.5) >= T.pick_value(2)
+
+
+def test_locked_out_team_buys_nothing_and_still_fills_its_roster():
+    from dfo.decide.offseason import ME, Auction
+    a = Auction()
+    p = a.p
+    gid, lid = p.index[p.player == "Jahmyr Gibbs"][0], p.index[p.player == "CeeDee Lamb"][0]
+    r = a.play({lid: 96, gid: 125})
+    assert r["jordan_room"] < 0 and r["jordan_spent"] == 0 and r["jordan_free"]
+    open_ = a.play({}, (gid,))
+    assert open_["jordan_spent"] <= open_["jordan_room"] + 18 and open_["jordan_bought"]
