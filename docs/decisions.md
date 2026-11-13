@@ -221,10 +221,15 @@ Question: which designations (RFA match, tag, let go) give the best team and pay
   room; a team over the cap (through RFA matches only) is locked out and takes $0 leftovers; the rest
   buy in price order. Ten strengths go through the future simulator; 2028-29 from the outlook.
 - Output: `decide_offseason_2027.md`, `.csv`, `decide_offseason_2027_auction_prices.csv`.
-- 2026-11-12, with the behavioral owner plans: no other team is likely to have more than about $80 of
-  2027 room once its own designations are paid, so Gibbs's RFA price tops out near $78-80. Expected
-  2027 payout: match Gibbs and buy at auction (Lamb to the auction) $131; let both go $125; tag Lamb +
-  match Gibbs $121; tag Lamb and let Gibbs go $111. Range over other owners' match outcomes: about $5.
+- RFA phase (Jordan 2026-11-13): one player at a time in ranking order (ESPN; the model's market value
+  stands in), sealed bids. During it a team's cap carries contracts, dead money, traded cap, rookie
+  salaries for owned picks, tags, and each pending RFA at his opening bid only; each RFA settled raises
+  it to his final price. Winning bid = model value x what players of his positional rank went for
+  (1.17-1.45x), never above the richest other team's room at that moment. So the first stars draw
+  the whole league's room: Gibbs comes out at $136 ($126-143 across draws; Chase went for $135 in 2025).
+- 2026-11-13 (after the Mike-Zach trade): tag Lamb + match Gibbs $121 expected 2027 payout ($309 over
+  three years); let both go $121 on the likely path but $91-115 across draws ($300); tag Lamb and let
+  Gibbs go $111 ($290); match Gibbs and send Lamb to the auction $98 ($286).
 - History (2014-2025, 115 team-seasons): teams that spent $0-25 at auction (15) finished 4.7 on average;
   $26-175 finished 5.4-5.8; $176+ (5) finished 5.0.
 

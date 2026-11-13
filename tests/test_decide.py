@@ -194,9 +194,11 @@ def test_locked_out_team_buys_nothing_and_still_fills_its_roster():
     a = Auction()
     p = a.p
     gid, lid = p.index[p.player == "Jahmyr Gibbs"][0], p.index[p.player == "CeeDee Lamb"][0]
-    r = a.play({lid: 96, gid: 125})
+    r = a.play({lid: 96}, {gid: True})
+    assert r["rfa_paid"][gid] > 96                     # an elite RFA bid on first draws the league's money
     assert r["jordan_room"] < 0 and r["jordan_spent"] == 0 and r["jordan_free"]
-    open_ = a.play({}, {gid: 102})
+    open_ = a.play({}, {gid: False})
+    assert open_["rfa_winner"][gid] != "Jordan"
     assert open_["jordan_spent"] <= open_["jordan_room"] + 18 and open_["jordan_bought"]
 
 

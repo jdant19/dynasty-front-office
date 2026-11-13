@@ -16,8 +16,6 @@ Correct anything in config/owner_plans.yaml (owner -> player -> action: RFA / ta
 | Max | Chase Brown | RB | $32 | RFA | 76% | $48 | one of his two most valuable RFA-eligible players; owners match 76% at this value |
 | Max | Nico Collins | WR | $24 | auction | 0% | $24 | no designation left for him |
 | Max | De'Von Achane | RB | $21 | RFA | 69% | $38 | one of his two most valuable RFA-eligible players; owners match 69% at this value |
-| Mike | Josh Allen | QB | $25 | tag | 90% | $34 | his best tag-eligible player; owners tag stars even above value (tag $34) |
-| Mike | Woody Marks | RB | $12 | RFA | 69% | $21 | one of his two most valuable RFA-eligible players; owners match 69% at this value |
 | Qasim | Kyren Williams | RB | $63 | RFA | 90% | $68 | one of his two most valuable RFA-eligible players; owners match 90% at this value |
 | Qasim | Justin Jefferson | WR | $38 | auction | 0% | $38 | no designation left for him |
 | Qasim | Rico Dowdle | RB | $11 | RFA | 69% | $20 | one of his two most valuable RFA-eligible players; owners match 69% at this value |
@@ -32,4 +30,5 @@ Correct anything in config/owner_plans.yaml (owner -> player -> action: RFA / ta
 | Zach | Jaxon Smith-Njigba | WR | $84 | RFA | 90% | $91 | one of his two most valuable RFA-eligible players; owners match 90% at this value |
 | Zach | Drake London | WR | $52 | tag | 90% | $96 | his best tag-eligible player; owners tag stars even above value (tag $96) |
 | Zach | Christian Watson | WR | $27 | auction | 0% | $27 | no designation left for him |
+| Zach | Josh Allen | QB | $25 | auction | 0% | $25 | no designation left for him |
 | Zach | Isaiah Likely | TE | $15 | RFA | 69% | $27 | one of his two most valuable RFA-eligible players; owners match 69% at this value |

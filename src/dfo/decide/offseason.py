@@ -55,17 +55,28 @@ class Auction:
         self.owners = sorted(x for x in self.p.owner.dropna().unique() if x)
         self.name = self.p.player
 
-    def play(self, keep: dict[str, float], let_go_rfa: dict[str, float] | None = None, star_premium: float = 1.0,
+    # final RFA price / auction model value by positional rank (101 RFAs 2020-2026, val_rfa_backtest.csv)
+    RFA_RATIO = [(3, 1.45), (6, 1.17), (12, 1.26), (24, 1.45), (999, 1.34)]
+
+    def play(self, keep: dict[str, float], jordan_rfa: dict[str, bool] | None = None, star_premium: float = 1.0,
              not_available: tuple[str, ...] = (), rng: np.random.Generator | None = None) -> dict:
-        """`keep`: Jordan's designated players -> 2027 salary. `let_go_rfa`: his RFAs he declines to match
-        -> their price. Other owners follow decide/owner_plans.py (the model's read of their behavior,
-        Jordan's corrections first); with `rng`, each of their RFAs is matched with its historical chance,
-        otherwise the likely outcome is used. An RFA not matched signs with the team with the most room
-        that can bid (bids are limited to cap room); he never reaches the auction."""
+        """`keep`: Jordan's tagged players -> tag cost. `jordan_rfa`: his RFAs -> match (True) or not.
+        Other owners follow decide/owner_plans.py (Jordan's corrections first).
+
+        RFA phase, one player at a time in ranking order (Jordan 2026-11-13: ESPN rankings; the model's
+        market value stands in), bids sealed. While bidding runs, a team's cap carries its contracts,
+        dead money, traded cap, rookie salaries for picks owned, its tags, and each of its pending RFAs
+        at the opening bid only; each RFA settled raises it to his final price. The winning bid is what
+        a player of his rank has gone for (final / model value by positional rank, history), never more
+        than the richest other team's room at that moment. The original owner matches (Jordan by
+        `jordan_rfa`; others with their historical chance, drawn with `rng`) or the player signs with
+        that team. A match may go over the cap."""
         from dfo.decide.owner_plans import predict
-        let_go_rfa = let_go_rfa or {}
+        from dfo.rules.contracts import rfa_starting_bid
+        jordan_rfa = jordan_rfa or {}
         p = self.p.copy()
         sal = p[f"salary_{Y}"].fillna(0).copy()
+        owner_of = p.owner.copy()
         committed = {o: self.o.cap0.get(o, {}).get(Y, 0.0) for o in self.owners}
         for i in self.o.planned[Y]:                            # drop the value-based plan for everyone
             o = p.owner.get(i)
@@ -77,32 +88,43 @@ class Auction:
             committed[ME] += s
         if not hasattr(self, "_plans"):
             self._plans = predict(exclude_owner=ME)
-        moved = []
-        for r in self._plans[self._plans.action != "auction"].itertuples():
-            if r.player_id not in sal.index:
-                continue
-            kept = (rng.random() < r.p_keep) if rng is not None else (r.p_keep >= 0.5)
-            if kept:
+        plans = self._plans[self._plans.player_id.isin(sal.index)]
+        for r in plans[plans.action == "tag"].itertuples():   # tags are set before RFA bidding
+            if (rng.random() < r.p_keep) if rng is not None else (r.p_keep >= 0.5):
                 sal[r.player_id] = r.expected_price
                 committed[r.owner] += r.expected_price
-            elif r.action == "RFA":
-                moved.append((r.player_id, float(r.expected_price)))
+        rfas = [(r.player_id, r.owner, float(r.p_keep)) for r in plans[plans.action == "RFA"].itertuples()]
+        rfas += [(i, ME, 1.0 if m else 0.0) for i, m in jordan_rfa.items()]
         pts = p[f"proj_points_{Y}"]
-        roster = {o: [i for i in p.index[(p.owner == o) & (sal > 0)] if pd.notna(pts[i])] for o in self.owners}
+        posrank = pts.groupby(p.pos).rank(ascending=False)
+        start = {i: rfa_starting_bid(int(p.salary_2026.get(i, 0) or 0)) for i, _, _ in rfas}
+        for i, o, _ in rfas:
+            committed[o] += start[i]
+        rfa_paid, rfa_winner = {}, {}
+        for i, o, pk in sorted(rfas, key=lambda x: -float(p.auction_cost_2027.get(x[0], 0) or 0)):
+            market = float(p.auction_cost_2027.get(i, 1) or 1)
+            ratio = next(x for k, x in self.RFA_RATIO if posrank.get(i, 999) <= k)
+            if rng is not None:
+                ratio *= float(np.exp(rng.normal(0, 0.15)))
+            others = [b for b in self.owners if b != o]
+            bidder = max(others, key=lambda b: 300 - committed[b])
+            top_room = 300 - committed[bidder]
+            price = float(max(start[i], min(round(market * ratio), top_room)))
+            if top_room < start[i]:
+                price = float(start[i])                        # nobody can bid: kept at the opening price
+            kept = (rng.random() < pk) if (rng is not None and o != ME) else (pk >= 0.5)
+            rfa_paid[i] = price
+            if kept or top_room < start[i]:
+                committed[o] += price - start[i]
+                sal[i] = price
+            else:
+                committed[o] -= start[i]
+                committed[bidder] += price
+                sal[i] = price
+                owner_of[i] = bidder
+                rfa_winner[i] = bidder
+        roster = {o: [i for i in p.index[(owner_of == o) & (sal > 0)] if pd.notna(pts[i])] for o in self.owners}
         room = {o: 300 - committed[o] - max(0, ROSTER - len(roster[o])) for o in self.owners}
-        from dfo.rules.contracts import rfa_starting_bid
-        rfa_paid = {}
-        for i, price in list(let_go_rfa.items()) + moved:      # RFA signs with the team with the most room;
-            owner_i = p.owner.get(i)                           # bids are limited to cap room
-            others = [o for o in self.owners if o not in (ME, owner_i)]
-            w = max(others, key=lambda o: room[o])
-            start = rfa_starting_bid(int(self.p.loc[i, "salary_2026"] if "salary_2026" in self.p else 1))
-            if room[w] < start:
-                continue                                       # nobody can bid: he reaches the auction
-            paid = min(price, room[w])
-            rfa_paid[i] = paid
-            roster[w].append(i)
-            room[w] -= paid - 1
         held = set(itertools.chain.from_iterable(roster.values()))
         pool = p[(~p.index.isin(held)) & pts.notna() & p.pos.isin(list(SLOTS))].copy()
         pool = pool[~pool.index.isin(list(not_available))]       # sensitivity: kept by their teams after all
@@ -205,16 +227,17 @@ class Auction:
         nm = lambda ids: ", ".join(f"{self.name[i]} (${int(price.get(i, 0))})" if i in price and i in bought[ME]
                                    else str(self.name[i]) for i in ids)
         return dict(teams=t, price_factor=round(f, 2), jordan_room=round(room[ME]), rfa_paid=rfa_paid,
+                    rfa_winner=rfa_winner,
                     richest_other_room=round(max(room[o] for o in self.owners if o != ME)),
                     jordan_bought=nm(bought[ME]), jordan_free=nm(free[ME]),
                     jordan_spent=int(sum(price[i] for i in bought[ME])),
                     prices=pool[["player", "pos", f"proj_points_{Y}", "base", "price"]].head(60))
 
 
-def scenarios(gibbs_prices=(102, 125), draws: int = 12) -> pd.DataFrame:
-    """Jordan's options. Gibbs's RFA price: $102 is the model (his market value x1.08, what $50+ RFAs
-    went for), $125 Jordan's read. Each scenario: the likely path, and `draws` paths with other owners'
-    RFA matches drawn at their historical rates."""
+def scenarios(draws: int = 16) -> pd.DataFrame:
+    """Jordan's options for Gibbs (RFA: match or not; his price comes out of the bidding) and Lamb (tag
+    or not). Each scenario: the likely path, and `draws` paths with other owners' matches and every RFA's
+    winning bid drawn around history."""
     o = Outlook()
     a = Auction(o)
     p = a.p
@@ -222,15 +245,10 @@ def scenarios(gibbs_prices=(102, 125), draws: int = 12) -> pd.DataFrame:
     lid = p.index[p.player == "CeeDee Lamb"][0]
     tag = float(p.loc[lid, f"salary_{Y}"])
     base = F.strengths()
-    # bids are limited to cap room: no RFA price can exceed the richest other team's room
-    cap_rfa = a.play({lid: tag}, {gid: 999})["richest_other_room"]
-    gibbs_prices = sorted({int(min(gp, cap_rfa)) for gp in gibbs_prices})
-    cases = []
-    for gp in gibbs_prices:
-        cases += [(f"Tag Lamb + match Gibbs at ${gp}", {lid: tag, gid: gp}, {}, True, True),
-                  (f"Match Gibbs at ${gp}, Lamb to the auction", {gid: gp}, {}, True, False),
-                  (f"Tag Lamb, Gibbs signs elsewhere at ${gp}", {lid: tag}, {gid: gp}, False, True),
-                  (f"Let both go (Gibbs signs elsewhere at ${gp})", {}, {gid: gp}, False, False)]
+    cases = [("Tag Lamb + match Gibbs", {lid: tag}, {gid: True}, True, True),
+             ("Match Gibbs, Lamb to the auction", {}, {gid: True}, True, False),
+             ("Tag Lamb, let Gibbs go", {lid: tag}, {gid: False}, False, True),
+             ("Let both go", {}, {gid: False}, False, False)]
     rows = []
 
     def payout(r, later):
@@ -250,7 +268,10 @@ def scenarios(gibbs_prices=(102, 125), draws: int = 12) -> pd.DataFrame:
         rng = np.random.default_rng(7)
         draw = [payout(a.play(keep, rfa_out, rng=rng), later).exp_payout[Y] for _ in range(draws)]
         me = r["teams"].set_index("owner").loc[ME]
-        rows.append(dict(scenario=label, gibbs_rfa_price=r["rfa_paid"].get(gid), richest_other_room_2027=r["richest_other_room"],
+        gp = [a.play(keep, rfa_out, rng=np.random.default_rng(100 + k))["rfa_paid"].get(gid) for k in range(draws)]
+        rows.append(dict(scenario=label, gibbs_rfa_price=r["rfa_paid"].get(gid),
+                         gibbs_price_range=f"${int(np.percentile(gp, 10))}-{int(np.percentile(gp, 90))}",
+                         gibbs_goes_to=r["rfa_winner"].get(gid, ME), richest_other_room_2027=r["richest_other_room"],
                          room_2027=r["jordan_room"], bought=r["jordan_bought"], spent=r["jordan_spent"],
                          free_after_auction=r["jordan_free"], lineup_2027=me.lineup, strength_2027=me.strength,
                          rank_2027=int((r["teams"].strength > me.strength).sum() + 1),
@@ -262,16 +283,16 @@ def scenarios(gibbs_prices=(102, 125), draws: int = 12) -> pd.DataFrame:
     out = pd.DataFrame(rows).sort_values("payout_3yr", ascending=False)
     out.insert(0, "made_at", pd.Timestamp.now(tz="UTC").isoformat(timespec="seconds"))
     out.to_csv(PROCESSED / "decide_offseason_2027.csv", index=False)
-    a.play({lid: tag, gid: gibbs_prices[0]})["prices"].to_csv(PROCESSED / "decide_offseason_2027_auction_prices.csv", index=False)
+    a.play({lid: tag}, {gid: True})["prices"].to_csv(PROCESSED / "decide_offseason_2027_auction_prices.csv", index=False)
     return out
 
 
 def to_markdown(d: pd.DataFrame) -> str:
     L = ["# 2027 offseason plan scenarios (Jordan)", "", f"Built {d.made_at.iloc[0]}. Expected payout in $; 2028-29 from the three-year outlook.", "",
-         "| Scenario | Room | 2027 lineup | League rank | Payout 2027 (range) | 1st | Top 4 | Payout 2028 | 2029 | Three years |",
-         "|---|---|---|---|---|---|---|---|---|---|"]
+         "| Scenario | Gibbs price (range) | Room | 2027 lineup | League rank | Payout 2027 (range) | 1st | Top 4 | Payout 2028 | 2029 | Three years |",
+         "|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in d.itertuples():
-        L.append(f"| {r.scenario} | ${r.room_2027} | {r.lineup_2027:.0f} | {r.rank_2027} | ${r.payout_2027} (${r.payout_2027_low}-{r.payout_2027_high}) | {r.p_first_2027:.0%} | "
+        L.append(f"| {r.scenario} | ${r.gibbs_rfa_price:.0f} ({r.gibbs_price_range}) | ${r.room_2027} | {r.lineup_2027:.0f} | {r.rank_2027} | ${r.payout_2027} (${r.payout_2027_low}-{r.payout_2027_high}) | {r.p_first_2027:.0%} | "
                  f"{r.p_top4_2027:.0%} | ${r.payout_2028} | ${r.payout_2029} | ${r.payout_3yr} |")
     L += [""]
     for r in d.itertuples():
