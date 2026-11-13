@@ -221,8 +221,8 @@ Question: which designations (RFA match, tag, let go) give the best team and pay
   room; a team over the cap (through RFA matches only) is locked out and takes $0 leftovers; the rest
   buy in price order. Ten strengths go through the future simulator; 2028-29 from the outlook.
 - Output: `decide_offseason_2027.md`, `.csv`, `decide_offseason_2027_auction_prices.csv`.
-- RFA phase (Jordan 2026-11-13): one player at a time in ranking order (ESPN; the model's market value
-  stands in), sealed bids. During it a team's cap carries contracts, dead money, traded cap, rookie
+- RFA phase (Jordan 2026-11-13): one player at a time in ranking order (ESPN's next-season ranking;
+  until it is out, FantasyCalc's overall dynasty value, Jordan 2026-11-13), sealed bids. During it a team's cap carries contracts, dead money, traded cap, rookie
   salaries for owned picks, tags, and each pending RFA at his opening bid only; each RFA settled raises
   it to his final price. Winning bid = model value x what players of his positional rank went for
   (1.17-1.45x), never above the richest other team's room at that moment. So the first stars draw
@@ -235,3 +235,28 @@ Question: which designations (RFA match, tag, let go) give the best team and pay
 
 Known limits: other teams' plans are the model's, not confirmed; RFA prices for other teams' players
 are market prices; one auction path per scenario (no bidding randomness yet).
+
+## Trade deadline (`decide/deadline.py`)
+
+Question: push, hold or sell, and where is the market? Weeks 10-14, in the daily run.
+
+- Posture per team: this season's value of a lineup point (simulator slope from the standings) over
+  the later value every team shares ($0.53): push at 1.25x or more, build at 0.75x or less, else hold.
+- For Jordan: the best player a building team has at each position and what he adds over the rest of
+  the season; rentals (contracts ending, no rights: worth nothing to the seller after Week 18); what
+  Jordan can spend at no cost to this season (picks by tier, bench players who never start).
+- What moved since the last run: `sim_2026_history.csv`, appended every run.
+- Output: `decide_deadline.md`, `decide_deadline_posture.csv`, `decide_deadline_targets.csv`.
+
+## Scheduled runs (`dfo/run.py`, `.github/workflows/engine.yml`)
+
+| Job | When (Central) | Steps |
+|---|---|---|
+| daily | every morning ~5:07am | site tables, scoring, projections, season odds, three-year outlook, start/sit, deadline (Weeks 10-14) |
+| waivers | Tuesday ~1:37am, after Monday night | refresh, waiver bid list |
+| lineup | Thursday and Sunday ~9:23am | refresh, start/sit |
+| trades | Wednesday ~6:53am | refresh, valuation re-fit, odds, owner plans, trade search |
+
+A source outage skips that step with a warning (committed copy kept); any other failure stops the job.
+Each step is logged to `data/processed/run_log.csv`. League results still come from Jordan's
+scoreboard screenshots while the Yahoo sync is down.

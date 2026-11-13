@@ -58,13 +58,23 @@ class Auction:
     # final RFA price / auction model value by positional rank (101 RFAs 2020-2026, val_rfa_backtest.csv)
     RFA_RATIO = [(3, 1.45), (6, 1.17), (12, 1.26), (24, 1.45), (999, 1.34)]
 
+    def order_value(self, pid: str) -> float:
+        """RFA bidding order (ESPN's next-season ranking; until it is out, Jordan 2026-11-13: dynasty
+        rankings): FantasyCalc's overall dynasty value, then the model's market value."""
+        if not hasattr(self, "_fc"):
+            from dfo.valuation.prices import fantasycalc
+            fc = fantasycalc()
+            self._fc = fc.set_index("player_id").fc_value
+            self.order_source = f"FantasyCalc dynasty values as of {fc.attrs.get('as_of')}"
+        return float(self._fc.get(pid, 0.0)) * 1000 + float(self.p.auction_cost_2027.get(pid, 0) or 0)
+
     def play(self, keep: dict[str, float], jordan_rfa: dict[str, bool] | None = None, star_premium: float = 1.0,
              not_available: tuple[str, ...] = (), rng: np.random.Generator | None = None) -> dict:
         """`keep`: Jordan's tagged players -> tag cost. `jordan_rfa`: his RFAs -> match (True) or not.
         Other owners follow decide/owner_plans.py (Jordan's corrections first).
 
-        RFA phase, one player at a time in ranking order (Jordan 2026-11-13: ESPN rankings; the model's
-        market value stands in), bids sealed. While bidding runs, a team's cap carries its contracts,
+        RFA phase, one player at a time in ranking order (ESPN's; until it is out, dynasty value:
+        order_value), bids sealed. While bidding runs, a team's cap carries its contracts,
         dead money, traded cap, rookie salaries for picks owned, its tags, and each of its pending RFAs
         at the opening bid only; each RFA settled raises it to his final price. The winning bid is what
         a player of his rank has gone for (final / model value by positional rank, history), never more
@@ -101,7 +111,7 @@ class Auction:
         for i, o, _ in rfas:
             committed[o] += start[i]
         rfa_paid, rfa_winner = {}, {}
-        for i, o, pk in sorted(rfas, key=lambda x: -float(p.auction_cost_2027.get(x[0], 0) or 0)):
+        for i, o, pk in sorted(rfas, key=lambda x: -self.order_value(x[0])):
             market = float(p.auction_cost_2027.get(i, 1) or 1)
             ratio = next(x for k, x in self.RFA_RATIO if posrank.get(i, 999) <= k)
             if rng is not None:

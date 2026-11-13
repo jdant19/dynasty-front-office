@@ -1,0 +1,64 @@
+name: engine
+
+# Scheduled engine runs (Phase 8). Runs on GitHub's servers, so it works while the Mac is off and
+# reaches every public source. Pulls the latest snapshots, rebuilds the tables and recommendations,
+# and commits them. Recommendations only: nothing is ever submitted or sent.
+on:
+  schedule:
+    - cron: "7 11 * * *"          # daily, ~5:07am Central: refresh + odds + lineup + deadline (Weeks 10-14)
+    - cron: "37 7 * * 2"          # Tuesday ~1:37am Central, after Monday night: waiver bid list
+    - cron: "23 15 * * 0,4"       # Thursday and Sunday ~9:23am Central: lineup check before kickoff
+    - cron: "53 12 * * 3"         # Wednesday ~6:53am Central: trade ideas
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "daily, waivers, lineup or trades"
+        default: daily
+
+permissions:
+  contents: write
+
+concurrency:
+  group: engine
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Cached public data
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: cache-${{ github.run_id }}
+          restore-keys: cache-
+      - run: pip install -q -r requirements.txt
+      - name: Pick the job
+        id: job
+        run: |
+          case "${{ github.event.schedule }}" in
+            "37 7 * * 2") echo "job=waivers" >> $GITHUB_OUTPUT ;;
+            "23 15 * * 0,4") echo "job=lineup" >> $GITHUB_OUTPUT ;;
+            "53 12 * * 3") echo "job=trades" >> $GITHUB_OUTPUT ;;
+            "") echo "job=${{ github.event.inputs.job }}" >> $GITHUB_OUTPUT ;;
+            *) echo "job=daily" >> $GITHUB_OUTPUT ;;
+          esac
+      - name: Run
+        run: PYTHONPATH=src python -m dfo.run ${{ steps.job.outputs.job }}
+      - name: Checks
+        run: python -m pytest -q
+      - name: Commit outputs
+        if: always()
+        run: |
+          git config user.name "dfo-engine"
+          git config user.email "dfo-engine@users.noreply.github.com"
+          git add data/processed
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "engine: ${{ steps.job.outputs.job }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase -q && git push

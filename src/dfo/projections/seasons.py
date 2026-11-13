@@ -43,7 +43,11 @@ def season_table() -> pd.DataFrame:
     st["ppg"] = st.total / st.games
     xfp = []
     for s in range(2016, 2027):
-        f = CACHE / "ffverse" / f"ep_weekly_{s}.csv"
+        try:
+            from dfo.sources.fetch import ffverse_ep
+            f = ffverse_ep(s, max_age_hours=36 if s >= 2026 else 24 * 365)
+        except Exception:
+            f = CACHE / "ffverse" / f"ep_weekly_{s}.csv"
         if f.exists():
             e = pd.read_csv(f, low_memory=False, usecols=["season", "week", "player_id", "total_fantasy_points_exp",
                                                          "rec_attempt", "rec_attempt_team", "rush_attempt",

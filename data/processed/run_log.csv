@@ -1,0 +1,8 @@
+time,job,step,status,seconds,note
+2026-11-13T22:13:46+00:00,daily,dfo.ingest.site,ok,0,
+2026-11-13T22:13:47+00:00,daily,dfo.scoring 2026,ok,1,
+2026-11-13T22:14:51+00:00,daily,dfo.projections.current,ok,64,
+2026-11-13T22:15:57+00:00,daily,dfo.sim.dial,ok,66,
+2026-11-13T22:15:58+00:00,daily,dfo.sim.future,ok,0,
+2026-11-13T22:16:02+00:00,daily,dfo.decide.lineup,ok,5,
+2026-11-13T22:16:07+00:00,daily,dfo.decide.deadline,ok,5,

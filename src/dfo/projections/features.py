@@ -55,7 +55,11 @@ def _usage(seasons: list[int]) -> pd.DataFrame:
         st = pd.read_csv(nflverse("stats_player", f"stats_player_week_{s}.csv"), low_memory=False)
         st = st[st.season_type == "REG"][["player_id", "season", "week", "team", "opponent_team", "targets",
                                           "carries", "attempts", "target_share", "receptions"]]
-        ep_path = CACHE / "ffverse" / f"ep_weekly_{s}.csv"
+        try:
+            from dfo.sources.fetch import ffverse_ep
+            ep_path = ffverse_ep(s, max_age_hours=36 if s >= 2026 else 24 * 365)
+        except Exception:
+            ep_path = CACHE / "ffverse" / f"ep_weekly_{s}.csv"
         if ep_path.exists():
             ep = pd.read_csv(ep_path, low_memory=False)
             ep = ep[ep.week <= 18].assign(xfp=lambda d: _xfp(d))

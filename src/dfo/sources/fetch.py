@@ -59,6 +59,12 @@ def nflverse(tag: str, name: str, max_age_hours: float = 12) -> Path:
     return fetch("nflverse", name, f"{NFLVERSE}/{tag}/{name}", max_age_hours)
 
 
+def ffverse_ep(season: int, max_age_hours: float = 36) -> Path:
+    """ffopportunity's weekly expected stat lines (expected fantasy points), one file per season."""
+    url = f"https://github.com/ffverse/ffopportunity/releases/download/latest-data/ep_weekly_{season}.csv"
+    return fetch("ffverse", f"ep_weekly_{season}.csv", url, max_age_hours)
+
+
 def dynastyprocess() -> Path:
     """Shallow, sparse clone of github.com/dynastyprocess/data (files/ only); refreshed when older than 12h."""
     d = CACHE / "dynastyprocess"

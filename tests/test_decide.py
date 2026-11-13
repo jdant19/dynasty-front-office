@@ -210,3 +210,24 @@ def test_owner_plans_follow_behavior_not_bargains():
     # the most valuable RFA-eligible player of each owner is designated when anyone would bid on him
     bij = d[d.player == "Bijan Robinson"]
     assert len(bij) == 1 and bij.action.iloc[0] in ("RFA", "tag") and bij.p_keep.iloc[0] >= 0.85
+
+
+def test_deadline_posture_and_run_plan():
+    from dfo import run
+    from dfo.decide.deadline import posture
+    p = posture().set_index("owner")
+    assert set(p.posture) <= {"push", "hold", "build"}
+    assert (p.loc[p.posture == "push", "now_vs_later"] >= 1.25).all()
+    for job in ("daily", "waivers", "lineup", "trades"):
+        steps = [s[0] for s in run.plan(job)]
+        assert steps[:3] == ["dfo.ingest.site", "dfo.scoring", "dfo.projections.current"]
+    assert "dfo.decide.trade_search" in [s[0] for s in run.plan("trades")]
+
+
+def test_rfa_order_follows_dynasty_value():
+    from dfo.decide.offseason import Auction
+    a = Auction()
+    p = a.p
+    gid = p.index[p.player == "Jahmyr Gibbs"][0]
+    cook = p.index[p.player == "James Cook"][0]
+    assert a.order_value(gid) > a.order_value(cook)
