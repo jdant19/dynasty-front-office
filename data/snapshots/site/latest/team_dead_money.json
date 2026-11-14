@@ -1,6 +1,6 @@
 {
  "table": "team_dead_money",
- "as_of": "2026-11-13T19:39:54+00:00",
+ "as_of": "2026-11-14T00:53:07+00:00",
  "rows": [
   {
    "id": "00b07175-4aae-4de1-9f03-59fd63a7adbc",
@@ -61,6 +61,18 @@
    "amount_year5": 0,
    "salary_start_year": 2026,
    "created_at": "2026-08-28T19:46:03.442922+00:00"
+  },
+  {
+   "id": "1b1926ad-d191-4ef2-8a22-b6b654ed3e34",
+   "team_id": "team-2",
+   "label": "Terry McLaurin (dropped 2026/2027)",
+   "amount_year1": 25,
+   "amount_year2": 20,
+   "amount_year3": 15,
+   "amount_year4": 8,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "created_at": "2026-11-13T21:40:57.02+00:00"
   },
   {
    "id": "1f5907d1-08ee-4866-acfd-fe05df7f6500",
