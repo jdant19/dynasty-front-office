@@ -1,7 +1,7 @@
 # Start/sit, Week 10 vs Ben
 
-Projections made 2026-11-13T22:45:18+00:00 (stats through 2026-11-13T22:43:57+00:00).
-Win probability 86%: our median 128.3 (sd 23.0) vs Ben 95.5 (sd 20.6).
+Projections made 2026-11-14T16:59:34+00:00 (stats through 2026-11-14T16:58:29+00:00).
+Win probability 89%: our median 128.3 (sd 23.0) vs Ben 89.7 (sd 21.5).
 
 | Slot | Player | Team | Median | 80% range | Status |
 |---|---|---|---|---|---|
