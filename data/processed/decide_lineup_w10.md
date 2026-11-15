@@ -1,13 +1,13 @@
 # Start/sit, Week 10 vs Ben
 
-Projections made 2026-11-14T16:59:34+00:00 (stats through 2026-11-14T16:58:29+00:00).
-Win probability 89%: our median 128.3 (sd 23.0) vs Ben 89.7 (sd 21.5).
+Projections made 2026-11-15T17:41:25+00:00 (stats through 2026-11-15T17:40:05+00:00).
+Win probability 93%: our median 128.6 (sd 23.0) vs Ben 83.1 (sd 19.5).
 
 | Slot | Player | Team | Median | 80% range | Status |
 |---|---|---|---|---|---|
 | QB | Patrick Mahomes | KC vs ATL | 19.2 | 9-29 |  |
-| RB | Jahmyr Gibbs | DET vs NE | 18.4 | 6-28 |  |
-| RB | Chuba Hubbard | CAR vs NO | 13.4 | 5-26 |  |
+| RB | Jahmyr Gibbs | DET vs NE | 18.5 | 6-28 |  |
+| RB | Chuba Hubbard | CAR vs NO | 13.6 | 5-26 |  |
 | WR | Ja'Marr Chase | CIN vs PIT | 15.2 | 5-26 |  |
 | WR | CeeDee Lamb | DAL vs SF | 15.0 | 5-26 |  |
 | WR | Parker Washington | JAX vs TEN | 11.2 | 3-22 |  |
