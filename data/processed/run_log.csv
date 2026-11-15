@@ -27,3 +27,7 @@ time,job,step,status,seconds,note
 2026-11-15T17:42:52+00:00,daily,dfo.sim.future,ok,0,
 2026-11-15T17:42:57+00:00,daily,dfo.decide.lineup,ok,5,
 2026-11-15T17:43:02+00:00,daily,dfo.decide.deadline,ok,5,
+2026-11-15T20:26:56+00:00,lineup,dfo.ingest.site,ok,0,
+2026-11-15T20:26:56+00:00,lineup,dfo.scoring 2026,ok,0,
+2026-11-15T20:27:50+00:00,lineup,dfo.projections.current,ok,54,
+2026-11-15T20:27:54+00:00,lineup,dfo.decide.lineup,ok,3,
