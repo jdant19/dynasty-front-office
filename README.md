@@ -15,7 +15,7 @@ Design: "Dynasty Front Office — System Design" (claude.ai doc). Build status f
 | 5. Simulator and dial | Done 2026-11-01: regular season, playoffs, 2027-29 with designation plans, dial for all ten teams (docs/simulation.md) |
 | 6. History grading and owner models | Done 2026-11-06: every decision 2014-2025 graded with the metric that fits it (P16), trades in payout $ with traded picks followed to the player drafted, owner rankings, careers and why-owners-win bridge; valuation moved to lineup points; price tiers (docs/owners.md, docs/metrics.md) |
 | 7. Decision modules | In progress: start/sit, waivers (with cap-room bids and DEF matchups), trade evaluator (exit test signed off 2026-11-08), trade search, deadline posture, three-year outlook and 2027 offseason scenarios done; scoring on P18's stable conversions. Next: deadline posture, playoffs, offseason (docs/decisions.md) |
-| 8. Front door, scheduled runs, journal | Started 2026-11-13: scheduled engine runs (`python -m dfo.run daily|waivers|lineup|trades`, `.github/workflows/engine.yml`, run log in `data/processed/run_log.csv`). Next: front door page, decision journal |
+| 8. Front door, scheduled runs, journal | Started 2026-11-13: scheduled engine runs (`python -m dfo.run daily|waivers|lineup|trades`, `.github/workflows/engine.yml`, run log in `data/processed/run_log.csv`); front door page and decision journal 2026-11-16 (docs/frontdoor.md), synced daily by a scheduled Claude task. Next: follow report (what you did vs what was recommended) |
 | 9. Shadow mode | Not started |
 
 ## Layout

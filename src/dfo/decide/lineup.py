@@ -306,7 +306,13 @@ if __name__ == "__main__":
         missing = set(a.started) - set(pw.player)
         if missing:
             raise SystemExit(f"not in proj_week: {sorted(missing)}")
-        r = recommend(locked_starts=ids)
+        try:
+            r = recommend(locked_starts=ids)
+        except TypeError:
+            # too few of his players left to play to fill a lineup: the week's lineup calls are made.
+            # Keep the last recommendation as it was (the journal compares it with what he started).
+            print("Most of this week's games have kicked off; lineup calls for this week are done.")
+            raise SystemExit(0)
         md = to_markdown(r)
         (PROCESSED / f"decide_lineup_w{r['week']}.md").write_text(md)
         r["lineup"].to_csv(PROCESSED / f"decide_lineup_w{r['week']}.csv", index=False)

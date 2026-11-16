@@ -1,0 +1,319 @@
+{
+ "made_at": "2026-11-16T23:26:59+00:00",
+ "week": 10,
+ "decisions": [
+  {
+   "id": "lineup-10",
+   "kind": "Start/sit",
+   "deadline": "first kickoff of each game window",
+   "title": "Week 10 lineup vs Ben",
+   "recommendation": "QB Patrick Mahomes, RB Jahmyr Gibbs, RB Chuba Hubbard, WR Ja'Marr Chase, WR CeeDee Lamb, WR Parker Washington, TE George Kittle, FLEX Ollie Gordon II, K Jake Bates, DEF Ravens",
+   "value": "win probability 93%",
+   "confidence": "medium",
+   "reason": "Highest win probability from this week's projections and 80% ranges.",
+   "change": "An injury or inactive report, or a rank jump flagged below. Flagged: Audric Estim\u00e9 (FantasyPros rank rose 22 places since last week)",
+   "made_at": "2026-11-15T20:27:46+00:00"
+  },
+  {
+   "id": "waivers-10",
+   "kind": "Waivers",
+   "deadline": "Tuesday 11:59pm Pacific",
+   "title": "Waiver claims",
+   "recommendation": "add Will Reichard, drop Courtland Sutton; add Bills, drop Brenton Strange",
+   "value": "+1.9 pts, $1.83; +0.9 pts, $0.84",
+   "confidence": "medium",
+   "reason": "Rest-of-season lineup gain priced at today's odds; bids $0 (over the cap).",
+   "change": "A player's role changing, or a better free agent after the weekend.",
+   "made_at": "2026-11-10T12:36:59+00:00"
+  },
+  {
+   "id": "trade-Ben-kennethwalkeriii",
+   "kind": "Trade idea",
+   "deadline": "end of Week 14",
+   "title": "Ben: Kenneth Walker III",
+   "recommendation": "Offer Harold Fannin Jr.; Mike Gesicki; Chuba Hubbard; 2029 round 2 (Jordan); 2029 round 3 (Jordan) for Kenneth Walker III. opening: add 2029 round 3 -> you +50, him +21; target: add 2029 round 2 + 2029 round 3 -> you +32, him +39; walk-away: add 2028 round 1 -> you +3, him +67",
+   "value": "you +32, him +39 (payout $)",
+   "confidence": "low",
+   "reason": "Your 1st-place odds 42% -> 53%, title 36% -> 43%. 2027: room $-20 -> $-68, strength +45; 2028: room $79 -> $79, strength +0; 2029: room $132 -> $132, strength +0; picks given -68 points over their rookie deals.",
+   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
+   "made_at": "2026-11-10T18:43:42+00:00"
+  },
+  {
+   "id": "trade-Johnny-jaguars",
+   "kind": "Trade idea",
+   "deadline": "end of Week 14",
+   "title": "Johnny: Jaguars",
+   "recommendation": "Offer Bucky Irving for Jaguars. opening: add no pick -> you +4, him +14; target: add no pick -> you +4, him +14; walk-away: add no pick -> you +4, him +14",
+   "value": "you +4, him +14 (payout $)",
+   "confidence": "low",
+   "reason": "Your 1st-place odds 42% -> 41%, title 36% -> 40%. 2027: room $-20 -> $-17, strength -29; 2028: room $79 -> $121, strength +17; 2029: room $132 -> $176, strength +14; picks given +0 points over their rookie deals.",
+   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
+   "made_at": "2026-11-10T18:43:42+00:00"
+  },
+  {
+   "id": "playoffs-10",
+   "kind": "Playoff prep",
+   "deadline": "end of Week 18 (trades: Week 14)",
+   "title": "Worth adding for the league playoffs",
+   "recommendation": "Kenneth Walker III (Ben); James Cook (Matt)",
+   "value": "title +11%, $+18; title +11%, $+18",
+   "confidence": "low",
+   "reason": "Keeps are free; owning a player also frees your first draft pick.",
+   "change": "NFL playoff odds moving, or the seeds changing."
+  },
+  {
+   "id": "offseason-2027-plan",
+   "kind": "Offseason plan",
+   "deadline": "2027 designation day",
+   "title": "2027 designations",
+   "recommendation": "Tag Lamb + match Gibbs",
+   "value": "$119 expected 2027 payout, $323 over three years",
+   "confidence": "low",
+   "reason": "Played through RFA bidding and the auction with every owner's likely plan.",
+   "change": "Other owners' plans (review them), Gibbs's RFA price, the ESPN ranking order.",
+   "made_at": "2026-11-13T22:27:54+00:00"
+  }
+ ],
+ "posture": {
+  "p_first": 0.493,
+  "p_top4": 0.994,
+  "p_title": 0.366,
+  "exp_payout": 377,
+  "mean_wins": 13.4,
+  "stance": "push",
+  "moved": {
+   "since": "2026-11-15",
+   "p_first": 0.028,
+   "p_title": 0.012,
+   "payout": 8
+  },
+  "league": [
+   {
+    "owner": "Jordan",
+    "p_first": 0.493,
+    "p_top4": 0.994,
+    "p_title": 0.366,
+    "exp_payout": 377,
+    "posture": "push"
+   },
+   {
+    "owner": "Russ",
+    "p_first": 0.368,
+    "p_top4": 0.99,
+    "p_title": 0.217,
+    "exp_payout": 311,
+    "posture": "push"
+   },
+   {
+    "owner": "Johnny",
+    "p_first": 0.132,
+    "p_top4": 0.975,
+    "p_title": 0.232,
+    "exp_payout": 219,
+    "posture": "push"
+   },
+   {
+    "owner": "Zach",
+    "p_first": 0.008,
+    "p_top4": 0.738,
+    "p_title": 0.142,
+    "exp_payout": 72,
+    "posture": "push"
+   },
+   {
+    "owner": "Matt",
+    "p_first": 0.0,
+    "p_top4": 0.173,
+    "p_title": 0.03,
+    "exp_payout": 14,
+    "posture": "hold"
+   },
+   {
+    "owner": "Max",
+    "p_first": 0.0,
+    "p_top4": 0.06,
+    "p_title": 0.007,
+    "exp_payout": 3,
+    "posture": "build"
+   },
+   {
+    "owner": "Qasim",
+    "p_first": 0.0,
+    "p_top4": 0.057,
+    "p_title": 0.006,
+    "exp_payout": 3,
+    "posture": "build"
+   },
+   {
+    "owner": "Ryan",
+    "p_first": 0.0,
+    "p_top4": 0.01,
+    "p_title": 0.001,
+    "exp_payout": 1,
+    "posture": "build"
+   },
+   {
+    "owner": "Ben",
+    "p_first": 0.0,
+    "p_top4": 0.002,
+    "p_title": 0.0,
+    "exp_payout": 0,
+    "posture": "build"
+   },
+   {
+    "owner": "Mike",
+    "p_first": 0.0,
+    "p_top4": 0.0,
+    "p_title": 0.0,
+    "exp_payout": 0,
+    "posture": "build"
+   }
+  ]
+ },
+ "team": {
+  "cap": {
+   "room": -15,
+   "salary": 306,
+   "dead": 9
+  },
+  "roster_size": 22,
+  "outlook": [
+   {
+    "season": 2027,
+    "cap_room": -20,
+    "strength": 1873
+   },
+   {
+    "season": 2028,
+    "cap_room": 79,
+    "strength": 1956
+   },
+   {
+    "season": 2029,
+    "cap_room": 132,
+    "strength": 1937
+   }
+  ]
+ },
+ "market": [
+  {
+   "player": "Kenneth Walker III",
+   "owner": "Ben",
+   "pos": "RB",
+   "gain": 37.8,
+   "salary": 67,
+   "rental": false
+  },
+  {
+   "player": "DeVonta Smith",
+   "owner": "Ryan",
+   "pos": "WR",
+   "gain": 15.0,
+   "salary": 51,
+   "rental": true
+  },
+  {
+   "player": "Chris Olave",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 13.5,
+   "salary": 15,
+   "rental": false
+  },
+  {
+   "player": "Texans",
+   "owner": "Mike",
+   "pos": "DEF",
+   "gain": 12.2,
+   "salary": 2,
+   "rental": true
+  },
+  {
+   "player": "Malik Nabers",
+   "owner": "Qasim",
+   "pos": "WR",
+   "gain": 11.9,
+   "salary": 7,
+   "rental": false
+  },
+  {
+   "player": "Seahawks",
+   "owner": "Qasim",
+   "pos": "DEF",
+   "gain": 11.8,
+   "salary": 1,
+   "rental": true
+  },
+  {
+   "player": "Dak Prescott",
+   "owner": "Ryan",
+   "pos": "QB",
+   "gain": 9.3,
+   "salary": 2,
+   "rental": false
+  },
+  {
+   "player": "Bills",
+   "owner": "Ryan",
+   "pos": "DEF",
+   "gain": 7.9,
+   "salary": 1,
+   "rental": true
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q2026-11-13-01",
+   "asked_at": "2026-11-13",
+   "topic": "results",
+   "question": "Send the Week 10 scoreboard when the week is final.",
+   "why_it_matters": "Season odds and the deadline posture use league results; Week 10 is missing.",
+   "deadline": "2026-11-18",
+   "status": "open",
+   "answer": "",
+   "answered_at": ""
+  },
+  {
+   "id": "Q2026-11-12-01",
+   "asked_at": "2026-11-12",
+   "topic": "offseason",
+   "question": "Review the model's read of each owner's 2027 designations (decide_owner_plans_2027.md) and correct anything you know better.",
+   "why_it_matters": "Who reaches the auction and how much room rivals have decides the best 2027 plan.",
+   "deadline": "2027-02-01",
+   "status": "open",
+   "answer": "",
+   "answered_at": ""
+  }
+ ],
+ "health": [
+  {
+   "source": "league_site",
+   "as_of": "2026-11-16T21:14:44+00:00",
+   "age_hours": 2.2,
+   "limit": "24h",
+   "stale": false
+  },
+  {
+   "source": "yahoo_league",
+   "as_of": "through Week 9",
+   "age_hours": null,
+   "limit": "7d",
+   "stale": false
+  },
+  {
+   "source": "nflverse",
+   "as_of": "2026-11-16T20:55:57+00:00",
+   "age_hours": 2.5,
+   "limit": "36h",
+   "stale": false
+  },
+  {
+   "source": "engine runs",
+   "as_of": "2026-11-16T20:57:34+00:00",
+   "age_hours": 2.5,
+   "limit": "24h",
+   "stale": false,
+   "note": "1 step(s) not ok in recent runs"
+  }
+ ]
+}

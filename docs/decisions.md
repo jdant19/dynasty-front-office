@@ -261,7 +261,8 @@ Question: push, hold or sell, and where is the market? Weeks 10-14, in the daily
 
 A source outage skips that step with a warning (committed copy kept); any other failure stops the job.
 Each step is logged to `data/processed/run_log.csv`. League results still come from Jordan's
-scoreboard screenshots while the Yahoo sync is down.
+scoreboard screenshots while the Yahoo sync is down. The daily, waivers and trades jobs end by
+writing the front door brief (`dfo.frontdoor.export`); see docs/frontdoor.md.
 
 ## Playoff prep (`decide/playoffs.py`)
 

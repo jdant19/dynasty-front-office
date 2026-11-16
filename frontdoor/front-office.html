@@ -1,0 +1,249 @@
+<title>Pachulia Front Office</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column command sheet; a scoreboard strip on top, then decisions, questions, submit, data health. */
+:root {
+  --bg: #f3f4f1; --surface: #ffffff; --ink: #1b2420; --muted: #5d6a63; --line: #d9ded9;
+  --accent: #b5631b; --accent-ink: #ffffff; --good: #2f7a4f; --warn: #a86a00; --bad: #b23a3a;
+  --chip: #e8ebe6;
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121815; --surface: #1a221e; --ink: #e6ebe7; --muted: #9aa8a0; --line: #2c3631;
+  --accent: #e08a44; --accent-ink: #1a1208; --good: #5fbf86; --warn: #e0a73c; --bad: #e07070; --chip: #24302a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121815; --surface: #1a221e; --ink: #e6ebe7; --muted: #9aa8a0; --line: #2c3631;
+  --accent: #e08a44; --accent-ink: #1a1208; --good: #5fbf86; --warn: #e0a73c; --bad: #e07070; --chip: #24302a; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px }
+h1, h2 { font-family: var(--display); letter-spacing: .02em; margin: 0; text-wrap: balance }
+h1 { font-size: 30px; line-height: 1.1 }
+h2 { font-size: 20px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
+.meta { color: var(--muted); font-size: 13px }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums }
+header { display: grid; gap: 6px }
+.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: 6px; overflow: hidden }
+.board div { background: var(--surface); padding: 12px 14px; display: grid; gap: 2px }
+.board .k { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted) }
+.board .v { font-family: var(--mono); font-size: 22px; font-variant-numeric: tabular-nums }
+.board .d { font-size: 12px; font-family: var(--mono) }
+.up { color: var(--good) } .down { color: var(--bad) }
+section { display: grid; gap: 12px; min-width: 0 }
+.dec { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 8px; min-width: 0 }
+.dec .top { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; justify-content: space-between }
+.dec h3 { margin: 0; font-size: 16px; font-weight: 600 }
+.chip { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; background: var(--chip); color: var(--muted); padding: 2px 8px; border-radius: 99px; white-space: nowrap }
+.chip.due { background: transparent; border: 1px solid var(--accent); color: var(--accent) }
+.rec { font-weight: 500; overflow-wrap: anywhere }
+.why { color: var(--muted); font-size: 14px; overflow-wrap: anywhere }
+.val { font-family: var(--mono); font-size: 13px; overflow-wrap: anywhere }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+button { font: 600 13px var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  padding: 7px 12px; border-radius: 4px; cursor: pointer }
+button:hover { border-color: var(--accent) }
+button:focus-visible, textarea:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+button.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+button.primary { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+textarea, input[type=text], select { width: 100%; font: 14px var(--body); color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px }
+textarea { min-height: 64px; resize: vertical }
+.saved { font-size: 12px; color: var(--good) }
+.err { font-size: 12px; color: var(--bad) }
+table { border-collapse: collapse; width: 100%; font-size: 13px }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap }
+th { font-weight: 600; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em }
+td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px }
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 6px; padding: 16px; color: var(--muted) }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: var(--good) }
+.dot.stale { background: var(--bad) }
+.mine { color: var(--accent); font-weight: 600 }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Ja'Jah Pachulia front office</h1>
+    <div class="meta" id="stamp">Waiting for the morning brief. It appears here after each daily run.</div>
+  </header>
+
+  <div class="board" id="board" aria-label="Season odds">
+    <div><span class="k">1st place</span><span class="v">–</span></div>
+    <div><span class="k">Top 4</span><span class="v">–</span></div>
+    <div><span class="k">Title</span><span class="v">–</span></div>
+    <div><span class="k">Expected payout</span><span class="v">–</span></div>
+    <div><span class="k">Stance</span><span class="v">–</span></div>
+  </div>
+
+  <section>
+    <h2>Decisions due</h2>
+    <div id="decisions" class="empty">Open recommendations appear here with their deadlines. Agree or disagree with each, and say why; your reasons go into the decision journal.</div>
+  </section>
+
+  <section>
+    <h2>Questions for you</h2>
+    <div id="questions" class="empty">Nothing is waiting on you.</div>
+  </section>
+
+  <section>
+    <h2>Send something</h2>
+    <div class="dec">
+      <div class="row">
+        <label for="kind" class="meta">Type</label>
+        <select id="kind" style="width:auto">
+          <option value="note">Note or player view</option>
+          <option value="correction">Correction</option>
+          <option value="question">Question for the system</option>
+          <option value="screenshot">Scoreboard or lineup screenshot</option>
+          <option value="offer">Trade offer received</option>
+        </select>
+      </div>
+      <textarea id="note" placeholder="e.g. Week 10 final attached. Or: Matt told me he is tagging Taylor."></textarea>
+      <div class="row">
+        <input id="file" type="file" accept="image/*,application/pdf,.csv,.txt" style="max-width:100%">
+        <button class="primary" id="send">Send</button>
+        <span id="sendmsg" class="saved" role="status"></span>
+      </div>
+      <div class="meta">The next scheduled run reads what you send, saves it to the journal, and acts on screenshots (results, lineups).</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>League odds</h2>
+    <div class="scroll"><table id="league"><thead><tr><th>Team</th><th>Posture</th><th class="n">1st</th><th class="n">Top 4</th><th class="n">Title</th><th class="n">Exp. payout</th></tr></thead><tbody><tr><td colspan="6" class="meta">Appears with the brief.</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Data health</h2>
+    <div class="scroll"><table id="health"><thead><tr><th>Source</th><th>As of</th><th class="n">Age</th><th>Limit</th><th>Note</th></tr></thead><tbody><tr><td colspan="5" class="meta">Appears with the brief.</td></tr></tbody></table></div>
+  </section>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const pct = x => x == null ? "–" : Math.round(x * 100) + "%";
+const signed = (x, f) => x == null ? "" : (x > 0 ? "+" : "") + f(x);
+let db = null, assets = null, responses = {}, answers = {};
+
+function renderBrief(b) {
+  if (!b) return;
+  $("#stamp").textContent = `Week ${b.week} brief, built ${new Date(b.made_at).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"})}.`;
+  const p = b.posture || {}, m = p.moved || {};
+  const cells = [
+    ["1st place", pct(p.p_first), m.p_first != null ? signed(m.p_first, pct) : ""],
+    ["Top 4", pct(p.p_top4), ""],
+    ["Title", pct(p.p_title), m.p_title != null ? signed(m.p_title, pct) : ""],
+    ["Expected payout", "$" + (p.exp_payout ?? "–"), m.payout != null ? signed(m.payout, x => "$" + Math.abs(x)) : ""],
+    ["Stance", (p.stance || "–").toUpperCase(), m.since ? "since " + m.since : ""]];
+  $("#board").innerHTML = cells.map(([k, v, d]) =>
+    `<div><span class="k">${k}</span><span class="v">${esc(v)}</span>${d ? `<span class="d ${d.startsWith("+") ? "up" : d.startsWith("-") ? "down" : ""}">${esc(d)}</span>` : ""}</div>`).join("");
+  renderDecisions(b.decisions || []);
+  renderQuestions(b.questions || []);
+  const lg = (p.league || []);
+  if (lg.length) $("#league tbody").innerHTML = lg.map(r => `<tr><td class="${r.owner === "Jordan" ? "mine" : ""}">${esc(r.owner)}</td><td>${esc(r.posture || "")}</td><td class="n">${pct(r.p_first)}</td><td class="n">${pct(r.p_top4)}</td><td class="n">${pct(r.p_title)}</td><td class="n">$${r.exp_payout}</td></tr>`).join("");
+  const h = b.health || [];
+  if (h.length) $("#health tbody").innerHTML = h.map(r => `<tr><td><span class="dot ${r.stale ? "stale" : ""}"></span>${esc(r.source)}</td><td class="num">${esc(String(r.as_of).slice(0, 16).replace("T", " "))}</td><td class="n">${r.age_hours == null ? "" : r.age_hours + "h"}</td><td>${esc(r.limit)}</td><td>${esc(r.note || (r.stale ? "stale: down-weighted" : ""))}</td></tr>`).join("");
+}
+
+function renderDecisions(list) {
+  const box = $("#decisions");
+  if (!list.length) { box.className = "empty"; box.textContent = "No open decisions."; return; }
+  box.className = ""; box.style.display = "grid"; box.style.gap = "12px";
+  box.innerHTML = list.map(d => {
+    const r = responses[d.id] || {};
+    return `<article class="dec" data-id="${esc(d.id)}">
+      <div class="top"><h3>${esc(d.title)}</h3><div class="row"><span class="chip">${esc(d.kind)}</span><span class="chip due">${esc(d.deadline)}</span></div></div>
+      <div class="rec">${esc(d.recommendation)}</div>
+      ${d.value ? `<div class="val">${esc(d.value)}</div>` : ""}
+      <div class="why">${esc(d.reason)} <br>What would change it: ${esc(d.change)}</div>
+      <div class="meta">Confidence: ${esc(d.confidence)}</div>
+      <div class="row">
+        <button data-v="agree" class="${r.verdict === "agree" ? "on" : ""}">Agree</button>
+        <button data-v="disagree" class="${r.verdict === "disagree" ? "on" : ""}">Disagree</button>
+        <span class="saved" role="status"></span>
+      </div>
+      <textarea id="why-${esc(d.id)}" placeholder="Why? (optional for agree, helpful for disagree)">${esc(r.reason || "")}</textarea>
+    </article>`; }).join("");
+  box.querySelectorAll("article").forEach(a => {
+    const id = a.dataset.id, d = list.find(x => x.id === id);
+    a.querySelectorAll("button[data-v]").forEach(btn => btn.addEventListener("click", () => saveResponse(a, d, btn.dataset.v)));
+    a.querySelector("textarea").addEventListener("change", () => { const v = (responses[id] || {}).verdict; if (v) saveResponse(a, d, v); });
+  });
+}
+
+async function saveResponse(a, d, verdict) {
+  const msg = a.querySelector(".saved");
+  if (!db) { msg.className = "err"; msg.textContent = "Saving needs the claude.ai viewer; open the page there."; return; }
+  const data = { id: d.id, verdict, reason: a.querySelector("textarea").value.trim(), recommendation: d.recommendation, at: new Date().toISOString() };
+  try {
+    await db.doc("responses/" + d.id.replace(/[^A-Za-z0-9_-]/g, "_")).set(data);
+    responses[d.id] = data;
+    a.querySelectorAll("button[data-v]").forEach(b => b.classList.toggle("on", b.dataset.v === verdict));
+    msg.className = "saved"; msg.textContent = "Saved";
+  } catch (e) { msg.className = "err"; msg.textContent = "Not saved: " + (e.message || e.code); }
+}
+
+function renderQuestions(list) {
+  const box = $("#questions");
+  if (!list.length) { box.className = "empty"; box.textContent = "Nothing is waiting on you."; return; }
+  box.className = ""; box.style.display = "grid"; box.style.gap = "12px";
+  box.innerHTML = list.map(q => {
+    const a = answers[q.id] || {};
+    return `<article class="dec" data-id="${esc(q.id)}">
+      <div class="top"><h3>${esc(q.question)}</h3><div class="row"><span class="chip">${esc(q.topic)}</span>${q.deadline ? `<span class="chip due">by ${esc(q.deadline)}</span>` : ""}</div></div>
+      <div class="why">${esc(q.why_it_matters)}</div>
+      <textarea id="ans-${esc(q.id)}" placeholder="Your answer">${esc(a.answer || "")}</textarea>
+      <div class="row"><button class="primary">Save answer</button><span class="saved" role="status"></span></div>
+    </article>`; }).join("");
+  box.querySelectorAll("article").forEach(a => a.querySelector("button").addEventListener("click", async () => {
+    const msg = a.querySelector(".saved"), id = a.dataset.id, text = a.querySelector("textarea").value.trim();
+    if (!text) { msg.className = "err"; msg.textContent = "Type an answer first."; return; }
+    if (!db) { msg.className = "err"; msg.textContent = "Saving needs the claude.ai viewer."; return; }
+    try { await db.doc("answers/" + id).set({ id, answer: text, at: new Date().toISOString() }); answers[id] = { answer: text };
+      msg.className = "saved"; msg.textContent = "Saved. The next run records it."; }
+    catch (e) { msg.className = "err"; msg.textContent = "Not saved: " + (e.message || e.code); }
+  }));
+}
+
+$("#send").addEventListener("click", async () => {
+  const msg = $("#sendmsg"), text = $("#note").value.trim(), f = $("#file").files[0];
+  if (!text && !f) { msg.className = "err"; msg.textContent = "Write a note or choose a file."; return; }
+  if (!db) { msg.className = "err"; msg.textContent = "Sending needs the claude.ai viewer."; return; }
+  msg.className = "saved"; msg.textContent = "Sending…";
+  try {
+    let asset = null;
+    if (f) {
+      if (!assets) throw { message: "file uploads are not available in this view" };
+      asset = await assets.upload(f);
+    }
+    await db.collection("notes").add({ id: "N" + Date.now(), kind: $("#kind").value, text, asset_id: asset ? asset.id : "",
+      filename: f ? f.name : "", at: new Date().toISOString() });
+    $("#note").value = ""; $("#file").value = "";
+    msg.className = "saved"; msg.textContent = "Sent. The next run picks it up.";
+  } catch (e) { msg.className = "err"; msg.textContent = "Not sent: " + (e.message || e.code); }
+});
+
+(async () => {
+  if (!window.claude?.use) return;
+  db = await window.claude.use("db");
+  assets = await window.claude.use("assets");
+  if (!db) { $("#stamp").textContent = "Open this page in claude.ai to see the brief and save responses."; return; }
+  const timer = setTimeout(() => { if ($("#stamp").textContent.startsWith("Waiting")) $("#stamp").textContent = "The brief has not loaded yet. It appears after the next daily run."; }, 10000);
+  db.collection("responses").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) responses[v.id] = v; }); if (window._brief) renderDecisions(window._brief.decisions || []); }, () => {});
+  db.collection("answers").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) answers[v.id] = v; }); if (window._brief) renderQuestions(window._brief.questions || []); }, () => {});
+  db.doc("brief/today").onSnapshot(s => {
+    clearTimeout(timer);
+    const v = s.data();
+    if (!v || !v.json) return;
+    try { window._brief = JSON.parse(v.json); renderBrief(window._brief); } catch (e) { $("#stamp").textContent = "The brief could not be read; the next run rewrites it."; }
+  }, e => { clearTimeout(timer); $("#stamp").textContent = "Could not load the brief (" + (e.code || "error") + ")."; });
+})();
+</script>
