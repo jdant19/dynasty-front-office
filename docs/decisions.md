@@ -254,7 +254,7 @@ Question: push, hold or sell, and where is the market? Weeks 10-14, in the daily
 
 | Job | When (Central) | Steps |
 |---|---|---|
-| daily | every morning ~5:07am | site tables, scoring, projections, season odds, three-year outlook, start/sit, deadline (Weeks 10-14) |
+| daily | every morning ~5:07am | site tables, scoring, projections, season odds, three-year outlook, start/sit, deadline (Weeks 10-14), playoff prep (Weeks 10-18) |
 | waivers | Tuesday ~1:37am, after Monday night | refresh, waiver bid list |
 | lineup | Thursday and Sunday ~9:23am | refresh, start/sit |
 | trades | Wednesday ~6:53am | refresh, valuation re-fit, odds, owner plans, trade search |
@@ -262,3 +262,19 @@ Question: push, hold or sell, and where is the market? Weeks 10-14, in the daily
 A source outage skips that step with a warning (committed copy kept); any other failure stops the job.
 Each step is logged to `data/processed/run_log.csv`. League results still come from Jordan's
 scoreboard screenshots while the Yahoo sync is down.
+
+## Playoff prep (`decide/playoffs.py`)
+
+Question: who matters for the league playoffs, and what is adding them before Week 18 worth?
+
+- The league playoffs: the four playoff teams keep their own players, draft the rest in seed order (no
+  snake), start one lineup with no bench, total points through the Super Bowl ($200 / $100).
+- A player's playoff value: rest-of-season rate x chance he plays x the playoff games his NFL team is
+  expected to play (market ratings, 4,000 simulated NFL seasons).
+- Likely seeds (the simulator's most likely top four), Jordan's keeps and draft, every lineup's
+  expected points, title odds.
+- Adds: for the most valuable players not on Jordan's roster, the change in his title chance and
+  expected playoff payout if the player is his at the end of Week 18 (keeps and draft re-run, playoffs
+  simulated). A player on a non-playoff team can be drafted anyway; adding him still pays when it frees
+  Jordan's pick for someone else. Rival playoff teams' players come only by trade.
+- Output: `decide_playoffs.md`, `decide_playoffs_adds.csv`, `decide_playoffs_lineups.csv`.

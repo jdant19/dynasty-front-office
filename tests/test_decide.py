@@ -231,3 +231,14 @@ def test_rfa_order_follows_dynasty_value():
     gid = p.index[p.player == "Jahmyr Gibbs"][0]
     cook = p.index[p.player == "James Cook"][0]
     assert a.order_value(gid) > a.order_value(cook)
+
+
+def test_playoff_prep_lineups_are_legal():
+    from dfo.common import load_config
+    lu = pd.read_csv(PROCESSED / "decide_playoffs_lineups.csv")
+    st = load_config("league")["roster"]["starters"]
+    assert lu.team.nunique() == 4
+    for t, g in lu.groupby("team"):
+        assert len(g) == sum(st.values())
+        assert not g.player.duplicated().any()
+    assert not lu.player.duplicated().any()           # nobody starts for two playoff teams

@@ -24,6 +24,7 @@ from dfo.common import PROCESSED
 from dfo.sources.fetch import SourceUnavailable
 
 DEADLINE_WEEKS = range(10, 15)
+PLAYOFF_PREP_WEEKS = range(10, 19)
 SEASON_WEEKS = range(1, 19)
 
 
@@ -54,6 +55,7 @@ def plan(job: str) -> list[tuple]:
     if job == "daily":
         steps = refresh + [("dfo.sim.dial",), ("dfo.sim.future",), ("dfo.decide.lineup",)]
         steps += [("dfo.decide.deadline",)] if _week() in DEADLINE_WEEKS else []
+        steps += [("dfo.decide.playoffs",)] if _week() in PLAYOFF_PREP_WEEKS else []
         return steps
     if job == "waivers":
         return refresh + [("dfo.decide.waivers",)]
