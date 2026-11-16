@@ -31,3 +31,9 @@ time,job,step,status,seconds,note
 2026-11-15T20:26:56+00:00,lineup,dfo.scoring 2026,ok,0,
 2026-11-15T20:27:50+00:00,lineup,dfo.projections.current,ok,54,
 2026-11-15T20:27:54+00:00,lineup,dfo.decide.lineup,ok,3,
+2026-11-16T20:55:57+00:00,daily,dfo.ingest.site,ok,0,
+2026-11-16T20:55:58+00:00,daily,dfo.scoring 2026,ok,1,
+2026-11-16T20:56:53+00:00,daily,dfo.projections.current,ok,55,
+2026-11-16T20:57:34+00:00,daily,dfo.sim.dial,ok,41,
+2026-11-16T20:57:34+00:00,daily,dfo.sim.future,ok,0,
+2026-11-16T20:57:34+00:00,daily,dfo.decide.lineup,failed,0,TypeError: cannot unpack non-iterable NoneType object
