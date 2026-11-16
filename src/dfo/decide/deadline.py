@@ -9,8 +9,9 @@ Weeks 10-14 (deadline: end of Week 14). Everything from the same numbers as the 
 - Jordan's needs: for each position, what the best player a building team has there would add to
   his lineup over the rest of the season, and at what salary (Jordan is over the cap, so salary must
   come back within the 25% rule).
-- Rentals: players on building teams whose contracts end this season with no designation rights.
-  Their owners get nothing for them after Week 18, so they are the cheapest this-season points.
+- Rentals: players on building teams whose contracts end this season and whom their owner is not
+  expected to designate (decide/owner_plans.py: two RFA slots and one tag per team). Their owners get
+  nothing for them after Week 18, so they are the cheapest this-season points.
 - What Jordan can spend: picks by tier, and bench players who add nothing to his lineup this season.
 - What moved since the last run (sim_2026_history.csv).
 """
@@ -62,15 +63,19 @@ def market(post: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame
     mine = st.rosters[ME]
     base = st.lineup(mine)
     build = set(post[post.posture == "build"].owner)
+    pl = pd.read_csv(PROCESSED / "decide_owner_plans_2027.csv")
+    plans = pl.set_index("player_id").action.to_dict()
     rows = []
     for o in build:
         for pid in st.rosters.get(o, set()):
             if pid not in ros.index:
                 continue
             gain = st.lineup(mine | {pid}) - base
-            if gain < 3:
+            if gain < 1:
                 continue
-            ending = (float(p.salary_2027.get(pid, 0) or 0) == 0) and str(p.rights.get(pid, "none")) in ("none", "nan")
+            # a rental: his contract ends this season and his owner is not expected to designate him
+            # (most expiring players carry rights, but each team has only two RFA slots and one tag)
+            ending = (float(p.salary_2027.get(pid, 0) or 0) == 0) and plans.get(pid, "auction") == "auction"
             rows.append(dict(owner=o, player=st.names.get(pid, pid), pos=ros.pos.get(pid), salary_2026=int(st.salary.get(pid, 0) or 0),
                              your_lineup_gain=round(gain, 1), payout_now=round(gain * float(post.set_index("owner").per_point_2026[ME])),
                              rental=ending, later_value_to_him=round(float(p.surplus_2027_29.get(pid, 0) or 0) * st.conv["dollars_per_point_later"])))
@@ -118,8 +123,8 @@ def run() -> str:
           "| Pos | Player | Team | Your lineup gain, rest of season | Salary | Rental |", "|---|---|---|---|---|---|"]
     for r in need.itertuples():
         L.append(f"| {r.pos} | {r.player} | {r.owner} | {r.your_lineup_gain:+.0f} | ${r.salary_2026} | {'yes' if r.rental else ''} |")
-    rent = targets[targets.rental].head(8)
-    L += ["", "## Rentals (contract ends this season, no rights: worth nothing to the seller after Week 18)", ""]
+    rent = targets[targets.rental].head(10)
+    L += ["", "## Rentals (contract ends this season and his owner is not expected to designate him)", ""]
     L += [f"- {r.player} ({r.pos}, {r.owner}, ${r.salary_2026}): {r.your_lineup_gain:+.0f} lineup points, about ${r.payout_now} of payout to you"
           for r in rent.itertuples()] or ["- none on selling teams that would start for you"]
     L += ["", "## What you can spend (no cost to this season)", "",

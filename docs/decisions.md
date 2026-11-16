@@ -243,7 +243,9 @@ Question: push, hold or sell, and where is the market? Weeks 10-14, in the daily
 - Posture per team: this season's value of a lineup point (simulator slope from the standings) over
   the later value every team shares ($0.53): push at 1.25x or more, build at 0.75x or less, else hold.
 - For Jordan: the best player a building team has at each position and what he adds over the rest of
-  the season; rentals (contracts ending, no rights: worth nothing to the seller after Week 18); what
+  the season; rentals (contracts ending and the seller not expected to designate him, per the owner
+  plans; most expiring players carry rights, but a team has only two RFA slots and one tag; Jordan
+  2026-11-16 caught the earlier "no rights" rule leaving out almost everyone); what
   Jordan can spend at no cost to this season (picks by tier, bench players who never start).
 - What moved since the last run: `sim_2026_history.csv`, appended every run.
 - Output: `decide_deadline.md`, `decide_deadline_posture.csv`, `decide_deadline_targets.csv`.
