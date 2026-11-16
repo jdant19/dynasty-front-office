@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-16T06:24:20+00:00",
+ "as_of": "2026-11-16T18:31:24+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -5383,11 +5383,11 @@
    "sleeper_id": "13861",
    "name": "Daniel Sobkowicz",
    "position": "WR",
-   "nfl_team": "HOU",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-29T07:00:21.204994+00:00",
-   "synced_at": "2026-11-05T07:00:06.647+00:00",
+   "synced_at": "2026-11-16T07:00:21.858+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
