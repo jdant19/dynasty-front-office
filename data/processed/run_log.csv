@@ -37,3 +37,7 @@ time,job,step,status,seconds,note
 2026-11-16T20:57:34+00:00,daily,dfo.sim.dial,ok,41,
 2026-11-16T20:57:34+00:00,daily,dfo.sim.future,ok,0,
 2026-11-16T20:57:34+00:00,daily,dfo.decide.lineup,failed,0,TypeError: cannot unpack non-iterable NoneType object
+2026-11-17T17:02:39+00:00,waivers,dfo.ingest.site,ok,0,
+2026-11-17T17:02:39+00:00,waivers,dfo.scoring 2026,ok,1,
+2026-11-17T17:04:07+00:00,waivers,dfo.projections.current,ok,87,
+2026-11-17T17:04:08+00:00,waivers,dfo.decide.waivers,failed,1,KeyError: 'net_payout'
