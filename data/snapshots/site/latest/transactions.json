@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-16T21:14:44+00:00",
+ "as_of": "2026-11-17T02:55:23+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -1449,6 +1449,25 @@
    },
    "source_id": null,
    "created_at": "2026-10-16T20:53:03.679274+00:00"
+  },
+  {
+   "id": "353b83c2-74a9-4622-ba27-cc1f316bc0f8",
+   "occurred_at": "2026-11-16T22:59:33.975601+00:00",
+   "type": "fa_signing",
+   "player_id": "def-CLE",
+   "player_name": "Cleveland Browns D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-2",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-16T22:59:33.975601+00:00"
   },
   {
    "id": "35bd912b-045a-4894-abb5-e0fcbced6723",
@@ -4664,6 +4683,24 @@
    },
    "source_id": null,
    "created_at": "2026-10-19T21:49:54.025853+00:00"
+  },
+  {
+   "id": "c4e7e800-99f0-44aa-b4a1-0293f0de87f6",
+   "occurred_at": "2026-11-16T22:59:08.399975+00:00",
+   "type": "drop",
+   "player_id": "def-DET",
+   "player_name": "Detroit Lions D/ST",
+   "from_team_id": "team-2",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-16T22:59:08.399975+00:00"
   },
   {
    "id": "c56c4096-74aa-4238-9436-d551b4fa590d",
