@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T12:44:38+00:00",
+ "made_at": "2026-11-18T19:25:14+00:00",
  "week": 11,
  "decisions": [
   {
@@ -8,11 +8,11 @@
    "deadline": "first kickoff of each game window",
    "title": "Week 11 lineup vs Ryan",
    "recommendation": "QB Patrick Mahomes, RB Jahmyr Gibbs, RB Chuba Hubbard, WR Ja'Marr Chase, WR CeeDee Lamb, WR Parker Washington, TE George Kittle, FLEX Bucky Irving, K Jake Bates, DEF Ravens",
-   "value": "win probability 78%",
+   "value": "win probability 76%",
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-18T12:43:41+00:00"
+   "made_at": "2026-11-18T19:23:52+00:00"
   },
   {
    "id": "waivers-11",
@@ -71,7 +71,7 @@
    "deadline": "end of Week 18 (trades: Week 14)",
    "title": "Worth adding for the league playoffs",
    "recommendation": "Kenneth Walker III (Ben); James Cook (Matt)",
-   "value": "title +13%, $+22; title +13%, $+22",
+   "value": "title +9%, $+18; title +9%, $+18",
    "confidence": "low",
    "reason": "Keeps are free; owning a player also frees your first draft pick.",
    "change": "NFL playoff odds moving, or the seeds changing."
@@ -90,63 +90,63 @@
   }
  ],
  "posture": {
-  "p_first": 0.543,
-  "p_top4": 0.999,
-  "p_title": 0.393,
-  "exp_payout": 398,
+  "p_first": 0.526,
+  "p_top4": 0.998,
+  "p_title": 0.376,
+  "exp_payout": 392,
   "mean_wins": 13.7,
   "stance": "push",
   "moved": {
    "since": "2026-11-18",
-   "p_first": 0.007,
-   "p_title": 0.02,
-   "payout": 6
+   "p_first": -0.017,
+   "p_title": -0.017,
+   "payout": -7
   },
   "league": [
    {
     "owner": "Jordan",
-    "p_first": 0.543,
-    "p_top4": 0.999,
-    "p_title": 0.393,
-    "exp_payout": 398,
+    "p_first": 0.526,
+    "p_top4": 0.998,
+    "p_title": 0.376,
+    "exp_payout": 392,
     "posture": "push"
    },
    {
     "owner": "Russ",
-    "p_first": 0.327,
-    "p_top4": 0.996,
-    "p_title": 0.266,
-    "exp_payout": 314,
+    "p_first": 0.342,
+    "p_top4": 0.997,
+    "p_title": 0.278,
+    "exp_payout": 320,
     "posture": "push"
    },
    {
     "owner": "Johnny",
     "p_first": 0.128,
-    "p_top4": 0.986,
-    "p_title": 0.204,
-    "exp_payout": 221,
+    "p_top4": 0.984,
+    "p_title": 0.205,
+    "exp_payout": 220,
     "posture": "push"
    },
    {
     "owner": "Zach",
-    "p_first": 0.001,
-    "p_top4": 0.696,
-    "p_title": 0.096,
-    "exp_payout": 49,
-    "posture": "hold"
+    "p_first": 0.003,
+    "p_top4": 0.711,
+    "p_title": 0.1,
+    "exp_payout": 52,
+    "posture": "push"
    },
    {
     "owner": "Matt",
     "p_first": 0.0,
-    "p_top4": 0.143,
+    "p_top4": 0.144,
     "p_title": 0.024,
-    "exp_payout": 10,
+    "exp_payout": 9,
     "posture": "build"
    },
    {
     "owner": "Max",
     "p_first": 0.0,
-    "p_top4": 0.092,
+    "p_top4": 0.079,
     "p_title": 0.006,
     "exp_payout": 3,
     "posture": "build"
@@ -154,23 +154,23 @@
    {
     "owner": "Qasim",
     "p_first": 0.0,
-    "p_top4": 0.068,
+    "p_top4": 0.07,
     "p_title": 0.009,
     "exp_payout": 3,
     "posture": "build"
    },
    {
-    "owner": "Ryan",
+    "owner": "Ben",
     "p_first": 0.0,
-    "p_top4": 0.018,
-    "p_title": 0.002,
-    "exp_payout": 1,
+    "p_top4": 0.004,
+    "p_title": 0.0,
+    "exp_payout": 0,
     "posture": "build"
    },
    {
-    "owner": "Ben",
+    "owner": "Ryan",
     "p_first": 0.0,
-    "p_top4": 0.003,
+    "p_top4": 0.014,
     "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
@@ -215,7 +215,7 @@
    "player": "Kenneth Walker III",
    "owner": "Ben",
    "pos": "RB",
-   "gain": 37.0,
+   "gain": 36.8,
    "salary": 67,
    "rental": false
   },
@@ -292,8 +292,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-18T07:24:44+00:00",
-   "age_hours": 5.3,
+   "as_of": "2026-11-18T17:14:49+00:00",
+   "age_hours": 2.2,
    "limit": "24h",
    "stale": false
   },
@@ -306,15 +306,15 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-18T04:14:25+00:00",
-   "age_hours": 8.5,
+   "as_of": "2026-11-18T19:22:28+00:00",
+   "age_hours": 0.0,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-18T04:19:22+00:00",
-   "age_hours": 8.4,
+   "as_of": "2026-11-18T12:44:38+00:00",
+   "age_hours": 6.7,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
