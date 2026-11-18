@@ -21,6 +21,7 @@ a send box (notes, corrections, questions, trade offers received, screenshots) a
 | `brief/today` | the sync | `{json, made_at, week}`; `json` is brief.json as a string |
 | `responses/{decision id}` | the page | `{id, verdict, reason, recommendation, at}`; one per decision, overwritten when Jordan changes his mind |
 | `answers/{question id}` | the page | `{id, answer, at}` |
+| `threads/adhoc-<YYYYMMDD>-<slug>` | any Claude session | an ad-hoc question Jordan raised in a session on the repo and its answer; shown under "Discussions" (CLAUDE.md, "Ad-hoc questions") |
 | `threads/{decision id}` | the page, then the sync | `{id, title, recommendation, messages: [{role: you / claude / sync, text, at}], status: open / requested / answered, requested_at}`; "Discuss" on a decision card. "Ask now" answers on the page from the brief alone; "Send to the sync" sets `status: requested` |
 | `notes/{auto id}` | the page, then the sync | `{id, kind, text, asset_id, asset_ids, filename, at, status}`; the page writes `status: waiting`; the sync sets `status` (saved, entered, question) and a one-line `result`, which the page shows under "Recently sent" |
 

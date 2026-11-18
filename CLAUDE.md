@@ -36,6 +36,30 @@ He usually opens a session to discuss or question something he saw on the page. 
    update `brief/today`, and append a short `{role: "sync", text, at}` reply to that decision's thread so the
    page shows the outcome.
 
+## Ad-hoc questions (anything not on a card)
+Jordan also brings things that are not on the page: an offer he received, a trade he is thinking of, a player
+or owner he has a view on, a rule question, "what if". Use the system's own modules, not a fresh estimate:
+
+| Question | Where the answer comes from |
+|---|---|
+| Is this trade good (offered or his idea)? | `decide/trades.py`: `live()`, `Trade(Assets, Assets)`, `State.evaluate(t, n>=6000)` (both sides, this season by simulation, later seasons, cap by year, forced drops); legality in `rules/contracts.py`; scored on end states per the working conventions |
+| What could I get for X / who should I target? | `python -m dfo.decide.trade_search --targets "<player>" --sims 3000` |
+| Start/sit, waivers, streaming | `dfo.decide.lineup`, `dfo.decide.waivers` (K/DEF are streamed: P10) |
+| Buy or sell now, the deadline | `dfo.decide.deadline`, `dfo.decide.playoffs` |
+| My next three seasons, a cap question | `dfo.decide.outlook Jordan`, `rules/cap.py` (`cap_room()`), `config/league.yaml` |
+| Offseason: RFA, tags, auction | `dfo.decide.offseason`, `dfo.decide.owner_plans`; his own plan is `config/owner_plans.yaml` |
+| How does owner Y behave? | `data/processed/owner_reads.md`, `owner_model.csv`, `grades_*.csv`, `observations.csv` |
+| What is player Z worth? | `data/processed/prices.csv` (rebuilt by `dfo.valuation.build`), `proj_ros.csv`, `proj_week.csv` |
+
+Then:
+- Information he gives (an owner told him something, his view on a player) is an observation: add a dated
+  row to `data/processed/observations.csv` with its source and an expiry. A stated plan of his own goes in
+  `config/owner_plans.yaml`. A correction to the system is classified as in "How knowledge is stored" below.
+- Record the outcome where he will see it again: a page thread `threads/adhoc-<YYYYMMDD>-<short-slug>`
+  (`{id, title, recommendation: "", messages: [{role: "you", text: <his question, in brief>}, {role: "sync",
+  text: <the answer, with numbers and sources>}], status: "answered"}`), and run the ingest so it lands in
+  `data/journal/threads.csv`. If it leads to something he should act on, re-export the brief.
+
 ## Where things live
 - `config/league.yaml` — the league rules as data. The rules engine reads it; tests check it. Never hard-code a rule elsewhere.
 - `config/owners.yaml` — owners are the identity; team names are season aliases.

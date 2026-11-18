@@ -134,6 +134,12 @@ button.discuss { border-color: var(--accent); color: var(--accent) }
     <div id="decisions" class="empty">Open recommendations appear here with their deadlines. Agree or disagree with each, and say why; your reasons go into the decision journal.</div>
   </section>
 
+  <section id="adhoc-sec" hidden>
+    <h2>Discussions</h2>
+    <div class="meta">Things you raised outside the cards, from a Claude session on the repo. Newest first.</div>
+    <div id="adhoc"></div>
+  </section>
+
   <section>
     <h2>Questions for you</h2>
     <div id="questions" class="empty">Nothing is waiting on you.</div>
@@ -245,6 +251,16 @@ function renderDecisions(list) {
 const safe = id => String(id).replace(/[^A-Za-z0-9_-]/g, "_");
 const openChats = new Set(), threads = {}, pending = {}, ctls = {};
 let sample = null;
+function renderAdhoc() {
+  const list = Object.values(threads).filter(t => String(t.id).startsWith("adhoc-"))
+    .sort((a, b) => String(b.id).localeCompare(String(a.id))).slice(0, 12);
+  $("#adhoc-sec").hidden = !list.length;
+  const who = { you: "You", claude: "Claude", sync: "Answer" };
+  $("#adhoc").innerHTML = list.map((t, i) => `<details class="dec" ${i === 0 ? "open" : ""}>
+      <summary><strong>${esc(t.title || t.id)}</strong> <span class="meta num">${esc(String(t.id).slice(6, 14))}</span></summary>
+      <div class="msgs">${(t.messages || []).map(m => `<div class="msg ${esc(m.role)}"><span class="who">${who[m.role] || esc(m.role)}</span><div>${esc(m.text)}</div></div>`).join("")}</div>
+    </details>`).join("");
+}
 function chatLabel(id) { const t = threads[id]; return t && t.messages?.length ? `Discussion (${t.messages.length})` : "Discuss"; }
 function threadChip(id) {
   const t = threads[id] || {};
@@ -449,6 +465,7 @@ function renderSent(list) {
   db.collection("responses").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) responses[v.id] = v; }); if (window._brief) renderDecisions(window._brief.decisions || []); }, () => {});
   db.collection("threads").onSnapshot(s => {
     s.docs.forEach(x => { const v = x.data(); if (v && v.id) threads[v.id] = v; });
+    renderAdhoc();
     if (window._brief) renderDecisions(window._brief.decisions || []);
   }, () => {});
   db.collection("notes").onSnapshot(s => renderSent(s.docs.map(d => d.data()).filter(Boolean)), () => {});
