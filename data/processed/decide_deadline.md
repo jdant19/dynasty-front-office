@@ -4,7 +4,7 @@ Inputs: projections and simulator as of 2026-11-18; league results through the l
 
 **Jordan: PUSH.** A lineup point is worth $1.00 to you this season, 1.9x what it is worth later. 1st 54%, top 4 100%, title 37%, expected payout $393.
 
-Since 2026-11-17: 1st +1%, title -0%, expected payout -2.
+Since 2026-11-18: 1st +0%, title +0%, expected payout +0.
 
 ## Every team's posture
 
@@ -41,8 +41,8 @@ Competing buyers: Russ, Johnny. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
 - Texans (DEF, Mike, $2): +8 lineup points, about $8 of payout to you
 - Bills (DEF, Ryan, $1): +8 lineup points, about $8 of payout to you
 - Seahawks (DEF, Qasim, $1): +8 lineup points, about $8 of payout to you
-- Rams (DEF, Matt, $2): +7 lineup points, about $7 of payout to you
 - Nico Collins (WR, Max, $91): +7 lineup points, about $7 of payout to you
+- Rams (DEF, Matt, $2): +7 lineup points, about $7 of payout to you
 - Ka'imi Fairbairn (K, Max, $2): +6 lineup points, about $6 of payout to you
 - Patriots (DEF, Max, $1): +6 lineup points, about $6 of payout to you
 
@@ -52,11 +52,11 @@ Competing buyers: Russ, Johnny. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
 |---|---|---|
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
-| Ollie Gordon II | 0 | $-4 |
 | Chris Brazzell II | 0 | $-4 |
+| Ollie Gordon II | 0 | $-4 |
+| Brenton Strange | 0 | $0 |
 | Audric Estimé | 0 | $0 |
 | Kenny Gainwell | 0 | $0 |
-| Brenton Strange | 0 | $0 |
 | Mike Gesicki | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |

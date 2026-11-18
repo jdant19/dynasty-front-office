@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T04:15:46+00:00",
+ "made_at": "2026-11-18T04:19:22+00:00",
  "week": 11,
  "decisions": [
   {
@@ -12,7 +12,7 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-18T04:15:03+00:00"
+   "made_at": "2026-11-18T04:18:31+00:00"
   },
   {
    "id": "waivers-11",
@@ -97,10 +97,10 @@
   "mean_wins": 13.7,
   "stance": "push",
   "moved": {
-   "since": "2026-11-17",
-   "p_first": 0.006,
-   "p_title": -0.002,
-   "payout": -2
+   "since": "2026-11-18",
+   "p_first": 0.0,
+   "p_title": 0.0,
+   "payout": 0
   },
   "league": [
    {
@@ -307,17 +307,17 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-18T04:14:25+00:00",
-   "age_hours": 0.0,
+   "age_hours": 0.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-18T04:12:06+00:00",
+   "as_of": "2026-11-18T04:15:46+00:00",
    "age_hours": 0.1,
    "limit": "24h",
    "stale": false,
-   "note": "2 step(s) not ok in recent runs"
+   "note": "1 step(s) not ok in recent runs"
   }
  ]
 }
