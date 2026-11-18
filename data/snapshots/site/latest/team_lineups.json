@@ -1,6 +1,6 @@
 {
  "table": "team_lineups",
- "as_of": "2026-11-18T19:35:55+00:00",
+ "as_of": "2026-11-18T22:02:38+00:00",
  "rows": [
   {
    "id": "0009e24d-af7f-4e3e-b262-abb4c8384ac4",
@@ -73,15 +73,6 @@
    "slot_index": 9,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-10-27T12:01:36.566417+00:00"
-  },
-  {
-   "id": "09357506-d72e-49ad-9d69-42d3136af7ac",
-   "team_id": "team-4",
-   "player_id": "sl-11579",
-   "slot": "BN",
-   "slot_index": 9,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-11T22:01:58.221679+00:00"
   },
   {
    "id": "0b20000a-009a-4ddd-9a7f-2463f7302ccd",
@@ -285,10 +276,19 @@
    "id": "22402fc5-ca76-436a-b776-6d2e46f1f916",
    "team_id": "team-10",
    "player_id": "sl-5849",
-   "slot": "BN",
-   "slot_index": 6,
+   "slot": "IR",
+   "slot_index": 1,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:58:05.388323+00:00"
+  },
+  {
+   "id": "23480ee8-3921-4e4e-bd1b-2d37ffda231a",
+   "team_id": "team-4",
+   "player_id": "def-DET",
+   "slot": "BN",
+   "slot_index": 0,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-18T19:40:50.775646+00:00"
   },
   {
    "id": "24f5f8a0-45e2-4156-b01f-a7e8eee6a3c1",
@@ -442,15 +442,6 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:39:51.741906+00:00"
-  },
-  {
-   "id": "3a2260e9-81bd-4168-b131-c9840a82ec27",
-   "team_id": "team-10",
-   "player_id": "sl-11834",
-   "slot": "WR",
-   "slot_index": 0,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-10-16T02:17:41.495917+00:00"
   },
   {
    "id": "3b7f08e6-0285-4ee0-86a4-4ce3820699b5",
@@ -615,15 +606,6 @@
    "updated_at": "2026-04-20T15:18:55.359221+00:00"
   },
   {
-   "id": "4f18d56a-7639-4446-8802-ce803d70ad1a",
-   "team_id": "team-5",
-   "player_id": "def-SEA",
-   "slot": "BN",
-   "slot_index": 12,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-04T05:08:17.614297+00:00"
-  },
-  {
    "id": "51a64ecb-86be-4f07-8fa4-ba6ef3f60f60",
    "team_id": "team-5",
    "player_id": "sl-13298",
@@ -703,6 +685,15 @@
    "slot_index": 6,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-08-23T20:40:17.919114+00:00"
+  },
+  {
+   "id": "593f511b-447f-4b5b-9165-79d1f3a540bb",
+   "team_id": "team-4",
+   "player_id": "sl-5045",
+   "slot": "BN",
+   "slot_index": 9,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-18T19:41:23.297035+00:00"
   },
   {
    "id": "59a2d55f-6a48-4bda-af21-578b931192b9",
@@ -906,8 +897,8 @@
    "id": "70902a93-cf5d-4fc4-8708-99a55bb15fc5",
    "team_id": "team-5",
    "player_id": "sl-5850",
-   "slot": "BN",
-   "slot_index": 2,
+   "slot": "IR",
+   "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:56:54.589446+00:00"
   },
@@ -955,15 +946,6 @@
    "slot_index": 1,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T03:56:34.374496+00:00"
-  },
-  {
-   "id": "769540d8-a3d6-49ac-b2ef-709ea12fd829",
-   "team_id": "team-2",
-   "player_id": "def-CLE",
-   "slot": "BN",
-   "slot_index": 2,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-17T22:17:44.740923+00:00"
   },
   {
    "id": "7b0c50c0-9177-4d0c-af2f-3f2f51f5b31d",
@@ -1018,15 +1000,6 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:19:28.470932+00:00"
-  },
-  {
-   "id": "82eeaa20-7150-4073-b1bd-3b05854dfa6d",
-   "team_id": "team-10",
-   "player_id": "sl-4227",
-   "slot": "K",
-   "slot_index": 0,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-10-16T20:59:42.419993+00:00"
   },
   {
    "id": "84d984f0-92dc-4a0f-b816-d572bb9d813b",
@@ -1362,15 +1335,6 @@
    "updated_at": "2026-10-28T02:45:39.931188+00:00"
   },
   {
-   "id": "b4c7079c-d418-40c6-b067-b20ce0375b04",
-   "team_id": "team-3",
-   "player_id": "def-GB",
-   "slot": "BN",
-   "slot_index": 7,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-17T22:17:49.493385+00:00"
-  },
-  {
    "id": "b59da6ba-8251-4e17-9cbf-afa6d1afbab4",
    "team_id": "team-4",
    "player_id": "sl-4046",
@@ -1486,6 +1450,15 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-08-23T20:42:02.074637+00:00"
+  },
+  {
+   "id": "c55d9a35-c00e-4d83-8602-ff3f0392ec03",
+   "team_id": "team-10",
+   "player_id": "sl-8210",
+   "slot": "BN",
+   "slot_index": 6,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-18T19:38:44.676683+00:00"
   },
   {
    "id": "c5889f76-7c50-4664-b654-323a88b443d1",
@@ -1729,15 +1702,6 @@
    "slot_index": 5,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:22:47.16181+00:00"
-  },
-  {
-   "id": "e1d905ad-d5c7-4819-923a-70d0cb2b8def",
-   "team_id": "team-4",
-   "player_id": "def-BAL",
-   "slot": "BN",
-   "slot_index": 0,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-11T21:59:43.657879+00:00"
   },
   {
    "id": "e4696efe-ce90-4702-a18c-f9e8fee0d83e",
