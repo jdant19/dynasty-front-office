@@ -63,7 +63,27 @@ def waiver_weekly() -> dict[str, float]:
         n = int(rostered.get(pos, 10))
         g = ev[(ev.pos == pos) & ev.wrank.between(n + 1, n + 3)]
         out[pos] = float(g.points.mean()) if len(g) else 0.0
+        if pos in ("K", "DEF"):
+            out[pos] = max(out[pos], stream_level(ev, pos, n))
     return out
+
+
+def stream_level(ev: pd.DataFrame, pos: str, n: int) -> float:
+    """P10: what streaming a K/DEF scores a week here. Teams roster units by name, not by the week's
+    rank, so the best unrostered unit is often a top matchup (Week 11 2026: the top-ranked defense was
+    free). Backtest 2021-2025: each season the n units with the best season-average rank count as
+    rostered (the league holds the good ones), and the best-ranked of the rest is started each week.
+    Fit 2026-11-18: DEF 7.36 points a week (14 rostered) against 5.66 from ranks n+1 to n+3, which had
+    a rostered defense look 1.7 points a week better than streaming; K 7.54 (12 rostered) vs 7.83."""
+    e = ev[(ev.pos == pos) & ev.ecr.notna()]
+    pts = []
+    for _, g in e.groupby("season"):
+        held = g.groupby("player_id").ecr.mean().nsmallest(n).index
+        for _, gw in g.groupby("week"):
+            free = gw[~gw.player_id.isin(held)]
+            if len(free):
+                pts.append(float(free.nsmallest(1, "ecr").points.iloc[0]))
+    return float(np.mean(pts)) if pts else 0.0
 
 
 def _waiver_rows(weeks: list[int]) -> pd.DataFrame:

@@ -21,6 +21,7 @@ a send box (notes, corrections, questions, trade offers received, screenshots) a
 | `brief/today` | the sync | `{json, made_at, week}`; `json` is brief.json as a string |
 | `responses/{decision id}` | the page | `{id, verdict, reason, recommendation, at}`; one per decision, overwritten when Jordan changes his mind |
 | `answers/{question id}` | the page | `{id, answer, at}` |
+| `threads/{decision id}` | the page, then the sync | `{id, title, recommendation, messages: [{role: you / claude / sync, text, at}], status: open / requested / answered, requested_at}`; "Discuss" on a decision card. "Ask now" answers on the page from the brief alone; "Send to the sync" sets `status: requested` |
 | `notes/{auto id}` | the page, then the sync | `{id, kind, text, asset_id, asset_ids, filename, at, status}`; the page writes `status: waiting`; the sync sets `status` (saved, entered, question) and a one-line `result`, which the page shows under "Recently sent" |
 
 ## The sync (what the scheduled task does)
@@ -44,6 +45,13 @@ a send box (notes, corrections, questions, trade offers received, screenshots) a
    are recorded; anything that would change a rule, principle or parameter becomes a question to Jordan,
    never an automatic change. Set the note's status in `data/journal/notes.csv` and on its page document
    (ArtifactData update: `status` = entered / saved / question, `result` = one line on what was done).
+4b. Threads with `status: requested` (Discuss → "Send to the sync"): re-check the decision with the full
+   data, as CLAUDE.md asks for pushback (re-run the module or the evaluation behind it, look at the inputs
+   Jordan questions), then either hold with reasons or change it and say why. If the fault is in the
+   system, fix it (classify it: rule, principle, parameter, observation) and re-run. Reply by appending
+   `{role: "sync", text, at}` to the thread's messages and setting `status: "answered"` (ArtifactData
+   update pinned to the version read). Add the threads to the ingest dump (`"threads": [...]`) so every
+   message lands in `data/journal/threads.csv`.
 5. If results or other inputs changed, re-run `dfo.sim.dial` and `dfo.decide.deadline` (Weeks 10-14), then
    `dfo.frontdoor.export`; then write `brief/today` with the new brief.json (pin `if_version` to the version
    just read).
@@ -60,6 +68,7 @@ Nothing in the sync proposes, bids or submits anything in the league.
 | `responses.csv` | each agree / disagree Jordan records (a changed verdict is a new row) |
 | `questions.csv` | each question in the queue, both directions, with its answer |
 | `notes.csv` | each note or upload from the page, with what was done with it |
+| `threads.csv` | each message in a Discuss thread (Jordan, the page's Claude, the sync) |
 
 All four are append-only. Following (what Jordan actually started, bid and traded against the
 recommendation) is matched from `jordan_lineups_2026.csv`, the site transactions and trades; the

@@ -51,7 +51,13 @@ def run(dump: dict) -> dict:
                   asset_id=";".join(n.get("asset_ids") or ([n["asset_id"]] if n.get("asset_id") else [])),
                   filename=n.get("filename", ""), at=n.get("at", ""), status="new") for n in dump.get("notes", [])]
     n_notes = _append("notes.csv", notes)
-    return dict(responses=n_resp, answers=n_ans, notes=n_notes)
+    # Discuss threads: one journal row per message (id = decision@time@role), so a conversation is kept
+    # even when the page later overwrites the thread document
+    msgs = [dict(id=f"{t['id']}@{m.get('at', '')}@{m.get('role', '')}", decision_id=t["id"], role=m.get("role", ""),
+                 text=m.get("text", ""), at=m.get("at", ""), thread_status=t.get("status", ""))
+            for t in dump.get("threads", []) for m in (t.get("messages") or [])]
+    n_threads = _append("threads.csv", msgs)
+    return dict(responses=n_resp, answers=n_ans, notes=n_notes, threads=n_threads)
 
 
 if __name__ == "__main__":

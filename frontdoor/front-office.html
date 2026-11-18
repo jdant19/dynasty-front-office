@@ -83,6 +83,13 @@ details[open] .links { margin-top: 6px }
 .sent div { display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline }
 .chip.done { color: var(--good) }
 .chip.stale { background: transparent; border: 1px solid var(--bad); color: var(--bad) }
+.chat { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; min-width: 0 }
+.msgs { display: grid; gap: 8px; max-height: 420px; overflow-y: auto }
+.msg { display: grid; gap: 2px; padding: 8px 10px; border-radius: 6px; background: var(--bg); overflow-wrap: anywhere; white-space: pre-wrap }
+.msg.you { background: var(--chip) }
+.msg.sync { border-left: 3px solid var(--accent) }
+.msg .who { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); white-space: normal }
+button.discuss { border-color: var(--accent); color: var(--accent) }
 @media (max-width: 660px) { .board div:last-child:nth-child(odd) { grid-column: 1 / -1 } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important } }
 </style>
@@ -216,13 +223,121 @@ function renderDecisions(list) {
         <button data-v="disagree" class="${r.verdict === "disagree" ? "on" : ""}">Disagree</button>
         <span class="saved" role="status"></span>
       </div>
-      <textarea id="why-${esc(d.id)}" placeholder="Why? (optional for agree, helpful for disagree)">${esc(r.reason || "")}</textarea>
+      <textarea class="whybox" id="why-${esc(d.id)}" placeholder="Why? (optional for agree, helpful for disagree)">${esc(r.reason || "")}</textarea>
+      <div class="row"><button class="discuss" aria-expanded="${openChats.has(d.id)}">${chatLabel(d.id)}</button>${threadChip(d.id)}</div>
+      <div class="chat" id="chat-${safe(d.id)}" ${openChats.has(d.id) ? "" : "hidden"}></div>
     </article>`; }).join("");
   box.querySelectorAll("article").forEach(a => {
     const id = a.dataset.id, d = list.find(x => x.id === id);
     a.querySelectorAll("button[data-v]").forEach(btn => btn.addEventListener("click", () => saveResponse(a, d, btn.dataset.v)));
-    a.querySelector("textarea").addEventListener("change", () => { const v = (responses[id] || {}).verdict; if (v) saveResponse(a, d, v); });
+    a.querySelector("textarea.whybox").addEventListener("change", () => { const v = (responses[id] || {}).verdict; if (v) saveResponse(a, d, v); });
+    a.querySelector("button.discuss").addEventListener("click", e => {
+      const el = $("#chat-" + safe(id));
+      if (openChats.has(id)) { openChats.delete(id); el.hidden = true; } else { openChats.add(id); el.hidden = false; renderChat(d); el.querySelector("textarea")?.focus(); }
+      e.target.setAttribute("aria-expanded", openChats.has(id));
+    });
+    if (openChats.has(id)) renderChat(d);
   });
+}
+
+// ---- Discuss: a chat on each decision (instant, from what the brief carries), and a hand-off to the
+// next sync, which re-checks with the full data and posts its answer here
+const safe = id => String(id).replace(/[^A-Za-z0-9_-]/g, "_");
+const openChats = new Set(), threads = {}, pending = {}, ctls = {};
+let sample = null;
+function chatLabel(id) { const t = threads[id]; return t && t.messages?.length ? `Discussion (${t.messages.length})` : "Discuss"; }
+function threadChip(id) {
+  const t = threads[id] || {};
+  if (t.status === "requested") return `<span class="chip">waiting for sync</span>`;
+  if (t.status === "answered") return `<span class="chip done">sync answered</span>`;
+  return "";
+}
+function renderChat(d) {
+  const el = $("#chat-" + safe(d.id)); if (!el) return;
+  const t = threads[d.id] || { messages: [] }, p = pending[d.id];
+  const keep = el.querySelector("textarea")?.value || "";
+  const who = { you: "You", claude: "Claude", sync: "Sync (full re-check)" };
+  el.innerHTML = `<div class="msgs">${(t.messages || []).map(m => `<div class="msg ${esc(m.role)}"><span class="who">${who[m.role] || esc(m.role)}</span><div>${esc(m.text)}</div></div>`).join("")}
+      ${p ? `<div class="msg claude"><span class="who">Claude</span><div>${esc(p.text || "Thinking…")}</div></div>` : ""}</div>
+    <textarea placeholder="${sample ? "Ask about this recommendation, or push back on it" : "Write your question; the next sync answers it"}">${esc(keep)}</textarea>
+    <div class="row">
+      ${sample ? `<button class="primary ask" ${p ? "disabled" : ""}>Ask now</button>${p ? `<button class="stop">Stop</button>` : ""}` : ""}
+      <button class="tosync" ${t.status === "requested" ? "disabled" : ""}>${t.status === "requested" ? "Sent to the sync" : "Send to the sync for a full re-check"}</button>
+      <span class="meta status" role="status"></span>
+    </div>
+    <div class="meta">"Ask now" answers from the numbers on this page only. The sync (about 6:40am and 3:40pm) re-runs the models and is the one that can change the recommendation.</div>`;
+  el.querySelector(".ask")?.addEventListener("click", () => ask(d));
+  el.querySelector(".stop")?.addEventListener("click", () => ctls[d.id]?.abort());
+  el.querySelector(".tosync").addEventListener("click", () => toSync(d));
+  const box = el.querySelector(".msgs"); box.scrollTop = box.scrollHeight;
+}
+function rules(d) {
+  const b = window._brief || {};
+  const others = (b.decisions || []).filter(x => x.id !== d.id).map(x => `- ${x.title}: ${x.recommendation} (${x.value || ""})`).join("\n");
+  return `You are the analyst for Jordan's 10-team salary-cap dynasty fantasy football league (his team: Ja'Jah Pachulia). He is discussing one recommendation from his daily brief. Rules you work under:
+- Never submit, bid, propose or send anything; recommendations only. A trade idea is not an offer until Jordan says he proposed it.
+- Use only the numbers below. Every number you cite says where it came from (this card, the odds table). If answering needs data that is not here (other players' projections, a re-simulation), say so plainly and suggest "Send to the sync for a full re-check".
+- When Jordan pushes back, re-check the card's numbers against his point and either hold the position with reasons or concede and say what was wrong. Do not just agree.
+- Values are expected payout in whole dollars: this season from the season simulator (regular season plus the league playoffs, where each playoff team keeps its own players then drafts in seed order); later seasons at $0.53 a lineup point. Kickers and defenses are streamed every week (principle P10), so holding one is worth only its edge over the best unrostered unit that week.
+- Plain, short answers (a few sentences or a short list). Money in whole dollars.
+
+The recommendation (${d.kind}, due ${d.deadline}, confidence ${d.confidence}):
+${d.title}
+${d.recommendation}
+Value: ${d.value || "n/a"}
+Reason: ${d.reason}
+What would change it: ${d.change}
+Inputs as of: ${d.made_at || b.made_at || "unknown"}
+
+Jordan's season (brief built ${b.made_at}, Week ${b.week}): ${JSON.stringify(b.posture || {})}
+Team: ${JSON.stringify(b.team || {})}
+Other open recommendations:
+${others}
+Data health: ${JSON.stringify(b.health || [])}`;
+}
+async function saveThread(d, patch) {
+  const t = { id: d.id, title: d.title, recommendation: d.recommendation, messages: [], status: "open", ...(threads[d.id] || {}), ...patch };
+  threads[d.id] = t;
+  if (db) await db.doc("threads/" + safe(d.id)).set(t);
+  return t;
+}
+async function ask(d) {
+  const el = $("#chat-" + safe(d.id)), q = el.querySelector("textarea").value.trim(), st = el.querySelector(".status");
+  if (!q) { st.textContent = "Type a question first."; return; }
+  const t = threads[d.id] || { messages: [] };
+  const msgs = [...(t.messages || []), { role: "you", text: q, at: new Date().toISOString() }];
+  el.querySelector("textarea").value = "";
+  try { await saveThread(d, { messages: msgs }); } catch (e) {}
+  pending[d.id] = { text: "" }; renderChat(d);
+  ctls[d.id] = new AbortController();
+  const turns = msgs.map(m => ({ role: m.role === "you" ? "user" : "assistant", content: (m.role === "sync" ? "[Full re-check from the sync] " : "") + m.text }));
+  const input = [{ role: "user", content: rules(d) }, { role: "assistant", content: "Understood. What would you like to know about this recommendation?" }, ...turns];
+  try {
+    const { text } = await sample(input, { cache: false, signal: ctls[d.id].signal,
+      onText: ({ text }) => { pending[d.id] = { text }; const m = $("#chat-" + safe(d.id) + " .msg.claude:last-child div"); if (m) m.textContent = text; } });
+    delete pending[d.id];
+    await saveThread(d, { messages: [...msgs, { role: "claude", text, at: new Date().toISOString() }] });
+  } catch (e) {
+    delete pending[d.id];
+    if (e.text) await saveThread(d, { messages: [...msgs, { role: "claude", text: e.text + " [cut off]", at: new Date().toISOString() }] }).catch(() => {});
+    const copy = { not_granted: "Asking Claude was not allowed in this view. You can still send it to the sync.", rate_limited: "Too many questions at once; try again in a minute.", cancelled: "Stopped." };
+    renderChat(d); $("#chat-" + safe(d.id) + " .status").textContent = copy[e.code] || ("Could not get an answer (" + (e.code || "error") + "). You can send it to the sync.");
+    return;
+  }
+  renderChat(d); renderDecisions(window._brief.decisions || []);
+}
+async function toSync(d) {
+  const el = $("#chat-" + safe(d.id)), q = el.querySelector("textarea").value.trim(), st = el.querySelector(".status");
+  if (!db) { st.textContent = "Sending needs the claude.ai viewer."; return; }
+  const t = threads[d.id] || { messages: [] };
+  const msgs = q ? [...(t.messages || []), { role: "you", text: q, at: new Date().toISOString() }] : (t.messages || []);
+  if (!msgs.length) { st.textContent = "Write what you want re-checked first."; return; }
+  try {
+    await saveThread(d, { messages: msgs, status: "requested", requested_at: new Date().toISOString() });
+    el.querySelector("textarea").value = "";
+    renderDecisions(window._brief.decisions || []);
+    $("#chat-" + safe(d.id) + " .status").textContent = "Sent. The next sync re-checks it and answers here.";
+  } catch (e) { st.textContent = "Not sent: " + (e.message || e.code); }
 }
 
 async function saveResponse(a, d, verdict) {
@@ -328,9 +443,14 @@ function renderSent(list) {
   if (!window.claude?.use) return;
   db = await window.claude.use("db");
   assets = await window.claude.use("assets");
+  sample = await window.claude.use("sample");
   if (!db) { $("#stamp").textContent = "Open this page in claude.ai to see the brief and save responses."; return; }
   const timer = setTimeout(() => { if ($("#stamp").textContent.startsWith("Waiting")) $("#stamp").textContent = "The brief has not loaded yet. It appears after the next daily run."; }, 10000);
   db.collection("responses").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) responses[v.id] = v; }); if (window._brief) renderDecisions(window._brief.decisions || []); }, () => {});
+  db.collection("threads").onSnapshot(s => {
+    s.docs.forEach(x => { const v = x.data(); if (v && v.id) threads[v.id] = v; });
+    if (window._brief) renderDecisions(window._brief.decisions || []);
+  }, () => {});
   db.collection("notes").onSnapshot(s => renderSent(s.docs.map(d => d.data()).filter(Boolean)), () => {});
   db.collection("answers").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) answers[v.id] = v; }); if (window._brief) renderQuestions(window._brief.questions || []); }, () => {});
   db.doc("brief/today").onSnapshot(s => {
