@@ -67,7 +67,8 @@ section { display: grid; gap: 8px; min-width: 0 }
 .dec .hl { font-family: var(--mono); font-size: 13px; white-space: nowrap }
 .dec .sub { grid-column: 2 / 4; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted) }
 .dec .mark { font-weight: 700 } .mark.agree { color: var(--good) } .mark.disagree { color: var(--bad) }
-@media (max-width: 560px) { .dec > .head { grid-template-columns: minmax(0, 1fr) auto } .dec .kind { grid-column: 1 / 3 } .dec .sub { grid-column: 1 / 3 } }
+@media (max-width: 560px) { .dec > .head { grid-template-columns: minmax(0, 1fr); gap: 2px } .dec .kind, .dec .sub { grid-column: 1 }
+  .dec .title { white-space: normal } .dec .hl { white-space: normal } }
 .dec .body { border-top: 1px solid var(--line); padding: 12px; display: grid; gap: 12px; min-width: 0 }
 .why { color: var(--muted); font-size: 13px; overflow-wrap: anywhere }
 .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 10px }
@@ -488,8 +489,8 @@ function renderFuture(f) {
   const ys = f.years || [];
   $("#years").className = "card";
   $("#years").innerHTML = `<div class="tw"><table><thead><tr><th>Season</th><th class="n">Under contract</th><th class="n">Committed</th><th class="n">Cap room</th><th class="n">Strength</th><th class="n">League rank</th><th class="n">1st</th><th class="n">Top 4</th><th class="n">Exp. $</th></tr></thead><tbody>
-    ${ys.map(y => `<tr><td class="num">${y.season}</td><td class="n">${y.contracted}</td><td class="n">$${y.committed}</td><td class="n ${y.cap_room < 0 ? "pos-down" : ""}">${usd(y.cap_room)}</td><td class="n">${y.strength} <span class="meta">(median ${y.league_median})</span></td><td class="n">${y.rank} of 10</td><td class="n">${pct(y.p_first)}</td><td class="n">${pct(y.p_top4)}</td><td class="n">$${y.exp_payout}</td></tr>`).join("")}
-    </tbody></table></div><div class="pad meta">${ys.filter(y => y.note).map(y => `${y.season}: ${esc(y.note)}. `).join("")}${esc(f.note || "")}</div>`;
+    ${ys.map(y => `<tr><td class="num">${y.season}</td><td class="n">${y.contracted}</td><td class="n">$${y.committed}</td><td class="n ${y.cap_room < 0 ? "pos-down" : ""}">${usd(y.cap_room)}</td><td class="n">${y.strength}</td><td class="n">${y.rank} of 10</td><td class="n">${pct(y.p_first)}</td><td class="n">${pct(y.p_top4)}</td><td class="n">$${y.exp_payout}</td></tr>`).join("")}
+    </tbody></table></div><div class="pad meta">${ys.map(y => `${y.season}: ${esc(y.source || "")}${y.note ? "; " + esc(y.note) : ""}. `).join("")}2027 comes from playing the RFA bidding and auction for every team; 2028-29 from the outlook, which gives every team generic points for its cap room and so rates rivals higher. Lineup strength is in season lineup points; payouts in expected $.</div>`;
   const o = f.offseason || {};
   $("#plan").className = "card pad"; $("#plan").style.display = "grid"; $("#plan").style.gap = "10px";
   $("#plan").innerHTML = `<div class="tw"><table><thead><tr><th>Offseason</th><th>Step</th><th class="n">Salary</th></tr></thead><tbody>

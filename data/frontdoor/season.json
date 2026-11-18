@@ -1,0 +1,374 @@
+{
+ "made_at": "2026-11-18T21:15:19+00:00",
+ "weeks_left": [
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18
+ ],
+ "record": {
+  "w": 8,
+  "l": 2,
+  "t": 0
+ },
+ "projected": {
+  "wins": 13.7,
+  "p_win_out": 0.717
+ },
+ "path": [
+  {
+   "week": 11,
+   "opp": "Ryan",
+   "p_win": 0.784,
+   "me": 134.3,
+   "them": 109.5
+  },
+  {
+   "week": 12,
+   "opp": "Qasim",
+   "p_win": 0.752,
+   "me": 145.4,
+   "them": 121.9
+  },
+  {
+   "week": 13,
+   "opp": "Russ",
+   "p_win": 0.564,
+   "me": 144.4,
+   "them": 138.6
+  },
+  {
+   "week": 14,
+   "opp": "Max",
+   "p_win": 0.679,
+   "me": 136.2,
+   "them": 121.0
+  },
+  {
+   "week": 15,
+   "opp": "Johnny",
+   "p_win": 0.653,
+   "me": 144.0,
+   "them": 129.5
+  },
+  {
+   "week": 16,
+   "opp": "Matt",
+   "p_win": 0.748,
+   "me": 144.1,
+   "them": 122.3
+  },
+  {
+   "week": 17,
+   "opp": "Zach",
+   "p_win": 0.647,
+   "me": 143.9,
+   "them": 130.6
+  },
+  {
+   "week": 18,
+   "opp": "Mike",
+   "p_win": 0.912,
+   "me": 144.0,
+   "them": 98.6
+  }
+ ],
+ "standings": [
+  {
+   "owner": "Russ",
+   "team": "STEIN DYNASTY",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1439.9,
+   "wins": 13.3,
+   "p_first": 0.325,
+   "p_top4": 0.996,
+   "p_title": 0.274,
+   "exp_payout": 315,
+   "posture": "push"
+  },
+  {
+   "owner": "Jordan",
+   "team": "Ja'Jah Pachulia",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1437.0,
+   "wins": 13.8,
+   "p_first": 0.551,
+   "p_top4": 0.998,
+   "p_title": 0.373,
+   "exp_payout": 399,
+   "posture": "push"
+  },
+  {
+   "owner": "Johnny",
+   "team": "Hello Fascism",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1304.7,
+   "wins": 12.7,
+   "p_first": 0.122,
+   "p_top4": 0.985,
+   "p_title": 0.209,
+   "exp_payout": 218,
+   "posture": "push"
+  },
+  {
+   "owner": "Zach",
+   "team": "In the Nix of Time",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1319.6,
+   "wins": 10.1,
+   "p_first": 0.002,
+   "p_top4": 0.71,
+   "p_title": 0.1,
+   "exp_payout": 51,
+   "posture": "push"
+  },
+  {
+   "owner": "Matt",
+   "team": "REESE MODE",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1115.3,
+   "wins": 8.7,
+   "p_first": 0.0,
+   "p_top4": 0.138,
+   "p_title": 0.023,
+   "exp_payout": 9,
+   "posture": "build"
+  },
+  {
+   "owner": "Max",
+   "team": "Top of the Food Achane",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1116.9,
+   "wins": 8.3,
+   "p_first": 0.0,
+   "p_top4": 0.082,
+   "p_title": 0.009,
+   "exp_payout": 3,
+   "posture": "build"
+  },
+  {
+   "owner": "Qasim",
+   "team": "Dayton Triangles",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1115.1,
+   "wins": 8.0,
+   "p_first": 0.0,
+   "p_top4": 0.07,
+   "p_title": 0.01,
+   "exp_payout": 3,
+   "posture": "build"
+  },
+  {
+   "owner": "Ryan",
+   "team": "Duck Prescott",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1088.0,
+   "wins": 7.2,
+   "p_first": 0.0,
+   "p_top4": 0.016,
+   "p_title": 0.002,
+   "exp_payout": 1,
+   "posture": "build"
+  },
+  {
+   "owner": "Ben",
+   "team": "Who Dey White House",
+   "w": 3,
+   "l": 7,
+   "t": 0,
+   "pf": 1037.9,
+   "wins": 6.3,
+   "p_first": 0.0,
+   "p_top4": 0.005,
+   "p_title": 0.001,
+   "exp_payout": 0,
+   "posture": "build"
+  },
+  {
+   "owner": "Mike",
+   "team": "Mike's Swell Team",
+   "w": 0,
+   "l": 10,
+   "t": 0,
+   "pf": 884.5,
+   "wins": 1.6,
+   "p_first": 0.0,
+   "p_top4": 0.0,
+   "p_title": 0.0,
+   "exp_payout": 0,
+   "posture": "build"
+  }
+ ],
+ "trend": {
+  "replay": [
+   {
+    "week": 0,
+    "p_first": 0.575,
+    "p_top4": 0.963,
+    "p_title": 0.4
+   },
+   {
+    "week": 1,
+    "p_first": 0.645,
+    "p_top4": 0.974,
+    "p_title": 0.399
+   },
+   {
+    "week": 2,
+    "p_first": 0.514,
+    "p_top4": 0.935,
+    "p_title": 0.36
+   },
+   {
+    "week": 3,
+    "p_first": 0.541,
+    "p_top4": 0.95,
+    "p_title": 0.38
+   },
+   {
+    "week": 4,
+    "p_first": 0.396,
+    "p_top4": 0.929,
+    "p_title": 0.339
+   },
+   {
+    "week": 5,
+    "p_first": 0.387,
+    "p_top4": 0.95,
+    "p_title": 0.343
+   },
+   {
+    "week": 6,
+    "p_first": 0.478,
+    "p_top4": 0.972,
+    "p_title": 0.362
+   },
+   {
+    "week": 7,
+    "p_first": 0.486,
+    "p_top4": 0.981,
+    "p_title": 0.364
+   },
+   {
+    "week": 8,
+    "p_first": 0.534,
+    "p_top4": 0.992,
+    "p_title": 0.388
+   },
+   {
+    "week": 9,
+    "p_first": 0.504,
+    "p_top4": 0.998,
+    "p_title": 0.369
+   },
+   {
+    "week": 10,
+    "p_first": 0.551,
+    "p_top4": 0.998,
+    "p_title": 0.373
+   }
+  ],
+  "as_run": [
+   {
+    "at": "2026-11-13T22:13",
+    "week": 10,
+    "p_first": 0.457,
+    "p_title": 0.338,
+    "exp_payout": 364
+   },
+   {
+    "at": "2026-11-13T22:16",
+    "week": 10,
+    "p_first": 0.439,
+    "p_title": 0.362,
+    "exp_payout": 358
+   },
+   {
+    "at": "2026-11-13T22:47",
+    "week": 10,
+    "p_first": 0.438,
+    "p_title": 0.356,
+    "exp_payout": 358
+   },
+   {
+    "at": "2026-11-14T17:00",
+    "week": 10,
+    "p_first": 0.439,
+    "p_title": 0.348,
+    "exp_payout": 356
+   },
+   {
+    "at": "2026-11-15T17:42",
+    "week": 10,
+    "p_first": 0.465,
+    "p_title": 0.354,
+    "exp_payout": 369
+   },
+   {
+    "at": "2026-11-16T23:02",
+    "week": 10,
+    "p_first": 0.493,
+    "p_title": 0.366,
+    "exp_payout": 377
+   },
+   {
+    "at": "2026-11-17T19:47",
+    "week": 11,
+    "p_first": 0.53,
+    "p_title": 0.376,
+    "exp_payout": 395
+   },
+   {
+    "at": "2026-11-18T04:15",
+    "week": 11,
+    "p_first": 0.536,
+    "p_title": 0.373,
+    "exp_payout": 393
+   },
+   {
+    "at": "2026-11-18T04:19",
+    "week": 11,
+    "p_first": 0.536,
+    "p_title": 0.373,
+    "exp_payout": 393
+   },
+   {
+    "at": "2026-11-18T12:44",
+    "week": 11,
+    "p_first": 0.543,
+    "p_title": 0.393,
+    "exp_payout": 398
+   },
+   {
+    "at": "2026-11-18T19:24",
+    "week": 11,
+    "p_first": 0.526,
+    "p_title": 0.376,
+    "exp_payout": 392
+   }
+  ],
+  "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
+ },
+ "sim_n": 4000,
+ "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
+}

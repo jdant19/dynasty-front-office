@@ -184,6 +184,22 @@ def future() -> dict:
     scen = [dict(scenario=r.scenario, payout_2027=int(r.payout_2027), payout_3yr=int(r.payout_3yr), room_2027=int(r.room_2027),
                  gibbs=f"${int(r.gibbs_rfa_price)} ({r.gibbs_price_range})" if pd.notna(r.gibbs_rfa_price) else "",
                  gibbs_to=str(r.gibbs_goes_to)) for r in off.itertuples()] if len(off) else []
+    # 2027 from the auction simulation for Jordan's plan when there is one: it plays RFA bidding and the
+    # auction for every team (rivals overpay for stars), where the outlook gives every team generic points
+    # for its room. Same strength for Jordan; the league around him differs (2026-11-18: rank 2 vs 7).
+    for y in years:
+        y["source"] = "three-year outlook"
+    if len(off):
+        mine = off[off.scenario.str.lower().str.contains("tag lamb") & off.scenario.str.lower().str.contains("match gibbs")]
+        r0 = mine.iloc[0] if len(mine) else off.iloc[0]
+        for y in years:
+            if y["season"] == 2027:
+                y.update(cap_room=int(r0.room_2027), strength=int(round(r0.strength_2027)), rank=int(r0.rank_2027),
+                         p_first=round(float(r0.p_first_2027), 3), p_top4=round(float(r0.p_top4_2027), 3),
+                         exp_payout=int(r0.payout_2027), source=f"auction simulation, {str(r0.made_at)[:10]}")
+                y.pop("league_median", None)
+            elif f"payout_{y['season']}" in off:
+                y["exp_payout"] = int(r0[f"payout_{y['season']}"])
     y27 = next((y for y in years if y["season"] == 2027), None)
     steps = []
     for r in plan.sort_values("offseason").itertuples():

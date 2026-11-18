@@ -1,0 +1,507 @@
+{
+ "made_at": "2026-11-18T21:15:20+00:00",
+ "years": [
+  {
+   "season": 2027,
+   "contracted": 11,
+   "committed": 353,
+   "cap_room": -57,
+   "strength": 1883,
+   "rank": 2,
+   "p_first": 0.128,
+   "p_top4": 0.474,
+   "exp_payout": 124,
+   "note": "over the cap through RFA matches (allowed); nothing bought at auction",
+   "released": "",
+   "source": "auction simulation, 2026-11-18"
+  },
+  {
+   "season": 2028,
+   "contracted": 7,
+   "committed": 165,
+   "cap_room": 124,
+   "strength": 1964,
+   "rank": 5,
+   "league_median": 1963,
+   "p_first": 0.117,
+   "p_top4": 0.421,
+   "exp_payout": 107,
+   "note": "",
+   "released": "",
+   "source": "three-year outlook"
+  },
+  {
+   "season": 2029,
+   "contracted": 5,
+   "committed": 108,
+   "cap_room": 179,
+   "strength": 1954,
+   "rank": 9,
+   "league_median": 1979,
+   "p_first": 0.087,
+   "p_top4": 0.344,
+   "exp_payout": 88,
+   "note": "",
+   "released": "",
+   "source": "three-year outlook"
+  }
+ ],
+ "contracts": [
+  {
+   "player": "Jahmyr Gibbs",
+   "pos": "RB",
+   "s2026": 8,
+   "slot": "RB",
+   "s2027": 138,
+   "d2027": "rfa",
+   "s2028": 75,
+   "d2028": "tag",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 232
+  },
+  {
+   "player": "CeeDee Lamb",
+   "pos": "WR",
+   "s2026": 98,
+   "slot": "BN",
+   "s2027": 96,
+   "d2027": "tag",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 206
+  },
+  {
+   "player": "Parker Washington",
+   "pos": "WR",
+   "s2026": 26,
+   "slot": "WR",
+   "s2027": 27,
+   "d2027": "",
+   "s2028": 33,
+   "d2028": "rfa",
+   "s2029": 35,
+   "d2029": "planned",
+   "pts2027": 161
+  },
+  {
+   "player": "Jaxson Dart",
+   "pos": "QB",
+   "s2026": 11,
+   "slot": "IR",
+   "s2027": 12,
+   "d2027": "",
+   "s2028": 13,
+   "d2028": "",
+   "s2029": 15,
+   "d2029": "",
+   "pts2027": 166
+  },
+  {
+   "player": "Harold Fannin",
+   "pos": "TE",
+   "s2026": 21,
+   "slot": "TE",
+   "s2027": 22,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 135
+  },
+  {
+   "player": "Zachariah Branch",
+   "pos": "WR",
+   "s2026": 3,
+   "slot": "BN",
+   "s2027": 4,
+   "d2027": "",
+   "s2028": 5,
+   "d2028": "",
+   "s2029": 6,
+   "d2029": "",
+   "pts2027": 58
+  },
+  {
+   "player": "Chris Brazzell",
+   "pos": "WR",
+   "s2026": 1,
+   "slot": "IR",
+   "s2027": 2,
+   "d2027": "",
+   "s2028": 3,
+   "d2028": "",
+   "s2029": 4,
+   "d2029": "",
+   "pts2027": null
+  },
+  {
+   "player": "Patrick Mahomes",
+   "pos": "QB",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 2,
+   "d2027": "",
+   "s2028": 3,
+   "d2028": "",
+   "s2029": 4,
+   "d2029": "",
+   "pts2027": 275
+  },
+  {
+   "player": "Wan'Dale Robinson",
+   "pos": "WR",
+   "s2026": 1,
+   "slot": "WR",
+   "s2027": 2,
+   "d2027": "",
+   "s2028": 3,
+   "d2028": "",
+   "s2029": 4,
+   "d2029": "",
+   "pts2027": 115
+  },
+  {
+   "player": "Ollie Gordon",
+   "pos": "RB",
+   "s2026": 2,
+   "slot": "BN",
+   "s2027": 3,
+   "d2027": "",
+   "s2028": 4,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 79
+  },
+  {
+   "player": "Bucky Irving",
+   "pos": "RB",
+   "s2026": 3,
+   "slot": "FLEX",
+   "s2027": 4,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 194
+  },
+  {
+   "player": "George Kittle",
+   "pos": "TE",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 2,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 124
+  },
+  {
+   "player": "Ja'Marr Chase",
+   "pos": "WR",
+   "s2026": 97,
+   "slot": "WR",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 226
+  },
+  {
+   "player": "Chuba Hubbard",
+   "pos": "RB",
+   "s2026": 34,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 155
+  },
+  {
+   "player": "Baltimore Ravens",
+   "pos": "DEF",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": null
+  },
+  {
+   "player": "Jake Bates",
+   "pos": "K",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": null
+  },
+  {
+   "player": "Audric Estime",
+   "pos": "RB",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 40
+  },
+  {
+   "player": "Mike Gesicki",
+   "pos": "TE",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 74
+  },
+  {
+   "player": "Deebo Samuel",
+   "pos": "WR",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 78
+  },
+  {
+   "player": "Jordan Love",
+   "pos": "QB",
+   "s2026": 1,
+   "slot": "QB",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 251
+  },
+  {
+   "player": "Kenneth Gainwell",
+   "pos": "RB",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 82
+  },
+  {
+   "player": "Brenton Strange",
+   "pos": "TE",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 99
+  }
+ ],
+ "offseason": {
+  "steps": [
+   {
+    "offseason": 2027,
+    "action": "Franchise tag",
+    "player": "CeeDee Lamb",
+    "salary": 96
+   },
+   {
+    "offseason": 2027,
+    "action": "Match the RFA bid on",
+    "player": "Jahmyr Gibbs",
+    "salary": 138
+   },
+   {
+    "offseason": 2027,
+    "action": "Auction",
+    "player": "",
+    "salary": null,
+    "text": "Over the cap after the plan: only $0 adds until the auction is over (leftovers)."
+   },
+   {
+    "offseason": 2028,
+    "action": "Match the RFA bid on",
+    "player": "Parker Washington",
+    "salary": 33
+   },
+   {
+    "offseason": 2028,
+    "action": "Franchise tag",
+    "player": "Jahmyr Gibbs",
+    "salary": 75
+   }
+  ],
+  "scenarios": [
+   {
+    "scenario": "Tag Lamb + match Gibbs",
+    "payout_2027": 124,
+    "payout_3yr": 319,
+    "room_2027": -57,
+    "gibbs": "$135 ($116-135)",
+    "gibbs_to": "Jordan"
+   },
+   {
+    "scenario": "Let both go",
+    "payout_2027": 122,
+    "payout_3yr": 305,
+    "room_2027": 172,
+    "gibbs": "$135 ($116-135)",
+    "gibbs_to": "Mike"
+   },
+   {
+    "scenario": "Match Gibbs, Lamb to the auction",
+    "payout_2027": 102,
+    "payout_3yr": 297,
+    "room_2027": 38,
+    "gibbs": "$135 ($116-135)",
+    "gibbs_to": "Jordan"
+   },
+   {
+    "scenario": "Tag Lamb, let Gibbs go",
+    "payout_2027": 99,
+    "payout_3yr": 282,
+    "room_2027": 77,
+    "gibbs": "$135 ($116-135)",
+    "gibbs_to": "Mike"
+   }
+  ],
+  "chosen": "Tag Lamb + match Gibbs",
+  "made_at": "2026-11-18T21:14:48+00:00"
+ },
+ "picks": [
+  {
+   "year": 2027,
+   "round": 2,
+   "original": "Jordan",
+   "slot": 9.4,
+   "overall": 19.4,
+   "tier": "10-30",
+   "points": 44
+  },
+  {
+   "year": 2027,
+   "round": 2,
+   "original": "Max",
+   "slot": 4.7,
+   "overall": 14.7,
+   "tier": "10-30",
+   "points": 44
+  },
+  {
+   "year": 2027,
+   "round": 3,
+   "original": "Jordan",
+   "slot": 9.4,
+   "overall": 29.4,
+   "tier": "10-30",
+   "points": 44
+  },
+  {
+   "year": 2028,
+   "round": 1,
+   "original": "Jordan",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 138
+  },
+  {
+   "year": 2028,
+   "round": 1,
+   "original": "Max",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 138
+  },
+  {
+   "year": 2028,
+   "round": 2,
+   "original": "Jordan",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 44
+  },
+  {
+   "year": 2028,
+   "round": 3,
+   "original": "Jordan",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 44
+  },
+  {
+   "year": 2029,
+   "round": 1,
+   "original": "Jordan",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 138
+  },
+  {
+   "year": 2029,
+   "round": 2,
+   "original": "Jordan",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 44
+  },
+  {
+   "year": 2029,
+   "round": 3,
+   "original": "Jordan",
+   "slot": null,
+   "overall": null,
+   "tier": null,
+   "points": 44
+  }
+ ],
+ "own_picks_traded": [
+  {
+   "year": 2027,
+   "round": 1
+  }
+ ],
+ "note": "Cap and strength from the three-year outlook with your plan (config/owner_plans.yaml); odds and payouts from the future-seasons simulation; pick values in lineup points over the rookie deal."
+}
