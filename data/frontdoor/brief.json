@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T19:25:14+00:00",
+ "made_at": "2026-11-18T20:33:58+00:00",
  "week": 11,
  "decisions": [
   {
@@ -27,42 +27,16 @@
    "made_at": "2026-11-17T23:29:57+00:00"
   },
   {
-   "id": "trade-Johnny-vikings",
-   "kind": "Trade idea",
-   "deadline": "end of Week 14",
-   "title": "Johnny: Vikings",
-   "recommendation": "Offer Ollie Gordon II; Brenton Strange for Vikings. opening: add no pick -> you +10, him +2; target: add no pick -> you +10, him +2; walk-away: add no pick -> you +10, him +2",
-   "value": "you +10 (this season +9, later +1), him +2; your 1st place 55% -> 58%, title 40% -> 40%",
-   "confidence": "low",
-   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-58, strength +0; 2028: room $124 -> $127, strength +2; 2029: room $179 -> $179, strength +0; picks given +0 points over their rookie deals.",
-   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-18T04:06:03+00:00",
-   "stale": false
-  },
-  {
-   "id": "trade-Max-chrisolave",
-   "kind": "Trade idea",
-   "deadline": "end of Week 14",
-   "title": "Max: Chris Olave",
-   "recommendation": "Offer Ollie Gordon II for Chris Olave. opening: add no pick -> you +9, him +16; target: add no pick -> you +9, him +16; walk-away: add no pick -> you +9, him +16",
-   "value": "you +9 (this season +12, later -3), him +16; your 1st place 55% -> 60%, title 40% -> 39%",
-   "confidence": "low",
-   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-87, strength +15; 2028: room $124 -> $83, strength -24; 2029: room $179 -> $179, strength +0; picks given +0 points over their rookie deals.",
-   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-18T04:06:03+00:00",
-   "stale": false
-  },
-  {
    "id": "trade-Ben-kennethwalkeriii",
    "kind": "Trade idea",
    "deadline": "end of Week 14",
    "title": "Ben: Kenneth Walker III",
-   "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +19, him +5; target: add 2029 round 1 -> you +8, him +15; walk-away: add 2028 round 1 (Max's) -> you +1, him +23",
-   "value": "you +8 (this season +18, later -10), him +15; your 1st place 55% -> 60%, title 40% -> 42%",
+   "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +24, him +5; target: add 2029 round 1 -> you +13, him +15; walk-away: add 2028 round 1 (Max's) -> you +6, him +23",
+   "value": "you +13 (this season +23, later -10), him +15; your 1st place 56% -> 63%, title 39% -> 43%",
    "confidence": "low",
    "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-71, strength +44; 2028: room $124 -> $168, strength +36; 2029: room $179 -> $227, strength +34; picks given -107 points over their rookie deals.",
    "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-18T04:06:03+00:00",
+   "made_at": "2026-11-18T20:30:05+00:00",
    "stale": false
   },
   {
@@ -90,11 +64,11 @@
   }
  ],
  "posture": {
-  "p_first": 0.526,
+  "p_first": 0.55,
   "p_top4": 0.998,
   "p_title": 0.376,
-  "exp_payout": 392,
-  "mean_wins": 13.7,
+  "exp_payout": 400,
+  "mean_wins": 13.8,
   "stance": "push",
   "moved": {
    "since": "2026-11-18",
@@ -105,49 +79,49 @@
   "league": [
    {
     "owner": "Jordan",
-    "p_first": 0.526,
+    "p_first": 0.55,
     "p_top4": 0.998,
     "p_title": 0.376,
-    "exp_payout": 392,
+    "exp_payout": 400,
     "posture": "push"
    },
    {
     "owner": "Russ",
-    "p_first": 0.342,
+    "p_first": 0.325,
     "p_top4": 0.997,
-    "p_title": 0.278,
-    "exp_payout": 320,
+    "p_title": 0.272,
+    "exp_payout": 316,
     "posture": "push"
    },
    {
     "owner": "Johnny",
-    "p_first": 0.128,
+    "p_first": 0.121,
     "p_top4": 0.984,
-    "p_title": 0.205,
-    "exp_payout": 220,
+    "p_title": 0.204,
+    "exp_payout": 215,
     "posture": "push"
    },
    {
     "owner": "Zach",
     "p_first": 0.003,
-    "p_top4": 0.711,
-    "p_title": 0.1,
+    "p_top4": 0.704,
+    "p_title": 0.105,
     "exp_payout": 52,
     "posture": "push"
    },
    {
     "owner": "Matt",
     "p_first": 0.0,
-    "p_top4": 0.144,
-    "p_title": 0.024,
-    "exp_payout": 9,
+    "p_top4": 0.143,
+    "p_title": 0.025,
+    "exp_payout": 10,
     "posture": "build"
    },
    {
     "owner": "Max",
     "p_first": 0.0,
-    "p_top4": 0.079,
-    "p_title": 0.006,
+    "p_top4": 0.083,
+    "p_title": 0.007,
     "exp_payout": 3,
     "posture": "build"
    },
@@ -155,22 +129,22 @@
     "owner": "Qasim",
     "p_first": 0.0,
     "p_top4": 0.07,
-    "p_title": 0.009,
+    "p_title": 0.01,
     "exp_payout": 3,
+    "posture": "build"
+   },
+   {
+    "owner": "Ryan",
+    "p_first": 0.0,
+    "p_top4": 0.016,
+    "p_title": 0.002,
+    "exp_payout": 1,
     "posture": "build"
    },
    {
     "owner": "Ben",
     "p_first": 0.0,
     "p_top4": 0.004,
-    "p_title": 0.0,
-    "exp_payout": 0,
-    "posture": "build"
-   },
-   {
-    "owner": "Ryan",
-    "p_first": 0.0,
-    "p_top4": 0.014,
     "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
@@ -292,8 +266,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-18T17:14:49+00:00",
-   "age_hours": 2.2,
+   "as_of": "2026-11-18T19:35:55+00:00",
+   "age_hours": 1.0,
    "limit": "24h",
    "stale": false
   },
@@ -306,18 +280,18 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-18T19:22:28+00:00",
-   "age_hours": 0.0,
+   "as_of": "2026-11-18T20:26:08+00:00",
+   "age_hours": 0.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-18T12:44:38+00:00",
-   "age_hours": 6.7,
+   "as_of": "2026-11-18T20:29:00+00:00",
+   "age_hours": 0.1,
    "limit": "24h",
    "stale": false,
-   "note": "all recent steps ok"
+   "note": "1 step(s) not ok in recent runs"
   }
  ]
 }

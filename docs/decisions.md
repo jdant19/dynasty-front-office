@@ -268,6 +268,23 @@ After the fixes the plan is the stream Jordan described: Ravens out for the best
 kicker stream (Santos for Bates). Our defense projections stay weak without ranks (rank correlation about
 0.26 either way), so the brief shows the line next to them.
 
+## Trade ideas after the streaming fix (2026-11-18)
+
+Jordan questioned two ideas: Vikings (DEF) from Johnny for Ollie Gordon II and Brenton Strange ("a horrible
+return for a RB, and Johnny is a buyer"), and Kenneth Walker III from Ben for Parker Washington and more
+("hard to believe it improves my title odds given how weak my next WR would be").
+- Vikings: the waiver level for defenses was too low (5.66 a week against 7.36 for the real stream,
+  ours.stream_level), so any rostered defense looked better than streaming. Fixed; the idea is off the
+  list (it now costs Johnny this season, and Johnny is contending). On Jordan's side it was worth about
+  +$7: Gordon is his fourth RB (Gibbs, Hubbard, Irving start), so the model counts him as injury cover.
+- Walker: held. 20,000 simulations: 1st place 57% -> 61%, title 37% -> 43%, +19.6 lineup points rest of
+  season. Regular season: Walker takes the flex from Irving (+6.3 a game on rest-of-season rates) and
+  Deebo Samuel takes WR3 from Washington (-2.3). League playoffs: each playoff team keeps its own players
+  and drafts the rest in seed order, so WR3 there is not Deebo by default; as the likely 1 seed Jordan
+  would draft Walker today anyway, and owning him frees that pick (James Cook in the model): playoff
+  lineup 247 -> 254 expected points. Risk: Walker missed Week 10 (groin, called precautionary; expected
+  back for Week 11).
+
 ## Scheduled runs (`dfo/run.py`, `.github/workflows/engine.yml`)
 
 | Job | When (Central) | Steps |
