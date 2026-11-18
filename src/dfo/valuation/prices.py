@@ -117,6 +117,7 @@ def pin_plans(dplan: pd.DataFrame, base: pd.DataFrame, tags: dict) -> pd.DataFra
             print(f"owner_plans.yaml: {name} is not on a roster; skipped")
             continue
         pid, pos = names.loc[name, "player_id"], names.loc[name, "pos"]
+        model = dplan[dplan.player_id == pid]
         dplan = dplan[dplan.player_id != pid]
         for st in steps or []:
             y, t = int(st["offseason"]), str(st["type"]).lower()
@@ -128,6 +129,10 @@ def pin_plans(dplan: pd.DataFrame, base: pd.DataFrame, tags: dict) -> pd.DataFra
             if sal is None and t == "rfa":
                 off = PROCESSED / "decide_offseason_2027.csv"
                 sal = float(pd.read_csv(off).gibbs_rfa_price.iloc[0]) if off.exists() and "Gibbs" in name else 0
+            same = model[(model.offseason == y) & (model.type == t)]
+            if len(same) and st.get("salary") is None:   # the model already plans this: keep its row and value
+                rows.append(same.iloc[0].to_dict())
+                continue
             row = dict(owner="Jordan", player_id=pid, offseason=y, type=t, worth=0.0, path_worth=0.0)   # value not modeled: his call
             for yy in FUTURE:
                 row[f"salary_{yy}"] = money(sal) if yy == y else 0
