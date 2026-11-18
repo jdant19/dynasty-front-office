@@ -7,7 +7,7 @@ Jordan,Parker Washington,WR,JAX,keep,23.8,2.12
 Jordan,Deebo Samuel Sr.,WR,SF,keep,18.3,1.93
 Jordan,George Kittle,TE,SF,keep,18.0,1.93
 Jordan,Tyler Bass,K,BUF,draft,22.1,2.1
-Jordan,Bills,DEF,BUF,draft,15.6,2.1
+Jordan,Bills,DEF,BUF,draft,15.9,2.1
 Jordan,Rashee Rice,WR,KC,draft,16.7,1.86
 Russ,Joe Burrow,QB,CIN,keep,37.9,1.96
 Russ,Bhayshul Tuten,RB,JAX,keep,27.7,2.12
@@ -17,7 +17,7 @@ Russ,Mike Evans,WR,SF,keep,21.4,1.93
 Russ,Puka Nacua,WR,LA,keep,20.5,1.2
 Russ,Dalton Kincaid,TE,BUF,draft,15.3,2.1
 Russ,Cam Little,K,JAX,draft,22.4,2.12
-Russ,Bengals,DEF,CIN,draft,14.5,1.96
+Russ,Bengals,DEF,CIN,draft,14.7,1.96
 Russ,Jameson Williams,WR,DET,keep,17.8,1.73
 Johnny,Trevor Lawrence,QB,JAX,draft,33.8,2.12
 Johnny,Christian McCaffrey,RB,SF,keep,33.0,1.93
@@ -27,7 +27,7 @@ Johnny,DJ Moore,WR,BUF,draft,19.6,2.1
 Johnny,Keenan Allen,WR,SF,keep,16.1,1.93
 Johnny,Travis Kelce,TE,KC,draft,14.3,1.86
 Johnny,Evan McPherson,K,CIN,draft,19.7,1.96
-Johnny,Jaguars,DEF,JAX,keep,16.7,2.12
+Johnny,Jaguars,DEF,JAX,keep,16.9,2.12
 Johnny,Kyren Williams,RB,LA,draft,16.0,1.2
 Zach,Josh Allen,QB,BUF,keep,41.8,2.1
 Zach,Chase Brown,RB,CIN,draft,23.3,1.96
@@ -37,5 +37,5 @@ Zach,Luther Burden III,WR,CHI,draft,17.3,1.58
 Zach,Jakobi Meyers,WR,JAX,keep,16.3,2.12
 Zach,Sam LaPorta,TE,DET,draft,13.8,1.73
 Zach,Harrison Butker,K,KC,draft,17.7,1.86
-Zach,Chiefs,DEF,KC,draft,14.0,1.86
+Zach,Chiefs,DEF,KC,draft,14.2,1.86
 Zach,Kyle Monangai,RB,CHI,keep,19.0,1.58

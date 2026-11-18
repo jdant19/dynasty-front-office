@@ -2,23 +2,23 @@
 
 Inputs: projections and simulator as of 2026-11-18; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
 
-**Jordan: PUSH.** A lineup point is worth $1.00 to you this season, 1.9x what it is worth later. 1st 54%, top 4 100%, title 37%, expected payout $393.
+**Jordan: PUSH.** A lineup point is worth $0.98 to you this season, 1.8x what it is worth later. 1st 54%, top 4 100%, title 39%, expected payout $398.
 
-Since 2026-11-18: 1st +0%, title +0%, expected payout +0.
+Since 2026-11-18: 1st +1%, title +2%, expected payout +6.
 
 ## Every team's posture
 
 | Team | Posture | This season vs later | Wins | 1st | Top 4 | Title | Expected payout |
 |---|---|---|---|---|---|---|---|
-| Jordan | push | 1.89x | 13.7 | 54% | 100% | 37% | $393 |
-| Russ | push | 2.00x | 13.3 | 34% | 100% | 27% | $318 |
-| Johnny | push | 2.05x | 12.7 | 13% | 99% | 21% | $221 |
-| Zach | hold | 1.22x | 10.0 | 0% | 69% | 10% | $49 |
-| Matt | build | 0.54x | 8.8 | 0% | 15% | 3% | $11 |
-| Max | build | 0.28x | 8.4 | 0% | 9% | 1% | $4 |
-| Qasim | build | 0.24x | 8.0 | 0% | 6% | 1% | $4 |
-| Ryan | build | 0.10x | 7.3 | 0% | 2% | 0% | $1 |
-| Ben | build | 0.03x | 6.2 | 0% | 0% | 0% | $0 |
+| Jordan | push | 1.84x | 13.7 | 54% | 100% | 39% | $398 |
+| Russ | push | 1.97x | 13.3 | 33% | 100% | 27% | $314 |
+| Johnny | push | 2.14x | 12.7 | 13% | 99% | 20% | $221 |
+| Zach | hold | 1.21x | 10.0 | 0% | 70% | 10% | $49 |
+| Matt | build | 0.54x | 8.7 | 0% | 14% | 2% | $10 |
+| Max | build | 0.24x | 8.4 | 0% | 9% | 1% | $3 |
+| Qasim | build | 0.23x | 8.0 | 0% | 7% | 1% | $3 |
+| Ryan | build | 0.10x | 7.2 | 0% | 2% | 0% | $1 |
+| Ben | build | 0.03x | 6.1 | 0% | 0% | 0% | $0 |
 | Mike | build | 0.00x | 1.7 | 0% | 0% | 0% | $0 |
 
 Competing buyers: Russ, Johnny. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
@@ -27,22 +27,22 @@ Competing buyers: Russ, Johnny. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
 
 | Pos | Player | Team | Your lineup gain, rest of season | Salary | Rental |
 |---|---|---|---|---|---|
-| RB | Kenneth Walker III | Ben | +36 | $67 |  |
-| WR | George Pickens | Ryan | +12 | $71 |  |
+| RB | Kenneth Walker III | Ben | +37 | $67 |  |
+| WR | George Pickens | Ryan | +11 | $71 |  |
 | DEF | Bears | Matt | +10 | $1 | yes |
-| QB | Dak Prescott | Ryan | +7 | $2 |  |
+| QB | Dak Prescott | Ryan | +8 | $2 |  |
 | K | Ka'imi Fairbairn | Max | +6 | $2 | yes |
 
 ## Rentals (contract ends this season and his owner is not expected to designate him)
 
-- DeVonta Smith (WR, Ryan, $51): +11 lineup points, about $11 of payout to you
 - Bears (DEF, Matt, $1): +10 lineup points, about $10 of payout to you
-- Bengals (DEF, Qasim, $1): +8 lineup points, about $9 of payout to you
-- Texans (DEF, Mike, $2): +8 lineup points, about $8 of payout to you
+- DeVonta Smith (WR, Ryan, $51): +10 lineup points, about $9 of payout to you
+- Texans (DEF, Mike, $2): +9 lineup points, about $9 of payout to you
+- Bengals (DEF, Qasim, $1): +9 lineup points, about $8 of payout to you
 - Bills (DEF, Ryan, $1): +8 lineup points, about $8 of payout to you
 - Seahawks (DEF, Qasim, $1): +8 lineup points, about $8 of payout to you
-- Nico Collins (WR, Max, $91): +7 lineup points, about $7 of payout to you
-- Rams (DEF, Matt, $2): +7 lineup points, about $7 of payout to you
+- Nico Collins (WR, Max, $91): +8 lineup points, about $7 of payout to you
+- Rams (DEF, Matt, $2): +8 lineup points, about $7 of payout to you
 - Ka'imi Fairbairn (K, Max, $2): +6 lineup points, about $6 of payout to you
 - Patriots (DEF, Max, $1): +6 lineup points, about $6 of payout to you
 
@@ -54,10 +54,10 @@ Competing buyers: Russ, Johnny. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
 | Zachariah Branch | 0 | $-7 |
 | Chris Brazzell II | 0 | $-4 |
 | Ollie Gordon II | 0 | $-4 |
-| Brenton Strange | 0 | $0 |
-| Audric Estimé | 0 | $0 |
-| Kenny Gainwell | 0 | $0 |
 | Mike Gesicki | 0 | $0 |
+| Kenny Gainwell | 0 | $0 |
+| Audric Estimé | 0 | $0 |
+| Brenton Strange | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |

@@ -4,10 +4,10 @@ Likely seeds: 1. Jordan, 2. Russ, 3. Johnny, 4. Zach (simulator's most likely to
 
 | Team | Title | 2nd | Expected playoff payout | Lineup expected points |
 |---|---|---|---|---|
-| Jordan | 37% | 31% | $105 | 247 |
-| Russ | 29% | 24% | $83 | 225 |
-| Johnny | 19% | 26% | $63 | 225 |
-| Zach | 15% | 19% | $49 | 202 |
+| Jordan | 38% | 31% | $106 | 247 |
+| Russ | 29% | 23% | $82 | 226 |
+| Johnny | 19% | 26% | $64 | 225 |
+| Zach | 14% | 20% | $48 | 202 |
 
 ## Your playoff lineup if the seeds hold
 
@@ -32,20 +32,20 @@ Change in your title chance and expected playoff payout if he is on your roster 
 
 | Player | Pos | NFL | Now with | NFL playoff chance | Expected games | Title change | Payout change |
 |---|---|---|---|---|---|---|---|
-| Kenneth Walker III | RB | KC | Ben | 98% | 1.9 | +12.9% | $+22 |
-| James Cook | RB | BUF | Matt | 100% | 2.1 | +12.9% | $+22 |
-| Josh Allen | QB | BUF | Zach (playoff rival) | 100% | 2.1 | +12.8% | $+22 |
-| Christian McCaffrey | RB | SF | Johnny (playoff rival) | 98% | 1.9 | +15.1% | $+21 |
-| Tee Higgins | WR | CIN | Russ (playoff rival) | 99% | 2.0 | +7.7% | $+17 |
-| Bhayshul Tuten | RB | JAX | Russ (playoff rival) | 100% | 2.1 | +9.2% | $+17 |
-| D'Andre Swift | RB | CHI | Russ (playoff rival) | 83% | 1.6 | +4.3% | $+14 |
-| Amon-Ra St. Brown | WR | DET | Johnny (playoff rival) | 89% | 1.7 | +9.6% | $+14 |
-| Chase Brown | RB | CIN | Max | 99% | 2.0 | +4.1% | $+13 |
+| Kenneth Walker III | RB | KC | Ben | 98% | 1.9 | +12.7% | $+22 |
+| James Cook | RB | BUF | Matt | 100% | 2.1 | +12.7% | $+22 |
+| Christian McCaffrey | RB | SF | Johnny (playoff rival) | 98% | 1.9 | +14.1% | $+21 |
+| Josh Allen | QB | BUF | Zach (playoff rival) | 100% | 2.1 | +11.7% | $+20 |
+| Tee Higgins | WR | CIN | Russ (playoff rival) | 99% | 2.0 | +7.1% | $+17 |
+| Bhayshul Tuten | RB | JAX | Russ (playoff rival) | 100% | 2.1 | +8.7% | $+17 |
 | Joe Burrow | QB | CIN | Russ (playoff rival) | 99% | 2.0 | +7.6% | $+13 |
-| Kyle Monangai | RB | CHI | Zach (playoff rival) | 83% | 1.6 | +5.3% | $+9 |
-| Mike Evans | WR | SF | Russ (playoff rival) | 98% | 1.9 | +2.9% | $+9 |
-| Trevor Lawrence | QB | JAX | Qasim | 100% | 2.1 | +1.4% | $+7 |
-| Jonah Coleman | RB | DEN | Ben | 99% | 1.8 | +1.4% | $+7 |
-| DJ Moore | WR | BUF | Mike | 100% | 2.1 | +2.1% | $+7 |
+| D'Andre Swift | RB | CHI | Russ (playoff rival) | 83% | 1.6 | +3.8% | $+13 |
+| Chase Brown | RB | CIN | Max | 99% | 2.0 | +3.7% | $+12 |
+| Amon-Ra St. Brown | WR | DET | Johnny (playoff rival) | 89% | 1.7 | +8.7% | $+12 |
+| Kyle Monangai | RB | CHI | Zach (playoff rival) | 83% | 1.6 | +5.0% | $+9 |
+| Mike Evans | WR | SF | Russ (playoff rival) | 98% | 1.9 | +2.2% | $+8 |
+| Broncos | DEF | DEN | Zach (playoff rival) | 99% | 1.8 | +5.1% | $+7 |
+| Jonah Coleman | RB | DEN | Ben | 99% | 1.8 | +0.7% | $+7 |
+| Trevor Lawrence | QB | JAX | Qasim | 100% | 2.1 | +0.7% | $+7 |
 
 Known limits: the seeds are the most likely four in the most likely order; trades and waivers by other teams before Week 18 are not modeled; the league's injury replacement (next player on the depth chart) is not, so injured starters score 0 here.
