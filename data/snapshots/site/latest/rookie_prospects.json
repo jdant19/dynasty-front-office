@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-18T07:24:44+00:00",
+ "as_of": "2026-11-18T17:14:49+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -1113,11 +1113,11 @@
    "sleeper_id": "13778",
    "name": "EJ Smith",
    "position": "RB",
-   "nfl_team": "FA",
+   "nfl_team": "KC",
    "years_exp": 0,
-   "status": "Inactive",
+   "status": "Active",
    "created_at": "2026-04-28T07:00:23.051373+00:00",
-   "synced_at": "2026-09-06T08:15:06.021+00:00",
+   "synced_at": "2026-11-18T12:15:05.479+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -2891,11 +2891,11 @@
    "sleeper_id": "13658",
    "name": "Brady Boyd",
    "position": "WR",
-   "nfl_team": "FA",
+   "nfl_team": "MIA",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-27T07:00:26.066983+00:00",
-   "synced_at": "2026-09-02T07:00:06.371+00:00",
+   "synced_at": "2026-11-18T12:15:05.479+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
