@@ -1,0 +1,13 @@
+# Owner plans that override the model (decide/owner_plans.py for other owners; valuation/prices.py
+# pins Jordan's own plan into designation_plan.csv, so the three-year outlook and trade scores use it).
+# Format: owner -> player name -> list of {offseason, type: rfa | tag | auction[, salary]}.
+# rfa salary: if omitted, Gibbs's expected RFA price from decide_offseason_2027.csv; tag salary: the tag cost.
+
+Jordan:
+  # Jordan's plan (stated 2026-11-12, agreed on the front door 2026-11-17): tag Lamb and match Gibbs's
+  # RFA in 2027 (a match may go over the cap), then tag Gibbs in 2028.
+  CeeDee Lamb:
+    - {offseason: 2027, type: tag}
+  Jahmyr Gibbs:
+    - {offseason: 2027, type: rfa}
+    - {offseason: 2028, type: tag}

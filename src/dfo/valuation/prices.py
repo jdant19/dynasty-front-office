@@ -100,6 +100,49 @@ def _salaries(row) -> list[int]:
     return [by_year.get(y, 0) for y in [SEASON] + FUTURE]
 
 
+def pin_plans(dplan: pd.DataFrame, base: pd.DataFrame, tags: dict) -> pd.DataFrame:
+    """Jordan's own designations from config/owner_plans.yaml replace the model's for those players and
+    take their slot (one tag, two RFAs per team per offseason). The model's plan for Gibbs flips on small
+    refits (2026-11-17: dropped, which moved his 2027 room by $97); his stated plan does not."""
+    f = ROOT / "config" / "owner_plans.yaml"
+    if not f.exists():
+        return dplan
+    import yaml
+    cfg = (yaml.safe_load(f.read_text()) or {}).get("Jordan") or {}
+    limits = {"tag": 1, "rfa": 2}
+    names = base.drop_duplicates("player_id").set_index("player")
+    rows = []
+    for name, steps in cfg.items():
+        if name not in names.index:
+            print(f"owner_plans.yaml: {name} is not on a roster; skipped")
+            continue
+        pid, pos = names.loc[name, "player_id"], names.loc[name, "pos"]
+        dplan = dplan[dplan.player_id != pid]
+        for st in steps or []:
+            y, t = int(st["offseason"]), str(st["type"]).lower()
+            if t == "auction":
+                continue
+            sal = st.get("salary")
+            if sal is None and t == "tag":
+                sal = tags.get(y, tags[max(tags)]).get(pos, 0)
+            if sal is None and t == "rfa":
+                off = PROCESSED / "decide_offseason_2027.csv"
+                sal = float(pd.read_csv(off).gibbs_rfa_price.iloc[0]) if off.exists() and "Gibbs" in name else 0
+            row = dict(owner="Jordan", player_id=pid, offseason=y, type=t, worth=0.0, path_worth=0.0)   # value not modeled: his call
+            for yy in FUTURE:
+                row[f"salary_{yy}"] = money(sal) if yy == y else 0
+            rows.append(row)
+    if not rows:
+        return dplan
+    pinned = pd.DataFrame(rows)
+    for (y, t), g in pinned.groupby(["offseason", "type"]):
+        mine = dplan[(dplan.owner == "Jordan") & (dplan.offseason == y) & (dplan.type == t)]
+        over = len(mine) + len(g) - limits.get(t, 99)
+        if over > 0:   # the pinned players take the slot from the model's lowest-worth picks
+            dplan = dplan.drop(mine.sort_values("worth").index[:over])
+    return pd.concat([dplan, pinned[dplan.columns]], ignore_index=True)
+
+
 def tag_costs() -> dict[int, dict[str, int]]:
     t = json.load(open(SNAP / "site" / "latest" / "ft_price_table.json"))["rows"]
     out: dict[int, dict[str, int]] = {}
@@ -180,7 +223,7 @@ def build() -> pd.DataFrame:
 
     # designations: each team's plan within its slots (rights.py); a player's rights are worth
     # what his team would actually use on him, discounted to now
-    dplan = rights.plan(base, tags, lam_rfa, h, curve)
+    dplan = pin_plans(rights.plan(base, tags, lam_rfa, h, curve), base, tags)
     dplan.to_csv(PROCESSED / "designation_plan.csv", index=False)
     rv_by = {}
     for r in dplan.itertuples():      # each designation's own seasons, discounted to now
