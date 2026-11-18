@@ -30,10 +30,15 @@ is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished 
 
 ## The sync (what the scheduled task does)
 
-0. Start the engine: `gh api -X POST repos/jdant19/dynasty-front-office/actions/workflows/engine.yml/dispatches
-   -f ref=main -f inputs[job]=daily` (REST; `gh workflow run` uses GraphQL, which is blocked). Wait for that
-   run to finish (`gh run list -w engine -L 1`, then `gh run watch <id>`, at most 20 minutes). If it cannot
-   be started or fails, carry on with what is committed and say so in the summary.
+0. Refresh the league site first, then the engine. The engine reads rosters, transactions and cap from the
+   collector's latest committed snapshot, and GitHub's own collector schedule runs hours late, so a sync
+   that only starts the engine misses moves Jordan made since (2026-11-18: his Ravens-for-Lions swap).
+   a. `gh api -X POST repos/jdant19/dynasty-front-office/actions/workflows/collect.yml/dispatches -f ref=main`;
+      wait for that run (`gh run list -w collect -L 1`, then poll `gh run view <id>`), at most 10 minutes.
+   b. `gh api -X POST repos/jdant19/dynasty-front-office/actions/workflows/engine.yml/dispatches -f ref=main
+      -f inputs[job]=daily`; wait for that run the same way, at most 20 minutes. (REST: `gh workflow run`
+      uses GraphQL, which is blocked.) Dispatch each once. If either cannot be started or fails, carry on
+      with what is committed and say so in the summary.
 1. `git pull`; note the engine run's result from `data/processed/run_log.csv`.
 2. Read `responses`, `answers` and `notes` from the page database (ArtifactData list) and write them as
    `{"responses": [...], "answers": [...], "notes": [...]}` to a scratch file; run

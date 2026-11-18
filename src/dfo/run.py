@@ -53,7 +53,8 @@ def _step(module: str, *args: str) -> tuple[str, str]:
 def plan(job: str) -> list[tuple]:
     refresh = [("dfo.ingest.site",), ("dfo.scoring", "2026"), ("dfo.projections.current",)]
     if job == "daily":
-        steps = refresh + [("dfo.sim.dial",), ("dfo.sim.future",), ("dfo.decide.lineup",)]
+        # waivers too: after Tuesday's claims, free agents are added any time, so the card must follow the roster
+        steps = refresh + [("dfo.sim.dial",), ("dfo.sim.future",), ("dfo.decide.lineup",), ("dfo.decide.waivers",)]
         steps += [("dfo.decide.deadline",)] if _week() in DEADLINE_WEEKS else []
         steps += [("dfo.decide.playoffs",)] if _week() in PLAYOFF_PREP_WEEKS else []
         return steps + [("dfo.frontdoor.views",), ("dfo.frontdoor.export",)]
