@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T20:33:58+00:00",
+ "made_at": "2026-11-18T21:01:59+00:00",
  "week": 11,
  "decisions": [
   {
@@ -31,12 +31,12 @@
    "kind": "Trade idea",
    "deadline": "end of Week 14",
    "title": "Ben: Kenneth Walker III",
-   "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +24, him +5; target: add 2029 round 1 -> you +13, him +15; walk-away: add 2028 round 1 (Max's) -> you +6, him +23",
-   "value": "you +13 (this season +23, later -10), him +15; your 1st place 56% -> 63%, title 39% -> 43%",
+   "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +25, him +5; target: add 2029 round 1 -> you +14, him +15; walk-away: add 2028 round 1 (Max's) -> you +7, him +23",
+   "value": "you +14 (this season +24, later -10), him +15; your 1st place 56% -> 63%, title 38% -> 42%",
    "confidence": "low",
    "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-71, strength +44; 2028: room $124 -> $168, strength +36; 2029: room $179 -> $227, strength +34; picks given -107 points over their rookie deals.",
    "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-18T20:30:05+00:00",
+   "made_at": "2026-11-18T20:57:33+00:00",
    "stale": false
   },
   {
@@ -64,10 +64,10 @@
   }
  ],
  "posture": {
-  "p_first": 0.55,
+  "p_first": 0.551,
   "p_top4": 0.998,
-  "p_title": 0.376,
-  "exp_payout": 400,
+  "p_title": 0.374,
+  "exp_payout": 399,
   "mean_wins": 13.8,
   "stance": "push",
   "moved": {
@@ -79,49 +79,49 @@
   "league": [
    {
     "owner": "Jordan",
-    "p_first": 0.55,
+    "p_first": 0.551,
     "p_top4": 0.998,
-    "p_title": 0.376,
-    "exp_payout": 400,
+    "p_title": 0.374,
+    "exp_payout": 399,
     "posture": "push"
    },
    {
     "owner": "Russ",
     "p_first": 0.325,
-    "p_top4": 0.997,
-    "p_title": 0.272,
-    "exp_payout": 316,
+    "p_top4": 0.996,
+    "p_title": 0.274,
+    "exp_payout": 315,
     "posture": "push"
    },
    {
     "owner": "Johnny",
-    "p_first": 0.121,
-    "p_top4": 0.984,
-    "p_title": 0.204,
-    "exp_payout": 215,
+    "p_first": 0.122,
+    "p_top4": 0.985,
+    "p_title": 0.21,
+    "exp_payout": 218,
     "posture": "push"
    },
    {
     "owner": "Zach",
-    "p_first": 0.003,
-    "p_top4": 0.704,
-    "p_title": 0.105,
-    "exp_payout": 52,
+    "p_first": 0.002,
+    "p_top4": 0.71,
+    "p_title": 0.1,
+    "exp_payout": 51,
     "posture": "push"
    },
    {
     "owner": "Matt",
     "p_first": 0.0,
-    "p_top4": 0.143,
-    "p_title": 0.025,
-    "exp_payout": 10,
+    "p_top4": 0.138,
+    "p_title": 0.023,
+    "exp_payout": 9,
     "posture": "build"
    },
    {
     "owner": "Max",
     "p_first": 0.0,
-    "p_top4": 0.083,
-    "p_title": 0.007,
+    "p_top4": 0.082,
+    "p_title": 0.009,
     "exp_payout": 3,
     "posture": "build"
    },
@@ -144,7 +144,7 @@
    {
     "owner": "Ben",
     "p_first": 0.0,
-    "p_top4": 0.004,
+    "p_top4": 0.005,
     "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
@@ -267,7 +267,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-18T19:35:55+00:00",
-   "age_hours": 1.0,
+   "age_hours": 1.4,
    "limit": "24h",
    "stale": false
   },
@@ -280,15 +280,15 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-18T20:26:08+00:00",
-   "age_hours": 0.1,
+   "as_of": "2026-11-18T19:22:28+00:00",
+   "age_hours": 1.7,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-18T20:29:00+00:00",
-   "age_hours": 0.1,
+   "as_of": "2026-11-18T20:33:58+00:00",
+   "age_hours": 0.5,
    "limit": "24h",
    "stale": false,
    "note": "1 step(s) not ok in recent runs"
