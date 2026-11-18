@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T21:55:31+00:00",
+ "made_at": "2026-11-18T22:07:11+00:00",
  "years": [
   {
    "season": 2027,
@@ -230,7 +230,7 @@
    "pts2027": 155
   },
   {
-   "player": "Baltimore Ravens",
+   "player": "Detroit Lions",
    "pos": "DEF",
    "s2026": 1,
    "slot": "BN",
@@ -256,19 +256,6 @@
    "pts2027": null
   },
   {
-   "player": "Audric Estime",
-   "pos": "RB",
-   "s2026": 1,
-   "slot": "BN",
-   "s2027": 0,
-   "d2027": "",
-   "s2028": 0,
-   "d2028": "",
-   "s2029": 0,
-   "d2029": "",
-   "pts2027": 40
-  },
-  {
    "player": "Mike Gesicki",
    "pos": "TE",
    "s2026": 1,
@@ -280,6 +267,19 @@
    "s2029": 0,
    "d2029": "",
    "pts2027": 74
+  },
+  {
+   "player": "Courtland Sutton",
+   "pos": "WR",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 0,
+   "d2027": "",
+   "s2028": 0,
+   "d2028": "",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": null
   },
   {
    "player": "Deebo Samuel",
@@ -419,8 +419,8 @@
    "year": 2027,
    "round": 2,
    "original": "Max",
-   "slot": 4.6,
-   "overall": 14.6,
+   "slot": 4.5,
+   "overall": 14.5,
    "tier": "10-30",
    "points": 44
   },
