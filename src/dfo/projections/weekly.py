@@ -101,6 +101,11 @@ class WeeklyModel:
                 self.iso[pos] = IsotonicRegression(increasing=False, out_of_bounds="clip").fit(np.log(r.ecr), r.points)
         t["fp_pts"] = self._fp_points_out_of_season(t)
         self.median = _gbm(0.5).fit(t[self.cols], t.points)
+        # rows with no FantasyPros rank (Tuesday to Thursday, before the week's ranks come out) get the
+        # model trained without rank features: the rank-trained model sees them out of distribution and
+        # squeezes them together (2026-11-17: every defense 4.6-7.1). Backtest 2021-2025, no ranks
+        # (the "usage" model): DEF rank correlation 0.263 vs 0.265 with ranks; K 0.162 vs 0.205.
+        self.no_rank = _gbm(0.5).fit(t[FEATURES], t.points)
 
     @staticmethod
     def _fp_points_out_of_season(t: pd.DataFrame) -> pd.Series:
@@ -131,6 +136,9 @@ class WeeklyModel:
         x["fp_pts"] = self.fp_points(x)
         out = pd.DataFrame(index=df.index)
         out["q50"] = self.median.predict(x[self.cols])
+        no_rank = x.ecr.isna()
+        if no_rank.any():
+            out.loc[no_rank, "q50"] = self.no_rank.predict(x.loc[no_rank, FEATURES])
         out["fp_pts"] = x.fp_pts
         out["proj"] = np.where(x.fp_pts.notna(), BLEND_WEIGHT * out.q50 + (1 - BLEND_WEIGHT) * x.fp_pts, out.q50)
         if ranges is not None:

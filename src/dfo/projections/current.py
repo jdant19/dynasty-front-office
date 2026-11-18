@@ -78,6 +78,10 @@ def main() -> None:
         carry = ecr[(ecr.week == prev) & ~ecr.player_id.isin(extra.player_id)][["player_id", "pos"]].drop_duplicates("player_id")
         carry = carry.assign(season=SEASON, week=week, team=carry.player_id.map(last_team))
         carry.loc[carry.pos == "DEF", "team"] = carry.player_id.str.replace("DEF-", "", regex=False)
+        # every team defense is always in the pool (a unit on bye last week has no rank to carry)
+        defs = pd.DataFrame(dict(player_id="DEF-" + pd.Series(sorted(implied_totals([SEASON]).team.unique())), pos="DEF"))
+        defs = defs[~defs.player_id.isin(extra.player_id) & ~defs.player_id.isin(carry.player_id)]
+        carry = pd.concat([carry, defs.assign(season=SEASON, week=week, team=defs.player_id.str[4:])], ignore_index=True)
         extra = pd.concat([extra, carry[carry.team.notna()][extra.columns]], ignore_index=True)
         ranks_note = (f"Week {week} FantasyPros ranks not out yet (usually Thursday or Friday); "
                       f"pool from Week {prev} ranks, projected without ranks")

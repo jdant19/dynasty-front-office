@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T04:19:22+00:00",
+ "made_at": "2026-11-18T05:07:10+00:00",
  "week": 11,
  "decisions": [
   {
@@ -12,17 +12,17 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-18T04:18:31+00:00"
+   "made_at": "2026-11-17T19:46:15+00:00"
   },
   {
    "id": "waivers-11",
    "kind": "Waivers",
    "deadline": "Tuesday 11:59pm Pacific",
    "title": "Waiver claims",
-   "recommendation": "add Buccaneers, drop Kenny Gainwell; add Chiefs, drop Kenny Gainwell; add Lions, drop Ravens",
-   "value": "+13.6 pts, $12.36; +8.0 pts, $7.26; +7.8 pts, $7.10",
-   "confidence": "medium",
-   "reason": "Rest-of-season lineup gain priced at today's odds; bids $0 (over the cap).",
+   "recommendation": "add Steelers, drop Ravens; add Chiefs, drop Ravens; add Lions, drop Ravens",
+   "value": "+1.6 pts, $1.61; +1.3 pts, $1.32; +1.1 pts, $1.12",
+   "confidence": "low (no ranks yet)",
+   "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap). This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options.",
    "change": "A player's role changing, or a better free agent after the weekend.",
    "made_at": "2026-11-17T23:29:57+00:00"
   },
@@ -70,8 +70,8 @@
    "kind": "Playoff prep",
    "deadline": "end of Week 18 (trades: Week 14)",
    "title": "Worth adding for the league playoffs",
-   "recommendation": "Kenneth Walker III (Ben); James Cook (Matt)",
-   "value": "title +13%, $+22; title +13%, $+22",
+   "recommendation": "James Cook (Matt); Kenneth Walker III (Ben)",
+   "value": "title +11%, $+18; title +11%, $+18",
    "confidence": "low",
    "reason": "Keeps are free; owning a player also frees your first draft pick.",
    "change": "NFL playoff odds moving, or the seeds changing."
@@ -90,58 +90,58 @@
   }
  ],
  "posture": {
-  "p_first": 0.536,
-  "p_top4": 0.997,
-  "p_title": 0.373,
-  "exp_payout": 393,
+  "p_first": 0.539,
+  "p_top4": 0.998,
+  "p_title": 0.376,
+  "exp_payout": 394,
   "mean_wins": 13.7,
   "stance": "push",
   "moved": {
-   "since": "2026-11-18",
-   "p_first": 0.0,
-   "p_title": 0.0,
-   "payout": 0
+   "since": "2026-11-16",
+   "p_first": 0.037,
+   "p_title": 0.01,
+   "payout": 18
   },
   "league": [
    {
     "owner": "Jordan",
-    "p_first": 0.536,
-    "p_top4": 0.997,
-    "p_title": 0.373,
-    "exp_payout": 393,
+    "p_first": 0.539,
+    "p_top4": 0.998,
+    "p_title": 0.376,
+    "exp_payout": 394,
     "posture": "push"
    },
    {
     "owner": "Russ",
-    "p_first": 0.337,
+    "p_first": 0.33,
     "p_top4": 0.997,
-    "p_title": 0.268,
-    "exp_payout": 318,
+    "p_title": 0.272,
+    "exp_payout": 317,
     "posture": "push"
    },
    {
     "owner": "Johnny",
-    "p_first": 0.127,
-    "p_top4": 0.987,
-    "p_title": 0.207,
-    "exp_payout": 221,
+    "p_first": 0.13,
+    "p_top4": 0.988,
+    "p_title": 0.204,
+    "exp_payout": 223,
     "posture": "push"
    },
    {
     "owner": "Zach",
     "p_first": 0.0,
-    "p_top4": 0.692,
-    "p_title": 0.101,
+    "p_top4": 0.691,
+    "p_title": 0.102,
     "exp_payout": 49,
-    "posture": "hold"
+    "posture": "push"
    },
    {
     "owner": "Matt",
     "p_first": 0.0,
-    "p_top4": 0.148,
-    "p_title": 0.029,
-    "exp_payout": 11,
-    "posture": "build"
+    "p_top4": 0.144,
+    "p_title": 0.025,
+    "exp_payout": 9,
+    "posture": "hold"
    },
    {
     "owner": "Max",
@@ -154,16 +154,16 @@
    {
     "owner": "Qasim",
     "p_first": 0.0,
-    "p_top4": 0.064,
-    "p_title": 0.011,
-    "exp_payout": 4,
+    "p_top4": 0.065,
+    "p_title": 0.008,
+    "exp_payout": 3,
     "posture": "build"
    },
    {
     "owner": "Ryan",
     "p_first": 0.0,
-    "p_top4": 0.018,
-    "p_title": 0.002,
+    "p_top4": 0.019,
+    "p_title": 0.003,
     "exp_payout": 1,
     "posture": "build"
    },
@@ -171,7 +171,7 @@
     "owner": "Ben",
     "p_first": 0.0,
     "p_top4": 0.003,
-    "p_title": 0.001,
+    "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
    },
@@ -215,7 +215,7 @@
    "player": "Kenneth Walker III",
    "owner": "Ben",
    "pos": "RB",
-   "gain": 35.8,
+   "gain": 35.1,
    "salary": 67,
    "rental": false
   },
@@ -231,39 +231,31 @@
    "player": "DeVonta Smith",
    "owner": "Ryan",
    "pos": "WR",
-   "gain": 11.1,
+   "gain": 11.0,
    "salary": 51,
    "rental": true
-  },
-  {
-   "player": "Bears",
-   "owner": "Matt",
-   "pos": "DEF",
-   "gain": 9.7,
-   "salary": 1,
-   "rental": true
-  },
-  {
-   "player": "James Cook",
-   "owner": "Matt",
-   "pos": "RB",
-   "gain": 8.8,
-   "salary": 79,
-   "rental": false
   },
   {
    "player": "Chris Olave",
    "owner": "Max",
    "pos": "WR",
-   "gain": 8.7,
+   "gain": 8.5,
    "salary": 15,
    "rental": false
+  },
+  {
+   "player": "Seahawks",
+   "owner": "Qasim",
+   "pos": "DEF",
+   "gain": 7.8,
+   "salary": 1,
+   "rental": true
   },
   {
    "player": "Bengals",
    "owner": "Qasim",
    "pos": "DEF",
-   "gain": 8.5,
+   "gain": 7.8,
    "salary": 1,
    "rental": true
   },
@@ -271,8 +263,16 @@
    "player": "Texans",
    "owner": "Mike",
    "pos": "DEF",
-   "gain": 8.3,
+   "gain": 7.6,
    "salary": 2,
+   "rental": true
+  },
+  {
+   "player": "Nico Collins",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 7.5,
+   "salary": 91,
    "rental": true
   }
  ],
@@ -293,7 +293,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-17T23:29:57+00:00",
-   "age_hours": 4.8,
+   "age_hours": 5.6,
    "limit": "24h",
    "stale": false
   },
@@ -306,18 +306,18 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-18T04:14:25+00:00",
-   "age_hours": 0.1,
+   "as_of": "2026-11-18T03:49:10+00:00",
+   "age_hours": 1.3,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-18T04:15:46+00:00",
-   "age_hours": 0.1,
+   "as_of": "2026-11-18T04:12:06+00:00",
+   "age_hours": 0.9,
    "limit": "24h",
    "stale": false,
-   "note": "1 step(s) not ok in recent runs"
+   "note": "2 step(s) not ok in recent runs"
   }
  ]
 }

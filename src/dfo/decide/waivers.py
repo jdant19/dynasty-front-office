@@ -53,6 +53,22 @@ def _grid(df: pd.DataFrame, weeks: list[int], plays: dict, first: pd.Series | No
     return g
 
 
+STREAM = {"K", "DEF"}
+
+
+def _stream(g: pd.DataFrame, weeks: list[int]) -> pd.DataFrame:
+    """P10: kickers and defenses are valued against weekly streaming. Holding one only matters for the
+    coming week; every later week is filled by that week's best unrostered unit (the waiver rows), so a
+    rostered K/DEF gets no credit for weeks after this one. Before 2026-11-17 a defense's rest-of-season
+    edge over the waiver level counted, and the plan kept a weak starter, added a second defense for
+    later matchups and dropped a bench back instead of streaming."""
+    g = g.copy()
+    later = [w for w in weeks[1:] if w in g.columns]
+    if later:
+        g.loc[g.pos.isin(STREAM), later] = 0.0
+    return g
+
+
 def _weights(owner: str) -> tuple[float, float]:
     """This season: the simulator's change in expected payout for a few more lineup points, from the
     actual standings (the small-move form of re-running the season, P18). Later seasons: the
@@ -92,13 +108,13 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
     waiver = _waiver_rows(weeks)
     from dfo.decide.streaming import adjustments
     adj = adjustments(SEASON, week0)
-    team = pd.concat([_grid(pool.loc[pool.index.intersection(mine)].reset_index(), weeks, plays, first, adj), waiver])
+    team = pd.concat([_stream(_grid(pool.loc[pool.index.intersection(mine)].reset_index(), weeks, plays, first, adj), weeks), waiver])
     base = lineup_points(team)
     w_now, w_later = _weights(owner)
     option, drop_later = _later_values(prices)
     loss = {pid: base - lineup_points(team.drop(index=pid)) for pid in team.index.difference(waiver.index)}
     fa = pool[~pool.index.isin(rostered) & (pool.rate > 0)].nlargest(TOP_FA, "rate")
-    g_fa = _grid(fa.reset_index(), weeks, plays, first, adj)
+    g_fa = _stream(_grid(fa.reset_index(), weeks, plays, first, adj), weeks)
     names = pool.player
     rows = []
     for add in g_fa.index:
@@ -114,7 +130,12 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
     if not rows:   # no free agents in the projection pool: an empty plan, not a crash
         return pd.DataFrame(columns=["add", "add_player", "add_pos", "drop", "drop_player", "drop_pos",
                                      "lineup_points", "payout_now", "payout_later", "net_payout"])
-    out = pd.DataFrame(rows).sort_values("net_payout", ascending=False)
+    out = pd.DataFrame(rows)
+    # near-ties (within 5 cents): drop the streamed K/DEF being replaced rather than a bench player, who
+    # keeps value the model does not price (injury cover, a role change); a streamed unit is worth nothing
+    # after this week (P10)
+    out["_tie"] = out.net_payout.round(1) + np.where(out.drop_pos.isin(STREAM) & (out.drop_pos == out.add_pos), 0.05, 0.0)
+    out = out.sort_values(["_tie", "net_payout"], ascending=False).drop(columns="_tie")
     # one line per free agent (his best drop), then keep moves that are worth making
     best = out.drop_duplicates("add")
     return best.reset_index(drop=True), out

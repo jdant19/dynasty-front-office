@@ -250,6 +250,24 @@ Question: push, hold or sell, and where is the market? Weeks 10-14, in the daily
 - What moved since the last run: `sim_2026_history.csv`, appended every run.
 - Output: `decide_deadline.md`, `decide_deadline_posture.csv`, `decide_deadline_targets.csv`.
 
+## Waivers and streaming (2026-11-17 correction)
+
+Jordan's pushback on the Week 11 plan (add the Bucs DEF, drop Kenny Gainwell; the Bucs were about 15th
+that week and the top defense was unrostered) found three faults, now fixed:
+- P10 was not applied in waivers: a rostered K/DEF was credited for its rest-of-season edge over the
+  waiver level, so the plan kept a weak starter, added a second defense for later weeks and dropped a
+  bench player. Now a K/DEF counts only for the coming week (`waivers._stream`); later weeks are streamed.
+  On near-ties the replaced K/DEF is the drop, not a bench player.
+- Tuesday to Thursday the coming week has no FantasyPros ranks, and rows without ranks ran through the
+  rank-trained model, which squeezed every defense into 4.6-7.1 points. Unranked rows now use the model
+  trained without ranks (backtest 2021-2025: DEF rank correlation 0.263 vs 0.265 with ranks).
+- A defense on bye the week before had no rank to carry and fell out of the pool (the Steelers); all 32
+  defenses are now always in it.
+After the fixes the plan is the stream Jordan described: Ravens out for the best matchup (model: Steelers
+7.3, Chiefs 7.0; DraftSharks and the betting line favor the Chiefs, Arizona's implied total 12.5), and a
+kicker stream (Santos for Bates). Our defense projections stay weak without ranks (rank correlation about
+0.26 either way), so the brief shows the line next to them.
+
 ## Scheduled runs (`dfo/run.py`, `.github/workflows/engine.yml`)
 
 | Job | When (Central) | Steps |

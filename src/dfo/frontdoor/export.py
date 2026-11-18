@@ -78,7 +78,9 @@ def decisions() -> list[dict]:
                         title="Waiver claims", recommendation="; ".join(
                             f"add {r.add_player}, drop {r.drop_player}" for r in top.itertuples()) or "no claim worth making",
                         value="; ".join(f"+{r.lineup_points:.1f} pts, ${r.net_payout:.2f}" for r in top.itertuples()),
-                        confidence="medium", reason=f"Rest-of-season lineup gain priced at today's odds; bids {bid}.",
+                        confidence="medium" if not _ranks_missing() else "low (no ranks yet)",
+                        reason=f"Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids {bid}."
+                               + (" This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options." if _ranks_missing() else ""),
                         change="A player's role changing, or a better free agent after the weekend.", made_at=str(wv.rosters_as_of.iloc[0])))
     ts = _read("decide_trade_search.csv")
     if len(ts) and wk <= 14:
@@ -116,6 +118,11 @@ def decisions() -> list[dict]:
                         confidence="low", reason="Played through RFA bidding and the auction with every owner's likely plan.",
                         change="Other owners' plans (review them), Gibbs's RFA price, the ESPN ranking order.", made_at=str(b.made_at)))
     return out
+
+
+def _ranks_missing() -> bool:
+    w = _read("proj_week.csv")
+    return bool(len(w)) and "ranks_note" in w and w.ranks_note.astype(str).str.contains("not out yet").any()
 
 
 def posture() -> dict:
