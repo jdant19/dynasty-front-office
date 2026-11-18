@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-17T19:47:38+00:00",
+ "made_at": "2026-11-18T04:12:06+00:00",
  "week": 11,
  "decisions": [
   {
@@ -19,36 +19,51 @@
    "kind": "Waivers",
    "deadline": "Tuesday 11:59pm Pacific",
    "title": "Waiver claims",
-   "recommendation": "add Will Reichard, drop Courtland Sutton; add Bills, drop Brenton Strange",
-   "value": "+1.9 pts, $1.83; +0.9 pts, $0.84",
+   "recommendation": "add Buccaneers, drop Kenny Gainwell; add Chiefs, drop Kenny Gainwell; add Lions, drop Ravens",
+   "value": "+13.6 pts, $12.36; +8.0 pts, $7.26; +7.8 pts, $7.10",
    "confidence": "medium",
    "reason": "Rest-of-season lineup gain priced at today's odds; bids $0 (over the cap).",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-10T12:36:59+00:00"
+   "made_at": "2026-11-17T23:29:57+00:00"
+  },
+  {
+   "id": "trade-Johnny-vikings",
+   "kind": "Trade idea",
+   "deadline": "end of Week 14",
+   "title": "Johnny: Vikings",
+   "recommendation": "Offer Ollie Gordon II; Brenton Strange for Vikings. opening: add no pick -> you +10, him +2; target: add no pick -> you +10, him +2; walk-away: add no pick -> you +10, him +2",
+   "value": "you +10 (this season +9, later +1), him +2; your 1st place 55% -> 58%, title 40% -> 40%",
+   "confidence": "low",
+   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-58, strength +0; 2028: room $124 -> $127, strength +2; 2029: room $179 -> $179, strength +0; picks given +0 points over their rookie deals.",
+   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
+   "made_at": "2026-11-18T04:06:03+00:00",
+   "stale": false
+  },
+  {
+   "id": "trade-Max-chrisolave",
+   "kind": "Trade idea",
+   "deadline": "end of Week 14",
+   "title": "Max: Chris Olave",
+   "recommendation": "Offer Ollie Gordon II for Chris Olave. opening: add no pick -> you +9, him +16; target: add no pick -> you +9, him +16; walk-away: add no pick -> you +9, him +16",
+   "value": "you +9 (this season +12, later -3), him +16; your 1st place 55% -> 60%, title 40% -> 39%",
+   "confidence": "low",
+   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-87, strength +15; 2028: room $124 -> $83, strength -24; 2029: room $179 -> $179, strength +0; picks given +0 points over their rookie deals.",
+   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
+   "made_at": "2026-11-18T04:06:03+00:00",
+   "stale": false
   },
   {
    "id": "trade-Ben-kennethwalkeriii",
    "kind": "Trade idea",
    "deadline": "end of Week 14",
    "title": "Ben: Kenneth Walker III",
-   "recommendation": "Offer Harold Fannin Jr.; Mike Gesicki; Chuba Hubbard; 2029 round 2 (Jordan); 2029 round 3 (Jordan) for Kenneth Walker III. opening: add 2029 round 3 -> you +50, him +21; target: add 2029 round 2 + 2029 round 3 -> you +32, him +39; walk-away: add 2028 round 1 -> you +3, him +67",
-   "value": "you +32, him +39 (payout $)",
+   "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +19, him +5; target: add 2029 round 1 -> you +8, him +15; walk-away: add 2028 round 1 (Max's) -> you +1, him +23",
+   "value": "you +8 (this season +18, later -10), him +15; your 1st place 55% -> 60%, title 40% -> 42%",
    "confidence": "low",
-   "reason": "Your 1st-place odds 42% -> 53%, title 36% -> 43%. 2027: room $-20 -> $-68, strength +45; 2028: room $79 -> $79, strength +0; 2029: room $132 -> $132, strength +0; picks given -68 points over their rookie deals.",
+   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. 2027: room $-60 -> $-71, strength +44; 2028: room $124 -> $168, strength +36; 2029: room $179 -> $227, strength +34; picks given -107 points over their rookie deals.",
    "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-10T18:43:42+00:00"
-  },
-  {
-   "id": "trade-Johnny-jaguars",
-   "kind": "Trade idea",
-   "deadline": "end of Week 14",
-   "title": "Johnny: Jaguars",
-   "recommendation": "Offer Bucky Irving for Jaguars. opening: add no pick -> you +4, him +14; target: add no pick -> you +4, him +14; walk-away: add no pick -> you +4, him +14",
-   "value": "you +4, him +14 (payout $)",
-   "confidence": "low",
-   "reason": "Your 1st-place odds 42% -> 41%, title 36% -> 40%. 2027: room $-20 -> $-17, strength -29; 2028: room $79 -> $121, strength +17; 2029: room $132 -> $176, strength +14; picks given +0 points over their rookie deals.",
-   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-10T18:43:42+00:00"
+   "made_at": "2026-11-18T04:06:03+00:00",
+   "stale": false
   },
   {
    "id": "playoffs-11",
@@ -75,11 +90,11 @@
   }
  ],
  "posture": {
-  "p_first": 0.53,
-  "p_top4": 0.995,
+  "p_first": 0.539,
+  "p_top4": 0.998,
   "p_title": 0.376,
-  "exp_payout": 395,
-  "mean_wins": 13.6,
+  "exp_payout": 394,
+  "mean_wins": 13.7,
   "stance": "push",
   "moved": {
    "since": "2026-11-16",
@@ -90,73 +105,73 @@
   "league": [
    {
     "owner": "Jordan",
-    "p_first": 0.53,
-    "p_top4": 0.995,
+    "p_first": 0.539,
+    "p_top4": 0.998,
     "p_title": 0.376,
-    "exp_payout": 395,
+    "exp_payout": 394,
     "posture": "push"
    },
    {
     "owner": "Russ",
-    "p_first": 0.343,
-    "p_top4": 0.982,
-    "p_title": 0.267,
-    "exp_payout": 310,
+    "p_first": 0.33,
+    "p_top4": 0.997,
+    "p_title": 0.272,
+    "exp_payout": 317,
     "posture": "push"
    },
    {
     "owner": "Johnny",
-    "p_first": 0.12,
-    "p_top4": 0.953,
-    "p_title": 0.192,
-    "exp_payout": 207,
+    "p_first": 0.13,
+    "p_top4": 0.988,
+    "p_title": 0.204,
+    "exp_payout": 223,
     "posture": "push"
    },
    {
     "owner": "Zach",
-    "p_first": 0.006,
-    "p_top4": 0.587,
-    "p_title": 0.099,
-    "exp_payout": 54,
+    "p_first": 0.0,
+    "p_top4": 0.691,
+    "p_title": 0.102,
+    "exp_payout": 49,
     "posture": "push"
    },
    {
     "owner": "Matt",
-    "p_first": 0.002,
-    "p_top4": 0.238,
-    "p_title": 0.039,
-    "exp_payout": 21,
+    "p_first": 0.0,
+    "p_top4": 0.144,
+    "p_title": 0.025,
+    "exp_payout": 9,
     "posture": "hold"
    },
    {
     "owner": "Max",
     "p_first": 0.0,
-    "p_top4": 0.132,
-    "p_title": 0.01,
-    "exp_payout": 7,
+    "p_top4": 0.094,
+    "p_title": 0.008,
+    "exp_payout": 4,
     "posture": "build"
    },
    {
     "owner": "Qasim",
     "p_first": 0.0,
-    "p_top4": 0.096,
-    "p_title": 0.013,
-    "exp_payout": 6,
+    "p_top4": 0.065,
+    "p_title": 0.008,
+    "exp_payout": 3,
     "posture": "build"
    },
    {
     "owner": "Ryan",
     "p_first": 0.0,
-    "p_top4": 0.012,
-    "p_title": 0.002,
+    "p_top4": 0.019,
+    "p_title": 0.003,
     "exp_payout": 1,
     "posture": "build"
    },
    {
     "owner": "Ben",
     "p_first": 0.0,
-    "p_top4": 0.005,
-    "p_title": 0.001,
+    "p_top4": 0.003,
+    "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
    },
@@ -263,17 +278,6 @@
  ],
  "questions": [
   {
-   "id": "Q2026-11-13-01",
-   "asked_at": "2026-11-13",
-   "topic": "results",
-   "question": "Send the Week 10 scoreboard when the week is final.",
-   "why_it_matters": "Season odds and the deadline posture use league results; Week 10 is missing.",
-   "deadline": "2026-11-18",
-   "status": "open",
-   "answer": "",
-   "answered_at": ""
-  },
-  {
    "id": "Q2026-11-12-01",
    "asked_at": "2026-11-12",
    "topic": "offseason",
@@ -288,29 +292,29 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-17T13:21:41+00:00",
-   "age_hours": 6.4,
+   "as_of": "2026-11-17T23:29:57+00:00",
+   "age_hours": 4.7,
    "limit": "24h",
    "stale": false
   },
   {
    "source": "yahoo_league",
-   "as_of": "through Week 9",
+   "as_of": "through Week 10",
    "age_hours": null,
    "limit": "7d",
    "stale": false
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-17T19:45:18+00:00",
-   "age_hours": 0.0,
+   "as_of": "2026-11-18T03:49:10+00:00",
+   "age_hours": 0.4,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-17T17:04:08+00:00",
-   "age_hours": 2.7,
+   "as_of": "2026-11-18T04:01:17+00:00",
+   "age_hours": 0.2,
    "limit": "24h",
    "stale": false,
    "note": "2 step(s) not ok in recent runs"
