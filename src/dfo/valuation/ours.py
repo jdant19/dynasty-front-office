@@ -55,7 +55,7 @@ def lineup_points(week_pts: pd.DataFrame) -> float:
 
 
 def waiver_weekly() -> dict[str, float]:
-    ev = pd.read_csv(PROCESSED / "proj_weekly_backtest.csv", usecols=["season", "week", "pos", "ecr", "points"])
+    ev = pd.read_csv(PROCESSED / "proj_weekly_backtest.csv", usecols=["season", "week", "pos", "player_id", "ecr", "points"])
     ev["wrank"] = ev.groupby(["season", "week", "pos"]).ecr.rank(method="first")
     rostered = pd.read_csv(PROCESSED / "site_rosters.csv").groupby("pos").size()
     out = {}
