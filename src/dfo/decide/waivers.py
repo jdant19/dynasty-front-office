@@ -111,6 +111,9 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
                              drop=drop, drop_player=names.get(drop, drop), drop_pos=pool.pos.get(drop),
                              lineup_points=round(gain, 1), payout_now=round(now, 2), payout_later=round(later, 2),
                              net_payout=round(now + later, 2)))
+    if not rows:   # no free agents in the projection pool: an empty plan, not a crash
+        return pd.DataFrame(columns=["add", "add_player", "add_pos", "drop", "drop_player", "drop_pos",
+                                     "lineup_points", "payout_now", "payout_later", "net_payout"])
     out = pd.DataFrame(rows).sort_values("net_payout", ascending=False)
     # one line per free agent (his best drop), then keep moves that are worth making
     best = out.drop_duplicates("add")

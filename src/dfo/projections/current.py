@@ -66,6 +66,22 @@ def main() -> None:
     extra = extra[extra.player_id.notna()]
     site_team = ros_tbl.dropna(subset=["pid"]).set_index("pid").nfl_team.replace({"LAR": "LA", "JAC": "JAX", "WSH": "WAS"})
     extra["team"] = extra.player_id.map(site_team).fillna(extra.player_id.map(last_team))
+    # FantasyPros weekly ranks for the coming week arrive Thursday or Friday. Until then the free-agent
+    # pool would shrink to rostered players only (no waiver candidates), so the players ranked in the
+    # latest earlier week are kept in the pool and projected without ranks (their rank is stale: not used).
+    ranks_note = ""
+    from dfo.projections.ecr import weekly_ecr
+    ecr = weekly_ecr()
+    ecr = ecr[ecr.season == SEASON]
+    if not (ecr.week == week).any() and (ecr.week < week).any():
+        prev = int(ecr[ecr.week < week].week.max())
+        carry = ecr[(ecr.week == prev) & ~ecr.player_id.isin(extra.player_id)][["player_id", "pos"]].drop_duplicates("player_id")
+        carry = carry.assign(season=SEASON, week=week, team=carry.player_id.map(last_team))
+        carry.loc[carry.pos == "DEF", "team"] = carry.player_id.str.replace("DEF-", "", regex=False)
+        extra = pd.concat([extra, carry[carry.team.notna()][extra.columns]], ignore_index=True)
+        ranks_note = (f"Week {week} FantasyPros ranks not out yet (usually Thursday or Friday); "
+                      f"pool from Week {prev} ranks, projected without ranks")
+        print(ranks_note)
     df = build(extra=extra)
     train = df[(df.season < SEASON) | ((df.season == SEASON) & (df.week < week))]
     model = WeeklyModel(train)
@@ -83,7 +99,7 @@ def main() -> None:
         team=wk.team, opp=wk.opp, owner=wk.player_id.map(owner).fillna(""), fp_rank=wk.ecr.round(1),
         proj=wk.proj.round(1), low=wk.low.round(1), high=wk.high.round(1), bye=wk.bye,
         injury_status=wk.player_id.map(ros_tbl.dropna(subset=["pid"]).set_index("pid").injury_status).fillna(""),
-        stats_as_of=inputs_as_of, made_at=stamp))
+        ranks_note=ranks_note, stats_as_of=inputs_as_of, made_at=stamp))
     out_week.sort_values(["pos", "proj"], ascending=[True, False]).to_csv(PROCESSED / "proj_week.csv", index=False)
 
     # rest of season

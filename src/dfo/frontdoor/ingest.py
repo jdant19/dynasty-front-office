@@ -39,7 +39,7 @@ def run(dump: dict) -> dict:
     resp = [dict(id=f"{r['id']}@{r.get('at', '')}", decision_id=r["id"], verdict=r.get("verdict", ""), reason=r.get("reason", ""),
                  recommendation=r.get("recommendation", ""), at=r.get("at", "")) for r in dump.get("responses", [])]
     n_resp = _append("responses.csv", resp)
-    q = pd.read_csv(J / "questions.csv").fillna("")
+    q = pd.read_csv(J / "questions.csv", dtype=str).fillna("")
     n_ans = 0
     for a in dump.get("answers", []):
         m = (q.id == a["id"]) & (q.answer.astype(str) != str(a.get("answer", "")))
@@ -47,7 +47,8 @@ def run(dump: dict) -> dict:
             q.loc[m, ["answer", "answered_at", "status"]] = [a.get("answer", ""), a.get("at", ""), "answered"]
             n_ans += int(m.sum())
     q.to_csv(J / "questions.csv", index=False)
-    notes = [dict(id=n["id"], kind=n.get("kind", "note"), text=n.get("text", ""), asset_id=n.get("asset_id", ""),
+    notes = [dict(id=n["id"], kind=n.get("kind", "note"), text=n.get("text", ""),
+                  asset_id=";".join(n.get("asset_ids") or ([n["asset_id"]] if n.get("asset_id") else [])),
                   filename=n.get("filename", ""), at=n.get("at", ""), status="new") for n in dump.get("notes", [])]
     n_notes = _append("notes.csv", notes)
     return dict(responses=n_resp, answers=n_ans, notes=n_notes)

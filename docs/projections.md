@@ -127,6 +127,10 @@ Draft-capital model and FantasyPros rookie rank (May-August), 50/50. 229 rookies
 - PFF data is not in yet (rankings downloads only). It can be added as another source and tested
   the same way.
 - Kicker and defense ranges are wide because those outcomes are mostly noise.
+- The coming week's FantasyPros ranks arrive Thursday or Friday. From Tuesday until then, the pool
+  keeps every player ranked the week before, projected without ranks (the old rank is stale and not
+  used), and `proj_week.csv` says so in `ranks_note`. Before 2026-11-17 the pool shrank to rostered
+  players on those days, so the Tuesday waiver run found no free agents and failed.
 
 ## Files
 

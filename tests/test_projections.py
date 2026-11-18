@@ -58,8 +58,13 @@ def test_current_outputs_are_stamped_and_sane():
     assert (w.low <= w.proj).all() and (w.proj <= w.high).all()
     assert (w.loc[w.bye, "proj"] == 0).all()
     # guard against a degenerate range model (all lows at 0 once happened via early stopping)
-    top = w[(~w.bye) & w.pos.isin(["RB", "WR"]) & (w.fp_rank <= 6)]
-    assert len(top) and (top.low > 0).mean() > 0.8
+    if w.fp_rank.notna().any():
+        top = w[(~w.bye) & w.pos.isin(["RB", "WR"]) & (w.fp_rank <= 6)]
+        assert len(top) and (top.low > 0).mean() > 0.8
+    else:   # this week's ranks not out yet (Tue-Thu): the pool must still hold free agents, and say why
+        assert len(w) > 400 and w.ranks_note.astype(str).str.contains("not out yet").all()
+        top = w[(~w.bye) & w.pos.isin(["RB", "WR"])].nlargest(12, "proj")
+        assert (top.low > 0).mean() > 0.8
     r = _csv("proj_ros.csv")
     assert (r.ros_points >= 0).all() and r.games_left.max() <= 17
     f = _csv("proj_future.csv")

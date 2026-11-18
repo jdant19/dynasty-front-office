@@ -84,13 +84,19 @@ def decisions() -> list[dict]:
     if len(ts) and wk <= 14:
         good = ts[ts.works_for_both] if "works_for_both" in ts else ts
         for r in good.head(3).itertuples():
+            age = (pd.Timestamp.now(tz="UTC") - pd.Timestamp(r.inputs)).days
+            terms = list(dict.fromkeys([str(r.opening), str(r.target), str(r.walk_away)]))   # identical terms shown once
+            stale = f" STALE: built from {str(r.inputs)[:10]} projections ({age} days old); re-run before acting." if age >= 3 else ""
             out.append(dict(id=f"trade-{r.partner}-{re.sub(r'[^a-z]', '', str(r.you_get).lower())[:20]}", kind="Trade idea",
                             deadline="end of Week 14", title=f"{r.partner}: {r.you_get}",
-                            recommendation=f"Offer {r.you_give} for {r.you_get}. {r.opening}; {r.target}; {r.walk_away}",
-                            value=f"you {r.jordan:+.0f}, him {r.partner_gain:+.0f} (payout $)",
-                            confidence="low", reason=f"Your 1st-place odds {r.your_1st}, title {r.your_title}. {r.your_outlook}.",
+                            recommendation=f"Offer {r.you_give} for {r.you_get}. " + "; ".join(terms),
+                            value=(f"you {r.jordan:+.0f} (this season {r.jordan_now:+.0f}, later {r.jordan_later:+.0f}), "
+                                   f"him {r.partner_gain:+.0f}; your 1st place {r.your_1st}, title {r.your_title}"),
+                            confidence="low" if not stale else "low (stale inputs)",
+                            reason=(f"Payout $ (P18). 'This season' adds the regular season and the league playoffs: "
+                                    f"a gain with 1st-place odds falling comes from the playoffs alone. {r.your_outlook}.{stale}"),
                             change="His posture (a seller turning buyer), injuries, or a counter that moves value.",
-                            made_at=str(r.inputs)))
+                            made_at=str(r.inputs), stale=bool(stale)))
     ad = _read("decide_playoffs_adds.csv")
     if len(ad):
         a = ad[~ad.on_playoff_rival].head(2)
