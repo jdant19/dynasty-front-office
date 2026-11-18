@@ -56,7 +56,7 @@ def plan(job: str) -> list[tuple]:
         steps = refresh + [("dfo.sim.dial",), ("dfo.sim.future",), ("dfo.decide.lineup",)]
         steps += [("dfo.decide.deadline",)] if _week() in DEADLINE_WEEKS else []
         steps += [("dfo.decide.playoffs",)] if _week() in PLAYOFF_PREP_WEEKS else []
-        return steps + [("dfo.frontdoor.export",)]
+        return steps + [("dfo.frontdoor.views",), ("dfo.frontdoor.export",)]
     if job == "waivers":
         return refresh + [("dfo.decide.waivers",), ("dfo.frontdoor.export",)]
     if job == "lineup":
@@ -64,7 +64,8 @@ def plan(job: str) -> list[tuple]:
     if job == "trades":
         # weekly: re-fit valuation (prices, parameters) before searching for trades
         return refresh + [("dfo.valuation.build",), ("dfo.sim.dial",), ("dfo.sim.future",), ("dfo.decide.owner_plans",),
-                          ("dfo.decide.trade_search", "--top", "6", "--sims", "3000"), ("dfo.frontdoor.export",)]
+                          ("dfo.decide.trade_search", "--top", "6", "--sims", "3000"), ("dfo.frontdoor.views",),
+                          ("dfo.frontdoor.export",)]
     raise SystemExit(f"unknown job {job!r}: daily, waivers, lineup, trades")
 
 

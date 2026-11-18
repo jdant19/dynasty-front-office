@@ -2,239 +2,336 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one column command sheet; a scoreboard strip on top, then decisions, questions, submit, data health. */
+/* Layout: a scoreboard strip, then tabs. Today = decisions (one line each, open for detail), questions,
+   discussions, send. This season = path, odds trend, standings. Future = cap by year, plan, contracts, picks. */
 :root {
   --bg: #f3f4f1; --surface: #ffffff; --ink: #1b2420; --muted: #5d6a63; --line: #d9ded9;
   --accent: #b5631b; --accent-ink: #ffffff; --good: #2f7a4f; --warn: #a86a00; --bad: #b23a3a;
-  --chip: #e8ebe6;
+  --chip: #e8ebe6; --s1: #2a78d6; --s2: #eb6834; --bar: #9ec5f4;
   --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
   --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #121815; --surface: #1a221e; --ink: #e6ebe7; --muted: #9aa8a0; --line: #2c3631;
-  --accent: #e08a44; --accent-ink: #1a1208; --good: #5fbf86; --warn: #e0a73c; --bad: #e07070; --chip: #24302a; color-scheme: dark } }
+  --accent: #e08a44; --accent-ink: #1a1208; --good: #5fbf86; --warn: #e0a73c; --bad: #e07070; --chip: #24302a;
+  --s1: #3987e5; --s2: #d95926; --bar: #184f95; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #121815; --surface: #1a221e; --ink: #e6ebe7; --muted: #9aa8a0; --line: #2c3631;
-  --accent: #e08a44; --accent-ink: #1a1208; --good: #5fbf86; --warn: #e0a73c; --bad: #e07070; --chip: #24302a; color-scheme: dark }
+  --accent: #e08a44; --accent-ink: #1a1208; --good: #5fbf86; --warn: #e0a73c; --bad: #e07070; --chip: #24302a;
+  --s1: #3987e5; --s2: #d95926; --bar: #184f95; color-scheme: dark }
 * { box-sizing: border-box }
-body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
-.wrap { max-width: 860px; margin: 0 auto; padding-block: 20px 48px;
+[hidden] { display: none !important }
+body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--body); }
+.wrap { max-width: 920px; margin: 0 auto; padding-block: 16px 48px;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  display: grid; gap: 28px }
-h1, h2 { font-family: var(--display); letter-spacing: .02em; margin: 0; text-wrap: balance }
-h1 { font-size: 30px; line-height: 1.1 }
-h2 { font-size: 20px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
-.meta { color: var(--muted); font-size: 13px }
-.num { font-family: var(--mono); font-variant-numeric: tabular-nums }
-header { display: grid; gap: 6px }
-.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line);
+  display: grid; gap: 16px }
+h1, h2, h3 { font-family: var(--display); letter-spacing: .02em; margin: 0; text-wrap: balance }
+h1 { font-size: 26px; line-height: 1.1 }
+h2 { font-size: 17px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted) }
+h3 { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
+.meta { color: var(--muted); font-size: 12px }
+.num, td.n, .mono { font-family: var(--mono); font-variant-numeric: tabular-nums }
+header { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; justify-content: space-between }
+header > div { display: grid; gap: 2px; min-width: 0 }
+.links { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px }
+.links a { color: var(--accent); text-decoration: none }
+.links a:hover { text-decoration: underline }
+details > summary { cursor: pointer; color: var(--muted); font-size: 12px }
+.board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: var(--line);
   border: 1px solid var(--line); border-radius: 6px; overflow: hidden }
-.board div { background: var(--surface); padding: 12px 14px; display: grid; gap: 2px }
-.board .k { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted) }
-.board .v { font-family: var(--mono); font-size: 22px; font-variant-numeric: tabular-nums }
-.board .d { font-size: 12px; font-family: var(--mono) }
-.up { color: var(--good) } .down { color: var(--bad) }
-section { display: grid; gap: 12px; min-width: 0 }
-.dec { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 8px; min-width: 0 }
-.dec .top { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; justify-content: space-between }
-.dec h3 { margin: 0; font-size: 16px; font-weight: 600 }
-.chip { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; background: var(--chip); color: var(--muted); padding: 2px 8px; border-radius: 99px; white-space: nowrap }
-.chip.due { background: transparent; border: 1px solid var(--accent); color: var(--accent) }
-.rec { font-weight: 500; overflow-wrap: anywhere }
-.why { color: var(--muted); font-size: 14px; overflow-wrap: anywhere }
-.val { font-family: var(--mono); font-size: 13px; overflow-wrap: anywhere }
+.board div { background: var(--surface); padding: 8px 10px; display: grid; gap: 0 }
+.board .k { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted) }
+.board .v { font-family: var(--mono); font-size: 19px; font-variant-numeric: tabular-nums }
+.board .d { font-size: 11px; font-family: var(--mono); color: var(--muted) }
+@media (max-width: 560px) { .board { grid-template-columns: repeat(6, minmax(0, 1fr)) } .board div { grid-column: span 2 } .board div:nth-child(n+4) { grid-column: span 3 } }
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); overflow-x: auto }
+.tabs button { border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; padding: 8px 12px;
+  font: 600 14px var(--body); color: var(--muted); white-space: nowrap }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent) }
+.tab { display: grid; gap: 22px; min-width: 0 }
+section { display: grid; gap: 8px; min-width: 0 }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; min-width: 0 }
+.pad { padding: 12px 14px }
+.chip { font-size: 10px; text-transform: uppercase; letter-spacing: .07em; background: var(--chip); color: var(--muted); padding: 1px 7px; border-radius: 99px; white-space: nowrap }
+.chip.stale, .chip.bad { background: transparent; border: 1px solid var(--bad); color: var(--bad) }
+.chip.good { color: var(--good) }
+/* decision rows */
+.decs { display: grid; gap: 6px }
+.dec { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; min-width: 0 }
+.dec > .head { width: 100%; display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 4px 10px; align-items: center;
+  text-align: left; border: 0; background: none; padding: 10px 12px; font: inherit; color: inherit; cursor: pointer; border-radius: 6px }
+.dec > .head:hover { background: var(--bg) }
+.dec .kind { font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted) }
+.dec .title { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.dec .hl { font-family: var(--mono); font-size: 13px; white-space: nowrap }
+.dec .sub { grid-column: 2 / 4; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted) }
+.dec .mark { font-weight: 700 } .mark.agree { color: var(--good) } .mark.disagree { color: var(--bad) }
+@media (max-width: 560px) { .dec > .head { grid-template-columns: minmax(0, 1fr) auto } .dec .kind { grid-column: 1 / 3 } .dec .sub { grid-column: 1 / 3 } }
+.dec .body { border-top: 1px solid var(--line); padding: 12px; display: grid; gap: 12px; min-width: 0 }
+.why { color: var(--muted); font-size: 13px; overflow-wrap: anywhere }
+.sides { display: grid; grid-template-columns: 1fr 1fr; gap: 10px }
+@media (max-width: 560px) { .sides { grid-template-columns: 1fr } }
+.side { border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; display: grid; gap: 4px; align-content: start }
+.side .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted) }
+.asset { display: flex; justify-content: space-between; gap: 8px }
+.asset .pos { font-size: 11px; color: var(--muted); margin-left: 4px }
+.kv { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 13px }
+.kv b { font-family: var(--mono); font-weight: 500 }
 .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
 button { font: 600 13px var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--ink);
-  padding: 7px 12px; border-radius: 4px; cursor: pointer }
+  padding: 6px 11px; border-radius: 4px; cursor: pointer }
 button:hover { border-color: var(--accent) }
-button:focus-visible, textarea:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+button:focus-visible, textarea:focus-visible, input:focus-visible, select:focus-visible, .head:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
 button.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
 button.primary { background: var(--ink); color: var(--bg); border-color: var(--ink) }
-textarea, input[type=text], select { width: 100%; font: 14px var(--body); color: var(--ink); background: var(--bg);
-  border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px }
-textarea { min-height: 64px; resize: vertical }
-.saved { font-size: 12px; color: var(--good) }
-.err { font-size: 12px; color: var(--bad) }
+button.discuss { border-color: var(--accent); color: var(--accent) }
+textarea, input[type=text], select { width: 100%; font: 13px var(--body); color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 4px; padding: 7px 9px }
+textarea { min-height: 52px; resize: vertical }
+.saved { font-size: 12px; color: var(--good) } .err { font-size: 12px; color: var(--bad) }
+/* tables */
+.tw { overflow-x: auto; min-width: 0 }
 table { border-collapse: collapse; width: 100%; font-size: 13px }
-th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap }
-th { font-weight: 600; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em }
-td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums }
-.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px }
-.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 6px; padding: 16px; color: var(--muted) }
-.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: var(--good) }
-.dot.stale { background: var(--bad) }
-.mine { color: var(--accent); font-weight: 600 }
-.links { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; font-size: 13px }
-.links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent }
-.links a:hover { border-bottom-color: var(--accent) }
-details summary { cursor: pointer; color: var(--muted); font-size: 13px }
-details[open] .links { margin-top: 6px }
-.drop { border: 2px dashed var(--line); border-radius: 6px; padding: 18px 14px; display: grid; gap: 4px; justify-items: center;
-  text-align: center; cursor: pointer; background: var(--bg) }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--line); white-space: nowrap }
+th { font-weight: 600; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .06em }
+td.n, th.n { text-align: right }
+td.wrap { white-space: normal; min-width: 180px }
+tr.me td { font-weight: 600 } tr.me td:first-child { color: var(--accent) }
+tr:last-child td { border-bottom: 0 }
+.badge { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 0 5px; border-radius: 3px; border: 1px solid var(--accent); color: var(--accent); margin-left: 4px }
+.badge.plan { border-style: dashed; border-color: var(--muted); color: var(--muted) }
+.wbar { display: flex; align-items: center; gap: 6px }
+.wbar span.b { display: inline-block; height: 8px; border-radius: 0 4px 4px 0; background: var(--bar) }
+.pos-up { color: var(--good) } .pos-down { color: var(--bad) }
+/* chart */
+.chart { position: relative }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible }
+.chart .tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); border-radius: 4px;
+  padding: 4px 8px; font-size: 12px; white-space: nowrap; box-shadow: 0 2px 6px rgba(0,0,0,.12) }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted) }
+.legend i { display: inline-block; width: 14px; height: 2px; vertical-align: middle; margin-right: 5px }
+/* send */
+.drop { border: 2px dashed var(--line); border-radius: 6px; padding: 12px; display: grid; gap: 2px; justify-items: center; text-align: center; cursor: pointer; background: var(--bg) }
 .drop:hover, .drop.over, .drop:focus-visible { border-color: var(--accent); outline: none }
 .thumbs { display: flex; flex-wrap: wrap; gap: 8px }
-.thumbs figure { margin: 0; position: relative; width: 96px; display: grid; gap: 2px }
-.thumbs img { width: 96px; height: 72px; object-fit: cover; border-radius: 4px; border: 1px solid var(--line) }
-.thumbs .file { width: 96px; height: 72px; display: grid; place-items: center; border-radius: 4px; border: 1px solid var(--line); font-size: 11px; color: var(--muted) }
-.thumbs figcaption { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.thumbs figure { margin: 0; position: relative; width: 84px; display: grid; gap: 2px }
+.thumbs img, .thumbs .file { width: 84px; height: 62px; object-fit: cover; border-radius: 4px; border: 1px solid var(--line) }
+.thumbs .file { display: grid; place-items: center; font-size: 11px; color: var(--muted) }
+.thumbs figcaption { font-size: 10px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .thumbs button { position: absolute; top: 2px; right: 2px; padding: 0 6px; font-size: 12px; line-height: 18px }
-.sent { display: grid; gap: 4px; font-size: 13px; margin-top: 4px }
+.sent { display: grid; gap: 3px; font-size: 12px }
 .sent div { display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline }
-.chip.done { color: var(--good) }
-.chip.stale { background: transparent; border: 1px solid var(--bad); color: var(--bad) }
+/* chat */
 .chat { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; min-width: 0 }
-.msgs { display: grid; gap: 8px; max-height: 420px; overflow-y: auto }
-.msg { display: grid; gap: 2px; padding: 8px 10px; border-radius: 6px; background: var(--bg); overflow-wrap: anywhere; white-space: pre-wrap }
-.msg.you { background: var(--chip) }
-.msg.sync { border-left: 3px solid var(--accent) }
-.msg .who { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); white-space: normal }
-button.discuss { border-color: var(--accent); color: var(--accent) }
-@media (max-width: 660px) { .board div:last-child:nth-child(odd) { grid-column: 1 / -1 } }
+.msgs { display: grid; gap: 6px; max-height: 420px; overflow-y: auto }
+.msg { display: grid; gap: 2px; padding: 7px 9px; border-radius: 6px; background: var(--bg); overflow-wrap: anywhere; white-space: pre-wrap }
+.msg.you { background: var(--chip) } .msg.sync { border-left: 3px solid var(--accent) }
+.msg .who { font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); white-space: normal }
+.empty { color: var(--muted); font-size: 13px; padding: 10px 12px; border: 1px dashed var(--line); border-radius: 6px; background: var(--surface) }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important } }
 </style>
 
 <div class="wrap">
   <header>
-    <h1>Ja'Jah Pachulia front office</h1>
-    <div class="meta" id="stamp">Waiting for the morning brief. It appears here after each daily run.</div>
-    <nav class="links" aria-label="Related pages">
-      <a href="https://claude.ai/code/artifact/5a07d474-c40b-484b-84d3-5508fa52c135" target="_blank" rel="noopener">System design</a>
-      <a href="https://claude.ai/artifact/2XxPQJZ1QGq5iA8Fx7Rjj5" target="_blank" rel="noopener">Decision ledger</a>
-      <a href="https://claude.ai/artifact/4etAXb8gAUkMGcNyfoh73s" target="_blank" rel="noopener">Decision grades</a>
-      <a href="https://claude.ai/artifact/EPXsgfqoJrzxUg98ziQ2i5" target="_blank" rel="noopener">Owner reads</a>
-      <a href="https://github.com/jdant19/dynasty-front-office" target="_blank" rel="noopener">Repo</a>
-      <a href="https://github.com/jdant19/dynasty-front-office/actions" target="_blank" rel="noopener">Engine runs</a>
-      <details>
-        <summary>Earlier work</summary>
-        <div class="links">
-          <a href="https://claude.ai/artifact/2s4nda2n6g6MxMw7AGiyt7" target="_blank" rel="noopener">Draft Console</a>
-          <a href="https://claude.ai/artifact/BCthZhVZ2rgsKCZHGGaGnZ" target="_blank" rel="noopener">UFA Auction Sheet</a>
-          <a href="https://claude.ai/artifact/ECntfG7sohubPnvdzmUYvy" target="_blank" rel="noopener">Walker or Lamb</a>
-          <a href="https://claude.ai/artifact/9zNujk2oERVPrZVQw41T3x" target="_blank" rel="noopener">The Josh Allen Window</a>
-          <a href="https://claude.ai/artifact/7qTNbWPVwoRchNzpjVitAN" target="_blank" rel="noopener">The Route Premium</a>
-          <a href="https://claude.ai/artifact/4NDz5TU2dZztYKhsv2gV4L" target="_blank" rel="noopener">Revision Plan</a>
-          <a href="https://claude.ai/artifact/FmNfeWeM2HprGJGcqY4m8T" target="_blank" rel="noopener">System Teardown</a>
-          <a href="https://claude.ai/artifact/C7ooSwZ9mu83mZLoKCiFNc" target="_blank" rel="noopener">System Design v0.1</a>
-        </div>
-      </details>
-    </nav>
+    <div>
+      <h1>Ja'Jah Pachulia front office</h1>
+      <div class="meta" id="stamp">Waiting for the brief. It appears after each sync.</div>
+    </div>
+    <details>
+      <summary>Other pages</summary>
+      <nav class="links" aria-label="Related pages" style="margin-top:4px">
+        <a href="https://claude.ai/code/artifact/5a07d474-c40b-484b-84d3-5508fa52c135" target="_blank" rel="noopener">System design</a>
+        <a href="https://claude.ai/artifact/2XxPQJZ1QGq5iA8Fx7Rjj5" target="_blank" rel="noopener">Decision ledger</a>
+        <a href="https://claude.ai/artifact/4etAXb8gAUkMGcNyfoh73s" target="_blank" rel="noopener">Decision grades</a>
+        <a href="https://claude.ai/artifact/EPXsgfqoJrzxUg98ziQ2i5" target="_blank" rel="noopener">Owner reads</a>
+        <a href="https://github.com/jdant19/dynasty-front-office" target="_blank" rel="noopener">Repo</a>
+        <a href="https://github.com/jdant19/dynasty-front-office/actions" target="_blank" rel="noopener">Engine runs</a>
+        <a href="https://claude.ai/artifact/2s4nda2n6g6MxMw7AGiyt7" target="_blank" rel="noopener">Draft Console</a>
+        <a href="https://claude.ai/artifact/BCthZhVZ2rgsKCZHGGaGnZ" target="_blank" rel="noopener">UFA Auction Sheet</a>
+        <a href="https://claude.ai/artifact/ECntfG7sohubPnvdzmUYvy" target="_blank" rel="noopener">Walker or Lamb</a>
+        <a href="https://claude.ai/artifact/9zNujk2oERVPrZVQw41T3x" target="_blank" rel="noopener">Josh Allen Window</a>
+        <a href="https://claude.ai/artifact/7qTNbWPVwoRchNzpjVitAN" target="_blank" rel="noopener">Route Premium</a>
+        <a href="https://claude.ai/artifact/4NDz5TU2dZztYKhsv2gV4L" target="_blank" rel="noopener">Revision Plan</a>
+        <a href="https://claude.ai/artifact/FmNfeWeM2HprGJGcqY4m8T" target="_blank" rel="noopener">System Teardown</a>
+        <a href="https://claude.ai/artifact/C7ooSwZ9mu83mZLoKCiFNc" target="_blank" rel="noopener">System Design v0.1</a>
+      </nav>
+    </details>
   </header>
 
   <div class="board" id="board" aria-label="Season odds">
+    <div><span class="k">Record</span><span class="v">–</span></div>
     <div><span class="k">1st place</span><span class="v">–</span></div>
-    <div><span class="k">Top 4</span><span class="v">–</span></div>
     <div><span class="k">Title</span><span class="v">–</span></div>
-    <div><span class="k">Expected payout</span><span class="v">–</span></div>
+    <div><span class="k">Exp. payout</span><span class="v">–</span></div>
     <div><span class="k">Stance</span><span class="v">–</span></div>
   </div>
 
-  <section>
-    <h2>Decisions due</h2>
-    <div id="decisions" class="empty">Open recommendations appear here with their deadlines. Agree or disagree with each, and say why; your reasons go into the decision journal.</div>
-  </section>
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button role="tab" data-tab="today" aria-selected="true">Today</button>
+    <button role="tab" data-tab="season" aria-selected="false">This season</button>
+    <button role="tab" data-tab="future" aria-selected="false">Future</button>
+    <button role="tab" data-tab="data" aria-selected="false">Data</button>
+  </nav>
 
-  <section id="adhoc-sec" hidden>
-    <h2>Discussions</h2>
-    <div class="meta">Things you raised outside the cards, from a Claude session on the repo. Newest first.</div>
-    <div id="adhoc"></div>
-  </section>
-
-  <section>
-    <h2>Questions for you</h2>
-    <div id="questions" class="empty">Nothing is waiting on you.</div>
-  </section>
-
-  <section>
-    <h2>Send something</h2>
-    <div class="dec" id="sendbox">
-      <div id="drop" class="drop" tabindex="0" role="button" aria-label="Add screenshots">
-        <strong>Paste, drop or tap to add screenshots</strong>
-        <span class="meta">Cmd+V anywhere on this page works too. Several at once is fine.</span>
-        <input id="file" type="file" accept="image/*,application/pdf,.csv,.txt" multiple hidden>
+  <div class="tab" id="tab-today" role="tabpanel">
+    <section>
+      <h2>Decisions</h2>
+      <div id="decisions" class="empty">Open recommendations appear here, one line each. Open one for the detail, agree or disagree, or discuss it.</div>
+    </section>
+    <section>
+      <h2>Questions for you</h2>
+      <div id="questions" class="empty">Nothing is waiting on you.</div>
+    </section>
+    <section id="adhoc-sec" hidden>
+      <h2>Discussions</h2>
+      <div id="adhoc" class="decs"></div>
+    </section>
+    <section>
+      <h2>Send something</h2>
+      <div class="card pad" style="display:grid;gap:8px" id="sendbox">
+        <div id="drop" class="drop" tabindex="0" role="button" aria-label="Add screenshots">
+          <strong>Paste, drop or tap to add screenshots</strong>
+          <span class="meta">Cmd+V anywhere on this page works too. Several at once is fine.</span>
+          <input id="file" type="file" accept="image/*,application/pdf,.csv,.txt" multiple hidden>
+        </div>
+        <div id="thumbs" class="thumbs"></div>
+        <div class="row">
+          <select id="kind" style="width:auto" aria-label="Type">
+            <option value="note">Note or player view</option>
+            <option value="correction">Correction</option>
+            <option value="question">Question for the system</option>
+            <option value="screenshot">Scoreboard or lineup screenshot</option>
+            <option value="offer">Trade offer received</option>
+          </select>
+        </div>
+        <textarea id="note" placeholder="e.g. Week 11 final. Or: Matt told me he is tagging Taylor."></textarea>
+        <div class="row"><button class="primary" id="send">Send</button><span id="sendmsg" class="saved" role="status"></span></div>
+        <div class="meta">Picked up at the next sync (about 6:40am and 3:40pm Central).</div>
       </div>
-      <div id="thumbs" class="thumbs"></div>
-      <div class="row">
-        <label for="kind" class="meta">Type</label>
-        <select id="kind" style="width:auto">
-          <option value="note">Note or player view</option>
-          <option value="correction">Correction</option>
-          <option value="question">Question for the system</option>
-          <option value="screenshot">Scoreboard or lineup screenshot</option>
-          <option value="offer">Trade offer received</option>
-        </select>
-      </div>
-      <textarea id="note" placeholder="e.g. Week 11 final. Or: Matt told me he is tagging Taylor."></textarea>
-      <div class="row">
-        <button class="primary" id="send">Send</button>
-        <span id="sendmsg" class="saved" role="status"></span>
-      </div>
-      <div class="meta">Picked up at the next sync (about 6:40am and 3:40pm Central): saved to the journal, and scoreboards and lineups are entered.</div>
-    </div>
-    <div id="sentlist"></div>
-  </section>
+      <div id="sentlist"></div>
+    </section>
+  </div>
 
-  <section>
-    <h2>League odds</h2>
-    <div class="scroll"><table id="league"><thead><tr><th>Team</th><th>Posture</th><th class="n">1st</th><th class="n">Top 4</th><th class="n">Title</th><th class="n">Exp. payout</th></tr></thead><tbody><tr><td colspan="6" class="meta">Appears with the brief.</td></tr></tbody></table></div>
-  </section>
+  <div class="tab" id="tab-season" role="tabpanel" hidden>
+    <section>
+      <h2>The rest of the regular season</h2>
+      <div id="path" class="empty">Appears with the brief.</div>
+    </section>
+    <section>
+      <h2>Your odds, week by week</h2>
+      <div id="trend" class="empty">Appears with the brief.</div>
+    </section>
+    <section>
+      <h2>League standings and outlook</h2>
+      <div id="standings" class="empty">Appears with the brief.</div>
+    </section>
+  </div>
 
-  <section>
-    <h2>Data health</h2>
-    <div class="scroll"><table id="health"><thead><tr><th>Source</th><th>As of</th><th class="n">Age</th><th>Limit</th><th>Note</th></tr></thead><tbody><tr><td colspan="5" class="meta">Appears with the brief.</td></tr></tbody></table></div>
-  </section>
+  <div class="tab" id="tab-future" role="tabpanel" hidden>
+    <section>
+      <h2>Cap and strength by year</h2>
+      <div id="years" class="empty">Appears with the brief.</div>
+    </section>
+    <section>
+      <h2>2027 offseason plan</h2>
+      <div id="plan" class="empty">Appears with the brief.</div>
+    </section>
+    <section>
+      <h2>Contracts</h2>
+      <div id="contracts" class="empty">Appears with the brief.</div>
+    </section>
+    <section>
+      <h2>Draft picks</h2>
+      <div id="picks" class="empty">Appears with the brief.</div>
+    </section>
+  </div>
+
+  <div class="tab" id="tab-data" role="tabpanel" hidden>
+    <section>
+      <h2>Data health</h2>
+      <div class="card tw"><table id="health"><thead><tr><th>Source</th><th>As of</th><th class="n">Age</th><th>Limit</th><th>Note</th></tr></thead><tbody><tr><td colspan="5" class="meta">Appears with the brief.</td></tr></tbody></table></div>
+    </section>
+  </div>
 </div>
 
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
 const pct = x => x == null ? "–" : Math.round(x * 100) + "%";
-const signed = (x, f) => x == null ? "" : (x > 0 ? "+" : "") + f(x);
-let db = null, assets = null, responses = {}, answers = {};
+const usd = x => x == null ? "–" : (x < 0 ? "−$" : "$") + Math.abs(Math.round(x));
+const sgn = x => x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "±") + "$" + Math.abs(Math.round(x));
+const safe = id => String(id).replace(/[^A-Za-z0-9_-]/g, "_");
+let db = null, assets = null, sample = null, responses = {}, answers = {};
+const openRows = new Set(), openChats = new Set(), threads = {}, pending = {}, ctls = {};
+const B = () => window._brief || {};
 
+// ---------------------------------------------------------------- tabs (#today, #season, #future, #data)
+const TABS = ["today", "season", "future", "data"];
+function showTab(name) {
+  if (!TABS.includes(name)) name = "today";
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
+  TABS.forEach(t => { $("#tab-" + t).hidden = t !== name; });
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.tab; showTab(b.dataset.tab); }));
+window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
+showTab(location.hash.slice(1));
+
+// ---------------------------------------------------------------- brief
 function renderBrief(b) {
   if (!b) return;
-  $("#stamp").textContent = `Week ${b.week} brief, built ${new Date(b.made_at).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"})}.`;
-  const p = b.posture || {}, m = p.moved || {};
+  $("#stamp").textContent = `Week ${b.week} · updated ${new Date(b.made_at).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"})}`;
+  const p = b.posture || {}, s = b.season || {}, rec = s.record;
   const cells = [
-    ["1st place", pct(p.p_first), m.p_first != null ? signed(m.p_first, pct) : ""],
-    ["Top 4", pct(p.p_top4), ""],
-    ["Title", pct(p.p_title), m.p_title != null ? signed(m.p_title, pct) : ""],
-    ["Expected payout", "$" + (p.exp_payout ?? "–"), m.payout != null ? signed(m.payout, x => "$" + Math.abs(x)) : ""],
-    ["Stance", (p.stance || "–").toUpperCase(), m.since ? "since " + m.since : ""]];
-  $("#board").innerHTML = cells.map(([k, v, d]) =>
-    `<div><span class="k">${k}</span><span class="v">${esc(v)}</span>${d ? `<span class="d ${d.startsWith("+") ? "up" : d.startsWith("-") ? "down" : ""}">${esc(d)}</span>` : ""}</div>`).join("");
+    ["Record", rec ? `${rec.w}-${rec.l}${rec.t ? "-" + rec.t : ""}` : "–", s.projected ? `proj ${s.projected.wins} wins` : ""],
+    ["1st place", pct(p.p_first), p.moved && p.moved.p_first != null ? `${p.moved.p_first >= 0 ? "+" : "−"}${Math.abs(Math.round(p.moved.p_first * 100))} pts` : ""],
+    ["Title", pct(p.p_title), p.moved && p.moved.p_title != null ? `${p.moved.p_title >= 0 ? "+" : "−"}${Math.abs(Math.round(p.moved.p_title * 100))} pts` : ""],
+    ["Exp. payout", usd(p.exp_payout), "this season"],
+    ["Stance", (p.stance || "–").toUpperCase(), "trade deadline"]];
+  $("#board").innerHTML = cells.map(([k, v, d]) => `<div><span class="k">${k}</span><span class="v">${esc(v)}</span><span class="d">${esc(d)}</span></div>`).join("");
   renderDecisions(b.decisions || []);
   renderQuestions(b.questions || []);
-  const lg = (p.league || []);
-  if (lg.length) $("#league tbody").innerHTML = lg.map(r => `<tr><td class="${r.owner === "Jordan" ? "mine" : ""}">${esc(r.owner)}</td><td>${esc(r.posture || "")}</td><td class="n">${pct(r.p_first)}</td><td class="n">${pct(r.p_top4)}</td><td class="n">${pct(r.p_title)}</td><td class="n">$${r.exp_payout}</td></tr>`).join("");
+  renderSeason(b.season);
+  renderFuture(b.future);
   const h = b.health || [];
-  if (h.length) $("#health tbody").innerHTML = h.map(r => `<tr><td><span class="dot ${r.stale ? "stale" : ""}"></span>${esc(r.source)}</td><td class="num">${esc(String(r.as_of).slice(0, 16).replace("T", " "))}</td><td class="n">${r.age_hours == null ? "" : r.age_hours + "h"}</td><td>${esc(r.limit)}</td><td>${esc(r.note || (r.stale ? "stale: down-weighted" : ""))}</td></tr>`).join("");
+  if (h.length) $("#health tbody").innerHTML = h.map(r => `<tr><td>${r.stale ? `<span class="chip bad">stale</span> ` : ""}${esc(r.source)}</td><td class="num">${esc(String(r.as_of).slice(0, 16).replace("T", " "))}</td><td class="n">${r.age_hours == null ? "" : r.age_hours + "h"}</td><td>${esc(r.limit)}</td><td>${esc(r.note || "")}</td></tr>`).join("");
 }
 
+// ---------------------------------------------------------------- decisions: one line each, open for detail
 function renderDecisions(list) {
   const box = $("#decisions");
   if (!list.length) { box.className = "empty"; box.textContent = "No open decisions."; return; }
-  box.className = ""; box.style.display = "grid"; box.style.gap = "12px";
+  box.className = "decs";
   box.innerHTML = list.map(d => {
-    const r = responses[d.id] || {};
+    const r = responses[d.id] || {}, open = openRows.has(d.id), t = threads[d.id];
+    const mark = r.verdict === "agree" ? `<span class="mark agree" title="You agreed">✓ agreed</span>` : r.verdict === "disagree" ? `<span class="mark disagree" title="You disagreed">✗ disagreed</span>` : "";
     return `<article class="dec" data-id="${esc(d.id)}">
-      <div class="top"><h3>${esc(d.title)}</h3><div class="row"><span class="chip">${esc(d.kind)}</span>${d.stale ? `<span class="chip stale">stale</span>` : ""}<span class="chip due">${esc(d.deadline)}</span></div></div>
-      <div class="rec">${esc(d.recommendation)}</div>
-      ${d.value ? `<div class="val">${esc(d.value)}</div>` : ""}
-      <div class="why">${esc(d.reason)} <br>What would change it: ${esc(d.change)}</div>
-      <div class="meta">Confidence: ${esc(d.confidence)}</div>
-      <div class="row">
-        <button data-v="agree" class="${r.verdict === "agree" ? "on" : ""}">Agree</button>
-        <button data-v="disagree" class="${r.verdict === "disagree" ? "on" : ""}">Disagree</button>
-        <span class="saved" role="status"></span>
+      <button class="head" aria-expanded="${open}">
+        <span class="kind">${esc(d.kind)}</span>
+        <span class="title">${esc(d.title)}</span>
+        <span class="hl">${esc(d.headline || "")}</span>
+        <span class="sub">${d.stale ? `<span class="chip stale">stale</span>` : ""}<span>due ${esc(d.deadline)}</span><span>confidence ${esc(d.confidence)}</span>${mark}${t && t.messages && t.messages.length ? `<span>💬 ${t.messages.length}${t.status === "requested" ? " · waiting for sync" : t.status === "answered" ? " · sync answered" : ""}</span>` : ""}</span>
+      </button>
+      <div class="body" ${open ? "" : "hidden"}>
+        ${detail(d)}
+        <div class="why">${esc(d.reason)}<br><b>What would change it:</b> ${esc(d.change)}</div>
+        <div class="row">
+          <button data-v="agree" class="${r.verdict === "agree" ? "on" : ""}">Agree</button>
+          <button data-v="disagree" class="${r.verdict === "disagree" ? "on" : ""}">Disagree</button>
+          <button class="discuss" aria-expanded="${openChats.has(d.id)}">${t && t.messages && t.messages.length ? `Discussion (${t.messages.length})` : "Discuss"}</button>
+          <span class="saved" role="status"></span>
+        </div>
+        <textarea class="whybox" placeholder="Why? (optional for agree, helpful for disagree)">${esc(r.reason || "")}</textarea>
+        <div class="chat" id="chat-${safe(d.id)}" ${openChats.has(d.id) ? "" : "hidden"}></div>
       </div>
-      <textarea class="whybox" id="why-${esc(d.id)}" placeholder="Why? (optional for agree, helpful for disagree)">${esc(r.reason || "")}</textarea>
-      <div class="row"><button class="discuss" aria-expanded="${openChats.has(d.id)}">${chatLabel(d.id)}</button>${threadChip(d.id)}</div>
-      <div class="chat" id="chat-${safe(d.id)}" ${openChats.has(d.id) ? "" : "hidden"}></div>
     </article>`; }).join("");
   box.querySelectorAll("article").forEach(a => {
     const id = a.dataset.id, d = list.find(x => x.id === id);
+    a.querySelector(".head").addEventListener("click", () => {
+      const body = a.querySelector(".body"), now = body.hidden;
+      body.hidden = !now; a.querySelector(".head").setAttribute("aria-expanded", now);
+      now ? openRows.add(id) : openRows.delete(id);
+    });
     a.querySelectorAll("button[data-v]").forEach(btn => btn.addEventListener("click", () => saveResponse(a, d, btn.dataset.v)));
     a.querySelector("textarea.whybox").addEventListener("change", () => { const v = (responses[id] || {}).verdict; if (v) saveResponse(a, d, v); });
     a.querySelector("button.discuss").addEventListener("click", e => {
@@ -242,32 +339,181 @@ function renderDecisions(list) {
       if (openChats.has(id)) { openChats.delete(id); el.hidden = true; } else { openChats.add(id); el.hidden = false; renderChat(d); el.querySelector("textarea")?.focus(); }
       e.target.setAttribute("aria-expanded", openChats.has(id));
     });
+    a.querySelectorAll(".copy").forEach(c => c.addEventListener("click", () => copyText(c, c.dataset.text)));
     if (openChats.has(id)) renderChat(d);
   });
 }
 
-// ---- Discuss: a chat on each decision (instant, from what the brief carries), and a hand-off to the
-// next sync, which re-checks with the full data and posts its answer here
-const safe = id => String(id).replace(/[^A-Za-z0-9_-]/g, "_");
-const openChats = new Set(), threads = {}, pending = {}, ctls = {};
-let sample = null;
-function renderAdhoc() {
-  const list = Object.values(threads).filter(t => String(t.id).startsWith("adhoc-"))
-    .sort((a, b) => String(b.id).localeCompare(String(a.id))).slice(0, 12);
-  $("#adhoc-sec").hidden = !list.length;
-  const who = { you: "You", claude: "Claude", sync: "Answer" };
-  $("#adhoc").innerHTML = list.map((t, i) => `<details class="dec" ${i === 0 ? "open" : ""}>
-      <summary><strong>${esc(t.title || t.id)}</strong> <span class="meta num">${esc(String(t.id).slice(6, 14))}</span></summary>
-      <div class="msgs">${(t.messages || []).map(m => `<div class="msg ${esc(m.role)}"><span class="who">${who[m.role] || esc(m.role)}</span><div>${esc(m.text)}</div></div>`).join("")}</div>
-    </details>`).join("");
+function detail(d) {
+  const x = d.detail || {};
+  if (x.type === "trade") return tradeDetail(d, x);
+  if (x.type === "waivers") return `<div class="tw"><table><thead><tr><th>Add</th><th>Drop</th><th class="n">Lineup pts</th><th class="n">Worth</th></tr></thead><tbody>
+      ${(x.rows || []).map((r, i) => `<tr${i === 0 ? ' class="me"' : ""}><td>${esc(r.add)} <span class="meta">${esc(r.add_pos)}</span></td><td>${esc(r.drop)} <span class="meta">${esc(r.drop_pos)}</span></td><td class="n">+${r.pts}</td><td class="n">$${r.net.toFixed(2)}</td></tr>`).join("")}
+      </tbody></table></div><div class="meta">Bid: ${esc(x.bid)}. Kickers and defenses count for this week only (streamed after).</div>`;
+  if (x.type === "lineup") {
+    const row = r => `<tr><td>${esc(r.slot)}</td><td>${esc(r.player)}${r.inj ? ` <span class="chip bad">${esc(r.inj)}</span>` : ""}</td><td>${esc(r.opp ? "vs " + r.opp : "")}</td><td class="n">${r.proj}</td><td class="n meta">${r.low}–${r.high}</td></tr>`;
+    return `<div class="tw"><table><thead><tr><th>Slot</th><th>Player</th><th>Opp</th><th class="n">Proj</th><th class="n">80% range</th></tr></thead><tbody>${(x.starters || []).map(row).join("")}</tbody></table></div>
+      ${(x.bench || []).length ? `<details><summary>Best on the bench</summary><div class="tw"><table><tbody>${x.bench.map(r => row({ ...r, slot: "BN" })).join("")}</tbody></table></div></details>` : ""}`;
+  }
+  if (x.type === "playoffs") return `<div class="tw"><table><thead><tr><th>Player</th><th>NFL</th><th>Now with</th><th class="n">NFL playoff games</th><th class="n">Your title</th><th class="n">Payout</th></tr></thead><tbody>
+      ${(x.rows || []).map(r => `<tr><td>${esc(r.player)} <span class="meta">${esc(r.pos)}</span></td><td>${esc(r.nfl)}</td><td>${esc(r.owner)}${r.rival ? ' <span class="chip">rival · trade only</span>' : ""}</td><td class="n">${r.games}</td><td class="n">+${Math.round(r.title * 100)} pts</td><td class="n">${sgn(r.payout)}</td></tr>`).join("")}
+      </tbody></table></div>`;
+  if (x.type === "offseason") return `<div class="row"><span class="meta">The plan, year by year, and the alternatives it was chosen from:</span><button onclick="location.hash='future'">Open the Future view</button></div>`;
+  return d.value ? `<div class="mono" style="font-size:13px">${esc(d.value)}</div>` : "";
 }
-function chatLabel(id) { const t = threads[id]; return t && t.messages?.length ? `Discussion (${t.messages.length})` : "Discuss"; }
-function threadChip(id) {
-  const t = threads[id] || {};
-  if (t.status === "requested") return `<span class="chip">waiting for sync</span>`;
-  if (t.status === "answered") return `<span class="chip done">sync answered</span>`;
-  return "";
+
+function tradeDetail(d, x) {
+  const side = (label, items) => `<div class="side"><span class="lbl">${label}</span>${(items || []).map(a => a.kind === "pick"
+      ? `<div class="asset"><span>${esc(a.name)} <span class="pos">pick</span></span></div>`
+      : `<div class="asset"><span>${esc(a.name)}<span class="pos">${esc(a.pos || "")}</span></span><span class="num meta">${a.salary != null ? "$" + a.salary : ""}</span></div>`).join("")}</div>`;
+  const yrs = x.years || [];
+  return `<div class="sides">${side("You give", x.give)}${side(`You get from ${esc(x.partner)}`, x.get)}</div>
+    <div class="tw"><table><thead><tr><th></th><th class="n">This season</th><th class="n">Later seasons</th><th class="n">Total</th></tr></thead><tbody>
+      <tr class="me"><td>You</td><td class="n">${sgn(x.you.now)}</td><td class="n">${sgn(x.you.later)}</td><td class="n">${sgn(x.you.total)}</td></tr>
+      <tr><td>${esc(x.partner)}</td><td class="n">${sgn(x.him.now)}</td><td class="n">${sgn(x.him.later)}</td><td class="n">${sgn(x.him.total)}</td></tr>
+    </tbody></table></div>
+    <div class="kv"><span>1st place <b>${esc(x.first[0])} → ${esc(x.first[1])}</b></span><span>Title <b>${esc(x.title[0])} → ${esc(x.title[1])}</b></span>${x.picks_given_points != null && x.picks_given_points !== 0 ? `<span>Picks given <b>${x.picks_given_points} pts</b></span>` : ""}</div>
+    ${yrs.length ? `<div class="tw"><table><thead><tr><th>Your season</th><th class="n">Cap room</th><th class="n">Strength</th></tr></thead><tbody>
+      ${yrs.map(y => `<tr><td>${y.season}</td><td class="n">${usd(y.room[0])} → ${usd(y.room[1])}</td><td class="n ${y.strength > 0 ? "pos-up" : y.strength < 0 ? "pos-down" : ""}">${y.strength > 0 ? "+" : ""}${y.strength}</td></tr>`).join("")}
+    </tbody></table></div>` : ""}
+    <div class="tw"><table><thead><tr><th>Version</th><th>Add to your side</th><th class="n">You</th><th class="n">${esc(x.partner)}</th></tr></thead><tbody>
+      ${(x.terms || []).map(t => `<tr><td>${esc(t.label)}</td><td>${esc(t.extra)}</td><td class="n">${t.you == null ? "" : sgn(t.you)}</td><td class="n">${t.him == null ? "" : sgn(t.him)}</td></tr>`).join("")}
+    </tbody></table></div>
+    <div class="meta">Salary rule: ${esc(x.salary_rule)}.${x.forced_drops ? ` Forced drops: ${esc(x.forced_drops)}.` : ""} ${esc(x.partner)} trades about ${x.trades_per_season} times a season.</div>
+    <div class="row"><span class="meta" style="flex:1;min-width:0">Draft (not sent): “${esc(x.message)}”</span><button class="copy" data-text="${esc(x.message)}">Copy</button></div>`;
 }
+
+async function copyText(btn, text) {
+  try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+  catch (e) { const r = document.createRange(); r.selectNodeContents(btn.previousElementSibling); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected"; }
+  setTimeout(() => { btn.textContent = "Copy"; }, 1500);
+}
+
+async function saveResponse(a, d, verdict) {
+  const msg = a.querySelector(".saved");
+  if (!db) { msg.className = "err"; msg.textContent = "Saving needs the claude.ai viewer."; return; }
+  const data = { id: d.id, verdict, reason: a.querySelector("textarea.whybox").value.trim(), recommendation: d.recommendation, at: new Date().toISOString() };
+  try {
+    await db.doc("responses/" + safe(d.id)).set(data);
+    responses[d.id] = data;
+    a.querySelectorAll("button[data-v]").forEach(b => b.classList.toggle("on", b.dataset.v === verdict));
+    msg.className = "saved"; msg.textContent = "Saved";
+  } catch (e) { msg.className = "err"; msg.textContent = "Not saved: " + (e.message || e.code); }
+}
+
+// ---------------------------------------------------------------- questions
+function renderQuestions(list) {
+  const box = $("#questions");
+  if (!list.length) { box.className = "empty"; box.textContent = "Nothing is waiting on you."; return; }
+  box.className = "decs";
+  box.innerHTML = list.map(q => {
+    const a = answers[q.id] || {};
+    return `<article class="dec pad" data-id="${esc(q.id)}" style="display:grid;gap:6px">
+      <div class="row" style="justify-content:space-between"><strong>${esc(q.question)}</strong><span class="row"><span class="chip">${esc(q.topic)}</span>${q.deadline ? `<span class="chip">by ${esc(q.deadline)}</span>` : ""}</span></div>
+      <div class="why">${esc(q.why_it_matters)}</div>
+      <textarea placeholder="Your answer">${esc(a.answer || "")}</textarea>
+      <div class="row"><button class="primary">Save answer</button><span class="saved" role="status"></span></div>
+    </article>`; }).join("");
+  box.querySelectorAll("article").forEach(a => a.querySelector("button").addEventListener("click", async () => {
+    const msg = a.querySelector(".saved"), id = a.dataset.id, text = a.querySelector("textarea").value.trim();
+    if (!text) { msg.className = "err"; msg.textContent = "Type an answer first."; return; }
+    if (!db) { msg.className = "err"; msg.textContent = "Saving needs the claude.ai viewer."; return; }
+    try { await db.doc("answers/" + id).set({ id, answer: text, at: new Date().toISOString() }); answers[id] = { answer: text };
+      msg.className = "saved"; msg.textContent = "Saved. The next sync records it."; }
+    catch (e) { msg.className = "err"; msg.textContent = "Not saved: " + (e.message || e.code); }
+  }));
+}
+
+// ---------------------------------------------------------------- this season
+function renderSeason(s) {
+  if (!s) return;
+  const pr = s.projected || {};
+  $("#path").className = "card";
+  $("#path").innerHTML = `<div class="pad kv" style="border-bottom:1px solid var(--line)"><span>Record <b>${s.record ? `${s.record.w}-${s.record.l}` : "–"}</b></span><span>Projected final <b>${pr.wins} wins</b></span><span>Weeks left <b>${(s.weeks_left || []).length}</b></span></div>
+    <div class="tw"><table><thead><tr><th>Week</th><th>Opponent</th><th>Your win chance</th><th class="n">Projected score</th></tr></thead><tbody>
+    ${(s.path || []).map(p => {
+      const st = (s.standings || []).find(x => x.owner === p.opp) || {};
+      return `<tr><td class="num">${p.week}</td><td>${esc(p.opp)} <span class="meta">${st.w != null ? `${st.w}-${st.l}` : ""}</span></td>
+        <td><span class="wbar"><span class="b" style="width:${Math.round(p.p_win * 90)}px"></span><span class="num">${pct(p.p_win)}</span></span></td>
+        <td class="n">${Math.round(p.me)}–${Math.round(p.them)}</td></tr>`; }).join("")}
+    </tbody></table></div><div class="pad meta">${esc(s.note || "")}</div>`;
+  renderTrend(s.trend);
+  const rows = s.standings || [];
+  $("#standings").className = "card tw";
+  $("#standings").innerHTML = `<table><thead><tr><th>Team</th><th class="n">W-L</th><th class="n">Points</th><th class="n">Proj W</th><th class="n">1st</th><th class="n">Top 4</th><th class="n">Title</th><th class="n">Exp. $</th><th>Deadline</th></tr></thead><tbody>
+    ${rows.map(r => `<tr class="${r.owner === "Jordan" ? "me" : ""}"><td>${esc(r.owner)} <span class="meta">${esc(r.team)}</span></td><td class="n">${r.w}-${r.l}${r.t ? "-" + r.t : ""}</td><td class="n">${Math.round(r.pf)}</td><td class="n">${r.wins}</td><td class="n">${pct(r.p_first)}</td><td class="n">${pct(r.p_top4)}</td><td class="n">${pct(r.p_title)}</td><td class="n">$${r.exp_payout}</td><td>${esc(r.posture || "")}</td></tr>`).join("")}
+    </tbody></table>`;
+}
+
+function renderTrend(t) {
+  const box = $("#trend");
+  const pts = (t && t.replay) || [];
+  if (pts.length < 2) { box.className = "empty"; box.textContent = "Not enough weeks yet."; return; }
+  box.className = "card pad";
+  const W = 640, H = 220, L = 40, R = 100, T = 12, Bm = 28;
+  const xs = pts.map(p => p.week), x0 = Math.min(...xs), x1 = Math.max(...xs);
+  const X = w => L + (w - x0) / Math.max(1, x1 - x0) * (W - L - R), Y = v => T + (1 - v) * (H - T - Bm);
+  const series = [["p_first", "1st place", "var(--s1)"], ["p_title", "Title", "var(--s2)"]];
+  const grid = [0, .25, .5, .75, 1].map(v => `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)" stroke-width="1"/><text x="${L - 6}" y="${Y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--mono)">${v * 100}%</text>`).join("");
+  const xl = xs.map(w => `<text x="${X(w)}" y="${H - 8}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--mono)">${w === 0 ? "pre" : w}</text>`).join("");
+  const lines = series.map(([k, name, c]) => {
+    const d = pts.map((p, i) => `${i ? "L" : "M"}${X(p.week).toFixed(1)},${Y(p[k]).toFixed(1)}`).join("");
+    const last = pts[pts.length - 1];
+    return `<path d="${d}" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${X(last.week)}" cy="${Y(last[k])}" r="4" fill="${c}" stroke="var(--surface)" stroke-width="2"/>
+      <text x="${X(last.week) + 8}" y="${Y(last[k]) + 4}" font-size="12" fill="var(--ink)">${name} ${pct(last[k])}</text>`; }).join("");
+  box.innerHTML = `<div class="legend"><span><i style="background:var(--s1)"></i>1st place</span><span><i style="background:var(--s2)"></i>Title</span></div>
+    <div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Your 1st-place and title odds after each week">
+      ${grid}${xl}<text x="${(L + W - R) / 2}" y="${H}" text-anchor="middle" font-size="10" fill="var(--muted)">after week</text>
+      ${lines}<line class="xh" y1="${T}" y2="${H - Bm}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3" visibility="hidden"/>
+      <rect class="hit" x="${L}" y="${T}" width="${W - L - R}" height="${H - T - Bm}" fill="transparent"/></svg><div class="tip" hidden></div></div>
+    <details><summary>Table and how this is made</summary><div class="meta" style="margin:6px 0">${esc(t.note || "")}</div>
+      <div class="tw"><table><thead><tr><th>After week</th><th class="n">1st</th><th class="n">Top 4</th><th class="n">Title</th></tr></thead><tbody>
+      ${pts.map(p => `<tr><td class="num">${p.week === 0 ? "preseason" : p.week}</td><td class="n">${pct(p.p_first)}</td><td class="n">${pct(p.p_top4)}</td><td class="n">${pct(p.p_title)}</td></tr>`).join("")}</tbody></table></div></details>`;
+  const svg = box.querySelector("svg"), tip = box.querySelector(".tip"), xh = box.querySelector(".xh");
+  const move = e => {
+    const r = svg.getBoundingClientRect(), sx = (e.clientX - r.left) / r.width * W;
+    const p = pts.reduce((a, b) => Math.abs(X(b.week) - sx) < Math.abs(X(a.week) - sx) ? b : a);
+    xh.setAttribute("x1", X(p.week)); xh.setAttribute("x2", X(p.week)); xh.setAttribute("visibility", "visible");
+    tip.hidden = false; tip.innerHTML = `<b>${p.week === 0 ? "Preseason" : "After week " + p.week}</b><br>1st place ${pct(p.p_first)} · Title ${pct(p.p_title)}`;
+    const left = X(p.week) / W * r.width; tip.style.left = Math.min(Math.max(0, left - 70), r.width - 160) + "px"; tip.style.top = "0px";
+  };
+  box.querySelector(".hit").addEventListener("pointermove", move);
+  box.querySelector(".hit").addEventListener("pointerleave", () => { tip.hidden = true; xh.setAttribute("visibility", "hidden"); });
+}
+
+// ---------------------------------------------------------------- future
+function renderFuture(f) {
+  if (!f) return;
+  const ys = f.years || [];
+  $("#years").className = "card";
+  $("#years").innerHTML = `<div class="tw"><table><thead><tr><th>Season</th><th class="n">Under contract</th><th class="n">Committed</th><th class="n">Cap room</th><th class="n">Strength</th><th class="n">League rank</th><th class="n">1st</th><th class="n">Top 4</th><th class="n">Exp. $</th></tr></thead><tbody>
+    ${ys.map(y => `<tr><td class="num">${y.season}</td><td class="n">${y.contracted}</td><td class="n">$${y.committed}</td><td class="n ${y.cap_room < 0 ? "pos-down" : ""}">${usd(y.cap_room)}</td><td class="n">${y.strength} <span class="meta">(median ${y.league_median})</span></td><td class="n">${y.rank} of 10</td><td class="n">${pct(y.p_first)}</td><td class="n">${pct(y.p_top4)}</td><td class="n">$${y.exp_payout}</td></tr>`).join("")}
+    </tbody></table></div><div class="pad meta">${ys.filter(y => y.note).map(y => `${y.season}: ${esc(y.note)}. `).join("")}${esc(f.note || "")}</div>`;
+  const o = f.offseason || {};
+  $("#plan").className = "card pad"; $("#plan").style.display = "grid"; $("#plan").style.gap = "10px";
+  $("#plan").innerHTML = `<div class="tw"><table><thead><tr><th>Offseason</th><th>Step</th><th class="n">Salary</th></tr></thead><tbody>
+      ${(o.steps || []).map(s => `<tr><td class="num">${s.offseason}</td><td class="wrap">${esc(s.action)} ${esc(s.player || "")}${s.text ? `<span class="meta"> ${esc(s.text)}</span>` : ""}</td><td class="n">${s.salary != null ? "$" + s.salary : ""}</td></tr>`).join("")}
+    </tbody></table></div>
+    ${(o.scenarios || []).length ? `<h3>Alternatives (built ${esc(String(o.made_at || "").slice(0, 10))})</h3><div class="tw"><table><thead><tr><th>Scenario</th><th>Gibbs RFA price</th><th class="n">2027 room</th><th class="n">2027 exp. $</th><th class="n">3-year exp. $</th></tr></thead><tbody>
+      ${o.scenarios.map((s, i) => `<tr class="${s.scenario === o.chosen ? "me" : ""}"><td class="wrap">${esc(s.scenario)}${i === 0 ? ' <span class="badge">best</span>' : ""}</td><td>${esc(s.gibbs)}${s.gibbs_to && s.gibbs_to !== "Jordan" ? ` <span class="meta">→ ${esc(s.gibbs_to)}</span>` : ""}</td><td class="n">${usd(s.room_2027)}</td><td class="n">$${s.payout_2027}</td><td class="n">$${s.payout_3yr}</td></tr>`).join("")}
+    </tbody></table></div>` : ""}`;
+  const cs = f.contracts || [];
+  const cell = (c, y) => { const v = c["s" + y], d = c["d" + y]; if (!v) return `<td class="n meta">–</td>`;
+    return `<td class="n">$${v}${d ? `<span class="badge ${d === "planned" ? "plan" : ""}">${d === "rfa" ? "RFA" : d}</span>` : ""}</td>`; };
+  $("#contracts").className = "card";
+  $("#contracts").innerHTML = `<div class="tw"><table><thead><tr><th>Player</th><th>Pos</th><th class="n">2026</th><th class="n">2027</th><th class="n">2028</th><th class="n">2029</th><th class="n">2027 pts</th></tr></thead><tbody>
+    ${cs.map(c => `<tr><td>${esc(c.player)}</td><td class="meta">${esc(c.pos)}</td><td class="n">$${c.s2026}</td>${cell(c, 2027)}${cell(c, 2028)}${cell(c, 2029)}<td class="n meta">${c.pts2027 ?? ""}</td></tr>`).join("")}
+    <tr><td><b>Total</b></td><td></td>${[2026, 2027, 2028, 2029].map(y => `<td class="n"><b>$${cs.reduce((a, c) => a + (c["s" + y] || 0), 0)}</b></td>`).join("")}<td></td></tr>
+    </tbody></table></div><div class="pad meta">tag / RFA: your planned designation (not signed). plan: the model's own plan. – no contract (free agent that offseason). Totals are salaries only; cap room above also counts dead money, traded cap and rookie picks.</div>`;
+  const pk = f.picks || [];
+  $("#picks").className = "card";
+  $("#picks").innerHTML = `<div class="tw"><table><thead><tr><th>Year</th><th>Round</th><th>From</th><th class="n">Expected slot</th><th>Tier</th><th class="n">Value</th></tr></thead><tbody>
+    ${pk.map(p => `<tr><td class="num">${p.year}</td><td>${p.round}</td><td>${esc(p.original === "Jordan" ? "own" : p.original)}</td><td class="n">${p.overall != null ? `#${Math.round(p.overall)}` : '<span class="meta">not known yet</span>'}</td><td>${p.tier ? "slots " + p.tier : ""}</td><td class="n">${p.points} pts</td></tr>`).join("")}
+    </tbody></table></div><div class="pad meta">${(f.own_picks_traded || []).length ? "Traded away: " + f.own_picks_traded.map(m => `${m.year} round ${m.round}`).join(", ") + ". " : ""}Value: expected lineup points over the rookie deal (slot tiers 1-3, 4-9, 10-30). 2027 slots from the 2026 finish odds; later years average over every slot.</div>`;
+}
+
+// ---------------------------------------------------------------- Discuss
 function renderChat(d) {
   const el = $("#chat-" + safe(d.id)); if (!el) return;
   const t = threads[d.id] || { messages: [] }, p = pending[d.id];
@@ -281,35 +527,37 @@ function renderChat(d) {
       <button class="tosync" ${t.status === "requested" ? "disabled" : ""}>${t.status === "requested" ? "Sent to the sync" : "Send to the sync for a full re-check"}</button>
       <span class="meta status" role="status"></span>
     </div>
-    <div class="meta">"Ask now" answers from the numbers on this page only. The sync (about 6:40am and 3:40pm) re-runs the models and is the one that can change the recommendation.</div>`;
+    <div class="meta">"Ask now" answers from the numbers on this page only. The sync re-runs the models and is the one that can change the recommendation.</div>`;
   el.querySelector(".ask")?.addEventListener("click", () => ask(d));
   el.querySelector(".stop")?.addEventListener("click", () => ctls[d.id]?.abort());
   el.querySelector(".tosync").addEventListener("click", () => toSync(d));
   const box = el.querySelector(".msgs"); box.scrollTop = box.scrollHeight;
 }
 function rules(d) {
-  const b = window._brief || {};
+  const b = B();
   const others = (b.decisions || []).filter(x => x.id !== d.id).map(x => `- ${x.title}: ${x.recommendation} (${x.value || ""})`).join("\n");
   return `You are the analyst for Jordan's 10-team salary-cap dynasty fantasy football league (his team: Ja'Jah Pachulia). He is discussing one recommendation from his daily brief. Rules you work under:
 - Never submit, bid, propose or send anything; recommendations only. A trade idea is not an offer until Jordan says he proposed it.
-- Use only the numbers below. Every number you cite says where it came from (this card, the odds table). If answering needs data that is not here (other players' projections, a re-simulation), say so plainly and suggest "Send to the sync for a full re-check".
-- When Jordan pushes back, re-check the card's numbers against his point and either hold the position with reasons or concede and say what was wrong. Do not just agree.
-- Values are expected payout in whole dollars: this season from the season simulator (regular season plus the league playoffs, where each playoff team keeps its own players then drafts in seed order); later seasons at $0.53 a lineup point. Kickers and defenses are streamed every week (principle P10), so holding one is worth only its edge over the best unrostered unit that week.
-- Plain, short answers (a few sentences or a short list). Money in whole dollars.
+- Use only the data below. Every number you cite says where it came from. If answering needs data that is not here (other players' projections, a re-simulation), say so plainly and suggest "Send to the sync for a full re-check".
+- When Jordan pushes back, re-check the numbers against his point and either hold the position with reasons or concede and say what was wrong. Do not just agree.
+- Values are expected payout in whole dollars: this season from the season simulator (regular season plus the league playoffs, where each playoff team keeps its own players then drafts the rest in seed order); later seasons at $0.53 a lineup point. Kickers and defenses are streamed every week (principle P10).
+- Plain, short answers. Money in whole dollars.
 
 The recommendation (${d.kind}, due ${d.deadline}, confidence ${d.confidence}):
 ${d.title}
 ${d.recommendation}
 Value: ${d.value || "n/a"}
+Detail: ${JSON.stringify(d.detail || {})}
 Reason: ${d.reason}
 What would change it: ${d.change}
 Inputs as of: ${d.made_at || b.made_at || "unknown"}
 
 Jordan's season (brief built ${b.made_at}, Week ${b.week}): ${JSON.stringify(b.posture || {})}
+Rest of season: ${JSON.stringify({ record: (b.season || {}).record, projected: (b.season || {}).projected, path: (b.season || {}).path })}
+Future years: ${JSON.stringify({ years: (b.future || {}).years, plan: ((b.future || {}).offseason || {}).steps })}
 Team: ${JSON.stringify(b.team || {})}
 Other open recommendations:
-${others}
-Data health: ${JSON.stringify(b.health || [])}`;
+${others}`;
 }
 async function saveThread(d, patch) {
   const t = { id: d.id, title: d.title, recommendation: d.recommendation, messages: [], status: "open", ...(threads[d.id] || {}), ...patch };
@@ -340,7 +588,7 @@ async function ask(d) {
     renderChat(d); $("#chat-" + safe(d.id) + " .status").textContent = copy[e.code] || ("Could not get an answer (" + (e.code || "error") + "). You can send it to the sync.");
     return;
   }
-  renderChat(d); renderDecisions(window._brief.decisions || []);
+  renderDecisions(B().decisions || []);
 }
 async function toSync(d) {
   const el = $("#chat-" + safe(d.id)), q = el.querySelector("textarea").value.trim(), st = el.querySelector(".status");
@@ -351,46 +599,19 @@ async function toSync(d) {
   try {
     await saveThread(d, { messages: msgs, status: "requested", requested_at: new Date().toISOString() });
     el.querySelector("textarea").value = "";
-    renderDecisions(window._brief.decisions || []);
+    renderDecisions(B().decisions || []);
     $("#chat-" + safe(d.id) + " .status").textContent = "Sent. The next sync re-checks it and answers here.";
   } catch (e) { st.textContent = "Not sent: " + (e.message || e.code); }
 }
-
-async function saveResponse(a, d, verdict) {
-  const msg = a.querySelector(".saved");
-  if (!db) { msg.className = "err"; msg.textContent = "Saving needs the claude.ai viewer; open the page there."; return; }
-  const data = { id: d.id, verdict, reason: a.querySelector("textarea").value.trim(), recommendation: d.recommendation, at: new Date().toISOString() };
-  try {
-    await db.doc("responses/" + d.id.replace(/[^A-Za-z0-9_-]/g, "_")).set(data);
-    responses[d.id] = data;
-    a.querySelectorAll("button[data-v]").forEach(b => b.classList.toggle("on", b.dataset.v === verdict));
-    msg.className = "saved"; msg.textContent = "Saved";
-  } catch (e) { msg.className = "err"; msg.textContent = "Not saved: " + (e.message || e.code); }
+function renderAdhoc() {
+  const list = Object.values(threads).filter(t => String(t.id).startsWith("adhoc-")).sort((a, b) => String(b.id).localeCompare(String(a.id))).slice(0, 12);
+  $("#adhoc-sec").hidden = !list.length;
+  const who = { you: "You", claude: "Claude", sync: "Answer" };
+  $("#adhoc").innerHTML = list.map(t => `<details class="dec"><summary class="pad" style="color:var(--ink);font-size:14px"><strong>${esc(t.title || t.id)}</strong> <span class="meta num">${esc(String(t.id).slice(6, 14))}</span></summary>
+      <div class="body msgs">${(t.messages || []).map(m => `<div class="msg ${esc(m.role)}"><span class="who">${who[m.role] || esc(m.role)}</span><div>${esc(m.text)}</div></div>`).join("")}</div></details>`).join("");
 }
 
-function renderQuestions(list) {
-  const box = $("#questions");
-  if (!list.length) { box.className = "empty"; box.textContent = "Nothing is waiting on you."; return; }
-  box.className = ""; box.style.display = "grid"; box.style.gap = "12px";
-  box.innerHTML = list.map(q => {
-    const a = answers[q.id] || {};
-    return `<article class="dec" data-id="${esc(q.id)}">
-      <div class="top"><h3>${esc(q.question)}</h3><div class="row"><span class="chip">${esc(q.topic)}</span>${q.deadline ? `<span class="chip due">by ${esc(q.deadline)}</span>` : ""}</div></div>
-      <div class="why">${esc(q.why_it_matters)}</div>
-      <textarea id="ans-${esc(q.id)}" placeholder="Your answer">${esc(a.answer || "")}</textarea>
-      <div class="row"><button class="primary">Save answer</button><span class="saved" role="status"></span></div>
-    </article>`; }).join("");
-  box.querySelectorAll("article").forEach(a => a.querySelector("button").addEventListener("click", async () => {
-    const msg = a.querySelector(".saved"), id = a.dataset.id, text = a.querySelector("textarea").value.trim();
-    if (!text) { msg.className = "err"; msg.textContent = "Type an answer first."; return; }
-    if (!db) { msg.className = "err"; msg.textContent = "Saving needs the claude.ai viewer."; return; }
-    try { await db.doc("answers/" + id).set({ id, answer: text, at: new Date().toISOString() }); answers[id] = { answer: text };
-      msg.className = "saved"; msg.textContent = "Saved. The next run records it."; }
-    catch (e) { msg.className = "err"; msg.textContent = "Not saved: " + (e.message || e.code); }
-  }));
-}
-
-// ---- screenshots: tap, paste or drop; several at once
+// ---------------------------------------------------------------- send: tap, paste or drop; several at once
 let queue = [];
 function addFiles(list) {
   for (const f of list) {
@@ -413,12 +634,11 @@ drop.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") 
 $("#file").addEventListener("change", e => { addFiles(e.target.files); e.target.value = ""; });
 ["dragenter", "dragover"].forEach(t => document.addEventListener(t, e => { if (e.dataTransfer?.types?.includes("Files")) { e.preventDefault(); drop.classList.add("over"); } }));
 ["dragleave", "drop"].forEach(t => document.addEventListener(t, e => { if (t === "dragleave" && e.relatedTarget) return; drop.classList.remove("over"); }));
-document.addEventListener("drop", e => { if (e.dataTransfer?.files?.length) { e.preventDefault(); addFiles(e.dataTransfer.files); drop.scrollIntoView({ block: "center" }); } });
+document.addEventListener("drop", e => { if (e.dataTransfer?.files?.length) { e.preventDefault(); showTab("today"); addFiles(e.dataTransfer.files); drop.scrollIntoView({ block: "center" }); } });
 document.addEventListener("paste", e => {
   const files = [...(e.clipboardData?.items || [])].filter(i => i.kind === "file").map(i => i.getAsFile()).filter(Boolean);
-  if (files.length) { e.preventDefault(); addFiles(files); drop.scrollIntoView({ block: "center" }); }
+  if (files.length) { e.preventDefault(); location.hash = "today"; showTab("today"); addFiles(files); drop.scrollIntoView({ block: "center" }); }
 });
-
 $("#send").addEventListener("click", async () => {
   const msg = $("#sendmsg"), text = $("#note").value.trim();
   if (!text && !queue.length) { msg.className = "err"; msg.textContent = "Write a note or add a screenshot."; return; }
@@ -440,41 +660,41 @@ $("#send").addEventListener("click", async () => {
   } catch (e) { msg.className = "err"; msg.textContent = "Not sent: " + (e.message || e.code); }
   finally { $("#send").disabled = false; }
 });
-
 function renderSent(list) {
   const box = $("#sentlist");
   if (!list.length) { box.innerHTML = ""; return; }
-  const rows = list.sort((a, b) => String(b.at).localeCompare(String(a.at))).slice(0, 6).map(n => {
+  const rows = list.sort((a, b) => String(b.at).localeCompare(String(a.at))).slice(0, 5).map(n => {
     const done = n.status && n.status !== "waiting";
     const when = new Date(n.at).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
     const files = (n.asset_ids || (n.asset_id ? [n.asset_id] : [])).length;
-    return `<div><span class="chip ${done ? "done" : ""}">${done ? esc(n.status) : "waiting for sync"}</span>
+    return `<div><span class="chip ${done ? "good" : ""}">${done ? esc(n.status) : "waiting for sync"}</span>
       <span class="num meta">${esc(when)}</span><span>${esc(n.kind)}${files ? ` · ${files} file${files > 1 ? "s" : ""}` : ""}${n.text ? ": " + esc(n.text.slice(0, 80)) : ""}</span>
       ${n.result ? `<span class="meta">${esc(n.result)}</span>` : ""}</div>`;
   }).join("");
   box.innerHTML = `<div class="sent"><span class="meta">Recently sent</span>${rows}</div>`;
 }
 
+// ---------------------------------------------------------------- start
 (async () => {
   if (!window.claude?.use) return;
   db = await window.claude.use("db");
   assets = await window.claude.use("assets");
   sample = await window.claude.use("sample");
   if (!db) { $("#stamp").textContent = "Open this page in claude.ai to see the brief and save responses."; return; }
-  const timer = setTimeout(() => { if ($("#stamp").textContent.startsWith("Waiting")) $("#stamp").textContent = "The brief has not loaded yet. It appears after the next daily run."; }, 10000);
-  db.collection("responses").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) responses[v.id] = v; }); if (window._brief) renderDecisions(window._brief.decisions || []); }, () => {});
+  const timer = setTimeout(() => { if ($("#stamp").textContent.startsWith("Waiting")) $("#stamp").textContent = "The brief has not loaded yet. It appears after the next sync."; }, 10000);
+  db.collection("responses").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) responses[v.id] = v; }); if (window._brief) renderDecisions(B().decisions || []); }, () => {});
   db.collection("threads").onSnapshot(s => {
     s.docs.forEach(x => { const v = x.data(); if (v && v.id) threads[v.id] = v; });
     renderAdhoc();
-    if (window._brief) renderDecisions(window._brief.decisions || []);
+    if (window._brief) renderDecisions(B().decisions || []);
   }, () => {});
   db.collection("notes").onSnapshot(s => renderSent(s.docs.map(d => d.data()).filter(Boolean)), () => {});
-  db.collection("answers").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) answers[v.id] = v; }); if (window._brief) renderQuestions(window._brief.questions || []); }, () => {});
+  db.collection("answers").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) answers[v.id] = v; }); if (window._brief) renderQuestions(B().questions || []); }, () => {});
   db.doc("brief/today").onSnapshot(s => {
     clearTimeout(timer);
     const v = s.data();
     if (!v || !v.json) return;
-    try { window._brief = JSON.parse(v.json); renderBrief(window._brief); } catch (e) { $("#stamp").textContent = "The brief could not be read; the next run rewrites it."; }
+    try { window._brief = JSON.parse(v.json); renderBrief(window._brief); } catch (e) { $("#stamp").textContent = "The brief could not be read; the next sync rewrites it."; }
   }, e => { clearTimeout(timer); $("#stamp").textContent = "Could not load the brief (" + (e.code || "error") + ")."; });
 })();
 </script>

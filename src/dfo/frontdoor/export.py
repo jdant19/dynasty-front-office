@@ -45,6 +45,50 @@ def _age_hours(stamp) -> float | None:
         return None
 
 
+def _lu_row(r) -> dict:
+    return dict(slot=getattr(r, "slot", ""), player=r.player, pos=r.pos, team=r.team, opp=r.opp, proj=round(float(r.proj), 1),
+                low=round(float(r.low), 1), high=round(float(r.high), 1),
+                inj=(r.injury_status if isinstance(getattr(r, "injury_status", None), str) else ""))
+
+
+def _side(text: str) -> list[dict]:
+    """'Ollie Gordon II; 2029 round 1 (Jordan)' -> players with position and salary, and picks."""
+    ros = _read("site_rosters.csv")
+    by = ros.drop_duplicates("player").set_index("player") if len(ros) else pd.DataFrame()
+    out = []
+    for item in [x.strip() for x in str(text).split(";") if x.strip()]:
+        m = re.match(r"(\d{4}) round (\d)(?: \((\w+)\))?", item)
+        if m:
+            out.append(dict(kind="pick", name=f"{m.group(1)} round {m.group(2)}" + (f" ({m.group(3)}'s)" if m.group(3) and m.group(3) != "Jordan" else "")))
+            continue
+        hit = by.index[by.index.str.replace(" D/ST", "").str.replace(r" (Jr\.|Sr\.|II|III)$", "", regex=True)
+                       == re.sub(r" (Jr\.|Sr\.|II|III)$", "", item)] if len(by) else []
+        r = by.loc[hit[0]] if len(hit) else None
+        out.append(dict(kind="player", name=item, pos=(r.pos if r is not None else ""),
+                        salary=(int(r.salary_now) if r is not None and pd.notna(r.salary_now) else None)))
+    return out
+
+
+def _trade_detail(r) -> dict:
+    pair = lambda t: [x.strip() for x in str(t).split("->")] if "->" in str(t) else [str(t), str(t)]
+    years = [dict(season=int(m.group(1)), room=[int(m.group(2)), int(m.group(3))], strength=int(m.group(4)))
+             for m in re.finditer(r"(\d{4}): room \$(-?\d+) -> \$(-?\d+), strength ([+-]?\d+)", str(r.your_outlook))]
+    pk = re.search(r"picks given ([+-]?\d+) points", str(r.your_outlook))
+    terms = []
+    for label in ("opening", "target", "walk_away"):
+        t = str(getattr(r, label))
+        m = re.match(r"[\w-]+: add (.+?) -> you ([+-]\d+), him ([+-]\d+)", t)
+        terms.append(dict(label=label.replace("_", "-"), extra=(m.group(1) if m else t), you=(int(m.group(2)) if m else None),
+                          him=(int(m.group(3)) if m else None)))
+    return dict(type="trade", partner=r.partner, give=_side(r.you_give), get=_side(r.you_get),
+                you=dict(now=int(r.jordan_now), later=int(r.jordan_later), total=int(r.jordan)),
+                him=dict(now=int(r.partner_now), later=int(r.partner_later), total=int(r.partner_gain)),
+                first=pair(r.your_1st), title=pair(r.your_title), years=years,
+                picks_given_points=(int(pk.group(1)) if pk else None), terms=terms,
+                salary_rule=str(r.salary_rule), forced_drops=(str(r.forced_drops) if isinstance(r.forced_drops, str) else ""),
+                trades_per_season=float(r.partner_trades_per_season), message=str(r.draft_message))
+
+
 def decisions() -> list[dict]:
     wk = _week()
     out = []
@@ -61,7 +105,11 @@ def decisions() -> list[dict]:
                         value=f"win probability {wp.group(1)}%" if wp else "", confidence="medium",
                         reason="Highest win probability from this week's projections and 80% ranges.",
                         change="An injury or inactive report, or a rank jump flagged below." + (f" Flagged: {news[0]}" if news else ""),
-                        made_at=str(lu.made_at.iloc[0]) if "made_at" in lu else ""))
+                        made_at=str(lu.made_at.iloc[0]) if "made_at" in lu else "",
+                        headline=(f"Win chance {wp.group(1)}%" if wp else "Lineup set"),
+                        detail=dict(type="lineup", starters=[_lu_row(r) for r in start.itertuples()],
+                                    bench=[_lu_row(r) for r in lu[lu.slot.isna() | (lu.slot == "BN")].sort_values("proj", ascending=False).head(5).itertuples()]
+                                    if "slot" in lu else [])))
     wv = _read(f"decide_waivers_w{wk}.csv")
     if not len(wv):
         wv = _read(f"decide_waivers_w{wk - 1}.csv")
@@ -81,7 +129,11 @@ def decisions() -> list[dict]:
                         confidence="medium" if not _ranks_missing() else "low (no ranks yet)",
                         reason=f"Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids {bid}."
                                + (" This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options." if _ranks_missing() else ""),
-                        change="A player's role changing, or a better free agent after the weekend.", made_at=str(wv.rosters_as_of.iloc[0])))
+                        change="A player's role changing, or a better free agent after the weekend.", made_at=str(wv.rosters_as_of.iloc[0]),
+                        headline=(f"Add {top.iloc[0].add_player}, drop {top.iloc[0].drop_player}" if len(top) else "No claim worth making"),
+                        detail=dict(type="waivers", bid=bid, rows=[dict(add=r.add_player, add_pos=r.add_pos, drop=r.drop_player, drop_pos=r.drop_pos,
+                                                                          pts=round(float(r.lineup_points), 1), net=round(float(r.net_payout), 2))
+                                                                     for r in wv[wv.net_payout >= 0.25].head(6).itertuples()])))
     ts = _read("decide_trade_search.csv")
     if len(ts) and wk <= 14:
         good = ts[ts.works_for_both] if "works_for_both" in ts else ts
@@ -96,9 +148,11 @@ def decisions() -> list[dict]:
                                    f"him {r.partner_gain:+.0f}; your 1st place {r.your_1st}, title {r.your_title}"),
                             confidence="low" if not stale else "low (stale inputs)",
                             reason=(f"Payout $ (P18). 'This season' adds the regular season and the league playoffs: "
-                                    f"a gain with 1st-place odds falling comes from the playoffs alone. {r.your_outlook}.{stale}"),
+                                    f"a gain with 1st-place odds falling comes from the playoffs alone.{stale}"),
                             change="His posture (a seller turning buyer), injuries, or a counter that moves value.",
-                            made_at=str(r.inputs), stale=bool(stale)))
+                            made_at=str(r.inputs), stale=bool(stale),
+                            headline=f"You +${r.jordan:.0f} · title {str(r.your_title).replace(' -> ', '→')}",
+                            detail=_trade_detail(r)))
     ad = _read("decide_playoffs_adds.csv")
     if len(ad):
         a = ad[~ad.on_playoff_rival].head(2)
@@ -108,7 +162,12 @@ def decisions() -> list[dict]:
                             recommendation="; ".join(f"{r.player} ({r.owner})" for r in a.itertuples()),
                             value="; ".join(f"title {r.title_change:+.0%}, ${r.payout_change:+.0f}" for r in a.itertuples()),
                             confidence="low", reason="Keeps are free; owning a player also frees your first draft pick.",
-                            change="NFL playoff odds moving, or the seeds changing."))
+                            change="NFL playoff odds moving, or the seeds changing.",
+                            headline=f"{a.iloc[0].player}: title {a.iloc[0].title_change:+.0%}",
+                            detail=dict(type="playoffs", rows=[dict(player=r.player, pos=r.pos, nfl=r.nfl, owner=r.owner,
+                                                                     rival=bool(r.on_playoff_rival), games=round(float(r.exp_games), 1),
+                                                                     title=round(float(r.title_change), 3), payout=int(round(r.payout_change)))
+                                                                for r in ad.head(8).itertuples()])))
     off = _read("decide_offseason_2027.csv")
     if len(off):
         b = off.iloc[0]
@@ -116,7 +175,8 @@ def decisions() -> list[dict]:
                         title="2027 designations", recommendation=str(b.scenario),
                         value=f"${b.payout_2027:.0f} expected 2027 payout, ${b.payout_3yr:.0f} over three years",
                         confidence="low", reason="Played through RFA bidding and the auction with every owner's likely plan.",
-                        change="Other owners' plans (review them), Gibbs's RFA price, the ESPN ranking order.", made_at=str(b.made_at)))
+                        change="Other owners' plans (review them), Gibbs's RFA price, the ESPN ranking order.", made_at=str(b.made_at),
+                        headline=f"${b.payout_3yr:.0f} over three years", detail=dict(type="offseason")))
     return out
 
 
@@ -226,6 +286,10 @@ def run() -> dict:
     items = decisions()
     brief = dict(made_at=_now().isoformat(timespec="seconds"), week=_week(), decisions=items, posture=posture(), team=team(),
                  market=market(), questions=[q for q in questions() if q["status"] == "open"], health=health())
+    for k in ("season", "future"):   # dfo.frontdoor.views
+        f = OUT / f"{k}.json"
+        if f.exists():
+            brief[k] = json.loads(f.read_text())
     (OUT / "brief.json").write_text(json.dumps(brief, indent=1, default=str))
     journal(items)
     return brief

@@ -1,9 +1,12 @@
 # Front door and decision journal
 
-The front door is one published page: https://claude.ai/artifact/3ck3di3wxuyLSpfkJnkVEw
-(source: `frontdoor/front-office.html`, private to Jordan). It shows, in this order: the season odds
-strip and stance, decisions due (agree / disagree and a reason), questions for Jordan (answer box),
-a send box (notes, corrections, questions, trade offers received, screenshots) and data health.
+The front door is one published page, in four tabs: Today (decisions one line each, opened for the
+detail; questions; discussions; send), This season (Jordan's remaining matchups with win chances, his odds
+week by week, league standings and outlook), Future (cap and strength by year, the offseason plan and its
+alternatives, the contract grid, picks) and Data (data health). It is: https://claude.ai/artifact/3ck3di3wxuyLSpfkJnkVEw
+(source: `frontdoor/front-office.html`, private to Jordan). The season and future tabs come from
+`dfo.frontdoor.views` (season.json, future.json, folded into the brief by the export); the odds trend
+is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished week).
 
 ## How data moves
 
@@ -54,7 +57,7 @@ a send box (notes, corrections, questions, trade offers received, screenshots) a
    update pinned to the version read). Add the threads to the ingest dump (`"threads": [...]`) so every
    message lands in `data/journal/threads.csv`.
 5. If results or other inputs changed, re-run `dfo.sim.dial` and `dfo.decide.deadline` (Weeks 10-14), then
-   `dfo.frontdoor.export`; then write `brief/today` with the new brief.json (pin `if_version` to the version
+   `dfo.frontdoor.views` (season and future tabs) and `dfo.frontdoor.export`; then write `brief/today` with the new brief.json (pin `if_version` to the version
    just read).
 6. Commit `data/journal`, `data/frontdoor`, `data/raw` and any processed tables with a message saying
    what came in; push.
