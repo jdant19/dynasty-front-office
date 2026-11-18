@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T21:15:20+00:00",
+ "made_at": "2026-11-18T21:44:00+00:00",
  "week": 11,
  "decisions": [
   {
@@ -12,7 +12,7 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-18T19:23:52+00:00",
+   "made_at": "2026-11-18T21:43:08+00:00",
    "headline": "Win chance 76%",
    "detail": {
     "type": "lineup",
@@ -440,9 +440,9 @@
   "stance": "push",
   "moved": {
    "since": "2026-11-18",
-   "p_first": -0.017,
-   "p_title": -0.017,
-   "payout": -7
+   "p_first": 0.025,
+   "p_title": -0.003,
+   "payout": 7
   },
   "league": [
    {
@@ -570,14 +570,6 @@
    "rental": false
   },
   {
-   "player": "Bears",
-   "owner": "Matt",
-   "pos": "DEF",
-   "gain": 9.9,
-   "salary": 1,
-   "rental": true
-  },
-  {
    "player": "James Cook",
    "owner": "Matt",
    "pos": "RB",
@@ -594,27 +586,35 @@
    "rental": true
   },
   {
-   "player": "Texans",
-   "owner": "Mike",
-   "pos": "DEF",
-   "gain": 8.9,
-   "salary": 2,
-   "rental": true
-  },
-  {
-   "player": "Bengals",
-   "owner": "Qasim",
-   "pos": "DEF",
-   "gain": 8.6,
-   "salary": 1,
-   "rental": true
-  },
-  {
-   "player": "Bills",
+   "player": "Dak Prescott",
    "owner": "Ryan",
-   "pos": "DEF",
-   "gain": 8.5,
-   "salary": 1,
+   "pos": "QB",
+   "gain": 8.2,
+   "salary": 2,
+   "rental": false
+  },
+  {
+   "player": "Chris Olave",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 7.7,
+   "salary": 15,
+   "rental": false
+  },
+  {
+   "player": "Nico Collins",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 7.6,
+   "salary": 91,
+   "rental": true
+  },
+  {
+   "player": "Ka'imi Fairbairn",
+   "owner": "Max",
+   "pos": "K",
+   "gain": 6.4,
+   "salary": 2,
    "rental": true
   }
  ],
@@ -635,7 +635,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-18T19:35:55+00:00",
-   "age_hours": 1.7,
+   "age_hours": 2.1,
    "limit": "24h",
    "stale": false
   },
@@ -649,21 +649,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-18T19:22:28+00:00",
-   "age_hours": 1.9,
+   "age_hours": 2.4,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
    "as_of": "2026-11-18T21:01:59+00:00",
-   "age_hours": 0.2,
+   "age_hours": 0.7,
    "limit": "24h",
    "stale": false,
    "note": "1 step(s) not ok in recent runs"
   }
  ],
  "season": {
-  "made_at": "2026-11-18T21:15:19+00:00",
+  "made_at": "2026-11-18T21:43:59+00:00",
   "weeks_left": [
    11,
    12,
@@ -1029,6 +1029,13 @@
      "p_first": 0.526,
      "p_title": 0.376,
      "exp_payout": 392
+    },
+    {
+     "at": "2026-11-18T21:43",
+     "week": 11,
+     "p_first": 0.551,
+     "p_title": 0.373,
+     "exp_payout": 399
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1037,7 +1044,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-18T21:15:20+00:00",
+  "made_at": "2026-11-18T21:44:00+00:00",
   "years": [
    {
     "season": 2027,

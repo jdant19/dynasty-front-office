@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-18T21:15:19+00:00",
+ "made_at": "2026-11-18T21:43:59+00:00",
  "weeks_left": [
   11,
   12,
@@ -365,6 +365,13 @@
     "p_first": 0.526,
     "p_title": 0.376,
     "exp_payout": 392
+   },
+   {
+    "at": "2026-11-18T21:43",
+    "week": 11,
+    "p_first": 0.551,
+    "p_title": 0.373,
+    "exp_payout": 399
    }
   ],
   "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
