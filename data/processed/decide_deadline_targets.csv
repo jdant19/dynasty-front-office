@@ -1,27 +1,26 @@
 owner,player,pos,salary_2026,your_lineup_gain,payout_now,rental,later_value_to_him
-Ben,Kenneth Walker III,RB,67,36.8,35,False,-1
-Ryan,George Pickens,WR,71,11.0,11,False,-22
-Matt,James Cook,RB,79,9.8,9,False,7
-Ryan,DeVonta Smith,WR,51,9.7,9,True,0
-Ryan,Dak Prescott,QB,2,8.2,8,False,-4
-Max,Chris Olave,WR,15,7.7,7,False,8
-Max,Nico Collins,WR,91,7.6,7,True,0
-Max,Ka'imi Fairbairn,K,2,6.4,6,True,0
-Qasim,Cam Little,K,1,5.1,5,True,0
-Matt,Tyler Bass,K,1,5.1,5,True,0
-Matt,Brock Purdy,QB,1,4.6,4,True,0
-Mike,Spencer Shrader,K,1,4.0,4,True,0
-Matt,Michael Wilson,WR,1,4.0,4,False,33
-Mike,Chase McLaughlin,K,1,3.7,4,True,0
-Qasim,Malik Nabers,WR,7,3.0,3,False,37
-Matt,Bears,DEF,1,2.8,3,True,0
-Qasim,Seahawks,DEF,1,2.7,3,True,0
-Qasim,Tony Pollard,RB,15,2.5,2,True,0
-Max,Chase Brown,RB,4,1.9,2,False,15
-Ryan,Brandon Aubrey,K,2,1.7,2,True,0
-Qasim,Garrett Wilson,WR,51,1.6,2,False,-8
-Qasim,Bengals,DEF,1,1.4,1,True,0
+Ben,Kenneth Walker III,RB,67,32.9,32,False,-1
+Matt,Brock Purdy,QB,1,14.2,14,True,0
+Ryan,George Pickens,WR,71,12.0,12,False,-22
+Ryan,Dak Prescott,QB,2,11.1,11,False,-4
+Ryan,DeVonta Smith,WR,51,10.5,10,True,0
+Matt,James Cook,RB,79,7.8,8,False,7
+Max,Nico Collins,WR,91,6.0,6,True,0
+Max,Chris Olave,WR,15,5.2,5,False,8
+Matt,Michael Wilson,WR,1,4.9,5,False,33
+Max,Ka'imi Fairbairn,K,2,4.6,5,True,0
+Mike,Spencer Shrader,K,1,4.5,4,True,0
+Qasim,Malik Nabers,WR,7,4.5,4,False,37
+Qasim,Cam Little,K,1,3.0,3,True,0
+Qasim,Seahawks,DEF,1,2.5,2,True,0
+Qasim,Justin Jefferson,WR,92,2.5,2,True,0
+Qasim,Tony Pollard,RB,15,2.4,2,True,0
+Qasim,Caleb Williams,QB,5,2.4,2,False,33
+Ryan,Brandon Aubrey,K,2,2.3,2,True,0
+Max,Chase Brown,RB,4,2.2,2,False,15
+Matt,Tyler Bass,K,1,2.1,2,True,0
+Qasim,Garrett Wilson,WR,51,1.5,2,False,-8
 Matt,Luther Burden III,WR,4,1.4,1,False,54
-Qasim,Justin Jefferson,WR,92,1.3,1,True,0
-Ryan,Bills,DEF,1,1.3,1,True,0
+Matt,Bears,DEF,1,1.4,1,True,0
+Mike,Texans,DEF,2,1.4,1,True,0
 Max,Patriots,DEF,1,1.1,1,True,0

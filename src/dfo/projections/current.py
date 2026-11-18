@@ -28,6 +28,20 @@ SEASON = 2026
 ROS_WEIGHTS = {"fp_pts": 0.5, "points_std": 0.25, "xfp_std": 0.25}
 
 
+def ros_rate(wk: pd.DataFrame, fp_prev: pd.Series | None = None) -> pd.Series:
+    """Rest-of-season points per game. The FantasyPros term is this week's rank in points; when this
+    week's ranks are not out yet (Tue-Thu) it is last week's rank, one week stale. Backtest 2021-2025
+    at weeks 6/8/10 (docs/projections.md): last week's rank MAE 2.33/2.22/2.34 vs 2.55/2.37/2.47 with
+    no rank term, so a one-week-old rank is kept rather than dropped (fixed 2026-11-18)."""
+    fp = wk.fp_pts if fp_prev is None else wk.fp_pts.fillna(fp_prev.reindex(wk.index))
+    x = wk.assign(fp_pts=fp)
+    rate = sum(w * x[c] for c, w in ROS_WEIGHTS.items())
+    fallback = x[["points_std", "xfp_std"]].mean(axis=1)
+    out = np.where(x[list(ROS_WEIGHTS)].notna().all(axis=1), rate,
+                   np.where(x.fp_pts.notna(), 0.5 * x.fp_pts + 0.5 * fallback.fillna(x.fp_pts), fallback))
+    return pd.Series(out, index=wk.index).fillna(wk.points_std).fillna(0).clip(lower=0)   # never below 0
+
+
 def next_week(today: dt.date | None = None) -> int:
     """The first regular-season week with games still to be played (a week whose Thursday game is
     already scored is still the current week until its last game)."""
@@ -69,7 +83,7 @@ def main() -> None:
     # FantasyPros weekly ranks for the coming week arrive Thursday or Friday. Until then the free-agent
     # pool would shrink to rostered players only (no waiver candidates), so the players ranked in the
     # latest earlier week are kept in the pool and projected without ranks (their rank is stale: not used).
-    ranks_note = ""
+    ranks_note, prev = "", None
     from dfo.projections.ecr import weekly_ecr
     ecr = weekly_ecr()
     ecr = ecr[ecr.season == SEASON]
@@ -84,7 +98,8 @@ def main() -> None:
         carry = pd.concat([carry, defs.assign(season=SEASON, week=week, team=defs.player_id.str[4:])], ignore_index=True)
         extra = pd.concat([extra, carry[carry.team.notna()][extra.columns]], ignore_index=True)
         ranks_note = (f"Week {week} FantasyPros ranks not out yet (usually Thursday or Friday); "
-                      f"pool from Week {prev} ranks, projected without ranks")
+                      f"pool from Week {prev} ranks, projected without ranks; rest-of-season rates use "
+                      f"Week {prev} ranks (one week stale)")
         print(ranks_note)
     df = build(extra=extra)
     train = df[(df.season < SEASON) | ((df.season == SEASON) & (df.week < week))]
@@ -106,12 +121,14 @@ def main() -> None:
         ranks_note=ranks_note, stats_as_of=inputs_as_of, made_at=stamp))
     out_week.sort_values(["pos", "proj"], ascending=[True, False]).to_csv(PROCESSED / "proj_week.csv", index=False)
 
-    # rest of season
-    rate = sum(w * wk[c] for c, w in ROS_WEIGHTS.items())
-    fallback = wk[["points_std", "xfp_std"]].mean(axis=1)
-    wk["ros_ppg"] = np.where(wk[list(ROS_WEIGHTS)].notna().all(axis=1), rate,
-                             np.where(wk.fp_pts.notna(), 0.5 * wk.fp_pts + 0.5 * fallback.fillna(wk.fp_pts), fallback))
-    wk["ros_ppg"] = wk.ros_ppg.fillna(wk.points_std).fillna(0).clip(lower=0)   # an expected rate is never below 0
+    # rest of season (this week's ranks missing: last week's rank, labeled stale in rank_week)
+    fp_prev, rank_week = None, pd.Series(np.where(wk.fp_pts.notna(), week, np.nan), index=wk.index)
+    if prev is not None:
+        last = ecr[ecr.week == prev].drop_duplicates("player_id").set_index("player_id").ecr
+        stale = wk.assign(ecr=wk.player_id.map(last))
+        fp_prev = model.fp_points(stale)
+        rank_week = rank_week.fillna(pd.Series(np.where(fp_prev.notna(), prev, np.nan), index=wk.index))
+    wk["ros_ppg"] = ros_rate(wk, fp_prev)
     imp = implied_totals([SEASON])
     today = dt.datetime.now(dt.timezone.utc).date()
     games_left = imp[(imp.week >= week) & (pd.to_datetime(imp.gameday).dt.date >= today)].groupby("team").size()
@@ -123,7 +140,7 @@ def main() -> None:
         season=SEASON, from_week=week, player_id=wk.player_id, player=wk.player_id.map(names), pos=wk.pos,
         team=wk.team, owner=wk.player_id.map(owner).fillna(""), ros_ppg=wk.ros_ppg.round(2),
         games_left=wk.games_left, availability=wk.availability.round(2), ros_points=wk.ros_points.round(1),
-        stats_as_of=inputs_as_of, made_at=stamp))
+        fp_rank_week=rank_week.astype("Int64"), stats_as_of=inputs_as_of, made_at=stamp))
     out_ros.sort_values("ros_points", ascending=False).to_csv(PROCESSED / "proj_ros.csv", index=False)
 
     fut = predict_future(SEASON)

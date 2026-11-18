@@ -277,14 +277,23 @@ def ros_check(weeks: tuple[int, ...] = (6, 8, 10)) -> pd.DataFrame:
         later = (df[(df.week >= wk) & (df.played == 1)].groupby(["season", "player_id"]).points
                  .agg(["mean", "size"]))
         later = later[later["size"] >= 4].rename(columns={"mean": "ros_ppg"}).reset_index()
+        prev = ev[ev.week == wk - 1][["season", "player_id", "fp_only"]].rename(columns={"fp_only": "fp_prev"})
+        snap = snap.merge(prev.drop_duplicates(["season", "player_id"]), on=["season", "player_id"], how="left")
         t = snap.merge(later, on=["season", "player_id"]).dropna(subset=["points_std", "xfp_std", "fp_only", "blend"])
         t["ros_mix"] = 0.5 * t.fp_only + 0.25 * t.points_std + 0.25 * t.xfp_std
+        # Tue-Thu, before the week's ranks: last week's rank in the mix, or no rank term at all
+        t["ros_mix_prev_rank"] = 0.5 * t.fp_prev + 0.25 * t.points_std + 0.25 * t.xfp_std
+        t["no_rank"] = 0.5 * t.points_std + 0.5 * t.xfp_std
         rec = dict(week=wk, players=len(t))
         for c, name in [("points_std", "season_avg"), ("fp_only", "fp_rank"), ("blend", "weekly_blend"),
                         ("ros_mix", "ros_mix")]:
             rec[f"{name}_mae"] = round((t[c] - t.ros_ppg).abs().mean(), 2)
             rec[f"{name}_rank_corr"] = round(np.nanmean([spearmanr(g[c], g.ros_ppg).statistic
                                                          for _, g in t.groupby(["season", "pos"]) if len(g) > 8]), 3)
+        s = t.dropna(subset=["fp_prev"])          # same players for the two Tue-Thu options
+        rec["stale_players"] = len(s)
+        for c in ("ros_mix_prev_rank", "no_rank"):
+            rec[f"{c}_mae"] = round((s[c] - s.ros_ppg).abs().mean(), 2)
         rows.append(rec)
     out = pd.DataFrame(rows)
     out.to_csv(PROCESSED / "proj_ros_backtest_summary.csv", index=False)

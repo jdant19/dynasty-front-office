@@ -72,6 +72,13 @@ Caveat: these weights were picked from a few candidates on these same seasons, s
 slightly flattering. Using the weekly blend as the rest-of-season rate was worse than FantasyPros
 (2.42-2.53), which is why it is not used.
 
+Tuesday to Thursday, before the coming week's FantasyPros ranks are out, the FantasyPros term uses
+last week's rank (one week stale; `proj_ros.csv` `fp_rank_week` says which week). Until 2026-11-18
+the term was dropped on those days, leaving 0.5 season average + 0.5 expected points. Same
+backtest, same players: last week's rank MAE 2.33 / 2.22 / 2.34 at weeks 6 / 8 / 10 against 2.55 /
+2.37 / 2.47 with no rank term. Found when Jordan questioned a Wednesday trade card (Kenneth Walker
+III was 21.6 points a game without the rank term, 19.7 with it).
+
 ## 3. Future seasons (dynasty, +1 to +3 years)
 
 Per-game rate: FantasyPros dynasty rank, turned into points per position from past seasons, as
@@ -128,8 +135,8 @@ Draft-capital model and FantasyPros rookie rank (May-August), 50/50. 229 rookies
   the same way.
 - Kicker and defense ranges are wide because those outcomes are mostly noise.
 - The coming week's FantasyPros ranks arrive Thursday or Friday. From Tuesday until then, the pool
-  keeps every player ranked the week before, projected without ranks (the old rank is stale and not
-  used), and `proj_week.csv` says so in `ranks_note`. Before 2026-11-17 the pool shrank to rostered
+  keeps every player ranked the week before, projected without ranks for the week (the old rank is
+  stale and not used there; the rest-of-season rate does use it, see section 2), and `proj_week.csv` says so in `ranks_note`. Before 2026-11-17 the pool shrank to rostered
   players on those days, so the Tuesday waiver run found no free agents and failed.
 
 ## Files

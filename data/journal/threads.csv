@@ -1,0 +1,24 @@
+id,decision_id,role,text,at,thread_status
+trade-Ben-kennethwalkeriii@2026-11-18T20:49:57.907Z@you,trade-Ben-kennethwalkeriii,you,"This is supposedly based on Washington only scoring ~2ppg more than Deebo, but that seems WAY off, where is that coming from and can we review and confirm",2026-11-18T20:49:57.907Z,requested
+trade-Ben-kennethwalkeriii@2026-11-18T20:50:07.216Z@claude,trade-Ben-kennethwalkeriii,claude,"That comparison isn't on the card, so I can't tell you where it came from or confirm it.
+
+What the card does say:
+- **Value (this card):** you +13 total, with this season +23 and later seasons -10. First-place odds go from 56% to 63% and title odds from 39% to 43%.
+- **Reason (this card):** it cites payout (P18), cap room and strength by year, and picks given at -107 points over their rookie deals.
+
+The card has no Deebo, no points-per-game figure for Washington, and no per-player breakdown of the +23 this season. The Week 11 lineup does show Washington as a starting WR3, so losing him is a real cost. But I have no projections here to say how big it is or how he compares to anyone else.
+
+Two other things to know:
+- The card's 56% first-place figure doesn't match the brief's 55% for you. That's likely just timing, since the inputs are about 3 minutes apart.
+- Data health notes that 1 step was not ok in recent engine runs. I can't tell from here whether that touches this trade.
+
+To check Washington's projection against Deebo's and see what the sim assumed, I'd need data that isn't here. I'd suggest ""Send to the sync for a full re-check"", and I'd hold off on proposing anything until that comes back. The confidence is already marked low.",2026-11-18T20:50:07.216Z,requested
+trade-Ben-kennethwalkeriii@2026-11-18T22:05:00Z@sync,trade-Ben-kennethwalkeriii,sync,"Re-checked. The ~2 ppg is the rest-of-season rate (proj_ros.csv, 20:57 UTC): Washington 12.25, Deebo 9.96. The inputs (nflverse stats through Week 10, FantasyPros):
+- Season average: Washington 13.3 (9 games), Deebo 12.8 (6 games; out Weeks 6-9).
+- Expected points from usage: Washington 11.2, Deebo 7.1.
+- FantasyPros: Washington ranked in Week 10 (about 11.9 a game); Deebo has had no rank since his Week 7 injury.
+On the data, a gap of about 2 holds. Deebo's actual scoring points to a smaller gap and his usage to a bigger one. I'm keeping it.
+
+Your check did find a real fault, though. From Tuesday to Thursday, before the week's FantasyPros ranks come out, every rest-of-season rate was dropping its FantasyPros half. In the 2021-25 backtest, keeping last week's rank does better: error 2.22-2.34 vs 2.37-2.55. That's fixed now, with a test (projections/current.py; docs/projections.md). Walker goes from 21.6 to 19.7 ppg, Washington from 12.25 to 12.06, and Deebo is unchanged.
+
+What changes: the target version is now you +$7 (this season +17, later -10; 1st place 56%->61%, title 38%->42%), down from +$14. A 6,000-sim recheck gives +$2, and if Washington is really 2 ppg better than projected it's -$8. So the target is about break-even. Only the opening (two 2027 2nds instead of the 2029 1st: you +$13 to +$18, Ben +$5) is clearly in your favor, and I wouldn't go up to the 2029 1st. The playoff-adds card changed too: James Cook and Chase Brown, and Walker dropped off.",2026-11-18T22:05:00Z,answered

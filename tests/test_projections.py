@@ -36,6 +36,18 @@ def test_rest_of_season_mix_beats_fantasypros_on_error():
     assert (r.ros_mix_mae < r.fp_rank_mae).all()
 
 
+def test_rest_of_season_keeps_last_weeks_rank_before_new_ranks():
+    # Tue-Thu: a one-week-old FantasyPros rank beats dropping the rank term (fixed 2026-11-18)
+    r = _csv("proj_ros_backtest_summary.csv")
+    assert (r.ros_mix_prev_rank_mae < r.no_rank_mae).all()
+    from dfo.projections.current import ros_rate
+    wk = pd.DataFrame(dict(fp_pts=[float("nan"), 14.0], points_std=[12.0, 12.0], xfp_std=[10.0, 10.0]))
+    no_prev = ros_rate(wk)
+    with_prev = ros_rate(wk, pd.Series([16.0, 99.0]))
+    assert no_prev[0] == 11.0 and with_prev[0] == 0.5 * 16 + 0.25 * 12 + 0.25 * 10
+    assert with_prev[1] == no_prev[1] == 0.5 * 14 + 0.25 * 12 + 0.25 * 10   # this week's rank wins
+
+
 def test_future_rank_backbone_and_games_model():
     f = _csv("proj_future_backtest_summary.csv")
     a = f[f.group == "All"].set_index("horizon")
