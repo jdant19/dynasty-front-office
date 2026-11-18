@@ -1,49 +1,49 @@
 player,pos,nfl,owner,on_playoff_rival,playoff_value,p_nfl_playoffs,exp_games,title_change,payout_change
-Josh Allen,QB,BUF,Zach,True,41.5,1.0,2.09,0.125,20.7
-Christian McCaffrey,RB,SF,Johnny,True,32.9,0.98,1.93,0.144,18.7
-James Cook,RB,BUF,Matt,False,30.5,1.0,2.09,0.114,18.3
-Kenneth Walker III,RB,KC,Ben,False,34.7,0.98,1.86,0.114,18.3
-Bhayshul Tuten,RB,JAX,Russ,True,27.6,1.0,2.11,0.079,14.7
-Tee Higgins,WR,CIN,Russ,True,25.1,0.99,1.96,0.058,14.1
-Joe Burrow,QB,CIN,Russ,True,37.8,0.99,1.96,0.075,12.4
-Chase Brown,RB,CIN,Max,False,23.4,0.99,1.96,0.052,12.3
-D'Andre Swift,RB,CHI,Russ,True,23.4,0.84,1.62,0.042,12.3
-Amon-Ra St. Brown,WR,DET,Johnny,True,24.8,0.88,1.7,0.097,10.5
-Jaguars,DEF,JAX,Johnny,True,15.9,1.0,2.11,0.071,9.0
-Trevor Lawrence,QB,JAX,Qasim,False,33.5,1.0,2.11,0.032,7.7
-Jonah Coleman,RB,DEN,Ben,False,19.6,0.99,1.81,0.032,7.7
-Mike Evans,WR,SF,Russ,True,21.3,0.98,1.93,0.023,7.3
-Cam Little,K,JAX,Qasim,False,21.8,1.0,2.11,0.055,7.0
-Broncos,DEF,DEN,Zach,True,13.0,0.99,1.81,0.019,6.9
-Bills,DEF,BUF,Ryan,False,14.9,1.0,2.09,0.048,6.0
-Tyler Bass,K,BUF,Matt,False,21.5,1.0,2.09,0.048,6.0
-Brock Purdy,QB,SF,Matt,False,33.6,0.98,1.93,0.048,6.0
-Kyle Monangai,RB,CHI,Zach,True,19.5,0.84,1.62,0.009,5.7
-Luther Burden III,WR,CHI,Matt,False,17.7,0.84,1.62,0.025,5.5
-Vikings,DEF,MIN,Johnny,True,11.9,0.8,1.41,0.052,5.4
-Bengals,DEF,CIN,Qasim,False,13.9,0.99,1.96,0.052,5.4
-Bears,DEF,CHI,Matt,False,11.9,0.84,1.62,0.052,5.4
-Puka Nacua,WR,LA,Russ,True,20.6,0.59,1.21,0.032,5.0
-Jaxon Smith-Njigba,WR,SEA,Zach,True,19.4,0.59,1.19,0.016,4.2
-DJ Moore,WR,BUF,Mike,False,19.6,1.0,2.09,0.032,2.4
-Evan McPherson,K,CIN,Max,False,19.2,0.99,1.96,0.028,2.2
-Eddy Pineiro,K,SF,Zach,True,17.0,0.98,1.93,0.03,1.9
-Harrison Butker,K,KC,Ben,False,17.2,0.98,1.86,0.021,1.5
-Dalton Kincaid,TE,BUF,Qasim,False,15.2,1.0,2.09,0.013,1.1
-Travis Kelce,TE,KC,Qasim,False,14.2,0.98,1.86,0.015,0.8
-Isaiah Likely,TE,NYG,Zach,True,8.8,0.56,0.88,0.023,0.7
-Sam LaPorta,TE,DET,Max,False,13.5,0.88,1.7,0.015,0.5
-Jared Goff,QB,DET,Johnny,True,28.1,0.88,1.7,0.009,0.4
-Bo Nix,QB,DEN,Mike,False,25.4,0.99,1.81,0.0,0.0
-Caleb Williams,QB,CHI,Qasim,False,26.8,0.84,1.62,0.0,0.0
-Matthew Stafford,QB,LA,Zach,True,18.4,0.59,1.21,0.0,0.0
-Pat Freiermuth,TE,PIT,Ryan,False,8.4,0.76,1.18,0.0,0.0
-Colston Loveland,TE,CHI,Ryan,False,12.4,0.84,1.62,0.0,0.0
-Ka'imi Fairbairn,K,HOU,Max,False,5.8,0.31,0.56,0.0,0.0
-T.J. Hockenson,TE,MIN,Matt,False,10.4,0.8,1.41,0.0,0.0
-Seahawks,DEF,SEA,Qasim,False,8.7,0.59,1.19,0.0,0.0
-Rams,DEF,LA,Matt,False,8.4,0.59,1.21,0.0,0.0
-Hunter Henry,TE,NE,Mike,False,4.0,0.41,0.64,0.0,0.0
-Brandon Aubrey,K,DAL,Ryan,False,6.3,0.33,0.64,0.0,0.0
-Jameson Williams,WR,DET,Russ,True,17.5,0.88,1.7,-0.007,-0.9
-Will Reichard,K,MIN,Johnny,True,14.8,0.8,1.41,0.026,-1.5
+Kenneth Walker III,RB,KC,Ben,False,34.6,0.98,1.86,0.129,22.4
+James Cook,RB,BUF,Matt,False,30.5,1.0,2.1,0.129,22.4
+Josh Allen,QB,BUF,Zach,True,41.8,1.0,2.1,0.128,21.9
+Christian McCaffrey,RB,SF,Johnny,True,33.0,0.98,1.93,0.151,21.3
+Tee Higgins,WR,CIN,Russ,True,25.0,0.99,1.96,0.077,17.4
+Bhayshul Tuten,RB,JAX,Russ,True,27.7,1.0,2.12,0.092,17.2
+D'Andre Swift,RB,CHI,Russ,True,22.8,0.83,1.58,0.043,13.6
+Amon-Ra St. Brown,WR,DET,Johnny,True,25.2,0.89,1.73,0.096,13.5
+Chase Brown,RB,CIN,Max,False,23.3,0.99,1.96,0.041,13.2
+Joe Burrow,QB,CIN,Russ,True,37.9,0.99,1.96,0.076,13.1
+Kyle Monangai,RB,CHI,Zach,True,19.0,0.83,1.58,0.053,9.3
+Mike Evans,WR,SF,Russ,True,21.4,0.98,1.93,0.029,9.0
+Trevor Lawrence,QB,JAX,Qasim,False,33.8,1.0,2.12,0.014,7.4
+Jonah Coleman,RB,DEN,Ben,False,19.6,0.99,1.81,0.014,7.4
+DJ Moore,WR,BUF,Mike,False,19.6,1.0,2.1,0.021,7.1
+Broncos,DEF,DEN,Zach,True,13.7,0.99,1.81,0.054,7.1
+Puka Nacua,WR,LA,Russ,True,20.5,0.59,1.2,0.033,6.0
+Will Reichard,K,MIN,Johnny,True,15.7,0.82,1.46,0.039,5.7
+Jaxon Smith-Njigba,WR,SEA,Zach,True,19.3,0.59,1.18,0.027,5.7
+Evan McPherson,K,CIN,Max,False,19.7,0.99,1.96,0.039,5.7
+Brock Purdy,QB,SF,Matt,False,33.9,0.98,1.93,0.015,3.9
+Bills,DEF,BUF,Ryan,False,15.6,1.0,2.1,0.015,3.9
+Tyler Bass,K,BUF,Matt,False,22.1,1.0,2.1,0.015,3.9
+Jaguars,DEF,JAX,Johnny,True,16.7,1.0,2.12,0.019,3.7
+Dalton Kincaid,TE,BUF,Qasim,False,15.3,1.0,2.1,0.017,3.6
+Luther Burden III,WR,CHI,Matt,False,17.3,0.83,1.58,-0.003,2.9
+Cam Little,K,JAX,Qasim,False,22.4,1.0,2.12,0.012,2.8
+Travis Kelce,TE,KC,Qasim,False,14.3,0.98,1.86,0.016,2.7
+Eddy Pineiro,K,SF,Zach,True,17.6,0.98,1.93,0.014,2.5
+Sam LaPorta,TE,DET,Max,False,13.8,0.89,1.73,0.013,2.5
+Jared Goff,QB,DET,Johnny,True,28.7,0.89,1.73,0.016,2.3
+Wil Lutz,K,DEN,free agent,False,17.5,0.99,1.81,-0.003,1.2
+Bengals,DEF,CIN,Qasim,False,14.5,0.99,1.96,0.005,1.0
+Chiefs,DEF,KC,free agent,False,14.0,0.98,1.86,0.005,1.0
+Jameson Williams,WR,DET,Russ,True,17.8,0.89,1.73,-0.006,0.7
+49ers,DEF,SF,free agent,False,13.9,0.98,1.93,0.003,0.2
+Kirk Cousins,QB,MIN,free agent,False,23.7,0.82,1.46,0.0,0.0
+Bo Nix,QB,DEN,Mike,False,25.7,0.99,1.81,0.0,0.0
+Caleb Williams,QB,CHI,Qasim,False,26.2,0.83,1.58,0.0,0.0
+Harrison Butker,K,KC,Ben,False,17.7,0.98,1.86,0.0,0.0
+Cairo Santos,K,CHI,free agent,False,15.8,0.83,1.58,0.0,0.0
+Colston Loveland,TE,CHI,Ryan,False,12.2,0.83,1.58,0.0,0.0
+Nate Boerkircher,TE,JAX,free agent,False,10.7,1.0,2.12,0.0,0.0
+T.J. Hockenson,TE,MIN,Matt,False,10.9,0.82,1.46,0.0,0.0
+Drew Sample,TE,CIN,free agent,False,10.2,0.99,1.96,0.0,0.0
+Nate Adkins,TE,DEN,free agent,False,10.1,0.99,1.81,0.0,0.0
+Lions,DEF,DET,free agent,False,12.5,0.89,1.73,0.011,-1.4
+Vikings,DEF,MIN,Johnny,True,12.8,0.82,1.46,0.011,-1.4
