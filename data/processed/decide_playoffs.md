@@ -1,4 +1,4 @@
-# Playoff prep (built 2026-11-18)
+# Playoff prep (built 2026-11-19)
 
 Likely seeds: 1. Jordan, 2. Russ, 3. Johnny, 4. Zach (simulator's most likely top four). Each keeps his own players, then drafts in seed order; one starting lineup, total points through the Super Bowl.
 
