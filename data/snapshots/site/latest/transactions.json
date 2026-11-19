@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-19T21:42:17+00:00",
+ "as_of": "2026-11-19T23:02:29+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -575,6 +575,25 @@
    },
    "source_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "1177af7f-b63e-4790-b69b-f0938804b80b",
+   "occurred_at": "2026-11-19T21:54:19.03356+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-5119",
+   "player_name": "Jason Sanders",
+   "from_team_id": null,
+   "to_team_id": "team-2",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-19T21:54:19.03356+00:00"
   },
   {
    "id": "12038248-41da-4ced-8c9e-a6fb67fffdbe",
@@ -4232,6 +4251,24 @@
    },
    "source_id": null,
    "created_at": "2026-11-18T19:39:24.729885+00:00"
+  },
+  {
+   "id": "a815838a-47f2-41fd-8aa1-b62ff2badd19",
+   "occurred_at": "2026-11-19T21:53:53.226611+00:00",
+   "type": "drop",
+   "player_id": "sl-6083",
+   "player_name": "Matt Gay",
+   "from_team_id": "team-2",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-19T21:53:53.226611+00:00"
   },
   {
    "id": "a889f212-9486-43c2-97f2-c1a3bd49cdc1",
