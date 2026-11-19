@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-19T01:52:57+00:00",
+ "as_of": "2026-11-19T12:42:23+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -877,9 +877,9 @@
    "position": "RB",
    "nfl_team": "BAL",
    "years_exp": 0,
-   "status": "Inactive",
+   "status": "Active",
    "created_at": "2026-04-16T03:03:34.599741+00:00",
-   "synced_at": "2026-09-01T07:00:05.726+00:00",
+   "synced_at": "2026-11-19T07:00:10.433+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -2849,11 +2849,11 @@
    "sleeper_id": "13580",
    "name": "Carsen Ryan",
    "position": "TE",
-   "nfl_team": "CLE",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-26T07:00:21.27589+00:00",
-   "synced_at": "2026-11-08T07:00:08.763+00:00",
+   "synced_at": "2026-11-19T07:00:10.433+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
@@ -6321,11 +6321,11 @@
    "sleeper_id": "13904",
    "name": "Jacob De Jesus",
    "position": "WR",
-   "nfl_team": "KC",
+   "nfl_team": "FA",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-05-03T07:00:24.227133+00:00",
-   "synced_at": "2026-11-05T07:00:06.647+00:00",
+   "synced_at": "2026-11-19T07:00:10.433+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
