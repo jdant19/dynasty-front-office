@@ -170,7 +170,8 @@ tr:last-child td { border-bottom: 0 }
 
   <nav class="tabs" role="tablist" aria-label="Views">
     <button role="tab" data-tab="today" aria-selected="true">Today</button>
-    <button role="tab" data-tab="season" aria-selected="false">This season</button>
+    <button role="tab" data-tab="strategy" aria-selected="false">Strategy</button>
+    <button role="tab" data-tab="season" aria-selected="false">Season</button>
     <button role="tab" data-tab="future" aria-selected="false">Future</button>
     <button role="tab" data-tab="data" aria-selected="false">Data</button>
   </nav>
@@ -211,6 +212,31 @@ tr:last-child td { border-bottom: 0 }
         <div class="meta">Picked up at the next sync (about 6:40am and 3:40pm Central).</div>
       </div>
       <div id="sentlist"></div>
+    </section>
+  </div>
+
+  <div class="tab" id="tab-strategy" role="tabpanel" hidden>
+    <section>
+      <div class="row" style="justify-content:space-between">
+        <h2>Strategy</h2>
+        <div class="row"><select id="convsel" aria-label="Conversation" style="width:auto;max-width:60vw"></select><button id="newconv">New conversation</button></div>
+      </div>
+      <div class="card pad" style="display:grid;gap:10px">
+        <div class="msgs" id="smsgs" style="max-height:60vh"></div>
+        <textarea id="sinput" placeholder="Ask anything: who to target, whether to sell, what if I let Gibbs go, how Ben negotiates…" style="min-height:70px"></textarea>
+        <div class="row">
+          <button class="primary" id="sask">Ask</button>
+          <button id="srun" title="Starts a Claude Code session that re-runs the models and answers here">Run it in the models</button>
+          <button id="sremember" title="Keep a conclusion for every future conversation">Remember…</button>
+          <button id="sstop" hidden>Stop</button>
+          <span class="meta" id="sstatus" role="status"></span>
+        </div>
+        <div class="meta">Answers come right away from the league data on this page (every roster and contract, values, owners' plans and habits, odds, cap, picks, rules) and what has been settled before. "Run it in the models" hands the question to a Claude Code session that re-runs the simulations and posts the answer here (a few minutes; you get a notification).</div>
+      </div>
+    </section>
+    <section>
+      <h2>What the system remembers</h2>
+      <div id="memory" class="card pad meta">Loads with the data pack.</div>
     </section>
   </div>
 
@@ -268,7 +294,7 @@ const openRows = new Set(), openChats = new Set(), threads = {}, pending = {}, c
 const B = () => window._brief || {};
 
 // ---------------------------------------------------------------- tabs (#today, #season, #future, #data)
-const TABS = ["today", "season", "future", "data"];
+const TABS = ["today", "strategy", "season", "future", "data"];
 function showTab(name) {
   if (!TABS.includes(name)) name = "today";
   document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
@@ -675,20 +701,178 @@ function renderSent(list) {
   box.innerHTML = `<div class="sent"><span class="meta">Recently sent</span>${rows}</div>`;
 }
 
+
+// ---------------------------------------------------------------- Strategy: open conversations with memory and a hand-off to Code
+const ANALYST = "trig_011UZ6QdFFvH937GqyCF2uVi";   // the "Front office analyst" scheduled task (Claude Code session)
+const pack = {}; let mcp = null, convId = null, sPending = null, sCtl = null; const localNotes = [];
+const strat = () => Object.values(threads).filter(t => String(t.id).startsWith("strat-")).sort((a, b) => String(b.id).localeCompare(String(a.id)));
+function renderConvs() {
+  const list = strat(), sel = $("#convsel");
+  if (!convId && list.length) convId = list[0].id;
+  sel.innerHTML = (convId && !list.find(t => t.id === convId) ? `<option value="${esc(convId)}">New conversation</option>` : "") +
+    list.map(t => `<option value="${esc(t.id)}" ${t.id === convId ? "selected" : ""}>${esc((t.title || "Conversation").slice(0, 60))}</option>`).join("") ||
+    `<option value="">No conversations yet</option>`;
+  renderStrat();
+}
+function renderStrat() {
+  const t = threads[convId] || { messages: [] }, who = { you: "You", claude: "Claude", analyst: "Models (Code session)", sync: "Sync" };
+  const box = $("#smsgs");
+  box.innerHTML = (t.messages || []).map(m => `<div class="msg ${esc(m.role === "analyst" ? "sync" : m.role)}"><span class="who">${who[m.role] || esc(m.role)}</span><div>${esc(m.text)}</div></div>`).join("") +
+    (sPending ? `<div class="msg claude"><span class="who">Claude</span><div>${esc(sPending.text || "Thinking…")}</div></div>` : "") +
+    (t.status === "requested" ? `<div class="meta">Waiting for the models (${t.handoff === "sync" ? "queued " : "Code session started "}${esc(t.requested_at ? new Date(t.requested_at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "")}${t.handoff === "sync" ? "; the next sync will answer" : ""}).</div>` : "") ||
+    `<div class="meta">Start with anything. It remembers your plan and what earlier conversations settled.</div>`;
+  box.scrollTop = box.scrollHeight;
+  $("#sask").disabled = !!sPending; $("#sstop").hidden = !sPending;
+  if (!sample) $("#sask").title = "Asking Claude is not available in this view";
+}
+function renderMemory() {
+  const m = pack.memory; if (!m) return;
+  const plan = Object.entries(m.plan || {}).map(([p, steps]) => `${p}: ${(steps || []).map(x => `${x.type} ${x.offseason}`).join(", ")}`).join("; ");
+  const notes = [...(m.notes || []), ...localNotes];
+  $("#memory").innerHTML = `<div><b>Your plan:</b> ${esc(plan || "none recorded")}</div>
+    <div style="margin-top:6px"><b>Settled in earlier conversations:</b> ${notes.length ? `<ul style="margin:4px 0 0 18px;padding:0">${notes.map(n => `<li>${esc(n.note)} <span class="meta">(${esc(String(n.at || "").slice(0, 10))}${n.topic ? ", " + esc(n.topic) : ""})</span></li>`).join("")}</ul>` : "nothing yet. Say “remember…” in a conversation, or use the button."}</div>
+    <div style="margin-top:6px" class="meta">Data pack built ${esc(when((pack.players || {}).made_at))}; league site as of ${esc(when((pack.players || {}).as_of))}.</div>`;
+}
+const when = t => t ? new Date(t).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }) : "unknown";
+const norm = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "");
+const TOOLS = [
+  { name: "find_players", description: "Search every rostered player and the best free agents. Filter by name (part of it), position, owner (e.g. Jordan, Ben) or free_agents_only. Returns contract by season ($), rest-of-season points a game, projected 2027 points, surplus 2027-29 (lineup points), rights, injury, and the model's read of his owner's 2027 designation.",
+    inputSchema: { type: "object", properties: { name: { type: "string" }, pos: { type: "string" }, owner: { type: "string" }, free_agents_only: { type: "boolean" }, limit: { type: "number" } } },
+    execute: ({ name, pos, owner, free_agents_only, limit }) => {
+      const P = pack.players || { rostered: [], free_agents: [] };
+      let rows = free_agents_only ? P.free_agents : [...P.rostered, ...P.free_agents];
+      if (name) rows = rows.filter(r => norm(r.player).includes(norm(name)));
+      if (pos) rows = rows.filter(r => String(r.pos).toUpperCase() === String(pos).toUpperCase());
+      if (owner) rows = rows.filter(r => norm(r.owner) === norm(owner));
+      return { as_of: P.as_of, units: P.units, rows: rows.sort((a, b) => (b.ros_ppg || 0) - (a.ros_ppg || 0)).slice(0, Math.min(limit || 40, 60)) };
+    } },
+  { name: "team", description: "One owner's team: record and 2026 odds, deadline posture, cap room now and 2027-29 (outlook), picks, trading and auction tendencies from 2014-2025, observations, and his full roster with contracts.",
+    inputSchema: { type: "object", properties: { owner: { type: "string" } }, required: ["owner"] },
+    execute: ({ owner }) => { const t = ((pack.teams || {}).teams || []).find(x => norm(x.owner) === norm(owner) || norm(x.team) === norm(owner));
+      if (!t) return { error: "no such owner", owners: ((pack.teams || {}).teams || []).map(x => x.owner) };
+      return { ...t, roster: ((pack.players || {}).rostered || []).filter(r => r.owner === t.owner), sources: pack.teams.sources }; } },
+  { name: "league", description: "All ten teams side by side: record, 2026 odds and expected payout, posture, cap room now and in 2027, 2027 strength.",
+    inputSchema: { type: "object", properties: {} },
+    execute: () => ((pack.teams || {}).teams || []).map(t => ({ owner: t.owner, team: t.team, record: t.record, odds_2026: t.odds_2026, posture: t.deadline_posture, cap_room_now: t.cap_room_now, outlook_2027: (t.outlook || {})["2027"] })) },
+  { name: "season_and_future", description: "Jordan's rest of 2026 (remaining matchups with win chances, standings) and 2027-29 (cap and strength by year, the offseason plan and its alternatives, contract grid, picks).",
+    inputSchema: { type: "object", properties: {} }, execute: () => ({ season: B().season, future: B().future }) },
+  { name: "open_decisions", description: "The current recommendations on the Today tab, with their detail.",
+    inputSchema: { type: "object", properties: {} }, execute: () => (B().decisions || []).map(d => ({ title: d.title, recommendation: d.recommendation, headline: d.headline, value: d.value, detail: d.detail, reason: d.reason })) },
+  { name: "league_rules", description: "The league's rules as data (cap, contracts, RFA and franchise tags, trades, rookie draft, auction, playoffs, payouts).",
+    inputSchema: { type: "object", properties: {} }, execute: () => (pack.rules || {}).league_yaml || "not loaded" },
+  { name: "past_conversations", description: "Earlier strategy conversations: title and their last exchange.",
+    inputSchema: { type: "object", properties: {} },
+    execute: () => strat().filter(t => t.id !== convId).slice(0, 15).map(t => ({ title: t.title, last: (t.messages || []).slice(-2).map(m => `${m.role}: ${String(m.text).slice(0, 500)}`) })) },
+  { name: "remember", description: "Keep a strategic conclusion or something Jordan wants remembered for all future conversations. Use when Jordan asks you to remember something or confirms a conclusion should stand.",
+    inputSchema: { type: "object", properties: { note: { type: "string" }, topic: { type: "string" } }, required: ["note"] },
+    execute: async ({ note, topic }) => saveNote(note, topic, "strategy chat " + convId) },
+];
+async function saveNote(note, topic, source) {
+  const n = { id: "S" + Date.now(), at: new Date().toISOString(), source, topic: topic || "", note, status: "active" };
+  if (!db) throw new Error("saving needs the claude.ai viewer");
+  await db.doc("strategy_notes/" + n.id).set(n);
+  localNotes.push(n); renderMemory();
+  return "Saved. It will be part of every future conversation (and recorded in the repo at the next sync).";
+}
+function stratRules() {
+  const m = pack.memory || {}, b = B();
+  return `You are Jordan's strategy partner for his 10-team salary-cap dynasty fantasy football league (his team: Ja'Jah Pachulia). This is an open strategy conversation.
+How you work:
+- Look things up with the tools before answering; do not guess rosters, contracts, values or owners' habits. Say where numbers come from and how fresh they are.
+- What is already settled (below) stands unless Jordan reopens it or the data has changed; build on it.
+- When Jordan pushes back, re-check the data and either hold your position with reasons or change it and say why. Do not just agree.
+- You cannot re-run the models (trade simulations, what-if plans, auction or RFA outcomes, odds). When a question needs that, say so plainly and suggest "Run it in the models" (a Claude Code session that re-runs them and answers here). Give your best read from the data meanwhile, labeled as a read, not a model result.
+- Never submit, bid, propose or send anything in the league. Trade ideas are not offers.
+- Use "remember" only when Jordan asks you to remember something or confirms a conclusion should stand.
+- Be direct and concise. Money in whole dollars.
+
+Settled (from the repo, ${m.made_at || "not loaded"}): ${JSON.stringify({ plan: m.plan, notes: [...(m.notes || []), ...localNotes].map(n => n.note), principles: m.principles, outlook: m.outlook })}
+Jordan right now (brief ${b.made_at}, Week ${b.week}): ${JSON.stringify({ posture: b.posture, record: (b.season || {}).record, projected: (b.season || {}).projected })}`;
+}
+async function saveConv(patch) {
+  if (!convId) convId = "strat-" + new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
+  const t = { id: convId, title: "", messages: [], status: "open", ...(threads[convId] || {}), ...patch };
+  threads[convId] = t;
+  if (db) await db.doc("threads/" + convId).set(t);
+  return t;
+}
+async function stratAsk() {
+  const q = $("#sinput").value.trim(), st = $("#sstatus");
+  if (!q) { st.textContent = "Type a question first."; return; }
+  if (!sample) { st.textContent = "Asking Claude is not available here; use “Run it in the models”."; return; }
+  const t = threads[convId] || { messages: [] };
+  const msgs = [...(t.messages || []), { role: "you", text: q, at: new Date().toISOString() }];
+  $("#sinput").value = ""; st.textContent = "";
+  try { await saveConv({ messages: msgs, title: t.title || q.slice(0, 80) }); } catch (e) { st.textContent = "Not saved: " + (e.message || e.code); }
+  renderConvs();
+  sPending = { text: "" }; renderStrat(); sCtl = new AbortController();
+  const turns = msgs.map(m => ({ role: m.role === "you" ? "user" : "assistant", content: (m.role === "analyst" ? "[Answer from the models, Code session] " : "") + m.text }));
+  try {
+    const { text } = await sample([{ role: "user", content: stratRules() }, { role: "assistant", content: "Ready." }, ...turns],
+      { cache: false, signal: sCtl.signal, modelTier: "complex", tools: TOOLS,
+        onText: ({ text }) => { sPending = { text }; const el = $("#smsgs .msg.claude:last-child div"); if (el) el.textContent = text; } });
+    sPending = null;
+    await saveConv({ messages: [...msgs, { role: "claude", text, at: new Date().toISOString() }] });
+  } catch (e) {
+    sPending = null;
+    if (e.text) await saveConv({ messages: [...msgs, { role: "claude", text: e.text + " [cut off]", at: new Date().toISOString() }] }).catch(() => {});
+    st.textContent = ({ not_granted: "Asking Claude was not allowed in this view.", rate_limited: "Too many questions at once; try again in a minute.", cancelled: "Stopped." })[e.code] || "Could not get an answer (" + (e.code || "error") + ").";
+  }
+  renderStrat();
+}
+async function stratRun() {
+  const st = $("#sstatus"), extra = $("#sinput").value.trim();
+  if (!db) { st.textContent = "Needs the claude.ai viewer."; return; }
+  const t = threads[convId] || { messages: [] };
+  const msgs = extra ? [...(t.messages || []), { role: "you", text: extra, at: new Date().toISOString() }] : (t.messages || []);
+  if (!msgs.length) { st.textContent = "Write the question first."; return; }
+  $("#sinput").value = "";
+  await saveConv({ messages: msgs, title: t.title || msgs[0].text.slice(0, 80), status: "requested", requested_at: new Date().toISOString() });
+  const text = `Thread id: ${convId}. Jordan pressed "Run it in the models" on the Strategy tab. Answer the latest question in that conversation (read it with ArtifactData: threads/${convId}).`;
+  let started = false;
+  if (mcp) {
+    st.textContent = "Starting a Code session…";
+    try { await mcp.callTool("Claude Code Remote", "fire_trigger", { trigger_id: ANALYST, text }); started = true; }
+    catch (e) {
+      const why = { needs_reauth: "the Claude Code connection needs signing in again", server_not_connected: "the Claude Code connector is not connected for this view",
+        approval_required: "starting a session needs your approval", not_granted: "starting a session was not allowed" }[e.code] || (e.code || "error");
+      st.textContent = `Couldn't start a Code session (${why}). `;
+    }
+  }
+  if (started) { await saveConv({ handoff: "code" }); st.textContent = "Code session started. The answer appears here in a few minutes (you'll get a notification)."; }
+  else { await saveConv({ handoff: "sync" }); st.textContent += "Queued for the next sync (about 6:40am or 3:40pm Central)."; }
+  renderConvs();
+}
+$("#sask").addEventListener("click", stratAsk);
+$("#sinput").addEventListener("keydown", e => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) stratAsk(); });
+$("#srun").addEventListener("click", stratRun);
+$("#sstop").addEventListener("click", () => sCtl && sCtl.abort());
+$("#newconv").addEventListener("click", () => { convId = "strat-" + new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14); renderConvs(); $("#sinput").focus(); });
+$("#convsel").addEventListener("change", e => { convId = e.target.value || null; renderStrat(); });
+$("#sremember").addEventListener("click", async () => {
+  const st = $("#sstatus"), text = $("#sinput").value.trim();
+  if (!text) { st.textContent = "Type what to remember in the box, then press Remember…"; $("#sinput").focus(); return; }
+  try { st.textContent = await saveNote(text, "", "Jordan (strategy tab)"); $("#sinput").value = ""; } catch (e) { st.textContent = "Not saved: " + (e.message || e.code); }
+});
+
 // ---------------------------------------------------------------- start
 (async () => {
   if (!window.claude?.use) return;
   db = await window.claude.use("db");
   assets = await window.claude.use("assets");
   sample = await window.claude.use("sample");
+  mcp = await window.claude.use("mcp");
   if (!db) { $("#stamp").textContent = "Open this page in claude.ai to see the brief and save responses."; return; }
   const timer = setTimeout(() => { if ($("#stamp").textContent.startsWith("Waiting")) $("#stamp").textContent = "The brief has not loaded yet. It appears after the next sync."; }, 10000);
   db.collection("responses").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) responses[v.id] = v; }); if (window._brief) renderDecisions(B().decisions || []); }, () => {});
   db.collection("threads").onSnapshot(s => {
     s.docs.forEach(x => { const v = x.data(); if (v && v.id) threads[v.id] = v; });
-    renderAdhoc();
+    renderAdhoc(); renderConvs();
     if (window._brief) renderDecisions(B().decisions || []);
   }, () => {});
+  ["players", "teams", "memory", "rules"].forEach(k => db.doc("pack/" + k).onSnapshot(s => { const v = s.data(); if (v && v.json) { try { pack[k] = JSON.parse(v.json); renderMemory(); } catch (e) {} } }, () => {}));
+  db.collection("strategy_notes").onSnapshot(s => { const have = new Set(((pack.memory || {}).notes || []).map(n => n.id));
+    localNotes.length = 0; s.docs.forEach(d => { const v = d.data(); if (v && !have.has(v.id)) localNotes.push(v); }); renderMemory(); }, () => {});
   db.collection("notes").onSnapshot(s => renderSent(s.docs.map(d => d.data()).filter(Boolean)), () => {});
   db.collection("answers").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) answers[v.id] = v; }); if (window._brief) renderQuestions(B().questions || []); }, () => {});
   db.doc("brief/today").onSnapshot(s => {

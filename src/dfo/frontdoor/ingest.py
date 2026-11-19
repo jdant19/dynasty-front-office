@@ -57,7 +57,11 @@ def run(dump: dict) -> dict:
                  text=m.get("text", ""), at=m.get("at", ""), thread_status=t.get("status", ""))
             for t in dump.get("threads", []) for m in (t.get("messages") or [])]
     n_threads = _append("threads.csv", msgs)
-    return dict(responses=n_resp, answers=n_ans, notes=n_notes, threads=n_threads)
+    # "remember" notes from the Strategy tab: standing strategy notes, kept for every future conversation
+    keep = [dict(id=n["id"], at=n.get("at", ""), source=n.get("source", ""), topic=n.get("topic", ""), note=n.get("note", ""),
+                 status=n.get("status", "active")) for n in dump.get("strategy_notes", []) if n.get("id") and n.get("note")]
+    n_strat = _append("strategy_notes.csv", keep)
+    return dict(responses=n_resp, answers=n_ans, notes=n_notes, threads=n_threads, strategy_notes=n_strat)
 
 
 if __name__ == "__main__":

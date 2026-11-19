@@ -14,8 +14,9 @@ def test_ingest_is_idempotent(tmp_path, monkeypatch):
     dump["threads"] = [{"id": "trade-Johnny-vikings", "status": "requested", "messages": [
         {"role": "you", "text": "Johnny is a buyer", "at": "2026-11-18T20:00:00Z"},
         {"role": "claude", "text": "Holding", "at": "2026-11-18T20:00:05Z"}]}]
-    assert ingest.run(dump) == dict(responses=1, answers=1, notes=1, threads=2)
-    assert ingest.run(dump) == dict(responses=0, answers=0, notes=0, threads=0)
+    dump["strategy_notes"] = [{"id": "S1", "at": "2026-11-19T18:00:00Z", "source": "Jordan (strategy tab)", "note": "Keep picks for WR3 help"}]
+    assert ingest.run(dump) == dict(responses=1, answers=1, notes=1, threads=2, strategy_notes=1)
+    assert ingest.run(dump) == dict(responses=0, answers=0, notes=0, threads=0, strategy_notes=0)
     q = pd.read_csv(tmp_path / "questions.csv")
     assert q.status[0] == "answered" and q.answer[0] == "attached"
     # a changed verdict later is a new journal row, the first one is kept

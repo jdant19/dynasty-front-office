@@ -26,6 +26,9 @@ is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished 
 | `answers/{question id}` | the page | `{id, answer, at}` |
 | `threads/adhoc-<YYYYMMDD>-<slug>` | any Claude session | an ad-hoc question Jordan raised in a session on the repo and its answer; shown under "Discussions" (CLAUDE.md, "Ad-hoc questions") |
 | `threads/{decision id}` | the page, then the sync | `{id, title, recommendation, messages: [{role: you / claude / sync, text, at}], status: open / requested / answered, requested_at}`; "Discuss" on a decision card. "Ask now" answers on the page from the brief alone; "Send to the sync" sets `status: requested` |
+| `threads/strat-<YYYYMMDDhhmmss>` | the Strategy tab, the analyst, the sync | an open strategy conversation: `{id, title, messages: [{role: you / claude / analyst / sync, text, at}], status, requested_at, handoff: code / sync}` |
+| `strategy_notes/{id}` | the Strategy tab | something Jordan asked to remember or a conclusion he confirmed: `{id, at, source, topic, note, status}`; journaled to `data/journal/strategy_notes.csv` |
+| `pack/players`, `pack/teams`, `pack/memory`, `pack/rules` | the sync, the analyst | the league data pack and the strategy memory (`dfo.frontdoor.pack`), each `{json: <file as a string>}` |
 | `notes/{auto id}` | the page, then the sync | `{id, kind, text, asset_id, asset_ids, filename, at, status}`; the page writes `status: waiting`; the sync sets `status` (saved, entered, question) and a one-line `result`, which the page shows under "Recently sent" |
 
 ## The sync (what the scheduled task does)
@@ -40,8 +43,8 @@ is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished 
       uses GraphQL, which is blocked.) Dispatch each once. If either cannot be started or fails, carry on
       with what is committed and say so in the summary.
 1. `git pull`; note the engine run's result from `data/processed/run_log.csv`.
-2. Read `responses`, `answers` and `notes` from the page database (ArtifactData list) and write them as
-   `{"responses": [...], "answers": [...], "notes": [...]}` to a scratch file; run
+2. Read `responses`, `answers`, `notes`, `threads` and `strategy_notes` from the page database (ArtifactData list) and write them as
+   `{"responses": [...], "answers": [...], "notes": [...], "threads": [...], "strategy_notes": [...]}` to a scratch file; run
    `PYTHONPATH=src python -m dfo.frontdoor.ingest <file>`. Rows already saved are skipped.
 3. For each new note with files (`asset_ids`, or `asset_id` on older notes): download each (Artifact read
    with `path` = the asset id) into `data/raw/screenshots/2026/` as `<date>_<note id>_<n>.<ext>`, and look at
@@ -62,12 +65,27 @@ is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished 
    update pinned to the version read). Add the threads to the ingest dump (`"threads": [...]`) so every
    message lands in `data/journal/threads.csv`.
 5. If results or other inputs changed, re-run `dfo.sim.dial` and `dfo.decide.deadline` (Weeks 10-14), then
-   `dfo.frontdoor.views` (season and future tabs) and `dfo.frontdoor.export`; then write `brief/today` with the new brief.json (pin `if_version` to the version
+   `dfo.frontdoor.views` (season and future tabs), `dfo.frontdoor.pack` (Strategy tab data and memory) and
+   `dfo.frontdoor.export`; write the four `pack/*` documents (one ArtifactData batch, each pinned to the
+   version read); then write `brief/today` with the new brief.json (pin `if_version` to the version
    just read).
 6. Commit `data/journal`, `data/frontdoor`, `data/raw` and any processed tables with a message saying
    what came in; push.
 
 Nothing in the sync proposes, bids or submits anything in the league.
+
+## Strategy tab
+
+Open strategy conversations. The page's Claude answers at once with tools over the data pack (every
+rostered player and the best free agents with contracts and values, all ten teams with odds, cap, picks,
+tendencies and observations, the league rules, the brief) and starts from the strategy memory (Jordan's
+plan, standing strategy notes, his outlook). It cannot re-run models: "Run it in the models" marks the
+conversation `status: requested` and starts the "Front office analyst" scheduled task through the Claude
+Code connector (`fire_trigger`, trigger `trig_011UZ6QdFFvH937GqyCF2uVi`, with the thread id). That Code
+session reads the conversation, re-runs what the question needs, replies as `role: analyst`, and keeps
+any settled conclusion in `data/journal/strategy_notes.csv` (and the page's `pack/memory`). If the page
+cannot start a session (no connector, no consent) the conversation waits for the next sync (step 4b).
+"Remember…" writes a strategy note directly.
 
 ## Decision journal (`data/journal/`)
 
@@ -77,7 +95,8 @@ Nothing in the sync proposes, bids or submits anything in the league.
 | `responses.csv` | each agree / disagree Jordan records (a changed verdict is a new row) |
 | `questions.csv` | each question in the queue, both directions, with its answer |
 | `notes.csv` | each note or upload from the page, with what was done with it |
-| `threads.csv` | each message in a Discuss thread (Jordan, the page's Claude, the sync) |
+| `threads.csv` | each message in a Discuss thread or Strategy conversation (Jordan, the page's Claude, the analyst, the sync) |
+| `strategy_notes.csv` | each standing strategy note (asked to remember, or settled by the analyst); `status` active or retired |
 
 All four are append-only. Following (what Jordan actually started, bid and traded against the
 recommendation) is matched from `jordan_lineups_2026.csv`, the site transactions and trades; the

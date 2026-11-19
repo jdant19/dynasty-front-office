@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-19T12:46:56+00:00",
+ "made_at": "2026-11-19T17:43:23+00:00",
  "week": 11,
  "decisions": [
   {
@@ -610,8 +610,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-19T12:42:23+00:00",
-   "age_hours": 0.1,
+   "as_of": "2026-11-19T13:00:30+00:00",
+   "age_hours": 4.7,
    "limit": "24h",
    "stale": false
   },
@@ -625,17 +625,17 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-19T12:44:44+00:00",
-   "age_hours": 0.0,
+   "age_hours": 5.0,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-18T22:07:11+00:00",
-   "age_hours": 14.7,
+   "as_of": "2026-11-19T12:46:56+00:00",
+   "age_hours": 4.9,
    "limit": "24h",
    "stale": false,
-   "note": "1 step(s) not ok in recent runs"
+   "note": "all recent steps ok"
   }
  ],
  "season": {
