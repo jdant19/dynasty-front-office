@@ -54,12 +54,12 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 | Zachariah Branch | 0 | $-7 |
 | Chris Brazzell II | 0 | $-4 |
 | Ollie Gordon II | 0 | $-4 |
-| Mike Gesicki | 0 | $0 |
-| Kenny Gainwell | 0 | $0 |
-| Lions | 2 | $0 |
-| Jordan Love | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
 | Brenton Strange | 0 | $0 |
+| Mike Gesicki | 0 | $0 |
+| Courtland Sutton | 0 | $0 |
+| Lions | 2 | $0 |
+| Kenny Gainwell | 0 | $0 |
+| Jordan Love | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
