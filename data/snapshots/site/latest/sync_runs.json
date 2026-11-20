@@ -1,6 +1,6 @@
 {
  "table": "sync_runs",
- "as_of": "2026-11-20T07:11:11+00:00",
+ "as_of": "2026-11-20T12:42:22+00:00",
  "rows": [
   {
    "id": "01059a20-d492-4791-97ab-7939cddc1c63",
@@ -2381,6 +2381,20 @@
    "flags_created": 12,
    "duration_ms": 89172,
    "created_at": "2026-05-05T07:01:31.865349+00:00"
+  },
+  {
+   "id": "ec0986ab-4bad-44fb-b826-5e3151737021",
+   "run_at": "2026-11-20T07:15:06.491+00:00",
+   "triggered_by": null,
+   "total_db_players": 4280,
+   "matched": 4280,
+   "updated": 4280,
+   "not_found_count": 0,
+   "new_rookies": 0,
+   "new_free_agents": 0,
+   "flags_created": 0,
+   "duration_ms": 28777,
+   "created_at": "2026-11-20T07:15:31.31667+00:00"
   },
   {
    "id": "ec3c21a8-4c66-4a92-80ed-06946d879aa0",
