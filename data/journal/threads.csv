@@ -36,3 +36,40 @@ So Walker is the only target worth a 1st, and only in the card's form. The other
 The 2027 cap: added salary doesn't change your auction, since you're over after the Gibbs match either way ($0 adds only). The binding limit is the Lamb tag, which must fit under the $300 cap (league.yaml). Your outlook has $350 committed for 2027 including Lamb $96 and Gibbs $135, so $119 before the tag. That leaves about $85 of net added 2027 salary before the tag stops fitting. Net added salary: Walker as carded +$9, Olave +$30, Nabers +$8, Wilson +$2. All fit. Walker for picks only (+$70) plus anything else would not.
 
 What would change this: a seller's WR getting a bigger role (Olave 12.7 and Nabers 12.6 ppg project only just above Washington's 12.1), an injury to Lamb, Chase or Gibbs (which raises every target's gain), or Russ, Johnny or Zach dropping into selling. I haven't saved this as a strategy note. That waits until you confirm it.",2026-11-19T18:15:00Z,answered
+strat-20261119180000@2026-11-20T04:22:49.314Z@you,strat-20261119180000,you,"Well, we don't need them to improve the team this year. Ideally we want to try to not take a hit this year, while building what we have on the roster next year before it gets locked when I match Gibbs in RFA. And in 2027 any WR3 or Flex that is at all +above waiver replacement is a win because I won't be able to add anyone into those roles until after the draft.",2026-11-20T04:22:49.314Z,answered
+strat-20261119180000@2026-11-20T04:23:21.633Z@claude,strat-20261119180000,claude,"I agree with the reframe, and it changes the shopping list. The goal is now 2027 lineup points from cheap contracts, bought with picks, with no 2026 player going out. Picks-only deals for players under $20 meet that: no salary matching is needed and your lineup this year doesn't change. These are reads from the data, not model runs. Player data is from the 2026-11-19 21:42 UTC snapshot.
+
+**What you have for 2027 under contract (with Lamb tagged and Gibbs matched)**
+- QB: Mahomes 275 projected points
+- RB: Gibbs 232, Irving 194
+- WR: Lamb 206, Washington 161, Robinson 115
+- TE: Fannin 135
+- Flex: Kittle 124 (TEs can play flex)
+
+Chase and Hubbard leave, so your holes are WR3 (115) and flex (124). After the auction, the leftovers on seller rosters project about 85–100 points (Douglas 86, Freiermuth 90, Tucker 103). Anything above roughly 125 is a real gain. Each player helps less than the last, because the second one replaces Kittle, not Robinson.
+
+**Best fits: big 2027 points, cheap in picks because their value is mostly 2027**
+1. **Chris Olave (Max): $30 in 2027, 174 points, 3-year surplus only 16.** About 59 points over Robinson, worth about $31 at the league's $0.53 a point. A 2nd is worth about $23 and a 3rd about $23 by your pick values. The earlier answer said Max comes out ahead even giving him away for nothing. Offer a 3rd and go no higher than one of your 2027 2nds. The downside is $45 in 2028.
+2. **Jaylen Warren (Max): $12, 162 points, surplus 28.** Takes the flex from Kittle for about 38 more points. Pair him with Olave in one Max deal.
+3. **Rome Odunze (Ryan): $8, 146 points, surplus 15.** A smaller gain of 22–31 points, but he should cost a 3rd or less.
+
+**Better players who cost much more:** Nabers (186 points, surplus 70), Burden (159, 101), Concepcion (151, 142), Boston (149, 129). Rookie-deal RBs like Jeanty, Hampton, Judkins and Jeremiyah Love have surplus of 169–236, more than a 1st (worth 138). You'd be paying for 2028–29 value. That's not crazy, since you project 5th in 2028 and 9th in 2029, but it's a different goal from this one.
+
+**A lever we haven't used: your second RFA slot**
+You get two RFAs a team, and Gibbs uses one. RFA matches are allowed to put you over the cap, and in 2027 extra salary costs you nothing, because you're limited to $0 adds either way. So you could trade for an expiring cheap player now and use that slot to keep him on a one-year deal at whatever the market bid is. Two examples:
+- Chase Brown (Max): $4 now, 183 points; Max's own projected RFA price is about $66
+- Rashee Rice (Matt): $6 now, 163 points; about $38
+
+That could beat any player under contract. The catch is that the RFA price is set by other owners' bids, and I can't simulate that.
+
+**Cap check**
+The limit is the Lamb tag, which has to fit under $300 when tags happen in June–July. RFA matches come later, in August.
+- Your outlook says $350 committed. That implies about $85 of room for added 2027 salary.
+- Your listed 2027 contracts add up to $311, which would mean about $124 of room. I can't account for the $39 difference, so plan on $85.
+- Olave and Warren add $42 together and fit.
+
+**Two things to settle before any offer**
+- Run it in the models: Olave + Warren from Max for a 2027 2nd or 3rd, and the RFA route on Brown or Rice, including the likely match price and whether a designated player's starting bid counts against the tag deadline.
+- The trade deadline is the end of Week 14. You have room to drop bench players like Gesicki, Deebo or Gainwell to make roster space.
+
+I haven't saved any of this. Tell me if it should stand.",2026-11-20T04:23:21.633Z,answered
