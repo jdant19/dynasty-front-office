@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-19T21:48:23+00:00",
+ "made_at": "2026-11-20T12:48:30+00:00",
  "years": [
   {
    "season": 2027,
@@ -20,9 +20,9 @@
    "contracted": 7,
    "committed": 165,
    "cap_room": 124,
-   "strength": 1964,
+   "strength": 1963,
    "rank": 5,
-   "league_median": 1963,
+   "league_median": 1962,
    "p_first": 0.117,
    "p_top4": 0.421,
    "exp_payout": 107,
@@ -35,9 +35,9 @@
    "contracted": 5,
    "committed": 108,
    "cap_room": 179,
-   "strength": 1954,
+   "strength": 1953,
    "rank": 9,
-   "league_median": 1979,
+   "league_median": 1977,
    "p_first": 0.087,
    "p_top4": 0.344,
    "exp_payout": 88,
@@ -420,7 +420,7 @@
    "round": 2,
    "original": "Max",
    "slot": 4.5,
-   "overall": 14.5,
+   "overall": 14.6,
    "tier": "10-30",
    "points": 44
   },
