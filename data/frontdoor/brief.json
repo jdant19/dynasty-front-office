@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-20T19:06:30+00:00",
+ "made_at": "2026-11-20T21:48:02+00:00",
  "week": 11,
  "decisions": [
   {
@@ -12,7 +12,7 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-20T19:04:11+00:00",
+   "made_at": "2026-11-20T21:45:41+00:00",
    "headline": "Win chance 76%",
    "detail": {
     "type": "lineup",
@@ -141,7 +141,7 @@
    "confidence": "low (no ranks yet)",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap). This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options.",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-20T16:56:56+00:00",
+   "made_at": "2026-11-20T21:42:23+00:00",
    "headline": "Add Cameron Dicker, drop Jake Bates",
    "detail": {
     "type": "waivers",
@@ -610,8 +610,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-20T16:56:56+00:00",
-   "age_hours": 2.2,
+   "as_of": "2026-11-20T21:42:23+00:00",
+   "age_hours": 0.1,
    "limit": "24h",
    "stale": false
   },
@@ -625,21 +625,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-20T12:44:45+00:00",
-   "age_hours": 6.4,
+   "age_hours": 9.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-20T12:48:30+00:00",
-   "age_hours": 6.3,
+   "as_of": "2026-11-20T19:06:30+00:00",
+   "age_hours": 2.7,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-20T19:06:29+00:00",
+  "made_at": "2026-11-20T21:48:01+00:00",
   "weeks_left": [
    11,
    12,
@@ -1061,6 +1061,13 @@
      "p_first": 0.556,
      "p_title": 0.417,
      "exp_payout": 404
+    },
+    {
+     "at": "2026-11-20T21:47",
+     "week": 11,
+     "p_first": 0.556,
+     "p_title": 0.417,
+     "exp_payout": 404
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1069,7 +1076,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-20T19:06:29+00:00",
+  "made_at": "2026-11-20T21:48:01+00:00",
   "years": [
    {
     "season": 2027,
