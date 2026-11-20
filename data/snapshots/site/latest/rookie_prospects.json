@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-19T23:02:29+00:00",
+ "as_of": "2026-11-20T07:11:11+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -2849,11 +2849,11 @@
    "sleeper_id": "13580",
    "name": "Carsen Ryan",
    "position": "TE",
-   "nfl_team": "FA",
+   "nfl_team": "CLE",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-26T07:00:21.27589+00:00",
-   "synced_at": "2026-11-19T07:00:10.433+00:00",
+   "synced_at": "2026-11-20T07:00:08.667+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
