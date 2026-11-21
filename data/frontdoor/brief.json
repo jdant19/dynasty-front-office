@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-21T12:47:02+00:00",
+ "made_at": "2026-11-21T12:48:18+00:00",
  "week": 11,
  "decisions": [
   {
@@ -625,14 +625,14 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-21T12:44:53+00:00",
-   "age_hours": 0.0,
+   "age_hours": 0.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-20T21:48:02+00:00",
-   "age_hours": 15.0,
+   "as_of": "2026-11-21T12:47:02+00:00",
+   "age_hours": 0.0,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
