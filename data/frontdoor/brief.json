@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-21T21:47:22+00:00",
+ "made_at": "2026-11-21T21:48:43+00:00",
  "week": 11,
  "decisions": [
   {
@@ -181,11 +181,11 @@
    "title": "Ben: Kenneth Walker III",
    "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +18, him +5; target: add 2029 round 1 -> you +7, him +15; walk-away: add 2029 round 1 -> you +7, him +15",
    "value": "you +7 (this season +17, later -10), him +15; your 1st place 56% -> 61%, title 38% -> 42%",
-   "confidence": "low",
-   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone.",
+   "confidence": "low (stale inputs)",
+   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. STALE: built from 2026-11-18 projections (3 days old); re-run before acting.",
    "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
    "made_at": "2026-11-18T21:47:46+00:00",
-   "stale": false,
+   "stale": true,
    "headline": "You +$7 \u00b7 title 38%\u219242%",
    "detail": {
     "type": "trade",
@@ -625,14 +625,14 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-21T12:44:53+00:00",
-   "age_hours": 9.0,
+   "age_hours": 9.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-21T17:58:43+00:00",
-   "age_hours": 3.8,
+   "as_of": "2026-11-21T21:47:22+00:00",
+   "age_hours": 0.0,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
