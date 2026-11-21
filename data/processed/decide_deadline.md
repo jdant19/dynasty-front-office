@@ -1,25 +1,25 @@
 # Trade deadline: Week 11 (4 weeks until the Week 14 deadline)
 
-Inputs: projections and simulator as of 2026-11-20; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
+Inputs: projections and simulator as of 2026-11-21; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
 
-**Jordan: PUSH.** A lineup point is worth $0.99 to you this season, 1.9x what it is worth later. 1st 56%, top 4 100%, title 42%, expected payout $404.
+**Jordan: PUSH.** A lineup point is worth $0.98 to you this season, 1.9x what it is worth later. 1st 55%, top 4 100%, title 42%, expected payout $403.
 
-Since 2026-11-20: 1st +0%, title +0%, expected payout +0.
+Since 2026-11-20: 1st -1%, title +0%, expected payout -1.
 
 ## Every team's posture
 
 | Team | Posture | This season vs later | Wins | 1st | Top 4 | Title | Expected payout |
 |---|---|---|---|---|---|---|---|
-| Jordan | push | 1.87x | 13.6 | 56% | 100% | 42% | $404 |
-| Russ | push | 2.14x | 13.1 | 32% | 99% | 22% | $300 |
-| Johnny | push | 2.23x | 12.5 | 12% | 98% | 19% | $210 |
-| Zach | push | 1.51x | 10.3 | 0% | 74% | 13% | $67 |
-| Matt | build | 0.60x | 8.8 | 0% | 14% | 3% | $11 |
-| Qasim | build | 0.26x | 8.1 | 0% | 7% | 1% | $4 |
+| Jordan | push | 1.85x | 13.6 | 55% | 100% | 42% | $403 |
+| Russ | push | 2.20x | 13.1 | 34% | 99% | 22% | $305 |
+| Johnny | push | 2.24x | 12.5 | 11% | 97% | 19% | $206 |
+| Zach | push | 1.45x | 10.3 | 1% | 74% | 13% | $66 |
+| Matt | build | 0.61x | 8.9 | 0% | 14% | 2% | $11 |
+| Qasim | build | 0.27x | 8.1 | 0% | 7% | 1% | $4 |
 | Max | build | 0.24x | 8.2 | 0% | 6% | 1% | $3 |
-| Ryan | build | 0.09x | 7.2 | 0% | 1% | 0% | $0 |
-| Ben | build | 0.02x | 6.1 | 0% | 0% | 0% | $0 |
-| Mike | build | 0.00x | 2.1 | 0% | 0% | 0% | $0 |
+| Ryan | build | 0.09x | 7.2 | 0% | 2% | 0% | $1 |
+| Ben | build | 0.02x | 5.9 | 0% | 0% | 0% | $0 |
+| Mike | build | 0.00x | 2.2 | 0% | 0% | 0% | $0 |
 
 Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike.
 
@@ -36,15 +36,15 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 ## Rentals (contract ends this season and his owner is not expected to designate him)
 
 - Brock Purdy (QB, Matt, $1): +14 lineup points, about $14 of payout to you
-- DeVonta Smith (WR, Ryan, $51): +10 lineup points, about $10 of payout to you
+- DeVonta Smith (WR, Ryan, $51): +11 lineup points, about $10 of payout to you
 - Nico Collins (WR, Max, $91): +6 lineup points, about $6 of payout to you
 - Spencer Shrader (K, Mike, $1): +4 lineup points, about $4 of payout to you
 - Ka'imi Fairbairn (K, Max, $2): +4 lineup points, about $4 of payout to you
 - Cam Little (K, Qasim, $1): +3 lineup points, about $3 of payout to you
 - Justin Jefferson (WR, Qasim, $92): +3 lineup points, about $3 of payout to you
-- Brandon Aubrey (K, Ryan, $2): +2 lineup points, about $2 of payout to you
 - Steelers (DEF, Qasim, $1): +2 lineup points, about $2 of payout to you
-- Tony Pollard (RB, Qasim, $15): +2 lineup points, about $2 of payout to you
+- Brandon Aubrey (K, Ryan, $2): +2 lineup points, about $2 of payout to you
+- Tyler Bass (K, Matt, $1): +2 lineup points, about $2 of payout to you
 
 ## What you can spend (no cost to this season)
 
@@ -52,14 +52,14 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 |---|---|---|
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
-| Ollie Gordon II | 0 | $-4 |
 | Chris Brazzell II | 0 | $-4 |
-| Lions | 0 | $0 |
-| Mike Gesicki | 0 | $0 |
+| Ollie Gordon II | 0 | $-4 |
 | Kenny Gainwell | 0 | $0 |
-| Brenton Strange | 0 | $0 |
 | Courtland Sutton | 0 | $0 |
+| Brenton Strange | 0 | $0 |
 | Jordan Love | 0 | $0 |
+| Mike Gesicki | 0 | $0 |
+| Lions | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
@@ -73,4 +73,4 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 | 2028 round 1 | 0 | $65 |
 | 2028 round 1 (Max's) | 0 | $65 |
 
-Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-20).
+Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-21).
