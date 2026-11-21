@@ -1,6 +1,6 @@
 # Start/sit, Week 11 vs Ryan
 
-Projections made 2026-11-21T12:45:36+00:00 (stats through 2026-11-21T12:44:53+00:00).
+Projections made 2026-11-21T17:57:12+00:00 (stats through 2026-11-21T12:44:53+00:00).
 Win probability 74%: our median 126.9 (sd 23.2) vs Ryan 106.6 (sd 21.3).
 
 | Slot | Player | Team | Median | 80% range | Status |

@@ -1,6 +1,6 @@
 # Waivers, Week 11 (Jordan)
 
-Rest-of-season projections made 2026-11-21T12:45:36+00:00. A lineup point is worth $0.98 of expected payout to you this season (your finish odds from today's standings) and $0.53 in later seasons (league average: 0.011 places a point x $47.50 a place).
+Rest-of-season projections made 2026-11-21T17:57:12+00:00. A lineup point is worth $0.98 of expected payout to you this season (your finish odds from today's standings) and $0.53 in later seasons (league average: 0.011 places a point x $47.50 a place).
 
 Cap room: $-15 (salary $306, dead money $9, traded cap $0; site as of 2026-11-21T12:42:21+00:00). At or over the cap, only $0 adds are allowed, so every claim below is $0 and goes by waiver priority.
 
