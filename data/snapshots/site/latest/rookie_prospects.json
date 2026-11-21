@@ -1,6 +1,6 @@
 {
  "table": "rookie_prospects",
- "as_of": "2026-11-21T01:30:14+00:00",
+ "as_of": "2026-11-21T12:37:40+00:00",
  "rows": [
   {
    "id": "0087ff16-4b1c-4d47-8825-a4cf4b526857",
@@ -5703,13 +5703,13 @@
   {
    "id": "df6524b8-6950-4569-8294-13001fc3ff64",
    "sleeper_id": "13603",
-   "name": "Gregory Desrosiers",
+   "name": "Gregory Desrosiers Jr.",
    "position": "RB",
    "nfl_team": "NYG",
    "years_exp": 0,
    "status": "Active",
    "created_at": "2026-04-27T07:00:26.066983+00:00",
-   "synced_at": "2026-10-28T07:00:08.862+00:00",
+   "synced_at": "2026-11-21T07:15:09.593+00:00",
    "draft_class_year": 2026,
    "released_at": "2026-09-02T02:15:10.065+00:00",
    "drafted_at": null
