@@ -1,24 +1,24 @@
 # Trade deadline: Week 11 (4 weeks until the Week 14 deadline)
 
-Inputs: projections and simulator as of 2026-11-21; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
+Inputs: projections and simulator as of 2026-11-22; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
 
-**Jordan: PUSH.** A lineup point is worth $0.98 to you this season, 1.9x what it is worth later. 1st 55%, top 4 100%, title 42%, expected payout $403.
+**Jordan: PUSH.** A lineup point is worth $0.97 to you this season, 1.8x what it is worth later. 1st 54%, top 4 100%, title 42%, expected payout $403.
 
-Since 2026-11-21: 1st +0%, title +0%, expected payout +0.
+Since 2026-11-21: 1st -0%, title -0%, expected payout -0.
 
 ## Every team's posture
 
 | Team | Posture | This season vs later | Wins | 1st | Top 4 | Title | Expected payout |
 |---|---|---|---|---|---|---|---|
-| Jordan | push | 1.85x | 13.6 | 55% | 100% | 42% | $403 |
-| Russ | push | 2.20x | 13.1 | 34% | 99% | 22% | $305 |
-| Johnny | push | 2.24x | 12.5 | 11% | 97% | 19% | $206 |
-| Zach | push | 1.45x | 10.3 | 1% | 74% | 13% | $66 |
-| Matt | build | 0.61x | 8.9 | 0% | 14% | 2% | $11 |
-| Qasim | build | 0.27x | 8.1 | 0% | 7% | 1% | $4 |
-| Max | build | 0.24x | 8.2 | 0% | 6% | 1% | $3 |
-| Ryan | build | 0.09x | 7.2 | 0% | 2% | 0% | $1 |
-| Ben | build | 0.02x | 5.9 | 0% | 0% | 0% | $0 |
+| Jordan | push | 1.83x | 13.6 | 54% | 100% | 42% | $403 |
+| Russ | push | 2.13x | 13.1 | 34% | 100% | 22% | $308 |
+| Johnny | push | 2.29x | 12.4 | 11% | 97% | 18% | $201 |
+| Zach | push | 1.49x | 10.3 | 1% | 74% | 12% | $67 |
+| Matt | build | 0.58x | 8.9 | 0% | 15% | 3% | $12 |
+| Qasim | build | 0.26x | 8.1 | 0% | 7% | 1% | $4 |
+| Max | build | 0.26x | 8.2 | 0% | 7% | 1% | $4 |
+| Ryan | build | 0.12x | 7.2 | 0% | 2% | 0% | $1 |
+| Ben | build | 0.02x | 6.0 | 0% | 0% | 0% | $0 |
 | Mike | build | 0.00x | 2.2 | 0% | 0% | 0% | $0 |
 
 Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike.
@@ -54,11 +54,11 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 | Zachariah Branch | 0 | $-7 |
 | Ollie Gordon II | 0 | $-4 |
 | Chris Brazzell II | 0 | $-4 |
-| Mike Gesicki | 0 | $0 |
-| Jordan Love | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
 | Kenny Gainwell | 0 | $0 |
+| Mike Gesicki | 0 | $0 |
+| Courtland Sutton | 0 | $0 |
 | Brenton Strange | 0 | $0 |
+| Jordan Love | 0 | $0 |
 | Lions | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
@@ -73,4 +73,4 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 | 2028 round 1 | 0 | $65 |
 | 2028 round 1 (Max's) | 0 | $65 |
 
-Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-21).
+Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-22).

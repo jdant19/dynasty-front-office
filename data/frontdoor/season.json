@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-21T21:47:21+00:00",
+ "made_at": "2026-11-22T12:48:33+00:00",
  "weeks_left": [
   11,
   12,
@@ -16,23 +16,23 @@
   "t": 0
  },
  "projected": {
-  "wins": 13.5,
-  "p_win_out": 0.693
+  "wins": 13.6,
+  "p_win_out": 0.694
  },
  "path": [
   {
    "week": 11,
    "opp": "Ryan",
-   "p_win": 0.734,
-   "me": 133.1,
+   "p_win": 0.736,
+   "me": 133.4,
    "them": 113.1
   },
   {
    "week": 12,
    "opp": "Qasim",
-   "p_win": 0.711,
+   "p_win": 0.715,
    "me": 137.8,
-   "them": 120.2
+   "them": 119.8
   },
   {
    "week": 13,
@@ -86,10 +86,10 @@
    "t": 0,
    "pf": 1439.9,
    "wins": 13.1,
-   "p_first": 0.335,
-   "p_top4": 0.994,
-   "p_title": 0.216,
-   "exp_payout": 305,
+   "p_first": 0.342,
+   "p_top4": 0.995,
+   "p_title": 0.22,
+   "exp_payout": 308,
    "posture": "push"
   },
   {
@@ -100,9 +100,9 @@
    "t": 0,
    "pf": 1437.0,
    "wins": 13.6,
-   "p_first": 0.547,
+   "p_first": 0.544,
    "p_top4": 0.997,
-   "p_title": 0.421,
+   "p_title": 0.42,
    "exp_payout": 403,
    "posture": "push"
   },
@@ -113,11 +113,11 @@
    "l": 2,
    "t": 0,
    "pf": 1304.7,
-   "wins": 12.5,
-   "p_first": 0.112,
-   "p_top4": 0.973,
-   "p_title": 0.191,
-   "exp_payout": 206,
+   "wins": 12.4,
+   "p_first": 0.109,
+   "p_top4": 0.967,
+   "p_title": 0.183,
+   "exp_payout": 201,
    "posture": "push"
   },
   {
@@ -129,9 +129,9 @@
    "pf": 1319.6,
    "wins": 10.3,
    "p_first": 0.006,
-   "p_top4": 0.741,
-   "p_title": 0.126,
-   "exp_payout": 66,
+   "p_top4": 0.735,
+   "p_title": 0.121,
+   "exp_payout": 67,
    "posture": "push"
   },
   {
@@ -143,9 +143,9 @@
    "pf": 1115.3,
    "wins": 8.9,
    "p_first": 0.0,
-   "p_top4": 0.143,
-   "p_title": 0.023,
-   "exp_payout": 11,
+   "p_top4": 0.149,
+   "p_title": 0.032,
+   "exp_payout": 12,
    "posture": "build"
   },
   {
@@ -157,9 +157,9 @@
    "pf": 1116.9,
    "wins": 8.2,
    "p_first": 0.0,
-   "p_top4": 0.065,
+   "p_top4": 0.067,
    "p_title": 0.009,
-   "exp_payout": 3,
+   "exp_payout": 4,
    "posture": "build"
   },
   {
@@ -171,8 +171,8 @@
    "pf": 1115.1,
    "wins": 8.1,
    "p_first": 0.0,
-   "p_top4": 0.067,
-   "p_title": 0.01,
+   "p_top4": 0.072,
+   "p_title": 0.011,
    "exp_payout": 4,
    "posture": "build"
   },
@@ -185,8 +185,8 @@
    "pf": 1088.0,
    "wins": 7.2,
    "p_first": 0.0,
-   "p_top4": 0.017,
-   "p_title": 0.004,
+   "p_top4": 0.015,
+   "p_title": 0.003,
    "exp_payout": 1,
    "posture": "build"
   },
@@ -197,10 +197,10 @@
    "l": 7,
    "t": 0,
    "pf": 1037.9,
-   "wins": 5.9,
+   "wins": 6.0,
    "p_first": 0.0,
    "p_top4": 0.003,
-   "p_title": 0.001,
+   "p_title": 0.0,
    "exp_payout": 0,
    "posture": "build"
   },
@@ -283,9 +283,9 @@
    },
    {
     "week": 10,
-    "p_first": 0.547,
+    "p_first": 0.544,
     "p_top4": 0.997,
-    "p_title": 0.421
+    "p_title": 0.42
    }
   ],
   "as_run": [
@@ -448,6 +448,13 @@
     "week": 11,
     "p_first": 0.547,
     "p_title": 0.421,
+    "exp_payout": 403
+   },
+   {
+    "at": "2026-11-22T12:48",
+    "week": 11,
+    "p_first": 0.544,
+    "p_title": 0.42,
     "exp_payout": 403
    }
   ],
