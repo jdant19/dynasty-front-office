@@ -4,7 +4,7 @@ Inputs: projections and simulator as of 2026-11-22; league results through the l
 
 **Jordan: PUSH.** A lineup point is worth $0.97 to you this season, 1.8x what it is worth later. 1st 54%, top 4 100%, title 42%, expected payout $403.
 
-Since 2026-11-21: 1st -0%, title -0%, expected payout -0.
+Since 2026-11-22: 1st +0%, title +0%, expected payout +0.
 
 ## Every team's posture
 
@@ -52,14 +52,14 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike
 |---|---|---|
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
-| Ollie Gordon II | 0 | $-4 |
 | Chris Brazzell II | 0 | $-4 |
+| Ollie Gordon II | 0 | $-4 |
+| Courtland Sutton | 0 | $0 |
 | Kenny Gainwell | 0 | $0 |
 | Mike Gesicki | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
+| Lions | 0 | $0 |
 | Brenton Strange | 0 | $0 |
 | Jordan Love | 0 | $0 |
-| Lions | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
