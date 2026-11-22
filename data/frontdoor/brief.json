@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-22T18:28:12+00:00",
+ "made_at": "2026-11-22T21:48:08+00:00",
  "week": 11,
  "decisions": [
   {
@@ -12,7 +12,7 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-22T18:26:46+00:00",
+   "made_at": "2026-11-22T21:45:46+00:00",
    "headline": "Win chance 74%",
    "detail": {
     "type": "lineup",
@@ -141,7 +141,7 @@
    "confidence": "low (no ranks yet)",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap). This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options.",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-22T16:15:42+00:00",
+   "made_at": "2026-11-22T21:41:45+00:00",
    "headline": "Add Cameron Dicker, drop Jake Bates",
    "detail": {
     "type": "waivers",
@@ -182,7 +182,7 @@
    "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +18, him +5; target: add 2029 round 1 -> you +7, him +15; walk-away: add 2029 round 1 -> you +7, him +15",
    "value": "you +7 (this season +17, later -10), him +15; your 1st place 56% -> 61%, title 38% -> 42%",
    "confidence": "low (stale inputs)",
-   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. STALE: built from 2026-11-18 projections (3 days old); re-run before acting.",
+   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. STALE: built from 2026-11-18 projections (4 days old); re-run before acting.",
    "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
    "made_at": "2026-11-18T21:47:46+00:00",
    "stale": true,
@@ -570,20 +570,20 @@
    "rental": true
   },
   {
-   "player": "Nico Collins",
-   "owner": "Max",
-   "pos": "WR",
-   "gain": 6.1,
-   "salary": 91,
-   "rental": true
-  },
-  {
    "player": "James Cook",
    "owner": "Matt",
    "pos": "RB",
    "gain": 6.1,
    "salary": 79,
    "rental": false
+  },
+  {
+   "player": "Nico Collins",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 6.1,
+   "salary": 91,
+   "rental": true
   },
   {
    "player": "Chris Olave",
@@ -610,8 +610,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-22T16:15:42+00:00",
-   "age_hours": 2.2,
+   "as_of": "2026-11-22T21:41:45+00:00",
+   "age_hours": 0.1,
    "limit": "24h",
    "stale": false
   },
@@ -625,21 +625,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-22T12:44:45+00:00",
-   "age_hours": 5.7,
+   "age_hours": 9.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-22T12:48:34+00:00",
-   "age_hours": 5.7,
+   "as_of": "2026-11-22T21:09:00+00:00",
+   "age_hours": 0.7,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-22T18:28:11+00:00",
+  "made_at": "2026-11-22T21:48:06+00:00",
   "weeks_left": [
    11,
    12,
@@ -1103,6 +1103,13 @@
      "p_first": 0.544,
      "p_title": 0.42,
      "exp_payout": 403
+    },
+    {
+     "at": "2026-11-22T21:47",
+     "week": 11,
+     "p_first": 0.544,
+     "p_title": 0.42,
+     "exp_payout": 403
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1111,7 +1118,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-22T18:28:12+00:00",
+  "made_at": "2026-11-22T21:48:07+00:00",
   "years": [
    {
     "season": 2027,
