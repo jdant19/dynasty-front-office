@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-23T21:48:10+00:00",
+ "made_at": "2026-11-23T22:35:49+00:00",
  "week": 11,
  "decisions": [
   {
@@ -416,9 +416,9 @@
   "stance": "push",
   "moved": {
    "since": "2026-11-23",
-   "p_first": 0.001,
-   "p_title": -0.012,
-   "payout": -2
+   "p_first": 0.0,
+   "p_title": 0.0,
+   "payout": 0
   },
   "league": [
    {
@@ -611,7 +611,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-23T21:41:53+00:00",
-   "age_hours": 0.1,
+   "age_hours": 0.9,
    "limit": "24h",
    "stale": false
   },
@@ -625,21 +625,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-23T21:44:07+00:00",
-   "age_hours": 0.1,
+   "age_hours": 0.9,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
    "as_of": "2026-11-23T21:46:35+00:00",
-   "age_hours": 0.0,
+   "age_hours": 0.8,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-23T21:46:34+00:00",
+  "made_at": "2026-11-23T22:35:48+00:00",
   "weeks_left": [
    11,
    12,
@@ -1131,6 +1131,13 @@
      "p_first": 0.619,
      "p_title": 0.402,
      "exp_payout": 420
+    },
+    {
+     "at": "2026-11-23T22:35",
+     "week": 11,
+     "p_first": 0.619,
+     "p_title": 0.402,
+     "exp_payout": 420
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1139,7 +1146,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-23T21:46:34+00:00",
+  "made_at": "2026-11-23T22:35:49+00:00",
   "years": [
    {
     "season": 2027,
