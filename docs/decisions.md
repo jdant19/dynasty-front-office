@@ -314,3 +314,12 @@ Question: who matters for the league playoffs, and what is adding them before We
   simulated). A player on a non-playoff team can be drafted anyway; adding him still pays when it frees
   Jordan's pick for someone else. Rival playoff teams' players come only by trade.
 - Output: `decide_playoffs.md`, `decide_playoffs_adds.csv`, `decide_playoffs_lineups.csv`.
+
+## Simulator calibration check (2026-11-23 correction, `sim/dial.py: calibration`)
+The check compares the simulator's week-to-week spread within a team with 2026's actual spread
+(`tests/test_sim.py`, within 10%). It used every remaining week, including the current one, whose
+games already played are fixed at their scores. On Monday morning of Week 11 nearly all of that week
+was scored, so its spread across draws was close to zero and pulled the average to 20.95 against an
+actual 23.46 (-10.7%), failing the engine run. The model was not wrong; the measure was. The check now
+leaves out the current week once any of its points are fixed: 22.99 vs 23.46 (-2%), mean score 119.23 vs
+118.59. Classified as a parameter-check fix, not a change to the model.

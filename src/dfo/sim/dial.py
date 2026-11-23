@@ -48,6 +48,9 @@ def calibration(state) -> pd.DataFrame:
     act = pd.concat([d[["owner_a" if "owner_a" in d else "team_a", "score_a"]].set_axis(["owner", "score"], axis=1),
                      d[["team_b", "score_b"]].set_axis(["owner", "score"], axis=1)])
     W = s["weekly"]
+    teams = (state or season.load_state())[0]
+    if len(W) > 1 and any((~np.isnan(t.fixed)).any() for t in teams):
+        W = W[1:]       # this week is partly scored already, so its spread across draws is not a weekly spread
     out = pd.DataFrame([dict(measure="league mean team score", actual=act.score.mean(), simulated=W.mean()),
                         dict(measure="week-to-week spread within a team", actual=act.groupby("owner").score.std().mean(),
                              simulated=W.std(axis=1).mean())]).round(2)
