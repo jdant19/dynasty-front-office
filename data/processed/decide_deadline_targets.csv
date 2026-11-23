@@ -1,5 +1,5 @@
 owner,player,pos,salary_2026,your_lineup_gain,payout_now,rental,later_value_to_him
-Ben,Kenneth Walker III,RB,67,30.9,28,False,-1
+Ben,Kenneth Walker III,RB,67,30.9,29,False,-1
 Matt,Brock Purdy,QB,1,14.2,13,True,0
 Ryan,George Pickens,WR,71,12.0,11,False,-22
 Ryan,Dak Prescott,QB,2,11.6,11,False,-4
@@ -8,10 +8,10 @@ Max,Nico Collins,WR,91,6.1,6,True,0
 Matt,James Cook,RB,79,5.5,5,False,7
 Max,Chris Olave,WR,15,5.3,5,False,8
 Matt,Michael Wilson,WR,1,5.0,5,False,33
-Mike,Spencer Shrader,K,1,4.5,4,True,0
 Qasim,Malik Nabers,WR,7,4.5,4,False,37
+Mike,Spencer Shrader,K,1,4.5,4,True,0
 Max,Ka'imi Fairbairn,K,2,4.4,4,True,0
-Qasim,Cam Little,K,1,2.7,2,True,0
+Qasim,Cam Little,K,1,2.7,3,True,0
 Qasim,Justin Jefferson,WR,92,2.6,2,True,0
 Qasim,Caleb Williams,QB,5,2.5,2,False,33
 Qasim,Garrett Wilson,WR,51,2.3,2,False,-8
