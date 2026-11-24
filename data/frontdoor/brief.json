@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-24T12:50:52+00:00",
+ "made_at": "2026-11-24T19:04:49+00:00",
  "week": 12,
  "decisions": [
   {
@@ -611,7 +611,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-24T12:42:35+00:00",
-   "age_hours": 0.1,
+   "age_hours": 6.4,
    "limit": "24h",
    "stale": false
   },
@@ -625,14 +625,14 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-24T12:44:54+00:00",
-   "age_hours": 0.1,
+   "age_hours": 6.3,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
    "as_of": "2026-11-24T12:49:07+00:00",
-   "age_hours": 0.0,
+   "age_hours": 6.3,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
