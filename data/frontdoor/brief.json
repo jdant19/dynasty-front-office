@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-24T12:49:07+00:00",
+ "made_at": "2026-11-24T12:50:52+00:00",
  "week": 12,
  "decisions": [
   {
@@ -631,8 +631,8 @@
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-24T03:19:50+00:00",
-   "age_hours": 9.5,
+   "as_of": "2026-11-24T12:49:07+00:00",
+   "age_hours": 0.0,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
