@@ -1,6 +1,6 @@
 {
  "table": "transactions",
- "as_of": "2026-11-24T03:15:47+00:00",
+ "as_of": "2026-11-24T04:46:33+00:00",
  "rows": [
   {
    "id": "001dc00c-702e-4ece-b524-5dd7acc95662",
@@ -873,6 +873,25 @@
    "created_at": "2026-08-17T13:04:14.461143+00:00"
   },
   {
+   "id": "1c3c16e9-7e01-44fe-af10-35d994e5574b",
+   "occurred_at": "2026-11-24T03:21:31.469139+00:00",
+   "type": "fa_signing",
+   "player_id": "def-SF",
+   "player_name": "San Francisco 49ers D/ST",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "DEF",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:21:31.469139+00:00"
+  },
+  {
    "id": "1c94fe29-afc1-49bf-b55f-6169af2e698c",
    "occurred_at": "2026-08-05T03:48:52.463869+00:00",
    "type": "trade",
@@ -1525,6 +1544,25 @@
    "created_at": "2026-10-16T20:53:03.679274+00:00"
   },
   {
+   "id": "33a7721d-d7ca-409b-8059-f92f0cb5c4e0",
+   "occurred_at": "2026-11-24T03:22:28.893661+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-5995",
+   "player_name": "Justice Hill",
+   "from_team_id": null,
+   "to_team_id": "team-3",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "RB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:22:28.893661+00:00"
+  },
+  {
    "id": "353b83c2-74a9-4622-ba27-cc1f316bc0f8",
    "occurred_at": "2026-11-16T22:59:33.975601+00:00",
    "type": "fa_signing",
@@ -1783,6 +1821,24 @@
    },
    "source_id": null,
    "created_at": "2026-08-07T01:37:04.703473+00:00"
+  },
+  {
+   "id": "44919d19-9ad4-4ced-a0ac-2a58717e5ff4",
+   "occurred_at": "2026-11-24T03:20:44.17423+00:00",
+   "type": "drop",
+   "player_id": "sl-7562",
+   "player_name": "Tutu Atwell",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "WR",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:20:44.17423+00:00"
   },
   {
    "id": "460aa019-203b-46f9-94cb-0250ea725d1c",
@@ -4529,6 +4585,24 @@
    "created_at": "2026-10-16T20:58:05.121462+00:00"
   },
   {
+   "id": "b175c629-7362-4529-8976-0cef9f8b345d",
+   "occurred_at": "2026-11-24T03:22:43.674902+00:00",
+   "type": "drop",
+   "player_id": "sl-11539",
+   "player_name": "Jake Bates",
+   "from_team_id": "team-4",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "K",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:22:43.674902+00:00"
+  },
+  {
    "id": "b38c0c6e-8359-4c66-a8a1-b561d02cbced",
    "occurred_at": "2026-11-05T22:13:09.60945+00:00",
    "type": "drop",
@@ -4654,6 +4728,25 @@
    },
    "source_id": "591a0d58-9b2a-473a-b648-f0cdf8c7cefd",
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "b970ab66-c87a-4367-91af-1bc18d00e90c",
+   "occurred_at": "2026-11-24T03:23:41.494953+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-2020",
+   "player_name": "Cairo Santos",
+   "from_team_id": null,
+   "to_team_id": "team-4",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "K",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:23:41.494953+00:00"
   },
   {
    "id": "b99abc18-59e3-47c3-8632-dd38525f9f42",
@@ -4853,6 +4946,25 @@
    },
    "source_id": null,
    "created_at": "2026-11-05T22:24:40.520007+00:00"
+  },
+  {
+   "id": "bdff8c5d-9597-4492-a7c0-c3935f962758",
+   "occurred_at": "2026-11-24T03:21:38.572728+00:00",
+   "type": "fa_signing",
+   "player_id": "sl-12522",
+   "player_name": "Cam Ward",
+   "from_team_id": null,
+   "to_team_id": "team-10",
+   "amount": 1,
+   "details": {
+    "source": "commissioner_add",
+    "position": "QB",
+    "in_season": true,
+    "cap_exempt": true,
+    "season_year": 2026
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:21:38.572728+00:00"
   },
   {
    "id": "becedbf2-620a-4a46-a55c-9c1bf87aca33",
@@ -5142,6 +5254,24 @@
    },
    "source_id": null,
    "created_at": "2026-11-13T21:39:42.072883+00:00"
+  },
+  {
+   "id": "cb585ffc-7c9d-45f7-868f-2f487cf75410",
+   "occurred_at": "2026-11-24T03:22:07.672816+00:00",
+   "type": "drop",
+   "player_id": "sl-421",
+   "player_name": "Matthew Stafford",
+   "from_team_id": "team-3",
+   "to_team_id": null,
+   "amount": 3,
+   "details": {
+    "season": 2026,
+    "position": "QB",
+    "cap_exempt": false,
+    "dead_money": 3
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:22:07.672816+00:00"
   },
   {
    "id": "cc6d45be-7798-4346-93c0-925b66e99752",
@@ -6180,6 +6310,24 @@
    },
    "source_id": "220d7eac-9e7b-49ad-9d2d-0aac74595761",
    "created_at": "2026-08-05T21:33:26.453873+00:00"
+  },
+  {
+   "id": "f4d4cd0b-b25f-4512-952d-7651773510c1",
+   "occurred_at": "2026-11-24T03:20:31.186251+00:00",
+   "type": "drop",
+   "player_id": "def-NO",
+   "player_name": "New Orleans Saints D/ST",
+   "from_team_id": "team-10",
+   "to_team_id": null,
+   "amount": 0,
+   "details": {
+    "season": 2026,
+    "position": "DEF",
+    "cap_exempt": true,
+    "dead_money": 0
+   },
+   "source_id": null,
+   "created_at": "2026-11-24T03:20:31.186251+00:00"
   },
   {
    "id": "f4f9c952-a005-4f62-9278-063948100897",

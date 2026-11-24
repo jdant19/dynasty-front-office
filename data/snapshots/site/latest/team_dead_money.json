@@ -1,6 +1,6 @@
 {
  "table": "team_dead_money",
- "as_of": "2026-11-24T03:15:47+00:00",
+ "as_of": "2026-11-24T04:46:33+00:00",
  "rows": [
   {
    "id": "00b07175-4aae-4de1-9f03-59fd63a7adbc",
@@ -313,6 +313,18 @@
    "amount_year5": 0,
    "salary_start_year": 2026,
    "created_at": "2026-04-05T19:39:28.248552+00:00"
+  },
+  {
+   "id": "4fb116b9-ab2a-4466-a555-576c7b2252dd",
+   "team_id": "team-3",
+   "label": "Matthew Stafford (dropped 2026/2027)",
+   "amount_year1": 3,
+   "amount_year2": 0,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "created_at": "2026-11-24T03:22:07.672816+00:00"
   },
   {
    "id": "5383f79b-4bbc-4f9f-972f-9ea7d867e888",
