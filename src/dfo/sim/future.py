@@ -229,10 +229,24 @@ def _cap_by_year() -> dict[str, dict[int, float]]:
     return out
 
 
+def locked_levels(repl: dict[str, float]) -> dict[str, float]:
+    """Slot floor for a team over the cap, which can only make $0 adds (league.yaml cap.at_or_over_cap):
+    the best $0 leftovers after the 2027 auction (locked_out_levels.csv, decide/offseason.py), never above
+    the auction replacement level; K and DEF are streamed either way."""
+    out = dict(repl)
+    f = PROCESSED / "locked_out_levels.csv"
+    if f.exists():
+        for r in pd.read_csv(f).itertuples():
+            if r.pos in out and r.pos not in ("K", "DEF"):
+                out[r.pos] = min(out[r.pos], float(r.points))
+    return out
+
+
 def strengths() -> pd.DataFrame:
     shift, lam, _ = market_params()
     ev = ExpectedValue("auction", shift=shift, horizons=(0,))
     repl = dict(ev.replacement[0])
+    locked = locked_levels(repl)
     prices = contracts()
     cap = _cap_by_year()
     dist = pd.read_csv(PROCESSED / "val_picks_distribution.csv")
@@ -248,9 +262,9 @@ def strengths() -> pd.DataFrame:
         for o in owners:
             g = prices[(prices.owner == o) & (prices[f"salary_{y}"] > 0)][["pos", f"proj_points_{y}"]]
             g = g.rename(columns={f"proj_points_{y}": "points"}).dropna()
-            base = lineup_points(g, repl)
             n_players = len(g)
             room = 300 - cap.get(o, {}).get(y, 0.0) - max(0, 18 - n_players)            # $1 fillers
+            base = lineup_points(g, locked if room < 0 else repl)    # over the cap: $0 leftovers only
             bought = max(room, 0.0)                                                   # converted below
             rookies = sum(by_round[int(r.round)].iloc[min(y - r.draft_year, 2)]
                           for r in picks[(picks.owner == o) & (picks.draft_year <= y)].itertuples()

@@ -1,27 +1,27 @@
 # Jordan: three-year outlook (2027-2029)
 
-Built 2026-11-10 from prices.csv, the designation plan, site picks, dead money and traded cap.
+Built 2026-11-24 from prices.csv, the designation plan, site picks, dead money and traded cap.
 
 | Season | Under contract | Cap committed | Cap room | Lineup points | Bought with room | Rookies | Strength | Expected payout | 1st | Top 4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2027 | 11 | $313 | $-20 | 1866 | 0 | 7 | 1873 | $82 | 8% | 34% |
-| 2028 | 8 | $211 | $79 | 1825 | 68 | 63 | 1956 | $105 | 11% | 40% |
-| 2029 | 6 | $156 | $132 | 1740 | 94 | 103 | 1937 | $85 | 9% | 34% |
+| 2027 | 11 | $350 | $-57 | 1698 | 0 | 7 | 1706 | $20 | 1% | 11% |
+| 2028 | 7 | $165 | $124 | 1800 | 100 | 63 | 1963 | $110 | 12% | 42% |
+| 2029 | 5 | $108 | $179 | 1724 | 126 | 103 | 1953 | $87 | 9% | 34% |
 
 ## Contracts and planned designations
 
 | Player | Pos | 2027 | 2028 | 2029 | Points 2027 |
 |---|---|---|---|---|---|
-| Jahmyr Gibbs | RB | $98* | $75* |  | 228 |
-| CeeDee Lamb | WR | $96* |  |  | 207 |
-| Parker Washington | WR | $27 | $36* | $38* | 158 |
-| Harold Fannin Jr. | TE | $22 |  |  | 120 |
-| Jaxson Dart | QB | $12 | $13 | $15 | 164 |
-| Bucky Irving | RB | $4 | $43* | $45* | 191 |
-| Zachariah Branch | WR | $4 | $5 | $6 | 57 |
-| Ollie Gordon II | RB | $3 | $4 |  | 70 |
-| George Kittle | TE | $2 |  |  | 115 |
-| Patrick Mahomes | QB | $2 | $3 | $4 | 263 |
+| Jahmyr Gibbs | RB | $135* | $75* |  | 232 |
+| CeeDee Lamb | WR | $96* |  |  | 206 |
+| Parker Washington | WR | $27 | $33* | $35* | 161 |
+| Harold Fannin Jr. | TE | $22 |  |  | 135 |
+| Jaxson Dart | QB | $12 | $13 | $15 | 166 |
+| Bucky Irving | RB | $4 |  |  | 194 |
+| Zachariah Branch | WR | $4 | $5 | $6 | 58 |
+| Ollie Gordon II | RB | $3 | $4 |  | 79 |
+| Patrick Mahomes | QB | $2 | $3 | $4 | 275 |
+| George Kittle | TE | $2 |  |  | 124 |
 | Wan'Dale Robinson | WR | $2 | $3 | $4 | 115 |
 | Chris Brazzell II | WR | | | | |
 

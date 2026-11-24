@@ -91,6 +91,9 @@ designations:                            # per team, per offseason, players on r
     order: generic ESPN fantasy ranking found by search on designation day   # Jordan
     contract_years_after: [1, 4]
     match_may_exceed_cap: true
+    match_requires_under_cap: true       # Jordan, 2026-11-24: a team must be at or under the cap (signed contracts,
+                                         # tags, earlier matches) before each match; a match may take it over, but
+                                         # then it cannot match a later RFA. RFAs are settled in ranking order.
     bids_limited_to_cap_space: true
   franchise_tag:
     per_team: 1

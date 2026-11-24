@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-24T03:19:50+00:00",
+ "made_at": "2026-11-24T04:40:33+00:00",
  "week": 12,
  "decisions": [
   {
@@ -379,13 +379,13 @@
    "kind": "Offseason plan",
    "deadline": "2027 designation day",
    "title": "2027 designations",
-   "recommendation": "Tag Lamb + match Gibbs",
-   "value": "$124 expected 2027 payout, $319 over three years",
+   "recommendation": "Tag Lamb, let Gibbs go",
+   "value": "$152 expected 2027 payout, $335 over three years",
    "confidence": "low",
    "reason": "Played through RFA bidding and the auction with every owner's likely plan.",
    "change": "Other owners' plans (review them), Gibbs's RFA price, the ESPN ranking order.",
-   "made_at": "2026-11-18T21:14:48+00:00",
-   "headline": "$319 over three years",
+   "made_at": "2026-11-24T04:31:45+00:00",
+   "headline": "$335 over three years",
    "detail": {
     "type": "offseason"
    }
@@ -497,18 +497,18 @@
   "outlook": [
    {
     "season": 2027,
-    "cap_room": -20,
-    "strength": 1873
+    "cap_room": -57,
+    "strength": 1706
    },
    {
     "season": 2028,
-    "cap_room": 79,
-    "strength": 1956
+    "cap_room": 124,
+    "strength": 1963
    },
    {
     "season": 2029,
-    "cap_room": 132,
-    "strength": 1937
+    "cap_room": 179,
+    "strength": 1953
    }
   ]
  },
@@ -594,8 +594,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-23T22:55:09+00:00",
-   "age_hours": 4.4,
+   "as_of": "2026-11-24T03:15:47+00:00",
+   "age_hours": 1.4,
    "limit": "24h",
    "stale": false
   },
@@ -609,21 +609,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-23T21:44:07+00:00",
-   "age_hours": 5.6,
+   "age_hours": 6.9,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-23T22:35:49+00:00",
-   "age_hours": 4.7,
+   "as_of": "2026-11-24T03:19:50+00:00",
+   "age_hours": 1.3,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-24T03:19:49+00:00",
+  "made_at": "2026-11-24T04:40:29+00:00",
   "weeks_left": [
    11,
    12,
@@ -1137,21 +1137,21 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-24T03:19:50+00:00",
+  "made_at": "2026-11-24T04:40:30+00:00",
   "years": [
    {
     "season": 2027,
     "contracted": 11,
     "committed": 350,
     "cap_room": -57,
-    "strength": 1883,
-    "rank": 2,
-    "p_first": 0.128,
-    "p_top4": 0.474,
-    "exp_payout": 124,
-    "note": "over the cap through RFA matches (allowed); nothing bought at auction",
+    "strength": 1714,
+    "rank": 8,
+    "p_first": 0.035,
+    "p_top4": 0.242,
+    "exp_payout": 50,
+    "note": "over the cap through the last RFA match (allowed); nothing bought at auction, $0 leftovers only",
     "released": "",
-    "source": "auction simulation, 2026-11-18"
+    "source": "auction simulation, 2026-11-24"
    },
    {
     "season": 2028,
@@ -1508,40 +1508,40 @@
    ],
    "scenarios": [
     {
-     "scenario": "Tag Lamb + match Gibbs",
-     "payout_2027": 124,
-     "payout_3yr": 319,
-     "room_2027": -57,
-     "gibbs": "$135 ($116-135)",
-     "gibbs_to": "Jordan"
-    },
-    {
-     "scenario": "Let both go",
-     "payout_2027": 122,
-     "payout_3yr": 305,
-     "room_2027": 172,
+     "scenario": "Tag Lamb, let Gibbs go",
+     "payout_2027": 152,
+     "payout_3yr": 335,
+     "room_2027": 67,
      "gibbs": "$135 ($116-135)",
      "gibbs_to": "Mike"
     },
     {
      "scenario": "Match Gibbs, Lamb to the auction",
-     "payout_2027": 102,
-     "payout_3yr": 297,
+     "payout_2027": 134,
+     "payout_3yr": 328,
      "room_2027": 38,
      "gibbs": "$135 ($116-135)",
      "gibbs_to": "Jordan"
     },
     {
-     "scenario": "Tag Lamb, let Gibbs go",
-     "payout_2027": 99,
-     "payout_3yr": 282,
-     "room_2027": 77,
+     "scenario": "Let both go",
+     "payout_2027": 139,
+     "payout_3yr": 322,
+     "room_2027": 29,
      "gibbs": "$135 ($116-135)",
      "gibbs_to": "Mike"
+    },
+    {
+     "scenario": "Tag Lamb + match Gibbs",
+     "payout_2027": 50,
+     "payout_3yr": 244,
+     "room_2027": -57,
+     "gibbs": "$135 ($116-135)",
+     "gibbs_to": "Jordan"
     }
    ],
-   "chosen": "Tag Lamb + match Gibbs",
-   "made_at": "2026-11-18T21:14:48+00:00"
+   "chosen": "Tag Lamb, let Gibbs go",
+   "made_at": "2026-11-24T04:31:45+00:00"
   },
   "picks": [
    {

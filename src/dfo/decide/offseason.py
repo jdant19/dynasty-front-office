@@ -25,7 +25,7 @@ import itertools
 import numpy as np
 import pandas as pd
 
-from dfo.common import PROCESSED
+from dfo.common import PROCESSED, load_config
 from dfo.decide.outlook import Outlook
 from dfo.sim import future as F
 
@@ -111,7 +111,16 @@ class Auction:
         for i, o, _ in rfas:
             committed[o] += start[i]
         rfa_paid, rfa_winner = {}, {}
+        # league.yaml designations.rfa.match_requires_under_cap (Jordan 2026-11-24): a team over the cap
+        # before a match (contracts, tags, earlier settled matches; its unsettled RFAs not counted) cannot match
+        need_under = load_config("league")["designations"]["rfa"].get("match_requires_under_cap", False)
+        pending = {o: sum(start[i] for i, oo, _ in rfas if oo == o) for o in self.owners}
+        self.blocked_matches = []
         for i, o, pk in sorted(rfas, key=lambda x: -self.order_value(x[0])):
+            pending[o] -= start[i]
+            if need_under and committed[o] - start[i] - pending[o] > 300:
+                pk = 0.0                                       # cannot match: he goes to the top bidder
+                self.blocked_matches.append(i)
             market = float(p.auction_cost_2027.get(i, 1) or 1)
             ratio = next(x for k, x in self.RFA_RATIO if posrank.get(i, 999) <= k)
             if rng is not None:
@@ -122,7 +131,7 @@ class Auction:
             price = float(max(start[i], min(round(market * ratio), top_room)))
             if top_room < start[i]:
                 price = float(start[i])                        # nobody can bid: kept at the opening price
-            kept = (rng.random() < pk) if (rng is not None and o != ME) else (pk >= 0.5)
+            kept = (rng.random() < pk) if (rng is not None and o != ME and pk > 0) else (pk >= 0.5)
             rfa_paid[i] = price
             if kept or top_room < start[i]:
                 committed[o] += price - start[i]
@@ -166,7 +175,8 @@ class Auction:
 
         def gain(o, i, extra=()):
             ids = roster[o] + bought[o] + list(extra)
-            return _lineup(by_pos(ids + [i]), self.repl) - _lineup(by_pos(ids), self.repl)
+            r = self.o.locked_repl if room[o] < 0 else self.repl      # over the cap: $0 leftovers only
+            return _lineup(by_pos(ids + [i]), r) - _lineup(by_pos(ids), r)
 
         # Jordan first: the set that adds most to his lineup within budget (greedy by points per dollar,
         # then by points, keeping the better; then single upgrades)
@@ -218,6 +228,9 @@ class Auction:
             bought[w].append(i)
             budget[w] -= price[i]
         left_over += [i for i in pool.index[spots + 40:]]
+        # what a locked-out team can still add for $0 (outlook.locked_out_levels): the best leftovers by position
+        lo = pd.DataFrame({"pos": p.pos.reindex(left_over).to_numpy(), "pts": pts.reindex(left_over).to_numpy()}).dropna()
+        leftover_levels = {pos: float(g.pts.nlargest(3).mean()) for pos, g in lo.groupby("pos")}
         # after the auction: $0 leftovers, best first, teams in order of need (locked-out teams included)
         free = {o: [] for o in self.owners}
         for o in sorted(self.owners, key=lambda o: -(ROSTER - len(roster[o]) - len(bought[o]))):
@@ -230,18 +243,39 @@ class Auction:
         for o in self.owners:
             ids = roster[o] + bought[o] + free[o]
             own = [(int(r.draft_year), int(r.round)) for r in self.o.picks[self.o.picks.owner == o].itertuples()]
-            rows.append(dict(owner=o, room=round(room[o]), lineup=round(_lineup(by_pos(ids), self.repl), 1),
+            r = self.o.locked_repl if room[o] < 0 else self.repl
+            rows.append(dict(owner=o, room=round(room[o]), lineup=round(_lineup(by_pos(ids), r), 1),
                              rookies=round(self.o._rookies(own, Y), 1)))
         t = pd.DataFrame(rows)
         t["strength"] = t.lineup + t.rookies
         nm = lambda ids: ", ".join(f"{self.name[i]} (${int(price.get(i, 0))})" if i in price and i in bought[ME]
                                    else str(self.name[i]) for i in ids)
         return dict(teams=t, price_factor=round(f, 2), jordan_room=round(room[ME]), rfa_paid=rfa_paid,
-                    rfa_winner=rfa_winner,
+                    rfa_winner=rfa_winner, leftover_levels=leftover_levels,
                     richest_other_room=round(max(room[o] for o in self.owners if o != ME)),
                     jordan_bought=nm(bought[ME]), jordan_free=nm(free[ME]),
                     jordan_spent=int(sum(price[i] for i in bought[ME])),
                     prices=pool[["player", "pos", f"proj_points_{Y}", "base", "price"]].head(60))
+
+
+def locked_out_levels(a: "Auction | None" = None) -> pd.DataFrame:
+    """Season points of the best $0 leftovers by position after the 2027 auction (mean of the top 3 left
+    unsold, Jordan's plan, likely path): what a team over the cap can still add. Written to
+    locked_out_levels.csv for the outlook."""
+    a = a or Auction()
+    p = a.p
+    keep = {}
+    for r in pd.read_csv(PROCESSED / "designation_plan.csv").query("owner == @ME and offseason == @Y").itertuples():
+        if r.type == "tag":
+            keep[r.player_id] = float(r.salary_2027)
+    rfa = {r.player_id: True for r in pd.read_csv(PROCESSED / "designation_plan.csv")
+           .query("owner == @ME and offseason == @Y and type == 'rfa'").itertuples()}
+    lv = a.play(keep, rfa)["leftover_levels"]
+    out = pd.DataFrame([dict(pos=k, points=round(v, 1)) for k, v in sorted(lv.items())])
+    out["made_at"] = pd.Timestamp.now(tz="UTC").isoformat(timespec="seconds")
+    out["source"] = "decide.offseason auction, likely path, Jordan's plan; top 3 unsold by position"
+    out.to_csv(PROCESSED / "locked_out_levels.csv", index=False)
+    return out
 
 
 def scenarios(draws: int = 16) -> pd.DataFrame:
@@ -250,6 +284,7 @@ def scenarios(draws: int = 16) -> pd.DataFrame:
     winning bid drawn around history."""
     o = Outlook()
     a = Auction(o)
+    locked_out_levels(a)
     p = a.p
     gid = p.index[p.player == "Jahmyr Gibbs"][0]
     lid = p.index[p.player == "CeeDee Lamb"][0]

@@ -1,19 +1,19 @@
 {
- "made_at": "2026-11-24T03:19:50+00:00",
+ "made_at": "2026-11-24T04:40:30+00:00",
  "years": [
   {
    "season": 2027,
    "contracted": 11,
    "committed": 350,
    "cap_room": -57,
-   "strength": 1883,
-   "rank": 2,
-   "p_first": 0.128,
-   "p_top4": 0.474,
-   "exp_payout": 124,
-   "note": "over the cap through RFA matches (allowed); nothing bought at auction",
+   "strength": 1714,
+   "rank": 8,
+   "p_first": 0.035,
+   "p_top4": 0.242,
+   "exp_payout": 50,
+   "note": "over the cap through the last RFA match (allowed); nothing bought at auction, $0 leftovers only",
    "released": "",
-   "source": "auction simulation, 2026-11-18"
+   "source": "auction simulation, 2026-11-24"
   },
   {
    "season": 2028,
@@ -370,40 +370,40 @@
   ],
   "scenarios": [
    {
-    "scenario": "Tag Lamb + match Gibbs",
-    "payout_2027": 124,
-    "payout_3yr": 319,
-    "room_2027": -57,
-    "gibbs": "$135 ($116-135)",
-    "gibbs_to": "Jordan"
-   },
-   {
-    "scenario": "Let both go",
-    "payout_2027": 122,
-    "payout_3yr": 305,
-    "room_2027": 172,
+    "scenario": "Tag Lamb, let Gibbs go",
+    "payout_2027": 152,
+    "payout_3yr": 335,
+    "room_2027": 67,
     "gibbs": "$135 ($116-135)",
     "gibbs_to": "Mike"
    },
    {
     "scenario": "Match Gibbs, Lamb to the auction",
-    "payout_2027": 102,
-    "payout_3yr": 297,
+    "payout_2027": 134,
+    "payout_3yr": 328,
     "room_2027": 38,
     "gibbs": "$135 ($116-135)",
     "gibbs_to": "Jordan"
    },
    {
-    "scenario": "Tag Lamb, let Gibbs go",
-    "payout_2027": 99,
-    "payout_3yr": 282,
-    "room_2027": 77,
+    "scenario": "Let both go",
+    "payout_2027": 139,
+    "payout_3yr": 322,
+    "room_2027": 29,
     "gibbs": "$135 ($116-135)",
     "gibbs_to": "Mike"
+   },
+   {
+    "scenario": "Tag Lamb + match Gibbs",
+    "payout_2027": 50,
+    "payout_3yr": 244,
+    "room_2027": -57,
+    "gibbs": "$135 ($116-135)",
+    "gibbs_to": "Jordan"
    }
   ],
-  "chosen": "Tag Lamb + match Gibbs",
-  "made_at": "2026-11-18T21:14:48+00:00"
+  "chosen": "Tag Lamb, let Gibbs go",
+  "made_at": "2026-11-24T04:31:45+00:00"
  },
  "picks": [
   {

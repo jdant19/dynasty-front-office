@@ -152,8 +152,16 @@ Question: what does my team look like in 2027-29, and what does a move do to it?
   those players, what the room buys at that August's auction (the season's clearing price), rookies
   from picks owned; the sum is the team's strength, and the future simulator turns all ten teams'
   strengths into expected payout.
-- RFA matches may take a team over the cap (tags and extensions may not), so a plan fits when everything
-  but its matches fits; the team then buys nothing at auction. A plan that still does not fit gives
+- RFA matches may take a team over the cap (tags and extensions may not), but a team must be at or under
+  the cap before each match (Jordan 2026-11-24, league.yaml `match_requires_under_cap`): RFAs settle in
+  ranking order, so a plan fits when everything but its last match fits; the team then buys nothing at
+  auction and cannot match a later RFA.
+- Empty or weak slots take the auction's replacement level, except for a team over the cap, which can only
+  make $0 adds (league.yaml `at_or_over_cap`): its slots take the best $0 leftovers after the 2027 auction
+  (`locked_out_levels.csv`, top 3 unsold by position on the likely auction path; 2026-11-24: QB 258, RB 102,
+  WR 116, TE 107 season points against the auction replacement 348 / 162 / 159 / 158). Before 2026-11-24 a
+  locked-out team was floored at the auction level, which credited Jordan's tag-and-match plan with about
+  176 2027 lineup points it could not buy and made any WR3 or flex under 2027 contract look worthless to him. A plan that still does not fit gives
   something up: the one release that leaves the strongest team if one is enough, otherwise planned
   designations first (free to skip), then contracts (75% dead).
 - A trade rebuilds both teams' outlooks; the change in strength, x0.88 a year, is the trade's later
@@ -232,6 +240,11 @@ Question: which designations (RFA match, tag, let go) give the best team and pay
   Gibbs go $111 ($290); match Gibbs and send Lamb to the auction $98 ($286).
 - History (2014-2025, 115 team-seasons): teams that spent $0-25 at auction (15) finished 4.7 on average;
   $26-175 finished 5.4-5.8; $176+ (5) finished 5.0.
+
+- 2026-11-24: a team over the cap before a match cannot match (match_requires_under_cap), and a team over the
+  cap after the RFAs scores its lineup with the $0 leftovers level, not the auction level. Re-run: tag Lamb +
+  match Gibbs fell from first ($319 over three years) to last ($244); Tag Lamb and let Gibbs go $335, match
+  Gibbs and auction Lamb $328, let both go $322. Taken to Jordan as a question (his plan stands until he says).
 
 Known limits: other teams' plans are the model's, not confirmed; RFA prices for other teams' players
 are market prices; one auction path per scenario (no bidding randomness yet).

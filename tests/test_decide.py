@@ -145,11 +145,22 @@ def test_outlook_fits_under_the_cap_every_season():
     o = Outlook()
     t = o.team("Jordan")
     assert list(t.season) == [2027, 2028, 2029]
-    # under the cap, or over it only by RFA matches (league.yaml: a match may exceed the cap)
+    # under the cap, or over it only by the last RFA match (league.yaml: a match may exceed the cap)
     for r in t.itertuples():
         g = o.prices[o.prices.player_id.isin(o.rfa_years.get(r.season, set())) & (o.prices.owner == "Jordan")]
         assert r.cap_room + g[f"salary_{r.season}"].fillna(0).sum() >= 0
         assert r.cap_room >= 0 or r.points_bought == 0
+
+
+def test_rfa_match_needs_room_before_it():
+    """league.yaml match_requires_under_cap (Jordan 2026-11-24): only the last match may go over the cap."""
+    from dfo.decide.outlook import Outlook
+    o = Outlook()
+    assert o.rfa_need_under
+    o._rfa_rank = {"a": 2.0, "b": 1.0}                 # a is settled first, b last
+    assert o.rfa_fits({"a": 60.0, "b": 40.0}, -30)      # at +10 before b's match: both may be matched
+    assert not o.rfa_fits({"a": 60.0, "b": 40.0}, -50)  # at -10 before b's match: over, b cannot be matched
+    assert o.rfa_fits({"a": 60.0}, -60) and not o.rfa_fits({}, -1)
 
 
 def test_a_pick_sent_costs_the_sender_what_it_gives_the_receiver():

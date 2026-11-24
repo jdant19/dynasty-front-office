@@ -11,7 +11,9 @@ The working model of a team for the next three seasons, built on the future-seas
     buys nothing at auction. Otherwise the team gives something up (a planned designation is skipped
     for free; a real contract is cut and leaves 75% dead) until it fits
   - strength = best lineup from players under contract + what the room buys at that August's auction
-    (the season's clearing price) + rookies from picks owned
+    (the season's clearing price) + rookies from picks owned. Slots without a better player get the
+    auction's replacement level, or, for a team over the cap ($0 adds only), the best $0 leftovers after
+    the 2027 auction (locked_out_levels.csv, from decide/offseason.py; used for every season)
 A trade moves players, picks and cap between two teams; the outlook is rebuilt for both. The change
 in strength each season, x0.88 a year, is the trade's later value in lineup points (so depth that
 would never start, or cap a team has no room to give, is counted for what it really does), priced at
@@ -63,7 +65,35 @@ class Outlook:
                 if y >= int(r.offseason) and float(getattr(r, f"salary_{y}", 0) or 0) > 0:
                     self.rfa_years.setdefault(y, set()).add(r.player_id)
         self.allow_rfa_over_cap = load_config("league")["designations"]["rfa"].get("match_may_exceed_cap", False)
+        self.rfa_need_under = load_config("league")["designations"]["rfa"].get("match_requires_under_cap", False)
+        self._rfa_rank = None
+        # a team over the cap can only make $0 adds (league.yaml cap.at_or_over_cap), so its empty or weak
+        # slots take the best $0 leftovers after the auction, not the auction's $1 replacement level
+        self.locked_repl = F.locked_levels(self.repl)
         self._cache = {}
+
+    def rfa_rank(self, pid: str) -> float:
+        """RFAs are settled in ranking order (offseason.order_value: FantasyCalc dynasty value); higher first."""
+        if self._rfa_rank is None:
+            try:
+                from dfo.valuation.prices import fantasycalc
+                self._rfa_rank = fantasycalc().set_index("player_id").fc_value.to_dict()
+            except Exception:
+                self._rfa_rank = {}
+        return float(self._rfa_rank.get(pid, 0.0))
+
+    def rfa_fits(self, matches: dict[str, float], room: float) -> bool:
+        """Does a plan whose cap room (all its RFA matches counted) is `room` fit? A match may take a team
+        over the cap, but the team must be at or under it before each match (match_requires_under_cap,
+        Jordan 2026-11-24). Matches settle in ranking order, so everything but the last one must fit."""
+        if not matches:
+            return room >= 0
+        if not self.allow_rfa_over_cap:
+            return room >= 0
+        if not self.rfa_need_under:
+            return sum(matches.values()) + room >= 0
+        last = min(matches, key=self.rfa_rank)
+        return matches[last] + room >= 0
 
     # ------------------------------------------------------------ one team, one season
     def _pick_cap(self, rnd: int, draft_year: int, y: int) -> float:
@@ -97,7 +127,8 @@ class Outlook:
 
         room = room_of(g, committed)
         matched = (self.rfa_years.get(y, set()) & set(g.index)) if self.allow_rfa_over_cap else set()
-        over_ok = lambda gg, r: sum(float(gg.salary.get(m, 0)) for m in matched if m in gg.index) + r >= 0
+
+        over_ok = lambda gg, r: self.rfa_fits({x: float(gg.salary[x]) for x in matched if x in gg.index}, r)
         while room < 0 and len(g) and not over_ok(g, room):
             base = F.lineup_points(g, self.repl)
             opts = []
@@ -121,10 +152,11 @@ class Outlook:
             g = g.drop(pid)
             committed -= freed
             room = room_of(g, committed)
-        lineup = F.lineup_points(g, self.repl)
+        lineup = F.lineup_points(g, self.locked_repl if room < 0 else self.repl)
         bought = max(room, 0.0) / price
         rook = self._rookies(own, y)
-        note = ("over the cap through RFA matches (allowed); nothing bought at auction" if room < 0 else "")
+        note = ("over the cap through the last RFA match (allowed); nothing bought at auction, $0 leftovers only"
+                if room < 0 else "")
         return dict(season=y, owner=owner, contracted=len(g), committed=round(committed), cap_room=round(room), note=note,
                     lineup_points=round(lineup, 1), points_bought=round(bought, 1), rookie_points=round(rook, 1),
                     strength=round(lineup + bought + rook, 1), released="; ".join(released))

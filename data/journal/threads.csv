@@ -73,3 +73,149 @@ The limit is the Lamb tag, which has to fit under $300 when tags happen in June�
 - The trade deadline is the end of Week 14. You have room to drop bench players like Gesicki, Deebo or Gainwell to make roster space.
 
 I haven't saved any of this. Tell me if it should stand.",2026-11-20T04:23:21.633Z,answered
+strat-20261119180000@2026-11-24T03:59:50.815Z@you,strat-20261119180000,you,"We are headed in the right direction. We can use some players to match, it just can't hurt us in projected points this year. And we should still explore the deals of players ""who will cost more"".
+
+The problem with the 2nd RFA is that if anyone bids anything I cant match, so its very unlikely I could keep them.",2026-11-24T03:59:50.815Z,answered
+strat-20261119180000@2026-11-24T04:00:32.815Z@claude,strat-20261119180000,claude,"Agreed on both: no hit to this year's points, and price out the expensive players too. One pushback first, on the RFA.
+
+**The second RFA slot: the rules say you can match while over the cap**
+- The league rules file has `match_may_exceed_cap: true`. Only bidders are limited to their cap space. You confirmed that in your own clarifications (`can_exceed_via: rfa_match`).
+- Your Gibbs plan depends on this too. You'd be $57 over the cap in 2027 and still matching him.
+- If the league actually works differently, the Gibbs match breaks too, and that's the bigger problem. Is there a rule or past ruling that isn't in the data?
+- There are still real reasons this route is weak:
+  - Other owners set the price. Max's own projection for Chase Brown is about $66.
+  - Any years past 2027 eat into your 2028 room.
+- So it's a fallback, not the plan. Contracts we trade for are better.
+
+**Using your players to match salary**
+- None of the targets below need it. They're all $8 or less, so picks-only trades are legal.
+- Your players that cost you no points this year don't add much value to a deal:
+  - Dart (on IR) is worth about −38 points to the team that takes him. Moving him saves you $12–15 a year in 2027–29, but it costs about a 2nd to get someone to take him.
+  - Branch, Brazzell and Gordon are worth slightly less than nothing.
+  - Fannin is your 2027 TE.
+  - Love is a $1 backup QB with RFA rights, worth a little to a rebuilding team.
+- Picks are the real currency.
+
+**The expensive targets (data as of 2026-11-23 21:41 UTC)**
+
+2027 gain is measured against your 2027 roster with Lamb tagged and Gibbs matched. A WR replaces Robinson (115 points) at WR3. An RB replaces Kittle (124) at flex. Model price is 3-year surplus × $0.53.
+
+| Player (owner) | 2027 / 2028 salary | 2027 points | 2027 gain for you | Model price |
+|---|---|---|---|---|
+| Jeanty (Max) | $7 / $8 | 205 | +81 (~$43) | ~$94 |
+| Nabers (Qasim) | $8 / RFA | 186 | +71 (~$38) | ~$37 |
+| Judkins (Matt) | $7 / $8 | 176 | +52 | ~$106 |
+| Hampton (Ryan) | $7 / $8 | 175 | +51 | ~$90 |
+| J. Love (Ben, on IR) | $6 / $7 | 172 | +48 | ~$125 |
+| Burden (Matt) | $5 / $6 | 159 | +44 | ~$54 |
+| Concepcion (Qasim) | $6 / $7 | 151 | +36 | ~$75 |
+| Boston (Ryan) | $4 / $5 | 149 | +34 | ~$68 |
+
+**What I'd target**
+1. **Nabers is the best fit for 2027.** Almost all his model value is 2027, and you'd get roughly that much in points that season.
+   - In 2028 he'd be an RFA. Your second slot is free that year (Washington takes the other) and you'd have $124 of room, so keeping him is realistic.
+   - The catch is price. His FantasyCalc dynasty value (6,289, an index not dollars) is the highest of the group, so Qasim will want a 1st.
+   - Qasim usually spends picks on players (7 more sold than bought) and is your most frequent partner (5 trades).
+   - Open with your 2027 2nd plus your 2028 2nd. Go up to your own 2028 1st.
+2. **Jeanty is the biggest 2027 gain, and he helps in 2028 too**, when you project 5th. He's on Max's bench.
+   - Start with Max's own 2028 1st plus Max's 2027 2nd, both picks you hold (about $80–90 against the $94 model price).
+   - Getting his own picks back should appeal to a rebuilding team.
+3. **If either says no:** Judkins or Hampton for a 1st plus a 2nd, or Burden for a 1st.
+4. **Concepcion, Boston and Love** are mostly 2028–29 value. Love is also hurt. Lower priority.
+
+**If you get both Nabers and Jeanty**
+- **2027:** about +150 lineup points on your 1,883 strength. Kittle and Robinson become depth. They add $15 of 2027 salary, well inside the roughly $85 the Lamb tag can absorb.
+- **2026:** nothing gets worse. Nabers (12.6 ppg) is slightly better than Washington (12.1), and Jeanty (12.5) is useful depth. You'd cut two of Gesicki, Strange, Gainwell and Sutton ($1 dead cap each).
+- **Cost:** about two 1sts' worth. You'd keep one 1st (2028 or 2029) and the later-round picks.
+
+**Run it in the models:**
+- Nabers and Jeanty, separately and together, at these prices
+- Judkins or Hampton as substitutes
+- Whether adding Dart to the Max deal is worth one 2nd
+
+These are reads, not offers. I haven't saved anything.",2026-11-24T04:00:32.815Z,answered
+strat-20261119180000@2026-11-24T04:04:03.319Z@you,strat-20261119180000,you,"On the RFA if once you got over the cap (say with the first RFA match) then you cant match the 2nd. If you went over on the 2nd, you would be fine. But we will go over with the Gibbs match which will happen first.
+
+Whats the gap between Kittle and Fannin, if we are adding a 3rd WR and flex Kittle slides to TE and we could still net positive. 
+
+Are there any options where we get both a WR3 and a flex in the same deal
+
+But together a list of the best deals from this entire thread and then we will run all of those in the models",2026-11-24T04:04:03.319Z,answered
+strat-20261119180000@2026-11-24T04:04:40.786Z@claude,strat-20261119180000,claude,"You're right about the RFA, so I'm dropping that route. Kittle can't replace Fannin for free next year, but trading Fannin still costs nothing this year. And yes, there are good one-deal packages that fill both WR3 and flex.
+
+**RFA**
+- The second 2027 RFA slot is unusable. Gibbs gets matched first and puts you over the cap, so you can't match anyone after him. That rules out Chase Brown and Rice.
+- **The models have this wrong.** Their rules file only says matches may exceed the cap. It doesn't say you lose the second match once you're over. That needs fixing in the Code session.
+- It also matters for 2028: if you get Nabers, both he and Washington would be RFAs that year. Their two matches together have to fit inside your $124 of room.
+- Should I save this rule clarification?
+
+**Kittle vs Fannin**
+- **2027:** Fannin projects 135 points at $22, Kittle 124 at $2. Moving Fannin and starting Kittle at TE costs about 11 lineup points.
+- **2026:** Kittle projects 12.0 points a game for the rest of the season, Fannin 8.4. Trading Fannin costs nothing this year as long as Kittle starts. (The snapshot shows Fannin starting and Kittle on the bench, so check your lineup.)
+- **What you gain:** $22 more 2027 cap cushion under the Lamb tag.
+- **How to move him:** At $21 he triggers salary matching. Max can take him on with his $59 of room. Matt, Qasim, Ben and Ryan don't have the space, so they'd have to send salary back.
+- So with two additions, it's Fannin at TE and Kittle on the bench if you keep him. If you trade him, it's Kittle at TE, down 11 points. That's still a net gain once you add the WR3 and flex.
+
+**Both WR3 and flex in one deal**
+2027 gain is measured against Robinson (115) at WR3 and Kittle (124) at flex. A third RB doesn't add anything because Irving moves to flex, so the pairs are WR+RB or WR+WR. The model price is three-year surplus × $0.53, including the 2028–29 value you'd also get. The pair options are deals 2–8 in the list below.
+
+**Deals to run in the models**
+
+| # | Deal | 2027 gain | 2027 salary | Model price | Opening offer (ceiling) |
+|---|---|---|---|---|---|
+| 1 | **Max: Olave + Warren** for picks | +97 | $42 | ~$23 | 2027 R3 (one 2027 R2) |
+| 1b | Max: Olave + Warren for **Fannin** + picks | +86 | +$20 net | ~$23 + Fannin (~$3) | 2027 R3 |
+| 2 | Max: Jeanty + Olave | +140 | $37 | ~$103 | Max's 2028 R1 + Max's 2027 R2 (add 2029 R2) |
+| 3 | Qasim: Nabers + Concepcion | +98 | $14 | ~$112 | 2028 R1 + 2027 R2 |
+| 4 | Ryan: Hampton + Odunze | +82 | $15 | ~$98 | Max's 2028 R1 + 2027 R3 (add 2028 R2) |
+| 5 | Matt: Wilson + Burden | +69 | $7 | ~$86 | 2028 R1 |
+| 6 | Ben: Egbuka + Skattebo | +61 | $12 | ~$75 | 2027 R2 + 2028 R2 (2028 R1) |
+| 7 | Matt: Burden + Judkins | +96 | $12 | ~$160 | Two 1sts (low priority) |
+| 8 | Qasim: Nabers alone | +71 | $8 | ~$37 | 2027 R2 + 2028 R2 (2028 R1) |
+| 9 | Max: Jeanty alone | +81 | $7 | ~$94 | Max's 2028 R1 + Max's 2027 R2 |
+| 10 | Matt: Wilson alone | +34 | $2 | ~$33 | 2027 R3 (2027 R2) |
+| 11 | Ryan: Odunze alone | +31 | $8 | ~$8 | 2029 R3 |
+| 12 | Stack: deal 1 + Nabers (deal 8) | ~+120 | $50 | ~$60 | Combined |
+| 13 | Ben: Walker, as carded (sends out Washington, Dart, Fannin) | Model only | +$9 net | — | Reference only, since it sends out your 2027 WR2 |
+
+Dropped: Pickens (bad contract), Chase Brown and Rice (RFA rule), Love from Ben's team (IR, mostly 2028–29 value).
+
+**My read (not a model result)**
+- Deal 1 is the standout: about 97 points for roughly a 3rd's worth.
+  - The cost shows up in 2028, when Olave rises to $45 and Warren to $13.
+- If you want a bigger move, deal 2 is the best of the expensive ones.
+- Deal 1 plus Nabers is the strongest combination that stays inside the cap.
+
+**Constraints for the models to apply to every deal**
+1. Your 2026 projected points can't drop. Score each deal on 2026 payout plus 2027–29 lineup points.
+2. The Lamb tag must still fit under $300. Plan on about $85 of added 2027 salary.
+   - Your listed 2027 contracts add up to $311, not the outlook's $350, so the real room may be about $124. Have the models explain the $39 gap.
+3. Roster spots: you have 22 of 22. Cut players with no 2027 salary (Gesicki, Sutton, Strange, Gainwell, Deebo). Don't cut Branch or Brazzell, because they'd leave 2027 dead cap. Use them as trade throw-ins instead.
+4. Fix the RFA rule (no second match once you're over the cap), then re-check the 2027 and 2028 plans.
+5. Decide whether Fannin or Robinson works better as a throw-in for each deal.
+
+Rosters and contracts come from the latest site snapshot, pulled just now. None of these are offers, and I haven't saved anything.",2026-11-24T04:04:40.786Z,answered
+strat-20261119180000@2026-11-24T04:08:18.694Z@you,strat-20261119180000,you,Ok lets put those 13 deals and the constraints and run it in the models.,2026-11-24T04:08:18.694Z,answered
+strat-20261119180000@2026-11-24T04:50:00Z@analyst,strat-20261119180000,analyst,"Ran all 13 deals, plus Fannin and Robinson as throw-ins and the stacks: 47 runs, trades.State.evaluate at 6,000 sims each. Inputs: site snapshot 2026-11-24 03:15 UTC, proj_ros 03:17 UTC, prices.csv. Score = your expected payout this season plus 2027-29 ($). Full table: data/processed/analyst_strat-20261119180000.csv.
+
+**Answer: only Max's Olave + Warren comes out ahead.**
+- 1c. Olave + Warren for Dart + a 2027 2nd: **+$23**. Adding Robinson: +$24. 2027 +96 points; 2028 -26 (Olave $45, Warren $13), partly offset by moving Dart's $12/13/15.
+- 1. Olave + Warren for a 2027 3rd: **+$15**. 2027 +96, 2028 -36. The model values your 2027 2nd and 3rd the same, so the 2nd ceiling costs you nothing extra in its eyes. Still open with the 3rd.
+- 1b. With Fannin instead of picks: +$11. Fannin out costs 11 points at TE in 2027. **Keep Fannin.** With Qasim, Matt and Ben he's illegal anyway (25% salary rule).
+- Max gains +$37 to +$50 from these (he sheds Olave's $30/$45), so the deal should appeal to him.
+- Close to even: Wilson for a 3rd -$2, Nabers for two 2nds -$5, Odunze for a 2029 3rd -$5.
+- Negative even though the 2027 gain is big: Jeanty + Olave -$8 (+138 pts in 2027), Matt's Wilson + Burden -$24, Ben's pair -$30, Jeanty alone -$33, Nabers + Concepcion -$36, Hampton + Odunze -$52, Burden + Judkins -$69, Walker card -$17. The 1sts are worth more in 2028-29 than the 2027 points.
+- Stacking deal 1 + Nabers: -$15 (1c + Nabers: -$8). The second addition helps much less than the first.
+
+**Your constraints**
+- 2026: no deal lowers your lineup (0 to +4.7 points). 1st-place odds go from 59% to as high as 64%.
+- Lamb tag: about $85 of room, confirmed. The $39 gap is $311 of contracts plus $30 of 2027 cap you traded to Who Dey White House (Oct 26), $7 of rookie salaries for your 2027 picks, and $2 of Thornton dead money, for $350 total. Every deal fits (the most is +$50 for the stack).
+- Roster: the drops the model picks are Love and Sutton (no 2027 salary). Gesicki or Gainwell work just as well. Never Branch or Brazzell.
+
+**Two system fixes (committed)**
+1. RFA rule: you have to be at or under the cap before each match (league.yaml match_requires_under_cap), as you said. Saved as a strategy note.
+2. This is why the answer changed. The outlook gave a team over the cap the auction's replacement level in its weak slots (WR 159, RB 162, TE 158) for free, but a locked-out team can only add $0 players. So any WR3 or flex looked worthless to you. On that basis deal 1 scored -$21 and Wilson added 0 points. The fix uses the best $0 leftovers after the auction instead (WR 116, RB 102, TE 107), which is your point exactly.
+
+**Fix 2 also hits your Gibbs/Lamb plan.** Re-run (decide.offseason): tag Lamb + match Gibbs drops from first ($319 over three years) to last ($244, 2027 rank 8). Tag Lamb and let Gibbs go $335; match Gibbs and send Lamb to auction $328; let both go $322. The page now shows ""Tag Lamb, let Gibbs go"" as low confidence. **Your plan stands until you decide.** It needs its own conversation, because it changes this one: if you aren't over the cap, you can buy a WR3 and flex at auction, and these trades are worth less.
+
+What would change the answer: the Gibbs decision; Max asking for more than a 2nd; injuries to Lamb, Gibbs or Washington (those raise every target's value). These are model reads, not offers.",2026-11-24T04:50:00Z,answered
