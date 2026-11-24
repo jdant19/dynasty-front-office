@@ -2,49 +2,49 @@
 
 Inputs: projections and simulator as of 2026-11-24; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
 
-**Jordan: PUSH.** A lineup point is worth $0.88 to you this season, 1.7x what it is worth later. 1st 60%, top 4 100%, title 43%, expected payout $417.
+**Jordan: PUSH.** A lineup point is worth $0.93 to you this season, 1.8x what it is worth later. 1st 56%, top 4 100%, title 41%, expected payout $406.
 
-Since 2026-11-23: 1st -2%, title +2%, expected payout -4.
+Since 2026-11-24: 1st -3%, title -1%, expected payout -11.
 
 ## Every team's posture
 
 | Team | Posture | This season vs later | Wins | 1st | Top 4 | Title | Expected payout |
 |---|---|---|---|---|---|---|---|
-| Jordan | push | 1.66x | 13.7 | 60% | 100% | 43% | $417 |
-| Russ | push | 2.10x | 13.1 | 30% | 100% | 22% | $301 |
-| Johnny | push | 2.06x | 12.4 | 10% | 97% | 20% | $205 |
-| Zach | push | 1.37x | 10.1 | 0% | 70% | 11% | $56 |
-| Matt | build | 0.67x | 8.9 | 0% | 17% | 3% | $12 |
-| Max | build | 0.26x | 8.1 | 0% | 7% | 1% | $5 |
-| Qasim | build | 0.25x | 7.9 | 0% | 6% | 1% | $3 |
-| Ryan | build | 0.14x | 7.4 | 0% | 2% | 0% | $1 |
-| Ben | build | 0.04x | 6.2 | 0% | 1% | 0% | $1 |
+| Jordan | push | 1.75x | 13.7 | 56% | 100% | 41% | $406 |
+| Russ | push | 2.08x | 13.2 | 32% | 100% | 20% | $305 |
+| Johnny | push | 2.12x | 12.4 | 11% | 97% | 19% | $205 |
+| Zach | push | 1.40x | 10.1 | 0% | 70% | 14% | $62 |
+| Matt | build | 0.64x | 8.9 | 0% | 18% | 3% | $13 |
+| Qasim | build | 0.27x | 7.9 | 0% | 7% | 1% | $4 |
+| Max | build | 0.24x | 8.1 | 0% | 6% | 1% | $4 |
+| Ryan | build | 0.13x | 7.4 | 0% | 2% | 0% | $1 |
+| Ben | build | 0.05x | 6.2 | 0% | 0% | 0% | $0 |
 | Mike | build | 0.00x | 2.1 | 0% | 0% | 0% | $0 |
 
-Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
+Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Qasim, Max, Ryan, Ben, Mike.
 
 ## Where you would gain most (best player a selling team has at each position)
 
 | Pos | Player | Team | Your lineup gain, rest of season | Salary | Rental |
 |---|---|---|---|---|---|
 | RB | Kenneth Walker III | Ben | +25 | $67 |  |
-| QB | Dak Prescott | Ryan | +13 | $2 |  |
+| QB | Brock Purdy | Matt | +14 | $1 | yes |
 | WR | George Pickens | Ryan | +10 | $71 |  |
 | K | Cam Little | Qasim | +4 | $1 | yes |
 | DEF | Bears | Matt | +2 | $1 | yes |
 
 ## Rentals (contract ends this season and his owner is not expected to designate him)
 
-- Brock Purdy (QB, Matt, $1): +12 lineup points, about $11 of payout to you
+- Brock Purdy (QB, Matt, $1): +14 lineup points, about $13 of payout to you
 - DeVonta Smith (WR, Ryan, $51): +5 lineup points, about $5 of payout to you
-- Cam Little (K, Qasim, $1): +4 lineup points, about $3 of payout to you
+- Cam Little (K, Qasim, $1): +4 lineup points, about $4 of payout to you
 - Ka'imi Fairbairn (K, Max, $2): +3 lineup points, about $3 of payout to you
-- Spencer Shrader (K, Mike, $1): +2 lineup points, about $2 of payout to you
+- Spencer Shrader (K, Mike, $1): +3 lineup points, about $3 of payout to you
 - Nico Collins (WR, Max, $91): +2 lineup points, about $2 of payout to you
 - Justin Jefferson (WR, Qasim, $92): +2 lineup points, about $2 of payout to you
 - Brandon Aubrey (K, Ryan, $2): +2 lineup points, about $2 of payout to you
-- Bears (DEF, Matt, $1): +2 lineup points, about $1 of payout to you
-- Texans (DEF, Mike, $2): +2 lineup points, about $1 of payout to you
+- Tyler Bass (K, Matt, $1): +2 lineup points, about $1 of payout to you
+- Bears (DEF, Matt, $1): +2 lineup points, about $2 of payout to you
 
 ## What you can spend (no cost to this season)
 
@@ -52,15 +52,15 @@ Competing buyers: Russ, Johnny, Zach. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike
 |---|---|---|
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
-| Chris Brazzell II | 0 | $-4 |
 | Ollie Gordon II | 0 | $-4 |
-| Deebo Samuel Sr. | 2 | $0 |
-| Brenton Strange | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
-| Mike Gesicki | 0 | $0 |
-| Lions | 1 | $0 |
+| Chris Brazzell II | 0 | $-4 |
 | Jordan Love | 0 | $0 |
+| Brenton Strange | 0 | $0 |
+| Mike Gesicki | 0 | $0 |
+| Deebo Samuel Sr. | 2 | $0 |
 | Kenny Gainwell | 0 | $0 |
+| Lions | 1 | $0 |
+| Courtland Sutton | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |

@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-24T04:40:29+00:00",
+ "made_at": "2026-11-24T12:49:06+00:00",
  "weeks_left": [
   11,
   12,
@@ -17,63 +17,63 @@
  },
  "projected": {
   "wins": 13.7,
-  "p_win_out": 0.713
+  "p_win_out": 0.71
  },
  "path": [
   {
    "week": 11,
    "opp": "Ryan",
-   "p_win": 0.785,
-   "me": 144.9,
-   "them": 118.7
+   "p_win": 0.775,
+   "me": 144.5,
+   "them": 119.2
   },
   {
    "week": 12,
    "opp": "Qasim",
-   "p_win": 0.736,
-   "me": 128.4,
-   "them": 107.4
+   "p_win": 0.731,
+   "me": 126.6,
+   "them": 107.0
   },
   {
    "week": 13,
    "opp": "Russ",
-   "p_win": 0.575,
-   "me": 138.5,
-   "them": 132.3
+   "p_win": 0.574,
+   "me": 138.6,
+   "them": 132.5
   },
   {
    "week": 14,
    "opp": "Max",
-   "p_win": 0.685,
-   "me": 131.3,
-   "them": 115.0
+   "p_win": 0.687,
+   "me": 130.9,
+   "them": 115.1
   },
   {
    "week": 15,
    "opp": "Johnny",
-   "p_win": 0.7,
-   "me": 138.2,
-   "them": 121.1
+   "p_win": 0.698,
+   "me": 138.4,
+   "them": 121.4
   },
   {
    "week": 16,
    "opp": "Matt",
-   "p_win": 0.714,
+   "p_win": 0.721,
    "me": 138.0,
-   "them": 118.8
+   "them": 118.2
   },
   {
    "week": 17,
    "opp": "Zach",
-   "p_win": 0.64,
-   "me": 137.7,
-   "them": 125.9
+   "p_win": 0.637,
+   "me": 137.9,
+   "them": 126.2
   },
   {
    "week": 18,
    "opp": "Mike",
-   "p_win": 0.867,
-   "me": 138.6,
+   "p_win": 0.859,
+   "me": 137.0,
    "them": 100.6
   }
  ],
@@ -85,11 +85,11 @@
    "l": 2,
    "t": 0,
    "pf": 1439.9,
-   "wins": 13.1,
-   "p_first": 0.304,
+   "wins": 13.2,
+   "p_first": 0.322,
    "p_top4": 0.995,
-   "p_title": 0.216,
-   "exp_payout": 301,
+   "p_title": 0.204,
+   "exp_payout": 305,
    "posture": "push"
   },
   {
@@ -100,10 +100,10 @@
    "t": 0,
    "pf": 1437.0,
    "wins": 13.7,
-   "p_first": 0.596,
+   "p_first": 0.561,
    "p_top4": 0.998,
-   "p_title": 0.426,
-   "exp_payout": 417,
+   "p_title": 0.413,
+   "exp_payout": 406,
    "posture": "push"
   },
   {
@@ -114,9 +114,9 @@
    "t": 0,
    "pf": 1304.7,
    "wins": 12.4,
-   "p_first": 0.096,
-   "p_top4": 0.972,
-   "p_title": 0.197,
+   "p_first": 0.113,
+   "p_top4": 0.974,
+   "p_title": 0.189,
    "exp_payout": 205,
    "posture": "push"
   },
@@ -129,9 +129,9 @@
    "pf": 1319.6,
    "wins": 10.1,
    "p_first": 0.004,
-   "p_top4": 0.702,
-   "p_title": 0.107,
-   "exp_payout": 56,
+   "p_top4": 0.698,
+   "p_title": 0.136,
+   "exp_payout": 62,
    "posture": "push"
   },
   {
@@ -143,9 +143,9 @@
    "pf": 1115.3,
    "wins": 8.9,
    "p_first": 0.0,
-   "p_top4": 0.171,
-   "p_title": 0.029,
-   "exp_payout": 12,
+   "p_top4": 0.176,
+   "p_title": 0.034,
+   "exp_payout": 13,
    "posture": "build"
   },
   {
@@ -157,9 +157,9 @@
    "pf": 1116.9,
    "wins": 8.1,
    "p_first": 0.0,
-   "p_top4": 0.072,
-   "p_title": 0.012,
-   "exp_payout": 5,
+   "p_top4": 0.062,
+   "p_title": 0.008,
+   "exp_payout": 4,
    "posture": "build"
   },
   {
@@ -171,9 +171,9 @@
    "pf": 1115.1,
    "wins": 7.9,
    "p_first": 0.0,
-   "p_top4": 0.062,
-   "p_title": 0.009,
-   "exp_payout": 3,
+   "p_top4": 0.07,
+   "p_title": 0.013,
+   "exp_payout": 4,
    "posture": "build"
   },
   {
@@ -186,7 +186,7 @@
    "wins": 7.4,
    "p_first": 0.0,
    "p_top4": 0.022,
-   "p_title": 0.003,
+   "p_title": 0.004,
    "exp_payout": 1,
    "posture": "build"
   },
@@ -199,9 +199,9 @@
    "pf": 1037.9,
    "wins": 6.2,
    "p_first": 0.0,
-   "p_top4": 0.007,
-   "p_title": 0.002,
-   "exp_payout": 1,
+   "p_top4": 0.005,
+   "p_title": 0.001,
+   "exp_payout": 0,
    "posture": "build"
   },
   {
@@ -283,9 +283,9 @@
    },
    {
     "week": 10,
-    "p_first": 0.596,
+    "p_first": 0.561,
     "p_top4": 0.998,
-    "p_title": 0.426
+    "p_title": 0.413
    }
   ],
   "as_run": [
@@ -505,6 +505,13 @@
     "p_first": 0.596,
     "p_title": 0.426,
     "exp_payout": 417
+   },
+   {
+    "at": "2026-11-24T12:48",
+    "week": 12,
+    "p_first": 0.561,
+    "p_title": 0.413,
+    "exp_payout": 406
    }
   ],
   "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
