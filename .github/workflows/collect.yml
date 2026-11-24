@@ -41,10 +41,8 @@ jobs:
         run: |
           git config user.name "dfo-collector"
           git config user.email "dfo-collector@users.noreply.github.com"
-          git add data/snapshots data/processed
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "collect: snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          # pull, merge and retry: the engine, the sync and the analyst push to main too (src/dfo/gitpush.py)
+          PYTHONPATH=src python -m dfo.gitpush -m "collect: snapshots $(date -u +%Y-%m-%dT%H:%MZ)" data/snapshots data/processed
       # Pushes made by this job do not trigger the tests workflow, so run the checks here: new site
       # data that breaks one fails this run (and sends the usual GitHub email) after the data is saved.
       - name: Checks on the new data

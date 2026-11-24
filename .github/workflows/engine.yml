@@ -58,7 +58,4 @@ jobs:
         run: |
           git config user.name "dfo-engine"
           git config user.email "dfo-engine@users.noreply.github.com"
-          git add data/processed data/frontdoor data/journal
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "engine: ${{ steps.job.outputs.job }} $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase -q && git push
+          PYTHONPATH=src python -m dfo.gitpush -m "engine: ${{ steps.job.outputs.job }} $(date -u +%Y-%m-%dT%H:%MZ)" data/processed data/frontdoor data/journal
