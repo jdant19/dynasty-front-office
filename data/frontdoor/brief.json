@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T21:47:04+00:00",
+ "made_at": "2026-11-25T21:48:47+00:00",
  "week": 12,
  "decisions": [
   {
@@ -206,7 +206,7 @@
    "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +18, him +5; target: add 2029 round 1 -> you +7, him +15; walk-away: add 2029 round 1 -> you +7, him +15",
    "value": "you +7 (this season +17, later -10), him +15; your 1st place 56% -> 61%, title 38% -> 42%",
    "confidence": "low (stale inputs)",
-   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. STALE: built from 2026-11-18 projections (6 days old); re-run before acting.",
+   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. STALE: built from 2026-11-18 projections (7 days old); re-run before acting.",
    "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
    "made_at": "2026-11-18T21:47:46+00:00",
    "stale": true,
@@ -586,19 +586,19 @@
    "rental": true
   },
   {
-   "player": "Chris Olave",
-   "owner": "Max",
-   "pos": "WR",
-   "gain": 4.4,
-   "salary": 15,
-   "rental": false
-  },
-  {
    "player": "Trevor Lawrence",
    "owner": "Qasim",
    "pos": "QB",
    "gain": 4.4,
    "salary": 1,
+   "rental": false
+  },
+  {
+   "player": "Chris Olave",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 4.4,
+   "salary": 15,
    "rental": false
   },
   {
@@ -649,21 +649,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-25T20:26:37+00:00",
-   "age_hours": 1.3,
+   "age_hours": 1.4,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-25T20:29:44+00:00",
-   "age_hours": 1.3,
+   "as_of": "2026-11-25T21:47:04+00:00",
+   "age_hours": 0.0,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-25T21:47:03+00:00",
+  "made_at": "2026-11-25T21:48:44+00:00",
   "weeks_left": [
    12,
    13,
@@ -1216,6 +1216,13 @@
      "p_first": 0.705,
      "p_title": 0.405,
      "exp_payout": 439
+    },
+    {
+     "at": "2026-11-25T21:48",
+     "week": 12,
+     "p_first": 0.705,
+     "p_title": 0.405,
+     "exp_payout": 439
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1224,7 +1231,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-25T21:47:04+00:00",
+  "made_at": "2026-11-25T21:48:45+00:00",
   "years": [
    {
     "season": 2027,

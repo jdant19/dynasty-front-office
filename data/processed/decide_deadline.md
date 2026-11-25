@@ -52,14 +52,14 @@ Competing buyers: Russ, Johnny. Sellers: Max, Qasim, Ryan, Ben, Mike.
 |---|---|---|
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
-| Ollie Gordon II | 0 | $-4 |
 | Chris Brazzell II | 0 | $-4 |
-| Mike Gesicki | 0 | $0 |
-| Kenny Gainwell | 0 | $0 |
+| Ollie Gordon II | 0 | $-4 |
 | Jordan Love | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
 | Lions | 1 | $0 |
+| Kenny Gainwell | 0 | $0 |
+| Mike Gesicki | 0 | $0 |
 | Deebo Samuel Sr. | 2 | $0 |
+| Courtland Sutton | 0 | $0 |
 | Brenton Strange | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
@@ -74,4 +74,4 @@ Competing buyers: Russ, Johnny. Sellers: Max, Qasim, Ryan, Ben, Mike.
 | 2028 round 1 (Max's) | 0 | $65 |
 | 2028 round 1 | 0 | $65 |
 
-Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-25).
+Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-24).
