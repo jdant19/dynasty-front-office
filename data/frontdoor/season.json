@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T22:05:08+00:00",
+ "made_at": "2026-11-25T22:35:30+00:00",
  "weeks_left": [
   12,
   13,
@@ -15,58 +15,58 @@
   "t": 0
  },
  "projected": {
-  "wins": 13.9,
-  "p_win_out": 0.706
+  "wins": 14.0,
+  "p_win_out": 0.709
  },
  "path": [
   {
    "week": 12,
    "opp": "Qasim",
-   "p_win": 0.76,
-   "me": 134.7,
-   "them": 111.4
+   "p_win": 0.74,
+   "me": 136.1,
+   "them": 114.7
   },
   {
    "week": 13,
    "opp": "Russ",
-   "p_win": 0.59,
-   "me": 138.5,
+   "p_win": 0.589,
+   "me": 139.3,
    "them": 131.6
   },
   {
    "week": 14,
    "opp": "Max",
-   "p_win": 0.677,
-   "me": 131.5,
-   "them": 116.6
+   "p_win": 0.693,
+   "me": 131.6,
+   "them": 115.8
   },
   {
    "week": 15,
    "opp": "Johnny",
-   "p_win": 0.696,
-   "me": 138.5,
-   "them": 121.7
+   "p_win": 0.7,
+   "me": 138.8,
+   "them": 122.4
   },
   {
    "week": 16,
    "opp": "Matt",
-   "p_win": 0.71,
-   "me": 137.2,
-   "them": 119.1
+   "p_win": 0.726,
+   "me": 138.5,
+   "them": 118.7
   },
   {
    "week": 17,
    "opp": "Zach",
-   "p_win": 0.643,
-   "me": 137.8,
-   "them": 126.2
+   "p_win": 0.644,
+   "me": 138.5,
+   "them": 126.1
   },
   {
    "week": 18,
    "opp": "Mike",
-   "p_win": 0.868,
-   "me": 137.1,
-   "them": 99.8
+   "p_win": 0.871,
+   "me": 138.7,
+   "them": 100.7
   }
  ],
  "standings": [
@@ -78,10 +78,10 @@
    "t": 0,
    "pf": 1604.8,
    "wins": 14.0,
-   "p_first": 0.705,
+   "p_first": 0.711,
    "p_top4": 0.999,
-   "p_title": 0.405,
-   "exp_payout": 439,
+   "p_title": 0.364,
+   "exp_payout": 432,
    "posture": "push"
   },
   {
@@ -94,8 +94,8 @@
    "wins": 12.9,
    "p_first": 0.142,
    "p_top4": 0.99,
-   "p_title": 0.212,
-   "exp_payout": 235,
+   "p_title": 0.215,
+   "exp_payout": 241,
    "posture": "push"
   },
   {
@@ -106,10 +106,10 @@
    "t": 0,
    "pf": 1547.9,
    "wins": 12.6,
-   "p_first": 0.152,
-   "p_top4": 0.989,
-   "p_title": 0.175,
-   "exp_payout": 247,
+   "p_first": 0.146,
+   "p_top4": 0.991,
+   "p_title": 0.21,
+   "exp_payout": 250,
    "posture": "push"
   },
   {
@@ -121,9 +121,9 @@
    "pf": 1394.6,
    "wins": 9.8,
    "p_first": 0.001,
-   "p_top4": 0.626,
-   "p_title": 0.142,
-   "exp_payout": 53,
+   "p_top4": 0.621,
+   "p_title": 0.137,
+   "exp_payout": 50,
    "posture": "hold"
   },
   {
@@ -136,7 +136,7 @@
    "wins": 9.4,
    "p_first": 0.0,
    "p_top4": 0.266,
-   "p_title": 0.049,
+   "p_title": 0.056,
    "exp_payout": 20,
    "posture": "hold"
   },
@@ -147,9 +147,9 @@
    "l": 6,
    "t": 0,
    "pf": 1213.6,
-   "wins": 8.3,
+   "wins": 8.4,
    "p_first": 0.0,
-   "p_top4": 0.077,
+   "p_top4": 0.08,
    "p_title": 0.011,
    "exp_payout": 4,
    "posture": "build"
@@ -163,7 +163,7 @@
    "pf": 1226.4,
    "wins": 7.2,
    "p_first": 0.0,
-   "p_top4": 0.018,
+   "p_top4": 0.016,
    "p_title": 0.002,
    "exp_payout": 1,
    "posture": "build"
@@ -175,11 +175,11 @@
    "l": 7,
    "t": 0,
    "pf": 1218.9,
-   "wins": 7.4,
+   "wins": 7.5,
    "p_first": 0.0,
-   "p_top4": 0.03,
-   "p_title": 0.003,
-   "exp_payout": 1,
+   "p_top4": 0.032,
+   "p_title": 0.004,
+   "exp_payout": 2,
    "posture": "build"
   },
   {
@@ -189,10 +189,10 @@
    "l": 7,
    "t": 0,
    "pf": 1157.0,
-   "wins": 6.7,
+   "wins": 6.6,
    "p_first": 0.0,
-   "p_top4": 0.006,
-   "p_title": 0.002,
+   "p_top4": 0.005,
+   "p_title": 0.001,
    "exp_payout": 0,
    "posture": "build"
   },
@@ -281,9 +281,9 @@
    },
    {
     "week": 11,
-    "p_first": 0.705,
+    "p_first": 0.711,
     "p_top4": 0.999,
-    "p_title": 0.405
+    "p_title": 0.364
    }
   ],
   "as_run": [
@@ -559,6 +559,13 @@
     "p_first": 0.705,
     "p_title": 0.405,
     "exp_payout": 439
+   },
+   {
+    "at": "2026-11-25T22:35",
+    "week": 12,
+    "p_first": 0.711,
+    "p_title": 0.364,
+    "exp_payout": 432
    }
   ],
   "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."

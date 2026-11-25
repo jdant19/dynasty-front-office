@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T22:05:09+00:00",
+ "made_at": "2026-11-25T22:35:31+00:00",
  "years": [
   {
    "season": 2027,
@@ -230,7 +230,7 @@
    "pts2027": 159
   },
   {
-   "player": "Detroit Lions",
+   "player": "Tampa Bay Buccaneers",
    "pos": "DEF",
    "s2026": 1,
    "slot": "BN",
@@ -243,7 +243,7 @@
    "pts2027": null
   },
   {
-   "player": "Cairo Santos",
+   "player": "Dominic Zvada",
    "pos": "K",
    "s2026": 1,
    "slot": "BN",
