@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T22:39:13+00:00",
+ "made_at": "2026-11-25T23:41:27+00:00",
  "years": [
   {
    "season": 2027,
@@ -22,9 +22,9 @@
    "cap_room": 121,
    "strength": 1967,
    "rank": 3,
-   "league_median": 1943,
+   "league_median": 1944,
    "p_first": 0.132,
-   "p_top4": 0.457,
+   "p_top4": 0.458,
    "exp_payout": 107,
    "note": "",
    "released": "",
@@ -35,7 +35,7 @@
    "contracted": 5,
    "committed": 108,
    "cap_room": 179,
-   "strength": 1951,
+   "strength": 1952,
    "rank": 9,
    "league_median": 1973,
    "p_first": 0.09,
@@ -416,8 +416,8 @@
    "year": 2027,
    "round": 2,
    "original": "Jordan",
-   "slot": 9.6,
-   "overall": 19.6,
+   "slot": 9.7,
+   "overall": 19.7,
    "tier": "10-30",
    "points": 44
   },
@@ -434,8 +434,8 @@
    "year": 2027,
    "round": 3,
    "original": "Jordan",
-   "slot": 9.6,
-   "overall": 29.6,
+   "slot": 9.7,
+   "overall": 29.7,
    "tier": "10-30",
    "points": 44
   },
