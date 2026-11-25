@@ -29,6 +29,7 @@ is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished 
 | `threads/strat-<YYYYMMDDhhmmss>` | the Strategy tab, the analyst, the sync | an open strategy conversation: `{id, title, messages: [{role: you / claude / analyst / sync, text, at}], status, requested_at, handoff: code / sync}` |
 | `strategy_notes/{id}` | the Strategy tab | something Jordan asked to remember or a conclusion he confirmed: `{id, at, source, topic, note, status}`; journaled to `data/journal/strategy_notes.csv` |
 | `pack/players`, `pack/teams`, `pack/memory`, `pack/rules` | the sync, the analyst | the league data pack and the strategy memory (`dfo.frontdoor.pack`), each `{json: <file as a string>}` |
+| `requests/R<YYYYMMDDhhmmss>` | the page, then the refresh session | an on-demand re-run: `{id, job: everything / lineup / waivers / trades, card, card_title, note, status: starting / started / queued / running / done / failed, at, started_at, finished_at, summary, why}` |
 | `notes/{auto id}` | the page, then the sync | `{id, kind, text, asset_id, asset_ids, filename, at, status}`; the page writes `status: waiting`; the sync sets `status` (saved, entered, question) and a one-line `result`, which the page shows under "Recently sent" |
 
 ## The sync (what the scheduled task does)
@@ -64,6 +65,8 @@ is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished 
    `{role: "sync", text, at}` to the thread's messages and setting `status: "answered"` (ArtifactData
    update pinned to the version read). Add the threads to the ingest dump (`"threads": [...]`) so every
    message lands in `data/journal/threads.csv`.
+4c. Requests with `status: queued` (a Re-run the page could not start): do them as the "Front office refresh"
+   task would (its prompt: re-run the job, check the note, mark done with a summary).
 5. If results or other inputs changed, re-run `dfo.sim.dial` and `dfo.decide.deadline` (Weeks 10-14), then
    `dfo.frontdoor.views` (season and future tabs), `dfo.frontdoor.pack` (Strategy tab data and memory) and
    `dfo.frontdoor.export`; write the four `pack/*` documents (one ArtifactData batch, each pinned to the
@@ -86,6 +89,16 @@ session reads the conversation, re-runs what the question needs, replies as `rol
 any settled conclusion in `data/journal/strategy_notes.csv` (and the page's `pack/memory`). If the page
 cannot start a session (no connector, no consent) the conversation waits for the next sync (step 4b).
 "Remember…" writes a strategy note directly.
+
+## Re-run
+
+"Re-run now…" (top of Today) and "Re-run this" (each decision card) write a `requests/*` document and start
+the "Front office refresh" scheduled task (trigger `trig_01KEU8RQEGqjHMSidZi4ssoJ`) through the Claude Code
+connector. That session refreshes the league site and runs the engine job (`daily` for everything, else
+`lineup`, `waivers` or `trades`), checks the optional "what looks off" note against the data (fixing the
+system with a test when it is at fault), rebuilds views, pack and brief, writes them to the page, and
+marks the request done with a short summary (also posted to the card's thread). If the page cannot start
+a session the request is `queued` and the next sync runs it (step 4c).
 
 ## Decision journal (`data/journal/`)
 

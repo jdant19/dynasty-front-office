@@ -18,6 +18,7 @@ def test_push_after_another_job_pushed(tmp_path, monkeypatch):
     (a / "data/processed").mkdir(parents=True); (a / "data/journal").mkdir(parents=True)
     (a / "data/processed/odds.csv").write_text("owner,p\nJordan,0.5\n")
     (a / "data/journal/recommendations.csv").write_text("id,text\nr1,first\n")
+    (a / "data/journal/notes.csv").write_text("id\nn1\n")
     sh(a, "git", "add", "."); sh(a, "git", "commit", "-q", "-m", "base"); sh(a, "git", "push", "-q", "origin", "HEAD:main")
     sh(tmp_path, "git", "clone", "-q", str(origin), str(b))
     sh(b, "git", "config", "user.email", "t@t"); sh(b, "git", "config", "user.name", "t")
@@ -28,9 +29,12 @@ def test_push_after_another_job_pushed(tmp_path, monkeypatch):
     # job B changed the same files from the old base
     (b / "data/processed/odds.csv").write_text("owner,p\nJordan,0.58\n")
     (b / "data/journal/recommendations.csv").write_text("id,text\nr1,first\nr3,from B\n")
+    (b / "data/journal/notes.csv").write_text("id\nn1\nn2\n")   # a tracked file changed but not part of this commit
+    (b / "data/processed/scratch.txt").write_text("left alone")
     monkeypatch.chdir(b)
     monkeypatch.setattr(gitpush.time, "sleep", lambda s: None)
-    assert gitpush.main("B", ["data/processed", "data/journal"]) == 0
+    assert gitpush.main("B", ["data/processed/odds.csv", "data/journal/recommendations.csv"]) == 0
+    assert (b / "data/journal/notes.csv").read_text() == "id\nn1\nn2\n"                       # left as it was
     sh(a, "git", "pull", "-q")
     assert (a / "data/processed/odds.csv").read_text() == "owner,p\nJordan,0.58\n"          # the newer build
     assert (a / "data/journal/recommendations.csv").read_text() == "id,text\nr1,first\nr2,from A\nr3,from B\n"  # both rows

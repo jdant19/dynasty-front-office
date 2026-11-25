@@ -62,7 +62,7 @@ def main(message: str, paths: list[str], tries: int = 5) -> int:
         return 0
     git("commit", "-q", "-m", message)
     for k in range(tries):
-        r = git("pull", "--rebase", "-q", check=False)
+        r = git("pull", "--rebase", "--autostash", "-q", check=False)   # other changed files are set aside, not a reason to fail
         while r.returncode != 0 and git("rev-parse", "-q", "--verify", "REBASE_HEAD", check=False).returncode == 0:
             if not resolve():
                 git("rebase", "--abort", check=False)

@@ -178,7 +178,26 @@ tr:last-child td { border-bottom: 0 }
 
   <div class="tab" id="tab-today" role="tabpanel">
     <section>
-      <h2>Decisions</h2>
+      <div class="row" style="justify-content:space-between">
+        <h2>Decisions</h2>
+        <button id="rerunbtn" title="Pull the latest from the league site and re-run the models now">Re-run now…</button>
+      </div>
+      <div id="rerun" class="card pad" style="display:grid;gap:8px" hidden>
+        <div class="row">
+          <label class="meta" for="rjob">Re-run</label>
+          <select id="rjob" style="width:auto">
+            <option value="everything">Everything (lineup, waivers, odds, playoffs)</option>
+            <option value="lineup">This week's lineup</option>
+            <option value="waivers">Waivers</option>
+            <option value="trades">Trade ideas (slower, about 15 min)</option>
+          </select>
+          <span class="meta" id="rcard"></span>
+        </div>
+        <textarea id="rnote" placeholder="What looks off? (optional) e.g. 'The waiver pick is a QB I don't need; I'd stream a defense.' It will be checked and fixed if the system is wrong."></textarea>
+        <div class="row"><button class="primary" id="rgo">Re-run</button><button id="rcancel">Close</button><span class="meta" id="rstatus" role="status"></span></div>
+        <div class="meta">Starts a Code session that pulls the league site, re-runs the models and updates this page, usually in 5 to 10 minutes. You get a notification when it is done.</div>
+      </div>
+      <div id="requests"></div>
       <div id="decisions" class="empty">Open recommendations appear here, one line each. Open one for the detail, agree or disagree, or discuss it.</div>
     </section>
     <section>
@@ -352,6 +371,7 @@ function renderDecisions(list) {
           <button data-v="agree" class="${r.verdict === "agree" ? "on" : ""}">Agree</button>
           <button data-v="disagree" class="${r.verdict === "disagree" ? "on" : ""}">Disagree</button>
           <button class="discuss" aria-expanded="${openChats.has(d.id)}">${t && t.messages && t.messages.length ? `Discussion (${t.messages.length})` : "Discuss"}</button>
+          <button class="rerun-card">Re-run this</button>
           <span class="saved" role="status"></span>
         </div>
         <textarea class="whybox" placeholder="Why? (optional for agree, helpful for disagree)">${esc(r.reason || "")}</textarea>
@@ -373,6 +393,7 @@ function renderDecisions(list) {
       e.target.setAttribute("aria-expanded", openChats.has(id));
     });
     a.querySelectorAll(".copy").forEach(c => c.addEventListener("click", () => copyText(c, c.dataset.text)));
+    a.querySelector("button.rerun-card").addEventListener("click", () => openRerun(d));
     if (openChats.has(id)) renderChat(d);
   });
 }
@@ -861,6 +882,54 @@ $("#sremember").addEventListener("click", async () => {
   try { st.textContent = await saveNote(text, "", "Jordan (strategy tab)"); $("#sinput").value = ""; } catch (e) { st.textContent = "Not saved: " + (e.message || e.code); }
 });
 
+
+// ---------------------------------------------------------------- Re-run now: a Code session refreshes the data and re-runs the models
+const REFRESH = "trig_01KEU8RQEGqjHMSidZi4ssoJ";   // the "Front office refresh" scheduled task
+const requests = {}; let rerunCard = null;
+const JOB_OF = { "Start/sit": "lineup", "Waivers": "waivers", "Trade idea": "trades" };
+function openRerun(d) {
+  rerunCard = d || null;
+  $("#rerun").hidden = false;
+  $("#rjob").value = d ? (JOB_OF[d.kind] || "everything") : "everything";
+  $("#rcard").textContent = d ? `for “${d.title}”` : "";
+  $("#rstatus").textContent = "";
+  $("#rerun").scrollIntoView({ block: "center" }); $("#rnote").focus();
+}
+$("#rerunbtn").addEventListener("click", () => $("#rerun").hidden ? openRerun(null) : ($("#rerun").hidden = true));
+$("#rcancel").addEventListener("click", () => { $("#rerun").hidden = true; rerunCard = null; });
+$("#rgo").addEventListener("click", async () => {
+  const st = $("#rstatus");
+  if (!db) { st.textContent = "Needs the claude.ai viewer."; return; }
+  const id = "R" + new Date().toISOString().replace(/[-:T.Z]/g, "").slice(0, 14);
+  const req = { id, job: $("#rjob").value, card: rerunCard ? rerunCard.id : "", card_title: rerunCard ? rerunCard.title : "",
+                note: $("#rnote").value.trim(), status: "starting", at: new Date().toISOString() };
+  $("#rgo").disabled = true;
+  try {
+    await db.doc("requests/" + id).set(req); requests[id] = req; renderRequests();
+    let started = false, why = "";
+    if (mcp) {
+      try { await mcp.callTool("Claude Code Remote", "fire_trigger", { trigger_id: REFRESH, text: `Request id: ${id}. Read it with ArtifactData: requests/${id}.` }); started = true; }
+      catch (e) { why = { needs_reauth: "the Claude Code connection needs signing in again", server_not_connected: "the Claude Code connector is not connected here",
+                          approval_required: "it needs your approval", not_granted: "it was not allowed" }[e.code] || (e.code || "error"); }
+    } else why = "this view cannot start sessions";
+    req.status = started ? "started" : "queued"; if (why) req.why = why;
+    await db.doc("requests/" + id).set(req); requests[id] = req; renderRequests();
+    st.textContent = started ? "Started. This page updates when it is done." : `Couldn't start a session (${why}); queued for the next sync.`;
+    $("#rnote").value = ""; if (started) setTimeout(() => { $("#rerun").hidden = true; }, 1500);
+  } catch (e) { st.textContent = "Not started: " + (e.message || e.code); }
+  finally { $("#rgo").disabled = false; }
+});
+function renderRequests() {
+  const list = Object.values(requests).sort((a, b) => String(b.at).localeCompare(String(a.at))).slice(0, 3);
+  const recent = list.filter(r => r.status !== "done" || Date.now() - new Date(r.finished_at || r.at) < 36e5 * 18);
+  const label = { starting: "starting", started: "started, waiting for the session", queued: "queued for the next sync", running: "running", done: "done", failed: "failed" };
+  $("#requests").innerHTML = recent.length ? `<div class="sent">${recent.map(r => `<div>
+      <span class="chip ${r.status === "done" ? "good" : r.status === "failed" ? "bad" : ""}">${esc(label[r.status] || r.status)}</span>
+      <span class="num meta">${esc(new Date(r.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }))}</span>
+      <span>Re-run ${esc(r.job)}${r.card_title ? ` · ${esc(r.card_title)}` : ""}${r.note ? ` · “${esc(r.note.slice(0, 80))}”` : ""}</span>
+      ${r.summary ? `<div class="meta" style="flex-basis:100%">${esc(r.summary)}</div>` : ""}${r.why && r.status !== "done" ? `<span class="meta">${esc(r.why)}</span>` : ""}</div>`).join("")}</div>` : "";
+}
+
 // ---------------------------------------------------------------- start
 (async () => {
   if (!window.claude?.use) return;
@@ -879,6 +948,7 @@ $("#sremember").addEventListener("click", async () => {
   ["players", "teams", "memory", "rules"].forEach(k => db.doc("pack/" + k).onSnapshot(s => { const v = s.data(); if (v && v.json) { try { pack[k] = parseLoose(v.json); renderMemory(); } catch (e) { console.error("pack", k, e); } } }, () => {}));
   db.collection("strategy_notes").onSnapshot(s => { const have = new Set(((pack.memory || {}).notes || []).map(n => n.id));
     localNotes.length = 0; s.docs.forEach(d => { const v = d.data(); if (v && !have.has(v.id)) localNotes.push(v); }); renderMemory(); }, () => {});
+  db.collection("requests").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v && v.id) requests[v.id] = v; }); renderRequests(); }, () => {});
   db.collection("notes").onSnapshot(s => renderSent(s.docs.map(d => d.data()).filter(Boolean)), () => {});
   db.collection("answers").onSnapshot(s => { s.docs.forEach(d => { const v = d.data(); if (v) answers[v.id] = v; }); if (window._brief) renderQuestions(B().questions || []); }, () => {});
   db.doc("brief/today").onSnapshot(s => {
