@@ -3,8 +3,8 @@ Ben,Kenneth Walker III,RB,67,24.0,21,False,-1
 Ryan,Dak Prescott,QB,2,14.9,13,False,-4
 Ryan,George Pickens,WR,71,9.7,9,False,-22
 Ryan,DeVonta Smith,WR,51,5.4,5,True,0
-Qasim,Trevor Lawrence,QB,1,4.4,4,False,0
 Max,Chris Olave,WR,15,4.4,4,False,8
+Qasim,Trevor Lawrence,QB,1,4.4,4,False,0
 Qasim,Malik Nabers,WR,7,4.1,4,False,37
 Qasim,Cam Little,K,1,4.0,4,True,0
 Qasim,Caleb Williams,QB,5,3.8,3,False,33
@@ -17,5 +17,5 @@ Max,Jayden Daniels,QB,5,1.8,2,False,33
 Qasim,Garrett Wilson,WR,51,1.6,1,False,-8
 Mike,Texans,DEF,2,1.5,1,True,0
 Qasim,Steelers,DEF,1,1.4,1,True,0
-Mike,DJ Moore,WR,22,1.0,1,False,-23
 Qasim,Bengals,DEF,1,1.0,1,True,0
+Mike,DJ Moore,WR,22,1.0,1,False,-23

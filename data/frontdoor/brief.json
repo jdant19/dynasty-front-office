@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T20:29:44+00:00",
+ "made_at": "2026-11-25T21:47:04+00:00",
  "week": 12,
  "decisions": [
   {
@@ -12,7 +12,7 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-25T20:27:30+00:00",
+   "made_at": "2026-11-25T21:45:32+00:00",
    "headline": "Win chance 74%",
    "detail": {
     "type": "lineup",
@@ -141,7 +141,7 @@
    "confidence": "low (no ranks yet)",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap). This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options.",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-25T14:18:59+00:00",
+   "made_at": "2026-11-25T21:42:56+00:00",
    "headline": "Add Browns, drop Lions",
    "detail": {
     "type": "waivers",
@@ -440,9 +440,9 @@
   "stance": "push",
   "moved": {
    "since": "2026-11-25",
-   "p_first": 0.007,
-   "p_title": 0.007,
-   "payout": 3
+   "p_first": 0.0,
+   "p_title": 0.0,
+   "payout": 0
   },
   "league": [
    {
@@ -586,19 +586,19 @@
    "rental": true
   },
   {
-   "player": "Trevor Lawrence",
-   "owner": "Qasim",
-   "pos": "QB",
-   "gain": 4.4,
-   "salary": 1,
-   "rental": false
-  },
-  {
    "player": "Chris Olave",
    "owner": "Max",
    "pos": "WR",
    "gain": 4.4,
    "salary": 15,
+   "rental": false
+  },
+  {
+   "player": "Trevor Lawrence",
+   "owner": "Qasim",
+   "pos": "QB",
+   "gain": 4.4,
+   "salary": 1,
    "rental": false
   },
   {
@@ -634,8 +634,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-25T14:18:59+00:00",
-   "age_hours": 6.2,
+   "as_of": "2026-11-25T21:42:56+00:00",
+   "age_hours": 0.1,
    "limit": "24h",
    "stale": false
   },
@@ -649,21 +649,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-25T20:26:37+00:00",
-   "age_hours": 0.1,
+   "age_hours": 1.3,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-25T12:49:13+00:00",
-   "age_hours": 7.7,
+   "as_of": "2026-11-25T20:29:44+00:00",
+   "age_hours": 1.3,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-25T20:29:43+00:00",
+  "made_at": "2026-11-25T21:47:03+00:00",
   "weeks_left": [
    12,
    13,
@@ -1209,6 +1209,13 @@
      "p_first": 0.705,
      "p_title": 0.405,
      "exp_payout": 439
+    },
+    {
+     "at": "2026-11-25T21:46",
+     "week": 12,
+     "p_first": 0.705,
+     "p_title": 0.405,
+     "exp_payout": 439
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1217,7 +1224,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-25T20:29:43+00:00",
+  "made_at": "2026-11-25T21:47:04+00:00",
   "years": [
    {
     "season": 2027,
