@@ -89,7 +89,8 @@ def main() -> None:
     ecr = ecr[ecr.season == SEASON]
     if not (ecr.week == week).any() and (ecr.week < week).any():
         prev = int(ecr[ecr.week < week].week.max())
-        carry = ecr[(ecr.week == prev) & ~ecr.player_id.isin(extra.player_id)][["player_id", "pos"]].drop_duplicates("player_id")
+        # the last two ranked weeks: one week's file can be partial (Week 11 2026: 320 players against ~490)
+        carry = ecr[(ecr.week >= prev - 1) & (ecr.week <= prev) & ~ecr.player_id.isin(extra.player_id)][["player_id", "pos"]].drop_duplicates("player_id")
         carry = carry.assign(season=SEASON, week=week, team=carry.player_id.map(last_team))
         carry.loc[carry.pos == "DEF", "team"] = carry.player_id.str.replace("DEF-", "", regex=False)
         # every team defense is always in the pool (a unit on bye last week has no rank to carry)

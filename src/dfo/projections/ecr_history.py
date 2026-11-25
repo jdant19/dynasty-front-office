@@ -24,6 +24,8 @@ def _git(*args: str) -> str:
 
 
 def build(since: str = "2025-08-01") -> pd.DataFrame:
+    from dfo.sources.fetch import dynastyprocess
+    dynastyprocess()   # clone the mirror if this machine has none (a fresh CI cache), else refresh it
     subprocess.run(["git", "-C", str(REPO), "fetch", "-q", f"--shallow-since={since}", "origin"], check=False)
     commits = [l.split() for l in _git("log", f"--since={since}", "--format=%H %cI", "--", FILE).splitlines()]
     commits = pd.DataFrame(commits, columns=["sha", "when"])

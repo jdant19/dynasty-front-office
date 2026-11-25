@@ -270,6 +270,18 @@ def health() -> list[dict]:
         lim_h = (float(str(lim)[:-1]) * (24 if str(lim).endswith("d") else 1)) if lim else None
         out.append(dict(source=k, as_of=str(stamps[k]), age_hours=hrs, limit=str(lim),
                         stale=bool(hrs is not None and lim_h is not None and hrs > lim_h)))
+    # FantasyPros weekly ranks: the projections lean on them (weekly 50%, rest of season 50%). They come out
+    # Wednesday to Friday; stale when the coming week has none by Saturday, or the latest is 2+ weeks old.
+    ew = _read("ecr_weekly_recent.csv")
+    if len(ew) and len(pw):
+        ew = ew[ew.season == ew.season.max()]
+        lw, wk = int(ew.week.max()), int(pw.week.iloc[0])
+        now = pd.Timestamp(_now()).tz_convert("America/Chicago")
+        late = (lw < wk and now.weekday() >= 5) or lw < wk - 1
+        out.append(dict(source="fantasypros_weekly_ranks", as_of=f"Week {lw} (scraped {str(ew.scrape_date.max())[:10]})",
+                        age_hours=_age_hours(ew.scrape_date.max()), limit="the coming week's ranks by Saturday", stale=bool(late),
+                        note=(f"Week {wk} ranks missing: weekly projections run without ranks (weaker) and rest-of-season "
+                              f"rates use Week {lw}'s" if lw < wk else "current week ranked")))
     rl = _read("run_log.csv")
     if len(rl):
         last = rl[rl.time == rl.time.max()].iloc[0]

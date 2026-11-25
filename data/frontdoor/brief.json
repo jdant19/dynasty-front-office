@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T22:39:15+00:00",
+ "made_at": "2026-11-25T22:49:14+00:00",
  "week": 12,
  "decisions": [
   {
@@ -484,7 +484,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-25T22:29:40+00:00",
-   "age_hours": 0.2,
+   "age_hours": 0.3,
    "limit": "24h",
    "stale": false
   },
@@ -497,15 +497,23 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-25T20:26:37+00:00",
-   "age_hours": 2.2,
+   "as_of": "2026-11-25T22:46:24+00:00",
+   "age_hours": 0.0,
    "limit": "36h",
    "stale": false
   },
   {
+   "source": "fantasypros_weekly_ranks",
+   "as_of": "Week 11 (scraped 2026-11-18)",
+   "age_hours": 190.8,
+   "limit": "the coming week's ranks by Saturday",
+   "stale": false,
+   "note": "Week 12 ranks missing: weekly projections run without ranks (weaker) and rest-of-season rates use Week 11's"
+  },
+  {
    "source": "engine runs",
    "as_of": "2026-11-25T22:35:31+00:00",
-   "age_hours": 0.1,
+   "age_hours": 0.2,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
