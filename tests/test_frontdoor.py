@@ -23,3 +23,25 @@ def test_ingest_is_idempotent(tmp_path, monkeypatch):
     dump["responses"][0].update(verdict="agree", at="2026-11-16T21:00:00Z")
     assert ingest.run(dump)["responses"] == 1
     assert len(pd.read_csv(tmp_path / "responses.csv")) == 2
+
+
+def test_page_files_are_strict_json():
+    """The page parses these in the browser: NaN or Infinity anywhere makes the whole brief unreadable."""
+    import json
+    from dfo.common import ROOT
+
+    def bad(c):
+        raise ValueError(f"non-JSON constant {c}")
+    files = [ROOT / "data/frontdoor" / f for f in ("brief.json", "season.json", "future.json")]
+    files += sorted((ROOT / "data/frontdoor/pack").glob("*.json"))
+    for f in files:
+        if f.exists():
+            json.loads(f.read_text(), parse_constant=bad)
+
+
+def test_strict_dumps_drops_nan():
+    import json
+    import numpy as np
+    from dfo.frontdoor import strict
+    out = json.loads(strict.dumps({"slot": float("nan"), "n": np.int64(3), "x": [np.float64("inf"), 1.5]}))
+    assert out == {"slot": None, "n": 3, "x": [None, 1.5]}

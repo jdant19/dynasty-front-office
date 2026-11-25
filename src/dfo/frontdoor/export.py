@@ -16,6 +16,7 @@ import re
 
 import pandas as pd
 
+from dfo.frontdoor import strict
 from dfo.common import PROCESSED, ROOT, load_config
 
 OUT = ROOT / "data" / "frontdoor"
@@ -46,7 +47,8 @@ def _age_hours(stamp) -> float | None:
 
 
 def _lu_row(r) -> dict:
-    return dict(slot=getattr(r, "slot", ""), player=r.player, pos=r.pos, team=r.team, opp=r.opp, proj=round(float(r.proj), 1),
+    slot = getattr(r, "slot", "")
+    return dict(slot=slot if isinstance(slot, str) else "BN", player=r.player, pos=r.pos, team=r.team, opp=r.opp, proj=round(float(r.proj), 1),
                 low=round(float(r.low), 1), high=round(float(r.high), 1),
                 inj=(r.injury_status if isinstance(getattr(r, "injury_status", None), str) else ""))
 
@@ -290,7 +292,7 @@ def run() -> dict:
         f = OUT / f"{k}.json"
         if f.exists():
             brief[k] = json.loads(f.read_text())
-    (OUT / "brief.json").write_text(json.dumps(brief, indent=1, default=str))
+    (OUT / "brief.json").write_text(strict.dumps(brief, indent=1))
     journal(items)
     return brief
 

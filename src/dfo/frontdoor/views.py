@@ -28,6 +28,7 @@ import re
 import numpy as np
 import pandas as pd
 
+from dfo.frontdoor import strict
 from dfo.common import PROCESSED, ROOT, load_config
 
 OUT = ROOT / "data" / "frontdoor"
@@ -235,8 +236,8 @@ def future() -> dict:
 def run() -> dict:
     OUT.mkdir(parents=True, exist_ok=True)
     s, f = season(), future()
-    (OUT / "season.json").write_text(json.dumps(s, indent=1, default=str))
-    (OUT / "future.json").write_text(json.dumps(f, indent=1, default=str))
+    (OUT / "season.json").write_text(strict.dumps(s, indent=1))
+    (OUT / "future.json").write_text(strict.dumps(f, indent=1))
     return dict(season=s, future=f)
 
 

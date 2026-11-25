@@ -305,6 +305,12 @@ window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
 showTab(location.hash.slice(1));
 
 // ---------------------------------------------------------------- brief
+// The repo writes strict JSON; this also reads a brief written before that fix (NaN / Infinity as null).
+function parseLoose(text) {
+  try { return JSON.parse(text); }
+  catch (e) { return JSON.parse(String(text).replace(/(:\s*|\[\s*|,\s*)-?(NaN|Infinity)(?=\s*[,}\]])/g, "$1null")); }
+}
+function safely(name, f) { try { f(); } catch (e) { console.error(name, e); } }
 function renderBrief(b) {
   if (!b) return;
   $("#stamp").textContent = `Week ${b.week} · updated ${new Date(b.made_at).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"})}`;
@@ -316,10 +322,10 @@ function renderBrief(b) {
     ["Exp. payout", usd(p.exp_payout), "this season"],
     ["Stance", (p.stance || "–").toUpperCase(), "trade deadline"]];
   $("#board").innerHTML = cells.map(([k, v, d]) => `<div><span class="k">${k}</span><span class="v">${esc(v)}</span><span class="d">${esc(d)}</span></div>`).join("");
-  renderDecisions(b.decisions || []);
-  renderQuestions(b.questions || []);
-  renderSeason(b.season);
-  renderFuture(b.future);
+  safely("decisions", () => renderDecisions(b.decisions || []));
+  safely("questions", () => renderQuestions(b.questions || []));
+  safely("season", () => renderSeason(b.season));
+  safely("future", () => renderFuture(b.future));
   const h = b.health || [];
   if (h.length) $("#health tbody").innerHTML = h.map(r => `<tr><td>${r.stale ? `<span class="chip bad">stale</span> ` : ""}${esc(r.source)}</td><td class="num">${esc(String(r.as_of).slice(0, 16).replace("T", " "))}</td><td class="n">${r.age_hours == null ? "" : r.age_hours + "h"}</td><td>${esc(r.limit)}</td><td>${esc(r.note || "")}</td></tr>`).join("");
 }
@@ -870,7 +876,7 @@ $("#sremember").addEventListener("click", async () => {
     renderAdhoc(); renderConvs();
     if (window._brief) renderDecisions(B().decisions || []);
   }, () => {});
-  ["players", "teams", "memory", "rules"].forEach(k => db.doc("pack/" + k).onSnapshot(s => { const v = s.data(); if (v && v.json) { try { pack[k] = JSON.parse(v.json); renderMemory(); } catch (e) {} } }, () => {}));
+  ["players", "teams", "memory", "rules"].forEach(k => db.doc("pack/" + k).onSnapshot(s => { const v = s.data(); if (v && v.json) { try { pack[k] = parseLoose(v.json); renderMemory(); } catch (e) { console.error("pack", k, e); } } }, () => {}));
   db.collection("strategy_notes").onSnapshot(s => { const have = new Set(((pack.memory || {}).notes || []).map(n => n.id));
     localNotes.length = 0; s.docs.forEach(d => { const v = d.data(); if (v && !have.has(v.id)) localNotes.push(v); }); renderMemory(); }, () => {});
   db.collection("notes").onSnapshot(s => renderSent(s.docs.map(d => d.data()).filter(Boolean)), () => {});
@@ -879,7 +885,11 @@ $("#sremember").addEventListener("click", async () => {
     clearTimeout(timer);
     const v = s.data();
     if (!v || !v.json) return;
-    try { window._brief = JSON.parse(v.json); renderBrief(window._brief); } catch (e) { $("#stamp").textContent = "The brief could not be read; the next sync rewrites it."; }
+    let b;
+    try { b = parseLoose(v.json); } catch (e) { $("#stamp").textContent = "The brief could not be read; the next sync rewrites it."; return; }
+    window._brief = b;
+    // draw each part on its own, so one bad section cannot blank the rest
+    try { renderBrief(b); } catch (e) { console.error(e); $("#stamp").textContent += " (part of the brief could not be shown)"; }
   }, e => { clearTimeout(timer); $("#stamp").textContent = "Could not load the brief (" + (e.code || "error") + ")."; });
 })();
 </script>

@@ -25,6 +25,7 @@ import numpy as np
 import pandas as pd
 import yaml
 
+from dfo.frontdoor import strict
 from dfo.common import PROCESSED, ROOT, load_config
 
 OUT = ROOT / "data" / "frontdoor" / "pack"
@@ -184,7 +185,7 @@ def run() -> dict:
     OUT.mkdir(parents=True, exist_ok=True)
     out = {k: _clean(v) for k, v in dict(players=players(), teams=teams(), memory=memory(), rules=rules()).items()}
     for k, v in out.items():
-        (OUT / f"{k}.json").write_text(json.dumps(v, default=str, allow_nan=False))
+        (OUT / f"{k}.json").write_text(strict.dumps(v))
     return out
 
 
