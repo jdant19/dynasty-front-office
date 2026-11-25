@@ -1,6 +1,6 @@
 {
  "table": "team_dead_money",
- "as_of": "2026-11-25T21:42:56+00:00",
+ "as_of": "2026-11-25T22:29:40+00:00",
  "rows": [
   {
    "id": "00b07175-4aae-4de1-9f03-59fd63a7adbc",
@@ -301,6 +301,18 @@
    "amount_year5": 0,
    "salary_start_year": 2026,
    "created_at": "2026-10-16T15:48:04.460148+00:00"
+  },
+  {
+   "id": "4b0d5673-8d58-45b2-ae84-3ec8d4c507a7",
+   "team_id": "team-10",
+   "label": "MarShawn Lloyd (dropped 2026/2027)",
+   "amount_year1": 5,
+   "amount_year2": 5,
+   "amount_year3": 0,
+   "amount_year4": 0,
+   "amount_year5": 0,
+   "salary_start_year": 2026,
+   "created_at": "2026-11-25T22:27:06.053716+00:00"
   },
   {
    "id": "4cd53357-2ee1-422e-8c08-31cff61f95d9",
