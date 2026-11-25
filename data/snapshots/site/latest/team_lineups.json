@@ -1,6 +1,6 @@
 {
  "table": "team_lineups",
- "as_of": "2026-11-25T03:31:51+00:00",
+ "as_of": "2026-11-25T05:21:33+00:00",
  "rows": [
   {
    "id": "0009e24d-af7f-4e3e-b262-abb4c8384ac4",
@@ -372,6 +372,15 @@
    "updated_at": "2026-04-20T15:23:32.826724+00:00"
   },
   {
+   "id": "3219ccff-976f-4b95-b377-75d150221e0f",
+   "team_id": "team-10",
+   "player_id": "def-SF",
+   "slot": "BN",
+   "slot_index": 3,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-25T04:52:29.906279+00:00"
+  },
+  {
    "id": "330a6129-d2b7-416d-a731-8d7b33616e9a",
    "team_id": "team-2",
    "player_id": "sl-8148",
@@ -393,8 +402,8 @@
    "id": "34959d8d-4108-46c0-99d0-abc3a8d4bfe5",
    "team_id": "team-7",
    "player_id": "sl-12533",
-   "slot": "IR",
-   "slot_index": 0,
+   "slot": "BN",
+   "slot_index": 12,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:18:19.559102+00:00"
   },
@@ -793,6 +802,15 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:34:41.160127+00:00"
+  },
+  {
+   "id": "6642d622-6256-4645-9b74-60f317618552",
+   "team_id": "team-10",
+   "player_id": "sl-12522",
+   "slot": "BN",
+   "slot_index": 12,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-25T04:52:29.906279+00:00"
   },
   {
    "id": "66a21efa-510b-483a-b0d2-25cf7c7803e1",
@@ -1380,6 +1398,15 @@
    "updated_at": "2026-10-20T21:21:42.59978+00:00"
   },
   {
+   "id": "bccf20ba-46e7-43ae-84fd-fd1bfa522f8f",
+   "team_id": "team-3",
+   "player_id": "sl-5995",
+   "slot": "BN",
+   "slot_index": 1,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-25T04:51:06.953661+00:00"
+  },
+  {
    "id": "be182143-8d33-44a4-81d1-5681e7502d46",
    "team_id": "team-2",
    "player_id": "sl-13402",
@@ -1486,6 +1513,15 @@
    "slot_index": 4,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:20:23.394135+00:00"
+  },
+  {
+   "id": "cad0b3ab-0812-4ceb-8c38-e67586a4bc37",
+   "team_id": "team-4",
+   "player_id": "sl-2020",
+   "slot": "BN",
+   "slot_index": 12,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-25T04:50:46.364226+00:00"
   },
   {
    "id": "cb0a3c3d-6309-489d-ba01-10fbd0707434",
