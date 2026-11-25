@@ -386,3 +386,8 @@ time,job,step,status,seconds,note
 2026-11-24T21:48:56+00:00,daily,dfo.frontdoor.views,ok,2,
 2026-11-24T21:48:57+00:00,daily,dfo.frontdoor.pack,ok,1,
 2026-11-24T21:48:57+00:00,daily,dfo.frontdoor.export,ok,0,
+2026-11-25T05:23:38+00:00,waivers,dfo.ingest.site,ok,0,
+2026-11-25T05:23:39+00:00,waivers,dfo.scoring 2026,ok,0,
+2026-11-25T05:24:39+00:00,waivers,dfo.projections.current,ok,61,
+2026-11-25T05:25:26+00:00,waivers,dfo.decide.waivers,ok,46,
+2026-11-25T05:25:26+00:00,waivers,dfo.frontdoor.export,ok,0,

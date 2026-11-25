@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T05:14:55+00:00",
+ "made_at": "2026-11-25T05:25:26+00:00",
  "week": 12,
  "decisions": [
   {
@@ -141,7 +141,7 @@
    "confidence": "low (no ranks yet)",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap). This week's FantasyPros ranks are not out yet: defense and kicker projections are weak without them, so check the betting line and consensus ranks before choosing between close options.",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-25T03:31:51+00:00",
+   "made_at": "2026-11-25T05:21:33+00:00",
    "headline": "Add Giants, drop Lions",
    "detail": {
     "type": "waivers",
@@ -192,8 +192,8 @@
       "add_pos": "K",
       "drop": "Cairo Santos",
       "drop_pos": "K",
-      "pts": 0.4,
-      "net": 0.37
+      "pts": 0.5,
+      "net": 0.46
      }
     ]
    }
@@ -634,8 +634,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-25T03:31:51+00:00",
-   "age_hours": 1.7,
+   "as_of": "2026-11-25T05:21:33+00:00",
+   "age_hours": 0.1,
    "limit": "24h",
    "stale": false
   },
@@ -648,15 +648,15 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-24T12:44:54+00:00",
-   "age_hours": 16.5,
+   "as_of": "2026-11-25T05:23:38+00:00",
+   "age_hours": 0.0,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
    "as_of": "2026-11-24T21:48:57+00:00",
-   "age_hours": 7.4,
+   "age_hours": 7.6,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
