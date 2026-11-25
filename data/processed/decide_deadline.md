@@ -2,24 +2,24 @@
 
 Inputs: projections and simulator as of 2026-11-25; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
 
-**Jordan: PUSH.** A lineup point is worth $0.88 to you this season, 1.6x what it is worth later. 1st 70%, top 4 100%, title 40%, expected payout $436.
+**Jordan: PUSH.** A lineup point is worth $0.88 to you this season, 1.6x what it is worth later. 1st 70%, top 4 100%, title 40%, expected payout $439.
 
-Since 2026-11-25: 1st +12%, title +0%, expected payout +28.
+Since 2026-11-25: 1st +1%, title +1%, expected payout +3.
 
 ## Every team's posture
 
 | Team | Posture | This season vs later | Wins | 1st | Top 4 | Title | Expected payout |
 |---|---|---|---|---|---|---|---|
-| Jordan | push | 1.65x | 14.0 | 70% | 100% | 40% | $436 |
-| Russ | push | 2.19x | 12.6 | 15% | 99% | 18% | $247 |
-| Johnny | push | 2.05x | 12.9 | 15% | 99% | 22% | $242 |
-| Zach | hold | 1.17x | 9.8 | 0% | 62% | 13% | $49 |
-| Matt | hold | 0.77x | 9.4 | 0% | 27% | 5% | $20 |
-| Max | build | 0.27x | 8.3 | 0% | 7% | 1% | $4 |
-| Qasim | build | 0.13x | 7.4 | 0% | 3% | 0% | $1 |
+| Jordan | push | 1.65x | 14.0 | 70% | 100% | 40% | $439 |
+| Russ | push | 2.14x | 12.6 | 15% | 99% | 18% | $247 |
+| Johnny | push | 2.20x | 12.9 | 14% | 99% | 21% | $235 |
+| Zach | hold | 1.18x | 9.8 | 0% | 63% | 14% | $53 |
+| Matt | hold | 0.90x | 9.4 | 0% | 27% | 5% | $20 |
+| Max | build | 0.27x | 8.3 | 0% | 8% | 1% | $4 |
+| Qasim | build | 0.12x | 7.4 | 0% | 3% | 0% | $1 |
 | Ryan | build | 0.10x | 7.2 | 0% | 2% | 0% | $1 |
-| Ben | build | 0.09x | 6.7 | 0% | 1% | 0% | $1 |
-| Mike | build | 0.00x | 1.7 | 0% | 0% | 0% | $0 |
+| Ben | build | 0.08x | 6.7 | 0% | 1% | 0% | $0 |
+| Mike | build | 0.00x | 1.6 | 0% | 0% | 0% | $0 |
 
 Competing buyers: Russ, Johnny. Sellers: Max, Qasim, Ryan, Ben, Mike.
 
@@ -28,7 +28,7 @@ Competing buyers: Russ, Johnny. Sellers: Max, Qasim, Ryan, Ben, Mike.
 | Pos | Player | Team | Your lineup gain, rest of season | Salary | Rental |
 |---|---|---|---|---|---|
 | RB | Kenneth Walker III | Ben | +24 | $67 |  |
-| QB | Dak Prescott | Ryan | +14 | $2 |  |
+| QB | Dak Prescott | Ryan | +15 | $2 |  |
 | WR | George Pickens | Ryan | +10 | $71 |  |
 | K | Cam Little | Qasim | +4 | $1 | yes |
 | DEF | Texans | Mike | +2 | $2 | yes |
@@ -52,15 +52,15 @@ Competing buyers: Russ, Johnny. Sellers: Max, Qasim, Ryan, Ben, Mike.
 |---|---|---|
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
-| Ollie Gordon II | 0 | $-4 |
 | Chris Brazzell II | 0 | $-4 |
-| Deebo Samuel Sr. | 2 | $0 |
+| Ollie Gordon II | 0 | $-4 |
+| Brenton Strange | 0 | $0 |
 | Jordan Love | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
 | Mike Gesicki | 0 | $0 |
+| Deebo Samuel Sr. | 2 | $0 |
 | Lions | 1 | $0 |
 | Kenny Gainwell | 0 | $0 |
-| Brenton Strange | 0 | $0 |
+| Courtland Sutton | 0 | $0 |
 | Harold Fannin Jr. | 0 | $3 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
@@ -74,4 +74,4 @@ Competing buyers: Russ, Johnny. Sellers: Max, Qasim, Ryan, Ben, Mike.
 | 2028 round 1 (Max's) | 0 | $65 |
 | 2028 round 1 | 0 | $65 |
 
-Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-24).
+Packages with opening, target and walk-away terms: decide_trade_search.md (last built 2026-11-25).

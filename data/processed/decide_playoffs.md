@@ -5,9 +5,9 @@ Likely seeds: 1. Jordan, 2. Russ, 3. Johnny, 4. Zach (simulator's most likely to
 | Team | Title | 2nd | Expected playoff payout | Lineup expected points |
 |---|---|---|---|---|
 | Jordan | 43% | 26% | $111 | 243 |
-| Russ | 14% | 33% | $61 | 216 |
-| Johnny | 21% | 26% | $67 | 213 |
-| Zach | 22% | 15% | $60 | 201 |
+| Russ | 14% | 33% | $61 | 215 |
+| Johnny | 21% | 26% | $68 | 213 |
+| Zach | 22% | 16% | $60 | 201 |
 
 ## Your playoff lineup if the seeds hold
 
@@ -32,20 +32,20 @@ Change in your title chance and expected playoff payout if he is on your roster 
 
 | Player | Pos | NFL | Now with | NFL playoff chance | Expected games | Title change | Payout change |
 |---|---|---|---|---|---|---|---|
-| Josh Allen | QB | BUF | Zach (playoff rival) | 100% | 2.1 | +9.1% | $+20 |
+| Josh Allen | QB | BUF | Zach (playoff rival) | 100% | 2.1 | +9.4% | $+20 |
 | Kenneth Walker III | RB | KC | Ben | 99% | 1.9 | +7.6% | $+16 |
 | James Cook | RB | BUF | Matt | 100% | 2.1 | +7.6% | $+16 |
-| Christian McCaffrey | RB | SF | Johnny (playoff rival) | 99% | 2.0 | +8.0% | $+13 |
-| Jonah Coleman | RB | DEN | Ben | 100% | 1.9 | +5.8% | $+10 |
-| Tyler Bass | K | BUF | Matt | 100% | 2.1 | +2.6% | $+7 |
-| Mike Evans | WR | SF | Russ (playoff rival) | 99% | 2.0 | +3.4% | $+6 |
-| Tee Higgins | WR | CIN | Russ (playoff rival) | 98% | 1.9 | +4.7% | $+6 |
-| Brock Purdy | QB | SF | Matt | 99% | 2.0 | +2.9% | $+6 |
-| Cam Little | K | JAX | Qasim | 99% | 2.0 | +2.9% | $+6 |
-| Chase Brown | RB | CIN | Max | 98% | 1.9 | +2.9% | $+6 |
-| Joe Burrow | QB | CIN | Russ (playoff rival) | 98% | 1.9 | +3.9% | $+5 |
-| DJ Moore | WR | BUF | Mike | 100% | 2.1 | +1.5% | $+5 |
-| Eddy Pineiro | K | SF | Zach (playoff rival) | 99% | 2.0 | +4.0% | $+5 |
-| Amon-Ra St. Brown | WR | DET | Johnny (playoff rival) | 92% | 1.8 | +3.1% | $+5 |
+| Christian McCaffrey | RB | SF | Johnny (playoff rival) | 99% | 2.0 | +7.9% | $+13 |
+| Jonah Coleman | RB | DEN | Ben | 100% | 1.9 | +5.6% | $+10 |
+| Mike Evans | WR | SF | Russ (playoff rival) | 99% | 2.0 | +2.8% | $+6 |
+| Tyler Bass | K | BUF | Matt | 100% | 2.1 | +2.5% | $+6 |
+| DJ Moore | WR | BUF | Mike | 100% | 2.1 | +2.0% | $+6 |
+| Cam Little | K | JAX | Qasim | 99% | 2.0 | +3.0% | $+6 |
+| Brock Purdy | QB | SF | Matt | 99% | 2.0 | +3.0% | $+6 |
+| Chase Brown | RB | CIN | Max | 98% | 1.9 | +3.0% | $+6 |
+| Tee Higgins | WR | CIN | Russ (playoff rival) | 98% | 1.9 | +3.8% | $+5 |
+| Eddy Pineiro | K | SF | Zach (playoff rival) | 99% | 2.0 | +4.3% | $+5 |
+| Joe Burrow | QB | CIN | Russ (playoff rival) | 98% | 1.9 | +3.4% | $+5 |
+| Amon-Ra St. Brown | WR | DET | Johnny (playoff rival) | 92% | 1.8 | +3.5% | $+5 |
 
 Known limits: the seeds are the most likely four in the most likely order; trades and waivers by other teams before Week 18 are not modeled; the league's injury replacement (next player on the depth chart) is not, so injured starters score 0 here.
