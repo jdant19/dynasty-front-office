@@ -37,6 +37,18 @@ def _week() -> int:
     return int(_read("proj_week.csv").week.iloc[0])
 
 
+def waiver_deadline(now: dt.datetime | None = None) -> str:
+    """The waiver card's deadline. FAAB closes Tuesday 23:59 PT (config/league.yaml in_season.faab.closes);
+    from Wednesday to Monday the week's waivers have run and only $0 adds by waiver priority remain
+    (in_season.after_close), each due before the added player's game kicks off."""
+    from zoneinfo import ZoneInfo
+    local = (now or _now()).astimezone(ZoneInfo("America/Los_Angeles"))
+    if local.weekday() == 1:   # Tuesday: the FAAB run is still ahead
+        return "Tuesday 11:59pm Pacific"
+    return ("waivers ran Tuesday night; now a $0 add by waiver priority, "
+            "before the added player's (or dropped player's) game kicks off")
+
+
 def _age_hours(stamp) -> float | None:
     try:
         t = pd.Timestamp(stamp)
@@ -124,7 +136,7 @@ def decisions() -> list[dict]:
     if len(wv):
         top = wv[wv.net_payout >= 0.25].head(3)
         bid = "$0 (over the cap)" if room is not None and room <= 0 else "$1 if worth $1+, else $0"
-        out.append(dict(id=f"waivers-{wk}", kind="Waivers", deadline="Tuesday 11:59pm Pacific",
+        out.append(dict(id=f"waivers-{wk}", kind="Waivers", deadline=waiver_deadline(),
                         title="Waiver claims", recommendation="; ".join(
                             f"add {r.add_player}, drop {r.drop_player}" for r in top.itertuples()) or "no claim worth making",
                         value="; ".join(f"+{r.lineup_points:.1f} pts, ${r.net_payout:.2f}" for r in top.itertuples()),

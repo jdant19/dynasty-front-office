@@ -45,3 +45,13 @@ def test_strict_dumps_drops_nan():
     from dfo.frontdoor import strict
     out = json.loads(strict.dumps({"slot": float("nan"), "n": np.int64(3), "x": [np.float64("inf"), 1.5]}))
     assert out == {"slot": None, "n": 3, "x": [None, 1.5]}
+
+
+def test_waiver_deadline_after_tuesday_close():
+    import datetime as dt
+    from dfo.frontdoor.export import waiver_deadline
+    utc = dt.timezone.utc
+    # Tuesday 2026-11-24 20:00 PT: FAAB still open
+    assert waiver_deadline(dt.datetime(2026, 11, 25, 4, 0, tzinfo=utc)) == "Tuesday 11:59pm Pacific"
+    # Wednesday 2026-11-25 14:30 PT: waivers have run, $0 adds only
+    assert "$0 add" in waiver_deadline(dt.datetime(2026, 11, 25, 22, 30, tzinfo=utc))
