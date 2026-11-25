@@ -106,6 +106,12 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
     plays = {w: set(sched[sched.week == w].team) for w in weeks}
     pool = ros.drop_duplicates("player_id").set_index("player_id")
     waiver = _waiver_rows(weeks)
+    # The stand-in "streamed" K/DEF (P10 stream level) fills weeks after this one. This week the free
+    # agents are known and each is evaluated as an add, so the stand-in must not count for this week too:
+    # with a 7.4-point stand-in defense, no real free agent (best 6.7 in Week 12) could beat it and every
+    # defense swap read +0 while the Lions projected 4.2 (2026-11-24).
+    if len(weeks) and weeks[0] in waiver.columns:
+        waiver.loc[waiver.pos.isin(STREAM), weeks[0]] = 0.0
     from dfo.decide.streaming import adjustments
     adj = adjustments(SEASON, week0)
     team = pd.concat([_stream(_grid(pool.loc[pool.index.intersection(mine)].reset_index(), weeks, plays, first, adj), weeks), waiver])
