@@ -3,7 +3,8 @@
 The front door is one published page, in four tabs: Today (decisions one line each, opened for the
 detail; questions; discussions; send), This season (Jordan's remaining matchups with win chances, his odds
 week by week, league standings and outlook), Future (cap and strength by year, the offseason plan and its
-alternatives, the contract grid, picks) and Data (data health). It is: https://claude.ai/artifact/3ck3di3wxuyLSpfkJnkVEw
+alternatives, the contract grid, picks) and Data (data health, and the weekly projection scorecard from
+`dfo.projections.scorecard`: each finished week's pre-game projections against what was scored, with drift flags). It is: https://claude.ai/artifact/3ck3di3wxuyLSpfkJnkVEw
 (source: `frontdoor/front-office.html`, private to Jordan). The season and future tabs come from
 `dfo.frontdoor.views` (season.json, future.json, folded into the brief by the export); the odds trend
 is a replay cached in `data/processed/sim_2026_trend.csv` (one row per finished week).

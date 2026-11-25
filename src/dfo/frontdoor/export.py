@@ -312,6 +312,8 @@ def run() -> dict:
     items = decisions()
     brief = dict(made_at=_now().isoformat(timespec="seconds"), week=_week(), decisions=items, posture=posture(), team=team(),
                  market=market(), questions=[q for q in questions() if q["status"] == "open"], health=health())
+    from dfo.projections import scorecard   # weekly projection scorecard (Data tab)
+    brief["calibration"] = scorecard.brief()
     for k in ("season", "future"):   # dfo.frontdoor.views
         f = OUT / f"{k}.json"
         if f.exists():

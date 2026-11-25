@@ -55,3 +55,15 @@ def test_waiver_deadline_after_tuesday_close():
     assert waiver_deadline(dt.datetime(2026, 11, 25, 4, 0, tzinfo=utc)) == "Tuesday 11:59pm Pacific"
     # Wednesday 2026-11-25 14:30 PT: waivers have run, $0 adds only
     assert "$0 add" in waiver_deadline(dt.datetime(2026, 11, 25, 22, 30, tzinfo=utc))
+
+
+def test_scorecard_freezes_until_kickoff():
+    import datetime as dt
+    from dfo.projections import scorecard
+    kick = pd.Series([pd.Timestamp("2026-11-29 13:00", tz="UTC"), pd.Timestamp("2026-11-26 13:00", tz="UTC")],
+                     index=pd.MultiIndex.from_tuples([(12, "MIN"), (12, "DET")]))
+    base = dict(season=2026, week=12, pos="WR", bye=False, low=1.0, high=9.0, made_at="t")
+    old = pd.DataFrame([dict(base, player_id="a", team="MIN", proj=5.0), dict(base, player_id="b", team="DET", proj=5.0)])
+    new = pd.DataFrame([dict(base, player_id="a", team="MIN", proj=7.0), dict(base, player_id="b", team="DET", proj=9.0)])
+    out = scorecard._merge(old, new, pd.Timestamp("2026-11-27 12:00", tz="UTC"), kick).set_index("player_id").proj
+    assert out.to_dict() == {"a": 7.0, "b": 5.0}          # Detroit played Thursday: its row stays frozen

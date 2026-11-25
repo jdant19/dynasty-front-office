@@ -105,6 +105,9 @@ tr:last-child td { border-bottom: 0 }
 .wbar { display: flex; align-items: center; gap: 6px }
 .wbar span.b { display: inline-block; height: 8px; border-radius: 0 4px 4px 0; background: var(--bar) }
 .pos-up { color: var(--good) } .pos-down { color: var(--bad) }
+#tab-data section, #calib { min-width: 0; max-width: 100% }
+#calib .tw table { min-width: 560px }
+.flags { list-style: none; padding: 0; margin: 0 0 10px; display: grid; gap: 6px; font-size: 13px }
 /* chart */
 .chart { position: relative }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible }
@@ -298,6 +301,11 @@ tr:last-child td { border-bottom: 0 }
       <h2>Data health</h2>
       <div class="card tw"><table id="health"><thead><tr><th>Source</th><th>As of</th><th class="n">Age</th><th>Limit</th><th>Note</th></tr></thead><tbody><tr><td colspan="5" class="meta">Appears with the brief.</td></tr></tbody></table></div>
     </section>
+    <section>
+      <h2>Projection scorecard</h2>
+      <p class="meta">Each finished week: our last projection before each player's game against what he scored. Drift is flagged against the 2021–2025 back-test.</p>
+      <div id="calib" class="empty">Appears with the brief.</div>
+    </section>
   </div>
 </div>
 
@@ -345,8 +353,38 @@ function renderBrief(b) {
   safely("questions", () => renderQuestions(b.questions || []));
   safely("season", () => renderSeason(b.season));
   safely("future", () => renderFuture(b.future));
+  safely("calibration", () => renderCalibration(b.calibration));
   const h = b.health || [];
   if (h.length) $("#health tbody").innerHTML = h.map(r => `<tr><td>${r.stale ? `<span class="chip bad">stale</span> ` : ""}${esc(r.source)}</td><td class="num">${esc(String(r.as_of).slice(0, 16).replace("T", " "))}</td><td class="n">${r.age_hours == null ? "" : r.age_hours + "h"}</td><td>${esc(r.limit)}</td><td>${esc(r.note || "")}</td></tr>`).join("");
+}
+
+// ---------------------------------------------------------------- projection scorecard (Data tab)
+function renderCalibration(c) {
+  const box = $("#calib");
+  if (!c || !(c.weeks || []).length) { box.className = "empty"; box.textContent = "No finished week scored yet."; return; }
+  const f1 = v => v == null ? "–" : (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1);
+  const f2 = v => v == null ? "–" : v.toFixed(2);
+  const pc = v => v == null ? "–" : Math.round(v * 100) + "%";
+  const vs = (a, b, fmt, lowerBetter) => {
+    if (a == null) return "–";
+    if (b == null) return fmt(a);
+    const better = lowerBetter ? a <= b : a >= b, tie = Math.abs(a - b) < 0.01 * Math.max(1, Math.abs(b));
+    return `<span class="${tie ? "" : better ? "pos-up" : "pos-down"}">${fmt(a)}</span> <span class="meta">/ ${fmt(b)}</span>`;
+  };
+  const head = `<thead><tr><th>Week</th><th class="n">Players</th><th class="n">Bias</th><th class="n">Error <span class="meta">ours / FP</span></th><th class="n">Ordering <span class="meta">ours / FP</span></th><th class="n">Inside 80%</th><th class="n">Below</th><th class="n">Above</th></tr></thead>`;
+  const row = (r, label) => `<tr><td>${esc(label)}</td><td class="n">${r.n}</td><td class="n">${f1(r.bias)}</td><td class="n">${vs(r.fp_mae == null ? r.mae : r.mae_same_rows, r.fp_mae, f2, true)}</td><td class="n">${vs(r.order, r.fp_order, f2, false)}</td><td class="n">${pc(r.inside)}</td><td class="n">${pc(r.below)}</td><td class="n">${pc(r.above)}</td></tr>`;
+  const flags = (c.flags || []).length
+    ? `<ul class="flags">${c.flags.map(f => `<li><span class="chip bad">drift</span> <b>${esc(f.check)}</b>: ${esc(String(f.value))} <span class="meta">(limit ${esc(f.limit)}, ${esc(f.weeks)})</span>${f.note ? ` — ${esc(f.note)}` : ""}</li>`).join("")}</ul>`
+    : `<p><span class="chip good">ok</span> No drift in the last three scored weeks.</p>`;
+  const st = (c.status || []).map(r => `<tr><td>${esc(r.status === "none" ? "Not listed" : r.status)}</td><td class="n">${r.n}</td><td class="n">${pc(r.played)}</td><td class="n">${f2(r.proj)}</td><td class="n">${f2(r.actual)}</td></tr>`).join("");
+  box.className = "";
+  box.innerHTML = `${flags}
+    <div class="card tw"><table>${head}<tbody>${c.weeks.map(r => row(r, "Week " + r.week)).join("")}</tbody></table></div>
+    <h3 style="margin-top:14px">Week ${c.latest_week} by position</h3>
+    <div class="card tw"><table>${head.replace("<th>Week</th>", "<th>Position</th>")}<tbody>${(c.latest || []).map(r => row(r, r.pos)).join("")}</tbody></table></div>
+    <h3 style="margin-top:14px">Week ${c.latest_week} by injury status</h3>
+    <div class="card tw"><table><thead><tr><th>Status</th><th class="n">Players</th><th class="n">Played</th><th class="n">Projected</th><th class="n">Scored</th></tr></thead><tbody>${st}</tbody></table></div>
+    <p class="meta">Bias = scored − projected, points a player. Error = average miss in points; FantasyPros = their rank turned into points, on the same players. Ordering = rank correlation within position. ${esc(c.source || "")} · scored ${esc(String(c.made_at || "").slice(0, 16).replace("T", " "))} UTC</p>`;
 }
 
 // ---------------------------------------------------------------- decisions: one line each, open for detail

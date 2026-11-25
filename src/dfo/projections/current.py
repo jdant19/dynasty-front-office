@@ -127,12 +127,15 @@ def main() -> None:
     out_week = pd.DataFrame(dict(
         season=SEASON, week=week, player_id=wk.player_id, player=wk.player_id.map(names), pos=wk.pos,
         team=wk.team, opp=wk.opp, owner=wk.player_id.map(owner).fillna(""), fp_rank=wk.ecr.round(1),
-        proj=wk.proj.round(1), low=wk.low.round(1), high=wk.high.round(1), bye=wk.bye,
+        fp_pts=wk.fp_pts.round(1), proj=wk.proj.round(1), low=wk.low.round(1), high=wk.high.round(1), bye=wk.bye,
         injury_status=wk.injury_status, play_prob=wk.play_prob, proj_if_plays=wk.proj_if_plays.round(1),
         practice=wk.practice, status_source=wk.status_source, games_missed=wk.games_missed, ir_games=wk.ir_games,
         qb_role=wk.qb_role, ranks_note=ranks_note, stats_as_of=inputs_as_of,
         status_as_of=status_as_of + "; " + str(qb.chart_as_of.iloc[0] if len(qb) else ""), made_at=stamp))
     out_week.sort_values(["pos", "proj"], ascending=[True, False]).to_csv(PROCESSED / "proj_week.csv", index=False)
+    # keep the last projection made before each player's game, for the weekly scorecard
+    from dfo.projections import scorecard
+    scorecard.freeze(out_week)
 
     # rest of season (this week's ranks missing: last week's rank, labeled stale in rank_week)
     fp_prev, rank_week = None, pd.Series(np.where(wk.fp_pts.notna(), week, np.nan), index=wk.index)

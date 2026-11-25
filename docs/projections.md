@@ -180,6 +180,17 @@ team's starter is its highest-listed quarterback not Out, Doubtful or on a reser
   the chart may lack (Week 12: Minnesota's chart lists Kirk Cousins over Kyler Murray, back from injury).
 - Quarterbacks only: the other positions share work, and their usage features already carry it.
 
+## 7. Weekly scorecard (added 2026-11-25)
+
+`projections/scorecard.py`, run after every projection refresh. Each run replaces a player's frozen row
+for the coming week until his game day (13:00 UTC), so `proj_week_frozen.csv` keeps the last projection
+made before his game (Weeks 9-11 rebuilt from git history). Each finished week is scored on fantasy-
+relevant players (`calibration_weekly.csv`, `calibration_status.csv`): bias, error against FantasyPros'
+rank in points, ordering against FantasyPros', share inside / below / above the 80% range, and by
+injury status how many played. Drift flags over the last three scored weeks (`calibration_flags.csv`):
+inside the range outside 70-90%, bias beyond +/-1 (+/-2 at a position), error 10% worse or ordering 0.05
+worse than FantasyPros, any Out/IR player projected above 1. Shown on the page's Data tab.
+
 ## What this means for valuation
 
 - Use these projections as the points input for Phase 4. They are at least as good as the best

@@ -231,7 +231,8 @@ def test_deadline_posture_and_run_plan():
     assert (p.loc[p.posture == "push", "now_vs_later"] >= 1.25).all()
     for job in ("daily", "waivers", "lineup", "trades"):
         steps = [s[0] for s in run.plan(job)]
-        assert steps[:4] == ["dfo.ingest.site", "dfo.scoring", "dfo.projections.ecr_history", "dfo.projections.current"]
+        assert steps[:5] == ["dfo.ingest.site", "dfo.scoring", "dfo.projections.ecr_history", "dfo.projections.current",
+                             "dfo.projections.scorecard"]
     assert "dfo.decide.trade_search" in [s[0] for s in run.plan("trades")]
 
 
