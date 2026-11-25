@@ -11,8 +11,8 @@ lineup can be right; when we are behind a higher-ceiling one can. A close call i
 whose swap into a slot changes the median by under 2 points; each one is shown with both numbers.
 
 Players listed Out, on IR or on a bye are not started. A Questionable player counts at his chance of
-playing (params_questionable.csv: fantasy starters listed Questionable 2021-2025 played 52% of the
-time at QB, 74-80% elsewhere) times his projection, with the extra spread that brings, and is flagged
+playing times his projection, with the extra spread that brings (both already in proj_week.csv since
+2026-11-25: projections/injury.py, fit by position, projection and practice participation), and is flagged
 with the start to use if he is ruled out. A FantasyPros rank that rose or fell 20+ places since last week
 is flagged to check the news before trusting it. Players whose game has already kicked off are locked: the
 recommendation fills only the open slots and says so.
@@ -99,6 +99,8 @@ def eligible(df: pd.DataFrame) -> pd.DataFrame:
     out = df[~df.bye.astype(bool) & ~status.isin(OUT)].copy()
     out[["proj", "low", "high"]] = out[["proj", "low", "high"]].astype(float)
     q = out.injury_status.fillna("").eq("Questionable")
+    if "play_prob" in out:          # proj_week already holds chance of playing x projection (projections/injury.py)
+        return out
     if q.any():
         play = pd.read_csv(PROCESSED / "params_questionable.csv").set_index("position")["mean"]
         pr = out.loc[q, "pos"].map(play).fillna(0.74)

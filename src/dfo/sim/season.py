@@ -3,8 +3,10 @@
     PYTHONPATH=src python -m dfo.sim.season [n_sims]    # writes data/processed/sim_regular.csv
 
 Each simulated week, for every team:
-  - who is available: injury chain per player (outcomes.absence), starting from the site's injury
-    status (Out or IR: out now; Questionable: out 25%, Doubtful 75%)
+  - who is available: this week from his chance of playing (proj_week.play_prob: injury status, fit in
+    projections/injury.py); later weeks, for players with a status or games missed, the fitted chance
+    of playing that week (proj_avail.csv, IR minimum included), otherwise the injury chain per player
+    (outcomes.absence)
   - the lineup: the best legal lineup by expected points among available players (owners know who
     is out before kickoff), with a waiver pickup at each position always available at the waiver level
   - the score: each starter's draw from history (outcomes.Pools); byes score 0
@@ -39,6 +41,8 @@ class Team:
     fixed: np.ndarray          # (players,) points already scored this week, nan if not yet
     start_out: np.ndarray      # (players,) chance he is out now
     phantom: np.ndarray        # (players,) waiver stand-ins
+    play: np.ndarray | None = None   # (weeks, players) chance he plays that week where fitted (injury
+                                     # status or games missed: projections/injury.py), nan = absence chain
 
 
 def _waiver_levels() -> dict[str, float]:
@@ -99,7 +103,11 @@ def load_state(today: dt.date | None = None, moves: dict[str, str] | None = None
     pts = pd.read_csv(PROCESSED / f"points_{SEASON}.csv")
     pts = pts[(pts.season_type == "REG") & (pts.week == cur_week)].set_index("player_id").points
     rate = ros.set_index("player_id")
-    proj_now = wk.set_index("player_id").proj
+    wk1 = wk.drop_duplicates("player_id").set_index("player_id")
+    # this week: the projection if he plays; whether he plays is drawn from his chance of playing
+    proj_now = wk1.proj_if_plays.fillna(wk1.proj) if "proj_if_plays" in wk1 else wk1.proj
+    play_now = wk1.play_prob if "play_prob" in wk1 else None
+    from dfo.projections.injury import weekly_play
     team_of = rate.team
     slots = lg["roster"]["starters"]
     waiver = _waiver_levels()
@@ -117,7 +125,11 @@ def load_state(today: dt.date | None = None, moves: dict[str, str] | None = None
                 R[i, j] = proj_now.get(p, rate.rate.get(p, 0.0)) if w == cur_week else rate.rate.get(p, 0.0)
         fixed = np.array([pts.get(p, np.nan) if team_of.get(p) in set(played.team) else np.nan for p in pids])
         start = np.array([STATUS_OUT.get(str(s), 0.0) for s in g.injury_status.fillna("")])
+        if play_now is not None:
+            pn = np.array([play_now.get(p, np.nan) for p in pids], dtype=float)
+            start = np.where(np.isnan(pn), start, 1 - pn)
         start = np.where(g.slot.eq("IR").to_numpy(), 1.0, start)
+        P = weekly_play(pids, weeks, pd.Series(np.nan, index=pids)).to_numpy(float).T if weeks else np.zeros((0, len(pids)))
         # waiver stand-ins: one per starting slot at each position (+1 RB/WR for the flex)
         ph_pos = [p for p, n in slots.items() if p != "FLEX" for _ in range(n + (1 if p in ("RB", "WR") else 0))]
         PH = np.tile([waiver.get(p, 0.0) for p in ph_pos], (len(weeks), 1))
@@ -125,7 +137,8 @@ def load_state(today: dt.date | None = None, moves: dict[str, str] | None = None
                           rate=np.concatenate([R, PH], axis=1),
                           fixed=np.concatenate([fixed, np.full(len(ph_pos), np.nan)]),
                           start_out=np.concatenate([start, np.zeros(len(ph_pos))]),
-                          phantom=np.array([False] * len(pids) + [True] * len(ph_pos))))
+                          phantom=np.array([False] * len(pids) + [True] * len(ph_pos)),
+                          play=np.concatenate([P, np.full((len(weeks), len(ph_pos)), np.nan)], axis=1)))
     return teams, res, weeks, done
 
 
@@ -183,6 +196,11 @@ def simulate(n: int = 10000, seed: int = 7, boost: dict[str, float] | None = Non
                 prev = out_state[t.owner]
                 u = rng.random(prev.shape)
                 out_state[t.owner] = np.where(prev, u < oo, u < po) & ~t.phantom
+                if t.play is not None:          # fitted weekly chance (IR minimum, return curve) wins
+                    pw = t.play[i]
+                    fit = ~np.isnan(pw)
+                    if fit.any():
+                        out_state[t.owner][:, fit] = rng.random((n, int(fit.sum()))) >= pw[fit]
             E = t.rate[i]
             fixed_now = (i == 0) & ~np.isnan(t.fixed)
             avail = ~out_state[t.owner] | fixed_now

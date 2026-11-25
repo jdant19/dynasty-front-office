@@ -40,6 +40,15 @@ def _grid(df: pd.DataFrame, weeks: list[int], plays: dict, first: pd.Series | No
     week's projection (matchup and bye) when there is one: streaming and bye fills live there.
     `adj` (decide/streaming.py): matchup adjustments for defenses in the tested weeks after that."""
     g = pd.DataFrame({w: np.where(df.team.isin(plays[w]), df.rate, 0.0) for w in weeks}, index=df.player_id)
+    if "rate_play" in df and len(weeks):
+        # players with an injury status or games missed: the chance of playing each week (IR minimum,
+        # return curve; projections/injury.py) instead of one flat rest-of-season rate, so a player due
+        # back in Week 16 counts in Weeks 16-18 only
+        from dfo.projections.injury import weekly_play
+        pw = weekly_play(df.player_id, weeks, pd.Series(np.nan, index=df.player_id.unique()))
+        for w in weeks:
+            v = pw[w].to_numpy(float)
+            g[w] = np.where(~np.isnan(v) & (g[w].to_numpy() > 0), df.rate_play.to_numpy() * np.nan_to_num(v), g[w].to_numpy())
     if adj is not None and len(adj):
         for (pos, w), a in adj.groupby(["pos", "week"]):
             if w in g.columns:
@@ -110,7 +119,8 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
              week0: int, first: pd.Series | None = None) -> pd.DataFrame:
     """Every (add, drop) pair worth considering, best first."""
     ros = ros.copy()
-    ros["rate"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros") * ros.availability
+    ros["rate_play"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros")
+    ros["rate"] = ros.rate_play * ros.availability
     sched = implied_totals([SEASON])
     weeks = list(range(week0, 19))
     plays = {w: set(sched[sched.week == w].team) for w in weeks}

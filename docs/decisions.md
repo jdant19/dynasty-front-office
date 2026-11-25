@@ -336,3 +336,18 @@ was scored, so its spread across draws was close to zero and pulled the average 
 actual 23.46 (-10.7%), failing the engine run. The model was not wrong; the measure was. The check now
 leaves out the current week once any of its points are fixed: 22.99 vs 23.46 (-2%), mean score 119.23 vs
 118.59. Classified as a parameter-check fix, not a change to the model.
+
+## Injury status in projections (2026-11-25 correction, `projections/injury.py`)
+Jordan's question: the projections did not seem well calibrated. The review of Weeks 9-11 found IR and
+Out players projected about 11 points a week, and IR players counted at full rest-of-season value in
+waivers, trades and prices (free agents carried no status at all). Classified as a parameter fit (two
+new fitted tables, dated), not a rule: the chance of playing this week by status, position, projection
+and practice, and the chance of playing each later game by status and games already missed, with the
+NFL's 4-game IR minimum enforced. Start/sit had its own Questionable discount; it now uses the
+projection's, so nothing is counted twice. Docs: projections.md section 5.
+
+## Starter check for quarterbacks (2026-11-25 correction, `projections/depth.py`)
+Same review: backup quarterbacks projected as starters on rank-less days and in every rest-of-season
+rate (Willis, Wentz, Drew Lock 82 rest-of-season points as Seattle's backup). Classified as a parameter
+fit (`params_qb_depth.csv`): chance of starting by depth-chart role, a first-start rate, and a cap on
+this week's projection when no rank is out. A starter-level FantasyPros rank overrides the chart.

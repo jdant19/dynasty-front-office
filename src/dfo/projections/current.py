@@ -110,6 +110,16 @@ def main() -> None:
     wk = wk.join(p[["proj", "low", "high", "fp_pts"]])
     wk["bye"] = wk.implied.isna()
     wk.loc[wk.bye, ["proj", "low", "high"]] = 0.0
+    # injury status: chance of playing this week, and of each remaining game (projections/injury.py)
+    from dfo.projections import injury
+    site = ros_tbl.dropna(subset=["pid"]).drop_duplicates("pid").set_index("pid").injury_status
+    status = injury.live_status(SEASON, week, site, injury.team_games([SEASON]))
+    # starter check: unranked backup QBs get their role's projection (projections/depth.py)
+    from dfo.projections import depth
+    qb = depth.live_roles(SEASON, week, status)
+    wk = depth.apply_week(wk, qb)
+    wk = injury.apply_week(wk, status)
+    status_as_of = str(status.status_as_of.iloc[0]) if len(status) else ""
     names = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str).set_index("canonical_id").name
     owner = ros_tbl.dropna(subset=["pid"]).set_index("pid").owner
     stamp = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -118,8 +128,10 @@ def main() -> None:
         season=SEASON, week=week, player_id=wk.player_id, player=wk.player_id.map(names), pos=wk.pos,
         team=wk.team, opp=wk.opp, owner=wk.player_id.map(owner).fillna(""), fp_rank=wk.ecr.round(1),
         proj=wk.proj.round(1), low=wk.low.round(1), high=wk.high.round(1), bye=wk.bye,
-        injury_status=wk.player_id.map(ros_tbl.dropna(subset=["pid"]).set_index("pid").injury_status).fillna(""),
-        ranks_note=ranks_note, stats_as_of=inputs_as_of, made_at=stamp))
+        injury_status=wk.injury_status, play_prob=wk.play_prob, proj_if_plays=wk.proj_if_plays.round(1),
+        practice=wk.practice, status_source=wk.status_source, games_missed=wk.games_missed, ir_games=wk.ir_games,
+        qb_role=wk.qb_role, ranks_note=ranks_note, stats_as_of=inputs_as_of,
+        status_as_of=status_as_of + "; " + str(qb.chart_as_of.iloc[0] if len(qb) else ""), made_at=stamp))
     out_week.sort_values(["pos", "proj"], ascending=[True, False]).to_csv(PROCESSED / "proj_week.csv", index=False)
 
     # rest of season (this week's ranks missing: last week's rank, labeled stale in rank_week)
@@ -132,10 +144,17 @@ def main() -> None:
     wk["ros_ppg"] = ros_rate(wk, fp_prev)
     imp = implied_totals([SEASON])
     today = dt.datetime.now(dt.timezone.utc).date()
-    games_left = imp[(imp.week >= week) & (pd.to_datetime(imp.gameday).dt.date >= today)].groupby("team").size()
+    left = imp[(imp.week >= week) & (pd.to_datetime(imp.gameday).dt.date >= today)].sort_values("week")
+    games_left = left.groupby("team").size()
     avail = availability(df, min(week, 17))
     wk["games_left"] = wk.team.map(games_left).fillna(0)
-    wk["availability"] = wk.pos.map(avail).fillna(0.85)
+    # availability: the position's rate for healthy players; status players (and players who missed games
+    # in a row) get the fitted chance of playing each remaining game, IR minimum included
+    done = set(imp[(imp.week == week) & (pd.to_datetime(imp.gameday).dt.date < today)].team)
+    wk["availability"], prof = injury.ros_availability(wk, left.groupby("team").week.apply(list).to_dict(), done,
+                                                       avail)
+    wk, prof = depth.ros_backups(wk, left.groupby("team").week.apply(list).to_dict(), done, prof, avail)
+    prof.assign(from_week=week, made_at=stamp, status_as_of=status_as_of).to_csv(PROCESSED / "proj_avail.csv", index=False)
     wk["ros_points"] = wk.ros_ppg * wk.games_left * wk.availability
     out_ros = pd.DataFrame(dict(
         season=SEASON, from_week=week, player_id=wk.player_id, player=wk.player_id.map(names), pos=wk.pos,

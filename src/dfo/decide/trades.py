@@ -70,7 +70,8 @@ class State:
         self.week0, self.rosters, self.made_at = week0, rosters, made_at
         self.prices = prices if prices is not None else pd.read_csv(PROCESSED / "prices.csv")
         ros = ros.drop_duplicates("player_id").copy()
-        ros["rate"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros") * ros.availability
+        ros["rate_play"] = calibrate.shrink(ros.ros_ppg, ros.pos, "ros")
+        ros["rate"] = ros.rate_play * ros.availability
         self.pool = ros.set_index("player_id")
         sched = implied_totals([SEASON])
         self.weeks = list(range(week0, 19))

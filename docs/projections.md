@@ -115,6 +115,71 @@ Draft-capital model and FantasyPros rookie rank (May-August), 50/50. 229 rookies
 | --- | --- | --- |
 | 2.60 MAE / 0.563 | 2.53 / 0.568 | **2.44 / 0.572** |
 
+## 5. Injury status (added 2026-11-25)
+
+Found in the calibration review of Weeks 9-11: players listed IR or Out were projected about 11 points
+(2 of 27 played), and rest-of-season totals counted every IR player at the full position availability
+(Puka Nacua, two games into an IR stint, 124 points; he cannot play before Week 15). Free agents had no
+status at all. `projections/injury.py`, fit 2021-2025 (regular season), joining the NFL's injury reports
+and weekly reserve lists (nflverse) to who played:
+
+| Status (ranked players) | Player-weeks | Played |
+| --- | --- | --- |
+| Out | 698 | 0% |
+| Doubtful | 172 | 0.6% |
+| IR / other reserve lists | 467 | 1.2% |
+| Questionable | 1,671 | 63% (QB 40%; did not practice 43%, limited 64%, full 73%) |
+| Not listed | 30,059 | 80% (includes deep backups who never get in) |
+
+- **This week:** projection = chance of playing x projection if he plays; the 80% range is that mixture's.
+  Out, Doubtful and reserve lists are 0. Questionable is a logistic fit on position, projection and
+  practice participation (`params_injury_week.csv`); before the final report, when practice is unknown,
+  a second fit without it. A Questionable player who plays scores like anyone else (actual/projected
+  1.18 vs 1.14 unlisted), so no further discount. `proj_week.csv` keeps `proj_if_plays` and `play_prob`.
+- **Rest of season:** the share of players with that status (and games already missed in a row) who
+  played the next game, the one after, and so on, re-injuries included (`params_injury_return.csv`;
+  QB/RB/WR/TE ranked earlier that season). IR adds the NFL's 4-game minimum on top. Each remaining
+  game's chance is in `proj_avail.csv`; `proj_ros.csv` availability is their mean. Healthy players who
+  played last week keep the flat position rate (no change).
+- **Check, 2021-2025 weeks 3-14 (in-sample):** share of remaining games played, predicted vs actual: IR
+  0.21 vs 0.22 (759), Out 0.58 vs 0.58 (477), Doubtful 0.60 vs 0.60 (84), Questionable 0.76 vs 0.76 and
+  this week 0.71 vs 0.72 (775), unlisted but missed the last game 0.68 vs 0.66 (307).
+- **Live status:** the league site (rostered players) and the NFL report and reserve list for the
+  coming week (everyone). The more serious one is used, except that the site wins on IR for rostered
+  players because it changes the moment a player is activated. `status_source` says which.
+- **Who uses it:** start/sit (no longer applies its own Questionable discount), waivers and trades
+  (week-by-week grid: a player due back in Week 16 counts in Weeks 16-18 only), the season simulator
+  (this week from `play_prob`, later weeks from the fitted chances, else the absence chain), prices
+  (rest-of-season value uses the lower availability).
+- Limits: the fit uses the final (Friday) report; a midweek "Questionable" on the site is a looser label,
+  so early in the week the chance is conservative. Positions are pooled for the return shares.
+
+## 6. Starter check from depth charts (added 2026-11-25)
+
+Also from the Weeks 9-11 review: from Tuesday until the week's FantasyPros ranks arrive, the projection
+runs without ranks, and quarterbacks who had lost the job were projected on their earlier starts
+(Malik Willis 14.6, Carson Wentz 12.2; neither played). The rest-of-season rate had the same fault every
+day, since two of its three terms come from his own games. `projections/depth.py`, fit 2021-2025 on
+nflverse depth charts (the weekly chart through 2024, ESPN snapshots before each game from 2025): a
+team's starter is its highest-listed quarterback not Out, Doubtful or on a reserve list.
+
+| Role | Player-weeks | Started | Points |
+| --- | --- | --- | --- |
+| Starter | 2,972 | 82% | 14.2 |
+| Backup who started earlier this season | 813 | 16% (20-25% of later games) | 2.4 |
+| Other backup, second | 2,165 | 4% (11-17% later) | 0.7 |
+| Other backup, third or lower | 980 | 1% (4-11% later) | 0.3 |
+
+- **This week, no rank:** a backup's projection and range are capped at his role's (never raised).
+  With ranks nothing changes: ranked backups were projected 2.54 and scored 2.42.
+- **Rest of season:** rate if he starts (a former starter his own; anyone else 14.7, what backups scored
+  in a first start) x his chance of starting each remaining game. Back-test, all 617 backups at Weeks
+  6/8/10 2021-2025, points per remaining team game: predicted 1.91 / 1.10 / 2.58, actual 1.78 / 1.02 / 3.11
+  (second / third / former starter; bias -0.02). The old rate gave a former starter 9.2.
+- A quarterback FantasyPros ranks in the top 32 that week is never treated as a backup: the rank has news
+  the chart may lack (Week 12: Minnesota's chart lists Kirk Cousins over Kyler Murray, back from injury).
+- Quarterbacks only: the other positions share work, and their usage features already carry it.
+
 ## What this means for valuation
 
 - Use these projections as the points input for Phase 4. They are at least as good as the best
@@ -130,7 +195,7 @@ Draft-capital model and FantasyPros rookie rank (May-August), 50/50. 229 rookies
 - Weekly rankings for 2025-2026 are recovered from DynastyProcess's git history (the last version
   before each Sunday). 2020 has partial weekly coverage. Before 2020, the weekly model trains on
   stats only.
-- No game-day injury or inactive news yet. The injury status column in `proj_week.csv` comes from the site.
+- No game-day inactive news (90 minutes before kickoff). Injury status is in (section 5).
 - PFF data is not in yet (rankings downloads only). It can be added as another source and tested
   the same way.
 - Kicker and defense ranges are wide because those outcomes are mostly noise.
