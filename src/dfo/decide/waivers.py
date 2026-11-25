@@ -96,6 +96,16 @@ def _later_values(prices: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
     return option, keep + dead
 
 
+def _candidates(pool: pd.DataFrame, rostered: set[str]) -> pd.DataFrame:
+    """Free agents to evaluate: the TOP_FA best by rest-of-season rate, plus every free-agent K and DEF.
+    Streamed units (P10) are judged on this week's matchup alone (later weeks use the stand-in), so a
+    rest-of-season cutoff must not hide them: in Week 12 the Browns (6.8 vs Las Vegas) and Commanders
+    (6.6) ranked 43rd and 46th by rate and were never compared with the Giants (6.7) (2026-11-25)."""
+    fa = pool[~pool.index.isin(rostered) & (pool.rate > 0)]
+    top = fa.nlargest(TOP_FA, "rate")
+    return pd.concat([top, fa[fa.pos.isin(STREAM) & ~fa.index.isin(top.index)]])
+
+
 def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], prices: pd.DataFrame,
              week0: int, first: pd.Series | None = None) -> pd.DataFrame:
     """Every (add, drop) pair worth considering, best first."""
@@ -119,7 +129,7 @@ def evaluate(owner: str, ros: pd.DataFrame, rostered: set[str], mine: set[str], 
     w_now, w_later = _weights(owner)
     option, drop_later = _later_values(prices)
     loss = {pid: base - lineup_points(team.drop(index=pid)) for pid in team.index.difference(waiver.index)}
-    fa = pool[~pool.index.isin(rostered) & (pool.rate > 0)].nlargest(TOP_FA, "rate")
+    fa = _candidates(pool, rostered)
     g_fa = _stream(_grid(fa.reset_index(), weeks, plays, first, adj), weeks)
     names = pool.player
     rows = []

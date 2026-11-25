@@ -253,3 +253,14 @@ def test_playoff_prep_lineups_are_legal():
         assert len(g) == sum(st.values())
         assert not g.player.duplicated().any()
     assert not lu.player.duplicated().any()           # nobody starts for two playoff teams
+
+
+def test_every_free_agent_stream_unit_is_evaluated():
+    from dfo.decide import waivers as W
+    n = W.TOP_FA + 5
+    pool = pd.DataFrame(dict(pos=["WR"] * n + ["DEF", "K", "DEF"], rate=[20.0] * n + [6.0, 5.0, 7.0]),
+                        index=[f"p{i}" for i in range(n)] + ["DEF-CLE", "K-1", "DEF-NYG"])
+    c = W._candidates(pool, rostered={"DEF-NYG"})
+    assert {"DEF-CLE", "K-1"} <= set(c.index)          # below the rate cutoff, still compared this week
+    assert "DEF-NYG" not in c.index                      # rostered units stay out
+    assert (c.pos == "WR").sum() == W.TOP_FA
