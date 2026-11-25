@@ -49,11 +49,11 @@ season,week,team_a,team_b,score_a,score_b,winner,basis,source
 2026,10,Qasim,Johnny,123.18,158.12,Johnny,screenshot,screenshots/2026/week10_scoreboard.png
 2026,10,Zach,Mike,133.94,89.02,Zach,screenshot,screenshots/2026/week10_scoreboard.png
 2026,10,Russ,Max,112.96,98.56,Russ,screenshot,screenshots/2026/week10_scoreboard.png
-2026,11,Jordan,Ryan,,,,scheduled,screenshots/2026 (repeat of week 2)
-2026,11,Qasim,Matt,,,,scheduled,screenshots/2026 (repeat of week 2)
-2026,11,Johnny,Russ,,,,scheduled,screenshots/2026 (repeat of week 2)
-2026,11,Zach,Max,,,,scheduled,screenshots/2026 (repeat of week 2)
-2026,11,Mike,Ben,,,,scheduled,screenshots/2026 (repeat of week 2)
+2026,11,Jordan,Ryan,167.76,138.4,Jordan,screenshot,screenshots/2026/2026-11-25_N1795582653812_1.png
+2026,11,Qasim,Matt,103.84,111.8,Matt,screenshot,screenshots/2026/2026-11-25_N1795582653812_1.png
+2026,11,Johnny,Russ,129.86,108.0,Johnny,screenshot,screenshots/2026/2026-11-25_N1795582653812_1.png
+2026,11,Zach,Max,74.96,96.66,Max,screenshot,screenshots/2026/2026-11-25_N1795582653812_1.png
+2026,11,Mike,Ben,97.2,119.12,Ben,screenshot,screenshots/2026/2026-11-25_N1795582653812_1.png
 2026,12,Jordan,Qasim,,,,scheduled,screenshots/2026 (repeat of week 3)
 2026,12,Ryan,Mike,,,,scheduled,screenshots/2026 (repeat of week 3)
 2026,12,Johnny,Max,,,,scheduled,screenshots/2026 (repeat of week 3)
