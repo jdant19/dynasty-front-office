@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T21:48:45+00:00",
+ "made_at": "2026-11-25T22:05:09+00:00",
  "years": [
   {
    "season": 2027,
@@ -17,14 +17,14 @@
   },
   {
    "season": 2028,
-   "contracted": 7,
-   "committed": 165,
-   "cap_room": 124,
-   "strength": 1963,
-   "rank": 5,
-   "league_median": 1962,
-   "p_first": 0.117,
-   "p_top4": 0.421,
+   "contracted": 8,
+   "committed": 169,
+   "cap_room": 121,
+   "strength": 1967,
+   "rank": 3,
+   "league_median": 1943,
+   "p_first": 0.132,
+   "p_top4": 0.457,
    "exp_payout": 107,
    "note": "",
    "released": "",
@@ -35,11 +35,11 @@
    "contracted": 5,
    "committed": 108,
    "cap_room": 179,
-   "strength": 1953,
+   "strength": 1951,
    "rank": 9,
-   "league_median": 1977,
-   "p_first": 0.087,
-   "p_top4": 0.344,
+   "league_median": 1973,
+   "p_first": 0.09,
+   "p_top4": 0.35,
    "exp_payout": 88,
    "note": "",
    "released": "",
@@ -71,7 +71,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 206
+   "pts2027": 215
   },
   {
    "player": "Parker Washington",
@@ -84,7 +84,7 @@
    "d2028": "rfa",
    "s2029": 35,
    "d2029": "planned",
-   "pts2027": 161
+   "pts2027": 162
   },
   {
    "player": "Jaxson Dart",
@@ -110,7 +110,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 135
+   "pts2027": 129
   },
   {
    "player": "Zachariah Branch",
@@ -123,7 +123,7 @@
    "d2028": "",
    "s2029": 6,
    "d2029": "",
-   "pts2027": 58
+   "pts2027": 60
   },
   {
    "player": "Chris Brazzell",
@@ -149,7 +149,7 @@
    "d2028": "",
    "s2029": 4,
    "d2029": "",
-   "pts2027": 275
+   "pts2027": 276
   },
   {
    "player": "Wan'Dale Robinson",
@@ -162,7 +162,7 @@
    "d2028": "",
    "s2029": 4,
    "d2029": "",
-   "pts2027": 115
+   "pts2027": 108
   },
   {
    "player": "Ollie Gordon",
@@ -175,7 +175,20 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 79
+   "pts2027": 80
+  },
+  {
+   "player": "George Kittle",
+   "pos": "TE",
+   "s2026": 1,
+   "slot": "BN",
+   "s2027": 2,
+   "d2027": "",
+   "s2028": 4,
+   "d2028": "rfa",
+   "s2029": 0,
+   "d2029": "",
+   "pts2027": 127
   },
   {
    "player": "Bucky Irving",
@@ -188,20 +201,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 194
-  },
-  {
-   "player": "George Kittle",
-   "pos": "TE",
-   "s2026": 1,
-   "slot": "BN",
-   "s2027": 2,
-   "d2027": "",
-   "s2028": 0,
-   "d2028": "",
-   "s2029": 0,
-   "d2029": "",
-   "pts2027": 124
+   "pts2027": 199
   },
   {
    "player": "Ja'Marr Chase",
@@ -214,7 +214,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 226
+   "pts2027": 220
   },
   {
    "player": "Chuba Hubbard",
@@ -227,7 +227,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 155
+   "pts2027": 159
   },
   {
    "player": "Detroit Lions",
@@ -266,7 +266,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 74
+   "pts2027": 76
   },
   {
    "player": "Courtland Sutton",
@@ -279,7 +279,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": null
+   "pts2027": 94
   },
   {
    "player": "Deebo Samuel",
@@ -292,7 +292,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 78
+   "pts2027": 80
   },
   {
    "player": "Jordan Love",
@@ -305,7 +305,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 251
+   "pts2027": 249
   },
   {
    "player": "Kenneth Gainwell",
@@ -318,7 +318,7 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 82
+   "pts2027": 84
   },
   {
    "player": "Brenton Strange",
@@ -331,17 +331,11 @@
    "d2028": "",
    "s2029": 0,
    "d2029": "",
-   "pts2027": 99
+   "pts2027": 97
   }
  ],
  "offseason": {
   "steps": [
-   {
-    "offseason": 2027,
-    "action": "Franchise tag",
-    "player": "CeeDee Lamb",
-    "salary": 96
-   },
    {
     "offseason": 2027,
     "action": "Match the RFA bid on",
@@ -350,10 +344,22 @@
    },
    {
     "offseason": 2027,
+    "action": "Franchise tag",
+    "player": "CeeDee Lamb",
+    "salary": 96
+   },
+   {
+    "offseason": 2027,
     "action": "Auction",
     "player": "",
     "salary": null,
     "text": "Over the cap after the plan: only $0 adds until the auction is over (leftovers)."
+   },
+   {
+    "offseason": 2028,
+    "action": "Match the RFA bid on",
+    "player": "George Kittle",
+    "salary": 4
    },
    {
     "offseason": 2028,

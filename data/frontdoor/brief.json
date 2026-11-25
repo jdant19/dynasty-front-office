@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T21:48:47+00:00",
+ "made_at": "2026-11-25T22:05:09+00:00",
  "week": 12,
  "decisions": [
   {
@@ -196,125 +196,6 @@
       "net": 1.23
      }
     ]
-   }
-  },
-  {
-   "id": "trade-Ben-kennethwalkeriii",
-   "kind": "Trade idea",
-   "deadline": "end of Week 14",
-   "title": "Ben: Kenneth Walker III",
-   "recommendation": "Offer Jaxson Dart; Parker Washington; Harold Fannin Jr.; 2029 round 1 (Jordan) for Kenneth Walker III. opening: add 2027 round 2 + 2027 round 2 (Max's) -> you +18, him +5; target: add 2029 round 1 -> you +7, him +15; walk-away: add 2029 round 1 -> you +7, him +15",
-   "value": "you +7 (this season +17, later -10), him +15; your 1st place 56% -> 61%, title 38% -> 42%",
-   "confidence": "low (stale inputs)",
-   "reason": "Payout $ (P18). 'This season' adds the regular season and the league playoffs: a gain with 1st-place odds falling comes from the playoffs alone. STALE: built from 2026-11-18 projections (7 days old); re-run before acting.",
-   "change": "His posture (a seller turning buyer), injuries, or a counter that moves value.",
-   "made_at": "2026-11-18T21:47:46+00:00",
-   "stale": true,
-   "headline": "You +$7 \u00b7 title 38%\u219242%",
-   "detail": {
-    "type": "trade",
-    "partner": "Ben",
-    "give": [
-     {
-      "kind": "player",
-      "name": "Jaxson Dart",
-      "pos": "QB",
-      "salary": 11
-     },
-     {
-      "kind": "player",
-      "name": "Parker Washington",
-      "pos": "WR",
-      "salary": 26
-     },
-     {
-      "kind": "player",
-      "name": "Harold Fannin Jr.",
-      "pos": "TE",
-      "salary": 21
-     },
-     {
-      "kind": "pick",
-      "name": "2029 round 1"
-     }
-    ],
-    "get": [
-     {
-      "kind": "player",
-      "name": "Kenneth Walker III",
-      "pos": "RB",
-      "salary": 67
-     }
-    ],
-    "you": {
-     "now": 17,
-     "later": -10,
-     "total": 7
-    },
-    "him": {
-     "now": 0,
-     "later": 15,
-     "total": 15
-    },
-    "first": [
-     "56%",
-     "61%"
-    ],
-    "title": [
-     "38%",
-     "42%"
-    ],
-    "years": [
-     {
-      "season": 2027,
-      "room": [
-       -57,
-       -68
-      ],
-      "strength": 44
-     },
-     {
-      "season": 2028,
-      "room": [
-       124,
-       168
-      ],
-      "strength": 36
-     },
-     {
-      "season": 2029,
-      "room": [
-       179,
-       227
-      ],
-      "strength": 34
-     }
-    ],
-    "picks_given_points": -107,
-    "terms": [
-     {
-      "label": "opening",
-      "extra": "2027 round 2 + 2027 round 2 (Max's)",
-      "you": 18,
-      "him": 5
-     },
-     {
-      "label": "target",
-      "extra": "2029 round 1",
-      "you": 7,
-      "him": 15
-     },
-     {
-      "label": "walk-away",
-      "extra": "2029 round 1",
-      "you": 7,
-      "him": 15
-     }
-    ],
-    "salary_rule": "$58 vs $67: within 25% of the higher side",
-    "forced_drops": "DeMario Douglas, Saints",
-    "trades_per_season": 1.77,
-    "message": "Ben, would you do Kenneth Walker III for Jaxson Dart; Parker Washington; Harold Fannin Jr. and my 2027 round 2 + 2027 round 2 (Max's)? Open to tweaking it."
    }
   },
   {
@@ -635,7 +516,7 @@
   {
    "source": "league_site",
    "as_of": "2026-11-25T21:42:56+00:00",
-   "age_hours": 0.1,
+   "age_hours": 0.4,
    "limit": "24h",
    "stale": false
   },
@@ -649,21 +530,21 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-25T20:26:37+00:00",
-   "age_hours": 1.4,
+   "age_hours": 1.6,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "engine runs",
    "as_of": "2026-11-25T21:47:04+00:00",
-   "age_hours": 0.0,
+   "age_hours": 0.3,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
   }
  ],
  "season": {
-  "made_at": "2026-11-25T21:48:44+00:00",
+  "made_at": "2026-11-25T22:05:08+00:00",
   "weeks_left": [
    12,
    13,
@@ -1231,7 +1112,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-25T21:48:45+00:00",
+  "made_at": "2026-11-25T22:05:09+00:00",
   "years": [
    {
     "season": 2027,
@@ -1249,14 +1130,14 @@
    },
    {
     "season": 2028,
-    "contracted": 7,
-    "committed": 165,
-    "cap_room": 124,
-    "strength": 1963,
-    "rank": 5,
-    "league_median": 1962,
-    "p_first": 0.117,
-    "p_top4": 0.421,
+    "contracted": 8,
+    "committed": 169,
+    "cap_room": 121,
+    "strength": 1967,
+    "rank": 3,
+    "league_median": 1943,
+    "p_first": 0.132,
+    "p_top4": 0.457,
     "exp_payout": 107,
     "note": "",
     "released": "",
@@ -1267,11 +1148,11 @@
     "contracted": 5,
     "committed": 108,
     "cap_room": 179,
-    "strength": 1953,
+    "strength": 1951,
     "rank": 9,
-    "league_median": 1977,
-    "p_first": 0.087,
-    "p_top4": 0.344,
+    "league_median": 1973,
+    "p_first": 0.09,
+    "p_top4": 0.35,
     "exp_payout": 88,
     "note": "",
     "released": "",
@@ -1303,7 +1184,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 206
+    "pts2027": 215
    },
    {
     "player": "Parker Washington",
@@ -1316,7 +1197,7 @@
     "d2028": "rfa",
     "s2029": 35,
     "d2029": "planned",
-    "pts2027": 161
+    "pts2027": 162
    },
    {
     "player": "Jaxson Dart",
@@ -1342,7 +1223,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 135
+    "pts2027": 129
    },
    {
     "player": "Zachariah Branch",
@@ -1355,7 +1236,7 @@
     "d2028": "",
     "s2029": 6,
     "d2029": "",
-    "pts2027": 58
+    "pts2027": 60
    },
    {
     "player": "Chris Brazzell",
@@ -1381,7 +1262,7 @@
     "d2028": "",
     "s2029": 4,
     "d2029": "",
-    "pts2027": 275
+    "pts2027": 276
    },
    {
     "player": "Wan'Dale Robinson",
@@ -1394,7 +1275,7 @@
     "d2028": "",
     "s2029": 4,
     "d2029": "",
-    "pts2027": 115
+    "pts2027": 108
    },
    {
     "player": "Ollie Gordon",
@@ -1407,7 +1288,20 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 79
+    "pts2027": 80
+   },
+   {
+    "player": "George Kittle",
+    "pos": "TE",
+    "s2026": 1,
+    "slot": "BN",
+    "s2027": 2,
+    "d2027": "",
+    "s2028": 4,
+    "d2028": "rfa",
+    "s2029": 0,
+    "d2029": "",
+    "pts2027": 127
    },
    {
     "player": "Bucky Irving",
@@ -1420,20 +1314,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 194
-   },
-   {
-    "player": "George Kittle",
-    "pos": "TE",
-    "s2026": 1,
-    "slot": "BN",
-    "s2027": 2,
-    "d2027": "",
-    "s2028": 0,
-    "d2028": "",
-    "s2029": 0,
-    "d2029": "",
-    "pts2027": 124
+    "pts2027": 199
    },
    {
     "player": "Ja'Marr Chase",
@@ -1446,7 +1327,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 226
+    "pts2027": 220
    },
    {
     "player": "Chuba Hubbard",
@@ -1459,7 +1340,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 155
+    "pts2027": 159
    },
    {
     "player": "Detroit Lions",
@@ -1498,7 +1379,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 74
+    "pts2027": 76
    },
    {
     "player": "Courtland Sutton",
@@ -1511,7 +1392,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": null
+    "pts2027": 94
    },
    {
     "player": "Deebo Samuel",
@@ -1524,7 +1405,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 78
+    "pts2027": 80
    },
    {
     "player": "Jordan Love",
@@ -1537,7 +1418,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 251
+    "pts2027": 249
    },
    {
     "player": "Kenneth Gainwell",
@@ -1550,7 +1431,7 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 82
+    "pts2027": 84
    },
    {
     "player": "Brenton Strange",
@@ -1563,17 +1444,11 @@
     "d2028": "",
     "s2029": 0,
     "d2029": "",
-    "pts2027": 99
+    "pts2027": 97
    }
   ],
   "offseason": {
    "steps": [
-    {
-     "offseason": 2027,
-     "action": "Franchise tag",
-     "player": "CeeDee Lamb",
-     "salary": 96
-    },
     {
      "offseason": 2027,
      "action": "Match the RFA bid on",
@@ -1582,10 +1457,22 @@
     },
     {
      "offseason": 2027,
+     "action": "Franchise tag",
+     "player": "CeeDee Lamb",
+     "salary": 96
+    },
+    {
+     "offseason": 2027,
      "action": "Auction",
      "player": "",
      "salary": null,
      "text": "Over the cap after the plan: only $0 adds until the auction is over (leftovers)."
+    },
+    {
+     "offseason": 2028,
+     "action": "Match the RFA bid on",
+     "player": "George Kittle",
+     "salary": 4
     },
     {
      "offseason": 2028,
