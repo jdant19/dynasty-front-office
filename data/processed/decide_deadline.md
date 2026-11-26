@@ -2,23 +2,23 @@
 
 Inputs: projections and simulator as of 2026-11-26; league results through the last scoreboard Jordan sent. Ideas only; nothing is proposed until Jordan says so.
 
-**Jordan: PUSH.** A lineup point is worth $0.81 to you this season, 1.5x what it is worth later. 1st 75%, top 4 100%, title 39%, expected payout $447.
+**Jordan: PUSH.** A lineup point is worth $0.81 to you this season, 1.5x what it is worth later. 1st 75%, top 4 100%, title 36%, expected payout $444.
 
-Since 2026-11-26: 1st +0%, title +0%, expected payout +0.
+Since 2026-11-26: 1st +0%, title -3%, expected payout -3.
 
 ## Every team's posture
 
 | Team | Posture | This season vs later | Wins | 1st | Top 4 | Title | Expected payout |
 |---|---|---|---|---|---|---|---|
-| Jordan | push | 1.52x | 14.2 | 75% | 100% | 39% | $447 |
-| Johnny | push | 2.19x | 13.2 | 18% | 100% | 24% | $270 |
-| Russ | push | 1.97x | 12.3 | 8% | 99% | 20% | $215 |
-| Zach | hold | 1.13x | 9.6 | 0% | 57% | 10% | $39 |
-| Matt | hold | 0.83x | 9.3 | 0% | 27% | 5% | $21 |
-| Max | build | 0.32x | 8.3 | 0% | 8% | 1% | $4 |
-| Qasim | build | 0.23x | 7.8 | 0% | 6% | 1% | $3 |
-| Ryan | build | 0.16x | 7.3 | 0% | 3% | 0% | $1 |
-| Ben | build | 0.08x | 6.4 | 0% | 0% | 0% | $0 |
+| Jordan | push | 1.52x | 14.2 | 75% | 100% | 36% | $444 |
+| Johnny | push | 2.11x | 13.2 | 18% | 100% | 24% | $268 |
+| Russ | push | 1.89x | 12.3 | 8% | 99% | 22% | $220 |
+| Zach | hold | 1.08x | 9.6 | 0% | 57% | 11% | $40 |
+| Matt | hold | 0.82x | 9.3 | 0% | 27% | 5% | $20 |
+| Max | build | 0.31x | 8.3 | 0% | 8% | 1% | $4 |
+| Qasim | build | 0.24x | 7.8 | 0% | 6% | 1% | $3 |
+| Ryan | build | 0.14x | 7.3 | 0% | 3% | 0% | $1 |
+| Ben | build | 0.05x | 6.4 | 0% | 0% | 0% | $0 |
 | Mike | build | 0.00x | 1.6 | 0% | 0% | 0% | $0 |
 
 Competing buyers: Johnny, Russ. Sellers: Max, Qasim, Ryan, Ben, Mike.
@@ -49,15 +49,15 @@ Competing buyers: Johnny, Russ. Sellers: Max, Qasim, Ryan, Ben, Mike.
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
 | Harold Fannin Jr. | 0 | $-6 |
-| Chris Brazzell II | 0 | $-4 |
 | Ollie Gordon II | 0 | $-4 |
+| Chris Brazzell II | 0 | $-4 |
 | Kenny Gainwell | 0 | $0 |
-| Brenton Strange | 0 | $0 |
-| Mike Gesicki | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
-| Deebo Samuel Sr. | 2 | $0 |
-| Jordan Love | 0 | $0 |
 | Buccaneers | 1 | $0 |
+| Deebo Samuel Sr. | 2 | $0 |
+| Mike Gesicki | 0 | $0 |
+| Brenton Strange | 0 | $0 |
+| Jordan Love | 0 | $0 |
+| Courtland Sutton | 0 | $0 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
 | 2029 round 2 | 0 | $18 |
