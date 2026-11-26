@@ -51,13 +51,13 @@ Competing buyers: Johnny, Russ. Sellers: Max, Qasim, Ryan, Ben, Mike.
 | Harold Fannin Jr. | 0 | $-6 |
 | Chris Brazzell II | 0 | $-4 |
 | Ollie Gordon II | 0 | $-4 |
-| Jordan Love | 0 | $0 |
 | Kenny Gainwell | 0 | $0 |
-| Deebo Samuel Sr. | 2 | $0 |
 | Brenton Strange | 0 | $0 |
-| Courtland Sutton | 0 | $0 |
-| Buccaneers | 1 | $0 |
 | Mike Gesicki | 0 | $0 |
+| Courtland Sutton | 0 | $0 |
+| Deebo Samuel Sr. | 2 | $0 |
+| Jordan Love | 0 | $0 |
+| Buccaneers | 1 | $0 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
 | 2029 round 2 | 0 | $18 |

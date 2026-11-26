@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-26T20:08:26+00:00",
+ "made_at": "2026-11-26T21:47:23+00:00",
  "week": 12,
  "decisions": [
   {
@@ -12,7 +12,7 @@
    "confidence": "medium",
    "reason": "Highest win probability from this week's projections and 80% ranges.",
    "change": "An injury or inactive report, or a rank jump flagged below.",
-   "made_at": "2026-11-26T20:06:38+00:00",
+   "made_at": "2026-11-26T21:45:38+00:00",
    "headline": "Win chance 74%",
    "detail": {
     "type": "lineup",
@@ -141,7 +141,7 @@
    "confidence": "medium",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap).",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-26T13:52:19+00:00",
+   "made_at": "2026-11-26T21:42:27+00:00",
    "headline": "Add Commanders, drop Buccaneers",
    "detail": {
     "type": "waivers",
@@ -443,20 +443,20 @@
    "rental": true
   },
   {
-   "player": "DeVonta Smith",
-   "owner": "Ryan",
-   "pos": "WR",
-   "gain": 3.0,
-   "salary": 51,
-   "rental": true
-  },
-  {
    "player": "Malik Nabers",
    "owner": "Qasim",
    "pos": "WR",
    "gain": 3.0,
    "salary": 7,
    "rental": false
+  },
+  {
+   "player": "DeVonta Smith",
+   "owner": "Ryan",
+   "pos": "WR",
+   "gain": 3.0,
+   "salary": 51,
+   "rental": true
   }
  ],
  "questions": [
@@ -475,8 +475,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-26T13:52:19+00:00",
-   "age_hours": 6.3,
+   "as_of": "2026-11-26T21:42:27+00:00",
+   "age_hours": 0.1,
    "limit": "24h",
    "stale": false
   },
@@ -490,22 +490,22 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-26T12:44:12+00:00",
-   "age_hours": 7.4,
+   "age_hours": 9.1,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "fantasypros_weekly_ranks",
    "as_of": "Week 12 (scraped 2026-11-26)",
-   "age_hours": 20.1,
+   "age_hours": 21.8,
    "limit": "the coming week's ranks by Saturday",
    "stale": false,
    "note": "current week ranked"
   },
   {
    "source": "engine runs",
-   "as_of": "2026-11-26T12:48:15+00:00",
-   "age_hours": 7.3,
+   "as_of": "2026-11-26T20:08:26+00:00",
+   "age_hours": 1.6,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
@@ -702,11 +702,11 @@
     "note": "Kenneth Walker III, Puka Nacua, Jaxson Dart, Kyler Murray"
    }
   ],
-  "made_at": "2026-11-26T20:06:43+00:00",
+  "made_at": "2026-11-26T21:45:42+00:00",
   "source": "proj_week_frozen.csv (last projection before each player's game) vs points_2026.csv; drift limits from the 2021-2025 back-test (docs/projections.md)"
  },
  "season": {
-  "made_at": "2026-11-26T20:08:25+00:00",
+  "made_at": "2026-11-26T21:47:23+00:00",
   "weeks_left": [
    12,
    13,
@@ -1294,6 +1294,13 @@
      "p_first": 0.747,
      "p_title": 0.388,
      "exp_payout": 447
+    },
+    {
+     "at": "2026-11-26T21:47",
+     "week": 12,
+     "p_first": 0.747,
+     "p_title": 0.388,
+     "exp_payout": 447
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1302,7 +1309,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-26T20:08:25+00:00",
+  "made_at": "2026-11-26T21:47:23+00:00",
   "years": [
    {
     "season": 2027,
