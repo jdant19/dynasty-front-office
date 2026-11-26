@@ -1,6 +1,6 @@
 # Start/sit, Week 12 vs Qasim
 
-Projections made 2026-11-26T21:45:38+00:00 (stats through 2026-11-26T12:44:12+00:00).
+Projections made 2026-11-26T23:55:59+00:00 (stats through 2026-11-26T12:44:12+00:00).
 Win probability 74%: our median 136.9 (sd 23.7) vs Qasim 115.7 (sd 22.3).
 
 | Slot | Player | Team | Median | 80% range | Status |
