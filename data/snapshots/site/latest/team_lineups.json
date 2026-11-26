@@ -1,6 +1,6 @@
 {
  "table": "team_lineups",
- "as_of": "2026-11-25T22:29:40+00:00",
+ "as_of": "2026-11-26T00:19:21+00:00",
  "rows": [
   {
    "id": "0009e24d-af7f-4e3e-b262-abb4c8384ac4",
@@ -136,6 +136,15 @@
    "slot_index": 7,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-10-16T20:41:50.295427+00:00"
+  },
+  {
+   "id": "11ec1c56-0d3a-4e78-b538-13c1acfbb437",
+   "team_id": "team-10",
+   "player_id": "sl-12718",
+   "slot": "BN",
+   "slot_index": 13,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-25T22:29:38.884466+00:00"
   },
   {
    "id": "15106778-53ce-422c-8b6f-baf3e16d2c99",
@@ -784,6 +793,15 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:34:41.160127+00:00"
+  },
+  {
+   "id": "6548effe-4d7c-4347-bb1f-87d52317284b",
+   "team_id": "team-10",
+   "player_id": "def-NYG",
+   "slot": "BN",
+   "slot_index": 12,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-25T22:29:38.884466+00:00"
   },
   {
    "id": "66a21efa-510b-483a-b0d2-25cf7c7803e1",
