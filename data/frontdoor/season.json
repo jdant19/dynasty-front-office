@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-25T23:41:26+00:00",
+ "made_at": "2026-11-26T12:48:14+00:00",
  "weeks_left": [
   12,
   13,
@@ -16,57 +16,57 @@
  },
  "projected": {
   "wins": 14.2,
-  "p_win_out": 0.744
+  "p_win_out": 0.746
  },
  "path": [
   {
    "week": 12,
    "opp": "Qasim",
-   "p_win": 0.751,
-   "me": 143.7,
-   "them": 121.5
+   "p_win": 0.734,
+   "me": 142.0,
+   "them": 121.1
   },
   {
    "week": 13,
    "opp": "Russ",
-   "p_win": 0.656,
-   "me": 140.7,
-   "them": 127.0
+   "p_win": 0.679,
+   "me": 140.9,
+   "them": 125.5
   },
   {
    "week": 14,
    "opp": "Max",
-   "p_win": 0.705,
-   "me": 132.8,
-   "them": 114.7
+   "p_win": 0.699,
+   "me": 131.5,
+   "them": 113.9
   },
   {
    "week": 15,
    "opp": "Johnny",
-   "p_win": 0.692,
-   "me": 140.1,
-   "them": 123.5
+   "p_win": 0.682,
+   "me": 139.9,
+   "them": 123.7
   },
   {
    "week": 16,
    "opp": "Matt",
-   "p_win": 0.779,
-   "me": 139.8,
-   "them": 114.8
+   "p_win": 0.78,
+   "me": 139.5,
+   "them": 113.5
   },
   {
    "week": 17,
    "opp": "Zach",
-   "p_win": 0.73,
-   "me": 140.6,
-   "them": 120.1
+   "p_win": 0.74,
+   "me": 139.3,
+   "them": 117.9
   },
   {
    "week": 18,
    "opp": "Mike",
-   "p_win": 0.898,
-   "me": 139.7,
-   "them": 98.4
+   "p_win": 0.907,
+   "me": 140.0,
+   "them": 97.1
   }
  ],
  "standings": [
@@ -80,8 +80,8 @@
    "wins": 14.2,
    "p_first": 0.747,
    "p_top4": 1.0,
-   "p_title": 0.328,
-   "exp_payout": 439,
+   "p_title": 0.388,
+   "exp_payout": 447,
    "posture": "push"
   },
   {
@@ -91,11 +91,11 @@
    "l": 2,
    "t": 0,
    "pf": 1434.5,
-   "wins": 13.1,
-   "p_first": 0.156,
+   "wins": 13.2,
+   "p_first": 0.177,
    "p_top4": 0.996,
-   "p_title": 0.253,
-   "exp_payout": 260,
+   "p_title": 0.241,
+   "exp_payout": 270,
    "posture": "push"
   },
   {
@@ -105,11 +105,11 @@
    "l": 3,
    "t": 0,
    "pf": 1547.9,
-   "wins": 12.4,
-   "p_first": 0.096,
-   "p_top4": 0.987,
-   "p_title": 0.227,
-   "exp_payout": 229,
+   "wins": 12.3,
+   "p_first": 0.075,
+   "p_top4": 0.988,
+   "p_title": 0.197,
+   "exp_payout": 215,
    "posture": "push"
   },
   {
@@ -120,10 +120,10 @@
    "t": 0,
    "pf": 1394.6,
    "wins": 9.6,
-   "p_first": 0.0,
-   "p_top4": 0.579,
-   "p_title": 0.116,
-   "exp_payout": 43,
+   "p_first": 0.001,
+   "p_top4": 0.572,
+   "p_title": 0.098,
+   "exp_payout": 39,
    "posture": "hold"
   },
   {
@@ -135,9 +135,9 @@
    "pf": 1227.1,
    "wins": 9.3,
    "p_first": 0.0,
-   "p_top4": 0.262,
-   "p_title": 0.055,
-   "exp_payout": 20,
+   "p_top4": 0.272,
+   "p_title": 0.054,
+   "exp_payout": 21,
    "posture": "hold"
   },
   {
@@ -149,9 +149,9 @@
    "pf": 1213.6,
    "wins": 8.3,
    "p_first": 0.0,
-   "p_top4": 0.094,
-   "p_title": 0.01,
-   "exp_payout": 5,
+   "p_top4": 0.083,
+   "p_title": 0.008,
+   "exp_payout": 4,
    "posture": "build"
   },
   {
@@ -175,11 +175,11 @@
    "l": 7,
    "t": 0,
    "pf": 1218.9,
-   "wins": 7.7,
+   "wins": 7.8,
    "p_first": 0.0,
-   "p_top4": 0.052,
-   "p_title": 0.006,
-   "exp_payout": 2,
+   "p_top4": 0.059,
+   "p_title": 0.009,
+   "exp_payout": 3,
    "posture": "build"
   },
   {
@@ -192,7 +192,7 @@
    "wins": 6.4,
    "p_first": 0.0,
    "p_top4": 0.004,
-   "p_title": 0.002,
+   "p_title": 0.001,
    "exp_payout": 0,
    "posture": "build"
   },
@@ -203,7 +203,7 @@
    "l": 11,
    "t": 0,
    "pf": 981.7,
-   "wins": 1.7,
+   "wins": 1.6,
    "p_first": 0.0,
    "p_top4": 0.0,
    "p_title": 0.0,
@@ -283,7 +283,7 @@
     "week": 11,
     "p_first": 0.747,
     "p_top4": 1.0,
-    "p_title": 0.328
+    "p_title": 0.388
    }
   ],
   "as_run": [
@@ -573,6 +573,13 @@
     "p_first": 0.747,
     "p_title": 0.328,
     "exp_payout": 439
+   },
+   {
+    "at": "2026-11-26T12:47",
+    "week": 12,
+    "p_first": 0.747,
+    "p_title": 0.388,
+    "exp_payout": 447
    }
   ],
   "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
