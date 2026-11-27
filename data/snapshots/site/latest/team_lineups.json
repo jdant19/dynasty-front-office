@@ -1,6 +1,6 @@
 {
  "table": "team_lineups",
- "as_of": "2026-11-27T13:49:55+00:00",
+ "as_of": "2026-11-27T20:18:50+00:00",
  "rows": [
   {
    "id": "0009e24d-af7f-4e3e-b262-abb4c8384ac4",
@@ -28,15 +28,6 @@
    "slot_index": 6,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-04-20T15:19:28.470932+00:00"
-  },
-  {
-   "id": "021e35fa-2b9b-42ad-bc7a-a3f60f7c8466",
-   "team_id": "team-5",
-   "player_id": "def-PIT",
-   "slot": "BN",
-   "slot_index": 2,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-19T02:39:13.200894+00:00"
   },
   {
    "id": "03596a82-4db6-4d07-9467-84c9677cb7c8",
@@ -552,6 +543,15 @@
    "updated_at": "2026-11-05T22:18:49.18199+00:00"
   },
   {
+   "id": "4661c226-8df8-4b52-b58e-49376ebfb80d",
+   "team_id": "team-5",
+   "player_id": "sl-4147",
+   "slot": "BN",
+   "slot_index": 2,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-27T15:58:55.481498+00:00"
+  },
+  {
    "id": "48e96fd9-7160-41c3-b8da-7d7b4cc99a27",
    "team_id": "team-1",
    "player_id": "sl-12526",
@@ -906,8 +906,8 @@
    "id": "70902a93-cf5d-4fc4-8708-99a55bb15fc5",
    "team_id": "team-5",
    "player_id": "sl-5850",
-   "slot": "BN",
-   "slot_index": 12,
+   "slot": "IR",
+   "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:56:54.589446+00:00"
   },
@@ -1135,6 +1135,15 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:56:54.589446+00:00"
+  },
+  {
+   "id": "97fa193b-cce7-4d31-a6df-bbd4bdff1d6e",
+   "team_id": "team-2",
+   "player_id": "def-NYJ",
+   "slot": "BN",
+   "slot_index": 2,
+   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
+   "updated_at": "2026-11-27T15:58:39.617795+00:00"
   },
   {
    "id": "9a26592a-0d3f-4418-8017-c63b88a3beaa",
@@ -1918,15 +1927,6 @@
    "slot_index": 0,
    "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
    "updated_at": "2026-09-02T20:57:23.059998+00:00"
-  },
-  {
-   "id": "ff57f801-59f1-458f-ab48-5693aa28114d",
-   "team_id": "team-2",
-   "player_id": "def-KC",
-   "slot": "BN",
-   "slot_index": 2,
-   "user_id": "3ad8fd20-be1b-4702-b2dc-cd9bb236b89e",
-   "updated_at": "2026-11-19T21:53:43.94841+00:00"
   },
   {
    "id": "ff5cbcb3-4a4c-417f-b32d-7899646d6c30",
