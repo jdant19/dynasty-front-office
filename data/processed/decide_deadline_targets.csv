@@ -1,17 +1,17 @@
 owner,player,pos,salary_2026,your_lineup_gain,payout_now,rental,later_value_to_him
-Ryan,Dak Prescott,QB,2,15.2,13,False,-4
-Qasim,Trevor Lawrence,QB,1,13.6,11,False,0
-Ryan,George Pickens,WR,71,11.6,10,False,-22
-Max,Chris Olave,WR,15,9.3,8,False,9
-Qasim,Justin Jefferson,WR,92,9.2,8,True,0
+Ryan,Dak Prescott,QB,2,15.2,11,False,-4
+Qasim,Trevor Lawrence,QB,1,13.6,10,False,0
+Ryan,George Pickens,WR,71,11.6,9,False,-22
+Max,Chris Olave,WR,15,9.3,7,False,9
+Qasim,Justin Jefferson,WR,92,9.2,7,True,0
 Qasim,Malik Nabers,WR,7,8.7,7,False,37
 Max,Nico Collins,WR,91,7.8,6,True,0
 Max,Jayden Daniels,QB,5,7.7,6,False,33
-Qasim,Garrett Wilson,WR,51,4.3,4,False,-8
-Matt,Luther Burden III,WR,4,3.3,3,False,59
+Qasim,Garrett Wilson,WR,51,4.3,3,False,-8
+Matt,Luther Burden III,WR,4,3.3,2,False,59
 Qasim,Cam Little,K,1,2.3,2,True,0
 Ben,Kenneth Walker III,RB,67,2.2,2,False,7
-Ryan,DeVonta Smith,WR,51,1.9,2,True,0
-Max,Ka'imi Fairbairn,K,2,1.6,1,True,0
+Ryan,DeVonta Smith,WR,51,1.9,1,True,0
 Mike,DJ Moore,WR,22,1.6,1,False,-23
+Max,Ka'imi Fairbairn,K,2,1.6,1,True,0
 Mike,Spencer Shrader,K,1,1.4,1,True,0
