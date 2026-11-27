@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-27T12:48:59+00:00",
+ "made_at": "2026-11-27T19:56:38+00:00",
  "week": 12,
  "decisions": [
   {
@@ -141,7 +141,7 @@
    "confidence": "medium",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap).",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-27T12:42:44+00:00",
+   "made_at": "2026-11-27T13:49:55+00:00",
    "headline": "Add Commanders, drop Buccaneers",
    "detail": {
     "type": "waivers",
@@ -288,10 +288,10 @@
   "mean_wins": 14.3,
   "stance": "push",
   "moved": {
-   "since": "2026-11-26",
-   "p_first": -0.02,
-   "p_title": -0.009,
-   "payout": -4
+   "since": "2026-11-27",
+   "p_first": 0.0,
+   "p_title": 0.0,
+   "payout": 0
   },
   "league": [
    {
@@ -483,8 +483,8 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-27T12:42:44+00:00",
-   "age_hours": 0.1,
+   "as_of": "2026-11-27T13:49:55+00:00",
+   "age_hours": 6.1,
    "limit": "24h",
    "stale": false
   },
@@ -498,14 +498,14 @@
   {
    "source": "nflverse",
    "as_of": "2026-11-27T12:45:24+00:00",
-   "age_hours": 0.1,
+   "age_hours": 7.2,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "fantasypros_weekly_ranks",
    "as_of": "Week 12 (scraped 2026-11-27)",
-   "age_hours": 12.8,
+   "age_hours": 19.9,
    "limit": "the coming week's ranks by Saturday",
    "stale": false,
    "note": "current week ranked"
@@ -513,7 +513,7 @@
   {
    "source": "engine runs",
    "as_of": "2026-11-27T12:47:39+00:00",
-   "age_hours": 0.0,
+   "age_hours": 7.1,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
@@ -710,11 +710,11 @@
     "note": "Kenneth Walker III, Puka Nacua, Jaxson Dart, Kyler Murray"
    }
   ],
-  "made_at": "2026-11-27T12:46:18+00:00",
+  "made_at": "2026-11-27T19:54:26+00:00",
   "source": "proj_week_frozen.csv (last projection before each player's game) vs points_2026.csv; drift limits from the 2021-2025 back-test (docs/projections.md)"
  },
  "season": {
-  "made_at": "2026-11-27T12:47:38+00:00",
+  "made_at": "2026-11-27T19:56:36+00:00",
   "weeks_left": [
    12,
    13,
@@ -1323,6 +1323,13 @@
      "p_first": 0.727,
      "p_title": 0.351,
      "exp_payout": 440
+    },
+    {
+     "at": "2026-11-27T19:56",
+     "week": 12,
+     "p_first": 0.727,
+     "p_title": 0.351,
+     "exp_payout": 440
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1331,7 +1338,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-27T12:47:39+00:00",
+  "made_at": "2026-11-27T19:56:37+00:00",
   "years": [
    {
     "season": 2027,

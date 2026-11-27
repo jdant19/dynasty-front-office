@@ -4,7 +4,7 @@ Inputs: projections and simulator as of 2026-11-27; league results through the l
 
 **Jordan: PUSH.** A lineup point is worth $0.82 to you this season, 1.6x what it is worth later. 1st 73%, top 4 100%, title 35%, expected payout $440.
 
-Since 2026-11-26: 1st -2%, title -1%, expected payout -4.
+Since 2026-11-27: 1st +0%, title +0%, expected payout +0.
 
 ## Every team's posture
 
@@ -48,23 +48,23 @@ Competing buyers: Johnny, Russ. Sellers: Matt, Max, Qasim, Ryan, Ben, Mike.
 | Jaxson Dart | 0 | $-20 |
 | Zachariah Branch | 0 | $-7 |
 | Harold Fannin Jr. | 0 | $-6 |
-| Chris Brazzell II | 0 | $-4 |
 | Ollie Gordon II | 0 | $-4 |
+| Chris Brazzell II | 0 | $-4 |
+| Mike Gesicki | 0 | $0 |
 | Deebo Samuel Sr. | 2 | $0 |
 | Brenton Strange | 0 | $0 |
 | Courtland Sutton | 0 | $0 |
-| Mike Gesicki | 0 | $0 |
+| Jordan Love | 1 | $0 |
 | Buccaneers | 1 | $0 |
 | Kenny Gainwell | 0 | $0 |
-| Jordan Love | 1 | $0 |
 | Wan'Dale Robinson | 0 | $5 |
 | 2029 round 3 | 0 | $18 |
 | 2029 round 2 | 0 | $18 |
-| 2028 round 3 | 0 | $21 |
 | 2028 round 2 | 0 | $21 |
-| 2027 round 3 | 0 | $23 |
-| 2027 round 2 | 0 | $23 |
+| 2028 round 3 | 0 | $21 |
 | 2027 round 2 (Max's) | 0 | $23 |
+| 2027 round 2 | 0 | $23 |
+| 2027 round 3 | 0 | $23 |
 | Patrick Mahomes | 2 | $28 |
 | 2029 round 1 | 0 | $57 |
 | 2028 round 1 | 0 | $65 |
