@@ -1,41 +1,41 @@
 team,player,pos,nfl,how,playoff_value,exp_games
-Jordan,Trevor Lawrence,QB,JAX,draft,34.6,2.03
-Jordan,Kenneth Walker III,RB,KC,draft,35.1,1.89
-Jordan,Jahmyr Gibbs,RB,DET,keep,34.7,1.79
-Jordan,Ja'Marr Chase,WR,CIN,keep,27.9,1.94
-Jordan,Parker Washington,WR,JAX,keep,24.3,2.03
-Jordan,Khalil Shakir,WR,BUF,draft,17.2,2.12
-Jordan,George Kittle,TE,SF,keep,16.1,1.94
-Jordan,Cam Little,K,JAX,draft,20.3,2.03
-Jordan,Bills,DEF,BUF,draft,14.9,2.12
-Jordan,Chuba Hubbard,RB,CAR,keep,17.2,1.22
-Johnny,Brock Purdy,QB,SF,draft,31.6,1.94
-Johnny,Christian McCaffrey,RB,SF,keep,31.0,1.94
-Johnny,James Cook,RB,BUF,draft,28.8,2.12
-Johnny,Amon-Ra St. Brown,WR,DET,keep,25.1,1.79
-Johnny,DJ Moore,WR,BUF,draft,21.1,2.12
-Johnny,Jaylen Waddle,WR,DEN,draft,15.2,1.91
-Johnny,Dalton Kincaid,TE,BUF,draft,14.6,2.12
-Johnny,Evan McPherson,K,CIN,draft,18.6,1.94
-Johnny,Jaguars,DEF,JAX,keep,15.4,2.03
-Johnny,Emmett Johnson,RB,KC,keep,20.3,1.89
-Russ,Joe Burrow,QB,CIN,keep,37.3,1.94
-Russ,D'Andre Swift,RB,CHI,keep,22.4,1.71
-Russ,Bhayshul Tuten,RB,JAX,keep,20.4,2.03
-Russ,Tee Higgins,WR,CIN,keep,23.2,1.94
-Russ,Puka Nacua,WR,LA,keep,22.7,1.33
-Russ,Mike Evans,WR,SF,keep,20.8,1.94
-Russ,Travis Kelce,TE,KC,draft,14.6,1.89
-Russ,Tyler Bass,K,BUF,draft,21.0,2.12
-Russ,Bengals,DEF,CIN,draft,13.9,1.94
-Russ,Luther Burden III,WR,CHI,draft,18.1,1.71
-Zach,Josh Allen,QB,BUF,keep,39.7,2.12
-Zach,Jonah Coleman,RB,DEN,draft,24.6,1.91
-Zach,Chase Brown,RB,CIN,draft,23.0,1.94
-Zach,Jaxon Smith-Njigba,WR,SEA,keep,18.8,1.2
-Zach,Rashee Rice,WR,KC,draft,17.7,1.89
-Zach,Jakobi Meyers,WR,JAX,keep,17.6,2.03
-Zach,Colston Loveland,TE,CHI,draft,13.7,1.71
-Zach,Wil Lutz,K,DEN,draft,17.5,1.91
-Zach,Broncos,DEF,DEN,keep,14.5,1.91
-Zach,Kyren Williams,RB,LA,draft,16.9,1.33
+Jordan,Brock Purdy,QB,SF,draft,31.6,1.96
+Jordan,Kenneth Walker III,RB,KC,draft,34.9,1.88
+Jordan,Jahmyr Gibbs,RB,DET,keep,32.5,1.68
+Jordan,Ja'Marr Chase,WR,CIN,keep,28.0,1.95
+Jordan,Parker Washington,WR,JAX,keep,24.6,2.06
+Jordan,Luther Burden III,WR,CHI,draft,19.8,1.87
+Jordan,George Kittle,TE,SF,keep,16.3,1.96
+Jordan,Tyler Bass,K,BUF,draft,20.5,2.07
+Jordan,Bills,DEF,BUF,draft,14.6,2.07
+Jordan,Chuba Hubbard,RB,CAR,keep,17.4,1.24
+Johnny,Trevor Lawrence,QB,JAX,draft,35.1,2.06
+Johnny,Christian McCaffrey,RB,SF,keep,30.4,1.96
+Johnny,James Cook,RB,BUF,draft,28.2,2.07
+Johnny,Amon-Ra St. Brown,WR,DET,keep,23.8,1.68
+Johnny,Khalil Shakir,WR,BUF,draft,16.8,2.07
+Johnny,Rome Odunze,WR,CHI,draft,16.5,1.87
+Johnny,Colston Loveland,TE,CHI,draft,15.0,1.87
+Johnny,Evan McPherson,K,CIN,draft,18.6,1.95
+Johnny,Jaguars,DEF,JAX,keep,15.7,2.06
+Johnny,Emmett Johnson,RB,KC,keep,22.8,1.88
+Russ,Joe Burrow,QB,CIN,keep,37.4,1.95
+Russ,D'Andre Swift,RB,CHI,keep,23.7,1.87
+Russ,Bhayshul Tuten,RB,JAX,keep,20.5,2.06
+Russ,Tee Higgins,WR,CIN,keep,23.3,1.95
+Russ,Puka Nacua,WR,LA,keep,22.6,1.32
+Russ,Mike Evans,WR,SF,keep,21.1,1.96
+Russ,Travis Kelce,TE,KC,draft,14.5,1.88
+Russ,Cam Little,K,JAX,draft,20.6,2.06
+Russ,49ers,DEF,SF,draft,14.0,1.96
+Russ,DJ Moore,WR,BUF,draft,20.6,2.07
+Zach,Josh Allen,QB,BUF,keep,38.5,2.07
+Zach,Jonah Coleman,RB,DEN,draft,24.9,1.93
+Zach,Chase Brown,RB,CIN,draft,23.1,1.95
+Zach,Jaxon Smith-Njigba,WR,SEA,keep,18.4,1.19
+Zach,Jakobi Meyers,WR,JAX,keep,17.9,2.06
+Zach,Rashee Rice,WR,KC,draft,17.0,1.88
+Zach,Dalton Kincaid,TE,BUF,draft,14.3,2.07
+Zach,Wil Lutz,K,DEN,draft,17.7,1.93
+Zach,Broncos,DEF,DEN,keep,14.7,1.93
+Zach,Kyren Williams,RB,LA,draft,16.8,1.32
