@@ -62,7 +62,8 @@ def _lu_row(r) -> dict:
     slot = getattr(r, "slot", "")
     return dict(slot=slot if isinstance(slot, str) else "BN", player=r.player, pos=r.pos, team=r.team, opp=r.opp, proj=round(float(r.proj), 1),
                 low=round(float(r.low), 1), high=round(float(r.high), 1),
-                inj=(r.injury_status if isinstance(getattr(r, "injury_status", None), str) else ""))
+                inj=(r.injury_status if isinstance(getattr(r, "injury_status", None), str) else ""),
+                played=bool(getattr(r, "locked", False) is True or str(getattr(r, "locked", "")) == "True"))
 
 
 def _side(text: str) -> list[dict]:
@@ -113,15 +114,17 @@ def decisions() -> list[dict]:
         text = md.read_text() if md.exists() else ""
         wp = re.search(r"Win probability (\d+)%[^\n]*vs (\w+)", text)
         news = re.findall(r"Check the news first: ([^\n]+)", text)
+        locks = re.findall(r"^((?:Assumed started|Started, games played|Already played, not in this lineup)[^\n]+)", text, re.M)
         out.append(dict(id=f"lineup-{wk}", kind="Start/sit", deadline="first kickoff of each game window",
                         title=f"Week {wk} lineup" + (f" vs {wp.group(2)}" if wp else ""),
                         recommendation=", ".join(f"{r.slot} {r.player}" for r in start.itertuples()),
                         value=f"win probability {wp.group(1)}%" if wp else "", confidence="medium",
-                        reason="Highest win probability from this week's projections and 80% ranges.",
+                        reason="Highest win probability from this week's projections and 80% ranges"
+                               + ("; games already played count at actual points." if locks else "."),
                         change="An injury or inactive report, or a rank jump flagged below." + (f" Flagged: {news[0]}" if news else ""),
                         made_at=str(lu.made_at.iloc[0]) if "made_at" in lu else "",
                         headline=(f"Win chance {wp.group(1)}%" if wp else "Lineup set"),
-                        detail=dict(type="lineup", starters=[_lu_row(r) for r in start.itertuples()],
+                        detail=dict(type="lineup", note=" ".join(locks), starters=[_lu_row(r) for r in start.itertuples()],
                                     bench=[_lu_row(r) for r in lu[lu.slot.isna() | (lu.slot == "BN")].sort_values("proj", ascending=False).head(5).itertuples()]
                                     if "slot" in lu else [])))
     wv = _read(f"decide_waivers_w{wk}.csv")

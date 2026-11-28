@@ -443,8 +443,8 @@ function detail(d) {
       ${(x.rows || []).map((r, i) => `<tr${i === 0 ? ' class="me"' : ""}><td>${esc(r.add)} <span class="meta">${esc(r.add_pos)}</span></td><td>${esc(r.drop)} <span class="meta">${esc(r.drop_pos)}</span></td><td class="n">+${r.pts}</td><td class="n">$${r.net.toFixed(2)}</td></tr>`).join("")}
       </tbody></table></div><div class="meta">Bid: ${esc(x.bid)}. Kickers and defenses count for this week only (streamed after).</div>`;
   if (x.type === "lineup") {
-    const row = r => `<tr><td>${esc(r.slot)}</td><td>${esc(r.player)}${r.inj ? ` <span class="chip bad">${esc(r.inj)}</span>` : ""}</td><td>${esc(r.opp ? "vs " + r.opp : "")}</td><td class="n">${r.proj}</td><td class="n meta">${r.low}–${r.high}</td></tr>`;
-    return `<div class="tw"><table><thead><tr><th>Slot</th><th>Player</th><th>Opp</th><th class="n">Proj</th><th class="n">80% range</th></tr></thead><tbody>${(x.starters || []).map(row).join("")}</tbody></table></div>
+    const row = r => `<tr><td>${esc(r.slot)}</td><td>${esc(r.player)}${r.played ? ` <span class="chip">played</span>` : r.inj ? ` <span class="chip bad">${esc(r.inj)}</span>` : ""}</td><td>${esc(r.opp ? "vs " + r.opp : "")}</td><td class="n">${r.proj}</td><td class="n meta">${r.played ? "final" : `${r.low}–${r.high}`}</td></tr>`;
+    return `${x.note ? `<div class="meta" style="margin-bottom:6px">${esc(x.note)}</div>` : ""}<div class="tw"><table><thead><tr><th>Slot</th><th>Player</th><th>Opp</th><th class="n">Proj</th><th class="n">80% range</th></tr></thead><tbody>${(x.starters || []).map(row).join("")}</tbody></table></div>
       ${(x.bench || []).length ? `<details><summary>Best on the bench</summary><div class="tw"><table><tbody>${x.bench.map(r => row({ ...r, slot: "BN" })).join("")}</tbody></table></div></details>` : ""}`;
   }
   if (x.type === "playoffs") return `<div class="tw"><table><thead><tr><th>Player</th><th>NFL</th><th>Now with</th><th class="n">NFL playoff games</th><th class="n">Your title</th><th class="n">Payout</th></tr></thead><tbody>

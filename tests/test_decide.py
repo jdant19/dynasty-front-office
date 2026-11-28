@@ -265,3 +265,27 @@ def test_every_free_agent_stream_unit_is_evaluated():
     assert {"DEF-CLE", "K-1"} <= set(c.index)          # below the rate cutoff, still compared this week
     assert "DEF-NYG" not in c.index                      # rostered units stay out
     assert (c.pos == "WR").sum() == W.TOP_FA
+
+
+def test_kickoff_by_clock_not_date():
+    """2026-11-26: a Thanksgiving-evening run treated that day's games as unplayed (date with a 6-hour lag)."""
+    import datetime as dt
+    from dfo.decide.lineup import kicked_off
+    utc = dt.timezone.utc
+    before = kicked_off(12, dt.datetime(2026, 11, 26, 17, 0, tzinfo=utc))    # noon ET Thursday
+    after = kicked_off(12, dt.datetime(2026, 11, 26, 23, 0, tzinfo=utc))     # 6pm ET Thursday
+    assert {"DET", "CHI", "DAL", "PHI"} <= after
+    assert {"GB", "LA"} <= before                                            # Wednesday's game
+
+
+def test_rest_of_season_rate_counts_a_game_played_this_week():
+    """2026-11-28: Max Hurleman (one 15-point game, then 0 targets on Friday) kept 15.1 as his average
+    and topped the waiver list."""
+    import numpy as np
+    import pandas as pd
+    from dfo.projections.current import through_this_week
+    wk = pd.DataFrame(dict(team=["PIT", "SEA"], played=[1, 0], games_std=[1.0, 3.0], points_std=[15.1, 10.0],
+                           xfp_std=[8.6, 9.0], points=[0.0, np.nan], xfp=[np.nan, np.nan]))
+    out = through_this_week(wk, {"PIT"})
+    assert out.points_std.tolist() == [7.55, 10.0] and out.games_std.tolist() == [2.0, 3.0]
+    assert out.xfp_std.tolist() == [8.6, 9.0]          # expected points not in yet: left as it was

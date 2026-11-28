@@ -351,3 +351,18 @@ Same review: backup quarterbacks projected as starters on rank-less days and in 
 rate (Willis, Wentz, Drew Lock 82 rest-of-season points as Seattle's backup). Classified as a parameter
 fit (`params_qb_depth.csv`): chance of starting by depth-chart role, a first-start rate, and a cap on
 this week's projection when no rank is out. A starter-level FantasyPros rank overrides the chart.
+
+## Mid-week sync fixes (2026-11-28 correction)
+Jordan: "There were some issues with our sync today." Every engine step reported ok, but three
+outputs were wrong once Week 12's Wednesday-Friday games were played:
+- Lineup: once those games kicked off, the module could not fill a lineup without knowing whom he
+  started, so it silently kept Thursday's card (74%, Gibbs/Lamb/Mahomes still at projections, Parker
+  Washington, now Out, still starting). Kickoff was also judged by date with a 6-hour lag. Now: kickoff
+  times from the NFL schedule; starters in played games are locked at actual points, assumed from the
+  last recommendation unless he says otherwise (stated on the card); the opponent's played games count
+  at actual points too; the rest re-optimizes.
+- Rest-of-season rates ignored games already played this week (season-to-date stops before the week).
+  Max Hurleman kept 15.1 a game from his one game and topped the waiver list after a 0-target Friday.
+  Now finished games this week are folded in. A general shrink for unranked small-sample players was
+  tested on 2021-2025 (813 player-weeks) and did not help (best MAE with no shrink), so none was added.
+Both are code faults (no rule, principle or parameter changed); tests in tests/test_decide.py.

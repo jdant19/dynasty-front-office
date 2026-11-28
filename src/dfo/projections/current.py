@@ -42,6 +42,23 @@ def ros_rate(wk: pd.DataFrame, fp_prev: pd.Series | None = None) -> pd.Series:
     return pd.Series(out, index=wk.index).fillna(wk.points_std).fillna(0).clip(lower=0)   # never below 0
 
 
+def through_this_week(wk: pd.DataFrame, done: set) -> pd.DataFrame:
+    """Season-to-date averages including this week's game where it is already played (Thursday, Friday,
+    Saturday games). The feature rows are as known before the week, so until 2026-11-28 a player who had
+    played on Friday kept his pre-game average all weekend (Max Hurleman: 15.1 from his one game in
+    Week 11 stayed his average after a 0-target Week 12, and he topped the waiver list)."""
+    wk = wk.copy()
+    m = wk.team.isin(done) & wk.played.eq(1)
+    g = wk.games_std.fillna(0)
+    for col in ("points", "xfp"):
+        std, cur = wk[f"{col}_std"], wk[col]
+        new = np.where(std.notna(), (std * g + cur) / (g + 1), cur)
+        ok = (m & cur.notna()).to_numpy()            # expected points can lag the box score by a day
+        wk.loc[ok, f"{col}_std"] = new[ok]
+    wk.loc[m, "games_std"] = g[m] + 1
+    return wk
+
+
 def next_week(today: dt.date | None = None) -> int:
     """The first regular-season week with games still to be played (a week whose Thursday game is
     already scored is still the current week until its last game)."""
@@ -144,16 +161,16 @@ def main() -> None:
         stale = wk.assign(ecr=wk.player_id.map(last))
         fp_prev = model.fp_points(stale)
         rank_week = rank_week.fillna(pd.Series(np.where(fp_prev.notna(), prev, np.nan), index=wk.index))
-    wk["ros_ppg"] = ros_rate(wk, fp_prev)
     imp = implied_totals([SEASON])
     today = dt.datetime.now(dt.timezone.utc).date()
+    done = set(imp[(imp.week == week) & (pd.to_datetime(imp.gameday).dt.date < today)].team)
+    wk["ros_ppg"] = ros_rate(through_this_week(wk, done), fp_prev)
     left = imp[(imp.week >= week) & (pd.to_datetime(imp.gameday).dt.date >= today)].sort_values("week")
     games_left = left.groupby("team").size()
     avail = availability(df, min(week, 17))
     wk["games_left"] = wk.team.map(games_left).fillna(0)
     # availability: the position's rate for healthy players; status players (and players who missed games
     # in a row) get the fitted chance of playing each remaining game, IR minimum included
-    done = set(imp[(imp.week == week) & (pd.to_datetime(imp.gameday).dt.date < today)].team)
     wk["availability"], prof = injury.ros_availability(wk, left.groupby("team").week.apply(list).to_dict(), done,
                                                        avail)
     wk, prof = depth.ros_backups(wk, left.groupby("team").week.apply(list).to_dict(), done, prof, avail)

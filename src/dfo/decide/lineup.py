@@ -145,17 +145,32 @@ def rank_jumps(week: int, ids, places: float = 20) -> pd.DataFrame:
 
 
 def kicked_off(week: int, now: dt.datetime | None = None) -> set[str]:
-    from dfo.projections.features import implied_totals
-    now = now or dt.datetime.now(dt.timezone.utc)
-    imp = implied_totals([2026])
-    w = imp[imp.week == week]
-    played = w[pd.to_datetime(w.gameday).dt.date < (now - dt.timedelta(hours=6)).date()]
-    return set(played.team)
+    """Teams whose game this week has kicked off, from the NFL schedule's kickoff times (Eastern), plus
+    any team with box scores already in for the week. Until 2026-11-28 this went by date with a 6-hour
+    lag, so an evening run on Thanksgiving still treated that day's games as unplayed."""
+    from dfo.sources.fetch import nflverse
+    now = pd.Timestamp(now or dt.datetime.now(dt.timezone.utc))
+    g = pd.read_csv(nflverse("schedules", "games.csv"), low_memory=False)
+    g = g[(g.season == 2026) & (g.week == week) & (g.game_type == "REG")]
+    ko = pd.to_datetime(g.gameday + " " + g.gametime.fillna("13:00")).dt.tz_localize("America/New_York").dt.tz_convert("UTC")
+    started = g[(ko <= now).to_numpy()]
+    teams = set(started.home_team) | set(started.away_team)
+    pts = pd.read_csv(PROCESSED / "points_2026.csv", usecols=["season_type", "week", "team"])
+    teams |= set(pts[(pts.season_type == "REG") & (pts.week == week)].team.dropna())
+    return {"LA" if t == "LAR" else t for t in teams}
 
 
-def recommend(owner: str = "Jordan", proj_path=PROCESSED / "proj_week.csv", locked_starts: list[str] | None = None):
+def _actual(week: int) -> pd.Series:
+    pts = pd.read_csv(PROCESSED / "points_2026.csv")
+    return pts[(pts.season_type == "REG") & (pts.week == week)].groupby("player_id").points.sum()
+
+
+def recommend(owner: str = "Jordan", proj_path=PROCESSED / "proj_week.csv", locked_starts: list[str] | None = None,
+              locked_slots: dict | None = None, assumed: bool = False):
     """This week's lineup for `owner`. locked_starts: canonical ids already started in games that
-    have kicked off (Jordan tells us; unknown otherwise)."""
+    have kicked off (Jordan tells us, or `assumed`: the last recommendation's starters in those games);
+    locked_slots: their slot (FLEX included). Games already played count at actual points; the
+    opponent's lineup is his best by pre-game projections, with actual points where his games are over."""
     p = pd.read_csv(proj_path)
     p["injury_status"] = p.injury_status.fillna("")
     week = int(p.week.iloc[0])
@@ -166,6 +181,13 @@ def recommend(owner: str = "Jordan", proj_path=PROCESSED / "proj_week.csv", lock
     mine = p[p.owner == owner].copy()
     theirs = eligible(p[p.owner == opp])
     opp_line = best_lineup(theirs)
+    done_pts = _actual(week)
+    if len(opp_line):
+        opp_line = opp_line.copy()
+        opp_line["sd"] = _sd(opp_line)
+        over = opp_line.team.isin(kicked_off(week)) & opp_line.team.isin(set(p[p.player_id.isin(done_pts.index)].team))
+        opp_line.loc[over, ["proj", "low", "high"]] = np.repeat(opp_line.player_id[over].map(done_pts).fillna(0).to_numpy()[:, None], 3, axis=1)
+        opp_line.loc[over, "sd"] = 0.0
     o_mu, o_sd = team_score(opp_line)
     mine["started_already"] = mine.team.isin(gone)
     locked = mine[mine.player_id.isin(locked_starts or [])].copy()
@@ -178,8 +200,11 @@ def recommend(owner: str = "Jordan", proj_path=PROCESSED / "proj_week.csv", lock
         got = locked.player_id.map(done)
         locked.loc[got.notna(), ["proj", "low", "high"]] = np.repeat(got[got.notna()].to_numpy()[:, None], 3, axis=1)
         locked.loc[got.notna(), "sd"] = 0.0
+        played = locked.team.isin(set(p[p.player_id.isin(done.index)].team))   # game over: 0 if he did not play
+        locked.loc[played & got.isna(), ["proj", "low", "high", "sd"]] = 0.0
         locked["locked"] = True
-        locked["slot"] = locked.pos      # a locked FLEX should be passed with slot set by the caller
+        locked["assumed"] = assumed
+        locked["slot"] = locked.player_id.map(locked_slots or {}).fillna(locked.pos)
     line = best_lineup(pool, o_mu, o_sd, locked=locked if len(locked) else None)
     mu, sd = team_score(line)
     calls = close_calls(line, pool, o_mu, o_sd)
@@ -194,7 +219,8 @@ def recommend(owner: str = "Jordan", proj_path=PROCESSED / "proj_week.csv", lock
     return dict(week=week, opponent=opp, lineup=line, mu=mu, sd=sd, opp_mu=o_mu, opp_sd=o_sd,
                 win_prob=win_prob(mu, sd, o_mu, o_sd), opp_lineup=opp_line, close_calls=calls,
                 questionable=pd.DataFrame(backups), kicked_off=sorted(gone),
-                thursday=mine[mine.started_already][["player", "pos", "team", "proj"]],
+                thursday=mine[mine.started_already & ~mine.player_id.isin(locked.player_id)][["player", "pos", "team", "proj"]],
+                locked=locked, assumed=assumed and len(locked) > 0,
                 same_as_median=set(by_median.player_id) == set(line.player_id), rank_jumps=jumps,
                 made_at=str(p.made_at.iloc[0]), stats_as_of=str(p.stats_as_of.iloc[0]))
 
@@ -208,8 +234,13 @@ def to_markdown(r: dict) -> str:
     for _, x in r["lineup"].iterrows():
         L.append(f"| {x.slot} | {x.player} | {x.team} vs {x.opp} | {x.proj:.1f} | {x.low:.0f}-{x.high:.0f} | "
                  f"{x.injury_status or ''}{' locked' if x.get('locked') is True else ''} |")
+    lk = r.get("locked")
+    if lk is not None and len(lk):
+        L += ["", ("Assumed started (the last recommendation, games already played): " if r.get("assumed") else "Started, games played: ")
+              + ", ".join(f"{x.player} {x.proj:.1f}" for _, x in lk.iterrows())
+              + (". If you started someone else, tell me and the rest re-optimizes around them." if r.get("assumed") else ".")]
     if len(r["thursday"]):
-        L += ["", "Already played (Thursday): " + ", ".join(f"{x.player} ({x.pos})" for _, x in r["thursday"].iterrows())
+        L += ["", "Already played, not in this lineup: " + ", ".join(f"{x.player} ({x.pos})" for _, x in r["thursday"].iterrows())
               + ". Their points count only if you started them; tell me who you started and the rest re-optimizes around them."]
     if len(r.get("rank_jumps", [])):
         names = pd.read_csv(PROCESSED / "player_ids.csv", dtype=str).set_index("canonical_id").name
@@ -308,8 +339,18 @@ if __name__ == "__main__":
         missing = set(a.started) - set(pw.player)
         if missing:
             raise SystemExit(f"not in proj_week: {sorted(missing)}")
+        lock_slots, assumed = None, False
+        prev_f = PROCESSED / f"decide_lineup_w{int(pw.week.iloc[0])}.csv"
+        if not a.started and prev_f.exists():
+            # games have kicked off and he has not said whom he started: keep the last recommendation's
+            # starters in those games (or what he told us before, kept in the file), at actual points
+            prev = pd.read_csv(prev_f)
+            gone = kicked_off(int(pw.week.iloc[0]))
+            st = prev[prev.slot.notna() & (prev.slot != "BN") & prev.team.isin(gone) & prev.owner.eq("Jordan")]
+            ids, lock_slots = st.player_id.tolist(), dict(zip(st.player_id, st.slot))
+            assumed = bool(st.assumed.fillna(True).astype(bool).any()) if "assumed" in st else len(st) > 0
         try:
-            r = recommend(locked_starts=ids)
+            r = recommend(locked_starts=ids, locked_slots=lock_slots, assumed=assumed)
         except TypeError:
             # too few of his players left to play to fill a lineup: the week's lineup calls are made.
             # Keep the last recommendation as it was (the journal compares it with what he started).
