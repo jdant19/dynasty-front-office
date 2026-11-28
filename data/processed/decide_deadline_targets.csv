@@ -1,17 +1,29 @@
 owner,player,pos,salary_2026,your_lineup_gain,payout_now,rental,later_value_to_him
-Ryan,Dak Prescott,QB,2,15.2,11,False,-4
-Qasim,Trevor Lawrence,QB,1,13.6,10,False,0
-Ryan,George Pickens,WR,71,11.6,9,False,-22
-Max,Chris Olave,WR,15,9.3,7,False,9
-Qasim,Justin Jefferson,WR,92,9.2,7,True,0
-Qasim,Malik Nabers,WR,7,8.7,7,False,37
-Max,Nico Collins,WR,91,7.8,6,True,0
-Max,Jayden Daniels,QB,5,7.7,6,False,33
-Qasim,Garrett Wilson,WR,51,4.3,3,False,-8
-Matt,Luther Burden III,WR,4,3.3,2,False,59
+Qasim,Malik Nabers,WR,7,22.3,20,False,37
+Ryan,George Pickens,WR,71,22.0,20,False,-22
+Max,Chris Olave,WR,15,20.6,19,False,9
+Qasim,Justin Jefferson,WR,92,20.5,18,True,0
+Max,Nico Collins,WR,91,19.1,17,True,0
+Ryan,Dak Prescott,QB,2,15.2,14,False,-4
+Matt,Luther Burden III,WR,4,14.3,13,False,59
+Qasim,Trevor Lawrence,QB,1,13.6,12,False,0
+Qasim,Garrett Wilson,WR,51,13.2,12,False,-8
+Ryan,DeVonta Smith,WR,51,10.5,9,True,0
+Mike,DJ Moore,WR,22,9.3,8,False,-23
+Max,Jayden Daniels,QB,5,7.9,7,False,33
+Ryan,Carnell Tate,WR,5,5.6,5,False,52
+Qasim,KC Concepcion,WR,5,5.0,5,False,55
+Matt,Rashee Rice,WR,6,4.8,4,False,12
+Ryan,Rome Odunze,WR,7,4.3,4,False,34
+Matt,Caleb Douglas,WR,1,4.2,4,False,-4
+Qasim,Antonio Williams,WR,3,3.2,3,False,-7
+Ben,Emeka Egbuka,WR,6,2.7,2,False,33
 Qasim,Cam Little,K,1,2.3,2,True,0
 Ben,Kenneth Walker III,RB,67,2.2,2,False,7
-Ryan,DeVonta Smith,WR,51,1.9,1,True,0
-Mike,DJ Moore,WR,22,1.6,1,False,-23
+Matt,Jalen Coker,WR,2,2.1,2,True,0
 Max,Ka'imi Fairbairn,K,2,1.6,1,True,0
+Mike,Khalil Shakir,WR,5,1.5,1,False,-3
 Mike,Spencer Shrader,K,1,1.4,1,True,0
+Ryan,Jaylen Waddle,WR,29,1.4,1,False,-32
+Max,Jordyn Tyson,WR,5,1.1,1,False,17
+Ben,Adonai Mitchell,WR,5,1.0,1,False,-5

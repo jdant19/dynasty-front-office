@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-27T21:48:02+00:00",
+ "made_at": "2026-11-28T12:46:58+00:00",
  "week": 12,
  "decisions": [
   {
@@ -136,24 +136,40 @@
    "kind": "Waivers",
    "deadline": "waivers ran Tuesday night; now a $0 add by waiver priority, before the added player's (or dropped player's) game kicks off",
    "title": "Waiver claims",
-   "recommendation": "add Commanders, drop Buccaneers",
-   "value": "+0.6 pts, $0.45",
+   "recommendation": "add Max Hurleman, drop Courtland Sutton; add Commanders, drop Buccaneers; add Browns, drop Buccaneers",
+   "value": "+11.7 pts, $10.58; +0.6 pts, $0.54; +0.3 pts, $0.27",
    "confidence": "medium",
    "reason": "Rest-of-season lineup gain priced at today's odds; kickers and defenses count for the coming week only (streamed after). Bids $0 (over the cap).",
    "change": "A player's role changing, or a better free agent after the weekend.",
-   "made_at": "2026-11-27T21:43:05+00:00",
-   "headline": "Add Commanders, drop Buccaneers",
+   "made_at": "2026-11-28T12:42:41+00:00",
+   "headline": "Add Max Hurleman, drop Courtland Sutton",
    "detail": {
     "type": "waivers",
     "bid": "$0 (over the cap)",
     "rows": [
+     {
+      "add": "Max Hurleman",
+      "add_pos": "WR",
+      "drop": "Courtland Sutton",
+      "drop_pos": "WR",
+      "pts": 11.7,
+      "net": 10.58
+     },
      {
       "add": "Commanders",
       "add_pos": "DEF",
       "drop": "Buccaneers",
       "drop_pos": "DEF",
       "pts": 0.6,
-      "net": 0.45
+      "net": 0.54
+     },
+     {
+      "add": "Browns",
+      "add_pos": "DEF",
+      "drop": "Buccaneers",
+      "drop_pos": "DEF",
+      "pts": 0.3,
+      "net": 0.27
      }
     ]
    }
@@ -164,11 +180,11 @@
    "deadline": "end of Week 18 (trades: Week 14)",
    "title": "Worth adding for the league playoffs",
    "recommendation": "James Cook (Matt); Jonah Coleman (Ben)",
-   "value": "title +10%, $+19; title +8%, $+14",
+   "value": "title +8%, $+15; title +5%, $+10",
    "confidence": "low",
    "reason": "Keeps are free; owning a player also frees your first draft pick.",
    "change": "NFL playoff odds moving, or the seeds changing.",
-   "headline": "James Cook: title +10%",
+   "headline": "James Cook: title +8%",
    "detail": {
     "type": "playoffs",
     "rows": [
@@ -178,9 +194,9 @@
       "nfl": "SF",
       "owner": "Johnny",
       "rival": true,
-      "games": 2.0,
-      "title": 0.103,
-      "payout": 20
+      "games": 1.9,
+      "title": 0.112,
+      "payout": 22
      },
      {
       "player": "James Cook",
@@ -189,18 +205,8 @@
       "owner": "Matt",
       "rival": false,
       "games": 2.1,
-      "title": 0.1,
-      "payout": 19
-     },
-     {
-      "player": "Jonah Coleman",
-      "pos": "RB",
-      "nfl": "DEN",
-      "owner": "Ben",
-      "rival": false,
-      "games": 1.9,
-      "title": 0.075,
-      "payout": 14
+      "title": 0.079,
+      "payout": 15
      },
      {
       "player": "Tee Higgins",
@@ -209,28 +215,8 @@
       "owner": "Russ",
       "rival": true,
       "games": 1.9,
-      "title": 0.074,
-      "payout": 12
-     },
-     {
-      "player": "Puka Nacua",
-      "pos": "WR",
-      "nfl": "LA",
-      "owner": "Russ",
-      "rival": true,
-      "games": 1.3,
-      "title": 0.078,
-      "payout": 12
-     },
-     {
-      "player": "D'Andre Swift",
-      "pos": "RB",
-      "nfl": "CHI",
-      "owner": "Russ",
-      "rival": true,
-      "games": 1.9,
-      "title": 0.05,
-      "payout": 12
+      "title": 0.054,
+      "payout": 11
      },
      {
       "player": "Josh Allen",
@@ -239,18 +225,48 @@
       "owner": "Zach",
       "rival": true,
       "games": 2.1,
-      "title": 0.041,
+      "title": 0.05,
+      "payout": 11
+     },
+     {
+      "player": "Bhayshul Tuten",
+      "pos": "RB",
+      "nfl": "JAX",
+      "owner": "Russ",
+      "rival": true,
+      "games": 2.0,
+      "title": 0.056,
+      "payout": 11
+     },
+     {
+      "player": "Jonah Coleman",
+      "pos": "RB",
+      "nfl": "DEN",
+      "owner": "Ben",
+      "rival": false,
+      "games": 1.9,
+      "title": 0.051,
       "payout": 10
      },
      {
-      "player": "Chase Brown",
+      "player": "D'Andre Swift",
       "pos": "RB",
-      "nfl": "CIN",
-      "owner": "Max",
-      "rival": false,
+      "nfl": "CHI",
+      "owner": "Russ",
+      "rival": true,
       "games": 1.9,
-      "title": 0.048,
-      "payout": 10
+      "title": 0.028,
+      "payout": 9
+     },
+     {
+      "player": "Broncos",
+      "pos": "DEF",
+      "nfl": "DEN",
+      "owner": "Zach",
+      "rival": true,
+      "games": 1.9,
+      "title": 0.036,
+      "payout": 9
      }
     ]
    }
@@ -273,88 +289,88 @@
   }
  ],
  "posture": {
-  "p_first": 0.73,
+  "p_first": 0.688,
   "p_top4": 1.0,
-  "p_title": 0.366,
-  "exp_payout": 442,
-  "mean_wins": 14.3,
+  "p_title": 0.339,
+  "exp_payout": 422,
+  "mean_wins": 14.2,
   "stance": "push",
   "moved": {
    "since": "2026-11-27",
-   "p_first": 0.003,
-   "p_title": 0.015,
-   "payout": 2
+   "p_first": -0.042,
+   "p_title": -0.027,
+   "payout": -20
   },
   "league": [
    {
     "owner": "Jordan",
-    "p_first": 0.73,
+    "p_first": 0.688,
     "p_top4": 1.0,
-    "p_title": 0.366,
-    "exp_payout": 442,
+    "p_title": 0.339,
+    "exp_payout": 422,
     "posture": "push"
    },
    {
     "owner": "Johnny",
-    "p_first": 0.195,
-    "p_top4": 0.998,
-    "p_title": 0.237,
-    "exp_payout": 278,
+    "p_first": 0.223,
+    "p_top4": 0.999,
+    "p_title": 0.224,
+    "exp_payout": 282,
     "posture": "push"
    },
    {
     "owner": "Russ",
-    "p_first": 0.074,
+    "p_first": 0.088,
     "p_top4": 0.993,
-    "p_title": 0.232,
-    "exp_payout": 219,
+    "p_title": 0.252,
+    "exp_payout": 231,
     "posture": "push"
    },
    {
     "owner": "Zach",
     "p_first": 0.0,
-    "p_top4": 0.64,
-    "p_title": 0.098,
-    "exp_payout": 38,
+    "p_top4": 0.67,
+    "p_title": 0.128,
+    "exp_payout": 45,
     "posture": "hold"
    },
    {
     "owner": "Matt",
     "p_first": 0.0,
-    "p_top4": 0.204,
-    "p_title": 0.034,
-    "exp_payout": 13,
+    "p_top4": 0.177,
+    "p_title": 0.035,
+    "exp_payout": 12,
     "posture": "build"
    },
    {
     "owner": "Max",
     "p_first": 0.0,
-    "p_top4": 0.075,
-    "p_title": 0.014,
+    "p_top4": 0.086,
+    "p_title": 0.013,
     "exp_payout": 4,
     "posture": "build"
    },
    {
     "owner": "Qasim",
     "p_first": 0.0,
-    "p_top4": 0.047,
-    "p_title": 0.008,
-    "exp_payout": 3,
+    "p_top4": 0.039,
+    "p_title": 0.004,
+    "exp_payout": 2,
     "posture": "build"
    },
    {
     "owner": "Ryan",
     "p_first": 0.0,
-    "p_top4": 0.04,
-    "p_title": 0.008,
-    "exp_payout": 3,
+    "p_top4": 0.032,
+    "p_title": 0.004,
+    "exp_payout": 2,
     "posture": "build"
    },
    {
     "owner": "Ben",
     "p_first": 0.0,
-    "p_top4": 0.004,
-    "p_title": 0.002,
+    "p_top4": 0.003,
+    "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
    },
@@ -395,6 +411,46 @@
  },
  "market": [
   {
+   "player": "Malik Nabers",
+   "owner": "Qasim",
+   "pos": "WR",
+   "gain": 22.3,
+   "salary": 7,
+   "rental": false
+  },
+  {
+   "player": "George Pickens",
+   "owner": "Ryan",
+   "pos": "WR",
+   "gain": 22.0,
+   "salary": 71,
+   "rental": false
+  },
+  {
+   "player": "Chris Olave",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 20.6,
+   "salary": 15,
+   "rental": false
+  },
+  {
+   "player": "Justin Jefferson",
+   "owner": "Qasim",
+   "pos": "WR",
+   "gain": 20.5,
+   "salary": 92,
+   "rental": true
+  },
+  {
+   "player": "Nico Collins",
+   "owner": "Max",
+   "pos": "WR",
+   "gain": 19.1,
+   "salary": 91,
+   "rental": true
+  },
+  {
    "player": "Dak Prescott",
    "owner": "Ryan",
    "pos": "QB",
@@ -403,59 +459,19 @@
    "rental": false
   },
   {
+   "player": "Luther Burden III",
+   "owner": "Matt",
+   "pos": "WR",
+   "gain": 14.3,
+   "salary": 4,
+   "rental": false
+  },
+  {
    "player": "Trevor Lawrence",
    "owner": "Qasim",
    "pos": "QB",
    "gain": 13.6,
    "salary": 1,
-   "rental": false
-  },
-  {
-   "player": "George Pickens",
-   "owner": "Ryan",
-   "pos": "WR",
-   "gain": 11.6,
-   "salary": 71,
-   "rental": false
-  },
-  {
-   "player": "Chris Olave",
-   "owner": "Max",
-   "pos": "WR",
-   "gain": 9.3,
-   "salary": 15,
-   "rental": false
-  },
-  {
-   "player": "Justin Jefferson",
-   "owner": "Qasim",
-   "pos": "WR",
-   "gain": 9.2,
-   "salary": 92,
-   "rental": true
-  },
-  {
-   "player": "Malik Nabers",
-   "owner": "Qasim",
-   "pos": "WR",
-   "gain": 8.7,
-   "salary": 7,
-   "rental": false
-  },
-  {
-   "player": "Nico Collins",
-   "owner": "Max",
-   "pos": "WR",
-   "gain": 7.8,
-   "salary": 91,
-   "rental": true
-  },
-  {
-   "player": "Jayden Daniels",
-   "owner": "Max",
-   "pos": "QB",
-   "gain": 7.7,
-   "salary": 5,
    "rental": false
   }
  ],
@@ -475,7 +491,7 @@
  "health": [
   {
    "source": "league_site",
-   "as_of": "2026-11-27T21:43:05+00:00",
+   "as_of": "2026-11-28T12:42:41+00:00",
    "age_hours": 0.1,
    "limit": "24h",
    "stale": false
@@ -489,15 +505,15 @@
   },
   {
    "source": "nflverse",
-   "as_of": "2026-11-27T12:45:24+00:00",
-   "age_hours": 9.0,
+   "as_of": "2026-11-28T12:44:30+00:00",
+   "age_hours": 0.0,
    "limit": "36h",
    "stale": false
   },
   {
    "source": "fantasypros_weekly_ranks",
-   "as_of": "Week 12 (scraped 2026-11-27)",
-   "age_hours": 21.8,
+   "as_of": "Week 12 (scraped 2026-11-28)",
+   "age_hours": 12.8,
    "limit": "the coming week's ranks by Saturday",
    "stale": false,
    "note": "current week ranked"
@@ -505,7 +521,7 @@
   {
    "source": "engine runs",
    "as_of": "2026-11-27T21:46:50+00:00",
-   "age_hours": 0.0,
+   "age_hours": 15.0,
    "limit": "24h",
    "stale": false,
    "note": "all recent steps ok"
@@ -702,11 +718,11 @@
     "note": "Kenneth Walker III, Puka Nacua, Jaxson Dart, Kyler Murray"
    }
   ],
-  "made_at": "2026-11-27T21:45:49+00:00",
+  "made_at": "2026-11-28T12:45:25+00:00",
   "source": "proj_week_frozen.csv (last projection before each player's game) vs points_2026.csv; drift limits from the 2021-2025 back-test (docs/projections.md)"
  },
  "season": {
-  "made_at": "2026-11-27T21:46:49+00:00",
+  "made_at": "2026-11-28T12:46:58+00:00",
   "weeks_left": [
    12,
    13,
@@ -722,58 +738,58 @@
    "t": 0
   },
   "projected": {
-   "wins": 14.3,
-   "p_win_out": 0.764
+   "wins": 14.2,
+   "p_win_out": 0.746
   },
   "path": [
    {
     "week": 12,
     "opp": "Qasim",
-    "p_win": 0.891,
-    "me": 160.8,
-    "them": 126.3
+    "p_win": 0.864,
+    "me": 155.8,
+    "them": 126.7
    },
    {
     "week": 13,
     "opp": "Russ",
-    "p_win": 0.674,
-    "me": 139.9,
-    "them": 125.4
+    "p_win": 0.656,
+    "me": 138.2,
+    "them": 125.1
    },
    {
     "week": 14,
     "opp": "Max",
-    "p_win": 0.711,
-    "me": 130.6,
-    "them": 113.5
+    "p_win": 0.66,
+    "me": 129.2,
+    "them": 115.6
    },
    {
     "week": 15,
     "opp": "Johnny",
-    "p_win": 0.65,
-    "me": 138.3,
-    "them": 124.7
+    "p_win": 0.654,
+    "me": 138.6,
+    "them": 124.9
    },
    {
     "week": 16,
     "opp": "Matt",
-    "p_win": 0.781,
-    "me": 138.0,
-    "them": 112.8
+    "p_win": 0.789,
+    "me": 138.7,
+    "them": 113.5
    },
    {
     "week": 17,
     "opp": "Zach",
-    "p_win": 0.732,
+    "p_win": 0.7,
     "me": 138.2,
-    "them": 118.1
+    "them": 120.1
    },
    {
     "week": 18,
     "opp": "Mike",
-    "p_win": 0.906,
-    "me": 138.0,
-    "them": 96.1
+    "p_win": 0.899,
+    "me": 138.2,
+    "them": 97.5
    }
   ],
   "standings": [
@@ -784,11 +800,11 @@
     "l": 2,
     "t": 0,
     "pf": 1604.8,
-    "wins": 14.3,
-    "p_first": 0.73,
+    "wins": 14.2,
+    "p_first": 0.688,
     "p_top4": 1.0,
-    "p_title": 0.366,
-    "exp_payout": 442,
+    "p_title": 0.339,
+    "exp_payout": 422,
     "posture": "push"
    },
    {
@@ -799,10 +815,10 @@
     "t": 0,
     "pf": 1434.5,
     "wins": 13.6,
-    "p_first": 0.195,
-    "p_top4": 0.998,
-    "p_title": 0.237,
-    "exp_payout": 278,
+    "p_first": 0.223,
+    "p_top4": 0.999,
+    "p_title": 0.224,
+    "exp_payout": 282,
     "posture": "push"
    },
    {
@@ -812,11 +828,11 @@
     "l": 3,
     "t": 0,
     "pf": 1547.9,
-    "wins": 12.5,
-    "p_first": 0.074,
+    "wins": 12.6,
+    "p_first": 0.088,
     "p_top4": 0.993,
-    "p_title": 0.233,
-    "exp_payout": 219,
+    "p_title": 0.252,
+    "exp_payout": 231,
     "posture": "push"
    },
    {
@@ -826,11 +842,11 @@
     "l": 5,
     "t": 0,
     "pf": 1394.6,
-    "wins": 9.6,
+    "wins": 9.7,
     "p_first": 0.0,
-    "p_top4": 0.64,
-    "p_title": 0.098,
-    "exp_payout": 38,
+    "p_top4": 0.67,
+    "p_title": 0.129,
+    "exp_payout": 45,
     "posture": "hold"
    },
    {
@@ -840,11 +856,11 @@
     "l": 5,
     "t": 0,
     "pf": 1227.1,
-    "wins": 9.0,
+    "wins": 8.9,
     "p_first": 0.0,
-    "p_top4": 0.204,
+    "p_top4": 0.177,
     "p_title": 0.035,
-    "exp_payout": 13,
+    "exp_payout": 12,
     "posture": "build"
    },
    {
@@ -854,10 +870,10 @@
     "l": 6,
     "t": 0,
     "pf": 1213.6,
-    "wins": 8.1,
+    "wins": 8.3,
     "p_first": 0.0,
-    "p_top4": 0.075,
-    "p_title": 0.014,
+    "p_top4": 0.086,
+    "p_title": 0.013,
     "exp_payout": 4,
     "posture": "build"
    },
@@ -870,9 +886,9 @@
     "pf": 1226.4,
     "wins": 7.5,
     "p_first": 0.0,
-    "p_top4": 0.04,
-    "p_title": 0.009,
-    "exp_payout": 3,
+    "p_top4": 0.032,
+    "p_title": 0.004,
+    "exp_payout": 2,
     "posture": "build"
    },
    {
@@ -884,9 +900,9 @@
     "pf": 1218.9,
     "wins": 7.6,
     "p_first": 0.0,
-    "p_top4": 0.047,
-    "p_title": 0.009,
-    "exp_payout": 3,
+    "p_top4": 0.039,
+    "p_title": 0.004,
+    "exp_payout": 2,
     "posture": "build"
    },
    {
@@ -896,10 +912,10 @@
     "l": 7,
     "t": 0,
     "pf": 1157.0,
-    "wins": 6.4,
+    "wins": 6.3,
     "p_first": 0.0,
-    "p_top4": 0.004,
-    "p_title": 0.002,
+    "p_top4": 0.003,
+    "p_title": 0.0,
     "exp_payout": 0,
     "posture": "build"
    },
@@ -988,9 +1004,9 @@
     },
     {
      "week": 11,
-     "p_first": 0.73,
+     "p_first": 0.688,
      "p_top4": 1.0,
-     "p_title": 0.366
+     "p_title": 0.339
     }
    ],
    "as_run": [
@@ -1329,6 +1345,13 @@
      "p_first": 0.73,
      "p_title": 0.366,
      "exp_payout": 442
+    },
+    {
+     "at": "2026-11-28T12:46",
+     "week": 12,
+     "p_first": 0.688,
+     "p_title": 0.339,
+     "exp_payout": 422
     }
    ],
    "note": "Replay: the simulator re-run with the results through each week and today's player projections (what the results did to your odds, not what was known then). As run: what the daily runs said."
@@ -1337,7 +1360,7 @@
   "note": "Win chances from the season simulator (rest-of-season projections, injuries, byes); odds and payouts from the daily simulation including the league playoffs."
  },
  "future": {
-  "made_at": "2026-11-27T21:46:50+00:00",
+  "made_at": "2026-11-28T12:46:58+00:00",
   "years": [
    {
     "season": 2027,
@@ -1754,8 +1777,8 @@
     "year": 2027,
     "round": 2,
     "original": "Jordan",
-    "slot": 9.7,
-    "overall": 19.7,
+    "slot": 9.6,
+    "overall": 19.6,
     "tier": "10-30",
     "points": 44
    },
@@ -1763,8 +1786,8 @@
     "year": 2027,
     "round": 2,
     "original": "Max",
-    "slot": 4.4,
-    "overall": 14.4,
+    "slot": 4.6,
+    "overall": 14.6,
     "tier": "10-30",
     "points": 44
    },
@@ -1772,8 +1795,8 @@
     "year": 2027,
     "round": 3,
     "original": "Jordan",
-    "slot": 9.7,
-    "overall": 29.7,
+    "slot": 9.6,
+    "overall": 29.6,
     "tier": "10-30",
     "points": 44
    },
